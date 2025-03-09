@@ -14,9 +14,10 @@ class DatabaseSeeder extends Seeder
             RolesSeeder::class,
             StatusesSeeder::class,
             InventorySeeder::class,
-            ProfilesSeeder::class,
             UsersSeeder::class,
-
+            ProfilesSeeder::class,
+            ProductsSeeder::class,
+            
         ]);
     }
 }

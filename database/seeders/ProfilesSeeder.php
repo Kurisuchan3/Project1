@@ -13,9 +13,20 @@ class ProfilesSeeder extends Seeder
      */
     public function run(): void
     {
+        // ✅ Fetch the actual user IDs
+        $adminUser = DB::table('users')->where('username', 'Admin')->first();
+        $customerUser = DB::table('users')->where('username', 'Customer')->first();
+
+        if (!$adminUser || !$customerUser) {
+            echo "❌ ERROR: Users not found. Profiles were not seeded.\n";
+            return;
+        }
+
+        DB::table('profiles')->delete(); // Use delete() instead of truncate()
+
         DB::table('profiles')->insert([
             [
-                'user_id' => 9, // Ensure this user exists in 'users' table
+                'user_id' => $adminUser->user_id, // ✅ Use fetched user_id
                 'first_name' => 'John',
                 'last_name' => 'Doe',
                 'middle_initial' => 'A',
@@ -26,7 +37,7 @@ class ProfilesSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'user_id' => 10,
+                'user_id' => $customerUser->user_id, // ✅ Use fetched user_id
                 'first_name' => 'Jane',
                 'last_name' => 'Smith',
                 'middle_initial' => 'B',

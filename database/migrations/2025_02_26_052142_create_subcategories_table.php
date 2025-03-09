@@ -8,9 +8,9 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('subcategories', function (Blueprint $table) {
-            $table->id('subcategory_id');
+            $table->id(); // Default primary key "id"
             $table->unsignedBigInteger('category_id'); 
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade'); // Reference "id" now
             $table->string('name')->unique()->notNullable();
             $table->timestamps();
         });

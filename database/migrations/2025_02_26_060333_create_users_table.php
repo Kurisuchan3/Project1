@@ -11,10 +11,10 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id('user_id'); // Custom primary key
-            $table->string('username')->unique()->notNullable();
-            $table->string('email')->unique()->notNullable();
-            $table->string('password_hash')->notNullable();
+            $table->id('user_id');
+            $table->string('username')->unique();
+            $table->string('email')->unique();
+            $table->string('password'); // ✅ Rename from `password_hash` to `password`
             $table->unsignedBigInteger('roles_id')->nullable();
             $table->foreign('roles_id')->references('id')->on('roles')->onDelete('set null');
             $table->timestamps();

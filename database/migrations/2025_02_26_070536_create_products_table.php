@@ -22,8 +22,8 @@ return new class extends Migration {
             $table->unsignedBigInteger('statuses_id')->nullable();
             $table->timestamps();
 
-            // Foreign Key Constraints
-            $table->foreign('subcategory_id')->references('subcategory_id')->on('subcategories')->onDelete('set null');
+            // ✅ Fixed Foreign Key Constraints
+            $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('set null'); // ✅ FIXED
             $table->foreign('inventory_id')->references('id')->on('inventory')->onDelete('set null');
             $table->foreign('statuses_id')->references('id')->on('statuses')->onDelete('set null');
         });

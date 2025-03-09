@@ -13,17 +13,25 @@ class StatusesSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('statuses')->insert([
-            ['status_name' => 'Pending', 'created_at' => Carbon::now()],
-            ['status_name' => 'Processing', 'created_at' => Carbon::now()],
-            ['status_name' => 'Shipped', 'created_at' => Carbon::now()],
-            ['status_name' => 'Delivered', 'created_at' => Carbon::now()],
-            ['status_name' => 'Cancelled', 'created_at' => Carbon::now()],
-            ['status_name' => 'Instock', 'created_at' => Carbon::now()],
-            ['status_name' => 'Out of stock', 'created_at' => Carbon::now()],
-            ['status_name' => 'Active', 'created_at' => Carbon::now()],
-            ['status_name' => 'Inactive', 'created_at' => Carbon::now()],
-            ['status_name' => 'Deactiveted', 'created_at' => Carbon::now()],
-        ]);
+        $statuses = [
+            'Pending',
+            'Processing',
+            'Shipped',
+            'Delivered',
+            'Cancelled',
+            'Instock',
+            'Out of stock',
+            'Active',
+            'Inactive',
+            'Deactivated', // ✅ Fixed spelling (was 'Deactiveted')
+        ];
+
+        foreach ($statuses as $status) {
+            // ✅ Insert only if status doesn't already exist
+            DB::table('statuses')->updateOrInsert(
+                ['status_name' => $status], // Check if this status already exists
+                ['created_at' => Carbon::now()]
+            );
+        }
     }
 }

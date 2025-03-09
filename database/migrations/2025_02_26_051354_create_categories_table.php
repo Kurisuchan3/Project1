@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->id('category_id'); // Primary Key
+            $table->id(); // Use Laravel's default primary key (bigIncrements "id")
             $table->string('name')->unique()->notNullable();
             $table->timestamps();
         });
