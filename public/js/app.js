@@ -159169,7 +159169,11 @@ var Inventory = function Inventory() {
     _Form$useForm2 = _slicedToArray(_Form$useForm, 1),
     form = _Form$useForm2[0];
 
-  // Fetch data from Laravel API
+  // Read token from localStorage and set the axios header if it exists.
+  var authToken = localStorage.getItem("authToken");
+  if (authToken) {
+    axios__WEBPACK_IMPORTED_MODULE_3__["default"].defaults.headers.common["Authorization"] = authToken;
+  }
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     fetchInventory();
   }, []);
@@ -159188,17 +159192,17 @@ var Inventory = function Inventory() {
               return _objectSpread(_objectSpread({}, item), {}, {
                 key: item.id,
                 cost: item.cost,
-                // Keep cost as a number, not formatted
                 last_restock_date: item.last_restock_date ? new Date(item.last_restock_date).toLocaleDateString() : "N/A"
               });
             }));
-            _context.next = 10;
+            _context.next = 11;
             break;
           case 7:
             _context.prev = 7;
             _context.t0 = _context["catch"](0);
             antd__WEBPACK_IMPORTED_MODULE_4__["default"].error("Error fetching inventory data");
-          case 10:
+            console.error("Fetch error:", _context.t0);
+          case 11:
           case "end":
             return _context.stop();
         }
@@ -159208,8 +159212,6 @@ var Inventory = function Inventory() {
       return _ref.apply(this, arguments);
     };
   }();
-
-  // Delete Function
   var handleDelete = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2(id) {
       return _regeneratorRuntime().wrap(function _callee2$(_context2) {
@@ -159221,13 +159223,14 @@ var Inventory = function Inventory() {
           case 3:
             antd__WEBPACK_IMPORTED_MODULE_4__["default"].success("Item deleted successfully");
             fetchInventory();
-            _context2.next = 10;
+            _context2.next = 11;
             break;
           case 7:
             _context2.prev = 7;
             _context2.t0 = _context2["catch"](0);
             antd__WEBPACK_IMPORTED_MODULE_4__["default"].error("Error deleting item");
-          case 10:
+            console.error("Delete error:", _context2.t0);
+          case 11:
           case "end":
             return _context2.stop();
         }
@@ -159237,14 +159240,12 @@ var Inventory = function Inventory() {
       return _ref2.apply(this, arguments);
     };
   }();
-
-  // Edit Functions
   var showEditModal = function showEditModal(record) {
     setEditingProduct(record);
     form.setFieldsValue({
       itemname: record.itemname,
       stock_quantity: record.stock_quantity,
-      cost: parseFloat(record.cost.replace('₱', '')),
+      cost: parseFloat(record.cost),
       warehouse_location: record.warehouse_location,
       last_restock_date: record.last_restock_date
     });
@@ -159262,13 +159263,14 @@ var Inventory = function Inventory() {
             antd__WEBPACK_IMPORTED_MODULE_4__["default"].success("Item updated successfully");
             setIsModalVisible(false);
             fetchInventory();
-            _context3.next = 11;
+            _context3.next = 12;
             break;
           case 8:
             _context3.prev = 8;
             _context3.t0 = _context3["catch"](0);
             antd__WEBPACK_IMPORTED_MODULE_4__["default"].error("Error updating item");
-          case 11:
+            console.error("Update error:", _context3.t0);
+          case 12:
           case "end":
             return _context3.stop();
         }
@@ -159278,8 +159280,6 @@ var Inventory = function Inventory() {
       return _ref3.apply(this, arguments);
     };
   }();
-
-  // Table Columns
   var columns = [{
     title: "Item Name",
     dataIndex: "itemname",
@@ -159349,14 +159349,16 @@ var Inventory = function Inventory() {
           label: "Item Name",
           name: "itemname",
           rules: [{
-            required: true
+            required: true,
+            message: "Please input the item name!"
           }],
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {})
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(antd__WEBPACK_IMPORTED_MODULE_2__["default"].Item, {
           label: "Stock Quantity",
           name: "stock_quantity",
           rules: [{
-            required: true
+            required: true,
+            message: "Please input the stock quantity!"
           }],
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
             min: 0
@@ -159365,7 +159367,8 @@ var Inventory = function Inventory() {
           label: "Cost",
           name: "cost",
           rules: [{
-            required: true
+            required: true,
+            message: "Please input the cost!"
           }],
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
             min: 0,
@@ -159375,7 +159378,8 @@ var Inventory = function Inventory() {
           label: "Warehouse",
           name: "warehouse_location",
           rules: [{
-            required: true
+            required: true,
+            message: "Please input the warehouse location!"
           }],
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {})
         })]
@@ -159442,7 +159446,7 @@ var Login = function Login() {
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
     _useState4 = _slicedToArray(_useState3, 2),
     loading = _useState4[0],
-    setLoading = _useState4[1]; // 🔥 Prevent multiple login attempts
+    setLoading = _useState4[1];
   var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useNavigate)();
   var handleChange = function handleChange(e) {
     setCredentials(_objectSpread(_objectSpread({}, credentials), {}, _defineProperty({}, e.target.name, e.target.value)));
@@ -159459,7 +159463,6 @@ var Login = function Login() {
             }
             return _context.abrupt("return");
           case 2:
-            // 🔥 Prevent multiple clicks
             setLoading(true);
             _context.prev = 3;
             _context.next = 6;
@@ -159472,16 +159475,16 @@ var Login = function Login() {
             }
             throw new Error("Authentication token not received.");
           case 9:
-            // ✅ Store Bearer Token securely
+            // Store the Bearer Token (with the prefix already attached)
             token = "Bearer ".concat(response.data.token);
             localStorage.setItem("authToken", token);
             localStorage.setItem("userRole", response.data.user.roles_id);
 
-            // ✅ Set Axios Default Authorization Header
+            // Set the default Axios Authorization header
             axios__WEBPACK_IMPORTED_MODULE_6__["default"].defaults.headers.common["Authorization"] = token;
             antd__WEBPACK_IMPORTED_MODULE_7__["default"].success("Login successful!");
 
-            // ✅ Redirect based on role
+            // Redirect based on user role
             navigate(response.data.user.roles_id === 1 ? "/admindashboard" : "/userlandingpage");
             _context.next = 21;
             break;
@@ -159492,7 +159495,7 @@ var Login = function Login() {
             antd__WEBPACK_IMPORTED_MODULE_7__["default"].error(((_error$response = _context.t0.response) === null || _error$response === void 0 || (_error$response = _error$response.data) === null || _error$response === void 0 ? void 0 : _error$response.error) || "Login failed. Please check your credentials.");
           case 21:
             _context.prev = 21;
-            setLoading(false); // 🔥 Allow login attempts again
+            setLoading(false);
             return _context.finish(21);
           case 24:
           case "end":
@@ -159541,7 +159544,7 @@ var Login = function Login() {
           loading: loading,
           children: loading ? "Logging in..." : "Login"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-          children: ["Don't have an account? ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+          children: ["Don't have an account?", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
             href: "/register",
             className: "signup-link",
             children: "Sign up"

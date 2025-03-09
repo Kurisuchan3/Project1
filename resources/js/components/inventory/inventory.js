@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Table, Button, Modal, Form, Input, InputNumber, message } from "antd";
-import { EyeOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import axios from "axios";
 
 const Inventory = () => {
@@ -9,7 +9,12 @@ const Inventory = () => {
   const [editingProduct, setEditingProduct] = useState(null);
   const [form] = Form.useForm();
 
-  // Fetch data from Laravel API
+  // Read token from localStorage and set the axios header if it exists.
+  const authToken = localStorage.getItem("authToken");
+  if (authToken) {
+    axios.defaults.headers.common["Authorization"] = authToken;
+  }
+
   useEffect(() => {
     fetchInventory();
   }, []);
@@ -17,22 +22,22 @@ const Inventory = () => {
   const fetchInventory = async () => {
     try {
       const response = await axios.get("/api/inventory");
-      setProducts(response.data.map(item => ({
-        ...item,
-        key: item.id,
-        cost: item.cost, // Keep cost as a number, not formatted
-        last_restock_date: item.last_restock_date 
-          ? new Date(item.last_restock_date).toLocaleDateString() 
-          : "N/A"
-      })));
+      setProducts(
+        response.data.map((item) => ({
+          ...item,
+          key: item.id,
+          cost: item.cost,
+          last_restock_date: item.last_restock_date
+            ? new Date(item.last_restock_date).toLocaleDateString()
+            : "N/A",
+        }))
+      );
     } catch (error) {
       message.error("Error fetching inventory data");
+      console.error("Fetch error:", error);
     }
   };
 
-  
-
-  // Delete Function
   const handleDelete = async (id) => {
     try {
       await axios.delete(`/api/inventory/${id}`);
@@ -40,16 +45,16 @@ const Inventory = () => {
       fetchInventory();
     } catch (error) {
       message.error("Error deleting item");
+      console.error("Delete error:", error);
     }
   };
 
-  // Edit Functions
   const showEditModal = (record) => {
     setEditingProduct(record);
     form.setFieldsValue({
       itemname: record.itemname,
       stock_quantity: record.stock_quantity,
-      cost: parseFloat(record.cost.replace('₱', '')),
+      cost: parseFloat(record.cost),
       warehouse_location: record.warehouse_location,
       last_restock_date: record.last_restock_date,
     });
@@ -64,10 +69,10 @@ const Inventory = () => {
       fetchInventory();
     } catch (error) {
       message.error("Error updating item");
+      console.error("Update error:", error);
     }
   };
 
-  // Table Columns
   const columns = [
     { title: "Item Name", dataIndex: "itemname", key: "itemname" },
     { title: "Stock Quantity", dataIndex: "stock_quantity", key: "stock_quantity" },
@@ -79,32 +84,17 @@ const Inventory = () => {
       key: "actions",
       render: (_, record) => (
         <div className="flex gap-2">
-          <Button 
-            icon={<EditOutlined />} 
-            onClick={() => showEditModal(record)}
-          />
-          <Button 
-            icon={<DeleteOutlined />} 
-            danger 
-            onClick={() => handleDelete(record.id)}
-          />
+          <Button icon={<EditOutlined />} onClick={() => showEditModal(record)} />
+          <Button icon={<DeleteOutlined />} danger onClick={() => handleDelete(record.id)} />
         </div>
-      )
-    }
+      ),
+    },
   ];
 
   return (
     <div className="p-4">
       <h2 className="text-xl font-bold mb-4">Inventory List</h2>
-      
-      <Table 
-        columns={columns} 
-        dataSource={products} 
-        bordered 
-        pagination={{ pageSize: 5 }}
-      />
-
-      {/* Edit Modal */}
+      <Table columns={columns} dataSource={products} bordered pagination={{ pageSize: 5 }} />
       <Modal
         title="Edit Inventory Item"
         visible={isModalVisible}
@@ -112,16 +102,16 @@ const Inventory = () => {
         onOk={() => form.submit()}
       >
         <Form form={form} onFinish={handleEditSubmit}>
-          <Form.Item label="Item Name" name="itemname" rules={[{ required: true }]}>
+          <Form.Item label="Item Name" name="itemname" rules={[{ required: true, message: "Please input the item name!" }]}>
             <Input />
           </Form.Item>
-          <Form.Item label="Stock Quantity" name="stock_quantity" rules={[{ required: true }]}>
+          <Form.Item label="Stock Quantity" name="stock_quantity" rules={[{ required: true, message: "Please input the stock quantity!" }]}>
             <InputNumber min={0} />
           </Form.Item>
-          <Form.Item label="Cost" name="cost" rules={[{ required: true }]}>
+          <Form.Item label="Cost" name="cost" rules={[{ required: true, message: "Please input the cost!" }]}>
             <InputNumber min={0} step={100} />
           </Form.Item>
-          <Form.Item label="Warehouse" name="warehouse_location" rules={[{ required: true }]}>
+          <Form.Item label="Warehouse" name="warehouse_location" rules={[{ required: true, message: "Please input the warehouse location!" }]}>
             <Input />
           </Form.Item>
         </Form>

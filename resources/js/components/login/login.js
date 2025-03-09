@@ -8,7 +8,7 @@ import axios from "axios";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
-  const [loading, setLoading] = useState(false); // 🔥 Prevent multiple login attempts
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -16,7 +16,7 @@ const Login = () => {
   };
 
   const handleLogin = async () => {
-    if (loading) return; // 🔥 Prevent multiple clicks
+    if (loading) return;
     setLoading(true);
 
     try {
@@ -26,23 +26,23 @@ const Login = () => {
         throw new Error("Authentication token not received.");
       }
 
-      // ✅ Store Bearer Token securely
+      // Store the Bearer Token (with the prefix already attached)
       const token = `Bearer ${response.data.token}`;
       localStorage.setItem("authToken", token);
       localStorage.setItem("userRole", response.data.user.roles_id);
 
-      // ✅ Set Axios Default Authorization Header
+      // Set the default Axios Authorization header
       axios.defaults.headers.common["Authorization"] = token;
 
       message.success("Login successful!");
 
-      // ✅ Redirect based on role
+      // Redirect based on user role
       navigate(response.data.user.roles_id === 1 ? "/admindashboard" : "/userlandingpage");
     } catch (error) {
       console.error("Login failed", error);
       message.error(error.response?.data?.error || "Login failed. Please check your credentials.");
     } finally {
-      setLoading(false); // 🔥 Allow login attempts again
+      setLoading(false);
     }
   };
 
@@ -63,7 +63,12 @@ const Login = () => {
           <Button type="primary" className="login-button" onClick={handleLogin} loading={loading}>
             {loading ? "Logging in..." : "Login"}
           </Button>
-          <p>Don't have an account? <a href="/register" className="signup-link">Sign up</a></p>
+          <p>
+            Don't have an account?{" "}
+            <a href="/register" className="signup-link">
+              Sign up
+            </a>
+          </p>
         </div>
       </div>
     </div>
