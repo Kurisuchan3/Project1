@@ -6,6 +6,7 @@ import Register from "../components/register/register";
 import Inventory from "../components/inventory/inventory";
 import Admindashboard from "../components/admindashboard/admindashboard";
 import UserLandingPage from "../components/user-landingpage/userlandingpage";
+import UserTable from "../components/userslist/users_component/userstable";
 
 // 🔥 Auth Wrapper Component to Protect Routes
 const ProtectedRoute = ({ element, allowedRoles }) => {
@@ -33,6 +34,7 @@ export default function Routers() {
         <Route path="inventory" element={<ProtectedRoute element={<Inventory />} allowedRoles={[1]} />} />
         <Route path="admindashboard" element={<ProtectedRoute element={<Admindashboard />} allowedRoles={[1]} />} />
         <Route path="userlandingpage" element={<ProtectedRoute element={<UserLandingPage />} allowedRoles={[2]} />} />
+        <Route path="usertable" element={<ProtectedRoute element={<UserTable />} allowedRoles={[1]} />} />
       </Routes>
     </Router>
   );
