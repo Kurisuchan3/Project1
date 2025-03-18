@@ -30,4 +30,7 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/users/archived', [UsersController::class, 'getArchivedUsers']); // 🔥 Add this line!
     Route::put('/users/{id}/archive', [UsersController::class, 'archiveUser']);
     Route::put('/users/{id}/restore', [UsersController::class, 'restoreUser']);
+
+
+
 });

@@ -1,0 +1,132 @@
+// 📌 Sidebar Styling (Ensures it's fixed)
+.layout-sider {
+    background: #fff;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    z-index: 1000;
+    border-right: 1px solid #ddd; // Optional for better separation
+    overflow-y: auto;
+  }
+  
+  // 📌 Header Styling (Fixed and aligned properly)
+  .layout-header {
+    background: #008cff; // Matches your TopNav color
+    padding: 0 20px;
+    width: calc(100% - 250px);
+    height: 64px;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  // 📌 Content Styling (Ensures it doesn’t overlap with Header)
+  .layout-content {
+    margin-left: 250px;
+    margin-top: 80px; // Prevents overlap with header
+    padding: 20px;
+    background: #f8f9fa;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  // 📌 Footer Styling (Fixed at the bottom)
+  .layout-footer {
+    text-align: center;
+    background: #f1f1f1;
+    padding: 10px 0;
+    width: calc(100% - 250px);
+    position: fixed;
+    bottom: 0;
+    left: 250px;
+  }
+  
+  // 📌 User Table Container (Centered & Responsive)
+  .user-table-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  // 📌 Action Buttons
+  .table-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  // 📌 Responsive Fixes
+  @media (max-width: 992px) {
+    .layout-sider {
+      width: 200px;
+    }
+  
+    .layout-header {
+      width: calc(100% - 200px);
+      left: 200px;
+    }
+  
+    .layout-content {
+      margin-left: 200px;
+    }
+  
+    .layout-footer {
+      width: calc(100% - 200px);
+      left: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .layout-sider {
+      width: 100px;
+    }
+  
+    .layout-header {
+      width: calc(100% - 100px);
+      left: 100px;
+    }
+  
+    .layout-content {
+      margin-left: 100px;
+    }
+  
+    .layout-footer {
+      width: calc(100% - 100px);
+      left: 100px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .layout-sider {
+      display: none;
+    }
+  
+    .layout-header {
+      width: 100%;
+      left: 0;
+    }
+  
+    .layout-content {
+      margin-left: 0;
+    }
+  
+    .layout-footer {
+      width: 100%;
+      left: 0;
+    }
+  }
+  
