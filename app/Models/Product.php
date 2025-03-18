@@ -2,22 +2,20 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
-    use HasFactory;
+    use SoftDeletes;
 
     protected $fillable = [
-        'subcategory_id',
-        'inventory_id',
-        'name',
-        'price',
-        'description',
-        'specifications',
-        'image_url',
-        'statuses_id',
+        'image', 'name', 'price', 'description', 'specifications', 'status_id'
     ];
-}
 
+    // If you create a Status model, this relationship lets you access the status details.
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
+}
