@@ -4,54 +4,91 @@ namespace App\Http\Controllers;
 
 use App\Models\Inventory;
 use Illuminate\Http\Request;
+use Validator;
 
 class InventoryController extends Controller
 {
+    // GET /api/inventory
     public function index()
     {
-        return response()->json(Inventory::all());
+        $inventories = Inventory::with('product')->get();
+        return response()->json($inventories);
     }
 
+    // GET /api/inventory/archived
+    public function archived()
+    {
+        $archived = Inventory::onlyTrashed()->with('product')->get();
+        return response()->json($archived);
+    }
+
+    // POST /api/inventory
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'itemname' => 'required|string|max:100',
+        $validator = Validator::make($request->all(), [
+            'product_id'     => 'required|exists:products,id',
             'stock_quantity' => 'required|integer|min:0',
-            'cost' => 'required|numeric|min:0',
-            'warehouse_location' => 'required|string|max:255',
-            'last_restock_date' => 'nullable|date',
+            'last_restock'   => 'nullable|date'
         ]);
 
-        $inventory = Inventory::create($validatedData);
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+
+        $data = $request->all();
+        // Set last_restock if not provided
+        if (empty($data['last_restock'])) {
+            $data['last_restock'] = now();
+        }
+        // Set stock_status automatically based on quantity
+        $data['stock_status'] = $data['stock_quantity'] == 0 ? 'Out of Stock' : 'In Stock';
+
+        $inventory = Inventory::create($data);
         return response()->json($inventory, 201);
     }
 
+    // GET /api/inventory/{id}
     public function show($id)
     {
-        return response()->json(Inventory::findOrFail($id));
-    }
-
-    public function update(Request $request, $id)
-    {
-        $validatedData = $request->validate([
-            'itemname' => 'required|string|max:100',
-            'stock_quantity' => 'required|integer|min:0',
-            'cost' => 'required|numeric|min:0',
-            'warehouse_location' => 'required|string|max:255',
-            'last_restock_date' => 'nullable|date',
-        ]);
-
-        $inventory = Inventory::findOrFail($id);
-        $inventory->update($validatedData);
+        $inventory = Inventory::with('product')->findOrFail($id);
         return response()->json($inventory);
     }
 
+    // PUT/PATCH /api/inventory/{id}
+    public function update(Request $request, $id)
+    {
+        $inventory = Inventory::findOrFail($id);
+        $validator = Validator::make($request->all(), [
+            'stock_quantity' => 'required|integer|min:0',
+            'last_restock'   => 'nullable|date'
+        ]);
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+        $data = $request->all();
+        if (empty($data['last_restock'])) {
+            $data['last_restock'] = now();
+        }
+        // Update stock_status based on new quantity
+        $data['stock_status'] = $data['stock_quantity'] == 0 ? 'Out of Stock' : 'In Stock';
+
+        $inventory->update($data);
+        return response()->json($inventory);
+    }
+
+    // DELETE /api/inventory/{id} – soft delete (archive)
     public function destroy($id)
     {
-        Inventory::destroy($id);
-        return response()->json([
-            'message' => 'Item deleted successfully',
-            'deleted_id' => (int)$id
-        ]);
+        $inventory = Inventory::findOrFail($id);
+        $inventory->delete();
+        return response()->json(['message' => 'Inventory archived (soft deleted)']);
+    }
+
+    // PUT /api/inventory/{id}/restore – restore a soft-deleted inventory record
+    public function restore($id)
+    {
+        $inventory = Inventory::withTrashed()->findOrFail($id);
+        $inventory->restore();
+        return response()->json(['message' => 'Inventory restored successfully']);
     }
 }

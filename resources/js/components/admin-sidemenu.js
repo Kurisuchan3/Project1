@@ -13,6 +13,7 @@ import {
   LogoutOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
+  SettingOutlined, // new import added for Admin Setting
 } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import "../../sass/components/_sidemenu.scss";
@@ -29,6 +30,7 @@ const menuItems = [
   { key: "customers", icon: <TeamOutlined />, label: "Customers", path: "/customers" },
   { key: "reviews", icon: <StarOutlined />, label: "Reviews", path: "/reviews" },
   { key: "shop", icon: <ShopOutlined />, label: "Shop Here", path: "/shop" },
+  { key: "adminsetting", icon: <SettingOutlined />, label: "Admin Setting", path: "/adminsetting" }, // new admin setting item
 ];
 
 const AdminSideMenu = () => {

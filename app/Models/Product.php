@@ -10,10 +10,9 @@ class Product extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'image', 'name', 'price', 'description', 'specifications', 'status_id'
+        'image', 'name', 'price', 'quantity', 'description', 'specifications', 'status_id'
     ];
 
-    // If you create a Status model, this relationship lets you access the status details.
     public function status()
     {
         return $this->belongsTo(Status::class);

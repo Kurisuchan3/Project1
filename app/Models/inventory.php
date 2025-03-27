@@ -2,19 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Inventory extends Model
 {
-    use HasFactory;
+    use SoftDeletes;
 
-    protected $table = 'inventory'; // Explicitly set the table name
+    protected $fillable = ['product_id', 'stock_quantity', 'stock_status', 'last_restock'];
 
-    protected $fillable = [
-        'itemname', 'stock_quantity', 'cost', 'warehouse_location', 'last_restock_date'
-    ];
+    public function product()
+    {
+        return $this->belongsTo(\App\Models\Product::class);
+    }
 }
-
-
-

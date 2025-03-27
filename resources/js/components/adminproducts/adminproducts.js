@@ -78,6 +78,8 @@ const ProductPage = () => {
       image: [],
       name: record.name,
       price: record.price,
+      // Set the quantity from the record (if available)
+      quantity: record.quantity,
       description: record.description,
       specifications: record.specifications,
       status_id: record.status_id
@@ -98,6 +100,8 @@ const ProductPage = () => {
     }
     formData.append("name", values.name);
     formData.append("price", values.price);
+    // Append quantity as well
+    formData.append("quantity", values.quantity);
     formData.append("description", values.description || "");
     formData.append("specifications", values.specifications || "");
     formData.append("status_id", values.status_id || "");
@@ -146,6 +150,7 @@ const ProductPage = () => {
     }
   };
 
+  // Main table columns now include quantity
   const columns = [
     {
       title: "Image",
@@ -164,6 +169,8 @@ const ProductPage = () => {
     },
     { title: "Name", dataIndex: "name", key: "name" },
     { title: "Price", dataIndex: "price", key: "price" },
+    // New Quantity column
+    { title: "Quantity", dataIndex: "quantity", key: "quantity" },
     { title: "Description", dataIndex: "description", key: "description" },
     { title: "Specifications", dataIndex: "specifications", key: "specifications" },
     {
@@ -187,7 +194,7 @@ const ProductPage = () => {
     }
   ];
 
-  // Columns for the archived products modal
+  // Archive view columns include quantity as well
   const archiveColumns = [
     {
       title: "Image",
@@ -206,6 +213,8 @@ const ProductPage = () => {
     },
     { title: "Name", dataIndex: "name", key: "name" },
     { title: "Price", dataIndex: "price", key: "price" },
+    // Include quantity in archived view
+    { title: "Quantity", dataIndex: "quantity", key: "quantity" },
     {
       title: "Actions",
       key: "actions",
@@ -278,6 +287,14 @@ const ProductPage = () => {
                   rules={[{ required: true, message: "Please input the price!" }]}
                 >
                   <InputNumber min={0} step={1} style={{ width: "100%" }} />
+                </Form.Item>
+                {/* New Quantity input */}
+                <Form.Item
+                  label="Quantity"
+                  name="quantity"
+                  rules={[{ required: true, message: "Please input the quantity!" }]}
+                >
+                  <InputNumber min={0} style={{ width: "100%" }} />
                 </Form.Item>
                 <Form.Item label="Description" name="description">
                   <Input.TextArea />

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Inventory;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Support\Facades\Storage;
@@ -19,11 +20,11 @@ class ProductController extends Controller
     // POST /products
     public function store(Request $request)
     {
-        // Validate image file along with other fields
         $validator = Validator::make($request->all(), [
             'image'          => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'name'           => 'required|string|max:255',
             'price'          => 'required|numeric',
+            'quantity'       => 'required|integer|min:0',
             'description'    => 'nullable|string',
             'specifications' => 'nullable|string',
             'status_id'      => 'nullable|exists:statuses,id'
@@ -34,25 +35,32 @@ class ProductController extends Controller
         }
 
         $data = $request->all();
-        
-        // Check if an image file was uploaded
+
         if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $filename = time().'_'.$file->getClientOriginalName();
-            // Store in storage/app/public/uploads/products
+            $file     = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
             $filePath = $file->storeAs('uploads/products', $filename, 'public');
-            // Save the public URL in the database
             $data['image'] = '/storage/' . $filePath;
         }
 
+        // Create product
         $product = Product::create($data);
+
+        // Automatically create inventory record with product's quantity,
+        // current timestamp as last restock, and computed stock_status.
+        Inventory::create([
+            'product_id'     => $product->id,
+            'stock_quantity' => $data['quantity'],
+            'last_restock'   => now(),
+            'stock_status'   => $data['quantity'] == 0 ? 'Out of Stock' : 'In Stock'
+        ]);
+
         return response()->json($product, 201);
     }
 
     // GET /products/archived
     public function archived()
     {
-        // Return only soft-deleted products
         $archivedProducts = Product::onlyTrashed()->get();
         return response()->json($archivedProducts);
     }
@@ -73,6 +81,7 @@ class ProductController extends Controller
             'image'          => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'name'           => 'required|string|max:255',
             'price'          => 'required|numeric',
+            'quantity'       => 'required|integer|min:0',
             'description'    => 'nullable|string',
             'specifications' => 'nullable|string',
             'status_id'      => 'nullable|exists:statuses,id'
@@ -83,14 +92,35 @@ class ProductController extends Controller
         }
 
         $data = $request->all();
+
         if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $filename = time().'_'.$file->getClientOriginalName();
+            $file     = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
             $filePath = $file->storeAs('uploads/products', $filename, 'public');
             $data['image'] = '/storage/' . $filePath;
         }
 
+        // Update product record
         $product->update($data);
+
+        // Update the related inventory record if it exists; otherwise create one.
+        $inventory = Inventory::where('product_id', $product->id)->first();
+        $newStatus = $data['quantity'] == 0 ? 'Out of Stock' : 'In Stock';
+        if ($inventory) {
+            $inventory->update([
+                'stock_quantity' => $data['quantity'],
+                'last_restock'   => now(),
+                'stock_status'   => $newStatus,
+            ]);
+        } else {
+            Inventory::create([
+                'product_id'     => $product->id,
+                'stock_quantity' => $data['quantity'],
+                'last_restock'   => now(),
+                'stock_status'   => $newStatus,
+            ]);
+        }
+
         return response()->json($product);
     }
 

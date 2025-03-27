@@ -1,57 +1,61 @@
 // UserLandingPage.scss
+
 .user-landing-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; // Full viewport height
-    background-color: #f5f5f5; // Light gray background
-    font-family: Arial, sans-serif;
-  
-    h1 {
-      font-size: 36px;
-      color: #333333; // Dark gray text
-      text-align: center;
-      padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+
+  .main-content {
+    flex: 1;
+    padding: 40px 80px;
+
+    .content-container {
+      background-color: #ffffff;
+      padding: 30px;
       border-radius: 8px;
-      background-color: #ffffff; // White background for the message
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Subtle shadow
-    }
-  }
-  
-  // Responsive Design
-  @media (max-width: 768px) {
-    .user-landing-page {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+
       h1 {
-        font-size: 24px;
-        padding: 15px;
+        font-size: 36px;
+        color: #333333;
+        margin-bottom: 10px;
       }
-    }
-  }// UserLandingPage.scss
-.user-landing-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; // Full viewport height
-    background-color: #f5f5f5; // Light gray background
-    font-family: Arial, sans-serif;
-  
-    h1 {
-      font-size: 36px;
-      color: #333333; // Dark gray text
-      text-align: center;
-      padding: 20px;
-      border-radius: 8px;
-      background-color: #ffffff; // White background for the message
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Subtle shadow
-    }
-  }
-  
-  // Responsive Design
-  @media (max-width: 768px) {
-    .user-landing-page {
-      h1 {
-        font-size: 24px;
-        padding: 15px;
+
+      p {
+        font-size: 18px;
+        color: #666666;
       }
     }
   }
+
+  footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .user-landing-page {
+    .main-content {
+      padding: 20px;
+
+      .content-container {
+        padding: 20px;
+
+        h1 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

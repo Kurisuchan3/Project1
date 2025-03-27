@@ -14,6 +14,8 @@ class CreateProductsTable extends Migration
             $table->string('image')->nullable();
             $table->string('name');
             $table->decimal('price', 8, 2);
+            // New quantity column with default value of 0
+            $table->integer('quantity')->default(0);
             $table->text('description')->nullable();
             $table->text('specifications')->nullable();
             // Using 'status_id' to reference the statuses table

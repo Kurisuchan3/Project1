@@ -25,8 +25,9 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/user', [AuthController::class, 'userProfile']);
 
     // ✅ Inventory Management
+    Route::get('/inventory/archived', [InventoryController::class, 'archived']);
+    Route::put('/inventory/{id}/restore', [InventoryController::class, 'restore']);
     Route::apiResource('inventory', InventoryController::class);
-
     // ✅ User Management
     Route::get('/users', [UsersController::class, 'getUsers']);
     Route::get('/users/archived', [UsersController::class, 'getArchivedUsers']);
