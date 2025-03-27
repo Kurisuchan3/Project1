@@ -13,10 +13,10 @@ class DatabaseSeeder extends Seeder
             SubcategorySeeder::class,
             RolesSeeder::class,
             StatusesSeeder::class,
-            InventorySeeder::class,
+            ProductsSeeder::class,   // ⬆ Seed this first
+            InventorySeeder::class,  // ⬇ Then seed inventories
             UsersSeeder::class,
             ProfilesSeeder::class,
-            ProductsSeeder::class,
             
         ]);
     }

@@ -78041,7 +78041,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".topnav {\n  background-color: #008cff;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 10px 20px;\n}\n.topnav .logo {\n  font-size: 24px;\n  font-weight: bold;\n  color: #ffffff;\n  display: flex;\n  align-items: center;\n}\n.topnav .search-bar {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n.topnav .search-bar input {\n  width: 300px;\n  padding: 8px;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n}\n.topnav .search-bar button {\n  padding: 8px 15px;\n  border: none;\n  background-color: #ffffff;\n  color: #333;\n  border-radius: 5px;\n  cursor: pointer;\n  font-weight: bold;\n}\n.topnav .nav-icons {\n  display: flex;\n  align-items: center;\n  gap: 15px;\n}\n.topnav .nav-icons i {\n  font-size: 20px;\n  color: #000000;\n  cursor: pointer;\n}\n\n.nav-links {\n  background-color: #ffffff;\n  display: flex;\n  justify-content: center;\n  padding: 10px 0;\n  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);\n}\n.nav-links a {\n  margin: 0 15px;\n  text-decoration: none;\n  color: #000000;\n  font-weight: 500;\n  position: relative;\n}\n.nav-links a:hover {\n  color: #008cff;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".topnav {\n  background-color: #008cff;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 10px 30px;\n}\n.topnav .logo {\n  display: flex;\n  align-items: center;\n}\n.topnav .search-bar {\n  flex: 1;\n  display: flex;\n  justify-content: center;\n}\n.topnav .search-bar input {\n  width: 100%;\n  max-width: 400px;\n  padding: 8px;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n}\n.topnav .search-bar button {\n  padding: 8px 15px;\n  border: none;\n  background-color: #ffffff;\n  color: #333;\n  border-radius: 5px;\n  cursor: pointer;\n  font-weight: bold;\n}\n.topnav .nav-right {\n  display: flex;\n  align-items: center;\n  gap: 15px;\n}\n.topnav .nav-right .username-inline {\n  color: #ffffff;\n  font-weight: 500;\n  font-size: 14px;\n}\n.topnav .nav-right .nav-icons {\n  display: flex;\n  align-items: center;\n  gap: 15px;\n}\n.topnav .nav-right .nav-icons i {\n  font-size: 20px;\n  color: #ffffff;\n  cursor: pointer;\n}\n\n.nav-links {\n  background-color: #ffffff;\n  display: flex;\n  justify-content: center;\n  padding: 10px 0;\n  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);\n}\n.nav-links a {\n  margin: 0 15px;\n  text-decoration: none;\n  color: #000000;\n  font-weight: 500;\n  position: relative;\n}\n.nav-links a:hover {\n  color: #008cff;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -165593,10 +165593,11 @@ var Login = function Login() {
             }
             throw new Error("Authentication token not received.");
           case 9:
-            // Store the Bearer Token (with the prefix already attached)
+            // Store the Bearer Token and other info in localStorage
             token = "Bearer ".concat(response.data.token);
             localStorage.setItem("authToken", token);
             localStorage.setItem("userRole", response.data.user.roles_id);
+            localStorage.setItem("userName", response.data.user.username); // ✅ Store username for TopNav
 
             // Set the default Axios Authorization header
             axios__WEBPACK_IMPORTED_MODULE_6__["default"].defaults.headers.common["Authorization"] = token;
@@ -165604,22 +165605,22 @@ var Login = function Login() {
 
             // Redirect based on user role
             navigate(response.data.user.roles_id === 1 ? "/admindashboard" : "/userlandingpage");
-            _context.next = 21;
+            _context.next = 22;
             break;
-          case 17:
-            _context.prev = 17;
+          case 18:
+            _context.prev = 18;
             _context.t0 = _context["catch"](3);
             console.error("Login failed", _context.t0);
             antd__WEBPACK_IMPORTED_MODULE_7__["default"].error(((_error$response = _context.t0.response) === null || _error$response === void 0 || (_error$response = _error$response.data) === null || _error$response === void 0 ? void 0 : _error$response.error) || "Login failed. Please check your credentials.");
-          case 21:
-            _context.prev = 21;
+          case 22:
+            _context.prev = 22;
             setLoading(false);
-            return _context.finish(21);
-          case 24:
+            return _context.finish(22);
+          case 25:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[3, 17, 21, 24]]);
+      }, _callee, null, [[3, 18, 22, 25]]);
     }));
     return function handleLogin() {
       return _ref.apply(this, arguments);
@@ -165856,8 +165857,6 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
 var Search = antd__WEBPACK_IMPORTED_MODULE_4__["default"].Search;
 var TopNav = function TopNav() {
   var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useNavigate)();
-
-  // 🔥 Logout function (Reverted to Session-based Auth)
   var handleLogout = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
       return _regeneratorRuntime().wrap(function _callee$(_context) {
@@ -165867,34 +165866,30 @@ var TopNav = function TopNav() {
             _context.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_6__["default"].post("/api/logout");
           case 3:
-            // ✅ Clear session-based auth
             localStorage.removeItem("authToken");
             localStorage.removeItem("userRole");
+            localStorage.removeItem("userName");
             antd__WEBPACK_IMPORTED_MODULE_7__["default"].success("Logout successful!");
             navigate("/login");
-            _context.next = 13;
+            _context.next = 14;
             break;
-          case 9:
-            _context.prev = 9;
+          case 10:
+            _context.prev = 10;
             _context.t0 = _context["catch"](0);
             console.error("Logout failed", _context.t0);
             antd__WEBPACK_IMPORTED_MODULE_7__["default"].error("Logout failed. Please try again.");
-          case 13:
+          case 14:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[0, 9]]);
+      }, _callee, null, [[0, 10]]);
     }));
     return function handleLogout() {
       return _ref.apply(this, arguments);
     };
   }();
-
-  // 🔥 Check authentication state
   var isAuthenticated = localStorage.getItem("authToken");
-  var userRole = parseInt(localStorage.getItem("userRole"), 10);
-
-  // 🔥 User Menu Dropdown
+  var userName = localStorage.getItem("userName");
   var userMenu = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"].Item, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
@@ -165923,35 +165918,46 @@ var TopNav = function TopNav() {
           placeholder: "Search product here...",
           enterButton: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
             icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_11__["default"], {})
-          })
+          }),
+          size: "large",
+          style: {
+            maxWidth: "400px",
+            width: "100%"
+          }
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "nav-icons",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {
-          style: {
-            fontSize: "18px",
-            cursor: "pointer"
-          }
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_13__["default"], {
-          style: {
-            fontSize: "18px",
-            cursor: "pointer"
-          }
-        }), isAuthenticated ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
-          overlay: userMenu,
-          placement: "bottomRight",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_15__["default"], {
+        className: "nav-right",
+        children: [isAuthenticated && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+          className: "username-inline",
+          children: ["Welcome, ", userName]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "nav-icons",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {
             style: {
               fontSize: "18px",
               cursor: "pointer"
             }
-          })
-        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          type: "primary",
-          onClick: function onClick() {
-            return navigate("/login");
-          },
-          children: "Login"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_13__["default"], {
+            style: {
+              fontSize: "18px",
+              cursor: "pointer"
+            }
+          }), isAuthenticated ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
+            overlay: userMenu,
+            placement: "bottomRight",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_15__["default"], {
+              style: {
+                fontSize: "18px",
+                cursor: "pointer"
+              }
+            })
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+            type: "primary",
+            onClick: function onClick() {
+              return navigate("/login");
+            },
+            children: "Login"
+          })]
         })]
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {

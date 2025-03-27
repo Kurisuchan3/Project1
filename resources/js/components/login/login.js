@@ -26,10 +26,11 @@ const Login = () => {
         throw new Error("Authentication token not received.");
       }
 
-      // Store the Bearer Token (with the prefix already attached)
+      // Store the Bearer Token and other info in localStorage
       const token = `Bearer ${response.data.token}`;
       localStorage.setItem("authToken", token);
       localStorage.setItem("userRole", response.data.user.roles_id);
+      localStorage.setItem("userName", response.data.user.username); // ✅ Store username for TopNav
 
       // Set the default Axios Authorization header
       axios.defaults.headers.common["Authorization"] = token;
