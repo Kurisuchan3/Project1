@@ -4,29 +4,13 @@ import logo from "../../../public/images/logo.png";
 import { Input, Button, Dropdown, Menu, message } from "antd";
 import { SearchOutlined, UserOutlined, ShoppingCartOutlined, BellOutlined, LogoutOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import useLogout from "../components/logout"; // ✅ Import the useLogout hook
 
 const { Search } = Input;
 
 const TopNav = () => {
   const navigate = useNavigate();
-
-  // 🔥 Logout function (Reverted to Session-based Auth)
-  const handleLogout = async () => {
-    try {
-      await axios.post("/api/logout");
-
-      // ✅ Clear session-based auth
-      localStorage.removeItem("authToken");
-      localStorage.removeItem("userRole");
-
-      message.success("Logout successful!");
-      navigate("/login");
-    } catch (error) {
-      console.error("Logout failed", error);
-      message.error("Logout failed. Please try again.");
-    }
-  };
+  const handleLogout = useLogout(); // ✅ Use the hook
 
   // 🔥 Check authentication state
   const isAuthenticated = localStorage.getItem("authToken");

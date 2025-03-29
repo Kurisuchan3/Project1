@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../../sass/components/_login.scss";
 import TopNav from "../topnav";
@@ -6,10 +6,31 @@ import logo from "../../../../public/images/logo.png";
 import { Input, Button, message } from "antd";
 import axios from "axios";
 
+axios.defaults.baseURL = "http://localhost:8000"; // Adjust if different
+
 const Login = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("authToken");
+    const userRole = localStorage.getItem("userRole");
+
+    if (token) {
+      axios
+        .get("/api/user", { headers: { Authorization: token } })
+        .then((response) => {
+          console.log("Token validated:", response.data);
+          navigate(userRole === "1" ? "/admindashboard" : "/userlandingpage");
+        })
+        .catch((error) => {
+          console.error("Token validation failed:", error.response?.data);
+          localStorage.removeItem("authToken");
+          localStorage.removeItem("userRole");
+        });
+    }
+  }, [navigate]);
 
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -21,25 +42,23 @@ const Login = () => {
 
     try {
       const response = await axios.post("/api/login", credentials);
+      console.log("Login response:", response.data);
 
       if (!response.data.token) {
         throw new Error("Authentication token not received.");
       }
 
-      // Store the Bearer Token (with the prefix already attached)
       const token = `Bearer ${response.data.token}`;
       localStorage.setItem("authToken", token);
       localStorage.setItem("userRole", response.data.user.roles_id);
 
-      // Set the default Axios Authorization header
       axios.defaults.headers.common["Authorization"] = token;
 
       message.success("Login successful!");
-
-      // Redirect based on user role
+      console.log("Redirecting to:", response.data.user.roles_id === 1 ? "/admindashboard" : "/userlandingpage");
       navigate(response.data.user.roles_id === 1 ? "/admindashboard" : "/userlandingpage");
     } catch (error) {
-      console.error("Login failed", error);
+      console.error("Login failed:", error.response?.data);
       message.error(error.response?.data?.error || "Login failed. Please check your credentials.");
     } finally {
       setLoading(false);

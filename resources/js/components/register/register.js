@@ -2,29 +2,32 @@ import React from "react";
 import { Form, Input, Button, message } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import '../../../sass/components/registerpage.scss';
 
 const Register = () => {
-  const navigate = useNavigate(); // Redirect after registration
+  const navigate = useNavigate();
 
   const onFinish = async (values) => {
-    // The roles_id is automatically set to 2 (Customer)
+    console.log("Form values:", values); // ✅ Debug payload
     try {
       const response = await axios.post("http://127.0.0.1:8000/api/register", values);
+      console.log("Registration response:", response.data); // ✅ Debug response
       message.success("Registration successful! Redirecting to login...");
-      setTimeout(() => navigate("/login"), 2000); // Redirect after 2 seconds
+      setTimeout(() => navigate("/login"), 2000);
     } catch (error) {
+      console.error("Registration error:", error.response?.data); // ✅ Debug error
       message.error(error.response?.data?.error || "Registration failed.");
     }
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="p-8 bg-white shadow-md rounded-md w-96">
-        <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
+    <div className="register-page">
+      <div className="register-container">
+        <h2>Register</h2>
         <Form
           layout="vertical"
           onFinish={onFinish}
-          initialValues={{ roles_id: 2 }}  // Set default role to Customer
+          initialValues={{ roles_id: 2 }} // Set default role to Customer
         >
           <Form.Item
             label="Username"
@@ -47,7 +50,6 @@ const Register = () => {
           >
             <Input.Password placeholder="Enter your password" />
           </Form.Item>
-          {/* Hidden field to set role as Customer (roles_id = 2) */}
           <Form.Item name="roles_id" initialValue={2} hidden>
             <Input type="hidden" />
           </Form.Item>
@@ -56,13 +58,13 @@ const Register = () => {
               Register
             </Button>
           </Form.Item>
+          <div className="login-link">
+            Already have an account?{" "}
+            <Link to="/login">
+              Log in here
+            </Link>
+          </div>
         </Form>
-        <p className="text-center mt-4">
-          Already have an account?{" "}
-          <Link to="/login" className="text-blue-500">
-            Log in here
-          </Link>
-        </p>
       </div>
     </div>
   );

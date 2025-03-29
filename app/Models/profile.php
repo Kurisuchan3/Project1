@@ -10,6 +10,17 @@ class Profile extends Model
     use HasFactory;
 
     protected $table = 'profiles';
+    protected $primaryKey = 'profile_id';
+
+    protected $fillable = [
+        'user_id',
+        'first_name',
+        'last_name',
+        'middle_initial',
+        'birthdate',
+        'phone',
+        'profile_picture',
+    ];
 
     // ✅ Relationship with User
     public function user()

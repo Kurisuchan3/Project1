@@ -1,3 +1,4 @@
+// resources/js/components/Routers.js
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
@@ -8,6 +9,8 @@ import Admindashboard from "../components/admindashboard/admindashboard";
 import UserLandingPage from "../components/user-landingpage/userlandingpage";
 import UserTable from "../components/userslist/users_component/userstable";
 import ProductPage from "./adminproducts/adminproducts";
+import ProductDetails from "./userspage/selectedproduct";
+import Profile from "../components/Profile"; 
 
 // 🔥 Auth Wrapper Component to Protect Routes
 const ProtectedRoute = ({ element, allowedRoles }) => {
@@ -37,6 +40,15 @@ export default function Routers() {
         <Route path="userlandingpage" element={<ProtectedRoute element={<UserLandingPage />} allowedRoles={[2]} />} />
         <Route path="usertable" element={<ProtectedRoute element={<UserTable />} allowedRoles={[1]} />} />
         <Route path="adminproducts" element={<ProtectedRoute element={<ProductPage />} allowedRoles={[1]} />} />
+        <Route
+          path="product/:id"
+          element={<ProtectedRoute element={<ProductDetails />} allowedRoles={[2]} />}
+        />
+        {/* Add Profile route, accessible to both admin (role 1) and user (role 2) */}
+        <Route
+          path="profile"
+          element={<ProtectedRoute element={<Profile />} allowedRoles={[1, 2]} />}
+        />
       </Routes>
     </Router>
   );

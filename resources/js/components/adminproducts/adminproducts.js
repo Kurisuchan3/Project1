@@ -284,7 +284,7 @@ const ProductPage = () => {
                 <Form.Item
                   label="Price"
                   name="price"
-                  rules={[{ required: true, message: "Please input the price!" }]}
+                  rules={[{ required: true, message: "Please input the price" }]}
                 >
                   <InputNumber min={0} step={1} style={{ width: "100%" }} />
                 </Form.Item>

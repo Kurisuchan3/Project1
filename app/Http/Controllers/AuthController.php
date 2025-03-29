@@ -14,33 +14,33 @@ class AuthController extends Controller
      * ✅ Register a new user and generate API token
      */
     public function register(Request $request)
-    {
-        $validator = Validator::make($request->all(), [
-            'username' => 'required|string|max:255|unique:users',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8',
-        ]);
+{
+    $validator = Validator::make($request->all(), [
+        'username' => 'required|string|max:255|unique:users',
+        'email' => 'required|string|email|max:255|unique:users',
+        'password' => 'required|string|min:8',
+        'roles_id' => 'sometimes|integer|exists:roles,id', // ✅ Optional validation for roles_id
+    ]);
 
-        if ($validator->fails()) {
-            return response()->json(['error' => $validator->errors()], 400);
-        }
-
-        // Create User
-        $user = User::create([
-            'username' => $request->username,
-            'email' => $request->email,
-            'password' => Hash::make($request->password), // ✅ Store in `password`, not `password_hash`
-        ]);
-
-        // ✅ Issue Passport Token
-        $token = $user->createToken('Laravel')->accessToken;
-
-        return response()->json([
-            'message' => 'User registered successfully!',
-            'token' => $token,
-            'user' => $user
-        ], 201);
+    if ($validator->fails()) {
+        return response()->json(['error' => $validator->errors()], 400);
     }
+
+    $user = User::create([
+        'username' => $request->username,
+        'email' => $request->email,
+        'password' => Hash::make($request->password),
+        'roles_id' => $request->input('roles_id', 2), // ✅ Default to 2 (Customer)
+    ]);
+
+    $token = $user->createToken('Laravel')->accessToken;
+
+    return response()->json([
+        'message' => 'User registered successfully!',
+        'token' => $token,
+        'user' => $user
+    ], 201);
+}
 
     /**
      * ✅ Login (Fixed for Passport)

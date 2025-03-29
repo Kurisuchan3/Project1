@@ -1,0 +1,38 @@
+.selected-product-page {
+    .product-details {
+      padding: 20px;
+      max-width: 1200px;
+      margin-top: 100px;
+  
+      .product-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+  
+        .product-image {
+          flex: 1;
+          min-width: 300px;
+        }
+  
+        .product-info {
+          flex: 1;
+          min-width: 300px;
+  
+          .price {
+            font-size: 24px;
+            color: #1890ff;
+            margin: 10px 0;
+          }
+  
+          .product-specs {
+            margin: 20px 0;
+  
+            ul {
+              list-style-type: disc;
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }

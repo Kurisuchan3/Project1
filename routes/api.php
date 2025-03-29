@@ -7,6 +7,7 @@ use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StatusController;
+use App\Http\Controllers\ProfileController; // Add this
 
 /*
 |--------------------------------------------------------------------------
@@ -24,10 +25,15 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/user', [AuthController::class, 'userProfile']);
 
+    // ✅ Profile Management
+    Route::get('/profile', [ProfileController::class, 'getProfile']);
+    Route::put('/profile', [ProfileController::class, 'updateProfile']);
+
     // ✅ Inventory Management
     Route::get('/inventory/archived', [InventoryController::class, 'archived']);
     Route::put('/inventory/{id}/restore', [InventoryController::class, 'restore']);
     Route::apiResource('inventory', InventoryController::class);
+
     // ✅ User Management
     Route::get('/users', [UsersController::class, 'getUsers']);
     Route::get('/users/archived', [UsersController::class, 'getArchivedUsers']);

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TopNav from '../topnav';
 import Footer from '../footer';
+import ProductModal from '../ProductModal/productview'; // Import the new modal component
 import '../../../sass/components/user-components/userlandingpage.scss';
 import axios from 'axios';
 import { Card, Button } from 'antd';
@@ -10,6 +12,9 @@ const { Meta } = Card;
 
 const UserLandingPage = () => {
   const [products, setProducts] = useState([]);
+  const [isModalVisible, setIsModalVisible] = useState(false); // Modal visibility state
+  const [selectedProduct, setSelectedProduct] = useState(null); // Selected product state
+  const navigate = useNavigate();
 
   const fetchProducts = async () => {
     try {
@@ -24,6 +29,23 @@ const UserLandingPage = () => {
     fetchProducts();
   }, []);
 
+  // Function to show the modal
+  const showModal = (product) => {
+    setSelectedProduct(product);
+    setIsModalVisible(true);
+  };
+
+  // Function to hide the modal
+  const hideModal = () => {
+    setIsModalVisible(false);
+    setSelectedProduct(null);
+  };
+
+  // Function to navigate to the product details page
+  const viewProductDetails = (productId) => {
+    navigate(`/product/${productId}`);
+  };
+
   return (
     <div className="user-landing-page">
       <TopNav />
@@ -34,42 +56,62 @@ const UserLandingPage = () => {
           <p>Explore the best laptops, peripherals, and accessories all in one place.</p>
         </div>
 
-        {/* Product Carousel Section */}
         <section className="best-selling-section">
           <h2>Best Selling Products</h2>
           <div className="product-carousel">
-            {products.map((product) => (
-              <Card
-                key={product.id}
-                hoverable
-                style={{ width: 250, margin: '10px' }}
-                cover={
-                  product.image ? (
-                    <img
-                      alt={product.name}
-                      src={window.location.origin + product.image}
-                      style={{ height: 180, objectFit: 'cover' }}
-                    />
-                  ) : (
-                    <div style={{ height: 180, backgroundColor: '#f0f0f0' }} />
-                  )
-                }
-                actions={[
-                  <Button size="small" icon={<EyeOutlined />}>Quick View</Button>,
-                  <Button size="small" icon={<ShoppingCartOutlined />} />
-                ]}
-              >
-                <Meta
-                  title={product.name}
-                  description={`₱${parseFloat(product.price).toLocaleString(undefined, {
-                    minimumFractionDigits: 2,
-                  })}`}
-                />
-              </Card>
-            ))}
+            <div className="product-grid">
+              {products.map((product) => (
+                <Card
+                  key={product.id}
+                  hoverable
+                  style={{ width: 250, margin: '10px' }}
+                  cover={
+                    <div className="product-image-wrapper" onClick={() => showModal(product)}>
+                      {product.image ? (
+                        <img
+                          alt={product.name}
+                          src={window.location.origin + product.image}
+                          className="product-image"
+                        />
+                      ) : (
+                        <div className="product-image-placeholder" />
+                      )}
+                    </div>
+                  }
+                  onClick={() => showModal(product)} // Click on card triggers modal
+                  actions={[
+                    <Button
+                      size="small"
+                      icon={<EyeOutlined />}
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevent card click from triggering modal
+                        viewProductDetails(product.id);
+                      }}
+                    >
+                      View Details
+                    </Button>,
+                    <Button size="small" icon={<ShoppingCartOutlined />} onClick={(e) => e.stopPropagation()} />,
+                  ]}
+                >
+                  <Meta
+                    title={product.name}
+                    description={`₱${parseFloat(product.price).toLocaleString(undefined, {
+                      minimumFractionDigits: 2,
+                    })}`}
+                  />
+                </Card>
+              ))}
+            </div>
           </div>
         </section>
       </main>
+
+      {/* Render the ProductModal */}
+      <ProductModal
+        visible={isModalVisible}
+        product={selectedProduct}
+        onClose={hideModal}
+      />
 
       <Footer />
     </div>
