@@ -20,7 +20,7 @@ const TopNav = () => {
   const userMenu = (
     <Menu>
       <Menu.Item key="profile">
-        <a href="/profile">Profile</a>
+        <a href="/profile">Profile</a>a
       </Menu.Item>
       <Menu.Item key="logout" onClick={handleLogout} icon={<LogoutOutlined />}>
         Logout

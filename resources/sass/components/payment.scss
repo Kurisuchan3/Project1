@@ -1,0 +1,379 @@
+.payment-view {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background: #f8f8f8;
+  
+    .payment-content {
+      flex: 1;
+      width: 100%;
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 30px 40px;
+  
+      @media (max-width: 768px) {
+        padding: 20px 15px;
+      }
+    }
+  
+    .payment-title {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #1a1a1a;
+    }
+  
+    .payment-container {
+      display: flex;
+      gap: 40px;
+      width: 100%;
+  
+      @media (max-width: 1200px) {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  
+    .billing-details {
+      flex: 2;
+  
+      .section-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 25px;
+        color: #1a1a1a;
+      }
+  
+      .billing-form {
+        .form-row {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 20px;
+  
+          @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 20px;
+          }
+  
+          .form-group {
+            flex: 1;
+          }
+        }
+  
+        .form-group {
+          margin-bottom: 20px;
+  
+          label {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 500;
+  
+            &[for="firstName"],
+            &[for="lastName"],
+            &[for="country"],
+            &[for="streetAddress"],
+            &[for="townCity"],
+            &[for="state"],
+            &[for="mobilePhone"],
+            &[for="cardNumber"],
+            &[for="expirationDate"],
+            &[for="securityCode"],
+            &[for="nameOnCard"] {
+              &:after {
+                content: '*';
+                color: #ff4444;
+                margin-left: 4px;
+                display: inline-block;
+              }
+            }
+          }
+  
+          input,
+          select,
+          textarea {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            color: #333;
+            transition: border-color 0.2s;
+  
+            &:focus {
+              outline: none;
+              border-color: #0066cc;
+            }
+  
+            &::placeholder {
+              color: #999;
+            }
+          }
+  
+          select {
+            background: transparent;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="%23666" d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            cursor: pointer;
+  
+            option {
+              background: rgba(255, 255, 255, 0.9);
+              color: #333;
+            }
+          }
+  
+          textarea {
+            resize: vertical;
+            min-height: 100px;
+          }
+        }
+      }
+    }
+  
+    .order-summary {
+      flex: 1;
+      min-width: 350px;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 50px;
+      height: fit-content;
+  
+      @media (max-width: 1200px) {
+        min-width: 100%;
+      }
+  
+      .order-section {
+        margin-bottom: 40px;
+        
+        .section-title {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 25px;
+          color: #1a1a1a;
+        }
+  
+        .order-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #e0e0e0;
+  
+          .product-image {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-right: 20px;
+            background: #f5f5f5;
+            border-radius: 6px;
+          }
+  
+          .product-details {
+            flex: 1;
+  
+            .product-name {
+              font-size: 16px;
+              font-weight: 500;
+            }
+          }
+        }
+  
+        .summary-row {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 15px;
+          font-size: 16px;
+  
+          .summary-label {
+            color: #666;
+          }
+  
+          .summary-value {
+            font-weight: 500;
+          }
+  
+          &.total {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 18px;
+  
+            .summary-label,
+            .summary-value {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+  
+      .payment-section {
+        margin-bottom: 40px;
+  
+        .section-title {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 25px;
+          color: #1a1a1a;
+        }
+  
+        .payment-options {
+          margin-top: 0;
+  
+          .payment-option-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+            color: #666; // Lightened text color from #333 to #666
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+  
+            &.active {
+              background: #e6f0ff;
+              border-color: #0066cc;
+              color: #0066cc; // Keep active state color as is
+            }
+  
+            &:hover {
+              background: #e6f0ff;
+              border-color: #0066cc;
+              color: #0066cc; // Keep hover state color as is
+            }
+          }
+  
+          .credit-card-form {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 8px;
+            border: 1px solid #0066cc;
+  
+            .form-group {
+              margin-bottom: 20px;
+  
+              label {
+                display: block;
+                margin-bottom: 8px;
+                font-size: 14px;
+                color: #666;
+                font-weight: 500;
+              }
+  
+              input {
+                width: 100%;
+                padding: 12px 15px;
+                font-size: 15px;
+                border: 1px solid #e0e0e0;
+                border-radius: 6px;
+                color: #333;
+                transition: border-color 0.2s;
+  
+                &:focus {
+                  outline: none;
+                  border-color: #0066cc;
+                }
+  
+                &::placeholder {
+                  color: #bbb;
+                }
+              }
+            }
+  
+            .form-row {
+              display: flex;
+              gap: 20px;
+              margin-bottom: 20px;
+  
+              @media (max-width: 768px) {
+                flex-direction: column;
+                gap: 20px;
+              }
+  
+              .form-group {
+                flex: 1;
+              }
+            }
+          }
+  
+          .cash-on-delivery-info {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 8px;
+  
+            p {
+              margin: 0;
+              font-size: 14px;
+              color: #666;
+            }
+          }
+  
+          .gcash-payment {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 8px;
+            border: 1px solid #0066cc;
+  
+            .qr-code {
+              img {
+                width: 200px;
+                height: auto;
+                background: transparent;
+                padding-left: 50px;
+                margin-left: 80px;
+              }
+            }
+          }
+        }
+  
+        .place-order-btn {
+          width: 100%;
+          padding: 16px;
+          background: #0066cc;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          font-size: 18px;
+          font-weight: 500;
+          cursor: pointer;
+          margin-top: 30px;
+          transition: background 0.2s;
+  
+          &:hover {
+            background: #004499;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .payment-content {
+        padding: 20px 15px;
+      }
+  
+      .order-summary {
+        padding: 20px;
+  
+        .place-order-btn {
+          padding: 14px;
+          font-size: 16px;
+        }
+      }
+    }
+  }

@@ -8,11 +8,11 @@ const useLogout = () => {
   const handleLogout = async () => {
     try {
       const authToken = localStorage.getItem("authToken");
-      console.log("Logout token:", authToken); // Debug
+      console.log("Logout token:", authToken);
 
       if (!authToken) {
         message.warning("You are already logged out.");
-        navigate("/login");
+        navigate("/homepagecontent"); // Redirect to homepagecontent
         return;
       }
 
@@ -20,18 +20,19 @@ const useLogout = () => {
         "/api/logout",
         {},
         {
-          headers: { Authorization: authToken }, // ✅ Use token as stored
+          headers: { Authorization: authToken },
         }
       );
-      console.log("Logout response:", response.data); // Debug
+      console.log("Logout response:", response.data);
 
       localStorage.removeItem("authToken");
       localStorage.removeItem("userRole");
       message.success("Logout successful!");
-      navigate("/login");
+      navigate("/homepagecontent"); // Redirect to homepagecontent
     } catch (error) {
       console.error("Logout failed:", error.response?.data);
       message.error("Logout failed. Please try again.");
+      navigate("/homepagecontent"); // Redirect even on error
     }
   };
 

@@ -6,7 +6,7 @@ import logo from "../../../../public/images/logo.png";
 import { Input, Button, message } from "antd";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:8000"; // Adjust if different
+axios.defaults.baseURL = "http://localhost:8000";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -14,6 +14,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    let isMounted = true;
     const token = localStorage.getItem("authToken");
     const userRole = localStorage.getItem("userRole");
 
@@ -21,15 +22,24 @@ const Login = () => {
       axios
         .get("/api/user", { headers: { Authorization: token } })
         .then((response) => {
-          console.log("Token validated:", response.data);
-          navigate(userRole === "1" ? "/admindashboard" : "/userlandingpage");
+          if (isMounted) {
+            console.log("Token validated:", response.data);
+            const role = parseInt(userRole, 10); // Parse userRole to integer
+            navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
+          }
         })
         .catch((error) => {
           console.error("Token validation failed:", error.response?.data);
-          localStorage.removeItem("authToken");
-          localStorage.removeItem("userRole");
+          if (isMounted) {
+            localStorage.removeItem("authToken");
+            localStorage.removeItem("userRole");
+          }
         });
     }
+
+    return () => {
+      isMounted = false;
+    };
   }, [navigate]);
 
   const handleChange = (e) => {
@@ -50,13 +60,13 @@ const Login = () => {
 
       const token = `Bearer ${response.data.token}`;
       localStorage.setItem("authToken", token);
-      localStorage.setItem("userRole", response.data.user.roles_id);
+      const role = parseInt(response.data.user.roles_id, 10); // Parse roles_id to integer
+      localStorage.setItem("userRole", role);
 
       axios.defaults.headers.common["Authorization"] = token;
 
       message.success("Login successful!");
-      console.log("Redirecting to:", response.data.user.roles_id === 1 ? "/admindashboard" : "/userlandingpage");
-      navigate(response.data.user.roles_id === 1 ? "/admindashboard" : "/userlandingpage");
+      navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
     } catch (error) {
       console.error("Login failed:", error.response?.data);
       message.error(error.response?.data?.error || "Login failed. Please check your credentials.");

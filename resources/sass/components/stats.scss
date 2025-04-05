@@ -1,0 +1,99 @@
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  padding: 30px 20px;
+  background-color: #F9F9F9;
+  margin-top: 150px;
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+  }
+
+  &__illustration {
+    position: absolute;
+    top: -120px; // Standard position for most illustrations
+    width: 115px;
+    height: auto;
+    z-index: 1;
+    
+    
+    /* Specific adjustment for Products Sold SVG */
+    &--products {
+      top: -85px;
+      width: 170px; // Slightly different position if needed
+      // Add any other product-specific adjustments here
+      // Example: width: 125px; if this SVG needs to be larger
+    }
+  }
+
+  &__card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    z-index: 2;
+    margin-top: 30px;
+  }
+
+  &__number {
+    font-family: 'Akira Expanded', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(to bottom, #261654, #5431BA);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    line-height: 1;
+  }
+
+  &__label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 30px 20px;
+
+    &__item {
+      width: 180px;
+    }
+
+    &__illustration {
+      width: 90px; // Slightly larger than previous 70px for better visibility
+      top: -60px; // Adjusted mobile position
+      
+      &--products {
+        top: -55px; // Slightly different mobile position if needed
+      }
+    }
+
+    &__card {
+      padding: 10px 15px;
+      margin-top: 25px;
+    }
+
+    &__number {
+      font-size: 40px;
+    }
+
+    &__label {
+      font-size: 12px;
+    }
+  }
+}

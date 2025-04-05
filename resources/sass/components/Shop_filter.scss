@@ -1,0 +1,100 @@
+.shop-filter {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 -60px;
+  
+    .filter-section {
+      margin-bottom: 30px;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+    .filter-title {
+      font-family: 'Nexa', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #261654;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+  
+    .filter-input {
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      color: #333; /* Added explicit text color */
+      transition: all 0.3s ease;
+  
+      &:focus {
+        outline: none;
+        border-color: #24067e;
+        box-shadow: 0 0 0 2px rgba(36, 6, 126, 0.1);
+      }
+      
+      &::placeholder {
+        color: #999; /* Ensure placeholder color is visible but distinct */
+      }
+    }
+  
+    .filter-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .filter-item {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      color: #555;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border-radius: 6px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+  
+      &:hover {
+        color: #24067e;
+        background-color: #f5f3ff;
+      }
+  
+      &::before {
+        content: "•";
+        color: #24067e;
+        margin-right: 10px;
+        font-size: 18px;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .shop-filter {
+      padding: 20px;
+  
+      .filter-title {
+        font-size: 16px;
+      }
+  
+      .filter-item {
+        padding: 6px 10px;
+        font-size: 13px;
+      }
+    }
+  }

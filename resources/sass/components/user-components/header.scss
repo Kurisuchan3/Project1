@@ -1,0 +1,127 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 60px;
+  background-color: #24067e;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #cccccc;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__icon {
+    color: #ffffff;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #cccccc;
+    }
+  }
+
+  &__login-btn {
+    background-color: #ffd500;
+    color: #1e1d1d;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #fafa8f;
+    }
+  }
+
+  &__profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #cccccc;
+    }
+  }
+
+  &__profile-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__username {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    min-width: 120px;
+  }
+
+  &__dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    color: #1e1d1d;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}

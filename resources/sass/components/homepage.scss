@@ -1,0 +1,145 @@
+// homepageContent.scss
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+.homepage {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #F9F9F9;
+  overflow-x: hidden;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 60px);
+  padding: 0 20px;
+  margin-top: 60px;
+
+  &__content {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 700; // Bold weight
+    line-height: 1.2;
+    background: linear-gradient(90deg, #24067e 0%, #542cca 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none; // Ensures no dark artifacts
+  }
+
+  &__title-highlight {
+    background: linear-gradient(90deg, #FFD700 0%, #FFAA00 100%); // Cleaner yellow gradient
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    text-shadow: none; // Removes any dark artifacts
+    padding: 0 2px; // Small padding to prevent edge clipping
+  }
+
+  &__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500; // Medium weight (not too thin)
+    color: #202020;
+    line-height: 1.6;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__button {
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; // Semi-bold for buttons
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &--primary {
+      background-color: #24067e;
+      color: #ffffff;
+      &:hover {
+        background-color: #542cca;
+      }
+    }
+
+    &--secondary {
+      background-color: transparent;
+      color: #24067e;
+      border: 2px solid #24067e;
+      &:hover {
+        background-color: #24067e;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 55%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -90px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+
+    &__content {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__image {
+      max-width: 100%;
+      margin-left: 0;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+    }
+
+    &__img {
+      max-width: 450px;
+    }
+
+    &__buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__button {
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  }
+}
