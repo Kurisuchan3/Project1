@@ -24,13 +24,13 @@ const ProductPage = () => {
   const [products, setProducts] = useState([]);
   const [archivedProducts, setArchivedProducts] = useState([]);
   const [statuses, setStatuses] = useState([]);
+  const [subcategories, setSubcategories] = useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isArchiveModalVisible, setIsArchiveModalVisible] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
   const [form] = Form.useForm();
 
-  // Set Authorization token if available
   const authToken = localStorage.getItem("authToken");
   if (authToken) {
     axios.defaults.headers.common["Authorization"] = authToken;
@@ -39,6 +39,7 @@ const ProductPage = () => {
   useEffect(() => {
     fetchProducts();
     fetchStatuses();
+    fetchSubcategories();
   }, []);
 
   const fetchProducts = async () => {
@@ -61,6 +62,16 @@ const ProductPage = () => {
     }
   };
 
+  const fetchSubcategories = async () => {
+    try {
+      const response = await axios.get("/api/subcategories");
+      setSubcategories(response.data);
+    } catch (error) {
+      message.error("Error fetching subcategories");
+      console.error("Fetch error:", error);
+    }
+  };
+
   const fetchArchivedProducts = async () => {
     try {
       const response = await axios.get("/api/products/archived");
@@ -78,11 +89,11 @@ const ProductPage = () => {
       image: [],
       name: record.name,
       price: record.price,
-      // Set the quantity from the record (if available)
       quantity: record.quantity,
       description: record.description,
       specifications: record.specifications,
-      status_id: record.status_id
+      status_id: record.status_id,
+      subcategory_id: record.subcategory_id
     });
     setIsModalVisible(true);
   };
@@ -100,11 +111,11 @@ const ProductPage = () => {
     }
     formData.append("name", values.name);
     formData.append("price", values.price);
-    // Append quantity as well
     formData.append("quantity", values.quantity);
     formData.append("description", values.description || "");
     formData.append("specifications", values.specifications || "");
     formData.append("status_id", values.status_id || "");
+    formData.append("subcategory_id", values.subcategory_id || "");
 
     try {
       if (isAdding) {
@@ -150,7 +161,6 @@ const ProductPage = () => {
     }
   };
 
-  // Main table columns now include quantity
   const columns = [
     {
       title: "Image",
@@ -168,8 +178,13 @@ const ProductPage = () => {
         )
     },
     { title: "Name", dataIndex: "name", key: "name" },
+    { 
+      title: "Brand", 
+      dataIndex: "subcategory", 
+      key: "subcategory",
+      render: (subcategory) => subcategory ? subcategory.name : "N/A"
+    },
     { title: "Price", dataIndex: "price", key: "price" },
-    // New Quantity column
     { title: "Quantity", dataIndex: "quantity", key: "quantity" },
     { title: "Description", dataIndex: "description", key: "description" },
     { title: "Specifications", dataIndex: "specifications", key: "specifications" },
@@ -194,7 +209,6 @@ const ProductPage = () => {
     }
   ];
 
-  // Archive view columns include quantity as well
   const archiveColumns = [
     {
       title: "Image",
@@ -212,8 +226,13 @@ const ProductPage = () => {
         )
     },
     { title: "Name", dataIndex: "name", key: "name" },
+    { 
+      title: "Brand", 
+      dataIndex: "subcategory", 
+      key: "subcategory",
+      render: (subcategory) => subcategory ? subcategory.name : "N/A"
+    },
     { title: "Price", dataIndex: "price", key: "price" },
-    // Include quantity in archived view
     { title: "Quantity", dataIndex: "quantity", key: "quantity" },
     {
       title: "Actions",
@@ -254,7 +273,6 @@ const ProductPage = () => {
             </div>
             <Table columns={columns} dataSource={products} bordered pagination={{ pageSize: 5 }} />
 
-            {/* Add/Edit Modal */}
             <Modal
               title={isAdding ? "Add Product" : "Edit Product"}
               visible={isModalVisible}
@@ -282,13 +300,25 @@ const ProductPage = () => {
                   <Input />
                 </Form.Item>
                 <Form.Item
+                  label="Brand"
+                  name="subcategory_id"
+                  rules={[{ required: true, message: "Please select a brand!" }]}
+                >
+                  <Select placeholder="Select brand">
+                    {subcategories.map((subcategory) => (
+                      <Option key={subcategory.id} value={subcategory.id}>
+                        {subcategory.name}
+                      </Option>
+                    ))}
+                  </Select>
+                </Form.Item>
+                <Form.Item
                   label="Price"
                   name="price"
                   rules={[{ required: true, message: "Please input the price" }]}
                 >
                   <InputNumber min={0} step={1} style={{ width: "100%" }} />
                 </Form.Item>
-                {/* New Quantity input */}
                 <Form.Item
                   label="Quantity"
                   name="quantity"
@@ -314,7 +344,6 @@ const ProductPage = () => {
               </Form>
             </Modal>
 
-            {/* Archived Products Modal */}
             <Modal
               title="Archived Products"
               visible={isArchiveModalVisible}

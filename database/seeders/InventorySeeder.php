@@ -8,46 +8,38 @@ use Carbon\Carbon;
 
 class InventorySeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        DB::table('inventory')->insert([
+        DB::table('inventories')->insert([
             [
-                'itemname' => 'Apple MacBook Pro M2',
+                'product_id' => 1,
                 'stock_quantity' => 15,
-                'cost' => 1999.99,
-                'warehouse_location' => 'Warehouse A - Section 1',
-                'last_restock_date' => Carbon::now()->subDays(10),
+                'stock_status' => 'In Stock',
+                'last_restock' => Carbon::now()->subDays(10),
             ],
             [
-                'itemname' => 'Dell XPS 15',
+                'product_id' => 2,
                 'stock_quantity' => 20,
-                'cost' => 1599.99,
-                'warehouse_location' => 'Warehouse B - Shelf 3',
-                'last_restock_date' => Carbon::now()->subDays(7),
+                'stock_status' => 'In Stock',
+                'last_restock' => Carbon::now()->subDays(7),
             ],
             [
-                'itemname' => 'ASUS ROG Strix G16',
+                'product_id' => 3,
                 'stock_quantity' => 12,
-                'cost' => 1799.99,
-                'warehouse_location' => 'Warehouse C - Rack 5',
-                'last_restock_date' => Carbon::now()->subDays(5),
+                'stock_status' => 'In Stock',
+                'last_restock' => Carbon::now()->subDays(5),
             ],
             [
-                'itemname' => 'HP Spectre x360',
+                'product_id' => 4,
                 'stock_quantity' => 18,
-                'cost' => 1399.99,
-                'warehouse_location' => 'Warehouse D - Row 2',
-                'last_restock_date' => Carbon::now()->subDays(3),
+                'stock_status' => 'In Stock',
+                'last_restock' => Carbon::now()->subDays(3),
             ],
             [
-                'itemname' => 'Lenovo ThinkPad X1 Carbon',
+                'product_id' => 5,
                 'stock_quantity' => 25,
-                'cost' => 1699.99,
-                'warehouse_location' => 'Warehouse A - Section 4',
-                'last_restock_date' => Carbon::now()->subDays(8),
+                'stock_status' => 'In Stock',
+                'last_restock' => Carbon::now()->subDays(8),
             ],
         ]);
     }

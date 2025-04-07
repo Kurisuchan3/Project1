@@ -10,22 +10,24 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            // For storing the product image (e.g., URL or file path)
             $table->string('image')->nullable();
             $table->string('name');
             $table->decimal('price', 8, 2);
-            // New quantity column with default value of 0
             $table->integer('quantity')->default(0);
             $table->text('description')->nullable();
             $table->text('specifications')->nullable();
-            // Using 'status_id' to reference the statuses table
             $table->unsignedBigInteger('status_id')->nullable();
             $table->foreign('status_id')
                   ->references('id')
                   ->on('statuses')
                   ->onDelete('set null');
+            // Add subcategory_id foreign key
+            $table->unsignedBigInteger('subcategory_id')->nullable();
+            $table->foreign('subcategory_id')
+                  ->references('id')
+                  ->on('subcategories')
+                  ->onDelete('set null');
             $table->timestamps();
-            // Soft deletion for archiving
             $table->softDeletes();
         });
     }

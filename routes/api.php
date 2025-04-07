@@ -8,12 +8,15 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubcategoryController;
+use App\Http\Controllers\CategoryController; // Add this
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/users', [UsersController::class, 'getUsers']);
-// Add this line to make /products public
 Route::get('/products', [ProductController::class, 'index']);
+Route::get('/subcategories', [SubcategoryController::class, 'index']);
+Route::get('/categories', [CategoryController::class, 'index']); // New route for categories
 
 Route::middleware('auth:api')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
@@ -29,7 +32,6 @@ Route::middleware('auth:api')->group(function () {
     Route::put('/users/{id}/restore', [UsersController::class, 'restoreUser']);
     Route::get('/products/archived', [ProductController::class, 'archived']);
     Route::put('/products/{id}/restore', [ProductController::class, 'restore']);
-    // Move this line out of the group to avoid duplication
     Route::apiResource('products', ProductController::class)->except(['index']);
     Route::get('/statuses', [StatusController::class, 'index']);
 });

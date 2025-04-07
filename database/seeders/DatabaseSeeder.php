@@ -13,11 +13,10 @@ class DatabaseSeeder extends Seeder
             SubcategorySeeder::class,
             RolesSeeder::class,
             StatusesSeeder::class,
-            InventorySeeder::class,
+            ProductsSeeder::class,  // Moved up
+            InventorySeeder::class, // Now runs after ProductsSeeder
             UsersSeeder::class,
             ProfilesSeeder::class,
-            ProductsSeeder::class,
-            
         ]);
     }
 }

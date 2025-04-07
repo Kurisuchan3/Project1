@@ -1,23 +1,26 @@
-// Shop_grid.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { IconStarFilled, IconStar } from '@tabler/icons-react';
+import axios from 'axios';
 import "./../../../sass/components/Shop_grid.scss";
 
-// Placeholder imports for product images
-import Product1 from '../../../../public/images/tuf.svg';
-import Product2 from '../../../../public/images/tuf.svg';
-import Product3 from '../../../../public/images/tuf.svg';
-import Product4 from '../../../../public/images/tuf.svg';
-import Product5 from '../../../../public/images/tuf.svg';
+const ShopGrid = ({ filteredBrand }) => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-const ShopGrid = () => {
-  const products = [
-    { id: 1, name: "Razer HKC NTX", price: "P2,000", rating: 5, image: Product1 },
-    { id: 2, name: "TITAN 18 HX AI A2XW", price: "P2,000", rating: 4, image: Product2 },
-    { id: 3, name: "ASUS TUF GMJING A14", price: "P2,000", rating: 4, image: Product3 },
-    { id: 4, name: "TITAN 18 HX AI A2XW", price: "P2,000", rating: 5, image: Product4 },
-    { id: 5, name: "Acer Predator Helios", price: "P2,000", rating: 4, image: Product5 },
-  ];
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get('/api/products');
+        console.log('Fetched Products:', response.data); // Debug log
+        setProducts(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   const renderStars = (rating) => {
     return (
@@ -35,28 +38,51 @@ const ShopGrid = () => {
     );
   };
 
+  // Filter products based on the selected brand
+  console.log('Filtered Brand:', filteredBrand); // Debug log
+  const filteredProducts = filteredBrand
+    ? products.filter(product => {
+        const matches = product.subcategory?.name === filteredBrand;
+        console.log(`Product: ${product.name}, Subcategory: ${product.subcategory?.name}, Matches: ${matches}`); // Debug log
+        return matches;
+      })
+    : products;
+
   return (
     <section className="product-grid">
       <div className="grid-container">
-        {products.map((product) => (
-          <div key={product.id} className="product-card">
-            <div className="product-top">
-              <img src={product.image} alt={product.name} className="product-image" />
-            </div>
-            <div className="product-details">
-              <h3 className="product-name">{product.name}</h3>
-              {renderStars(product.rating)}
-              <p className="product-price">{product.price}</p>
-              <div className="button-container">
-                <button className="add-to-cart">add to cart</button>
+        {loading ? (
+          <p>Loading products...</p>
+        ) : filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <div key={product.id} className="product-card">
+              <div className="product-top">
+                <img
+                  src={product.image ? window.location.origin + product.image : '/images/placeholder.jpg'}
+                  alt={product.name}
+                  className="product-image"
+                />
+              </div>
+              <div className="product-details">
+                <h3 className="product-name">{product.name}</h3>
+                {renderStars(product.rating || 4)}
+                <p className="product-price">₱{parseFloat(product.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}</p>
+                <div className="button-container">
+                  <button className="add-to-cart">add to cart</button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-        {/* Empty divs to maintain 4-column layout */}
-        <div className="product-card empty"></div>
-        <div className="product-card empty"></div>
-        <div className="product-card empty"></div>
+          ))
+        ) : (
+          <p>No products found for this brand.</p>
+        )}
+        {filteredProducts.length > 0 && (
+          <>
+            <div className="product-card empty"></div>
+            <div className="product-card empty"></div>
+            <div className="product-card empty"></div>
+          </>
+        )}
       </div>
     </section>
   );

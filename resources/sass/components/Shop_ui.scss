@@ -2,7 +2,7 @@
     width: 100%;
     min-height: 100vh;
     background-color: #F9F9F9;
-    padding-top: 80px;
+    padding-top: 100px; // Adjust for header height
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,16 +13,16 @@
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px; // Increase padding
     box-sizing: border-box;
-    gap: 30px;
+    gap: 40px; // Increase gap between filter and grid
 }
 
 .shop-filter-container {
-    width: 250px;
+    width: 300px; // Increase width for better spacing
     flex-shrink: 0;
     position: sticky;
-    top: 100px; // Adjust based on your header height
+    top: 120px; // Adjust based on header height
     align-self: flex-start;
     height: fit-content;
 }
@@ -34,12 +34,12 @@
 @media (max-width: 1024px) {
     .shop-container {
         flex-direction: column;
-        padding: 0 15px;
+        padding: 0 20px;
     }
     
     .shop-filter-container {
         width: 100%;
         position: static;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 }

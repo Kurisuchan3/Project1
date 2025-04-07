@@ -10,11 +10,16 @@ class Product extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'image', 'name', 'price', 'quantity', 'description', 'specifications', 'status_id'
+        'image', 'name', 'price', 'quantity', 'description', 'specifications', 'status_id', 'subcategory_id'
     ];
 
     public function status()
     {
         return $this->belongsTo(Status::class);
+    }
+
+    public function subcategory()
+    {
+        return $this->belongsTo(Subcategory::class);
     }
 }
