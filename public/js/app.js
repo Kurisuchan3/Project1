@@ -78454,7 +78454,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".side-menu {\n  height: 90vh;\n  background: #f8f9fa;\n}\n.side-menu .logo {\n  color: #1890ff;\n  font-size: 24px;\n  font-weight: bold;\n  text-align: center;\n  padding: 16px;\n}\n.side-menu .ant-menu {\n  border-right: none;\n}\n.side-menu .ant-menu-item {\n  font-size: 16px;\n}\n.side-menu .ant-menu-item-selected {\n  background-color: #1890ff !important;\n  color: white !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".side-menu {\n  background: #f8f9fa;\n  margin-top: 110px; /* Adjust based on the combined height of topnav (60px) and nav-links (50px) */\n  height: calc(100vh - 110px); /* Adjust height to fit below the topnav and nav-links */\n}\n.side-menu .logo {\n  color: #1890ff;\n  font-size: 24px;\n  font-weight: bold;\n  text-align: center;\n  padding: 16px;\n}\n.side-menu .ant-menu {\n  border-right: none;\n}\n.side-menu .ant-menu-item {\n  font-size: 16px;\n}\n.side-menu .ant-menu-item-selected {\n  background-color: #1890ff !important;\n  color: white !important;\n}\n.side-menu .menu-toggle {\n  padding: 10px;\n}\n.side-menu .logout-container {\n  position: absolute;\n  bottom: 20px;\n  width: 100%;\n  text-align: center;\n}\n.side-menu .logout-container .logout-button {\n  width: 100%;\n  color: #333;\n}\n.side-menu .logout-container .logout-button:hover {\n  color: #1890ff;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -78478,7 +78478,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".topnav {\n  background-color: #008cff;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 10px 20px;\n}\n.topnav .logo {\n  font-size: 24px;\n  font-weight: bold;\n  color: #ffffff;\n  display: flex;\n  align-items: center;\n}\n.topnav .search-bar {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n.topnav .search-bar input {\n  width: 300px;\n  padding: 8px;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n}\n.topnav .search-bar button {\n  padding: 8px 15px;\n  border: none;\n  background-color: #ffffff;\n  color: #333;\n  border-radius: 5px;\n  cursor: pointer;\n  font-weight: bold;\n}\n.topnav .nav-icons {\n  display: flex;\n  align-items: center;\n  gap: 15px;\n}\n.topnav .nav-icons i {\n  font-size: 20px;\n  color: #000000;\n  cursor: pointer;\n}\n\n.nav-links {\n  background-color: #ffffff;\n  display: flex;\n  justify-content: center;\n  padding: 10px 0;\n  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);\n}\n.nav-links a {\n  margin: 0 15px;\n  text-decoration: none;\n  color: #000000;\n  font-weight: 500;\n  position: relative;\n}\n.nav-links a:hover {\n  color: #008cff;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".topnav {\n  background-color: #008cff;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 10px 20px;\n  position: fixed; /* Fix the topnav to the top */\n  top: 0;\n  left: 0;\n  width: 100%; /* Full width */\n  z-index: 1000; /* Ensure it stays above other elements */\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better separation */\n}\n.topnav .logo {\n  font-size: 24px;\n  font-weight: bold;\n  color: #ffffff;\n  display: flex;\n  align-items: center;\n}\n.topnav .logo img {\n  width: 100px; /* Match the width specified in TopNav.js */\n}\n.topnav .search-bar {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n.topnav .search-bar .ant-input-search {\n  width: 300px;\n}\n.topnav .search-bar .ant-input-search input {\n  padding: 8px;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n}\n.topnav .search-bar .ant-input-search .ant-btn {\n  padding: 8px 15px;\n  border: none;\n  background-color: #ffffff;\n  color: #333;\n  border-radius: 5px;\n  cursor: pointer;\n  font-weight: bold;\n}\n.topnav .nav-icons {\n  display: flex;\n  align-items: center;\n  gap: 15px;\n}\n.topnav .nav-icons i {\n  font-size: 20px;\n  color: #000000;\n  cursor: pointer;\n}\n.topnav .nav-icons .ant-btn {\n  padding: 8px 15px;\n  border-radius: 5px;\n}\n\n.nav-links {\n  background-color: #ffffff;\n  display: flex;\n  justify-content: center;\n  padding: 10px 0;\n  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);\n  position: fixed; /* Fix the nav-links below the topnav */\n  top: 60px; /* Adjust based on the height of your topnav */\n  left: 0;\n  width: 100%; /* Full width */\n  z-index: 999; /* Below the topnav but above other content */\n}\n.nav-links a {\n  margin: 0 15px;\n  text-decoration: none;\n  color: #000000;\n  font-weight: 500;\n  position: relative;\n}\n.nav-links a:hover {\n  color: #008cff;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -78526,7 +78526,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".cart-view {\n  width: 100%;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  font-family: \"Inter\", sans-serif;\n  color: #333;\n  background: #f8f8f8;\n}\n.cart-view .cart-content {\n  flex: 1;\n  width: 100%;\n  max-width: 1800px;\n  margin: 0 auto;\n  padding: 30px 40px;\n}\n@media (max-width: 768px) {\n  .cart-view .cart-content {\n    padding: 20px 15px;\n  }\n}\n.cart-view .cart-title {\n  font-size: 28px;\n  font-weight: 600;\n  margin-bottom: 30px;\n  color: #1a1a1a;\n}\n.cart-view .cart-container {\n  display: flex;\n  gap: 40px;\n  width: 100%;\n}\n@media (max-width: 1200px) {\n  .cart-view .cart-container {\n    flex-direction: column;\n    gap: 30px;\n  }\n}\n.cart-view .cart-table-container {\n  flex: 2;\n  background: white;\n  border-radius: 12px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n  padding: 25px;\n  overflow-x: auto;\n}\n.cart-view .cart-table {\n  width: 100%;\n  min-width: 800px;\n}\n.cart-view .cart-table .cart-header {\n  display: flex;\n  padding: 15px 0;\n  border-bottom: 1px solid #e0e0e0;\n  font-weight: 600;\n  color: #1a1a1a;\n}\n.cart-view .cart-table .cart-header .header-item {\n  flex: 1;\n  text-align: center;\n  font-size: 16px;\n}\n.cart-view .cart-table .cart-header .header-item.product-col {\n  flex: 2;\n  text-align: left;\n  padding-left: 20px;\n}\n.cart-view .cart-table .cart-header .header-item.action-col {\n  flex: 0.5;\n}\n.cart-view .cart-table .cart-item {\n  display: flex;\n  align-items: center;\n  padding: 25px 0;\n  border-bottom: 1px solid #e0e0e0;\n}\n.cart-view .cart-table .cart-item .item-details {\n  flex: 2;\n  display: flex;\n  align-items: center;\n  padding-left: 20px;\n}\n.cart-view .cart-table .cart-item .item-details .product-image {\n  width: 80px;\n  height: 80px;\n  -o-object-fit: contain;\n     object-fit: contain;\n  margin-right: 25px;\n  background: #f5f5f5;\n  border-radius: 6px;\n}\n.cart-view .cart-table .cart-item .item-details .product-name {\n  font-weight: 500;\n  font-size: 16px;\n}\n.cart-view .cart-table .cart-item .item-price,\n.cart-view .cart-table .cart-item .item-subtotal {\n  flex: 1;\n  text-align: center;\n  font-size: 16px;\n}\n.cart-view .cart-table .cart-item .item-quantity {\n  flex: 1;\n  text-align: center;\n}\n.cart-view .cart-table .cart-item .item-quantity .quantity-control {\n  display: inline-flex;\n  align-items: center;\n  background: #f5f5f5;\n  border-radius: 6px;\n  overflow: hidden;\n}\n.cart-view .cart-table .cart-item .item-quantity .quantity-control .quantity-btn {\n  background: none;\n  border: none;\n  padding: 10px 15px;\n  font-size: 16px;\n  cursor: pointer;\n  color: #666;\n  transition: background 0.2s, color 0.2s;\n}\n.cart-view .cart-table .cart-item .item-quantity .quantity-control .quantity-btn:hover {\n  background: #004499;\n  color: white;\n}\n.cart-view .cart-table .cart-item .item-quantity .quantity-control .quantity-btn:disabled {\n  color: #ccc;\n  cursor: not-allowed;\n}\n.cart-view .cart-table .cart-item .item-quantity .quantity-control .quantity-value {\n  padding: 10px 20px;\n  font-size: 16px;\n  min-width: 30px;\n  text-align: center;\n  border-left: 1px solid #e0e0e0;\n  border-right: 1px solid #e0e0e0;\n}\n.cart-view .cart-table .cart-item .item-remove {\n  flex: 0.5;\n  text-align: center;\n}\n.cart-view .cart-table .cart-item .item-remove .remove-btn {\n  background: none;\n  border: none;\n  color: #999;\n  cursor: pointer;\n  padding: 8px;\n  border-radius: 50%;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.2s;\n}\n.cart-view .cart-table .cart-item .item-remove .remove-btn:hover {\n  color: #ff4444;\n  background: #ffeeee;\n  transform: scale(1.1);\n}\n.cart-view .cart-totals-container {\n  flex: 1;\n  min-width: 350px;\n}\n@media (max-width: 1200px) {\n  .cart-view .cart-totals-container {\n    min-width: 100%;\n  }\n}\n.cart-view .cart-totals {\n  background: white;\n  padding: 30px;\n  border-radius: 12px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n  position: sticky;\n  top: 30px;\n}\n.cart-view .cart-totals .totals-title {\n  font-size: 20px;\n  font-weight: 600;\n  margin-bottom: 25px;\n  padding-bottom: 15px;\n  border-bottom: 1px solid #e0e0e0;\n}\n.cart-view .cart-totals .totals-row {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 18px;\n  font-size: 16px;\n}\n.cart-view .cart-totals .totals-row .totals-label {\n  color: #666;\n}\n.cart-view .cart-totals .totals-row .totals-value {\n  font-weight: 500;\n}\n.cart-view .cart-totals .totals-row.grand-total {\n  margin-top: 25px;\n  padding-top: 20px;\n  border-top: 1px solid #e0e0e0;\n  font-size: 18px;\n}\n.cart-view .cart-totals .totals-row.grand-total .totals-label,\n.cart-view .cart-totals .totals-row.grand-total .totals-value {\n  font-weight: 600;\n}\n.cart-view .cart-totals .shipping-section {\n  margin: 25px 0;\n  padding: 20px 0;\n  border-top: 1px solid #e0e0e0;\n  border-bottom: 1px solid #e0e0e0;\n}\n.cart-view .cart-totals .shipping-section .shipping-title {\n  font-weight: 500;\n  color: #666;\n  margin-bottom: 10px;\n  font-size: 16px;\n}\n.cart-view .cart-totals .shipping-section .shipping-address {\n  line-height: 1.6;\n  margin-bottom: 15px;\n  font-size: 15px;\n}\n.cart-view .cart-totals .shipping-section .change-address-btn {\n  background: none;\n  border: none;\n  color: #0066cc;\n  font-size: 15px;\n  padding: 0;\n  cursor: pointer;\n  text-decoration: none;\n}\n.cart-view .cart-totals .shipping-section .change-address-btn:hover {\n  color: #004499;\n}\n.cart-view .cart-totals .shipping-section .address-form-container {\n  overflow: hidden;\n  transition: all 0.4s ease-in-out;\n}\n.cart-view .cart-totals .shipping-section .address-form-container.open {\n  max-height: 600px;\n  opacity: 1;\n  transform: translateY(0);\n}\n.cart-view .cart-totals .shipping-section .address-form-container.closed {\n  max-height: 0;\n  opacity: 0;\n  transform: translateY(-10px);\n}\n.cart-view .cart-totals .shipping-section .address-form {\n  margin-top: 15px;\n  padding: 15px;\n  background: #f8f8f8;\n  border-radius: 8px;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group {\n  margin-bottom: 20px;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group label {\n  display: block;\n  font-size: 14px;\n  color: #666;\n  margin-bottom: 8px;\n  font-weight: 500;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group select {\n  width: 100%;\n  padding: 12px 15px;\n  font-size: 15px;\n  border: 1px solid #e0e0e0;\n  border-radius: 6px;\n  background: transparent;\n  color: #333;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\"><path fill=\"%23666\" d=\"M7 10l5 5 5-5z\"/></svg>');\n  background-repeat: no-repeat;\n  background-position: right 10px center;\n  cursor: pointer;\n  transition: border-color 0.2s;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group select:focus {\n  outline: none;\n  border-color: #0066cc;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group select option {\n  background: rgba(255, 255, 255, 0.9);\n  color: #333;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group input {\n  width: 100%;\n  padding: 12px 15px;\n  font-size: 15px;\n  border: 1px solid #e0e0e0;\n  border-radius: 6px;\n  background: white;\n  color: #333;\n  transition: border-color 0.2s;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group input:focus {\n  outline: none;\n  border-color: #0066cc;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group input::-moz-placeholder {\n  color: #999;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group input::placeholder {\n  color: #999;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-actions {\n  display: flex;\n  gap: 15px;\n  margin-top: 25px;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-actions .save-address-btn,\n.cart-view .cart-totals .shipping-section .address-form .form-actions .cancel-address-btn {\n  flex: 1;\n  padding: 12px;\n  font-size: 15px;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: background 0.2s, color 0.2s;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-actions .save-address-btn {\n  background: #0066cc;\n  color: white;\n  border: none;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-actions .save-address-btn:hover {\n  background: #004499;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-actions .cancel-address-btn {\n  background: none;\n  border: 1px solid #e0e0e0;\n  color: #666;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-actions .cancel-address-btn:hover {\n  background: #f5f5f5;\n  color: #333;\n}\n.cart-view .cart-totals .checkout-button {\n  width: 100%;\n  padding: 16px;\n  background: #0066cc;\n  color: white;\n  border: none;\n  border-radius: 8px;\n  font-size: 18px;\n  font-weight: 500;\n  cursor: pointer;\n  margin-top: 20px;\n  transition: background 0.2s;\n}\n.cart-view .cart-totals .checkout-button:hover {\n  background: #004499;\n}\n\n@media (max-width: 768px) {\n  .cart-view .cart-content {\n    padding: 20px 15px;\n  }\n  .cart-view .cart-table-container {\n    padding: 15px;\n    overflow-x: auto;\n  }\n  .cart-view .cart-table {\n    min-width: 600px;\n  }\n  .cart-view .cart-table .cart-header {\n    display: none;\n  }\n  .cart-view .cart-table .cart-item {\n    flex-direction: column;\n    align-items: flex-start;\n    padding: 20px 0;\n    position: relative;\n  }\n  .cart-view .cart-table .cart-item > div {\n    flex: none;\n    width: 100%;\n    margin-bottom: 15px;\n    text-align: left !important;\n    padding-left: 0;\n  }\n  .cart-view .cart-table .cart-item > div:last-child {\n    margin-bottom: 0;\n  }\n  .cart-view .cart-table .cart-item .item-details {\n    display: flex;\n    align-items: center;\n  }\n  .cart-view .cart-table .cart-item .item-price::before,\n  .cart-view .cart-table .cart-item .item-quantity::before,\n  .cart-view .cart-table .cart-item .item-subtotal::before,\n  .cart-view .cart-table .cart-item .item-remove::before {\n    content: attr(data-label);\n    font-weight: 600;\n    margin-right: 10px;\n    color: #666;\n    display: inline-block;\n    min-width: 80px;\n  }\n  .cart-view .cart-table .cart-item .item-price {\n    order: 2;\n    padding-left: 105px;\n  }\n  .cart-view .cart-table .cart-item .item-quantity {\n    order: 3;\n  }\n  .cart-view .cart-table .cart-item .item-quantity .quantity-control {\n    display: inline-flex;\n  }\n  .cart-view .cart-table .cart-item .item-subtotal {\n    order: 4;\n    font-weight: 600;\n  }\n  .cart-view .cart-table .cart-item .item-remove {\n    order: 5;\n    position: absolute;\n    top: 20px;\n    right: 0;\n    margin-bottom: 0;\n  }\n  .cart-view .cart-totals {\n    padding: 20px;\n  }\n  .cart-view .cart-totals .checkout-button {\n    padding: 14px;\n    font-size: 16px;\n  }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".cart-view {\n  width: 100%;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  font-family: \"Inter\", sans-serif;\n  color: #333;\n  background: white;\n}\n.cart-view .cart-content {\n  flex: 1;\n  width: 100%;\n  max-width: 1800px;\n  margin: 0 auto;\n  padding: 30px 40px;\n}\n@media (max-width: 768px) {\n  .cart-view .cart-content {\n    padding: 20px 15px;\n  }\n}\n.cart-view .cart-title {\n  font-size: 28px;\n  font-weight: 600;\n  margin-bottom: 30px;\n  color: #1a1a1a;\n}\n.cart-view .cart-container {\n  display: flex;\n  gap: 40px;\n  width: 100%;\n}\n@media (max-width: 1200px) {\n  .cart-view .cart-container {\n    flex-direction: column;\n    gap: 30px;\n  }\n}\n.cart-view .cart-table-container {\n  flex: 2;\n  background: white;\n  border-radius: 12px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n  padding: 25px;\n  overflow-x: auto;\n}\n.cart-view .cart-table {\n  width: 100%;\n  min-width: 800px;\n}\n.cart-view .cart-table .cart-header {\n  display: flex;\n  padding: 15px 0;\n  border-bottom: 1px solid #e0e0e0;\n  font-weight: 600;\n  color: #1a1a1a;\n}\n.cart-view .cart-table .cart-header .header-item {\n  flex: 1;\n  text-align: center;\n  font-size: 16px;\n}\n.cart-view .cart-table .cart-header .header-item.product-col {\n  flex: 2;\n  text-align: left;\n  padding-left: 20px;\n}\n.cart-view .cart-table .cart-header .header-item.action-col {\n  flex: 0.5;\n}\n.cart-view .cart-table .cart-item {\n  display: flex;\n  align-items: center;\n  padding: 25px 0;\n  border-bottom: 1px solid #e0e0e0;\n}\n.cart-view .cart-table .cart-item .item-details {\n  flex: 2;\n  display: flex;\n  align-items: center;\n  padding-left: 20px;\n}\n.cart-view .cart-table .cart-item .item-details .product-image {\n  width: 80px;\n  height: 80px;\n  -o-object-fit: contain;\n     object-fit: contain;\n  margin-right: 25px;\n  background: #f5f5f5;\n  border-radius: 6px;\n}\n.cart-view .cart-table .cart-item .item-details .product-name {\n  font-weight: 500;\n  font-size: 16px;\n}\n.cart-view .cart-table .cart-item .item-price,\n.cart-view .cart-table .cart-item .item-subtotal {\n  flex: 1;\n  text-align: center;\n  font-size: 16px;\n}\n.cart-view .cart-table .cart-item .item-quantity {\n  flex: 1;\n  text-align: center;\n}\n.cart-view .cart-table .cart-item .item-quantity .quantity-control {\n  display: inline-flex;\n  align-items: center;\n  background: #f5f5f5;\n  border-radius: 6px;\n  overflow: hidden;\n}\n.cart-view .cart-table .cart-item .item-quantity .quantity-control .quantity-btn {\n  background: none;\n  border: none;\n  padding: 10px 15px;\n  font-size: 16px;\n  cursor: pointer;\n  color: #666;\n  transition: background 0.2s, color 0.2s;\n}\n.cart-view .cart-table .cart-item .item-quantity .quantity-control .quantity-btn:hover {\n  background: #004499;\n  color: white;\n}\n.cart-view .cart-table .cart-item .item-quantity .quantity-control .quantity-btn:disabled {\n  color: #ccc;\n  cursor: not-allowed;\n}\n.cart-view .cart-table .cart-item .item-quantity .quantity-control .quantity-value {\n  padding: 10px 20px;\n  font-size: 16px;\n  min-width: 30px;\n  text-align: center;\n  border-left: 1px solid #e0e0e0;\n  border-right: 1px solid #e0e0e0;\n}\n.cart-view .cart-table .cart-item .item-remove {\n  flex: 0.5;\n  text-align: center;\n}\n.cart-view .cart-table .cart-item .item-remove .remove-btn {\n  background: none;\n  border: none;\n  color: #999;\n  cursor: pointer;\n  padding: 8px;\n  border-radius: 50%;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.2s;\n}\n.cart-view .cart-table .cart-item .item-remove .remove-btn:hover {\n  color: #ff4444;\n  background: #ffeeee;\n  transform: scale(1.1);\n}\n.cart-view .cart-totals-container {\n  flex: 1;\n  min-width: 350px;\n}\n@media (max-width: 1200px) {\n  .cart-view .cart-totals-container {\n    min-width: 100%;\n  }\n}\n.cart-view .cart-totals {\n  background: white;\n  padding: 30px;\n  border-radius: 12px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n  position: sticky;\n  top: 30px;\n}\n.cart-view .cart-totals .totals-title {\n  font-size: 20px;\n  font-weight: 600;\n  margin-bottom: 25px;\n  padding-bottom: 15px;\n  border-bottom: 1px solid #e0e0e0;\n}\n.cart-view .cart-totals .totals-row {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 18px;\n  font-size: 16px;\n}\n.cart-view .cart-totals .totals-row .totals-label {\n  color: #666;\n}\n.cart-view .cart-totals .totals-row .totals-value {\n  font-weight: 500;\n}\n.cart-view .cart-totals .totals-row.grand-total {\n  margin-top: 25px;\n  padding-top: 20px;\n  border-top: 1px solid #e0e0e0;\n  font-size: 18px;\n}\n.cart-view .cart-totals .totals-row.grand-total .totals-label,\n.cart-view .cart-totals .totals-row.grand-total .totals-value {\n  font-weight: 600;\n}\n.cart-view .cart-totals .shipping-section {\n  margin: 25px 0;\n  padding: 20px 0;\n  border-top: 1px solid #e0e0e0;\n  border-bottom: 1px solid #e0e0e0;\n}\n.cart-view .cart-totals .shipping-section .shipping-title {\n  font-weight: 500;\n  color: #666;\n  margin-bottom: 10px;\n  font-size: 16px;\n}\n.cart-view .cart-totals .shipping-section .shipping-address {\n  line-height: 1.6;\n  margin-bottom: 15px;\n  font-size: 15px;\n}\n.cart-view .cart-totals .shipping-section .change-address-btn {\n  background: none;\n  border: none;\n  color: #0066cc;\n  font-size: 15px;\n  padding: 0;\n  cursor: pointer;\n  text-decoration: none;\n}\n.cart-view .cart-totals .shipping-section .change-address-btn:hover {\n  color: #004499;\n}\n.cart-view .cart-totals .shipping-section .address-form-container {\n  overflow: hidden;\n  transition: all 0.4s ease-in-out;\n}\n.cart-view .cart-totals .shipping-section .address-form-container.open {\n  max-height: 600px;\n  opacity: 1;\n  transform: translateY(0);\n}\n.cart-view .cart-totals .shipping-section .address-form-container.closed {\n  max-height: 0;\n  opacity: 0;\n  transform: translateY(-10px);\n}\n.cart-view .cart-totals .shipping-section .address-form {\n  margin-top: 15px;\n  padding: 15px;\n  background: white;\n  border-radius: 8px;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group {\n  margin-bottom: 20px;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group label {\n  display: block;\n  font-size: 14px;\n  color: #666;\n  margin-bottom: 8px;\n  font-weight: 500;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group select {\n  width: 100%;\n  padding: 12px 15px;\n  font-size: 15px;\n  border: 1px solid #e0e0e0;\n  border-radius: 6px;\n  background: transparent;\n  color: #333;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\"><path fill=\"%23666\" d=\"M7 10l5 5 5-5z\"/></svg>');\n  background-repeat: no-repeat;\n  background-position: right 10px center;\n  cursor: pointer;\n  transition: border-color 0.2s;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group select:focus {\n  outline: none;\n  border-color: #0066cc;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group select option {\n  background: rgba(255, 255, 255, 0.9);\n  color: #333;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group input {\n  width: 100%;\n  padding: 12px 15px;\n  font-size: 15px;\n  border: 1px solid #e0e0e0;\n  border-radius: 6px;\n  background: white;\n  color: #333;\n  transition: border-color 0.2s;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group input:focus {\n  outline: none;\n  border-color: #0066cc;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group input::-moz-placeholder {\n  color: #999;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-group input::placeholder {\n  color: #999;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-actions {\n  display: flex;\n  gap: 15px;\n  margin-top: 25px;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-actions .save-address-btn,\n.cart-view .cart-totals .shipping-section .address-form .form-actions .cancel-address-btn {\n  flex: 1;\n  padding: 12px;\n  font-size: 15px;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: background 0.2s, color 0.2s;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-actions .save-address-btn {\n  background: #0066cc;\n  color: white;\n  border: none;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-actions .save-address-btn:hover {\n  background: #004499;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-actions .cancel-address-btn {\n  background: none;\n  border: 1px solid #e0e0e0;\n  color: #666;\n}\n.cart-view .cart-totals .shipping-section .address-form .form-actions .cancel-address-btn:hover {\n  background: #f5f5f5;\n  color: #333;\n}\n.cart-view .cart-totals .checkout-button {\n  width: 100%;\n  padding: 16px;\n  background: #0066cc;\n  color: white;\n  border: none;\n  border-radius: 8px;\n  font-size: 18px;\n  font-weight: 500;\n  cursor: pointer;\n  margin-top: 20px;\n  transition: background 0.2s;\n}\n.cart-view .cart-totals .checkout-button:hover {\n  background: #004499;\n}\n\n@media (max-width: 768px) {\n  .cart-view .cart-content {\n    padding: 20px 15px;\n  }\n  .cart-view .cart-table-container {\n    padding: 15px;\n    overflow-x: auto;\n  }\n  .cart-view .cart-table {\n    min-width: 600px;\n  }\n  .cart-view .cart-table .cart-header {\n    display: none;\n  }\n  .cart-view .cart-table .cart-item {\n    flex-direction: column;\n    align-items: flex-start;\n    padding: 20px 0;\n    position: relative;\n  }\n  .cart-view .cart-table .cart-item > div {\n    flex: none;\n    width: 100%;\n    margin-bottom: 15px;\n    text-align: left !important;\n    padding-left: 0;\n  }\n  .cart-view .cart-table .cart-item > div:last-child {\n    margin-bottom: 0;\n  }\n  .cart-view .cart-table .cart-item .item-details {\n    display: flex;\n    align-items: center;\n  }\n  .cart-view .cart-table .cart-item .item-price::before,\n  .cart-view .cart-table .cart-item .item-quantity::before,\n  .cart-view .cart-table .cart-item .item-subtotal::before,\n  .cart-view .cart-table .cart-item .item-remove::before {\n    content: attr(data-label);\n    font-weight: 600;\n    margin-right: 10px;\n    color: #666;\n    display: inline-block;\n    min-width: 80px;\n  }\n  .cart-view .cart-table .cart-item .item-price {\n    order: 2;\n    padding-left: 105px;\n  }\n  .cart-view .cart-table .cart-item .item-quantity {\n    order: 3;\n  }\n  .cart-view .cart-table .cart-item .item-quantity .quantity-control {\n    display: inline-flex;\n  }\n  .cart-view .cart-table .cart-item .item-subtotal {\n    order: 4;\n    font-weight: 600;\n  }\n  .cart-view .cart-table .cart-item .item-remove {\n    order: 5;\n    position: absolute;\n    top: 20px;\n    right: 0;\n    margin-bottom: 0;\n  }\n  .cart-view .cart-totals {\n    padding: 20px;\n  }\n  .cart-view .cart-totals .checkout-button {\n    padding: 14px;\n    font-size: 16px;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -78630,6 +78630,54 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".homepage {\n  width: 100vw;\n  min-he
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/orders.scss":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/orders.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".orders-container {\n  padding: 20px;\n  background-color: #f5f7fa;\n  border-radius: 8px;\n}\n.orders-container h2 {\n  font-size: 24px;\n  margin-bottom: 20px;\n  color: #333;\n}\n.orders-container .orders-table {\n  width: 100%;\n  border-collapse: collapse;\n  background-color: #fff;\n  border-radius: 8px;\n  overflow: hidden;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.orders-container .orders-table th,\n.orders-container .orders-table td {\n  padding: 12px 15px;\n  text-align: left;\n  font-size: 14px;\n  color: #333;\n}\n.orders-container .orders-table th {\n  background-color: #f1f3f5;\n  font-weight: 600;\n  text-transform: uppercase;\n}\n.orders-container .orders-table td {\n  border-bottom: 1px solid #e9ecef;\n}\n.orders-container .orders-table tr {\n  cursor: pointer;\n}\n.orders-container .orders-table tr:hover {\n  background-color: #f8f9fa;\n}\n.orders-container .orders-table .order-image {\n  width: 50px;\n  height: 50px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 4px;\n}\n.orders-container .orders-table .status {\n  padding: 5px 10px;\n  border-radius: 12px;\n  font-size: 12px;\n  font-weight: 500;\n}\n.orders-container .orders-table .status.completed {\n  background-color: #e6f4ea;\n  color: #2e7d32;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/ordersmodal.scss":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/ordersmodal.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".modal-overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 1000;\n}\n\n.modal-content {\n  background-color: #fff;\n  padding: 20px;\n  border-radius: 8px;\n  width: 500px;\n  max-width: 90%;\n  max-height: 90vh;\n  overflow-y: auto;\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n  position: relative; /* Add position relative to position the \"X\" button absolutely */\n  /* Style for the \"X\" button */\n}\n.modal-content .modal-close-x {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  background: none;\n  border: none;\n  font-size: 24px;\n  color: #333;\n  cursor: pointer;\n  padding: 5px 10px;\n  transition: color 0.2s;\n}\n.modal-content .modal-close-x:hover {\n  color: #ff0000; /* Red color on hover */\n}\n.modal-content .modal-header {\n  display: flex;\n  gap: 20px;\n  margin-bottom: 20px;\n}\n.modal-content .modal-header .modal-user-image {\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.modal-content .modal-header .modal-user-info {\n  flex: 1;\n}\n.modal-content .modal-header .modal-user-info p {\n  margin: 5px 0;\n  font-size: 14px;\n}\n.modal-content .modal-header .modal-user-info p strong {\n  color: #333;\n}\n.modal-content .modal-section {\n  margin-bottom: 20px;\n}\n.modal-content .modal-section p {\n  margin: 5px 0;\n  font-size: 14px;\n}\n.modal-content .modal-section p strong {\n  color: #333;\n}\n.modal-content .modal-section .order-note {\n  width: 100%;\n  height: 60px;\n  border: 1px solid #e9ecef;\n  border-radius: 4px;\n  padding: 10px;\n  font-size: 14px;\n  resize: none;\n}\n.modal-content .modal-section .modal-item-image {\n  width: 50px;\n  height: 50px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 4px;\n  margin-bottom: 10px;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/payment.scss":
 /*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/payment.scss ***!
@@ -78647,7 +78695,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".payment-view {\n  width: 100%;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  font-family: \"Inter\", sans-serif;\n  color: #333;\n  background: #f8f8f8;\n}\n.payment-view .payment-content {\n  flex: 1;\n  width: 100%;\n  max-width: 1800px;\n  margin: 0 auto;\n  padding: 30px 40px;\n}\n@media (max-width: 768px) {\n  .payment-view .payment-content {\n    padding: 20px 15px;\n  }\n}\n.payment-view .payment-title {\n  font-size: 28px;\n  font-weight: 600;\n  margin-bottom: 30px;\n  color: #1a1a1a;\n}\n.payment-view .payment-container {\n  display: flex;\n  gap: 40px;\n  width: 100%;\n}\n@media (max-width: 1200px) {\n  .payment-view .payment-container {\n    flex-direction: column;\n    gap: 30px;\n  }\n}\n.payment-view .billing-details {\n  flex: 2;\n}\n.payment-view .billing-details .section-title {\n  font-size: 20px;\n  font-weight: 600;\n  margin-bottom: 25px;\n  color: #1a1a1a;\n}\n.payment-view .billing-details .billing-form .form-row {\n  display: flex;\n  gap: 20px;\n  margin-bottom: 20px;\n}\n@media (max-width: 768px) {\n  .payment-view .billing-details .billing-form .form-row {\n    flex-direction: column;\n    gap: 20px;\n  }\n}\n.payment-view .billing-details .billing-form .form-row .form-group {\n  flex: 1;\n}\n.payment-view .billing-details .billing-form .form-group {\n  margin-bottom: 20px;\n}\n.payment-view .billing-details .billing-form .form-group label {\n  display: block;\n  font-size: 14px;\n  color: #666;\n  margin-bottom: 8px;\n  font-weight: 500;\n}\n.payment-view .billing-details .billing-form .form-group label[for=firstName]:after, .payment-view .billing-details .billing-form .form-group label[for=lastName]:after, .payment-view .billing-details .billing-form .form-group label[for=country]:after, .payment-view .billing-details .billing-form .form-group label[for=streetAddress]:after, .payment-view .billing-details .billing-form .form-group label[for=townCity]:after, .payment-view .billing-details .billing-form .form-group label[for=state]:after, .payment-view .billing-details .billing-form .form-group label[for=mobilePhone]:after, .payment-view .billing-details .billing-form .form-group label[for=cardNumber]:after, .payment-view .billing-details .billing-form .form-group label[for=expirationDate]:after, .payment-view .billing-details .billing-form .form-group label[for=securityCode]:after, .payment-view .billing-details .billing-form .form-group label[for=nameOnCard]:after {\n  content: \"*\";\n  color: #ff4444;\n  margin-left: 4px;\n  display: inline-block;\n}\n.payment-view .billing-details .billing-form .form-group input,\n.payment-view .billing-details .billing-form .form-group select,\n.payment-view .billing-details .billing-form .form-group textarea {\n  width: 100%;\n  padding: 12px 15px;\n  font-size: 15px;\n  border: 1px solid #e0e0e0;\n  border-radius: 6px;\n  color: #333;\n  transition: border-color 0.2s;\n}\n.payment-view .billing-details .billing-form .form-group input:focus,\n.payment-view .billing-details .billing-form .form-group select:focus,\n.payment-view .billing-details .billing-form .form-group textarea:focus {\n  outline: none;\n  border-color: #0066cc;\n}\n.payment-view .billing-details .billing-form .form-group input::-moz-placeholder, .payment-view .billing-details .billing-form .form-group select::-moz-placeholder, .payment-view .billing-details .billing-form .form-group textarea::-moz-placeholder {\n  color: #999;\n}\n.payment-view .billing-details .billing-form .form-group input::placeholder,\n.payment-view .billing-details .billing-form .form-group select::placeholder,\n.payment-view .billing-details .billing-form .form-group textarea::placeholder {\n  color: #999;\n}\n.payment-view .billing-details .billing-form .form-group select {\n  background: transparent;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\"><path fill=\"%23666\" d=\"M7 10l5 5 5-5z\"/></svg>');\n  background-repeat: no-repeat;\n  background-position: right 10px center;\n  cursor: pointer;\n}\n.payment-view .billing-details .billing-form .form-group select option {\n  background: rgba(255, 255, 255, 0.9);\n  color: #333;\n}\n.payment-view .billing-details .billing-form .form-group textarea {\n  resize: vertical;\n  min-height: 100px;\n}\n.payment-view .order-summary {\n  flex: 1;\n  min-width: 350px;\n  background: white;\n  padding: 30px;\n  border-radius: 12px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n  position: sticky;\n  top: 50px;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n@media (max-width: 1200px) {\n  .payment-view .order-summary {\n    min-width: 100%;\n  }\n}\n.payment-view .order-summary .order-section {\n  margin-bottom: 40px;\n}\n.payment-view .order-summary .order-section .section-title {\n  font-size: 20px;\n  font-weight: 600;\n  margin-bottom: 25px;\n  color: #1a1a1a;\n}\n.payment-view .order-summary .order-section .order-item {\n  display: flex;\n  align-items: center;\n  margin-bottom: 20px;\n  padding-bottom: 20px;\n  border-bottom: 1px solid #e0e0e0;\n}\n.payment-view .order-summary .order-section .order-item .product-image {\n  width: 60px;\n  height: 60px;\n  -o-object-fit: contain;\n     object-fit: contain;\n  margin-right: 20px;\n  background: #f5f5f5;\n  border-radius: 6px;\n}\n.payment-view .order-summary .order-section .order-item .product-details {\n  flex: 1;\n}\n.payment-view .order-summary .order-section .order-item .product-details .product-name {\n  font-size: 16px;\n  font-weight: 500;\n}\n.payment-view .order-summary .order-section .summary-row {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 15px;\n  font-size: 16px;\n}\n.payment-view .order-summary .order-section .summary-row .summary-label {\n  color: #666;\n}\n.payment-view .order-summary .order-section .summary-row .summary-value {\n  font-weight: 500;\n}\n.payment-view .order-summary .order-section .summary-row.total {\n  margin-top: 20px;\n  padding-top: 20px;\n  border-top: 1px solid #e0e0e0;\n  font-size: 18px;\n}\n.payment-view .order-summary .order-section .summary-row.total .summary-label,\n.payment-view .order-summary .order-section .summary-row.total .summary-value {\n  font-weight: 600;\n}\n.payment-view .order-summary .payment-section {\n  margin-bottom: 40px;\n}\n.payment-view .order-summary .payment-section .section-title {\n  font-size: 20px;\n  font-weight: 600;\n  margin-bottom: 25px;\n  color: #1a1a1a;\n}\n.payment-view .order-summary .payment-section .payment-options {\n  margin-top: 0;\n}\n.payment-view .order-summary .payment-section .payment-options .payment-option-btn {\n  display: block;\n  width: 100%;\n  padding: 12px 15px;\n  margin-bottom: 15px;\n  font-size: 16px;\n  font-weight: 500;\n  text-align: left;\n  color: #666;\n  background: #f5f5f5;\n  border: 1px solid #e0e0e0;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: all 0.2s;\n}\n.payment-view .order-summary .payment-section .payment-options .payment-option-btn.active {\n  background: #e6f0ff;\n  border-color: #0066cc;\n  color: #0066cc;\n}\n.payment-view .order-summary .payment-section .payment-options .payment-option-btn:hover {\n  background: #e6f0ff;\n  border-color: #0066cc;\n  color: #0066cc;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form {\n  margin-top: 20px;\n  padding: 20px;\n  background: #f8f8f8;\n  border-radius: 8px;\n  border: 1px solid #0066cc;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-group {\n  margin-bottom: 20px;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-group label {\n  display: block;\n  margin-bottom: 8px;\n  font-size: 14px;\n  color: #666;\n  font-weight: 500;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-group input {\n  width: 100%;\n  padding: 12px 15px;\n  font-size: 15px;\n  border: 1px solid #e0e0e0;\n  border-radius: 6px;\n  color: #333;\n  transition: border-color 0.2s;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-group input:focus {\n  outline: none;\n  border-color: #0066cc;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-group input::-moz-placeholder {\n  color: #bbb;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-group input::placeholder {\n  color: #bbb;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-row {\n  display: flex;\n  gap: 20px;\n  margin-bottom: 20px;\n}\n@media (max-width: 768px) {\n  .payment-view .order-summary .payment-section .payment-options .credit-card-form .form-row {\n    flex-direction: column;\n    gap: 20px;\n  }\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-row .form-group {\n  flex: 1;\n}\n.payment-view .order-summary .payment-section .payment-options .cash-on-delivery-info {\n  margin-top: 20px;\n  padding: 20px;\n  background: #f8f8f8;\n  border-radius: 8px;\n}\n.payment-view .order-summary .payment-section .payment-options .cash-on-delivery-info p {\n  margin: 0;\n  font-size: 14px;\n  color: #666;\n}\n.payment-view .order-summary .payment-section .payment-options .gcash-payment {\n  margin-top: 20px;\n  padding: 20px;\n  background: #f8f8f8;\n  border-radius: 8px;\n  border: 1px solid #0066cc;\n}\n.payment-view .order-summary .payment-section .payment-options .gcash-payment .qr-code img {\n  width: 200px;\n  height: auto;\n  background: transparent;\n  padding-left: 50px;\n  margin-left: 80px;\n}\n.payment-view .order-summary .payment-section .place-order-btn {\n  width: 100%;\n  padding: 16px;\n  background: #0066cc;\n  color: white;\n  border: none;\n  border-radius: 8px;\n  font-size: 18px;\n  font-weight: 500;\n  cursor: pointer;\n  margin-top: 30px;\n  transition: background 0.2s;\n}\n.payment-view .order-summary .payment-section .place-order-btn:hover {\n  background: #004499;\n}\n@media (max-width: 768px) {\n  .payment-view .payment-content {\n    padding: 20px 15px;\n  }\n  .payment-view .order-summary {\n    padding: 20px;\n  }\n  .payment-view .order-summary .place-order-btn {\n    padding: 14px;\n    font-size: 16px;\n  }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".payment-view {\n  width: 100%;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  font-family: \"Inter\", sans-serif;\n  color: #333;\n  background: #f8f8f8;\n}\n.payment-view .payment-content {\n  flex: 1;\n  width: 100%;\n  max-width: 1800px;\n  margin: 0 auto;\n  padding: 30px 40px;\n}\n@media (max-width: 768px) {\n  .payment-view .payment-content {\n    padding: 20px 15px;\n  }\n}\n.payment-view .payment-title {\n  font-size: 28px;\n  font-weight: 600;\n  margin-bottom: 30px;\n  color: #1a1a1a;\n}\n.payment-view .payment-container {\n  display: flex;\n  gap: 40px;\n  width: 100%;\n}\n@media (max-width: 1200px) {\n  .payment-view .payment-container {\n    flex-direction: column;\n    gap: 30px;\n  }\n}\n.payment-view .billing-details {\n  flex: 2;\n}\n.payment-view .billing-details .section-title {\n  font-size: 20px;\n  font-weight: 600;\n  margin-bottom: 25px;\n  color: #1a1a1a;\n}\n.payment-view .billing-details .billing-form .form-row {\n  display: flex;\n  gap: 20px;\n  margin-bottom: 20px;\n}\n@media (max-width: 768px) {\n  .payment-view .billing-details .billing-form .form-row {\n    flex-direction: column;\n    gap: 20px;\n  }\n}\n.payment-view .billing-details .billing-form .form-row .form-group {\n  flex: 1;\n}\n.payment-view .billing-details .billing-form .form-group {\n  margin-bottom: 20px;\n}\n.payment-view .billing-details .billing-form .form-group label {\n  display: block;\n  font-size: 14px;\n  color: #666;\n  margin-bottom: 8px;\n  font-weight: 500;\n}\n.payment-view .billing-details .billing-form .form-group label[for=firstName]:after, .payment-view .billing-details .billing-form .form-group label[for=lastName]:after, .payment-view .billing-details .billing-form .form-group label[for=country]:after, .payment-view .billing-details .billing-form .form-group label[for=streetAddress]:after, .payment-view .billing-details .billing-form .form-group label[for=townCity]:after, .payment-view .billing-details .billing-form .form-group label[for=state]:after, .payment-view .billing-details .billing-form .form-group label[for=mobilePhone]:after, .payment-view .billing-details .billing-form .form-group label[for=cardNumber]:after, .payment-view .billing-details .billing-form .form-group label[for=expirationDate]:after, .payment-view .billing-details .billing-form .form-group label[for=securityCode]:after, .payment-view .billing-details .billing-form .form-group label[for=nameOnCard]:after {\n  content: \"*\";\n  color: #ff4444;\n  margin-left: 4px;\n  display: inline-block;\n}\n.payment-view .billing-details .billing-form .form-group input,\n.payment-view .billing-details .billing-form .form-group select,\n.payment-view .billing-details .billing-form .form-group textarea {\n  width: 100%;\n  padding: 12px 15px;\n  font-size: 15px;\n  border: 1px solid #e0e0e0;\n  border-radius: 6px;\n  color: #333;\n  transition: border-color 0.2s;\n}\n.payment-view .billing-details .billing-form .form-group input:focus,\n.payment-view .billing-details .billing-form .form-group select:focus,\n.payment-view .billing-details .billing-form .form-group textarea:focus {\n  outline: none;\n  border-color: #0066cc;\n}\n.payment-view .billing-details .billing-form .form-group input::-moz-placeholder, .payment-view .billing-details .billing-form .form-group select::-moz-placeholder, .payment-view .billing-details .billing-form .form-group textarea::-moz-placeholder {\n  color: #999;\n}\n.payment-view .billing-details .billing-form .form-group input::placeholder,\n.payment-view .billing-details .billing-form .form-group select::placeholder,\n.payment-view .billing-details .billing-form .form-group textarea::placeholder {\n  color: #999;\n}\n.payment-view .billing-details .billing-form .form-group select {\n  background: transparent;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\"><path fill=\"%23666\" d=\"M7 10l5 5 5-5z\"/></svg>');\n  background-repeat: no-repeat;\n  background-position: right 10px center;\n  cursor: pointer;\n}\n.payment-view .billing-details .billing-form .form-group select option {\n  background: rgba(255, 255, 255, 0.9);\n  color: #333;\n}\n.payment-view .billing-details .billing-form .form-group textarea {\n  resize: vertical;\n  min-height: 100px;\n}\n.payment-view .order-summary {\n  flex: 1;\n  min-width: 350px;\n  background: white;\n  padding: 30px;\n  border-radius: 12px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n  position: sticky;\n  top: 50px;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n@media (max-width: 1200px) {\n  .payment-view .order-summary {\n    min-width: 100%;\n  }\n}\n.payment-view .order-summary .order-section {\n  margin-bottom: 40px;\n}\n.payment-view .order-summary .order-section .section-title {\n  font-size: 20px;\n  font-weight: 600;\n  margin-bottom: 25px;\n  color: #1a1a1a;\n}\n.payment-view .order-summary .order-section .order-item {\n  display: flex;\n  align-items: center;\n  margin-bottom: 20px;\n  padding-bottom: 20px;\n  border-bottom: 1px solid #e0e0e0;\n}\n.payment-view .order-summary .order-section .order-item .product-image {\n  width: 60px;\n  height: 60px;\n  -o-object-fit: contain;\n     object-fit: contain;\n  margin-right: 20px;\n  background: #f5f5f5;\n  border-radius: 6px;\n}\n.payment-view .order-summary .order-section .order-item .product-details {\n  flex: 1;\n}\n.payment-view .order-summary .order-section .order-item .product-details .product-name {\n  font-size: 16px;\n  font-weight: 500;\n}\n.payment-view .order-summary .order-section .summary-row {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 15px;\n  font-size: 16px;\n}\n.payment-view .order-summary .order-section .summary-row .summary-label {\n  color: #666;\n}\n.payment-view .order-summary .order-section .summary-row .summary-value {\n  font-weight: 500;\n}\n.payment-view .order-summary .order-section .summary-row.total {\n  margin-top: 20px;\n  padding-top: 20px;\n  border-top: 1px solid #e0e0e0;\n  font-size: 18px;\n}\n.payment-view .order-summary .order-section .summary-row.total .summary-label,\n.payment-view .order-summary .order-section .summary-row.total .summary-value {\n  font-weight: 600;\n}\n.payment-view .order-summary .payment-section {\n  margin-bottom: 40px;\n}\n.payment-view .order-summary .payment-section .section-title {\n  font-size: 20px;\n  font-weight: 600;\n  margin-bottom: 25px;\n  color: #1a1a1a;\n}\n.payment-view .order-summary .payment-section .payment-options {\n  margin-top: 0;\n}\n.payment-view .order-summary .payment-section .payment-options .payment-option-btn {\n  display: block;\n  width: 100%;\n  padding: 12px 15px;\n  margin-bottom: 15px;\n  font-size: 16px;\n  font-weight: 500;\n  text-align: left;\n  color: #666;\n  background: #f5f5f5;\n  border: 1px solid #e0e0e0;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: all 0.2s;\n}\n.payment-view .order-summary .payment-section .payment-options .payment-option-btn.active {\n  background: #e6f0ff;\n  border-color: #0066cc;\n  color: #0066cc;\n}\n.payment-view .order-summary .payment-section .payment-options .payment-option-btn:hover {\n  background: #e6f0ff;\n  border-color: #0066cc;\n  color: #0066cc;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form {\n  margin-top: 20px;\n  padding: 20px;\n  background: #f8f8f8;\n  border-radius: 8px;\n  border: 1px solid #0066cc;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-group {\n  margin-bottom: 20px;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-group label {\n  display: block;\n  margin-bottom: 8px;\n  font-size: 14px;\n  color: #666;\n  font-weight: 500;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-group input {\n  width: 100%;\n  padding: 12px 15px;\n  font-size: 15px;\n  border: 1px solid #e0e0e0;\n  border-radius: 6px;\n  color: #333;\n  transition: border-color 0.2s;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-group input:focus {\n  outline: none;\n  border-color: #0066cc;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-group input::-moz-placeholder {\n  color: #bbb;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-group input::placeholder {\n  color: #bbb;\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-row {\n  display: flex;\n  gap: 20px;\n  margin-bottom: 20px;\n}\n@media (max-width: 768px) {\n  .payment-view .order-summary .payment-section .payment-options .credit-card-form .form-row {\n    flex-direction: column;\n    gap: 20px;\n  }\n}\n.payment-view .order-summary .payment-section .payment-options .credit-card-form .form-row .form-group {\n  flex: 1;\n}\n.payment-view .order-summary .payment-section .payment-options .cash-on-delivery-info {\n  margin-top: 20px;\n  padding: 20px;\n  background: #f8f8f8;\n  border-radius: 8px;\n}\n.payment-view .order-summary .payment-section .payment-options .cash-on-delivery-info p {\n  margin: 0;\n  font-size: 14px;\n  color: #666;\n}\n.payment-view .order-summary .payment-section .payment-options .gcash-payment {\n  margin-top: 20px;\n  padding: 20px;\n  background: #f8f8f8;\n  border-radius: 8px;\n  border: 1px solid #0066cc;\n}\n.payment-view .order-summary .payment-section .payment-options .gcash-payment .qr-code img {\n  width: 200px;\n  height: auto;\n  background: transparent;\n  padding-left: 50px;\n  margin-left: 120px;\n}\n.payment-view .order-summary .payment-section .place-order-btn {\n  width: 100%;\n  padding: 16px;\n  background: #0066cc;\n  color: white;\n  border: none;\n  border-radius: 8px;\n  font-size: 18px;\n  font-weight: 500;\n  cursor: pointer;\n  margin-top: 30px;\n  transition: background 0.2s;\n}\n.payment-view .order-summary .payment-section .place-order-btn:hover {\n  background: #004499;\n}\n@media (max-width: 768px) {\n  .payment-view .payment-content {\n    padding: 20px 15px;\n  }\n  .payment-view .order-summary {\n    padding: 20px;\n  }\n  .payment-view .order-summary .place-order-btn {\n    padding: 14px;\n    font-size: 16px;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -78767,7 +78815,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".shop-page {\n  width: 100%;\n  min-height: 100vh;\n  background-color: #F9F9F9;\n  padding-top: 80px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.shop-container {\n  display: flex;\n  max-width: 1400px;\n  width: 100%;\n  margin: 0 auto;\n  padding: 0 20px;\n  box-sizing: border-box;\n  gap: 30px;\n}\n\n.shop-filter-container {\n  width: 250px;\n  flex-shrink: 0;\n  position: sticky;\n  top: 100px;\n  align-self: flex-start;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n\n.shop-grid-container {\n  flex-grow: 1;\n}\n\n@media (max-width: 1024px) {\n  .shop-container {\n    flex-direction: column;\n    padding: 0 15px;\n  }\n  .shop-filter-container {\n    width: 100%;\n    position: static;\n    margin-bottom: 20px;\n  }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".shop-page {\n  width: 100%;\n  min-height: 100vh;\n  background-color: #F9F9F9;\n  padding-top: 100px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.shop-container {\n  display: flex;\n  max-width: 1400px;\n  width: 100%;\n  margin: 0 auto;\n  padding: 0 40px;\n  box-sizing: border-box;\n  gap: 40px;\n}\n\n.shop-filter-container {\n  width: 300px;\n  flex-shrink: 0;\n  position: sticky;\n  top: 120px;\n  align-self: flex-start;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n\n.shop-grid-container {\n  flex-grow: 1;\n}\n\n@media (max-width: 1024px) {\n  .shop-container {\n    flex-direction: column;\n    padding: 0 20px;\n  }\n  .shop-filter-container {\n    width: 100%;\n    position: static;\n    margin-bottom: 30px;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -166197,6 +166245,301 @@ var Complete = function Complete() {
 
 /***/ }),
 
+/***/ "./resources/js/components/OrderModal/ordersmodal.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/OrderModal/ordersmodal.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _sass_components_ordersmodal_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../sass/components/ordersmodal.scss */ "./resources/sass/components/ordersmodal.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var OrdersModal = function OrdersModal(_ref) {
+  var order = _ref.order,
+    onClose = _ref.onClose;
+  // Function to handle clicks on the overlay (outside the modal content)
+  var handleOverlayClick = function handleOverlayClick(e) {
+    if (e.target.classList.contains('modal-overlay')) {
+      onClose();
+    }
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "modal-overlay",
+    onClick: handleOverlayClick,
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "modal-content",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        className: "modal-close-x",
+        onClick: onClose,
+        children: "\xD7"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "modal-header",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+          src: "https://via.placeholder.com/100" // Placeholder for user image; replace if you have a specific user image
+          ,
+          alt: "user",
+          className: "modal-user-image"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "modal-user-info",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+              children: "First Name:"
+            }), " ", order.userName]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+              children: "Last Name:"
+            }), " ", order.lastName]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+              children: "Phone Number:"
+            }), " ", order.phone]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+              children: "Email:"
+            }), " ", order.email]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+              children: "Street Address:"
+            }), " ", order.address]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+              children: "City:"
+            }), " Butuan City"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+              children: "Country:"
+            }), " ", order.country]
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "modal-section",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "Order Note [Optional]"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("textarea", {
+          readOnly: true,
+          className: "order-note"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "modal-section",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "Other Information"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "Order Status:"
+          }), " Shipped"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "Payment Method:"
+          }), " ", order.paymentMethod]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "modal-section",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "Order Summary"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "Subtotal:"
+          }), " \u20B1 ", order.subtotal]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "Total:"
+          }), " \u20B1 ", order.total]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "modal-section",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+          src: order.image // Use the tuf.svg image for the item
+          ,
+          alt: "item",
+          className: "modal-item-image"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: order.itemName
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+          children: "Qty: 1"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          children: ["\u20B1 ", order.total]
+        })]
+      })]
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OrdersModal);
+
+/***/ }),
+
+/***/ "./resources/js/components/Orders/orders.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/Orders/orders.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
+/* harmony import */ var _sass_components_orders_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../sass/components/orders.scss */ "./resources/sass/components/orders.scss");
+/* harmony import */ var _OrderModal_ordersmodal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../OrderModal/ordersmodal */ "./resources/js/components/OrderModal/ordersmodal.js");
+/* harmony import */ var _topnav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../topnav */ "./resources/js/components/topnav.js");
+/* harmony import */ var _admin_sidemenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../admin-sidemenu */ "./resources/js/components/admin-sidemenu.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
+ // Import Ant Design Layout
+
+ // Import OrdersModal
+ // Import TopNav
+ // Import AdminSideMenu
+
+var Content = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Content;
+var Orders = function Orders() {
+  // Static data for now, using the provided image path
+  var ordersData = [{
+    id: 1,
+    image: '/images/tuf.svg',
+    itemName: 'ACER NITRO LAPTOP 15',
+    userName: 'Christian Pearl M.',
+    lastName: 'Ebit',
+    email: 'kurtchris123@gmail.com',
+    phone: '(+63) 977 818 6065',
+    address: 'P-1, Bray. Brongao, Butuan City, Agusan Del Norte',
+    country: 'Philippines',
+    paymentMethod: 'Cash on Delivery',
+    subtotal: '30,050',
+    total: '30,050',
+    status: 'Completed'
+  }, {
+    id: 2,
+    image: '/images/tuf.svg',
+    itemName: 'Item 2',
+    userName: 'Jane Doe',
+    lastName: 'Ebit',
+    email: 'example@gmail.com',
+    phone: '(+63) 380-1801',
+    address: 'P-1, Bray. Brongao, Butuan City, Agusan Del Norte',
+    country: 'Philippines',
+    paymentMethod: 'Pay on Arrival',
+    subtotal: '30,050',
+    total: '30,050',
+    status: 'Completed'
+  }];
+
+  // State to control modal visibility and selected order
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState2 = _slicedToArray(_useState, 2),
+    isModalOpen = _useState2[0],
+    setIsModalOpen = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    _useState4 = _slicedToArray(_useState3, 2),
+    selectedOrder = _useState4[0],
+    setSelectedOrder = _useState4[1];
+
+  // Function to handle row click and open modal
+  var handleRowClick = function handleRowClick(order) {
+    setSelectedOrder(order);
+    setIsModalOpen(true);
+  };
+
+  // Function to close modal
+  var closeModal = function closeModal() {
+    setIsModalOpen(false);
+    setSelectedOrder(null);
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    style: {
+      minHeight: '100vh'
+    },
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_4__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Content, {
+        style: {
+          margin: '24px 16px',
+          padding: 24,
+          background: '#fff',
+          minHeight: 280
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          className: "orders-container",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
+            children: "Orders"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("table", {
+            className: "orders-table",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("thead", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("tr", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                  children: "Image"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                  children: "Item Name"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                  children: "User Name"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                  children: "Email"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                  children: "Status"
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("tbody", {
+              children: ordersData.map(function (order) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("tr", {
+                  onClick: function onClick() {
+                    return handleRowClick(order);
+                  },
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                      src: order.image,
+                      alt: "item",
+                      className: "order-image"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+                    children: order.itemName
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+                    children: order.userName
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+                    children: order.email
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+                      className: "status ".concat(order.status.toLowerCase()),
+                      children: order.status
+                    })
+                  })]
+                }, order.id);
+              })
+            })]
+          }), isModalOpen && selectedOrder && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_OrderModal_ordersmodal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            order: selectedOrder,
+            onClose: closeModal
+          })]
+        })
+      })]
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Orders);
+
+/***/ }),
+
 /***/ "./resources/js/components/ProductGrid/productgrid.js":
 /*!************************************************************!*\
   !*** ./resources/js/components/ProductGrid/productgrid.js ***!
@@ -166783,8 +167126,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
 /* harmony import */ var _components_login_login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/login/login */ "./resources/js/components/login/login.js");
 /* harmony import */ var _components_register_register__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/register/register */ "./resources/js/components/register/register.js");
 /* harmony import */ var _components_inventory_inventory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/inventory/inventory */ "./resources/js/components/inventory/inventory.js");
@@ -166794,12 +167137,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _adminproducts_adminproducts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./adminproducts/adminproducts */ "./resources/js/components/adminproducts/adminproducts.js");
 /* harmony import */ var _userspage_selectedproduct__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./userspage/selectedproduct */ "./resources/js/components/userspage/selectedproduct.js");
 /* harmony import */ var _components_Profile__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Profile */ "./resources/js/components/Profile.js");
-/* harmony import */ var _components_ShopContent_Shop_UI__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/ShopContent/Shop_UI */ "./resources/js/components/ShopContent/Shop_UI.js");
+/* harmony import */ var _components_ShopContent_Shop_ui__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/ShopContent/Shop_ui */ "./resources/js/components/ShopContent/Shop_ui.js");
 /* harmony import */ var _CartUI_cart_view__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./CartUI/cart_view */ "./resources/js/components/CartUI/cart_view.js");
 /* harmony import */ var _CheckoutUI_payment__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./CheckoutUI/payment */ "./resources/js/components/CheckoutUI/payment.js");
 /* harmony import */ var _OrderCompleteUI_complete__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./OrderCompleteUI/complete */ "./resources/js/components/OrderCompleteUI/complete.js");
 /* harmony import */ var _FooterContent_FooterContent__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./FooterContent/FooterContent */ "./resources/js/components/FooterContent/FooterContent.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Orders_orders__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Orders/orders */ "./resources/js/components/Orders/orders.js");
+/* harmony import */ var _OrderModal_ordersmodal__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./OrderModal/ordersmodal */ "./resources/js/components/OrderModal/ordersmodal.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -166817,6 +167162,8 @@ __webpack_require__.r(__webpack_exports__);
 
  // Import the complete component
  // Import the FooterContent component
+ // Import the Orders component
+ // Import the OrdersModal component
 
 var ProtectedRoute = function ProtectedRoute(_ref) {
   var element = _ref.element,
@@ -166824,13 +167171,13 @@ var ProtectedRoute = function ProtectedRoute(_ref) {
   var authToken = localStorage.getItem("authToken");
   var userRole = parseInt(localStorage.getItem("userRole"));
   if (!authToken) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Navigate, {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Navigate, {
       to: "/login",
       replace: true
     });
   }
   if (!allowedRoles.includes(userRole)) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Navigate, {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Navigate, {
       to: "/homepagecontent",
       replace: true
     }); // Redirect to homepagecontent instead
@@ -166838,71 +167185,77 @@ var ProtectedRoute = function ProtectedRoute(_ref) {
   return element;
 };
 function Routers() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_18__.BrowserRouter, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Routes, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_20__.BrowserRouter, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Routes, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Navigate, {
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Navigate, {
           to: "/homepagecontent"
         })
-      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/register",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_register_register__WEBPACK_IMPORTED_MODULE_3__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_register_register__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/login",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_login_login__WEBPACK_IMPORTED_MODULE_2__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_login_login__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/homepagecontent",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Homepage_homepage__WEBPACK_IMPORTED_MODULE_6__["default"], {})
-      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Homepage_homepage__WEBPACK_IMPORTED_MODULE_6__["default"], {})
+      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/inventory",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(ProtectedRoute, {
-          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_inventory_inventory__WEBPACK_IMPORTED_MODULE_4__["default"], {}),
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(ProtectedRoute, {
+          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_inventory_inventory__WEBPACK_IMPORTED_MODULE_4__["default"], {}),
           allowedRoles: [1]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/admindashboard",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(ProtectedRoute, {
-          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_admindashboard_admindashboard__WEBPACK_IMPORTED_MODULE_5__["default"], {}),
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(ProtectedRoute, {
+          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_admindashboard_admindashboard__WEBPACK_IMPORTED_MODULE_5__["default"], {}),
           allowedRoles: [1]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/usertable",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(ProtectedRoute, {
-          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_userslist_users_component_userstable__WEBPACK_IMPORTED_MODULE_7__["default"], {}),
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(ProtectedRoute, {
+          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_userslist_users_component_userstable__WEBPACK_IMPORTED_MODULE_7__["default"], {}),
           allowedRoles: [1]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/adminproducts",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(ProtectedRoute, {
-          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_adminproducts_adminproducts__WEBPACK_IMPORTED_MODULE_8__["default"], {}),
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(ProtectedRoute, {
+          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_adminproducts_adminproducts__WEBPACK_IMPORTED_MODULE_8__["default"], {}),
           allowedRoles: [1]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/shopui",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_ShopContent_Shop_UI__WEBPACK_IMPORTED_MODULE_11__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_ShopContent_Shop_ui__WEBPACK_IMPORTED_MODULE_11__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/cartview",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_CartUI_cart_view__WEBPACK_IMPORTED_MODULE_12__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_CartUI_cart_view__WEBPACK_IMPORTED_MODULE_12__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/payment",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_CheckoutUI_payment__WEBPACK_IMPORTED_MODULE_13__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_CheckoutUI_payment__WEBPACK_IMPORTED_MODULE_13__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/complete",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_OrderCompleteUI_complete__WEBPACK_IMPORTED_MODULE_14__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_OrderCompleteUI_complete__WEBPACK_IMPORTED_MODULE_14__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/footercontent",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_FooterContent_FooterContent__WEBPACK_IMPORTED_MODULE_15__["default"], {})
-      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_FooterContent_FooterContent__WEBPACK_IMPORTED_MODULE_15__["default"], {})
+      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
+        path: "/orders",
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Orders_orders__WEBPACK_IMPORTED_MODULE_16__["default"], {})
+      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
+        path: "/ordersmodal",
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_OrderModal_ordersmodal__WEBPACK_IMPORTED_MODULE_17__["default"], {})
+      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/product/:id",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(ProtectedRoute, {
-          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_userspage_selectedproduct__WEBPACK_IMPORTED_MODULE_9__["default"], {}),
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(ProtectedRoute, {
+          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_userspage_selectedproduct__WEBPACK_IMPORTED_MODULE_9__["default"], {}),
           allowedRoles: [2]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_19__.Route, {
         path: "/profile",
-        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(ProtectedRoute, {
-          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_Profile__WEBPACK_IMPORTED_MODULE_10__["default"], {}),
+        element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(ProtectedRoute, {
+          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_Profile__WEBPACK_IMPORTED_MODULE_10__["default"], {}),
           allowedRoles: [1, 2]
         })
       })]
@@ -166910,14 +167263,14 @@ function Routers() {
   });
 }
 if (document.getElementById("root")) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(Routers, {}), document.getElementById("root"));
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(Routers, {}), document.getElementById("root"));
 }
 
 /***/ }),
 
-/***/ "./resources/js/components/ShopContent/Shop_UI.js":
+/***/ "./resources/js/components/ShopContent/Shop_ui.js":
 /*!********************************************************!*\
-  !*** ./resources/js/components/ShopContent/Shop_UI.js ***!
+  !*** ./resources/js/components/ShopContent/Shop_ui.js ***!
   \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -166932,7 +167285,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_components_shop_ui_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../sass/components/shop_ui.scss */ "./resources/sass/components/shop_ui.scss");
 /* harmony import */ var _Header_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Header/header */ "./resources/js/components/Header/header.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-// Updated Shop_ui.js without ads
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
@@ -166940,16 +167298,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Shop_ui = function Shop_ui() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    _useState2 = _slicedToArray(_useState, 2),
+    filteredBrand = _useState2[0],
+    setFilteredBrand = _useState2[1];
+  var handleFilterChange = function handleFilterChange(brand) {
+    setFilteredBrand(brand);
+  };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: "shop-page",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Header_header__WEBPACK_IMPORTED_MODULE_4__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "shop-container",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "shop-filter-container",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_ShopFilter_Shop_filter__WEBPACK_IMPORTED_MODULE_1__["default"], {})
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_ShopFilter_Shop_filter__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          onFilterChange: handleFilterChange
+        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "shop-grid-container",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_ShopGrid_Shop_grid__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_ShopGrid_Shop_grid__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          filteredBrand: filteredBrand
+        })
       })]
     })]
   });
@@ -170338,6 +170707,66 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_homepage_scss__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/sass/components/orders.scss":
+/*!***********************************************!*\
+  !*** ./resources/sass/components/orders.scss ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_orders_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./orders.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/orders.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_orders_scss__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_orders_scss__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/sass/components/ordersmodal.scss":
+/*!****************************************************!*\
+  !*** ./resources/sass/components/ordersmodal.scss ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_ordersmodal_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./ordersmodal.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/ordersmodal.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_ordersmodal_scss__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_ordersmodal_scss__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 

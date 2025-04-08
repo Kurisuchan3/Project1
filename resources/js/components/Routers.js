@@ -10,11 +10,13 @@ import UserTable from "../components/userslist/users_component/userstable";
 import ProductPage from "./adminproducts/adminproducts";
 import ProductDetails from "./userspage/selectedproduct";
 import Profile from "../components/Profile"; 
-import Shop_ui from "../components/ShopContent/Shop_UI";
+import Shop_ui from "../components/ShopContent/Shop_ui";
 import CartView from "./CartUI/cart_view";
 import Payment from "./CheckoutUI/payment";
 import Complete from "./OrderCompleteUI/complete"; // Import the complete component
 import FooterContent from "./FooterContent/FooterContent"; // Import the FooterContent component
+import Orders from "./Orders/orders"; // Import the Orders component
+import OrdersModal from "./OrderModal/ordersmodal"; // Import the OrdersModal component
 
 
 const ProtectedRoute = ({ element, allowedRoles }) => {
@@ -49,6 +51,8 @@ export default function Routers() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/complete" element={<Complete />} />
         <Route path="/footercontent" element={<FooterContent />} /> {/* Public route */}
+        <Route path="/orders" element={<Orders />} /> {/* Public route */}
+        <Route path="/ordersmodal" element={<OrdersModal />} /> {/* Public route */}
 
         <Route
           path="/product/:id"

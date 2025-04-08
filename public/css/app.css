@@ -11968,8 +11968,9 @@ textarea.form-control-lg {
   }
 }
 .side-menu {
-  height: 90vh;
   background: #f8f9fa;
+  margin-top: 110px; /* Adjust based on the combined height of topnav (60px) and nav-links (50px) */
+  height: calc(100vh - 110px); /* Adjust height to fit below the topnav and nav-links */
 }
 .side-menu .logo {
   color: #1890ff;
@@ -11987,6 +11988,22 @@ textarea.form-control-lg {
 .side-menu .ant-menu-item-selected {
   background-color: #1890ff !important;
   color: white !important;
+}
+.side-menu .menu-toggle {
+  padding: 10px;
+}
+.side-menu .logout-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.side-menu .logout-container .logout-button {
+  width: 100%;
+  color: #333;
+}
+.side-menu .logout-container .logout-button:hover {
+  color: #1890ff;
 }
 
 .login-container {
@@ -12059,6 +12076,12 @@ input {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
+  position: fixed; /* Fix the topnav to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it stays above other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better separation */
 }
 .topnav .logo {
   font-size: 24px;
@@ -12067,18 +12090,23 @@ input {
   display: flex;
   align-items: center;
 }
+.topnav .logo img {
+  width: 100px; /* Match the width specified in TopNav.js */
+}
 .topnav .search-bar {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.topnav .search-bar input {
+.topnav .search-bar .ant-input-search {
   width: 300px;
+}
+.topnav .search-bar .ant-input-search input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-.topnav .search-bar button {
+.topnav .search-bar .ant-input-search .ant-btn {
   padding: 8px 15px;
   border: none;
   background-color: #ffffff;
@@ -12097,6 +12125,10 @@ input {
   color: #000000;
   cursor: pointer;
 }
+.topnav .nav-icons .ant-btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+}
 
 .nav-links {
   background-color: #ffffff;
@@ -12104,6 +12136,11 @@ input {
   justify-content: center;
   padding: 10px 0;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fix the nav-links below the topnav */
+  top: 60px; /* Adjust based on the height of your topnav */
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 999; /* Below the topnav but above other content */
 }
 .nav-links a {
   margin: 0 15px;
@@ -13620,7 +13657,7 @@ footer {
   flex-direction: column;
   font-family: "Inter", sans-serif;
   color: #333;
-  background: #f8f8f8;
+  background: white;
 }
 .cart-view .cart-content {
   flex: 1;
@@ -13863,7 +13900,7 @@ footer {
 .cart-view .cart-totals .shipping-section .address-form {
   margin-top: 15px;
   padding: 15px;
-  background: #f8f8f8;
+  background: white;
   border-radius: 8px;
 }
 .cart-view .cart-totals .shipping-section .address-form .form-group {
@@ -14344,7 +14381,7 @@ footer {
   height: auto;
   background: transparent;
   padding-left: 50px;
-  margin-left: 80px;
+  margin-left: 120px;
 }
 .payment-view .order-summary .payment-section .place-order-btn {
   width: 100%;

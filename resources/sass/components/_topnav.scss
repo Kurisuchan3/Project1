@@ -1,31 +1,43 @@
 .topnav {
-    background-color: #008cff;
+  background-color: #008cff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed; /* Fix the topnav to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it stays above other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better separation */
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-  
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
+
+    img {
+      width: 100px; /* Match the width specified in TopNav.js */
     }
-  
-    .search-bar {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-  
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .ant-input-search {
+      width: 300px;
+
       input {
-        width: 300px;
         padding: 8px;
         border: 1px solid #ccc;
         border-radius: 5px;
       }
-  
-      button {
+
+      .ant-btn {
         padding: 8px 15px;
         border: none;
         background-color: #ffffff;
@@ -35,37 +47,47 @@
         font-weight: bold;
       }
     }
-  
-    .nav-icons {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      
-      i {
-        font-size: 20px;
-        color: #000000;
-        cursor: pointer;
-      }
-    }
   }
-  
-  .nav-links {
-    background-color: #ffffff;
+
+  .nav-icons {
     display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  
-    a {
-      margin: 0 15px;
-      text-decoration: none;
+    align-items: center;
+    gap: 15px;
+
+    i {
+      font-size: 20px;
       color: #000000;
-      font-weight: 500;
-      position: relative;
-  
-      &:hover {
-        color: #008cff;
-      }
+      cursor: pointer;
+    }
+
+    .ant-btn {
+      padding: 8px 15px;
+      border-radius: 5px;
     }
   }
-  
+}
+
+.nav-links {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fix the nav-links below the topnav */
+  top: 60px; /* Adjust based on the height of your topnav */
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 999; /* Below the topnav but above other content */
+
+  a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    position: relative;
+
+    &:hover {
+      color: #008cff;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 .side-menu {
-  height: 90vh;
   background: #f8f9fa;
+  margin-top: 110px; /* Adjust based on the combined height of topnav (60px) and nav-links (50px) */
+  height: calc(100vh - 110px); /* Adjust height to fit below the topnav and nav-links */
 
   .logo {
     color: #1890ff;
@@ -21,5 +22,25 @@
   .ant-menu-item-selected {
     background-color: #1890ff !important;
     color: white !important;
+  }
+
+  .menu-toggle {
+    padding: 10px;
+  }
+
+  .logout-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+
+    .logout-button {
+      width: 100%;
+      color: #333;
+
+      &:hover {
+        color: #1890ff;
+      }
+    }
   }
 }
