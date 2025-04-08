@@ -6,7 +6,6 @@ use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -70,30 +69,28 @@ class ProfileController extends Controller
             'middle_initial' => 'nullable|string|max:1',
             'phone' => 'nullable|string|max:15',
             'birthdate' => 'nullable|date',
-            'profile_picture' => 'nullable|image|mimes:jpeg,png|max:1024', // Max 1MB
+            'profile_picture' => 'nullable|string|max:500', // Now accepts URL
+            'password' => 'nullable|string|min:6', // Optional password
         ]);
 
         // Update user data
         $user->username = $validated['username'];
         $user->email = $validated['email'];
-        $user->save();
 
-        // Handle profile picture upload
-        if ($request->hasFile('profile_picture')) {
-            // Delete old profile picture if exists
-            if ($profile->profile_picture) {
-                Storage::delete('public/' . $profile->profile_picture);
-            }
-            $path = $request->file('profile_picture')->store('profile_pictures', 'public');
-            $profile->profile_picture = $path;
+        // Optional: handle password change
+        if (!empty($validated['password'])) {
+            $user->password = bcrypt($validated['password']);
         }
+
+        $user->save();
 
         // Update profile data
         $profile->first_name = $validated['first_name'];
         $profile->last_name = $validated['last_name'];
-        $profile->middle_initial = $validated['middle_initial'];
+        $profile->middle_initial = $validated['middle_initial'] ?? null;
         $profile->phone = $validated['phone'];
         $profile->birthdate = $validated['birthdate'];
+        $profile->profile_picture = $validated['profile_picture']; // Set URL string
         $profile->save();
 
         return response()->json([

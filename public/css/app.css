@@ -12058,22 +12058,20 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px 30px;
 }
 .topnav .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffffff;
   display: flex;
   align-items: center;
 }
 .topnav .search-bar {
+  flex: 1;
   display: flex;
-  align-items: center;
-  gap: 10px;
+  justify-content: center;
 }
 .topnav .search-bar input {
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -12087,14 +12085,24 @@ input {
   cursor: pointer;
   font-weight: bold;
 }
-.topnav .nav-icons {
+.topnav .nav-right {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.topnav .nav-icons i {
+.topnav .nav-right .username-inline {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+}
+.topnav .nav-right .nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.topnav .nav-right .nav-icons i {
   font-size: 20px;
-  color: #000000;
+  color: #ffffff;
   cursor: pointer;
 }
 
