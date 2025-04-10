@@ -8,45 +8,33 @@ use Carbon\Carbon;
 
 class ProfilesSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        // ✅ Fetch the actual user IDs
-        $adminUser = DB::table('users')->where('username', 'Admin')->first();
-        $customerUser = DB::table('users')->where('username', 'Customer')->first();
+        // Fetch all users
+        $users = DB::table('users')->get();
 
-        if (!$adminUser || !$customerUser) {
-            echo "❌ ERROR: Users not found. Profiles were not seeded.\n";
+        if ($users->isEmpty()) {
+            echo "❌ ERROR: No users found. Profiles were not seeded.\n";
             return;
         }
 
-        DB::table('profiles')->delete(); // Use delete() instead of truncate()
+        DB::table('profiles')->delete(); // Clear existing profiles
 
-        DB::table('profiles')->insert([
-            [
-                'user_id' => $adminUser->user_id, // ✅ Use fetched user_id
-                'first_name' => 'John',
-                'last_name' => 'Doe',
-                'middle_initial' => 'A',
-                'birthdate' => '1990-05-15',
-                'phone' => '123-456-7890',
-                'profile_picture' => 'https://www.reddit.com/r/furinamains/comments/16quuqp/splash_art_of_furina_done_deal_here_we_go/',
+        $profiles = [];
+        foreach ($users as $user) {
+            $profiles[] = [
+                'user_id' => $user->user_id,
+                'first_name' => $user->username === 'Admin' ? 'John' : ($user->username === 'Customer' ? 'Jane' : ''),
+                'last_name' => $user->username === 'Admin' ? 'Doe' : ($user->username === 'Customer' ? 'Smith' : ''),
+                'middle_initial' => $user->username === 'Admin' ? 'A' : ($user->username === 'Customer' ? 'B' : null),
+                'birthdate' => $user->username === 'Admin' ? '1990-05-15' : ($user->username === 'Customer' ? '1995-08-22' : null),
+                'phone' => $user->username === 'Admin' ? '123-456-7890' : ($user->username === 'Customer' ? '987-654-3210' : null),
+                'profile_picture' => $user->username === 'Admin' ? 'https://www.reddit.com/r/furinamains/comments/16quuqp/splash_art_of_furina_done_deal_here_we_go/' : ($user->username === 'Customer' ? 'https://www.reddit.com/r/RaidenMains/comments/us6tff/my_art_of_raiden_ei_and_her_eternal_partner/' : null),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],
-            [
-                'user_id' => $customerUser->user_id, // ✅ Use fetched user_id
-                'first_name' => 'Jane',
-                'last_name' => 'Smith',
-                'middle_initial' => 'B',
-                'birthdate' => '1995-08-22',
-                'phone' => '987-654-3210',
-                'profile_picture' => 'https://www.reddit.com/r/RaidenMains/comments/us6tff/my_art_of_raiden_ei_and_her_eternal_partner/',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-        ]);
+            ];
+        }
+
+        DB::table('profiles')->insert($profiles);
     }
 }

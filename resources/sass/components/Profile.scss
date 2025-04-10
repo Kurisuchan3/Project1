@@ -7,142 +7,165 @@
     h2 {
         font-size: 24px;
         margin-bottom: 5px;
-    }
-
-    p {
-        color: #666;
-        margin-bottom: 20px;
+        text-align: center;
     }
 
     .error-message {
         color: red;
         margin-bottom: 10px;
+        text-align: center;
     }
+}
 
-    .success-message {
-        color: green;
+.profile-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture-section {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
         margin-bottom: 10px;
+        border: 2px solid #ccc;
     }
 
-    .profile-form {
-        display: flex;
-        justify-content: space-between;
+    .select-image-btn {
+        display: inline-block;
+        padding: 8px 15px;
+        background: #ff4d4d;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-bottom: 5px;
 
-        .form-left {
-            flex: 1;
-            margin-right: 20px;
-
-            .form-group {
-                margin-bottom: 20px;
-
-                label {
-                    display: block;
-                    font-weight: bold;
-                    margin-bottom: 5px;
-                }
-
-                input[type="text"],
-                input[type="email"],
-                input[type="date"] {
-                    width: 100%;
-                    padding: 8px;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                    font-size: 14px;
-                }
-
-                small {
-                    display: block;
-                    color: #666;
-                    font-size: 12px;
-                    margin-top: 5px;
-                }
-
-                .name-group {
-                    display: flex;
-                    gap: 10px;
-
-                    input {
-                        flex: 1;
-                    }
-
-                    input[name="middle_initial"] {
-                        width: 50px;
-                    }
-                }
-
-                .change-btn {
-                    margin-left: 10px;
-                    padding: 5px 10px;
-                    background: none;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    font-size: 14px;
-                }
-            }
+        &:hover {
+            background: #e04343;
         }
+    }
 
-        .form-right {
-            width: 200px;
+    small {
+        display: block;
+        color: #666;
+        font-size: 12px;
+    }
+}
 
-            .profile-picture {
-                text-align: center;
+.profile-fields {
+    width: 100%;
+    max-width: 500px;
 
-                img {
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    margin-bottom: 10px;
-                }
+    div {
+        margin-bottom: 15px;
+        position: relative; // For positioning error messages
 
-                .placeholder {
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 50%;
-                    background: #eee;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin: 0 auto 10px;
-                    color: #666;
-                }
-
-                .select-image-btn {
-                    display: inline-block;
-                    padding: 8px 15px;
-                    background: #f0f0f0;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    font-size: 14px;
-                    margin-bottom: 5px;
-                }
-
-                small {
-                    display: block;
-                    color: #666;
-                    font-size: 12px;
-                }
-            }
-        }
-
-        .save-btn {
+        label {
             display: block;
-            width: 100px;
-            padding: 10px;
-            background: #ff4d4d;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
 
-            &:hover {
-                background: #e04343;
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+
+            &:focus {
+                border-color: #ff4d4d;
+                outline: none;
             }
         }
+
+        input[readonly] {
+            background: #f5f5f5;
+            cursor: not-allowed;
+        }
+
+        input[name="middle_initial"] {
+            width: 60px;
+        }
+
+        .error-message {
+            display: block;
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            text-align: left;
+        }
+    }
+}
+
+.edit-btn,
+.cancel-btn,
+.update-btn,
+.logout-btn,
+.toggle-password {
+    padding: 8px 16px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.edit-btn {
+    background: #ff4d4d;
+    color: white;
+
+    &:hover {
+        background: #e04343;
+    }
+}
+
+.cancel-btn {
+    background: #ccc;
+    color: #333;
+
+    &:hover {
+        background: #b3b3b3;
+    }
+}
+
+.update-btn {
+    background: #52c41a;
+    color: white;
+
+    &:hover {
+        background: #47a915;
+    }
+}
+
+.logout-btn {
+    background: #ff4d4d;
+    color: white;
+
+    &:hover {
+        background: #e04343;
+    }
+}
+
+.toggle-password {
+    background: #faad14;
+    color: white;
+
+    &:hover {
+        background: #e09b12;
     }
 }

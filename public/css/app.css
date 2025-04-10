@@ -14554,3 +14554,333 @@ footer {
     flex-wrap: wrap;
   }
 }
+.register-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  align-items: center;
+  justify-content: center;
+}
+.register-page .register-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  animation: slideIn 0.6s ease-out forwards;
+}
+.register-page .register-container h2, .register-page .register-container .h2 {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.register-page .register-container .ant-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.register-page .register-container .ant-form .ant-form-item {
+  margin-bottom: 0;
+}
+.register-page .register-container .ant-form .ant-form-item .ant-form-item-label {
+  text-align: left;
+  padding-bottom: 8px;
+}
+.register-page .register-container .ant-form .ant-form-item .ant-form-item-label label {
+  font-size: 14px;
+  color: #666666;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.register-page .register-container .ant-form .ant-form-item .ant-form-item-label label.ant-form-item-required::before {
+  color: #ff4d4f;
+}
+.register-page .register-container .ant-form .ant-form-item .ant-input,
+.register-page .register-container .ant-form .ant-form-item .ant-input-password {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.register-page .register-container .ant-form .ant-form-item .ant-input:focus, .register-page .register-container .ant-form .ant-form-item .ant-input:hover,
+.register-page .register-container .ant-form .ant-form-item .ant-input-password:focus,
+.register-page .register-container .ant-form .ant-form-item .ant-input-password:hover {
+  border-color: #1890ff;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(24, 144, 255, 0.2);
+}
+.register-page .register-container .ant-form .ant-form-item .ant-input::-moz-placeholder, .register-page .register-container .ant-form .ant-form-item .ant-input-password::-moz-placeholder {
+  color: #bbb;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.register-page .register-container .ant-form .ant-form-item .ant-input::placeholder,
+.register-page .register-container .ant-form .ant-form-item .ant-input-password::placeholder {
+  color: #bbb;
+  transition: opacity 0.3s ease;
+}
+.register-page .register-container .ant-form .ant-form-item .ant-input:focus::-moz-placeholder, .register-page .register-container .ant-form .ant-form-item .ant-input-password:focus::-moz-placeholder {
+  opacity: 0;
+}
+.register-page .register-container .ant-form .ant-form-item .ant-input:focus::placeholder,
+.register-page .register-container .ant-form .ant-form-item .ant-input-password:focus::placeholder {
+  opacity: 0;
+}
+.register-page .register-container .ant-form .ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  height: auto;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.register-page .register-container .ant-form .ant-btn-primary::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.6s ease, height 0.6s ease;
+}
+.register-page .register-container .ant-form .ant-btn-primary:hover {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+}
+.register-page .register-container .ant-form .ant-btn-primary:active::after {
+  width: 300px;
+  height: 300px;
+}
+.register-page .register-container .ant-form .login-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+.register-page .register-container .ant-form .login-link a {
+  color: #1890ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.register-page .register-container .ant-form .login-link a:hover {
+  color: #40a9ff;
+  text-decoration: underline;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .register-page {
+    padding: 20px;
+  }
+  .register-page .register-container {
+    padding: 30px;
+    max-width: 100%;
+  }
+  .register-page .register-container h2, .register-page .register-container .h2 {
+    font-size: 24px;
+  }
+  .register-page .register-container .ant-form .ant-form-item .ant-input,
+  .register-page .register-container .ant-form .ant-form-item .ant-input-password {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+  .register-page .register-container .ant-form .ant-btn-primary {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .register-page .register-container {
+    padding: 20px;
+  }
+  .register-page .register-container h2, .register-page .register-container .h2 {
+    font-size: 20px;
+  }
+}
+.admin-register-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  align-items: center;
+  justify-content: center;
+}
+.admin-register-page .register-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  animation: slideIn 0.6s ease-out forwards;
+}
+.admin-register-page .register-container h2, .admin-register-page .register-container .h2 {
+  font-size: 28px;
+  color: #1a73e8;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.admin-register-page .register-container .ant-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.admin-register-page .register-container .ant-form .ant-form-item {
+  margin-bottom: 0;
+}
+.admin-register-page .register-container .ant-form .ant-form-item .ant-form-item-label {
+  text-align: left;
+  padding-bottom: 8px;
+}
+.admin-register-page .register-container .ant-form .ant-form-item .ant-form-item-label label {
+  font-size: 14px;
+  color: #555555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.admin-register-page .register-container .ant-form .ant-form-item .ant-form-item-label label.ant-form-item-required::before {
+  color: #ff4d4f;
+}
+.admin-register-page .register-container .ant-form .ant-form-item .ant-input,
+.admin-register-page .register-container .ant-form .ant-form-item .ant-input-password {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fafafa;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.admin-register-page .register-container .ant-form .ant-form-item .ant-input:focus, .admin-register-page .register-container .ant-form .ant-form-item .ant-input:hover,
+.admin-register-page .register-container .ant-form .ant-form-item .ant-input-password:focus,
+.admin-register-page .register-container .ant-form .ant-form-item .ant-input-password:hover {
+  border-color: #1a73e8;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(26, 115, 232, 0.2);
+}
+.admin-register-page .register-container .ant-form .ant-form-item .ant-input::-moz-placeholder, .admin-register-page .register-container .ant-form .ant-form-item .ant-input-password::-moz-placeholder {
+  color: #999;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.admin-register-page .register-container .ant-form .ant-form-item .ant-input::placeholder,
+.admin-register-page .register-container .ant-form .ant-form-item .ant-input-password::placeholder {
+  color: #999;
+  transition: opacity 0.3s ease;
+}
+.admin-register-page .register-container .ant-form .ant-form-item .ant-input:focus::-moz-placeholder, .admin-register-page .register-container .ant-form .ant-form-item .ant-input-password:focus::-moz-placeholder {
+  opacity: 0;
+}
+.admin-register-page .register-container .ant-form .ant-form-item .ant-input:focus::placeholder,
+.admin-register-page .register-container .ant-form .ant-form-item .ant-input-password:focus::placeholder {
+  opacity: 0;
+}
+.admin-register-page .register-container .ant-form .ant-btn-primary {
+  background-color: #1a73e8;
+  border-color: #1a73e8;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  height: auto;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.admin-register-page .register-container .ant-form .ant-btn-primary::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.6s ease, height 0.6s ease;
+}
+.admin-register-page .register-container .ant-form .ant-btn-primary:hover {
+  background-color: #4285f4;
+  border-color: #4285f4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+}
+.admin-register-page .register-container .ant-form .ant-btn-primary:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .admin-register-page {
+    padding: 20px;
+  }
+  .admin-register-page .register-container {
+    padding: 30px;
+    max-width: 100%;
+  }
+  .admin-register-page .register-container h2, .admin-register-page .register-container .h2 {
+    font-size: 24px;
+  }
+  .admin-register-page .register-container .ant-form .ant-form-item .ant-input,
+  .admin-register-page .register-container .ant-form .ant-form-item .ant-input-password {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+  .admin-register-page .register-container .ant-form .ant-btn-primary {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .admin-register-page .register-container {
+    padding: 20px;
+  }
+  .admin-register-page .register-container h2, .admin-register-page .register-container .h2 {
+    font-size: 20px;
+  }
+}

@@ -5,19 +5,19 @@ import Login from "../components/login/login";
 import Register from "../components/register/register";
 import Inventory from "../components/inventory/inventory";
 import Admindashboard from "../components/admindashboard/admindashboard";
-import HomepageContent from "./Homepage/homepage"; // Use HomepageContent
+import HomepageContent from "./Homepage/homepage";
 import UserTable from "../components/userslist/users_component/userstable";
 import ProductPage from "./adminproducts/adminproducts";
 import ProductDetails from "./userspage/selectedproduct";
-import Profile from "../components/Profile"; 
+import Profile from "../components/Profile";
 import Shop_ui from "../components/ShopContent/Shop_ui";
 import CartView from "./CartUI/cart_view";
 import Payment from "./CheckoutUI/payment";
-import Complete from "./OrderCompleteUI/complete"; // Import the complete component
-import FooterContent from "./FooterContent/FooterContent"; // Import the FooterContent component
-import Orders from "./Orders/orders"; // Import the Orders component
-import OrdersModal from "./OrderModal/ordersmodal"; // Import the OrdersModal component
-
+import Complete from "./OrderCompleteUI/complete";
+import FooterContent from "./FooterContent/FooterContent";
+import Orders from "./Orders/orders";
+import OrdersModal from "./OrderModal/ordersmodal";
+import AdminRegister from "../components/AdminRegister/adminregister"; // Add new import
 
 const ProtectedRoute = ({ element, allowedRoles }) => {
   const authToken = localStorage.getItem("authToken");
@@ -28,7 +28,7 @@ const ProtectedRoute = ({ element, allowedRoles }) => {
   }
 
   if (!allowedRoles.includes(userRole)) {
-    return <Navigate to="/homepagecontent" replace />; // Redirect to homepagecontent instead
+    return <Navigate to="/homepagecontent" replace />;
   }
 
   return element;
@@ -38,10 +38,10 @@ export default function Routers() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Navigate to="/homepagecontent" />} /> {/* Default to homepage */}
+        <Route path="/" element={<Navigate to="/homepagecontent" />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/homepagecontent" element={<HomepageContent />} /> {/* Public route */}
+        <Route path="/homepagecontent" element={<HomepageContent />} />
         <Route path="/inventory" element={<ProtectedRoute element={<Inventory />} allowedRoles={[1]} />} />
         <Route path="/admindashboard" element={<ProtectedRoute element={<Admindashboard />} allowedRoles={[1]} />} />
         <Route path="/usertable" element={<ProtectedRoute element={<UserTable />} allowedRoles={[1]} />} />
@@ -50,10 +50,13 @@ export default function Routers() {
         <Route path="/cartview" element={<CartView />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/complete" element={<Complete />} />
-        <Route path="/footercontent" element={<FooterContent />} /> {/* Public route */}
-        <Route path="/orders" element={<Orders />} /> {/* Public route */}
-        <Route path="/ordersmodal" element={<OrdersModal />} /> {/* Public route */}
-
+        <Route path="/footercontent" element={<FooterContent />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/ordersmodal" element={<OrdersModal />} />
+        <Route
+          path="/adminsetting"
+          element={<ProtectedRoute element={<AdminRegister />} allowedRoles={[1]} />}
+        /> {/* New protected route */}
         <Route
           path="/product/:id"
           element={<ProtectedRoute element={<ProductDetails />} allowedRoles={[2]} />}

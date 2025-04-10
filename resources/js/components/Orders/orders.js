@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { Layout } from 'antd'; // Import Ant Design Layout
+import { Layout } from 'antd';
 import '../../../sass/components/orders.scss';
-import OrdersModal from '../OrderModal/ordersmodal'; // Import OrdersModal
-import TopNav from '../topnav'; // Import TopNav
-import AdminSideMenu from '../admin-sidemenu'; // Import AdminSideMenu
+import OrdersModal from '../OrderModal/ordersmodal';
+import TopNav from '../topnav';
+import AdminSideMenu from '../admin-sidemenu';
 
 const { Content } = Layout;
 
 const Orders = () => {
-  // Static data for now, using the provided image path
   const ordersData = [
     {
       id: 1,
@@ -42,17 +41,14 @@ const Orders = () => {
     },
   ];
 
-  // State to control modal visibility and selected order
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState(null);
 
-  // Function to handle row click and open modal
   const handleRowClick = (order) => {
     setSelectedOrder(order);
     setIsModalOpen(true);
   };
 
-  // Function to close modal
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedOrder(null);
@@ -60,15 +56,16 @@ const Orders = () => {
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      {/* Sidebar (AdminSideMenu) */}
-      <AdminSideMenu />
+      {/* TopNav spans the full width at the top */}
+      <TopNav />
 
+      {/* Nested Layout for Sidebar and Content */}
       <Layout>
-        {/* Top Navigation (TopNav) */}
-        <TopNav />
+        {/* Sidebar (AdminSideMenu) */}
+        <AdminSideMenu />
 
         {/* Main Content Area */}
-        <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
+        <Content style={{ margin: '16px', padding: 24, background: '#fff', minHeight: 280 }}>
           <div className="orders-container">
             <h2>Orders</h2>
             <table className="orders-table">
