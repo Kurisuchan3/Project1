@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "../../../sass/components/_login.scss";
 import TopNav from "../topnav";
 import logo from "../../../../public/images/logo.png";
@@ -12,6 +12,9 @@ const Login = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from || '/homepagecontent';
+  const guestCart = location.state?.cartItems || [];
 
   useEffect(() => {
     let isMounted = true;
@@ -23,8 +26,7 @@ const Login = () => {
         .get("/api/user", { headers: { Authorization: token } })
         .then((response) => {
           if (isMounted) {
-            console.log("Token validated:", response.data);
-            const role = parseInt(userRole, 10); // Parse userRole to integer
+            const role = parseInt(userRole, 10);
             navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
           }
         })
@@ -52,21 +54,34 @@ const Login = () => {
 
     try {
       const response = await axios.post("/api/login", credentials);
-      console.log("Login response:", response.data);
-
-      if (!response.data.token) {
-        throw new Error("Authentication token not received.");
-      }
-
       const token = `Bearer ${response.data.token}`;
       localStorage.setItem("authToken", token);
-      const role = parseInt(response.data.user.roles_id, 10); // Parse roles_id to integer
+      const role = parseInt(response.data.user.roles_id, 10);
       localStorage.setItem("userRole", role);
 
       axios.defaults.headers.common["Authorization"] = token;
 
-      message.success("Login successful!");
-      navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
+      // Sync guest cart with backend
+      if (guestCart.length > 0) {
+        try {
+          console.log("Attempting to sync guest cart:", guestCart);
+          console.log("Using token:", token);
+          const syncResponse = await axios.post('/api/cart/sync', { cart: guestCart }, {
+            headers: { Authorization: token }
+          });
+          console.log("Sync response:", syncResponse.data);
+          localStorage.removeItem('guestCart');
+          message.success("Guest cart synced successfully!");
+          navigate('/cartview');
+        } catch (syncError) {
+          console.error("Guest cart sync failed:", syncError.response?.data || syncError.message);
+          message.warning("Logged in successfully, but failed to sync guest cart.");
+          navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
+        }
+      } else {
+        message.success("Login successful!");
+        navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
+      }
     } catch (error) {
       console.error("Login failed:", error.response?.data);
       message.error(error.response?.data?.error || "Login failed. Please check your credentials.");

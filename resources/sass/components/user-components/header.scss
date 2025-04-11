@@ -124,4 +124,28 @@
       background-color: #f0f0f0;
     }
   }
+
+  // Added styling for the cart container and count
+  &__cart {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ffd500; // Matches your login button for consistency
+    color: #1e1d1d;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+  }
 }

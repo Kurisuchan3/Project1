@@ -1,14 +1,21 @@
 // homepageContent.js
 import React from 'react';
 import "./../../../sass/components/homepage.scss";
-import Header from '../Header/header'; 
-import StatsSection from '../Stats/stats'; // Adjust the path based on your project structure
-import ProductGrid from '../ProductGrid/productgrid'; // Import the ProductGrid component
+import Header from '../Header/header';
+import StatsSection from '../Stats/stats';
+import ProductGrid from '../ProductGrid/productgrid';
+import { useNavigate } from 'react-router-dom';
 
 // Updated filepath for the SVG image
 import HeroImage from '../../../../public/images/herolapnix.svg';
 
 const HomepageContent = () => {
+  const navigate = useNavigate();
+
+  const handleShopNowClick = () => {
+    navigate('/shopui');
+  };
+
   return (
     <div className="homepage">
       <Header />
@@ -21,8 +28,15 @@ const HomepageContent = () => {
             Discover Top-Tier Laptops, Keyboards & Mice Built for Ultimate Gaming Performance and Seamless Work Productivity
           </p>
           <div className="hero__buttons">
-            <button className="hero__button hero__button--primary">Shop Now</button>
-            <button className="hero__button hero__button--secondary">Learn More</button>
+            <button
+              className="hero__button hero__button--primary"
+              onClick={handleShopNowClick}
+            >
+              Shop Now
+            </button>
+            <button className="hero__button hero__button--secondary">
+              Learn More
+            </button>
           </div>
         </div>
         <div className="hero__image">
@@ -30,7 +44,7 @@ const HomepageContent = () => {
         </div>
       </section>
       <StatsSection />
-      <ProductGrid /> {/* Added ProductGrid component */}
+      <ProductGrid />
     </div>
   );
 };

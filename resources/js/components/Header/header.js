@@ -9,11 +9,11 @@ import Logo from "../../../../public/images/lapnixlogo.svg";
 const Header = () => {
   const navigate = useNavigate();
   const handleLogout = useLogout();
-  const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem("authToken")); // Initialize based on token
+  const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem("authToken"));
   const [username, setUsername] = useState('');
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
 
-  // Function to fetch user data and update state
   const fetchUserData = () => {
     const token = localStorage.getItem("authToken");
     if (token) {
@@ -21,7 +21,7 @@ const Header = () => {
       axios
         .get("/api/user", { headers: { Authorization: token } })
         .then((response) => {
-          setUsername(response.data.user.username); // Access nested username
+          setUsername(response.data.user.username);
         })
         .catch((error) => {
           console.error("Failed to fetch user:", error);
@@ -36,25 +36,46 @@ const Header = () => {
     }
   };
 
-  // Fetch user data on mount and when authToken changes
+  const fetchCartCount = () => {
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      axios
+        .get("/api/cart", { headers: { Authorization: token } })
+        .then((response) => {
+          const count = response.data.length;
+          setCartCount(count);
+        })
+        .catch((error) => {
+          console.error("Failed to fetch cart:", error);
+          setCartCount(0);
+        });
+    } else {
+      const guestCart = JSON.parse(localStorage.getItem('guestCart') || '[]');
+      const count = guestCart.length;
+      setCartCount(count);
+    }
+  };
+
   useEffect(() => {
     fetchUserData();
+    fetchCartCount();
 
-    // Listen for storage changes (e.g., logout from another tab)
     const handleStorageChange = () => {
       fetchUserData();
+      fetchCartCount();
     };
 
     window.addEventListener('storage', handleStorageChange);
     return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
 
-  // Update state after logout
   const handleLogoutClick = async () => {
     setDropdownOpen(false);
     await handleLogout();
-    setIsAuthenticated(false); // Immediately update state
-    setUsername(''); // Clear username
+    setIsAuthenticated(false);
+    setUsername('');
+    setCartCount(0);
+    localStorage.removeItem('guestCart');
     navigate('/homepagecontent');
   };
 
@@ -67,22 +88,59 @@ const Header = () => {
     navigate('/profile');
   };
 
+  const handleCartClick = () => {
+    navigate('/cartview');
+  };
+
+  const handleLogoClick = () => {
+    navigate('/homepagecontent');
+  };
+
+  const handleHomeClick = (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    navigate('/homepagecontent');
+  };
+
+  const handleShopClick = (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    navigate('/shopui');
+  };
+
   return (
     <header className="header">
       <div className="header__left">
-        <img src={Logo} alt="Logo" className="header__logo" />
+        <img
+          src={Logo}
+          alt="Lapnix Logo"
+          className="header__logo"
+          onClick={handleLogoClick}
+          style={{ cursor: 'pointer' }}
+        />
         <nav className="header__nav">
-          <a href="#" className="header__link">Home</a>
-          <a href="#" className="header__link">Brands</a>
-          <a href="#" className="header__link">Peripherals</a>
-          <a href="#" className="header__link">Support</a>
-          <a href="#" className="header__link">About us</a>
+          <a href="#" className="header__link" onClick={handleHomeClick}>
+            Home
+          </a>
+          <a href="#" className="header__link" onClick={handleShopClick}>
+            Brands
+          </a>
+          <a href="#" className="header__link" onClick={handleShopClick}>
+            Peripherals
+          </a>
+          <a href="#" className="header__link">
+            Support
+          </a>
+          <a href="#" className="header__link">
+            About us
+          </a>
         </nav>
       </div>
       <div className="header__right">
         <IconSearch className="header__icon" />
         <IconBellFilled className="header__icon" />
-        <IconShoppingCart className="header__icon" />
+        <div className="header__cart" onClick={handleCartClick}>
+          <IconShoppingCart className="header__icon" />
+          {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+        </div>
         {isAuthenticated ? (
           <div className="header__profile">
             <div className="header__profile-toggle" onClick={toggleDropdown}>
@@ -101,10 +159,7 @@ const Header = () => {
             )}
           </div>
         ) : (
-          <button
-            className="header__login-btn"
-            onClick={() => navigate('/login')}
-          >
+          <button className="header__login-btn" onClick={() => navigate('/login')}>
             Login
           </button>
         )}

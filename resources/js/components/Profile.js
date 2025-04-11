@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import '../../sass/components/Profile.scss';
+import Header from '../components/Header/header'; // Import the Header component
+import SideMenuProfile from './SideMenuProfile/sidemenuprofile';
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -152,168 +154,178 @@ const Profile = () => {
 
   if (!profile) {
     return (
-      <div className="profile-container">
-        <h2>My Profile</h2>
-        <p className="error-message">{error}</p>
+      <div className="profile-page">
+        <Header />
+        <div className="profile-container">
+          <h2>My Profile</h2>
+          <p className="error-message">{error}</p>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="profile-container">
-      <h2>My Profile</h2>
-
-      <div className="profile-card">
-        <div className="profile-picture-section">
-          {previewImage ? (
-            <img className="profile-image" src={previewImage} alt="Profile" />
-          ) : (
-            <img className="profile-image" src="/default-avatar.png" alt="Profile" />
-          )}
-          {editMode && (
-            <div>
-              <input
-                type="file"
-                id="profile_picture"
-                accept="image/jpeg,image/png"
-                onChange={handleFileChange}
-                style={{ display: 'none' }}
-              />
-              <label htmlFor="profile_picture" className="select-image-btn">
-                Select Image
-              </label>
-              <small>File size: maximum 1 MB</small>
-              <br />
-              <small>File extension: .JPEG, .PNG</small>
-            </div>
-          )}
-        </div>
-
-        <div className="profile-fields">
-          <div>
-            <label>Username</label>
-            <input
-              type="text"
-              name="username"
-              value={formData.username || ''}
-              onChange={handleChange}
-              readOnly={!editMode}
-            />
-            {validationErrors.username && (
-              <span className="error-message">{validationErrors.username}</span>
-            )}
-          </div>
-          <div>
-            <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email || ''}
-              onChange={handleChange}
-              readOnly={!editMode}
-            />
-            {validationErrors.email && (
-              <span className="error-message">{validationErrors.email}</span>
-            )}
-          </div>
-          <div>
-            <label>First Name</label>
-            <input
-              type="text"
-              name="first_name"
-              value={formData.first_name || ''}
-              onChange={handleChange}
-              readOnly={!editMode}
-            />
-            {validationErrors.first_name && (
-              <span className="error-message">{validationErrors.first_name}</span>
-            )}
-          </div>
-          <div>
-            <label>Middle Initial</label>
-            <input
-              type="text"
-              name="middle_initial"
-              value={formData.middle_initial || ''}
-              onChange={handleChange}
-              readOnly={!editMode}
-              maxLength="1"
-            />
-          </div>
-          <div>
-            <label>Last Name</label>
-            <input
-              type="text"
-              name="last_name"
-              value={formData.last_name || ''}
-              onChange={handleChange}
-              readOnly={!editMode}
-            />
-            {validationErrors.last_name && (
-              <span className="error-message">{validationErrors.last_name}</span>
-            )}
-          </div>
-          <div>
-            <label>Birthdate</label>
-            <input
-              type="date"
-              name="birthdate"
-              value={formData.birthdate || ''}
-              onChange={handleChange}
-              readOnly={!editMode}
-            />
-          </div>
-          <div>
-            <label>Phone Number</label>
-            <input
-              type="text"
-              name="phone"
-              value={formData.phone || ''}
-              onChange={handleChange}
-              readOnly={!editMode}
-            />
-          </div>
-
-          {editMode && (
-            <>
-              <button
-                className="toggle-password"
-                onClick={() => setShowPasswordFields(!showPasswordFields)}
-              >
-                {showPasswordFields ? "Cancel Password Change" : "Change Password"}
-              </button>
-
-              {showPasswordFields && (
-                <>
+    <div className="profile-page">
+      <Header />
+      <div className="profile-layout">
+        <SideMenuProfile />
+        <div className="profile-content">
+          <div className="profile-container">
+            <h2>My Profile</h2>
+            <div className="profile-card">
+              <div className="profile-picture-section">
+                {previewImage ? (
+                  <img className="profile-image" src={previewImage} alt="Profile" />
+                ) : (
+                  <img className="profile-image" src="/default-avatar.png" alt="Profile" />
+                )}
+                {editMode && (
                   <div>
-                    <label>New Password</label>
-                    <input type="password" name="password" onChange={handleChange} />
+                    <input
+                      type="file"
+                      id="profile_picture"
+                      accept="image/jpeg,image/png"
+                      onChange={handleFileChange}
+                      style={{ display: 'none' }}
+                    />
+                    <label htmlFor="profile_picture" className="select-image-btn">
+                      Select Image
+                    </label>
+                    <small>File size: maximum 1 MB</small>
+                    <br />
+                    <small>File extension: .JPEG, .PNG</small>
                   </div>
-                </>
+                )}
+              </div>
+
+              <div className="profile-fields">
+                <div>
+                  <label>Username</label>
+                  <input
+                    type="text"
+                    name="username"
+                    value={formData.username || ''}
+                    onChange={handleChange}
+                    readOnly={!editMode}
+                  />
+                  {validationErrors.username && (
+                    <span className="error-message">{validationErrors.username}</span>
+                  )}
+                </div>
+                <div>
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email || ''}
+                    onChange={handleChange}
+                    readOnly={!editMode}
+                  />
+                  {validationErrors.email && (
+                    <span className="error-message">{validationErrors.email}</span>
+                  )}
+                </div>
+                <div>
+                  <label>First Name</label>
+                  <input
+                    type="text"
+                    name="first_name"
+                    value={formData.first_name || ''}
+                    onChange={handleChange}
+                    readOnly={!editMode}
+                  />
+                  {validationErrors.first_name && (
+                    <span className="error-message">{validationErrors.first_name}</span>
+                  )}
+                </div>
+                <div>
+                  <label>Middle Initial</label>
+                  <input
+                    type="text"
+                    name="middle_initial"
+                    value={formData.middle_initial || ''}
+                    onChange={handleChange}
+                    readOnly={!editMode}
+                    maxLength="1"
+                  />
+                </div>
+                <div>
+                  <label>Last Name</label>
+                  <input
+                    type="text"
+                    name="last_name"
+                    value={formData.last_name || ''}
+                    onChange={handleChange}
+                    readOnly={!editMode}
+                  />
+                  {validationErrors.last_name && (
+                    <span className="error-message">{validationErrors.last_name}</span>
+                  )}
+                </div>
+                <div>
+                  <label>Birthdate</label>
+                  <input
+                    type="date"
+                    name="birthdate"
+                    value={formData.birthdate || ''}
+                    onChange={handleChange}
+                    readOnly={!editMode}
+                  />
+                </div>
+                <div>
+                  <label>Phone Number</label>
+                  <input
+                    type="text"
+                    name="phone"
+                    value={formData.phone || ''}
+                    onChange={handleChange}
+                    readOnly={!editMode}
+                  />
+                </div>
+
+                {editMode && (
+                  <>
+                    <button
+                      className="toggle-password"
+                      onClick={() => setShowPasswordFields(!showPasswordFields)}
+                    >
+                      {showPasswordFields ? "Cancel Password Change" : "Change Password"}
+                    </button>
+
+                    {showPasswordFields && (
+                      <>
+                        <div>
+                          <label>New Password</label>
+                          <input type="password" name="password" onChange={handleChange} />
+                        </div>
+                      </>
+                    )}
+                    <button className="update-btn" onClick={handleUpdate}>
+                      Save Changes
+                    </button>
+                  </>
+                )}
+              </div>
+
+              {!editMode ? (
+                <button className="edit-btn" onClick={() => setEditMode(true)}>
+                  ✏️ Edit Profile
+                </button>
+              ) : (
+                <button className="cancel-btn" onClick={() => setEditMode(false)}>
+                  Cancel
+                </button>
               )}
-              <button className="update-btn" onClick={handleUpdate}>
-                Save Changes
+
+              <button className="logout-btn" onClick={handleLogout}>
+                🚪 Logout
               </button>
-            </>
-          )}
+            </div>
+
+            {error && <p className="error-message">{error}</p>}
+          </div>
         </div>
-
-        {!editMode ? (
-          <button className="edit-btn" onClick={() => setEditMode(true)}>
-            ✏️ Edit Profile
-          </button>
-        ) : (
-          <button className="cancel-btn" onClick={() => setEditMode(false)}>
-            Cancel
-          </button>
-        )}
-
-        <button className="logout-btn" onClick={handleLogout}>
-          🚪 Logout
-        </button>
       </div>
-
-      {error && <p className="error-message">{error}</p>}
     </div>
   );
 };

@@ -1,0 +1,60 @@
+.side-menu {
+    width: 250px;
+    background-color: #24067e; // Matches the header background
+    height: calc(100vh - 60px); // Full height minus header height
+    position: fixed;
+    top: 60px; // Below the header
+    left: 0;
+    color: #ffffff;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    &__item {
+      padding: 15px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #542cca; // Matches header hover color
+      }
+  
+      &--active {
+        background-color: #542cca;
+        border-left: 4px solid #ffd500; // Matches header's login button color for accent
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .side-menu {
+      width: 100%;
+      height: auto;
+      position: static;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+  
+      &__list {
+        display: flex;
+        gap: 20px;
+      }
+  
+      &__item {
+        padding: 10px 15px;
+        font-size: 14px;
+  
+        &--active {
+          border-left: none;
+          border-bottom: 2px solid #ffd500;
+        }
+      }
+    }
+  }

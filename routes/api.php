@@ -9,14 +9,15 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SubcategoryController;
-use App\Http\Controllers\CategoryController; // Add this
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CartController;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/users', [UsersController::class, 'getUsers']);
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/subcategories', [SubcategoryController::class, 'index']);
-Route::get('/categories', [CategoryController::class, 'index']); // New route for categories
+Route::get('/categories', [CategoryController::class, 'index']);
 
 Route::middleware('auth:api')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
@@ -34,4 +35,9 @@ Route::middleware('auth:api')->group(function () {
     Route::put('/products/{id}/restore', [ProductController::class, 'restore']);
     Route::apiResource('products', ProductController::class)->except(['index']);
     Route::get('/statuses', [StatusController::class, 'index']);
+    Route::get('/cart', [CartController::class, 'index']);
+    Route::post('/cart', [CartController::class, 'add']);
+    Route::post('/cart/sync', [CartController::class, 'syncGuestCart']);
+    Route::put('/cart/{id}', [CartController::class, 'update']);
+    Route::delete('/cart/{id}', [CartController::class, 'remove']);
 });

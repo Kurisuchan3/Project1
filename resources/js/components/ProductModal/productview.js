@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../sass/components/product_modal.scss';
 
-const ProductModal = ({ visible, product, onClose }) => {
+const ProductModal = ({ visible, product, onClose, addToCart }) => {
   if (!visible || !product) return null;
 
   return (
@@ -25,14 +25,13 @@ const ProductModal = ({ visible, product, onClose }) => {
           <p className="price">₱{parseFloat(product.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}</p>
           <p className="description">{product.description || 'No description available.'}</p>
           <ul className="specs">
-            {/* Placeholder specs; replace with actual data if available */}
             <li>Intel Core i5-1235U</li>
             <li>8GB DDR4 RAM</li>
             <li>512GB SSD</li>
             <li>14-inch FHD Display</li>
             <li>Windows 11</li>
           </ul>
-          <button className="add-to-cart-btn">
+          <button className="add-to-cart-btn" onClick={() => addToCart(product)}>
             Add to Cart
           </button>
         </div>

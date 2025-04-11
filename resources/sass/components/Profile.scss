@@ -1,171 +1,220 @@
-.profile-container {
+.profile-page {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+  }
+  
+  .profile-layout {
+    display: flex;
+    margin-top: 60px; // Account for the fixed header height
+  }
+  
+  .profile-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; // Match the width of the side menu
+  }
+  
+  .profile-container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
     h2 {
-        font-size: 24px;
-        margin-bottom: 5px;
-        text-align: center;
+      font-size: 28px;
+      color: #24067e;
+      margin-bottom: 20px;
     }
-
-    .error-message {
-        color: red;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-}
-
-.profile-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.profile-picture-section {
+    gap: 20px;
+  }
+  
+  .profile-picture-section {
     text-align: center;
-    margin-bottom: 20px;
-
+  
     .profile-image {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 10px;
-        border: 2px solid #ccc;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 2px solid #24067e;
     }
-
+  
     .select-image-btn {
-        display: inline-block;
-        padding: 8px 15px;
-        background: #ff4d4d;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 14px;
-        margin-bottom: 5px;
-
-        &:hover {
-            background: #e04343;
-        }
+      background-color: #24067e;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #542cca;
+      }
     }
-
+  
     small {
-        display: block;
-        color: #666;
-        font-size: 12px;
+      display: block;
+      color: #666;
+      margin-top: 5px;
     }
-}
-
-.profile-fields {
-    width: 100%;
-    max-width: 500px;
-
+  }
+  
+  .profile-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  
     div {
-        margin-bottom: 15px;
-        position: relative; // For positioning error messages
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #333;
+      display: flex;
+      flex-direction: column;
+  
+      label {
+        font-size: 14px;
+        color: #24067e;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+  
+      input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.3s ease;
+  
+        &:focus {
+          border-color: #24067e;
         }
-
-        input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
-            transition: border-color 0.3s;
-
-            &:focus {
-                border-color: #ff4d4d;
-                outline: none;
-            }
+  
+        &[readonly] {
+          background-color: #f5f5f5;
+          cursor: not-allowed;
         }
-
-        input[readonly] {
-            background: #f5f5f5;
-            cursor: not-allowed;
-        }
-
-        input[name="middle_initial"] {
-            width: 60px;
-        }
-
-        .error-message {
-            display: block;
-            color: red;
-            font-size: 12px;
-            margin-top: 5px;
-            text-align: left;
-        }
+      }
     }
-}
-
-.edit-btn,
-.cancel-btn,
-.update-btn,
-.logout-btn,
-.toggle-password {
+  }
+  
+  .toggle-password {
+    background-color: transparent;
+    color: #24067e;
+    border: 1px solid #24067e;
     padding: 8px 16px;
-    margin: 10px 5px;
-    border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background-color: #24067e;
+      color: #ffffff;
+    }
+  }
+  
+  .edit-btn,
+  .cancel-btn,
+  .update-btn,
+  .logout-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     font-size: 14px;
-    transition: background-color 0.3s;
-}
-
-.edit-btn {
-    background: #ff4d4d;
-    color: white;
-
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-btn {
+    background-color: #24067e;
+    color: #ffffff;
+  
     &:hover {
-        background: #e04343;
+      background-color: #542cca;
     }
-}
-
-.cancel-btn {
-    background: #ccc;
-    color: #333;
-
+  }
+  
+  .cancel-btn {
+    background-color: #ff4d4f;
+    color: #ffffff;
+  
     &:hover {
-        background: #b3b3b3;
+      background-color: #ff7875;
     }
-}
-
-.update-btn {
-    background: #52c41a;
-    color: white;
-
+  }
+  
+  .update-btn {
+    background-color: #28a745;
+    color: #ffffff;
+  
     &:hover {
-        background: #47a915;
+      background-color: #218838;
     }
-}
-
-.logout-btn {
-    background: #ff4d4d;
-    color: white;
-
+  }
+  
+  .logout-btn {
+    background-color: #ff4d4f;
+    color: #ffffff;
+  
     &:hover {
-        background: #e04343;
+      background-color: #ff7875;
     }
-}
-
-.toggle-password {
-    background: #faad14;
-    color: white;
-
-    &:hover {
-        background: #e09b12;
+  }
+  
+  .error-message {
+    color: #ff4d4f;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-content {
+      margin-left: 0; // Remove margin on mobile since side menu becomes horizontal
+      padding: 10px;
     }
-}
+  
+    .profile-container {
+      padding: 20px;
+  
+      h2 {
+        font-size: 24px;
+      }
+    }
+  
+    .profile-picture-section {
+      .profile-image {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  
+    .profile-fields {
+      grid-template-columns: 1fr;
+  
+      div {
+        input {
+          font-size: 12px;
+          padding: 8px;
+        }
+      }
+    }
+  
+    .edit-btn,
+    .cancel-btn,
+    .update-btn,
+    .logout-btn {
+      width: 100%;
+      font-size: 12px;
+    }
+  }

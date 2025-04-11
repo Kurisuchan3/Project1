@@ -13056,6 +13056,27 @@ footer {
 .header__dropdown-item:hover {
   background-color: #f0f0f0;
 }
+.header__cart {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.header .cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ffd500;
+  color: #1e1d1d;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+}
 
 .stats {
   display: flex;
@@ -14882,5 +14903,384 @@ footer {
   }
   .admin-register-page .register-container h2, .admin-register-page .register-container .h2 {
     font-size: 20px;
+  }
+}
+.lapnix-product-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.lapnix-product-modal {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-family: "Inter", sans-serif;
+  color: #333;
+  text-align: left;
+}
+.lapnix-product-modal .lapnix-modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: #261654;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.lapnix-product-modal .lapnix-modal-close-btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+}
+.lapnix-product-modal .lapnix-modal-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .lapnix-product-modal .lapnix-modal-content {
+    padding: 30px 20px;
+    gap: 25px;
+  }
+}
+.lapnix-product-modal .lapnix-product-header {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+@media (max-width: 768px) {
+  .lapnix-product-modal .lapnix-product-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.lapnix-product-modal .lapnix-product-image-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+.lapnix-product-modal .lapnix-product-image-container img {
+  width: 100%;
+  max-height: 350px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .lapnix-product-modal .lapnix-product-image-container {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+.lapnix-product-modal .lapnix-product-basic-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.lapnix-product-modal .lapnix-product-basic-info .lapnix-product-name {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #261654;
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  .lapnix-product-modal .lapnix-product-basic-info .lapnix-product-name {
+    font-size: 24px;
+  }
+}
+.lapnix-product-modal .lapnix-product-basic-info .lapnix-product-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lapnix-product-modal .lapnix-product-basic-info .lapnix-product-rating .lapnix-rating-stars {
+  display: flex;
+  gap: 2px;
+}
+.lapnix-product-modal .lapnix-product-basic-info .lapnix-product-rating .lapnix-rating-stars svg {
+  color: #ffb800;
+}
+.lapnix-product-modal .lapnix-product-basic-info .lapnix-product-rating .lapnix-rating-stars svg.lapnix-empty {
+  opacity: 0.5;
+}
+.lapnix-product-modal .lapnix-product-basic-info .lapnix-product-rating .lapnix-rating-count {
+  font-size: 14px;
+  color: #666;
+}
+.lapnix-product-modal .lapnix-product-basic-info .lapnix-price-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lapnix-product-modal .lapnix-product-basic-info .lapnix-price-section .lapnix-current-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #24067e;
+}
+.lapnix-product-modal .lapnix-product-basic-info .lapnix-price-section .lapnix-original-price {
+  font-size: 18px;
+  text-decoration: line-through;
+  color: #999;
+}
+.lapnix-product-modal .lapnix-action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.lapnix-product-modal .lapnix-action-buttons button {
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+  min-width: 150px;
+}
+.lapnix-product-modal .lapnix-action-buttons button.lapnix-add-to-cart-btn {
+  background: #24067e;
+  color: white;
+}
+.lapnix-product-modal .lapnix-action-buttons button.lapnix-add-to-cart-btn:hover {
+  background: rgb(22.0909090909, 3.6818181818, 77.3181818182);
+}
+.lapnix-product-modal .lapnix-action-buttons button.lapnix-buy-now-btn {
+  background: #ffffff;
+  color: #24067e;
+  border: 1px solid #24067e;
+}
+.lapnix-product-modal .lapnix-action-buttons button.lapnix-buy-now-btn:hover {
+  background: #f5f5f5;
+}
+@media (max-width: 480px) {
+  .lapnix-product-modal .lapnix-action-buttons {
+    flex-direction: column;
+  }
+}
+.lapnix-product-modal .lapnix-product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.lapnix-product-modal .lapnix-specs-section .lapnix-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.lapnix-product-modal .lapnix-specs-section .lapnix-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+.lapnix-product-modal .lapnix-specs-section .lapnix-specs-grid .lapnix-spec-item {
+  display: flex;
+  gap: 10px;
+}
+.lapnix-product-modal .lapnix-specs-section .lapnix-specs-grid .lapnix-spec-item .lapnix-spec-label {
+  font-weight: 600;
+  color: #333;
+  min-width: 100px;
+}
+.lapnix-product-modal .lapnix-specs-section .lapnix-specs-grid .lapnix-spec-item .lapnix-spec-value {
+  color: #555;
+}
+@media (max-width: 480px) {
+  .lapnix-product-modal .lapnix-specs-section .lapnix-specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+  margin-top: 70px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-rating-summary {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-rating-summary .lapnix-average-rating {
+  font-size: 32px;
+  font-weight: 700;
+  color: #261654;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-rating-summary .lapnix-rating-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-rating-summary .lapnix-rating-details .lapnix-rating-stars {
+  display: flex;
+  gap: 4px;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-rating-summary .lapnix-rating-details .lapnix-rating-stars svg {
+  color: #ffb800;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-rating-summary .lapnix-rating-details .lapnix-rating-stars svg.lapnix-empty {
+  opacity: 0.5;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-rating-summary .lapnix-rating-details .lapnix-rating-count {
+  font-size: 14px;
+  color: #666;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item:last-child {
+  border-bottom: none;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item .lapnix-review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item .lapnix-review-header .lapnix-review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item .lapnix-review-header .lapnix-review-meta .lapnix-reviewer-name {
+  font-weight: 600;
+  font-size: 15px;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item .lapnix-review-header .lapnix-review-meta .lapnix-review-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 3px;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item .lapnix-review-header .lapnix-review-meta .lapnix-review-rating .lapnix-rating-stars {
+  display: flex;
+  gap: 2px;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item .lapnix-review-header .lapnix-review-meta .lapnix-review-rating .lapnix-rating-stars svg {
+  width: 16px;
+  height: 16px;
+  color: #ffb800;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item .lapnix-review-header .lapnix-review-meta .lapnix-review-rating .lapnix-rating-stars svg.lapnix-empty {
+  opacity: 0.5;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item .lapnix-review-header .lapnix-review-meta .lapnix-review-rating .lapnix-review-date {
+  font-size: 12px;
+  color: #999;
+  margin-left: 25px;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item .lapnix-review-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item .lapnix-review-image-container {
+  margin-top: 10px;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item .lapnix-review-image-container .lapnix-review-image {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.lapnix-product-modal .lapnix-reviews-section .lapnix-reviews-list .lapnix-review-item .lapnix-review-image-container .lapnix-review-image:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+  .lapnix-product-modal {
+    width: 95%;
+    max-height: 85vh;
+  }
+}
+.side-menu {
+  width: 250px;
+  background-color: #24067e;
+  height: calc(100vh - 60px);
+  position: fixed;
+  top: 60px;
+  left: 0;
+  color: #ffffff;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.side-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side-menu__item {
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.side-menu__item:hover {
+  background-color: #542cca;
+}
+.side-menu__item--active {
+  background-color: #542cca;
+  border-left: 4px solid #ffd500;
+}
+
+@media (max-width: 768px) {
+  .side-menu {
+    width: 100%;
+    height: auto;
+    position: static;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .side-menu__list {
+    display: flex;
+    gap: 20px;
+  }
+  .side-menu__item {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  .side-menu__item--active {
+    border-left: none;
+    border-bottom: 2px solid #ffd500;
   }
 }

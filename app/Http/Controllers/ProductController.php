@@ -129,4 +129,4 @@ class ProductController extends Controller
         $product->restore();
         return response()->json(['message' => 'Product restored successfully']);
     }
-}
+}       

@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import "../../../sass/components/productgrid.scss";
-import ProductModal from '../ProductModal/productview'; // Import ProductModal
+import ProductModal from '../ProductModal/productview';
 import axios from 'axios';
 
 const Grid = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedProduct, setSelectedProduct] = useState(null); // For modal
-  const [modalOpen, setModalOpen] = useState(false); // Modal visibility
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [guestCart, setGuestCart] = useState(() => {
+    const savedCart = localStorage.getItem('guestCart');
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
 
-  // Fetch products from API
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -24,7 +27,57 @@ const Grid = () => {
     fetchProducts();
   }, []);
 
-  // Render star ratings
+  useEffect(() => {
+    localStorage.setItem('guestCart', JSON.stringify(guestCart));
+  }, [guestCart]);
+
+  const addToCart = (product) => {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      axios
+        .post('/api/cart', { product_id: product.id, quantity: 1 }, {
+          headers: { Authorization: token }
+        })
+        .then(() => {
+          alert(`${product.name} added to cart!`);
+          // Trigger cart count update in Header via event
+          window.dispatchEvent(new Event('storage'));
+        })
+        .catch((error) => console.error('Error adding to cart:', error));
+    } else {
+      setGuestCart((prevCart) => {
+        const existingItem = prevCart.find((item) => item.id === product.id);
+        if (existingItem) {
+          return prevCart.map((item) =>
+            item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+          );
+        }
+        return [
+          ...prevCart,
+          {
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            quantity: 1,
+            image: product.image,
+          },
+        ];
+      });
+      alert(`${product.name} added to cart!`);
+      window.dispatchEvent(new Event('storage')); // Update Header count
+    }
+  };
+
+  const openModal = (product) => {
+    setSelectedProduct(product);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+    setModalOpen(false);
+  };
+
   const renderStars = (rating) => {
     return (
       <div className="product-rating">
@@ -35,18 +88,6 @@ const Grid = () => {
         ))}
       </div>
     );
-  };
-
-  // Open modal with selected product
-  const openModal = (product) => {
-    setSelectedProduct(product);
-    setModalOpen(true);
-  };
-
-  // Close modal
-  const closeModal = () => {
-    setSelectedProduct(null);
-    setModalOpen(false);
   };
 
   return (
@@ -60,7 +101,7 @@ const Grid = () => {
             <div
               key={product.id}
               className="product-card"
-              onClick={() => openModal(product)} // Click to open modal
+              onClick={() => openModal(product)}
             >
               <img
                 src={product.image ? window.location.origin + product.image : '/images/placeholder.jpg'}
@@ -69,10 +110,15 @@ const Grid = () => {
               />
               <div className="product-details">
                 <h3 className="product-name">{product.name}</h3>
-                {renderStars(product.rating || 4)} {/* Default rating if not provided */}
+                {renderStars(product.rating || 4)}
                 <p className="product-price">₱{parseFloat(product.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}</p>
                 <div className="button-container">
-                  <button className="add-to-cart">add to cart</button>
+                  <button className="add-to-cart" onClick={(e) => {
+                    e.stopPropagation();
+                    addToCart(product);
+                  }}>
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             </div>
@@ -83,6 +129,7 @@ const Grid = () => {
         visible={modalOpen}
         product={selectedProduct}
         onClose={closeModal}
+        addToCart={addToCart}
       />
     </section>
   );
