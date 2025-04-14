@@ -10,14 +10,15 @@ import {
   Select,
   message,
   Space,
-  Upload
+  Upload,
 } from "antd";
 import { EditOutlined, PlusOutlined, UploadOutlined } from "@ant-design/icons";
 import axios from "axios";
 import TopNav from "../topnav";
 import AdminSideMenu from "../admin-sidemenu";
+import "../../../sass/components/_adminproducts.scss";
 
-const { Content } = Layout;
+const { Header, Sider, Content } = Layout;
 const { Option } = Select;
 
 const ProductPage = () => {
@@ -93,7 +94,7 @@ const ProductPage = () => {
       description: record.description,
       specifications: record.specifications,
       status_id: record.status_id,
-      subcategory_id: record.subcategory_id
+      subcategory_id: record.subcategory_id,
     });
     setIsModalVisible(true);
   };
@@ -120,13 +121,13 @@ const ProductPage = () => {
     try {
       if (isAdding) {
         await axios.post("/api/products", formData, {
-          headers: { "Content-Type": "multipart/form-data" }
+          headers: { "Content-Type": "multipart/form-data" },
         });
         message.success("Product added successfully");
       } else {
         formData.append("_method", "PUT");
         await axios.post(`/api/products/${editingProduct.id}`, formData, {
-          headers: { "Content-Type": "multipart/form-data" }
+          headers: { "Content-Type": "multipart/form-data" },
         });
         message.success("Product updated successfully");
       }
@@ -175,14 +176,14 @@ const ProductPage = () => {
           />
         ) : (
           "No Image"
-        )
+        ),
     },
     { title: "Name", dataIndex: "name", key: "name" },
-    { 
-      title: "Brand", 
-      dataIndex: "subcategory", 
+    {
+      title: "Brand",
+      dataIndex: "subcategory",
       key: "subcategory",
-      render: (subcategory) => subcategory ? subcategory.name : "N/A"
+      render: (subcategory) => (subcategory ? subcategory.name : "N/A"),
     },
     { title: "Price", dataIndex: "price", key: "price" },
     { title: "Quantity", dataIndex: "quantity", key: "quantity" },
@@ -193,7 +194,7 @@ const ProductPage = () => {
       dataIndex: "status_id",
       key: "status_id",
       render: (status) =>
-        statuses.find((s) => s.id === status)?.status_name || "N/A"
+        statuses.find((s) => s.id === status)?.status_name || "N/A",
     },
     {
       title: "Actions",
@@ -205,8 +206,8 @@ const ProductPage = () => {
             Archive
           </Button>
         </Space>
-      )
-    }
+      ),
+    },
   ];
 
   const archiveColumns = [
@@ -223,14 +224,14 @@ const ProductPage = () => {
           />
         ) : (
           "No Image"
-        )
+        ),
     },
     { title: "Name", dataIndex: "name", key: "name" },
-    { 
-      title: "Brand", 
-      dataIndex: "subcategory", 
+    {
+      title: "Brand",
+      dataIndex: "subcategory",
       key: "subcategory",
-      render: (subcategory) => subcategory ? subcategory.name : "N/A"
+      render: (subcategory) => (subcategory ? subcategory.name : "N/A"),
     },
     { title: "Price", dataIndex: "price", key: "price" },
     { title: "Quantity", dataIndex: "quantity", key: "quantity" },
@@ -243,25 +244,29 @@ const ProductPage = () => {
             Restore
           </Button>
         </Space>
-      )
-    }
+      ),
+    },
   ];
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <TopNav />
-      <Layout style={{ display: "flex", flexDirection: "row" }}>
-        <AdminSideMenu />
-        <Layout style={{ padding: "20px", width: "100%" }}>
-          <Content style={{ background: "#fff", padding: "20px", borderRadius: "8px" }}>
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-bold">Product List</h2>
+      <Header style={{ padding: 0, background: "#008cff", position: "fixed", width: "100%", zIndex: 1000 }}>
+        <TopNav />
+      </Header>
+      <Layout style={{ marginTop: 64 }}>
+        <Sider width={200}>
+          <AdminSideMenu />
+        </Sider>
+        <Layout>
+          <Content style={{ margin: "24px 16px", padding: 24, background: "#fff", minHeight: 280 }}>
+            <div className="products-header">
+              <h2>Product List</h2>
               <div>
                 <Button type="primary" icon={<PlusOutlined />} onClick={showAddModal}>
                   Add Product
                 </Button>
                 <Button
-                  style={{ marginLeft: 8 }}
+                  className="archive-btn"
                   onClick={() => {
                     setIsArchiveModalVisible(true);
                     fetchArchivedProducts();

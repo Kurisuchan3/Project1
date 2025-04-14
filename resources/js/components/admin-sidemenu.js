@@ -13,7 +13,7 @@ import {
   LogoutOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  SettingOutlined, // new import added for Admin Setting
+  SettingOutlined,
 } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import "../../sass/components/_sidemenu.scss";
@@ -30,7 +30,7 @@ const menuItems = [
   { key: "customers", icon: <TeamOutlined />, label: "Customers", path: "/customers" },
   { key: "reviews", icon: <StarOutlined />, label: "Reviews", path: "/reviews" },
   { key: "shop", icon: <ShopOutlined />, label: "Shop Here", path: "/shop" },
-  { key: "adminsetting", icon: <SettingOutlined />, label: "Admin Setting", path: "/adminsetting" }, // new admin setting item
+  { key: "adminsetting", icon: <SettingOutlined />, label: "Admin Setting", path: "/adminsetting" },
 ];
 
 const AdminSideMenu = () => {
@@ -54,13 +54,20 @@ const AdminSideMenu = () => {
   };
 
   return (
-    <Sider collapsible collapsed={collapsed} className="side-menu">
-      <div className="menu-toggle">
-        <Button type="primary" onClick={toggleCollapsed} style={{ width: "100%", marginBottom: "10px" }}>
-          {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-        </Button>
-      </div>
-      <Menu theme="light" mode="inline" defaultSelectedKeys={["dashboard"]} onClick={handleMenuClick}>
+    <Sider
+      collapsible
+      collapsed={collapsed}
+      onCollapse={toggleCollapsed}
+      className="side-menu"
+      width={200}
+      style={{ background: "#001529" }}
+    >
+      <Menu
+        theme="dark"
+        mode="inline"
+        defaultSelectedKeys={["dashboard"]}
+        onClick={handleMenuClick}
+      >
         {menuItems.map(({ key, icon, label }) => (
           <Menu.Item key={key} icon={icon}>
             {label}
@@ -68,7 +75,12 @@ const AdminSideMenu = () => {
         ))}
       </Menu>
       <div className="logout-container">
-        <Button type="text" icon={<LogoutOutlined />} onClick={handleLogout} className="logout-button">
+        <Button
+          type="text"
+          icon={<LogoutOutlined />}
+          onClick={handleLogout}
+          className="logout-button"
+        >
           {!collapsed && "Log Out"}
         </Button>
       </div>

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Layout } from 'antd';
+import { Layout, Table } from 'antd';
 import '../../../sass/components/orders.scss';
 import OrdersModal from '../OrderModal/ordersmodal';
 import TopNav from '../topnav';
 import AdminSideMenu from '../admin-sidemenu';
 
-const { Content } = Layout;
+const { Header, Sider, Content } = Layout;
 
 const Orders = () => {
   const ordersData = [
@@ -54,55 +54,56 @@ const Orders = () => {
     setSelectedOrder(null);
   };
 
+  const columns = [
+    {
+      title: "Image",
+      dataIndex: "image",
+      key: "image",
+      render: (image) => (
+        <img src={image} alt="item" style={{ width: 50, height: "auto" }} />
+      ),
+    },
+    { title: "Item Name", dataIndex: "itemName", key: "itemName" },
+    { title: "User Name", dataIndex: "userName", key: "userName" },
+    { title: "Email", dataIndex: "email", key: "email" },
+    {
+      title: "Status",
+      dataIndex: "status",
+      key: "status",
+      render: (status) => (
+        <span className={`status ${status.toLowerCase()}`}>{status}</span>
+      ),
+    },
+  ];
+
   return (
-    <Layout style={{ minHeight: '100vh' }}>
-      {/* TopNav spans the full width at the top */}
-      <TopNav />
+    <Layout style={{ minHeight: "100vh" }}>
+      <Header style={{ padding: 0, background: "#008cff", position: "fixed", width: "100%", zIndex: 1000 }}>
+        <TopNav />
+      </Header>
+      <Layout style={{ marginTop: 64 }}>
+        <Sider width={200}>
+          <AdminSideMenu />
+        </Sider>
+        <Layout>
+          <Content style={{ margin: "24px 16px", padding: 24, background: "#fff", minHeight: 280 }}>
+            <div className="orders-container">
+              <h2>Orders</h2>
+              <Table
+                columns={columns}
+                dataSource={ordersData}
+                pagination={{ pageSize: 5 }}
+                onRow={(record) => ({
+                  onClick: () => handleRowClick(record),
+                })}
+              />
 
-      {/* Nested Layout for Sidebar and Content */}
-      <Layout>
-        {/* Sidebar (AdminSideMenu) */}
-        <AdminSideMenu />
-
-        {/* Main Content Area */}
-        <Content style={{ margin: '16px', padding: 24, background: '#fff', minHeight: 280 }}>
-          <div className="orders-container">
-            <h2>Orders</h2>
-            <table className="orders-table">
-              <thead>
-                <tr>
-                  <th>Image</th>
-                  <th>Item Name</th>
-                  <th>User Name</th>
-                  <th>Email</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {ordersData.map((order) => (
-                  <tr key={order.id} onClick={() => handleRowClick(order)}>
-                    <td>
-                      <img src={order.image} alt="item" className="order-image" />
-                    </td>
-                    <td>{order.itemName}</td>
-                    <td>{order.userName}</td>
-                    <td>{order.email}</td>
-                    <td>
-                      <span className={`status ${order.status.toLowerCase()}`}>
-                        {order.status}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-
-            {/* Render the OrdersModal component when the modal is open */}
-            {isModalOpen && selectedOrder && (
-              <OrdersModal order={selectedOrder} onClose={closeModal} />
-            )}
-          </div>
-        </Content>
+              {isModalOpen && selectedOrder && (
+                <OrdersModal order={selectedOrder} onClose={closeModal} />
+              )}
+            </div>
+          </Content>
+        </Layout>
       </Layout>
     </Layout>
   );

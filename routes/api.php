@@ -37,7 +37,7 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/statuses', [StatusController::class, 'index']);
     Route::get('/cart', [CartController::class, 'index']);
     Route::post('/cart', [CartController::class, 'add']);
-    Route::post('/cart/sync', [CartController::class, 'syncGuestCart']);
-    Route::put('/cart/{id}', [CartController::class, 'update']);
-    Route::delete('/cart/{id}', [CartController::class, 'remove']);
+    Route::post('/cart/sync', [CartController::class, 'syncGuestCart']); // Ensure this is present
+    Route::put('/cart/{id}', [CartController::class, 'update']); // Fixed parameter name to {id}
+    Route::delete('/cart/{id}', [CartController::class, 'remove']); // Fixed parameter name to {id}
 });

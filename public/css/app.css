@@ -11968,16 +11968,7 @@ textarea.form-control-lg {
   }
 }
 .side-menu {
-  background: #f8f9fa;
-  margin-top: 110px; /* Adjust based on the combined height of topnav (60px) and nav-links (50px) */
-  height: calc(100vh - 110px); /* Adjust height to fit below the topnav and nav-links */
-}
-.side-menu .logo {
-  color: #1890ff;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  padding: 16px;
+  background: #001529;
 }
 .side-menu .ant-menu {
   border-right: none;
@@ -11989,9 +11980,6 @@ textarea.form-control-lg {
   background-color: #1890ff !important;
   color: white !important;
 }
-.side-menu .menu-toggle {
-  padding: 10px;
-}
 .side-menu .logout-container {
   position: absolute;
   bottom: 20px;
@@ -12000,7 +11988,7 @@ textarea.form-control-lg {
 }
 .side-menu .logout-container .logout-button {
   width: 100%;
-  color: #333;
+  color: #ffffff;
 }
 .side-menu .logout-container .logout-button:hover {
   color: #1890ff;
@@ -12075,13 +12063,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  position: fixed; /* Fix the topnav to the top */
-  top: 0;
-  left: 0;
-  width: 100%; /* Full width */
-  z-index: 1000; /* Ensure it stays above other elements */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better separation */
+  padding: 0 20px;
 }
 .topnav .logo {
   font-size: 24px;
@@ -12091,7 +12073,7 @@ input {
   align-items: center;
 }
 .topnav .logo img {
-  width: 100px; /* Match the width specified in TopNav.js */
+  width: 100px;
 }
 .topnav .search-bar {
   display: flex;
@@ -12128,29 +12110,6 @@ input {
 .topnav .nav-icons .ant-btn {
   padding: 8px 15px;
   border-radius: 5px;
-}
-
-.nav-links {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  position: fixed; /* Fix the nav-links below the topnav */
-  top: 60px; /* Adjust based on the height of your topnav */
-  left: 0;
-  width: 100%; /* Full width */
-  z-index: 999; /* Below the topnav but above other content */
-}
-.nav-links a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #000000;
-  font-weight: 500;
-  position: relative;
-}
-.nav-links a:hover {
-  color: #008cff;
 }
 
 footer {
@@ -15283,4 +15242,63 @@ footer {
     border-left: none;
     border-bottom: 2px solid #ffd500;
   }
+}
+.user-table-container .button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+.user-table-container .button-container .ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+  font-weight: 500;
+  padding: 0 20px;
+  height: 40px;
+}
+.user-table-container .button-container .ant-btn-default {
+  border-color: #1890ff;
+  color: #1890ff;
+  font-weight: 500;
+  padding: 0 20px;
+  height: 40px;
+}
+
+.dashboard-card {
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.dashboard-card h2, .dashboard-card .h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.products-header h2, .products-header .h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.products-header .archive-btn {
+  margin-left: 8px;
+}
+
+.inventory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.inventory-header h2, .inventory-header .h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
 }

@@ -4,8 +4,9 @@ import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import axios from "axios";
 import TopNav from "../topnav";
 import AdminSideMenu from "../admin-sidemenu";
+import "../../../sass/components/_inventory.scss";
 
-const { Content } = Layout;
+const { Header, Sider, Content } = Layout;
 
 const Inventory = () => {
   const [inventoryItems, setInventoryItems] = useState([]);
@@ -189,12 +190,16 @@ const Inventory = () => {
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <TopNav />
-      <Layout style={{ display: "flex", flexDirection: "row" }}>
-        <AdminSideMenu />
-        <Layout style={{ padding: "20px", width: "100%" }}>
-          <Content style={{ background: "#fff", padding: "20px", borderRadius: "8px" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
+      <Header style={{ padding: 0, background: "#008cff", position: "fixed", width: "100%", zIndex: 1000 }}>
+        <TopNav />
+      </Header>
+      <Layout style={{ marginTop: 64 }}>
+        <Sider width={200}>
+          <AdminSideMenu />
+        </Sider>
+        <Layout>
+          <Content style={{ margin: "24px 16px", padding: 24, background: "#fff", minHeight: 280 }}>
+            <div className="inventory-header">
               <h2>Inventory List</h2>
               <Button
                 type="primary"

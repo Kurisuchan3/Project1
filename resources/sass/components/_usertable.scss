@@ -1,0 +1,26 @@
+.user-table-container {
+    .button-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      padding: 10px 0;
+  
+      .ant-btn-primary {
+        background-color: #1890ff;
+        border-color: #1890ff;
+        font-weight: 500;
+        padding: 0 20px;
+        height: 40px;
+      }
+  
+      .ant-btn-default {
+        border-color: #1890ff;
+        color: #1890ff;
+        font-weight: 500;
+        padding: 0 20px;
+        height: 40px;
+      }
+    }
+  }
