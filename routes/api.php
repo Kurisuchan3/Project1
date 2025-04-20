@@ -23,7 +23,8 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/user', [AuthController::class, 'userProfile']);
     Route::get('/profile', [ProfileController::class, 'getProfile']);
-    Route::put('/profile', [ProfileController::class, 'updateProfile']);
+    Route::put ('/profile', [ProfileController::class, 'updateProfile']);
+    Route::post('/profile', [ProfileController::class, 'updateProfile']);
     Route::get('/inventory/archived', [InventoryController::class, 'archived']);
     Route::put('/inventory/{id}/restore', [InventoryController::class, 'restore']);
     Route::apiResource('inventory', InventoryController::class);
