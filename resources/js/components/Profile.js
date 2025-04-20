@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import '../../sass/components/Profile.scss';
-import Header from '../components/Header/header'; // Import the Header component
+import Header from '../components/Header/header';
 import SideMenuProfile from './SideMenuProfile/sidemenuprofile';
 
 const Profile = () => {
@@ -16,6 +16,10 @@ const Profile = () => {
   const [previewImage, setPreviewImage] = useState(null);
 
   useEffect(() => {
+    fetchProfile();
+  }, []);
+
+  const fetchProfile = async () => {
     const token = localStorage.getItem("authToken");
 
     if (!token) {
@@ -23,42 +27,39 @@ const Profile = () => {
       return;
     }
 
-    axios
-      .get("http://localhost:8000/api/profile", {
-        headers: {
-          Authorization: token,
-        },
-      })
-      .then((response) => {
-        if (response.data.success) {
-          console.log("Fetched profile data:", response.data.data);
-          setProfile(response.data.data);
-          setFormData({
-            username: response.data.data.username || '',
-            email: response.data.data.email || '',
-            first_name: response.data.data.first_name || '',
-            middle_initial: response.data.data.middle_initial || '',
-            last_name: response.data.data.last_name || '',
-            birthdate: response.data.data.birthdate || '',
-            phone: response.data.data.phone || '',
-            profile_picture: response.data.data.profile_picture || null,
-          });
-          if (response.data.data.profile_picture) {
-            setPreviewImage(`/storage/${response.data.data.profile_picture}`);
-          }
-        } else {
-          setError("Profile not found.");
-        }
-      })
-      .catch((err) => {
-        if (err.response?.status === 401) {
-          setError("Unauthorized. Please log in again.");
-        } else {
-          setError("Failed to load profile.");
-        }
-        console.error("Error fetching profile:", err);
+    try {
+      const response = await axios.get("http://localhost:8000/api/profile", {
+        headers: { Authorization: token },
       });
-  }, []);
+      if (response.data.success) {
+        console.log("Fetched profile data:", response.data.data);
+        setProfile(response.data.data);
+        setFormData({
+          username: response.data.data.username || '',
+          email: response.data.data.email || '',
+          first_name: response.data.data.first_name || '',
+          middle_initial: response.data.data.middle_initial || '',
+          last_name: response.data.data.last_name || '',
+          birthdate: response.data.data.birthdate || '',
+          phone: response.data.data.phone || '',
+          profile_picture: response.data.data.profile_picture || null,
+        });
+        if (response.data.data.profile_picture) {
+          setPreviewImage(`/storage/${response.data.data.profile_picture}`);
+        }
+      } else {
+        setError("Profile not found.");
+      }
+    } catch (err) {
+      if (err.response?.status === 401) {
+        setError("Unauthorized. Please log in again.");
+        navigate('/login');
+      } else {
+        setError("Failed to load profile.");
+      }
+      console.error("Error fetching profile:", err);
+    }
+  };
 
   const handleLogout = () => {
     localStorage.removeItem("authToken");
@@ -85,8 +86,6 @@ const Profile = () => {
     const errors = {};
     if (!formData.username) errors.username = "Username is required.";
     if (!formData.email) errors.email = "Email is required.";
-    if (!formData.first_name) errors.first_name = "First name is required.";
-    if (!formData.last_name) errors.last_name = "Last name is required.";
     return errors;
   };
 
@@ -100,10 +99,8 @@ const Profile = () => {
 
     try {
       const token = localStorage.getItem("authToken");
-
-      console.log("formData before sending:", formData);
-
       const data = new FormData();
+      data.append('_method', 'PUT'); // Spoof PUT request
       data.append('username', formData.username || '');
       data.append('email', formData.email || '');
       data.append('first_name', formData.first_name || '');
@@ -114,41 +111,45 @@ const Profile = () => {
       if (formData.profile_picture instanceof File) {
         console.log("Appending profile_picture to FormData:", formData.profile_picture);
         data.append('profile_picture', formData.profile_picture);
-      } else {
-        console.log("No new profile picture to upload, current profile_picture:", formData.profile_picture);
       }
       if (formData.password) {
         data.append('password', formData.password);
       }
 
-      for (let [key, value] of data.entries()) {
-        console.log(`${key}: ${value}`);
-      }
+      console.log("FormData before sending:", Object.fromEntries(data));
 
-      const response = await axios.put("http://localhost:8000/api/profile", data, {
+      const response = await axios.post("http://localhost:8000/api/profile", data, {
         headers: {
           Authorization: token,
           'Content-Type': 'multipart/form-data',
         },
       });
+
       if (response.data.success) {
+        console.log("Profile update response:", response.data);
         setProfile(response.data.data);
-        setFormData(response.data.data);
+        // Update formData with the server's response, but retain file as null
+        setFormData({ ...response.data.data, profile_picture: null, password: '' });
         if (response.data.data.profile_picture) {
           setPreviewImage(`/storage/${response.data.data.profile_picture}`);
         }
         setEditMode(false);
         setError("");
         setValidationErrors({});
+        setShowPasswordFields(false);
+        // Refresh profile to ensure UI reflects backend
+        await fetchProfile();
+      } else {
+        setError(response.data.message || "Failed to update profile.");
       }
     } catch (err) {
       if (err.response?.status === 422) {
-        setValidationErrors(err.response.data.errors);
+        setValidationErrors(err.response.data.errors || {});
         setError("Please fix the errors in the form.");
       } else {
-        setError("Failed to update profile.");
+        setError(err.response?.data?.message || "Failed to update profile.");
       }
-      console.error("Update error:", err);
+      console.error("Update error:", err.response?.data || err);
     }
   };
 
@@ -296,7 +297,12 @@ const Profile = () => {
                       <>
                         <div>
                           <label>New Password</label>
-                          <input type="password" name="password" onChange={handleChange} />
+                          <input
+                            type="password"
+                            name="password"
+                            value={formData.password || ''}
+                            onChange={handleChange}
+                          />
                         </div>
                       </>
                     )}
@@ -312,7 +318,7 @@ const Profile = () => {
                   ✏️ Edit Profile
                 </button>
               ) : (
-                <button className="cancel-btn" onClick={() => setEditMode(false)}>
+                <button className="cancel-btn" onClick={() => { setEditMode(false); fetchProfile(); }}>
                   Cancel
                 </button>
               )}

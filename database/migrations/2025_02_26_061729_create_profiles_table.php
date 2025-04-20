@@ -11,17 +11,15 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('profiles', function (Blueprint $table) {
-            $table->id('profile_id'); // Primary Key
+            $table->id('profile_id');
             $table->unsignedBigInteger('user_id')->unique()->notNullable();
-            $table->string('first_name')->notNullable();
-            $table->string('last_name')->notNullable();
+            $table->string('first_name')->notNullable()->default('');
+            $table->string('last_name')->notNullable()->default('');
             $table->char('middle_initial', 1)->nullable();
             $table->date('birthdate')->nullable();
             $table->string('phone')->nullable();
             $table->string('profile_picture')->nullable();
             $table->timestamps();
-
-            // Foreign Key Constraint
             $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
         });
     }

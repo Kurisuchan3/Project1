@@ -13210,7 +13210,7 @@ footer {
   text-align: left;
 }
 .product-grid .button-container {
-  margin-top: auto;
+  margin-top: 20px;
   display: flex;
   justify-content: flex-end;
 }
@@ -13218,7 +13218,7 @@ footer {
   background: #261654;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 15px 0 15 0px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -13229,6 +13229,7 @@ footer {
   width: auto;
   margin-left: auto;
   letter-spacing: 0.5px;
+  margin-bottom: 5px;
 }
 .product-grid .add-to-cart:hover {
   background: rgb(19.7169811321, 11.4150943396, 43.5849056604);

@@ -6,6 +6,7 @@ use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
@@ -48,101 +49,101 @@ class ProfileController extends Controller
         $profile = Profile::where('user_id', $user->user_id)->first();
 
         if (!$profile) {
+            Log::error('Profile not found for user_id: ' . $user->user_id);
             return response()->json([
                 'success' => false,
                 'message' => 'Profile not found!',
             ], 404);
         }
 
-        // Log the request data for debugging
-        \Log::info('Update Profile Request Data:', $request->all());
-        \Log::info('Files in Request:', $request->files->all());
+        try {
+            // Log raw request data for debugging
+            Log::info('Update Profile Raw Input:', [
+                'all' => $request->all(),
+                'input_first_name' => $request->input('first_name'),
+                'input_last_name' => $request->input('last_name'),
+                'input_middle_initial' => $request->input('middle_initial'),
+                'input_phone' => $request->input('phone'),
+                'input_birthdate' => $request->input('birthdate'),
+                'input_username' => $request->input('username'),
+                'input_email' => $request->input('email'),
+            ]);
 
-        // Validate the request
-        $validated = $request->validate([
-            'username' => 'sometimes|string|unique:users,username,' . $user->user_id . ',user_id',
-            'email' => 'sometimes|email|unique:users,email,' . $user->user_id . ',user_id',
-            'first_name' => 'sometimes|string|max:255',
-            'last_name' => 'sometimes|string|max:255',
-            'middle_initial' => 'sometimes|nullable|string|max:1',
-            'phone' => 'sometimes|nullable|string|max:15',
-            'birthdate' => 'sometimes|nullable|date',
-            'profile_picture' => 'sometimes|nullable|image|mimes:jpeg,png|max:1024',
-            'password' => 'sometimes|nullable|string|min:6',
-        ]);
+            // Prepare profile update data
+            $profileData = [
+                'first_name' => $request->has('first_name') ? $request->input('first_name') : $profile->first_name,
+                'last_name' => $request->has('last_name') ? $request->input('last_name') : $profile->last_name,
+                'middle_initial' => $request->has('middle_initial') ? $request->input('middle_initial') : $profile->middle_initial,
+                'phone' => $request->has('phone') ? $request->input('phone') : $profile->phone,
+                'birthdate' => $request->has('birthdate') ? $request->input('birthdate') : $profile->birthdate,
+            ];
 
-        // Update user fields if present
-        if ($request->has('username')) {
-            $user->username = $validated['username'];
-        }
-        if ($request->has('email')) {
-            $user->email = $validated['email'];
-        }
-        if ($request->has('password') && !empty($validated['password'])) {
-            $user->password = bcrypt($validated['password']);
-        }
-        $user->save();
-
-        // Handle profile picture upload
-        if ($request->hasFile('profile_picture')) {
-            \Log::info('Profile picture file detected, processing upload...');
-            try {
-                // Delete old profile picture if exists
-                if ($profile->profile_picture) {
-                    \Log::info('Deleting old profile picture: ' . $profile->profile_picture);
-                    Storage::delete('public/' . $profile->profile_picture);
-                }
-                $file = $request->file('profile_picture');
-                \Log::info('File details:', [
-                    'name' => $file->getClientOriginalName(),
-                    'size' => $file->getSize(),
-                    'mime' => $file->getMimeType(),
-                ]);
-                $path = $file->store('profile_pictures', 'public');
-                \Log::info('Profile picture stored at: ' . $path);
-                $profile->profile_picture = $path;
-            } catch (\Exception $e) {
-                \Log::error('Error uploading profile picture: ' . $e->getMessage());
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Failed to upload profile picture.',
-                ], 500);
+            // Handle empty strings for nullable fields
+            if (isset($profileData['middle_initial']) && $profileData['middle_initial'] === '') {
+                $profileData['middle_initial'] = null;
             }
-        } else {
-            \Log::info('No profile picture file detected in request.');
-        }
+            if (isset($profileData['phone']) && $profileData['phone'] === '') {
+                $profileData['phone'] = null;
+            }
+            if (isset($profileData['birthdate']) && $profileData['birthdate'] === '') {
+                $profileData['birthdate'] = null;
+            }
 
-        // Update profile fields if present
-        if ($request->has('first_name')) {
-            $profile->first_name = $validated['first_name'];
-        }
-        if ($request->has('last_name')) {
-            $profile->last_name = $validated['last_name'];
-        }
-        if ($request->has('middle_initial')) {
-            $profile->middle_initial = $validated['middle_initial'] ?? null;
-        }
-        if ($request->has('phone')) {
-            $profile->phone = $validated['phone'];
-        }
-        if ($request->has('birthdate')) {
-            $profile->birthdate = $validated['birthdate'];
-        }
-        $profile->save();
+            // Handle profile picture upload
+            if ($request->hasFile('profile_picture')) {
+                $file = $request->file('profile_picture');
+                // Validate file (e.g., size, type)
+                if ($file->isValid()) {
+                    // Store the file in storage/app/public/profile_pictures
+                    $path = $file->store('profile_pictures', 'public');
+                    // The path will be something like "profile_pictures/filename.jpg"
+                    $profileData['profile_picture'] = $path;
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Profile updated successfully!',
-            'data' => [
-                'username' => $user->username,
-                'email' => $user->email,
-                'first_name' => $profile->first_name,
-                'last_name' => $profile->last_name,
-                'middle_initial' => $profile->middle_initial,
-                'phone' => $profile->phone,
-                'birthdate' => $profile->birthdate,
-                'profile_picture' => $profile->profile_picture,
-            ],
-        ], 200);
+                    // Optionally, delete the old profile picture if it exists
+                    if ($profile->profile_picture) {
+                        Storage::disk('public')->delete($profile->profile_picture);
+                    }
+                } else {
+                    Log::warning('Invalid profile picture upload for user_id: ' . $user->user_id);
+                }
+            }
+
+            // Update profile using Eloquent
+            $profile->update($profileData);
+
+            // Update username in users table if provided and different
+            $newUsername = $request->input('username', $user->username);
+            if ($newUsername !== $user->username) {
+                $user->username = $newUsername;
+                $user->save();
+            }
+
+            // Fetch updated profile and user data
+            $updatedProfile = Profile::where('user_id', $user->user_id)->first();
+            $updatedUser = User::find($user->user_id);
+
+            Log::info('Profile updated successfully:', $updatedProfile->toArray());
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Profile updated successfully!',
+                'data' => [
+                    'username' => $updatedUser->username,
+                    'email' => $updatedUser->email,
+                    'first_name' => $updatedProfile->first_name,
+                    'last_name' => $updatedProfile->last_name,
+                    'middle_initial' => $updatedProfile->middle_initial,
+                    'phone' => $updatedProfile->phone,
+                    'birthdate' => $updatedProfile->birthdate,
+                    'profile_picture' => $updatedProfile->profile_picture,
+                ],
+            ], 200);
+        } catch (\Exception $e) {
+            Log::error('Profile update failed: ' . $e->getMessage(), ['trace' => $e->getTraceAsString()]);
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to update profile: ' . $e->getMessage(),
+            ], 500);
+        }
     }
 }
