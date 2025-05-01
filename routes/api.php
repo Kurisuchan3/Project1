@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SubcategoryController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\AddressController;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -37,7 +38,14 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/statuses', [StatusController::class, 'index']);
     Route::get('/cart', [CartController::class, 'index']);
     Route::post('/cart', [CartController::class, 'add']);
-    Route::post('/cart/sync', [CartController::class, 'syncGuestCart']); // Ensure this is present
-    Route::put('/cart/{id}', [CartController::class, 'update']); // Fixed parameter name to {id}
-    Route::delete('/cart/{id}', [CartController::class, 'remove']); // Fixed parameter name to {id}
+    Route::post('/cart/sync', [CartController::class, 'syncGuestCart']);
+    Route::put('/cart/{id}', [CartController::class, 'update']);
+    Route::delete('/cart/{id}', [CartController::class, 'remove']);
+
+    // Address routes
+    Route::get('/addresses', [AddressController::class, 'index']);
+    Route::post('/addresses', [AddressController::class, 'store']);
+    Route::put('/addresses/{address_id}', [AddressController::class, 'update']);
+    Route::delete('/addresses/{address_id}', [AddressController::class, 'destroy']);
+    Route::post('/addresses/{address_id}/set-default', [AddressController::class, 'setDefault']);
 });

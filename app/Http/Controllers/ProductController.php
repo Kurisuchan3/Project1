@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::with('subcategory')->get();
+        $products = Product::with(['subcategory', 'inventory'])->get(); // Include inventory relationship
         return response()->json($products);
     }
 
@@ -129,4 +129,4 @@ class ProductController extends Controller
         $product->restore();
         return response()->json(['message' => 'Product restored successfully']);
     }
-}       
+}

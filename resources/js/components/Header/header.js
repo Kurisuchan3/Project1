@@ -97,13 +97,18 @@ const Header = () => {
   };
 
   const handleHomeClick = (e) => {
-    e.preventDefault(); // Prevent default anchor behavior
+    e.preventDefault();
     navigate('/homepagecontent');
   };
 
-  const handleShopClick = (e) => {
-    e.preventDefault(); // Prevent default anchor behavior
-    navigate('/shopui');
+  const handleBrandsClick = (e) => {
+    e.preventDefault();
+    navigate('/shopui?category=Brands');
+  };
+
+  const handlePeripheralsClick = (e) => {
+    e.preventDefault();
+    navigate('/shopui?category=Peripherals');
   };
 
   return (
@@ -120,10 +125,10 @@ const Header = () => {
           <a href="#" className="header__link" onClick={handleHomeClick}>
             Home
           </a>
-          <a href="#" className="header__link" onClick={handleShopClick}>
+          <a href="#" className="header__link" onClick={handleBrandsClick}>
             Brands
           </a>
-          <a href="#" className="header__link" onClick={handleShopClick}>
+          <a href="#" className="header__link" onClick={handlePeripheralsClick}>
             Peripherals
           </a>
           <a href="#" className="header__link">

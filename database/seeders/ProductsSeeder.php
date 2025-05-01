@@ -36,7 +36,7 @@ class ProductsSeeder extends Seeder
                 'quantity' => 15,
                 'description' => 'A powerful laptop with the latest M2 chip from Apple.',
                 'specifications' => '16GB RAM, 512GB SSD, macOS, 13-inch Retina Display',
-                'image' => '/images/macbook.jpg', // Use a local placeholder
+                'image' => '/images/Apple MacBook Pro M2.svg', // Use a local placeholder
                 'status_id' => $status->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -48,7 +48,7 @@ class ProductsSeeder extends Seeder
                 'quantity' => 20,
                 'description' => 'A sleek and powerful ultrabook.',
                 'specifications' => '16GB RAM, 1TB SSD, Windows 11, 13.4-inch Display',
-                'image' => '/images/dellxps.jpg',
+                'image' => '/images/Dell-XPS-13-9315.svg', // Use a local placeholder
                 'status_id' => $status->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -60,7 +60,7 @@ class ProductsSeeder extends Seeder
                 'quantity' => 12,
                 'description' => 'A versatile 2-in-1 convertible laptop.',
                 'specifications' => '16GB RAM, 512GB SSD, Windows 11, 13.5-inch OLED',
-                'image' => '/images/spectre.jpg',
+                'image' => '/images/HP Spectre x360 14.svg', // Use a local placeholder
                 'status_id' => $status->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -72,7 +72,7 @@ class ProductsSeeder extends Seeder
                 'quantity' => 18,
                 'description' => 'A business-class laptop with top-tier performance.',
                 'specifications' => '16GB RAM, 1TB SSD, Windows 11, 14-inch Display',
-                'image' => '/images/thinkpad.jpg',
+                'image' => '/images/Lenovo ThinkPad X1 Carbon Gen11.svg', // Use a local placeholder
                 'status_id' => $status->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -84,7 +84,7 @@ class ProductsSeeder extends Seeder
                 'quantity' => 25,
                 'description' => 'A gaming laptop with exceptional portability.',
                 'specifications' => '32GB RAM, 1TB SSD, Windows 11, 14-inch QHD Display',
-                'image' => '/images/zephyrus.jpg',
+                'image' => '/images/Asus ROG Zephyrus.svg', // Use a local placeholder
                 'status_id' => $status->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),

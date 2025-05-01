@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./../../../sass/components/ProdModal.scss";
 import { IconStarFilled } from '@tabler/icons-react';
 
-// Placeholder imports
+// Placeholder imports for reviews (you can replace these with dynamic data later)
 import Avatar1 from '../../../../public/images/tuf.svg';
 import Avatar2 from '../../../../public/images/tuf.svg';
 import Avatar3 from '../../../../public/images/tuf.svg';
-// Review image import (replace with your actual SVG)
 import ReviewImage from '../../../../public/images/tuf.svg';
 
 const ProdModal = ({ product, onClose }) => {
   if (!product) return null;
 
+  // State for quantity selector
+  const [quantity, setQuantity] = useState(1);
+
+  // Get stock quantity from the inventory relationship
+  const stockQuantity = product.inventory?.stock_quantity || 0;
+
+  // Handle quantity increment/decrement
+  const handleIncrement = () => {
+    if (quantity < stockQuantity) {
+      setQuantity(quantity + 1);
+    }
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  // Static reviews (you can make this dynamic later by fetching from an API)
   const reviews = [
     {
       id: 1,
@@ -56,11 +75,25 @@ const ProdModal = ({ product, onClose }) => {
     );
   };
 
+  // Handle specifications as a string and split it into parts
+  const specsArray = product.specifications && typeof product.specifications === 'string'
+    ? product.specifications.split(',').map(item => item.trim())
+    : [];
+
+  // Map the split specifications to the expected fields
+  const specs = {
+    processor: specsArray[0] || 'N/A',
+    ram: specsArray[1] || 'N/A',
+    storage: specsArray[2] || 'N/A',
+    display: specsArray[3] || 'N/A',
+    graphics: specsArray[4] || 'N/A'
+  };
+
   return (
     <div className="lapnix-product-modal-overlay" onClick={onClose}>
       <div className="lapnix-product-modal" onClick={(e) => e.stopPropagation()}>
         <button className="lapnix-modal-close-btn" onClick={onClose}>
-          &times;
+          ×
         </button>
         
         <div className="lapnix-modal-content">
@@ -75,49 +108,95 @@ const ProdModal = ({ product, onClose }) => {
               
               {/* Rating above price */}
               <div className="lapnix-product-rating">
-                {renderStars(4)}
-                <span className="lapnix-rating-count">4.7 (85 reviews)</span>
+                {renderStars(4)} {/* You can make this dynamic later */}
+                <span className="lapnix-rating-count">4.7 (85 reviews)</span> {/* Make dynamic later */}
               </div>
               
               <div className="lapnix-price-section">
-                <span className="lapnix-current-price">${product.price}</span>
-                {product.originalPrice && (
-                  <span className="lapnix-original-price">${product.originalPrice}</span>
-                )}
+                <span className="lapnix-current-price">
+                  ₱{parseFloat(product.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                </span>
+                {/* Remove originalPrice since it's not in the database */}
+              </div>
+
+              {/* Availability (Stock Quantity) */}
+              <div className="lapnix-availability-section">
+                <span className="lapnix-availability-label">Availability: </span>
+                <span className="lapnix-availability-value">
+                  {stockQuantity > 0 ? `${stockQuantity} in stock` : 'Out of stock'}
+                </span>
+              </div>
+
+              {/* Quantity Selector */}
+              <div className="lapnix-quantity-selector">
+                <span className="lapnix-quantity-label">Quantity: </span>
+                <button
+                  className="lapnix-quantity-btn"
+                  onClick={handleDecrement}
+                  disabled={quantity <= 1}
+                >
+                  -
+                </button>
+                <span className="lapnix-quantity-value">{quantity}</span>
+                <button
+                  className="lapnix-quantity-btn"
+                  onClick={handleIncrement}
+                  disabled={quantity >= stockQuantity}
+                >
+                  +
+                </button>
               </div>
               
               <div className="lapnix-action-buttons">
-                <button className="lapnix-add-to-cart-btn">Add to cart</button>
-                <button className="lapnix-buy-now-btn">Buy now</button>
+                <button
+                  className="lapnix-add-to-cart-btn"
+                  disabled={stockQuantity === 0}
+                >
+                  Add to cart
+                </button>
+                <button
+                  className="lapnix-buy-now-btn"
+                  disabled={stockQuantity === 0}
+                >
+                  Buy now
+                </button>
               </div>
             </div>
           </div>
           
           {/* Product Details and Reviews */}
           <div className="lapnix-product-details">
+            {/* Description Section */}
+            {product.description && (
+              <div className="lapnix-description-section">
+                <h3 className="lapnix-section-title">Description</h3>
+                <p className="lapnix-description-text">{product.description}</p>
+              </div>
+            )}
+
             {/* Specifications Section */}
             <div className="lapnix-specs-section">
               <h3 className="lapnix-section-title">Specifications</h3>
               <div className="lapnix-specs-grid">
                 <div className="lapnix-spec-item">
                   <span className="lapnix-spec-label">Processor:</span>
-                  <span className="lapnix-spec-value">{product.specs?.processor || 'Intel Core i7-12700H'}</span>
+                  <span className="lapnix-spec-value">{specs.processor}</span>
                 </div>
                 <div className="lapnix-spec-item">
                   <span className="lapnix-spec-label">RAM:</span>
-                  <span className="lapnix-spec-value">{product.specs?.ram || '16GB DDR5'}</span>
+                  <span className="lapnix-spec-value">{specs.ram}</span>
                 </div>
                 <div className="lapnix-spec-item">
                   <span className="lapnix-spec-label">Storage:</span>
-                  <span className="lapnix-spec-value">{product.specs?.storage || '1TB NVMe SSD'}</span>
+                  <span className="lapnix-spec-value">{specs.storage}</span>
                 </div>
                 <div className="lapnix-spec-item">
                   <span className="lapnix-spec-label">Display:</span>
-                  <span className="lapnix-spec-value">{product.specs?.display || '15.6" FHD 144Hz'}</span>
+                  <span className="lapnix-spec-value">{specs.display}</span>
                 </div>
                 <div className="lapnix-spec-item">
                   <span className="lapnix-spec-label">Graphics:</span>
-                  <span className="lapnix-spec-value">{product.specs?.graphics || 'NVIDIA RTX 3060'}</span>
+                  <span className="lapnix-spec-value">{specs.graphics}</span>
                 </div>
               </div>
             </div>

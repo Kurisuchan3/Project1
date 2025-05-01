@@ -21,6 +21,7 @@ class SubcategorySeeder extends Seeder
                 ['category_id' => $category->id, 'name' => 'Acer'],
                 ['category_id' => $category->id, 'name' => 'Asus'],
                 ['category_id' => $category->id, 'name' => 'Lenovo'],
+
             ]);
         } else {
             echo "❌ ERROR: 'Brands' category not found. Subcategories were not seeded.\n";

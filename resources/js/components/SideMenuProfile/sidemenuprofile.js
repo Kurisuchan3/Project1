@@ -13,7 +13,7 @@ const SideMenuProfile = () => {
   ];
 
   const handleMenuClick = (path) => {
-    if (path === '/purchases' || path === '/addresses') {
+    if (path === '/purchases') {
       alert('Coming soon!'); // Placeholder for future routes
     } else {
       navigate(path);
