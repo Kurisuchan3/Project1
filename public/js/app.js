@@ -167298,7 +167298,6 @@ var MyAddressModal = function MyAddressModal(_ref) {
       return _ref2.apply(this, arguments);
     };
   }();
-  var provinces = ['Agusan del Norte', 'Agusan del Sur', 'Surigao del Norte'];
   if (!isOpen) return null;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "modal-overlay",
@@ -167342,21 +167341,12 @@ var MyAddressModal = function MyAddressModal(_ref) {
           className: "modal-field",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
             children: "Province"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("select", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+            type: "text",
             name: "province",
             value: formData.province,
             onChange: handleChange,
-            required: true,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
-              value: "",
-              disabled: true,
-              children: "Select Province"
-            }), provinces.map(function (province) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
-                value: province,
-                children: province
-              }, province);
-            })]
+            required: true
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "modal-field",

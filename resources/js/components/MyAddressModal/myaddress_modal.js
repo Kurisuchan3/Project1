@@ -66,12 +66,6 @@ const MyAddressModal = ({ isOpen, onClose, address, onSave }) => {
     }
   };
 
-  const provinces = [
-    'Agusan del Norte',
-    'Agusan del Sur',
-    'Surigao del Norte',
-  ];
-
   if (!isOpen) return null;
 
   return (
@@ -104,19 +98,13 @@ const MyAddressModal = ({ isOpen, onClose, address, onSave }) => {
           </div>
           <div className="modal-field">
             <label>Province</label>
-            <select
+            <input
+              type="text"
               name="province"
               value={formData.province}
               onChange={handleChange}
               required
-            >
-              <option value="" disabled>Select Province</option>
-              {provinces.map((province) => (
-                <option key={province} value={province}>
-                  {province}
-                </option>
-              ))}
-            </select>
+            />
           </div>
           <div className="modal-field">
             <label>Country</label>

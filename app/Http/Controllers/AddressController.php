@@ -52,12 +52,13 @@ class AddressController extends Controller
                 'barangay' => 'required|string|max:255',
                 'city' => 'required|string|max:255',
                 'province' => 'required|string|max:255',
-                'country' => 'required|string|max:2',
+                'country' => 'required|string|max:255',
+                'is_default' => 'sometimes|boolean',
             ]);
 
             // If this is the first address, set it as default
             $isFirstAddress = Address::where('user_id', $user->user_id)->count() === 0;
-            $isDefault = $isFirstAddress ? true : ($request->input('is_default', false) === 'true');
+            $isDefault = $isFirstAddress ? true : $request->input('is_default', false);
 
             // If setting this address as default, unset others
             if ($isDefault) {
@@ -124,10 +125,11 @@ class AddressController extends Controller
                 'barangay' => 'required|string|max:255',
                 'city' => 'required|string|max:255',
                 'province' => 'required|string|max:255',
-                'country' => 'required|string|max:2',
+                'country' => 'required|string|max:255',
+                'is_default' => 'sometimes|boolean',
             ]);
 
-            $isDefault = $request->input('is_default', $address->is_default) === 'true';
+            $isDefault = $request->input('is_default', $address->is_default);
 
             if ($isDefault && !$address->is_default) {
                 Address::where('user_id', $user->user_id)->update(['is_default' => false]);

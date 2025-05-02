@@ -14,7 +14,7 @@ class CreateAddressesTable extends Migration
             $table->string('barangay');
             $table->string('city');
             $table->string('province');
-            $table->string('country')->default('Philippinesh');
+            $table->string('country')->default('Philippines');
             $table->boolean('is_default')->default(false);
             $table->timestamps();
         });
