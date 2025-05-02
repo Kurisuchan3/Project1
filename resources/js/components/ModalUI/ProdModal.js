@@ -8,7 +8,7 @@ import Avatar2 from '../../../../public/images/tuf.svg';
 import Avatar3 from '../../../../public/images/tuf.svg';
 import ReviewImage from '../../../../public/images/tuf.svg';
 
-const ProdModal = ({ product, onClose }) => {
+const ProdModal = ({ product, onClose, addToCart }) => {
   if (!product) return null;
 
   // State for quantity selector
@@ -150,6 +150,7 @@ const ProdModal = ({ product, onClose }) => {
               <div className="lapnix-action-buttons">
                 <button
                   className="lapnix-add-to-cart-btn"
+                  onClick={() => addToCart(product)} // Use addToCart with quantity
                   disabled={stockQuantity === 0}
                 >
                   Add to cart

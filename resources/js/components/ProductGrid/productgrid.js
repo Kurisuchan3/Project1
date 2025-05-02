@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import "../../../sass/components/productgrid.scss";
-import ProductModal from '../ProductModal/productview';
+import ProdModal from '../ModalUI/ProdModal'; // Changed to ProdModal
 import axios from 'axios';
 
 const Grid = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [modalOpen, setModalOpen] = useState(false);
   const [guestCart, setGuestCart] = useState(() => {
     const savedCart = localStorage.getItem('guestCart');
     return savedCart ? JSON.parse(savedCart) : [];
@@ -40,7 +39,6 @@ const Grid = () => {
         })
         .then(() => {
           alert(`${product.name} added to cart!`);
-          // Trigger cart count update in Header via event
           window.dispatchEvent(new Event('storage'));
         })
         .catch((error) => console.error('Error adding to cart:', error));
@@ -64,18 +62,16 @@ const Grid = () => {
         ];
       });
       alert(`${product.name} added to cart!`);
-      window.dispatchEvent(new Event('storage')); // Update Header count
+      window.dispatchEvent(new Event('storage'));
     }
   };
 
   const openModal = (product) => {
     setSelectedProduct(product);
-    setModalOpen(true);
   };
 
   const closeModal = () => {
     setSelectedProduct(null);
-    setModalOpen(false);
   };
 
   const renderStars = (rating) => {
@@ -125,12 +121,13 @@ const Grid = () => {
           ))}
         </div>
       )}
-      <ProductModal
-        visible={modalOpen}
-        product={selectedProduct}
-        onClose={closeModal}
-        addToCart={addToCart}
-      />
+      {selectedProduct && (
+        <ProdModal
+          product={selectedProduct}
+          onClose={closeModal}
+          addToCart={addToCart} // Pass addToCart to ProdModal
+        />
+      )}
     </section>
   );
 };

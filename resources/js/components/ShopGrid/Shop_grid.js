@@ -9,6 +9,10 @@ const ShopGrid = ({ filteredBrand }) => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [guestCart, setGuestCart] = useState(() => {
+    const savedCart = localStorage.getItem('guestCart');
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -36,6 +40,46 @@ const ShopGrid = ({ filteredBrand }) => {
     fetchCategories();
     fetchProducts();
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem('guestCart', JSON.stringify(guestCart));
+  }, [guestCart]);
+
+  const addToCart = (product) => {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      axios
+        .post('/api/cart', { product_id: product.id, quantity: 1 }, {
+          headers: { Authorization: token }
+        })
+        .then(() => {
+          alert(`${product.name} added to cart!`);
+          window.dispatchEvent(new Event('storage'));
+        })
+        .catch((error) => console.error('Error adding to cart:', error));
+    } else {
+      setGuestCart((prevCart) => {
+        const existingItem = prevCart.find((item) => item.id === product.id);
+        if (existingItem) {
+          return prevCart.map((item) =>
+            item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+          );
+        }
+        return [
+          ...prevCart,
+          {
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            quantity: 1,
+            image: product.image,
+          },
+        ];
+      });
+      alert(`${product.name} added to cart!`);
+      window.dispatchEvent(new Event('storage'));
+    }
+  };
 
   const renderStars = (rating) => {
     return (
@@ -119,7 +163,10 @@ const ShopGrid = ({ filteredBrand }) => {
                 <div className="button-container">
                   <button
                     className="add-to-cart"
-                    onClick={(e) => e.stopPropagation()}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      addToCart(product);
+                    }}
                   >
                     add to cart
                   </button>
@@ -140,7 +187,7 @@ const ShopGrid = ({ filteredBrand }) => {
       </div>
 
       {selectedProduct && (
-        <ProdModal product={selectedProduct} onClose={handleCloseModal} />
+        <ProdModal product={selectedProduct} onClose={handleCloseModal} addToCart={addToCart} />
       )}
     </section>
   );
