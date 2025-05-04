@@ -78438,7 +78438,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".login-container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100vh;\n  background-color: #ffffff;\n}\n\n.login-box {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 800px;\n  padding: 40px;\n}\n\n.logo {\n  width: 300px;\n}\n\n.login-form {\n  width: 100%;\n  max-width: 400px;\n}\n\n.login-form h1 {\n  font-size: 24px;\n  font-weight: bold;\n  text-align: center;\n}\n\n.input-group {\n  margin-bottom: 15px;\n}\n\ninput {\n  width: 100%;\n  padding: 10px;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n}\n\n.forgot-password {\n  text-align: right;\n  font-size: 14px;\n  color: #007bff;\n}\n\n.login-button {\n  width: 100%;\n  padding: 10px;\n  background-color: #007bff;\n  color: white;\n  border: none;\n  border-radius: 5px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\n.signup-link {\n  text-align: center;\n  margin-top: 10px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.login-page {\n  background: #fafafa;\n  min-height: 100vh;\n}\n\n.login-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 2rem;\n  margin-top: 2rem;\n}\n\n.login-box {\n  background: #fff;\n  width: 100%;\n  max-width: 360px;\n  padding: 2rem;\n  border-radius: 8px;\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);\n  text-align: center;\n}\n.login-box .login-logo {\n  margin-bottom: 1.5rem;\n}\n.login-box .login-logo img {\n  width: 120px;\n  height: auto;\n}\n.login-box h2 {\n  font-size: 1.75rem;\n  font-weight: 700;\n  color: var(--purple);\n  margin-bottom: 0.25rem;\n}\n.login-box h3 {\n  font-size: 1.125rem;\n  font-weight: 500;\n  margin-bottom: 1.5rem;\n  color: #333;\n}\n.login-box h3 .highlight {\n  color: var(--yellow);\n}\n.login-box label {\n  display: block;\n  text-align: left;\n  margin-bottom: 0.5rem;\n  font-weight: 500;\n  color: #555;\n}\n.login-box .ant-input,\n.login-box .ant-input-password {\n  width: 100%;\n  height: 44px;\n  border-radius: 4px;\n  margin-bottom: 1rem;\n}\n.login-box .login-button {\n  width: 100%;\n  height: 44px;\n  font-size: 1rem;\n  font-weight: 500;\n  background-color: var(--purple);\n  border-color: var(--purple);\n  transition: filter 0.2s;\n}\n.login-box .login-button:hover, .login-box .login-button:focus {\n  filter: brightness(0.9);\n}\n.login-box p {\n  margin-top: 1rem;\n  font-size: 0.9rem;\n  color: #333;\n}\n.login-box p .signup-link {\n  color: var(--purple);\n}\n.login-box p .signup-link:hover {\n  text-decoration: underline;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -78486,7 +78486,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".topnav {\n  background-color: #008cff;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 0 20px;\n}\n.topnav .logo {\n  font-size: 24px;\n  font-weight: bold;\n  color: #ffffff;\n  display: flex;\n  align-items: center;\n}\n.topnav .logo img {\n  width: 100px;\n}\n.topnav .search-bar {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n.topnav .search-bar .ant-input-search {\n  width: 300px;\n}\n.topnav .search-bar .ant-input-search input {\n  padding: 8px;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n}\n.topnav .search-bar .ant-input-search .ant-btn {\n  padding: 8px 15px;\n  border: none;\n  background-color: #ffffff;\n  color: #333;\n  border-radius: 5px;\n  cursor: pointer;\n  font-weight: bold;\n}\n.topnav .nav-icons {\n  display: flex;\n  align-items: center;\n  gap: 15px;\n}\n.topnav .nav-icons i {\n  font-size: 20px;\n  color: #000000;\n  cursor: pointer;\n}\n.topnav .nav-icons .ant-btn {\n  padding: 8px 15px;\n  border-radius: 5px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@charset \"UTF-8\";\n:root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.topnav {\n  background-color: var(--purple);\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n}\n.topnav .logo {\n  display: flex;\n  align-items: center;\n}\n.topnav .logo img {\n  height: 40px;\n}\n.topnav .search-bar {\n  flex: 1;\n  margin: 0 2rem;\n  display: flex;\n  justify-content: center;\n  /* AntD input field */\n  /* AntD search button */\n}\n.topnav .search-bar input.ant-input {\n  border-radius: 4px 0 0 4px;\n  border: none;\n  height: 44px;\n  padding: 0 1rem;\n}\n.topnav .search-bar .ant-btn {\n  border-radius: 0 4px 4px 0;\n  background: var(--yellow);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .search-bar .ant-btn:hover, .topnav .search-bar .ant-btn:focus {\n  filter: brightness(0.9);\n}\n.topnav .nav-right {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n.topnav .nav-right .username-inline {\n  color: #fff;\n  font-size: 0.9rem;\n}\n.topnav .nav-right .nav-icons {\n  display: flex;\n  gap: 1rem;\n  /* The “Login” or “Profile” button when not an icon */\n}\n.topnav .nav-right .nav-icons svg,\n.topnav .nav-right .nav-icons .ant-dropdown-trigger {\n  font-size: 1.25rem;\n  color: #fff;\n  cursor: pointer;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary {\n  background: var(--yellow);\n  border-color: var(--yellow);\n  color: var(--purple);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary:hover, .topnav .nav-right .nav-icons .ant-btn-primary:focus {\n  filter: brightness(0.9);\n}\n\n/* Secondary nav links below topnav */\n.nav-links {\n  background: #fff;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  justify-content: center;\n  padding: 0.5rem 0;\n}\n.nav-links a {\n  margin: 0 1rem;\n  color: #333;\n  font-weight: 500;\n  text-decoration: none;\n  padding: 0.5rem;\n  transition: color 0.2s;\n}\n.nav-links a:hover {\n  color: var(--purple);\n}\n.nav-links a.active {\n  color: var(--purple);\n  font-weight: 600;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -164774,7 +164774,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/CashG.svg?9881e1943b97e675f2051d1cd41543c0");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/CashG.svg?1ce433089fd0cdb3902873d10ca17505");
 
 /***/ }),
 
@@ -164789,7 +164789,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/boxy.svg?f251ad1715d3abc1751358f5a93d6e28");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/boxy.svg?42d340e70f8855e0f63e410da8df995b");
 
 /***/ }),
 
@@ -164804,7 +164804,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/cart_empty.svg?747dd7e60726ade30dbdf1782db6adf8");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/cart_empty.svg?e4c48a8f4d993612d3b69daa132fcd85");
 
 /***/ }),
 
@@ -164819,7 +164819,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/complete.svg?b1c55d38e928fa1f6ad9f991b91e5ee6");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/complete.svg?24a0bbbafe5d7f7c3e554ab3194e080e");
 
 /***/ }),
 
@@ -164834,7 +164834,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/happycustomer.svg?d38e1c4a43cddb5301c20394ce90f2a1");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/happycustomer.svg?7c8e096002e91811f7b2c320ef6d2d62");
 
 /***/ }),
 
@@ -164849,7 +164849,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/herolapnix.svg?8637878e21a8611253182c6d5a5d0b1d");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/herolapnix.svg?dd15d73c5cdbfcbe087d01bf71119a20");
 
 /***/ }),
 
@@ -164864,22 +164864,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/lapnixlogo.svg?1c89520044e8b51c37db22c8b5802436");
-
-/***/ }),
-
-/***/ "./public/images/logo.png":
-/*!********************************!*\
-  !*** ./public/images/logo.png ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/logo.png?a16866eb5c34f315181c1dbd49d6b2d1");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/lapnixlogo.svg?a719bb81ec0276bbe881b886401beb88");
 
 /***/ }),
 
@@ -164894,7 +164879,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/review.svg?73b64ae9004b46a9ca26016c4bb38f4d");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/review.svg?c763ecbb10e155748c4b2073f369088f");
 
 /***/ }),
 
@@ -164909,7 +164894,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/tuf.svg?3e9d9e86a93cfc08ddfbc709269b45bc");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/tuf.svg?c0c840f83cf573cd12cb66e6536764ea");
 
 /***/ }),
 
@@ -170904,15 +170889,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var _sass_components_login_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../sass/components/_login.scss */ "./resources/sass/components/_login.scss");
 /* harmony import */ var _topnav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../topnav */ "./resources/js/components/topnav.js");
-/* harmony import */ var _public_images_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../public/images/logo.png */ "./public/images/logo.png");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/message/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/input/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/message/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/input/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
@@ -170935,10 +170919,7 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
-
-axios__WEBPACK_IMPORTED_MODULE_5__["default"].defaults.baseURL = "http://localhost:8000";
 var Login = function Login() {
-  var _location$state, _location$state2;
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
       email: "",
       password: ""
@@ -170950,10 +170931,8 @@ var Login = function Login() {
     _useState4 = _slicedToArray(_useState3, 2),
     loading = _useState4[0],
     setLoading = _useState4[1];
-  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useNavigate)();
-  var location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useLocation)();
-  var from = ((_location$state = location.state) === null || _location$state === void 0 ? void 0 : _location$state.from) || '/homepagecontent';
-  var guestCart = ((_location$state2 = location.state) === null || _location$state2 === void 0 ? void 0 : _location$state2.cartItems) || [];
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useNavigate)();
+  var location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useLocation)();
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var isMounted = true;
     var token = localStorage.getItem("authToken");
@@ -170965,12 +170944,13 @@ var Login = function Login() {
         }
       }).then(function (response) {
         if (isMounted) {
+          console.log("Token validated:", response.data);
           var role = parseInt(userRole, 10);
           navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
         }
-      })["catch"](function (error) {
-        var _error$response;
-        console.error("Token validation failed:", (_error$response = error.response) === null || _error$response === void 0 ? void 0 : _error$response.data);
+      })["catch"](function (err) {
+        var _err$response;
+        console.error("Token validation failed:", (_err$response = err.response) === null || _err$response === void 0 ? void 0 : _err$response.data);
         if (isMounted) {
           localStorage.removeItem("authToken");
           localStorage.removeItem("userRole");
@@ -170986,7 +170966,7 @@ var Login = function Login() {
   };
   var handleLogin = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var response, token, role, syncResponse, _syncError$response, _error$response2, _error$response3;
+      var response, token, role, _err$response2, _err$response3;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
@@ -171002,114 +170982,89 @@ var Login = function Login() {
             return axios__WEBPACK_IMPORTED_MODULE_5__["default"].post("/api/login", credentials);
           case 6:
             response = _context.sent;
+            console.log("Login response:", response.data);
+            if (response.data.token) {
+              _context.next = 10;
+              break;
+            }
+            throw new Error("Authentication token not received.");
+          case 10:
             token = "Bearer ".concat(response.data.token);
             localStorage.setItem("authToken", token);
             role = parseInt(response.data.user.roles_id, 10);
             localStorage.setItem("userRole", role);
-            axios__WEBPACK_IMPORTED_MODULE_5__["default"].defaults.headers.common["Authorization"] = token;
 
-            // Sync guest cart with backend
-            if (!(guestCart.length > 0)) {
-              _context.next = 32;
-              break;
-            }
-            _context.prev = 13;
-            console.log("Attempting to sync guest cart:", guestCart);
-            console.log("Using token:", token);
-            _context.next = 18;
-            return axios__WEBPACK_IMPORTED_MODULE_5__["default"].post('/api/cart/sync', {
-              cart: guestCart
-            }, {
-              headers: {
-                Authorization: token
-              }
-            });
-          case 18:
-            syncResponse = _context.sent;
-            console.log("Sync response:", syncResponse.data);
-            localStorage.removeItem('guestCart');
-            antd__WEBPACK_IMPORTED_MODULE_7__["default"].success("Guest cart synced successfully!");
-            navigate('/cartview');
-            _context.next = 30;
-            break;
-          case 25:
-            _context.prev = 25;
-            _context.t0 = _context["catch"](13);
-            console.error("Guest cart sync failed:", ((_syncError$response = _context.t0.response) === null || _syncError$response === void 0 ? void 0 : _syncError$response.data) || _context.t0.message);
-            antd__WEBPACK_IMPORTED_MODULE_7__["default"].warning("Logged in successfully, but failed to sync guest cart.");
+            // Set default header for future calls
+            axios__WEBPACK_IMPORTED_MODULE_5__["default"].defaults.headers.common["Authorization"] = token;
+            antd__WEBPACK_IMPORTED_MODULE_6__["default"].success("Login successful!");
             navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
-          case 30:
-            _context.next = 34;
+            _context.next = 23;
             break;
-          case 32:
-            antd__WEBPACK_IMPORTED_MODULE_7__["default"].success("Login successful!");
-            navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
-          case 34:
-            _context.next = 40;
-            break;
-          case 36:
-            _context.prev = 36;
-            _context.t1 = _context["catch"](3);
-            console.error("Login failed:", (_error$response2 = _context.t1.response) === null || _error$response2 === void 0 ? void 0 : _error$response2.data);
-            antd__WEBPACK_IMPORTED_MODULE_7__["default"].error(((_error$response3 = _context.t1.response) === null || _error$response3 === void 0 || (_error$response3 = _error$response3.data) === null || _error$response3 === void 0 ? void 0 : _error$response3.error) || "Login failed. Please check your credentials.");
-          case 40:
-            _context.prev = 40;
+          case 19:
+            _context.prev = 19;
+            _context.t0 = _context["catch"](3);
+            console.error("Login failed:", (_err$response2 = _context.t0.response) === null || _err$response2 === void 0 ? void 0 : _err$response2.data);
+            antd__WEBPACK_IMPORTED_MODULE_6__["default"].error(((_err$response3 = _context.t0.response) === null || _err$response3 === void 0 || (_err$response3 = _err$response3.data) === null || _err$response3 === void 0 ? void 0 : _err$response3.error) || "Login failed. Please check your credentials.");
+          case 23:
+            _context.prev = 23;
             setLoading(false);
-            return _context.finish(40);
-          case 43:
+            return _context.finish(23);
+          case 26:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[3, 36, 40, 43], [13, 25]]);
+      }, _callee, null, [[3, 19, 23, 26]]);
     }));
     return function handleLogin() {
       return _ref.apply(this, arguments);
     };
   }();
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "login-page",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "login-container",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        className: "login-logo",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-          src: _public_images_logo_png__WEBPACK_IMPORTED_MODULE_3__["default"],
-          alt: "Lapnix Logo",
-          width: 200
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "login-form",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "login-box",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "login-logo",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+            src: "/images/lapnixlogo.svg",
+            alt: "Lapnix Logo"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
           children: "Greetings!"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
-          children: "Please Login to continue"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("h3", {
+          children: ["Please ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+            className: "highlight",
+            children: "Login"
+          }), " to continue"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
           children: "Email"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
           type: "email",
           name: "email",
           placeholder: "Enter your email",
           onChange: handleChange
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
           children: "Password"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"].Password, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Password, {
           name: "password",
           placeholder: "Enter your password",
           onChange: handleChange
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
           type: "primary",
           className: "login-button",
           onClick: handleLogin,
           loading: loading,
           children: loading ? "Logging in..." : "Login"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-          children: ["Don't have an account?", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+          children: ["Don\u2019t have an account?", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
             href: "/register",
             className: "signup-link",
             children: "Sign up"
           })]
         })]
-      })]
+      })
     })]
   });
 };
@@ -171347,7 +171302,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _sass_components_topnav_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../sass/components/_topnav.scss */ "./resources/sass/components/_topnav.scss");
-/* harmony import */ var _public_images_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../public/images/logo.png */ "./public/images/logo.png");
+/* harmony import */ var _public_images_lapnixlogo_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../public/images/lapnixlogo.svg */ "./public/images/lapnixlogo.svg");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/input/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/message/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/menu/index.js");
@@ -171383,11 +171338,7 @@ var TopNav = function TopNav() {
           case 0:
             _context.prev = 0;
             _context.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_6__["default"].post("/api/logout", {}, {
-              headers: {
-                Authorization: localStorage.getItem("authToken")
-              }
-            });
+            return axios__WEBPACK_IMPORTED_MODULE_6__["default"].post("/api/logout");
           case 3:
             localStorage.removeItem("authToken");
             localStorage.removeItem("userRole");
@@ -171414,11 +171365,11 @@ var TopNav = function TopNav() {
   var isAuthenticated = localStorage.getItem("authToken");
   var userName = localStorage.getItem("userName");
   var userMenu = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_8__["default"].Item, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"].Item, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
         href: "/profile",
         children: "Profile"
-      }), " "]
+      })
     }, "profile"), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"].Item, {
       onClick: handleLogout,
       icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_9__["default"], {}),
@@ -171431,7 +171382,7 @@ var TopNav = function TopNav() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "logo",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-          src: _public_images_logo_png__WEBPACK_IMPORTED_MODULE_2__["default"],
+          src: _public_images_lapnixlogo_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
           alt: "Lapnix Logo",
           width: 100
         })

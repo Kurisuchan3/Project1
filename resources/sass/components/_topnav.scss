@@ -1,62 +1,113 @@
+:root {
+  --purple: #24067e;  // your new primary
+  --yellow: #ffcd38;  // your accent
+}
+
 .topnav {
-  background-color: #008cff;
+  background-color: var(--purple);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 1rem 2rem;
 
   .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
     display: flex;
     align-items: center;
 
     img {
-      width: 100px;
+      height: 40px;
     }
   }
 
   .search-bar {
+    flex: 1;
+    margin: 0 2rem;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    justify-content: center;
 
-    .ant-input-search {
-      width: 300px;
+    /* AntD input field */
+    input.ant-input {
+      border-radius: 4px 0 0 4px;
+      border: none;
+      height: 44px;
+      padding: 0 1rem;
+    }
 
-      input {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
+    /* AntD search button */
+    .ant-btn {
+      border-radius: 0 4px 4px 0;
+      background: var(--yellow);
+      font-weight: 500;
+      transition: filter 0.2s;
 
-      .ant-btn {
-        padding: 8px 15px;
-        border: none;
-        background-color: #ffffff;
-        color: #333;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
+      &:hover,
+      &:focus {
+        filter: brightness(0.9);
       }
     }
   }
 
-  .nav-icons {
+  .nav-right {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1rem;
 
-    i {
-      font-size: 20px;
-      color: #000000;
-      cursor: pointer;
+    .username-inline {
+      color: #fff;
+      font-size: 0.9rem;
     }
 
-    .ant-btn {
-      padding: 8px 15px;
-      border-radius: 5px;
+    .nav-icons {
+      display: flex;
+      gap: 1rem;
+
+      svg,
+      .ant-dropdown-trigger {
+        font-size: 1.25rem;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      /* The “Login” or “Profile” button when not an icon */
+      .ant-btn-primary {
+        background: var(--yellow);
+        border-color: var(--yellow);
+        color: var(--purple);
+        font-weight: 500;
+        transition: filter 0.2s;
+
+        &:hover,
+        &:focus {
+          filter: brightness(0.9);
+        }
+      }
+    }
+  }
+}
+
+/* Secondary nav links below topnav */
+.nav-links {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+
+  a {
+    margin: 0 1rem;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--purple);
+    }
+
+    &.active {
+      color: var(--purple);
+      font-weight: 600;
     }
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "../../sass/components/_topnav.scss";
-import logo from "../../../public/images/logo.png";
+import logo from "../../../public/images/lapnixlogo.svg";
 import {
   Input,
   Button,
@@ -25,9 +25,7 @@ const TopNav = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("/api/logout", {}, {
-        headers: { Authorization: localStorage.getItem("authToken") },
-      });
+      await axios.post("/api/logout");
 
       localStorage.removeItem("authToken");
       localStorage.removeItem("userRole");
@@ -47,7 +45,7 @@ const TopNav = () => {
   const userMenu = (
     <Menu>
       <Menu.Item key="profile">
-        <a href="/profile">Profile</a> {/* Fixed: Removed the extra "a" */}
+        <a href="/profile">Profile</a>
       </Menu.Item>
       <Menu.Item
         key="logout"

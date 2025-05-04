@@ -11994,122 +11994,188 @@ textarea.form-control-lg {
   color: #1890ff;
 }
 
+:root {
+  --purple: #24067e;
+  --yellow: #ffcd38;
+}
+
+.login-page {
+  background: #fafafa;
+  min-height: 100vh;
+}
+
 .login-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #ffffff;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 2rem;
 }
 
 .login-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 800px;
-  padding: 40px;
-}
-
-.logo {
-  width: 300px;
-}
-
-.login-form {
+  background: #fff;
   width: 100%;
-  max-width: 400px;
-}
-
-.login-form h1, .login-form .h1 {
-  font-size: 24px;
-  font-weight: bold;
+  max-width: 360px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
-
-.input-group {
-  margin-bottom: 15px;
+.login-box .login-logo {
+  margin-bottom: 1.5rem;
 }
-
-input {
+.login-box .login-logo img {
+  width: 120px;
+  height: auto;
+}
+.login-box h2, .login-box .h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 0.25rem;
+}
+.login-box h3, .login-box .h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+.login-box h3 .highlight, .login-box .h3 .highlight {
+  color: var(--yellow);
+}
+.login-box label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+.login-box .ant-input,
+.login-box .ant-input-password {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  height: 44px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
 }
-
-.forgot-password {
-  text-align: right;
-  font-size: 14px;
-  color: #007bff;
-}
-
-.login-button {
+.login-box .login-button {
   width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
+  height: 44px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--purple);
+  border-color: var(--purple);
+  transition: filter 0.2s;
+}
+.login-box .login-button:hover, .login-box .login-button:focus {
+  filter: brightness(0.9);
+}
+.login-box p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+.login-box p .signup-link {
+  color: var(--purple);
+}
+.login-box p .signup-link:hover {
+  text-decoration: underline;
 }
 
-.signup-link {
-  text-align: center;
-  margin-top: 10px;
+:root {
+  --purple: #24067e;
+  --yellow: #ffcd38;
 }
 
 .topnav {
-  background-color: #008cff;
+  background-color: var(--purple);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 1rem 2rem;
 }
 .topnav .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffffff;
   display: flex;
   align-items: center;
 }
 .topnav .logo img {
-  width: 100px;
+  height: 40px;
 }
 .topnav .search-bar {
+  flex: 1;
+  margin: 0 2rem;
   display: flex;
-  align-items: center;
-  gap: 10px;
+  justify-content: center;
+  /* AntD input field */
+  /* AntD search button */
 }
-.topnav .search-bar .ant-input-search {
-  width: 300px;
-}
-.topnav .search-bar .ant-input-search input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.topnav .search-bar .ant-input-search .ant-btn {
-  padding: 8px 15px;
+.topnav .search-bar input.ant-input {
+  border-radius: 4px 0 0 4px;
   border: none;
-  background-color: #ffffff;
-  color: #333;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+  height: 44px;
+  padding: 0 1rem;
 }
-.topnav .nav-icons {
+.topnav .search-bar .ant-btn {
+  border-radius: 0 4px 4px 0;
+  background: var(--yellow);
+  font-weight: 500;
+  transition: filter 0.2s;
+}
+.topnav .search-bar .ant-btn:hover, .topnav .search-bar .ant-btn:focus {
+  filter: brightness(0.9);
+}
+.topnav .nav-right {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 1rem;
 }
-.topnav .nav-icons i {
-  font-size: 20px;
-  color: #000000;
+.topnav .nav-right .username-inline {
+  color: #fff;
+  font-size: 0.9rem;
+}
+.topnav .nav-right .nav-icons {
+  display: flex;
+  gap: 1rem;
+  /* The “Login” or “Profile” button when not an icon */
+}
+.topnav .nav-right .nav-icons svg,
+.topnav .nav-right .nav-icons .ant-dropdown-trigger {
+  font-size: 1.25rem;
+  color: #fff;
   cursor: pointer;
 }
-.topnav .nav-icons .ant-btn {
-  padding: 8px 15px;
-  border-radius: 5px;
+.topnav .nav-right .nav-icons .ant-btn-primary {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--purple);
+  font-weight: 500;
+  transition: filter 0.2s;
+}
+.topnav .nav-right .nav-icons .ant-btn-primary:hover, .topnav .nav-right .nav-icons .ant-btn-primary:focus {
+  filter: brightness(0.9);
+}
+
+/* Secondary nav links below topnav */
+.nav-links {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+.nav-links a {
+  margin: 0 1rem;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--purple);
+}
+.nav-links a.active {
+  color: var(--purple);
+  font-weight: 600;
 }
 
 footer {
