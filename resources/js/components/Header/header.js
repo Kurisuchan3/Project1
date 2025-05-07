@@ -14,17 +14,22 @@ const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [cartCount, setCartCount] = useState(0);
 
+  // Navigate handlers
+  const handleLogoClick = () => navigate('/homepagecontent');
+  const handleHomeClick = e => { e.preventDefault(); navigate('/homepagecontent'); };
+  const handleShopClick = e => { e.preventDefault(); navigate('/shopui'); };
+  const handleAboutClick = e => { e.preventDefault(); navigate('/about'); };
+  // (Optional) you can add support handler if you have a /support route:
+  // const handleSupportClick = e => { e.preventDefault(); navigate('/support'); };
+
   const fetchUserData = () => {
     const token = localStorage.getItem("authToken");
     if (token) {
       setIsAuthenticated(true);
       axios
         .get("/api/user", { headers: { Authorization: token } })
-        .then((response) => {
-          setUsername(response.data.user.username);
-        })
-        .catch((error) => {
-          console.error("Failed to fetch user:", error);
+        .then(res => setUsername(res.data.user.username))
+        .catch(() => {
           localStorage.removeItem("authToken");
           localStorage.removeItem("userRole");
           setIsAuthenticated(false);
@@ -41,75 +46,35 @@ const Header = () => {
     if (token) {
       axios
         .get("/api/cart", { headers: { Authorization: token } })
-        .then((response) => {
-          const count = response.data.length;
-          setCartCount(count);
-        })
-        .catch((error) => {
-          console.error("Failed to fetch cart:", error);
-          setCartCount(0);
-        });
+        .then(res => setCartCount(res.data.length))
+        .catch(() => setCartCount(0));
     } else {
       const guestCart = JSON.parse(localStorage.getItem('guestCart') || '[]');
-      const count = guestCart.length;
-      setCartCount(count);
+      setCartCount(guestCart.length);
     }
   };
 
   useEffect(() => {
     fetchUserData();
     fetchCartCount();
-
-    const handleStorageChange = () => {
-      fetchUserData();
-      fetchCartCount();
-    };
-
-    window.addEventListener('storage', handleStorageChange);
-    return () => window.removeEventListener('storage', handleStorageChange);
+    const onStorage = () => { fetchUserData(); fetchCartCount(); };
+    window.addEventListener('storage', onStorage);
+    return () => window.removeEventListener('storage', onStorage);
   }, []);
 
   const handleLogoutClick = async () => {
     setDropdownOpen(false);
     await handleLogout();
+    localStorage.removeItem('guestCart');
     setIsAuthenticated(false);
     setUsername('');
     setCartCount(0);
-    localStorage.removeItem('guestCart');
     navigate('/homepagecontent');
   };
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
-  const handleProfileClick = () => {
-    setDropdownOpen(false);
-    navigate('/profile');
-  };
-
-  const handleCartClick = () => {
-    navigate('/cartview');
-  };
-
-  const handleLogoClick = () => {
-    navigate('/homepagecontent');
-  };
-
-  const handleHomeClick = (e) => {
-    e.preventDefault();
-    navigate('/homepagecontent');
-  };
-
-  const handleBrandsClick = (e) => {
-    e.preventDefault();
-    navigate('/shopui?category=Brands');
-  };
-
-  const handlePeripheralsClick = (e) => {
-    e.preventDefault();
-    navigate('/shopui?category=Peripherals');
-  };
+  const toggleDropdown = () => setDropdownOpen(open => !open);
+  const handleProfileClick = () => { setDropdownOpen(false); navigate('/profile'); };
+  const handleCartClick = () => navigate('/cartview');
 
   return (
     <header className="header">
@@ -122,23 +87,14 @@ const Header = () => {
           style={{ cursor: 'pointer' }}
         />
         <nav className="header__nav">
-          <a href="#" className="header__link" onClick={handleHomeClick}>
-            Home
-          </a>
-          <a href="#" className="header__link" onClick={handleBrandsClick}>
-            Brands
-          </a>
-          <a href="#" className="header__link" onClick={handlePeripheralsClick}>
-            Peripherals
-          </a>
-          <a href="#" className="header__link">
-            Support
-          </a>
-          <a href="#" className="header__link">
-            About us
-          </a>
+          <a href="#" className="header__link" onClick={handleHomeClick}>Home</a>
+          <a href="#" className="header__link" onClick={handleShopClick}>Brands</a>
+          <a href="#" className="header__link" onClick={handleShopClick}>Peripherals</a>
+          <a href="#" className="header__link" /*onClick={handleSupportClick}*/>Support</a>
+          <a href="#" className="header__link" onClick={handleAboutClick}>About Us</a>
         </nav>
       </div>
+
       <div className="header__right">
         <IconSearch className="header__icon" />
         <IconBellFilled className="header__icon" />
@@ -146,6 +102,7 @@ const Header = () => {
           <IconShoppingCart className="header__icon" />
           {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
         </div>
+
         {isAuthenticated ? (
           <div className="header__profile">
             <div className="header__profile-toggle" onClick={toggleDropdown}>
