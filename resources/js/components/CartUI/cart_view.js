@@ -9,42 +9,61 @@ import axios from 'axios';
 const CartView = () => {
   const [cartItems, setCartItems] = useState([]);
   const [isAddressFormOpen, setIsAddressFormOpen] = useState(false);
+  const [selectedItems, setSelectedItems] = useState([]);
   const [address, setAddress] = useState({
-    country: "Philippines",
-    state: "Agusan Del Norte",
-    city: "Butuan City",
-    zip: "8600"
+    barangay: '',
+    city: '',
+    province: '',
+    country: 'Philippines'
   });
   const [loading, setLoading] = useState(true);
-
-  const statesByCountry = {
-    Philippines: ["Agusan Del Norte", "Cebu", "Davao del Sur"],
-    US: ["California", "Texas", "New York"]
-  };
 
   const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem('authToken');
-    if (token) {
-      axios
-        .get('/api/cart', { headers: { Authorization: token } })
-        .then((response) => {
-          const items = response.data.map(item => ({
-            id: item.product.id,
-            name: item.product.name,
-            price: parseFloat(item.product.price),
-            quantity: item.quantity,
-            image: item.product.image,
-            cartItemId: item.id // Store cart item ID for updates/removal
-          }));
-          setCartItems(items);
-          setLoading(false);
-        })
-        .catch((error) => {
-          console.error('Error fetching cart:', error);
-          setLoading(false);
+    const fetchCart = async () => {
+      try {
+        const response = await axios.get('/api/cart', {
+          headers: { Authorization: token }
         });
+        const items = response.data.map(item => ({
+          id: item.product.id,
+          name: item.product.name,
+          price: parseFloat(item.product.price),
+          quantity: item.quantity,
+          image: item.product.image,
+          cartItemId: item.id
+        }));
+        setCartItems(items);
+      } catch (error) {
+        console.error('Error fetching cart:', error);
+      }
+    };
+
+    const fetchDefaultAddress = async () => {
+      try {
+        const response = await axios.get('/api/addresses', {
+          headers: { Authorization: token }
+        });
+        if (response.data.success) {
+          const defaultAddress = response.data.data.find(addr => addr.is_default) || response.data.data[0];
+          if (defaultAddress) {
+            setAddress({
+              barangay: defaultAddress.barangay || '',
+              city: defaultAddress.city || '',
+              province: defaultAddress.province || '',
+              country: defaultAddress.country || 'Philippines'
+            });
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching address:', error);
+      }
+    };
+
+    if (token) {
+      Promise.all([fetchCart(), fetchDefaultAddress()]).finally(() => setLoading(false));
     } else {
       const guestCart = JSON.parse(localStorage.getItem('guestCart') || '[]');
       setCartItems(guestCart);
@@ -55,7 +74,6 @@ const CartView = () => {
   const updateCart = (newCart) => {
     const token = localStorage.getItem('authToken');
     if (token) {
-      // Sync with backend
       newCart.forEach(item => {
         if (item.cartItemId) {
           axios.put(`/api/cart/${item.cartItemId}`, { quantity: item.quantity }, {
@@ -67,7 +85,7 @@ const CartView = () => {
       localStorage.setItem('guestCart', JSON.stringify(newCart));
     }
     setCartItems(newCart);
-    window.dispatchEvent(new Event('storage')); // Update Header
+    window.dispatchEvent(new Event('storage'));
   };
 
   const removeItem = (itemId) => {
@@ -78,11 +96,54 @@ const CartView = () => {
         .delete(`/api/cart/${item.cartItemId}`, { headers: { Authorization: token } })
         .then(() => {
           setCartItems(cartItems.filter(i => i.id !== itemId));
+          setSelectedItems(selectedItems.filter(id => id !== itemId));
           window.dispatchEvent(new Event('storage'));
         })
         .catch(error => console.error('Error removing item:', error));
     } else {
-      updateCart(cartItems.filter(item => item.id !== itemId));
+      const newCart = cartItems.filter(item => item.id !== itemId);
+      updateCart(newCart);
+      setSelectedItems(selectedItems.filter(id => id !== itemId));
+    }
+  };
+
+  const removeSelectedItems = () => {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      Promise.all(
+        selectedItems.map(itemId => {
+          const item = cartItems.find(i => i.id === itemId);
+          return axios.delete(`/api/cart/${item.cartItemId}`, {
+            headers: { Authorization: token }
+          });
+        })
+      )
+        .then(() => {
+          setCartItems(cartItems.filter(item => !selectedItems.includes(item.id)));
+          setSelectedItems([]);
+          window.dispatchEvent(new Event('storage'));
+        })
+        .catch(error => console.error('Error removing selected items:', error));
+    } else {
+      const newCart = cartItems.filter(item => !selectedItems.includes(item.id));
+      updateCart(newCart);
+      setSelectedItems([]);
+    }
+  };
+
+  const toggleSelectItem = (itemId) => {
+    setSelectedItems(prev =>
+      prev.includes(itemId)
+        ? prev.filter(id => id !== itemId)
+        : [...prev, itemId]
+    );
+  };
+
+  const toggleSelectAll = () => {
+    if (selectedItems.length === cartItems.length) {
+      setSelectedItems([]);
+    } else {
+      setSelectedItems(cartItems.map(item => item.id));
     }
   };
 
@@ -98,7 +159,10 @@ const CartView = () => {
     ));
   };
 
-  const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const subtotal = selectedItems.reduce((sum, itemId) => {
+    const item = cartItems.find(i => i.id === itemId);
+    return item ? sum + (item.price * item.quantity) : sum;
+  }, 0);
 
   const handleContinueShopping = () => {
     navigate('/shopui');
@@ -110,32 +174,54 @@ const CartView = () => {
 
   const handleAddressChange = (e) => {
     const { name, value } = e.target;
-    setAddress(prev => {
-      const updatedAddress = { ...prev, [name]: value };
-      if (name === "country") {
-        updatedAddress.state = statesByCountry[value][0];
-      }
-      return updatedAddress;
-    });
+    setAddress(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleAddressSubmit = (e) => {
+  const handleAddressSubmit = async (e) => {
     e.preventDefault();
-    setIsAddressFormOpen(false);
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      try {
+        const response = await axios.post('/api/addresses', {
+          ...address,
+          is_default: true
+        }, {
+          headers: { Authorization: token }
+        });
+        if (response.data.success) {
+          setAddress(response.data.data);
+          setIsAddressFormOpen(false);
+        }
+      } catch (error) {
+        console.error('Error saving address:', error);
+      }
+    }
   };
 
   const handleProceedToCheckout = () => {
     const token = localStorage.getItem('authToken');
-    if (cartItems.length === 0) {
-      alert("Your cart is empty. Please add items to proceed to checkout.");
+    if (selectedItems.length === 0) {
+      alert("Please select at least one item to proceed to checkout.");
       return;
     }
     if (!token) {
       alert("Please log in to proceed to checkout.");
-      navigate('/login', { state: { from: '/cartview', cartItems, address } });
+      navigate('/login', {
+        state: {
+          from: '/cartview',
+          cartItems: cartItems.filter(item => selectedItems.includes(item.id)),
+          address
+        }
+      });
       return;
     }
-    navigate('/payment', { state: { cartItems, subtotal, address } });
+    navigate('/payment', {
+      state: {
+        cartItems: cartItems.filter(item => selectedItems.includes(item.id)),
+        subtotal,
+        address
+      }
+    });
   };
 
   if (loading) return <div>Loading cart...</div>;
@@ -152,6 +238,14 @@ const CartView = () => {
             <div className="cart-table-container">
               <div className="cart-table">
                 <div className="cart-header">
+                  <div className="header-item checkbox-col">
+                    <input
+                      type="checkbox"
+                      checked={selectedItems.length === cartItems.length && cartItems.length > 0}
+                      onChange={toggleSelectAll}
+                      aria-label="Select all items"
+                    />
+                  </div>
                   <div className="header-item product-col">Product</div>
                   <div className="header-item">Price</div>
                   <div className="header-item">Quantity</div>
@@ -160,8 +254,20 @@ const CartView = () => {
                 </div>
                 {cartItems.map((item) => (
                   <div className="cart-item" key={item.id}>
+                    <div className="item-checkbox checkbox-col">
+                      <input
+                        type="checkbox"
+                        checked={selectedItems.includes(item.id)}
+                        onChange={() => toggleSelectItem(item.id)}
+                        aria-label={`Select ${item.name}`}
+                      />
+                    </div>
                     <div className="item-details product-col">
-                      <img src={item.image ? window.location.origin + item.image : '/images/placeholder.jpg'} alt={item.name} className="product-image" />
+                      <img
+                        src={item.image ? window.location.origin + item.image : '/images/placeholder.jpg'}
+                        alt={item.name}
+                        className="product-image"
+                      />
                       <div className="product-name">{item.name}</div>
                     </div>
                     <div className="item-price">₱{item.price.toLocaleString()}</div>
@@ -186,7 +292,7 @@ const CartView = () => {
                     </div>
                     <div className="item-subtotal">₱{(item.price * item.quantity).toLocaleString()}</div>
                     <div className="item-remove">
-                      <button 
+                      <button
                         className="remove-btn"
                         onClick={() => removeItem(item.id)}
                         aria-label={`Remove ${item.name} from cart`}
@@ -197,19 +303,32 @@ const CartView = () => {
                   </div>
                 ))}
               </div>
+              {selectedItems.length > 0 && (
+                <button
+                  className="remove-selected-btn"
+                  onClick={removeSelectedItems}
+                >
+                  Remove Selected ({selectedItems.length})
+                </button>
+              )}
             </div>
             <div className="cart-totals-container">
               <div className="cart-totals">
                 <h2 className="totals-title">Cart Totals</h2>
-                <div className="totals-row">
-                  <span className="totals-label">Subtotal</span>
-                  <span className="totals-value">₱{subtotal.toLocaleString()}</span>
-                </div>
+                {selectedItems.length > 0 && (
+                  <div className="totals-row">
+                    <span className="totals-label">Subtotal</span>
+                    <span className="totals-value">₱{subtotal.toLocaleString()}</span>
+                  </div>
+                )}
                 <div className="shipping-section">
                   <div className="shipping-title">Shipping to:</div>
                   <div className="shipping-address">
-                    Purok 6 960-B RCES, Baan riverside. (Bgy. 19)<br />
-                    {address.city}, {address.country === "Philippines" ? "Mindanao" : ""}, {address.state} {address.zip}
+                    {address.barangay || address.city || address.province || address.country ? (
+                      `${address.barangay ? address.barangay + ', ' : ''}${address.city ? address.city + ', ' : ''}${address.province ? address.province + ', ' : ''}${address.country}`
+                    ) : (
+                      'No address set'
+                    )}
                   </div>
                   <button className="change-address-btn" onClick={toggleAddressForm}>
                     Change address
@@ -217,32 +336,19 @@ const CartView = () => {
                   <div className={`address-form-container ${isAddressFormOpen ? 'open' : 'closed'}`}>
                     <form className="address-form" onSubmit={handleAddressSubmit}>
                       <div className="form-group">
-                        <label htmlFor="country">Country / Region</label>
-                        <select
-                          id="country"
-                          name="country"
-                          value={address.country}
+                        <label htmlFor="barangay">Barangay</label>
+                        <input
+                          type="text"
+                          id="barangay"
+                          name="barangay"
+                          value={address.barangay}
                           onChange={handleAddressChange}
-                        >
-                          <option value="Philippines">Philippines</option>
-                          <option value="US">United States</option>
-                        </select>
+                          placeholder="Enter your barangay"
+                          required
+                        />
                       </div>
                       <div className="form-group">
-                        <label htmlFor="state">State / County</label>
-                        <select
-                          id="state"
-                          name="state"
-                          value={address.state}
-                          onChange={handleAddressChange}
-                        >
-                          {statesByCountry[address.country].map(state => (
-                            <option key={state} value={state}>{state}</option>
-                          ))}
-                        </select>
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="city">Town / City</label>
+                        <label htmlFor="city">City</label>
                         <input
                           type="text"
                           id="city"
@@ -250,17 +356,31 @@ const CartView = () => {
                           value={address.city}
                           onChange={handleAddressChange}
                           placeholder="Enter your city"
+                          required
                         />
                       </div>
                       <div className="form-group">
-                        <label htmlFor="zip">Postcode / ZIP code</label>
+                        <label htmlFor="province">Province</label>
                         <input
                           type="text"
-                          id="zip"
-                          name="zip"
-                          value={address.zip}
+                          id="province"
+                          name="province"
+                          value={address.province}
                           onChange={handleAddressChange}
-                          placeholder="Enter your ZIP code"
+                          placeholder="Enter your province"
+                          required
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="country">Country</label>
+                        <input
+                          type="text"
+                          id="country"
+                          name="country"
+                          value={address.country}
+                          onChange={handleAddressChange}
+                          placeholder="Enter your country"
+                          required
                         />
                       </div>
                       <div className="form-actions">
@@ -276,10 +396,12 @@ const CartView = () => {
                     </form>
                   </div>
                 </div>
-                <div className="totals-row grand-total">
-                  <span className="totals-label">Total</span>
-                  <span className="totals-value">₱{subtotal.toLocaleString()}</span>
-                </div>
+                {selectedItems.length > 0 && (
+                  <div className="totals-row grand-total">
+                    <span className="totals-label">Total</span>
+                    <span className="totals-value">₱{subtotal.toLocaleString()}</span>
+                  </div>
+                )}
                 <button className="checkout-button" onClick={handleProceedToCheckout}>
                   Proceed to checkout
                 </button>
