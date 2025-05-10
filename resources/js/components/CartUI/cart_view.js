@@ -25,26 +25,33 @@ const CartView = () => {
     const fetchCart = async () => {
       try {
         const response = await axios.get('/api/cart', {
-          headers: { Authorization: token }
+          headers: { Authorization: `Bearer ${token}` }
         });
-        const items = response.data.map(item => ({
-          id: item.product.id,
-          name: item.product.name,
-          price: parseFloat(item.product.price),
-          quantity: item.quantity,
-          image: item.product.image,
-          cartItemId: item.id
-        }));
-        setCartItems(items);
+        if (response.data.success) {
+          const items = response.data.data.map(item => ({
+            id: item.product.id,
+            name: item.product.name,
+            price: parseFloat(item.product.price),
+            quantity: item.quantity,
+            image: item.product.image,
+            cartItemId: item.id
+          }));
+          setCartItems(items);
+        }
       } catch (error) {
         console.error('Error fetching cart:', error);
+        if (error.response?.status === 401) {
+          localStorage.removeItem('authToken');
+          localStorage.removeItem('userRole');
+          navigate('/login');
+        }
       }
     };
 
     const fetchDefaultAddress = async () => {
       try {
         const response = await axios.get('/api/addresses', {
-          headers: { Authorization: token }
+          headers: { Authorization: `Bearer ${token}` }
         });
         if (response.data.success) {
           const defaultAddress = response.data.data.find(addr => addr.is_default) || response.data.data[0];
@@ -59,6 +66,11 @@ const CartView = () => {
         }
       } catch (error) {
         console.error('Error fetching address:', error);
+        if (error.response?.status === 401) {
+          localStorage.removeItem('authToken');
+          localStorage.removeItem('userRole');
+          navigate('/login');
+        }
       }
     };
 
@@ -77,7 +89,7 @@ const CartView = () => {
       newCart.forEach(item => {
         if (item.cartItemId) {
           axios.put(`/api/cart/${item.cartItemId}`, { quantity: item.quantity }, {
-            headers: { Authorization: token }
+            headers: { Authorization: `Bearer ${token}` }
           }).catch(error => console.error('Error updating cart:', error));
         }
       });
@@ -93,7 +105,7 @@ const CartView = () => {
     if (token) {
       const item = cartItems.find(i => i.id === itemId);
       axios
-        .delete(`/api/cart/${item.cartItemId}`, { headers: { Authorization: token } })
+        .delete(`/api/cart/${item.cartItemId}`, { headers: { Authorization: `Bearer ${token}` } })
         .then(() => {
           setCartItems(cartItems.filter(i => i.id !== itemId));
           setSelectedItems(selectedItems.filter(id => id !== itemId));
@@ -114,7 +126,7 @@ const CartView = () => {
         selectedItems.map(itemId => {
           const item = cartItems.find(i => i.id === itemId);
           return axios.delete(`/api/cart/${item.cartItemId}`, {
-            headers: { Authorization: token }
+            headers: { Authorization: `Bearer ${token}` }
           });
         })
       )
@@ -186,7 +198,7 @@ const CartView = () => {
           ...address,
           is_default: true
         }, {
-          headers: { Authorization: token }
+          headers: { Authorization: `Bearer ${token}` }
         });
         if (response.data.success) {
           setAddress(response.data.data);

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../../sass/components/payment.scss';
 import productImage from '../../../../public/images/tuf.svg';
 import gcashImage from '../../../../public/images/CashG.svg';
 import Header from '../Header/header';
 import { useNavigate, useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 const Payment = () => {
   const location = useLocation();
@@ -15,56 +16,162 @@ const Payment = () => {
     firstName: '',
     lastName: '',
     country: address.country || 'Philippines',
-    streetAddress: address.barangay || '',
-    townCity: address.city || '',
-    state: address.province || '',
+    barangay: address.barangay || '',
+    city: address.city || '',
+    province: address.province || '',
     mobilePhone: '',
-    orderNotes: ''
+    orderNotes: '',
+    address_id: address.id || null,
   });
 
   const [visibleSections, setVisibleSections] = useState({
     creditCard: false,
     cashOnDelivery: false,
-    gcash: false
+    gcash: false,
   });
 
   const [creditCardDetails, setCreditCardDetails] = useState({
     nameOnCard: '',
     cardNumber: '',
     expirationDate: '',
-    securityCode: ''
+    securityCode: '',
   });
+
+  const [gcashDetails, setGcashDetails] = useState({
+    accountName: '',
+    phoneNumber: '',
+  });
+
+  useEffect(() => {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      console.log('Token:', token); // Debug token
+      const fetchProfile = async () => {
+        try {
+          const response = await axios.get('http://localhost:8000/api/profile', {
+            headers: { Authorization: `Bearer ${token}` },
+          });
+          if (response.data.success && response.data.data) {
+            setBillingDetails((prev) => ({
+              ...prev,
+              firstName: response.data.data.first_name || prev.firstName,
+              lastName: response.data.data.last_name || prev.lastName,
+              mobilePhone: response.data.data.phone || prev.mobilePhone,
+            }));
+          } else {
+            console.warn('Profile data not found or success is false:', response.data);
+          }
+        } catch (error) {
+          console.error('Error fetching profile:', error.response?.data || error.message);
+          if (error.response?.status === 401) {
+            localStorage.removeItem('authToken');
+            alert('Session expired. Please log in again.');
+            navigate('/login');
+          }
+        }
+      };
+      fetchProfile();
+    } else {
+      alert('Please log in to proceed with checkout.');
+      navigate('/login');
+    }
+  }, [navigate]);
 
   const handleBillingChange = (e) => {
     const { name, value } = e.target;
-    setBillingDetails(prev => ({ ...prev, [name]: value }));
+    setBillingDetails((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleCreditCardChange = (e) => {
     const { name, value } = e.target;
-    setCreditCardDetails(prev => ({ ...prev, [name]: value }));
+    setCreditCardDetails((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleGcashChange = (e) => {
+    const { name, value } = e.target;
+    setGcashDetails((prev) => ({ ...prev, [name]: value }));
   };
 
   const toggleSection = (section) => {
-    setVisibleSections(prev => {
+    setVisibleSections((prev) => {
       const newState = {
         creditCard: false,
         cashOnDelivery: false,
-        gcash: false
+        gcash: false,
       };
-      
       if (!prev[section]) {
         newState[section] = true;
       }
-      
       return newState;
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Order placed:', { billingDetails, visibleSections, creditCardDetails, cartItems });
-    navigate('/complete');
+
+    const token = localStorage.getItem('authToken');
+    if (!token) {
+      alert('Please log in to place an order');
+      navigate('/login');
+      return;
+    }
+
+    let paymentMethod = '';
+    let paymentDetails = {};
+
+    if (visibleSections.creditCard) {
+      paymentMethod = 'credit_card';
+      paymentDetails = creditCardDetails;
+    } else if (visibleSections.cashOnDelivery) {
+      paymentMethod = 'cod';
+      paymentDetails = {};
+    } else if (visibleSections.gcash) {
+      paymentMethod = 'gcash';
+      paymentDetails = gcashDetails;
+    } else {
+      alert('Please select a payment method');
+      return;
+    }
+
+    const orderData = {
+      billingDetails: {
+        firstName: billingDetails.firstName,
+        lastName: billingDetails.lastName,
+        country: billingDetails.country,
+        barangay: billingDetails.barangay,
+        city: billingDetails.city,
+        province: billingDetails.province,
+        mobilePhone: billingDetails.mobilePhone,
+        orderNotes: billingDetails.orderNotes,
+        address_id: billingDetails.address_id,
+      },
+      cartItems: cartItems.map((item) => ({
+        id: item.id,
+        quantity: item.quantity,
+        price: item.price,
+      })),
+      payment_method: paymentMethod,
+      payment_details: paymentDetails,
+    };
+
+    try {
+      const response = await axios.post('http://localhost:8000/api/orders', orderData, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (response.data.success) {
+        navigate('/complete', { state: { order: response.data.data } });
+      } else {
+        alert('Failed to place order: ' + response.data.message);
+      }
+    } catch (error) {
+      if (error.response?.status === 401) {
+        localStorage.removeItem('authToken');
+        alert('Session expired. Please log in again.');
+        navigate('/login');
+      } else {
+        alert('Error placing order: ' + (error.response?.data?.message || error.message));
+      }
+    }
   };
 
   const orderSummary = {
@@ -73,11 +180,11 @@ const Payment = () => {
       name: 'ASUS TUF GAMING A14',
       price: 2620,
       quantity: 1,
-      image: productImage
+      image: productImage,
     }],
     shippingFee: 80,
     subtotal: subtotal || 2620,
-    total: (subtotal || 2620) + 80
+    total: (subtotal || 2620) + 80,
   };
 
   return (
@@ -131,12 +238,12 @@ const Payment = () => {
               </div>
 
               <div className="payment-method-form-field">
-                <label htmlFor="streetAddress">Barangay</label>
+                <label htmlFor="barangay">Barangay</label>
                 <input
                   type="text"
-                  id="streetAddress"
-                  name="streetAddress"
-                  value={billingDetails.streetAddress}
+                  id="barangay"
+                  name="barangay"
+                  value={billingDetails.barangay}
                   onChange={handleBillingChange}
                   placeholder="Barangay"
                   required
@@ -144,12 +251,12 @@ const Payment = () => {
               </div>
 
               <div className="payment-method-form-field">
-                <label htmlFor="townCity">City</label>
+                <label htmlFor="city">City</label>
                 <input
                   type="text"
-                  id="townCity"
-                  name="townCity"
-                  value={billingDetails.townCity}
+                  id="city"
+                  name="city"
+                  value={billingDetails.city}
                   onChange={handleBillingChange}
                   placeholder="City"
                   required
@@ -157,12 +264,12 @@ const Payment = () => {
               </div>
 
               <div className="payment-method-form-field">
-                <label htmlFor="state">Province</label>
+                <label htmlFor="province">Province</label>
                 <input
                   type="text"
-                  id="state"
-                  name="state"
-                  value={billingDetails.state}
+                  id="province"
+                  name="province"
+                  value={billingDetails.province}
                   onChange={handleBillingChange}
                   placeholder="Province"
                   required
@@ -281,8 +388,36 @@ const Payment = () => {
                   </button>
                   {visibleSections.gcash && (
                     <div className="payment-method-gcash">
-                      <div className="payment-method-gcash-qr">
-                        <img src={gcashImage} alt="GCash QR Code" />
+                      <div className="payment-method-gcash-container">
+                        <div className="payment-method-gcash-form">
+                          <div className="payment-method-form-field">
+                            <label htmlFor="accountName">Account Name</label>
+                            <input
+                              type="text"
+                              id="accountName"
+                              name="accountName"
+                              value={gcashDetails.accountName}
+                              onChange={handleGcashChange}
+                              placeholder="Account Name"
+                              required
+                            />
+                          </div>
+                          <div className="payment-method-form-field">
+                            <label htmlFor="phoneNumber">Phone Number</label>
+                            <input
+                              type="tel"
+                              id="phoneNumber"
+                              name="phoneNumber"
+                              value={gcashDetails.phoneNumber}
+                              onChange={handleGcashChange}
+                              placeholder="Phone Number (e.g., 09123456789)"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div className="payment-method-gcash-qr">
+                          <img src={gcashImage} alt="GCash QR Code" />
+                        </div>
                       </div>
                     </div>
                   )}

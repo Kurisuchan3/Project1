@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "../../../sass/components/productgrid.scss";
-import ProdModal from '../ModalUI/ProdModal'; // Changed to ProdModal
+import ProdModal from '../ModalUI/ProdModal';
 import axios from 'axios';
 
 const Grid = () => {
@@ -35,13 +35,13 @@ const Grid = () => {
     if (token) {
       axios
         .post('/api/cart', { product_id: product.id, quantity: 1 }, {
-          headers: { Authorization: token }
+          headers: { Authorization: `Bearer ${token}` }
         })
         .then(() => {
           alert(`${product.name} added to cart!`);
           window.dispatchEvent(new Event('storage'));
         })
-        .catch((error) => console.error('Error adding to cart:', error));
+        .catch((error) => console.error('Error adding to cart:', error.response?.data || error.message));
     } else {
       setGuestCart((prevCart) => {
         const existingItem = prevCart.find((item) => item.id === product.id);
@@ -125,7 +125,7 @@ const Grid = () => {
         <ProdModal
           product={selectedProduct}
           onClose={closeModal}
-          addToCart={addToCart} // Pass addToCart to ProdModal
+          addToCart={addToCart}
         />
       )}
     </section>

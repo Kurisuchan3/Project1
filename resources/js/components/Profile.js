@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import '../../sass/components/Profile.scss';
-import Header from '../components/Header/header';
+import Header from './Header/header';
 import SideMenuProfile from './SideMenuProfile/sidemenuprofile';
 
 const Profile = () => {
@@ -24,12 +24,13 @@ const Profile = () => {
 
     if (!token) {
       setError("You are not logged in. Please log in first.");
+      navigate('/login');
       return;
     }
 
     try {
       const response = await axios.get("http://localhost:8000/api/profile", {
-        headers: { Authorization: token },
+        headers: { Authorization: `Bearer ${token}` },
       });
       if (response.data.success) {
         console.log("Fetched profile data:", response.data.data);
@@ -51,13 +52,15 @@ const Profile = () => {
         setError("Profile not found.");
       }
     } catch (err) {
+      console.error("Error fetching profile:", err.response?.data || err.message);
       if (err.response?.status === 401) {
         setError("Unauthorized. Please log in again.");
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("userRole");
         navigate('/login');
       } else {
         setError("Failed to load profile.");
       }
-      console.error("Error fetching profile:", err);
     }
   };
 
@@ -100,7 +103,7 @@ const Profile = () => {
     try {
       const token = localStorage.getItem("authToken");
       const data = new FormData();
-      data.append('_method', 'PUT'); // Spoof PUT request
+      data.append('_method', 'PUT');
       data.append('username', formData.username || '');
       data.append('email', formData.email || '');
       data.append('first_name', formData.first_name || '');
@@ -120,7 +123,7 @@ const Profile = () => {
 
       const response = await axios.post("http://localhost:8000/api/profile", data, {
         headers: {
-          Authorization: token,
+          Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
         },
       });
@@ -128,7 +131,6 @@ const Profile = () => {
       if (response.data.success) {
         console.log("Profile update response:", response.data);
         setProfile(response.data.data);
-        // Update formData with the server's response, but retain file as null
         setFormData({ ...response.data.data, profile_picture: null, password: '' });
         if (response.data.data.profile_picture) {
           setPreviewImage(`/storage/${response.data.data.profile_picture}`);
@@ -137,7 +139,6 @@ const Profile = () => {
         setError("");
         setValidationErrors({});
         setShowPasswordFields(false);
-        // Refresh profile to ensure UI reflects backend
         await fetchProfile();
       } else {
         setError(response.data.message || "Failed to update profile.");

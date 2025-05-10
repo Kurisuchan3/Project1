@@ -87,7 +87,9 @@
           &[for="cardNumber"],
           &[for="expirationDate"],
           &[for="securityCode"],
-          &[for="nameOnCard"] {
+          &[for="nameOnCard"],
+          &[for="accountName"],
+          &[for="phoneNumber"] {
             &:after {
               content: '*';
               color: #ff4444;
@@ -238,13 +240,59 @@
             border-radius: 8px;
             border: 1px solid #0066cc;
 
-            .payment-method-gcash-qr {
-              img {
-                width: 200px;
-                height: auto;
-                background: transparent;
-                margin: 0 auto;
-                display: block;
+            .payment-method-gcash-container {
+              display: flex;
+              gap: 20px;
+              align-items: flex-start;
+
+              @media (max-width: 768px) {
+                flex-direction: column;
+              }
+
+              .payment-method-gcash-form {
+                flex: 1;
+
+                .payment-method-form-field {
+                  margin-bottom: 20px;
+
+                  label {
+                    display: block;
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                    color: #666;
+                    font-weight: 500;
+                  }
+
+                  input {
+                    width: 100%;
+                    padding: 12px 15px;
+                    font-size: 15px;
+                    border: 1px solid #e0e0e0;
+                    border-radius: 6px;
+                    color: #333;
+                    transition: border-color 0.2s;
+
+                    &:focus {
+                      outline: none;
+                      border-color: #0066cc;
+                    }
+
+                    &::placeholder {
+                      color: #bbb;
+                    }
+                  }
+                }
+              }
+
+              .payment-method-gcash-qr {
+                flex: 0 0 auto;
+
+                img {
+                  width: 200px;
+                  height: auto;
+                  background: transparent;
+                  display: block;
+                }
               }
             }
           }

@@ -2,22 +2,12 @@ import React, { useState } from 'react';
 import "./../../../sass/components/ProdModal.scss";
 import { IconStarFilled } from '@tabler/icons-react';
 
-// Placeholder imports for reviews (you can replace these with dynamic data later)
-import Avatar1 from '../../../../public/images/tuf.svg';
-import Avatar2 from '../../../../public/images/tuf.svg';
-import Avatar3 from '../../../../public/images/tuf.svg';
-import ReviewImage from '../../../../public/images/tuf.svg';
-
 const ProdModal = ({ product, onClose, addToCart }) => {
   if (!product) return null;
 
-  // State for quantity selector
   const [quantity, setQuantity] = useState(1);
-
-  // Get stock quantity from the inventory relationship
   const stockQuantity = product.inventory?.stock_quantity || 0;
 
-  // Handle quantity increment/decrement
   const handleIncrement = () => {
     if (quantity < stockQuantity) {
       setQuantity(quantity + 1);
@@ -30,14 +20,13 @@ const ProdModal = ({ product, onClose, addToCart }) => {
     }
   };
 
-  // Static reviews (you can make this dynamic later by fetching from an API)
   const reviews = [
     {
       id: 1,
       name: "Kaan, ju",
       rating: 3,
       text: "I bought a laptop from this site and it arrived in just a few days. It runs fast and looks great. Really happy with the quality and service!",
-      avatar: Avatar1,
+      avatar: '/images/tuf.svg',
       date: "2 weeks ago",
       hasImage: true
     },
@@ -46,7 +35,7 @@ const ProdModal = ({ product, onClose, addToCart }) => {
       name: "Christine, Medo",
       rating: 3,
       text: "The keyboard I ordered feels really good to type on. It's quiet and comfortable. Great for both work and gaming.",
-      avatar: Avatar2,
+      avatar: '/images/tuf.svg',
       date: "1 month ago",
       hasImage: false
     },
@@ -55,7 +44,7 @@ const ProdModal = ({ product, onClose, addToCart }) => {
       name: "Jhon, Vand",
       rating: 3,
       text: "I needed a new mouse for my setup and found the perfect one here. It's smooth, fits well in my hand, and works great with my laptop.",
-      avatar: Avatar3,
+      avatar: '/images/tuf.svg',
       date: "3 weeks ago",
       hasImage: false
     }
@@ -75,12 +64,9 @@ const ProdModal = ({ product, onClose, addToCart }) => {
     );
   };
 
-  // Handle specifications as a string and split it into parts
   const specsArray = product.specifications && typeof product.specifications === 'string'
     ? product.specifications.split(',').map(item => item.trim())
     : [];
-
-  // Map the split specifications to the expected fields
   const specs = {
     processor: specsArray[0] || 'N/A',
     ram: specsArray[1] || 'N/A',
@@ -97,7 +83,6 @@ const ProdModal = ({ product, onClose, addToCart }) => {
         </button>
         
         <div className="lapnix-modal-content">
-          {/* Product Image and Basic Info */}
           <div className="lapnix-product-header">
             <div className="lapnix-product-image-container">
               <img src={product.image} alt={product.name} />
@@ -106,20 +91,17 @@ const ProdModal = ({ product, onClose, addToCart }) => {
             <div className="lapnix-product-basic-info">
               <h1 className="lapnix-product-name">{product.name}</h1>
               
-              {/* Rating above price */}
               <div className="lapnix-product-rating">
-                {renderStars(4)} {/* You can make this dynamic later */}
-                <span className="lapnix-rating-count">4.7 (85 reviews)</span> {/* Make dynamic later */}
+                {renderStars(4)}
+                <span className="lapnix-rating-count">4.7 (85 reviews)</span>
               </div>
               
               <div className="lapnix-price-section">
                 <span className="lapnix-current-price">
                   ₱{parseFloat(product.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}
                 </span>
-                {/* Remove originalPrice since it's not in the database */}
               </div>
 
-              {/* Availability (Stock Quantity) */}
               <div className="lapnix-availability-section">
                 <span className="lapnix-availability-label">Availability: </span>
                 <span className="lapnix-availability-value">
@@ -127,7 +109,6 @@ const ProdModal = ({ product, onClose, addToCart }) => {
                 </span>
               </div>
 
-              {/* Quantity Selector */}
               <div className="lapnix-quantity-selector">
                 <span className="lapnix-quantity-label">Quantity: </span>
                 <button
@@ -150,7 +131,7 @@ const ProdModal = ({ product, onClose, addToCart }) => {
               <div className="lapnix-action-buttons">
                 <button
                   className="lapnix-add-to-cart-btn"
-                  onClick={() => addToCart(product)} // Use addToCart with quantity
+                  onClick={() => addToCart({ ...product, quantity })}
                   disabled={stockQuantity === 0}
                 >
                   Add to cart
@@ -165,9 +146,7 @@ const ProdModal = ({ product, onClose, addToCart }) => {
             </div>
           </div>
           
-          {/* Product Details and Reviews */}
           <div className="lapnix-product-details">
-            {/* Description Section */}
             {product.description && (
               <div className="lapnix-description-section">
                 <h3 className="lapnix-section-title">Description</h3>
@@ -175,7 +154,6 @@ const ProdModal = ({ product, onClose, addToCart }) => {
               </div>
             )}
 
-            {/* Specifications Section */}
             <div className="lapnix-specs-section">
               <h3 className="lapnix-section-title">Specifications</h3>
               <div className="lapnix-specs-grid">
@@ -202,7 +180,6 @@ const ProdModal = ({ product, onClose, addToCart }) => {
               </div>
             </div>
             
-            {/* Reviews Section */}
             <div className="lapnix-reviews-section">
               <h3 className="lapnix-section-title">Reviews and ratings</h3>
               <div className="lapnix-rating-summary">
@@ -229,7 +206,7 @@ const ProdModal = ({ product, onClose, addToCart }) => {
                     <p className="lapnix-review-text">{review.text}</p>
                     {review.hasImage && (
                       <div className="lapnix-review-image-container">
-                        <img src={ReviewImage} alt="Review" className="lapnix-review-image" />
+                        <img src='/images/tuf.svg' alt="Review" className="lapnix-review-image" />
                       </div>
                     )}
                   </div>

@@ -9,8 +9,10 @@ class StatusController extends Controller
 {
     public function index()
     {
-        // Retrieve all statuses and return as JSON
         $statuses = Status::all();
-        return response()->json($statuses);
+        return response()->json([
+            'success' => true,
+            'data' => $statuses,
+        ]);
     }
 }

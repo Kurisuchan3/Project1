@@ -1,40 +1,60 @@
-.orders-container {
-  h2 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 16px;
+.orders-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  background: #f8f8f8;
+
+  .orders-content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+
+    @media (max-width: 768px) {
+      padding: 20px 15px;
+    }
   }
 
-  .ant-table {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .orders-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+  }
 
-    .ant-table-thead > tr > th {
-      background-color: #f1f3f5;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: #333;
-    }
+  .orders-list {
+    .orders-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 
-    .ant-table-tbody > tr > td {
-      border-bottom: 1px solid #e9ecef;
-    }
+      .orders-info {
+        p {
+          margin: 0 0 5px;
+          font-size: 14px;
+          color: #333;
+        }
+      }
 
-    .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
-      background-color: #f8f9fa;
-    }
+      .orders-view-details {
+        padding: 10px 20px;
+        background: #0066cc;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.2s;
 
-    .status {
-      padding: 5px 10px;
-      border-radius: 12px;
-      font-size: 12px;
-      font-weight: 500;
-
-      &.completed {
-        background-color: #e6f4ea;
-        color: #2e7d32;
+        &:hover {
+          background: #004499;
+        }
       }
     }
   }

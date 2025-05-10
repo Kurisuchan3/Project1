@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Profile; // Add this
+use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -31,10 +31,9 @@ class AuthController extends Controller
             'roles_id' => $request->input('roles_id', 2),
         ]);
 
-        // Create a profile for the new user
         Profile::create([
             'user_id' => $user->user_id,
-            'first_name' => '', // Default empty, user can update later
+            'first_name' => '',
             'last_name' => '',
             'middle_initial' => null,
             'birthdate' => null,
@@ -51,7 +50,6 @@ class AuthController extends Controller
         ], 201);
     }
 
-    // Rest of the methods (login, logout, userProfile) remain unchanged
     public function login(Request $request)
     {
         $request->validate([
@@ -77,9 +75,8 @@ class AuthController extends Controller
     public function logout(Request $request)
     {
         $user = $request->user();
-
         if ($user) {
-            $user->tokens()->delete();
+            $user->token()->revoke(); // Revoke the current token for Passport
             return response()->json(['message' => 'Logged out successfully!'], 200);
         }
 
@@ -88,6 +85,9 @@ class AuthController extends Controller
 
     public function userProfile(Request $request)
     {
-        return response()->json(['user' => $request->user()]);
+        return response()->json([
+            'success' => true,
+            'data' => $request->user()
+        ]);
     }
 }

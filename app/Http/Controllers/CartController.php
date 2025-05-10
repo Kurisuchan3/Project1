@@ -12,11 +12,16 @@ class CartController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $cartItems = $user 
-            ? CartItem::where('user_id', $user->user_id)->with('product')->get()
-            : [];
+        if (!$user) {
+            return response()->json(['success' => false, 'message' => 'Unauthenticated. Please provide a valid API token.'], 401);
+        }
 
-        return response()->json($cartItems);
+        $cartItems = CartItem::where('user_id', $user->user_id)->with('product')->get();
+
+        return response()->json([
+            'success' => true,
+            'data' => $cartItems,
+        ], 200);
     }
 
     public function add(Request $request)

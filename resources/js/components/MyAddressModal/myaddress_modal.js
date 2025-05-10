@@ -37,6 +37,13 @@ const MyAddressModal = ({ isOpen, onClose, address, onSave }) => {
     e.preventDefault();
     const token = localStorage.getItem('authToken');
 
+    if (!token) {
+      setError('You are not logged in. Please log in first.');
+      return;
+    }
+
+    console.log('Token for address save:', token); // Debug token
+
     try {
       let response;
       if (address) {
@@ -45,13 +52,13 @@ const MyAddressModal = ({ isOpen, onClose, address, onSave }) => {
           `http://localhost:8000/api/addresses/${address.address_id}`,
           formData,
           {
-            headers: { Authorization: token },
+            headers: { Authorization: `Bearer ${token}` },
           }
         );
       } else {
         // Add new address
         response = await axios.post('http://localhost:8000/api/addresses', formData, {
-          headers: { Authorization: token },
+          headers: { Authorization: `Bearer ${token}` },
         });
       }
 
@@ -63,6 +70,7 @@ const MyAddressModal = ({ isOpen, onClose, address, onSave }) => {
       }
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to save address.');
+      console.error('Error saving address:', err.response?.data || err.message);
     }
   };
 

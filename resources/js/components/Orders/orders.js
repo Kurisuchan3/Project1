@@ -1,111 +1,80 @@
-import React, { useState } from 'react';
-import { Layout, Table } from 'antd';
+import React, { useState, useEffect } from 'react';
 import '../../../sass/components/orders.scss';
+import Header from '../Header/header';
 import OrdersModal from '../OrderModal/ordersmodal';
-import TopNav from '../topnav';
-import AdminSideMenu from '../admin-sidemenu';
-
-const { Header, Sider, Content } = Layout;
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Orders = () => {
-  const ordersData = [
-    {
-      id: 1,
-      image: '/images/tuf.svg',
-      itemName: 'ACER NITRO LAPTOP 15',
-      userName: 'Christian Pearl M.',
-      lastName: 'Ebit',
-      email: 'kurtchris123@gmail.com',
-      phone: '(+63) 977 818 6065',
-      address: 'P-1, Bray. Brongao, Butuan City, Agusan Del Norte',
-      country: 'Philippines',
-      paymentMethod: 'Cash on Delivery',
-      subtotal: '30,050',
-      total: '30,050',
-      status: 'Completed',
-    },
-    {
-      id: 2,
-      image: '/images/tuf.svg',
-      itemName: 'Item 2',
-      userName: 'Jane Doe',
-      lastName: 'Ebit',
-      email: 'example@gmail.com',
-      phone: '(+63) 380-1801',
-      address: 'P-1, Bray. Brongao, Butuan City, Agusan Del Norte',
-      country: 'Philippines',
-      paymentMethod: 'Pay on Arrival',
-      subtotal: '30,050',
-      total: '30,050',
-      status: 'Completed',
-    },
-  ];
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [orders, setOrders] = useState([]);
   const [selectedOrder, setSelectedOrder] = useState(null);
+  const navigate = useNavigate();
 
-  const handleRowClick = (order) => {
+  useEffect(() => {
+    const fetchOrders = async () => {
+      const token = localStorage.getItem('authToken');
+      if (!token) {
+        alert('Please log in to view orders');
+        navigate('/login');
+        return;
+      }
+
+      try {
+        const response = await axios.get('http://localhost:8000/api/orders', {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        if (response.data.success) {
+          setOrders(response.data.data);
+        }
+      } catch (error) {
+        console.error('Error fetching orders:', error);
+        if (error.response?.status === 401) {
+          localStorage.removeItem('authToken');
+          localStorage.removeItem('userRole');
+          alert('Session expired. Please log in again.');
+          navigate('/login');
+        }
+      }
+    };
+    fetchOrders();
+  }, [navigate]);
+
+  const openModal = (order) => {
     setSelectedOrder(order);
-    setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
     setSelectedOrder(null);
   };
 
-  const columns = [
-    {
-      title: "Image",
-      dataIndex: "image",
-      key: "image",
-      render: (image) => (
-        <img src={image} alt="item" style={{ width: 50, height: "auto" }} />
-      ),
-    },
-    { title: "Item Name", dataIndex: "itemName", key: "itemName" },
-    { title: "User Name", dataIndex: "userName", key: "userName" },
-    { title: "Email", dataIndex: "email", key: "email" },
-    {
-      title: "Status",
-      dataIndex: "status",
-      key: "status",
-      render: (status) => (
-        <span className={`status ${status.toLowerCase()}`}>{status}</span>
-      ),
-    },
-  ];
-
   return (
-    <Layout style={{ minHeight: "100vh" }}>
-      <Header style={{ padding: 0, background: "#008cff", position: "fixed", width: "100%", zIndex: 1000 }}>
-        <TopNav />
-      </Header>
-      <Layout style={{ marginTop: 64 }}>
-        <Sider width={200}>
-          <AdminSideMenu />
-        </Sider>
-        <Layout>
-          <Content style={{ margin: "24px 16px", padding: 24, background: "#fff", minHeight: 280 }}>
-            <div className="orders-container">
-              <h2>Orders</h2>
-              <Table
-                columns={columns}
-                dataSource={ordersData}
-                pagination={{ pageSize: 5 }}
-                onRow={(record) => ({
-                  onClick: () => handleRowClick(record),
-                })}
-              />
-
-              {isModalOpen && selectedOrder && (
-                <OrdersModal order={selectedOrder} onClose={closeModal} />
-              )}
-            </div>
-          </Content>
-        </Layout>
-      </Layout>
-    </Layout>
+    <div className="orders-wrapper">
+      <Header />
+      <div className="orders-content">
+        <h1 className="orders-title">All Orders</h1>
+        <div className="orders-list">
+          {orders.length === 0 ? (
+            <p>No orders found.</p>
+          ) : (
+            orders.map((order) => (
+              <div className="orders-item" key={order.id}>
+                <div className="orders-info">
+                  <p>Order #{order.id}</p>
+                  <p>User ID: {order.user_id}</p>
+                  <p>Date: {new Date(order.created_at).toLocaleDateString()}</p>
+                  <p>Total: ₱{order.total.toLocaleString()}</p>
+                  <p>Status: {order.status.status_name}</p>
+                </div>
+                <button className="orders-view-details" onClick={() => openModal(order)}>
+                  View Details
+                </button>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
+      {selectedOrder && <OrdersModal order={selectedOrder} onClose={closeModal} />}
+    </div>
   );
 };
 

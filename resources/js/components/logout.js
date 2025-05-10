@@ -12,7 +12,7 @@ const useLogout = () => {
 
       if (!authToken) {
         message.warning("You are already logged out.");
-        navigate("/homepagecontent"); // Redirect to homepagecontent
+        navigate("/homepagecontent");
         return;
       }
 
@@ -20,19 +20,24 @@ const useLogout = () => {
         "/api/logout",
         {},
         {
-          headers: { Authorization: authToken },
+          headers: { Authorization: `Bearer ${authToken}` },
         }
       );
       console.log("Logout response:", response.data);
 
       localStorage.removeItem("authToken");
       localStorage.removeItem("userRole");
+      localStorage.removeItem("guestCart");
       message.success("Logout successful!");
-      navigate("/homepagecontent"); // Redirect to homepagecontent
+      navigate("/homepagecontent");
     } catch (error) {
       console.error("Logout failed:", error.response?.data);
       message.error("Logout failed. Please try again.");
-      navigate("/homepagecontent"); // Redirect even on error
+      if (error.response?.status === 401) {
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("userRole");
+        navigate("/homepagecontent");
+      }
     }
   };
 

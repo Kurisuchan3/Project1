@@ -18,7 +18,7 @@ const Login = () => {
 
     if (token) {
       axios
-        .get("/api/user", { headers: { Authorization: token } })
+        .get("/api/user", { headers: { Authorization: `Bearer ${token}` } })
         .then((response) => {
           if (isMounted) {
             console.log("Token validated:", response.data);
@@ -59,14 +59,14 @@ const Login = () => {
         throw new Error("Authentication token not received.");
       }
 
-      const token = `Bearer ${response.data.token}`;
+      const token = response.data.token; // Store raw token
       localStorage.setItem("authToken", token);
 
       const role = parseInt(response.data.user.roles_id, 10);
       localStorage.setItem("userRole", role);
 
       // Set default header for future calls
-      axios.defaults.headers.common["Authorization"] = token;
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
       message.success("Login successful!");
       navigate(role === 1 ? "/admindashboard" : "/homepagecontent");

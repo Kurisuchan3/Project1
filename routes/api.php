@@ -12,6 +12,7 @@ use App\Http\Controllers\SubcategoryController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\OrderController;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -41,11 +42,13 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/cart/sync', [CartController::class, 'syncGuestCart']);
     Route::put('/cart/{id}', [CartController::class, 'update']);
     Route::delete('/cart/{id}', [CartController::class, 'remove']);
-
-    // Address routes
     Route::get('/addresses', [AddressController::class, 'index']);
     Route::post('/addresses', [AddressController::class, 'store']);
     Route::put('/addresses/{address_id}', [AddressController::class, 'update']);
     Route::delete('/addresses/{address_id}', [AddressController::class, 'destroy']);
     Route::post('/addresses/{address_id}/set-default', [AddressController::class, 'setDefault']);
+    Route::get('/orders', [OrderController::class, 'index']);
+    Route::post('/orders', [OrderController::class, 'store']);
+    Route::get('/orders/{id}', [OrderController::class, 'show']);
+    Route::put('/orders/{id}/status', [OrderController::class, 'updateStatus']);
 });

@@ -1,123 +1,60 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import '../../../sass/components/mypurchase_modal.scss';
-import AsusImage from '../../../../public/images/Asus ROG Zephyrus.svg';
-import MacBookImage from '../../../../public/images/Apple MacBook Pro M2.svg';
 
-const MyPurchaseModal = ({ isOpen, onClose, purchase }) => {
-    const [formData, setFormData] = useState({
-      firstName: '',
-      lastName: '',
-      phoneNumber: '',
-      email: '',
-      barangay: '',
-      city: '',
-      province: '',
-      country: 'Philippines',
-      orderNote: '',
-      otherInfo: '',
-      orderStatus: 'Delivered',
-      paymentMethod: 'Credit Card',
-    });
-  
-    useEffect(() => {
-      if (purchase) {
-        setFormData({
-          firstName: 'John',
-          lastName: 'Doe',
-          phoneNumber: '123-456-7890',
-          email: 'john.doe@example.com',
-          barangay: 'Sample Barangay',
-          city: 'Sample City',
-          province: 'Sample Province',
-          country: 'Philippines',
-          orderNote: 'Handle with care',
-          otherInfo: 'No special instructions',
-          orderStatus: purchase.status,
-          paymentMethod: 'Credit Card',
-        });
-      }
-    }, [purchase]);
-  
-    if (!isOpen) return null;
-  
-    return (
-      <div className="modal-overlay" onClick={onClose}>
-        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-          <button className="modal-close" onClick={onClose}>
-            ✕
-          </button>
-          <h2>Order Details</h2>
-          <form>
-            <div className="modal-field">
-              <label>First Name</label>
-              <input type="text" value={formData.firstName} readOnly />
-            </div>
-            <div className="modal-field">
-              <label>Last Name</label>
-              <input type="text" value={formData.lastName} readOnly />
-            </div>
-            <div className="modal-field">
-              <label>Phone Number</label>
-              <input type="text" value={formData.phoneNumber} readOnly />
-            </div>
-            <div className="modal-field">
-              <label>Email</label>
-              <input type="email" value={formData.email} readOnly />
-            </div>
-            <div className="modal-field">
-              <label>Barangay</label>
-              <input type="text" value={formData.barangay} readOnly />
-            </div>
-            <div className="modal-field">
-              <label>City</label>
-              <input type="text" value={formData.city} readOnly />
-            </div>
-            <div className="modal-field">
-              <label>Province</label>
-              <input type="text" value={formData.province} readOnly />
-            </div>
-            <div className="modal-field">
-              <label>Country</label>
-              <input type="text" value={formData.country} readOnly className="readonly-input" />
-            </div>
-            <div className="modal-field">
-              <label>Order Note (Optional)</label>
-              <input type="text" value={formData.orderNote} readOnly />
-            </div>
-            <div className="modal-field">
-              <label>Other Information</label>
-              <input type="text" value={formData.otherInfo} readOnly />
-            </div>
-            <div className="modal-field">
-              <label>Order Status</label>
-              <input type="text" value={formData.orderStatus} readOnly />
-            </div>
-            <div className="modal-field">
-              <label>Payment Method</label>
-              <input type="text" value={formData.paymentMethod} readOnly />
-            </div>
-            <h3>Order Summary</h3>
-            {purchase?.products.map((product, index) => (
-              <div key={index} className="order-summary">
-                <div className="summary-image">
-                  <img src={product.image} alt={product.product_name} />
-                </div>
-                <div className="summary-details">
-                  <p className="product-name">{product.product_name}</p>
-                  <p>Order Date: {purchase.order_date}</p>
-                  <p>Price: ${product.price.toFixed(2)}</p>
-                  <p>
-                    Status: <span className={`status-${purchase.status.toLowerCase()}`}>{purchase.status}</span>
-                  </p>
-                </div>
+const MyPurchaseModal = ({ order, onClose }) => {
+  return (
+    <div className="mypurchase-modal-overlay">
+      <div className="mypurchase-modal-content">
+        <button className="mypurchase-modal-close" onClick={onClose}>×</button>
+        <h2 className="mypurchase-modal-title">Order Details #{order.id}</h2>
+        <div className="mypurchase-modal-section">
+          <h3>Items</h3>
+          {order.orderItems.map((item) => (
+            <div className="mypurchase-modal-item" key={item.id}>
+              <img src={item.product.image || '/images/tuf.svg'} alt={item.product.name} className="mypurchase-modal-product-image" />
+              <div className="mypurchase-modal-product-info">
+                <p>{item.product.name}</p>
+                <p>Qty: {item.quantity}</p>
+                <p>Price: ₱{item.price.toLocaleString()}</p>
               </div>
-            ))}
-          </form>
-          <button className="modal-close-btn" onClick={onClose}>Close</button>
+            </div>
+          ))}
+        </div>
+        <div className="mypurchase-modal-section">
+          <h3>Shipping Address</h3>
+          <p>{order.barangay}, {order.city}, {order.province}, {order.country}</p>
+        </div>
+        <div className="mypurchase-modal-section">
+          <h3>Payment Method</h3>
+          <p>{order.paymentDetail.payment_method === 'credit_card' ? 'Credit Card' : order.paymentDetail.payment_method === 'cod' ? 'Cash on Delivery' : 'GCash'}</p>
+          {order.paymentDetail.details && (
+            <div>
+              {order.paymentDetail.payment_method === 'credit_card' && (
+                <>
+                  <p>Name on Card: {order.paymentDetail.details.nameOnCard}</p>
+                  <p>Card Number: ****{order.paymentDetail.details.cardNumber.slice(-4)}</p>
+                </>
+              )}
+              {order.paymentDetail.payment_method === 'gcash' && (
+                <>
+                  <p>Account Name: {order.paymentDetail.details.accountName}</p>
+                  <p>Phone Number: {order.paymentDetail.details.phoneNumber}</p>
+                </>
+              )}
+            </div>
+          )}
+        </div>
+        <div className="mypurchase-modal-section">
+          <h3>Order Summary</h3>
+          <p>Subtotal: ₱{order.subtotal.toLocaleString()}</p>
+          <p>Shipping Fee: ₱{order.shipping_fee.toLocaleString()}</p>
+          <p>Total: ₱{order.total.toLocaleString()}</p>
+          <p>Status: {order.status.status_name}</p>
+          <p>Order Date: {new Date(order.created_at).toLocaleDateString()}</p>
         </div>
       </div>
-    );
-  };
-  
-  export default MyPurchaseModal;
+    </div>
+  );
+};
+
+export default MyPurchaseModal;

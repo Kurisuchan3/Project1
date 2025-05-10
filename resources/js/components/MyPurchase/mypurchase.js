@@ -1,93 +1,71 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../../sass/components/mypurchase.scss';
 import Header from '../Header/header';
-import SideMenuProfile from '../SideMenuProfile/sidemenuprofile';
-import AsusImage from '../../../../public/images/Asus ROG Zephyrus.svg';
-import MacBookImage from '../../../../public/images/Apple MacBook Pro M2.svg';
 import MyPurchaseModal from '../MyPurchaseModal/mypurchase_modal';
+import axios from 'axios';
 
-const MyPurchases = () => {
-    const [purchases] = useState([
-      {
-        order_id: 1,
-        order_date: '2025-04-15',
-        products: [
-          { product_name: 'Asus ROG Zephyrus G14', price: 1299.99, image: AsusImage },
-        ],
-        status: 'Delivered',
-      },
-      {
-        order_id: 2,
-        order_date: '2025-03-20',
-        products: [
-          { product_name: 'Apple MacBook Pro M2', price: 1999.99, image: MacBookImage },
-        ],
-        status: 'Shipped',
-      },
-      {
-        order_id: 3,
-        order_date: '2025-02-10',
-        products: [
-          { product_name: 'Asus ROG Zephyrus G14', price: 1299.99, image: AsusImage },
-          { product_name: 'Apple MacBook Pro M2', price: 1999.99, image: MacBookImage },
-        ],
-        status: 'Delivered',
-      },
-    ]);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedPurchase, setSelectedPurchase] = useState(null);
-  
-    const handleViewDetails = (purchase) => {
-      setSelectedPurchase(purchase);
-      setIsModalOpen(true);
+const MyPurchase = () => {
+  const [orders, setOrders] = useState([]);
+  const [selectedOrder, setSelectedOrder] = useState(null);
+
+  useEffect(() => {
+    const fetchOrders = async () => {
+      const token = localStorage.getItem('authToken');
+      if (!token) {
+        alert('Please log in to view orders');
+        return;
+      }
+
+      try {
+        const response = await axios.get('http://localhost:8000/api/orders', {
+          headers: { Authorization: token },
+        });
+        if (response.data.success) {
+          setOrders(response.data.data);
+        }
+      } catch (error) {
+        console.error('Error fetching orders:', error);
+      }
     };
-  
-    return (
-      <div className="purchases-page">
-        <Header />
-        <div className="purchases-layout">
-          <SideMenuProfile />
-          <div className="purchases-content">
-            <div className="purchases-container">
-              <div className="purchases-header">
-                <h2>My Purchases</h2>
-              </div>
-              <h3>Order History</h3>
-              {purchases.length === 0 ? (
-                <p>No purchases found.</p>
-              ) : (
-                purchases.map((purchase) => (
-                  <div key={purchase.order_id} className="purchase-item">
-                    <div className="purchase-image">
-                      <img src={purchase.products[0].image} alt={purchase.products[0].product_name} />
-                      {purchase.products.length > 1 && (
-                        <span className="item-count">+{purchase.products.length - 1}</span>
-                      )}
-                    </div>
-                    <div className="purchase-details">
-                      <p className="product-name">{purchase.products[0].product_name} {purchase.products.length > 1 ? `and ${purchase.products.length - 1} more` : ''}</p>
-                      <p>Order Date: {purchase.order_date}</p>
-                      <p>Price: ${purchase.products.reduce((total, product) => total + product.price, 0).toFixed(2)}</p>
-                      <p>
-                        Status: <span className={`status-${purchase.status.toLowerCase()}`}>{purchase.status}</span>
-                      </p>
-                    </div>
-                    <div className="purchase-actions">
-                      <button className="view-btn" onClick={() => handleViewDetails(purchase)}>View Details</button>
-                    </div>
-                  </div>
-                ))
-              )}
-            </div>
-          </div>
-        </div>
-        <MyPurchaseModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          purchase={selectedPurchase}
-        />
-      </div>
-    );
+    fetchOrders();
+  }, []);
+
+  const openModal = (order) => {
+    setSelectedOrder(order);
   };
-  
-  export default MyPurchases;
+
+  const closeModal = () => {
+    setSelectedOrder(null);
+  };
+
+  return (
+    <div className="mypurchase-wrapper">
+      <Header />
+      <div className="mypurchase-content">
+        <h1 className="mypurchase-title">My Purchases</h1>
+        <div className="mypurchase-list">
+          {orders.length === 0 ? (
+            <p>No orders found.</p>
+          ) : (
+            orders.map((order) => (
+              <div className="mypurchase-item" key={order.id}>
+                <div className="mypurchase-info">
+                  <p>Order #{order.id}</p>
+                  <p>Date: {new Date(order.created_at).toLocaleDateString()}</p>
+                  <p>Total: ₱{order.total.toLocaleString()}</p>
+                  <p>Status: {order.status.status_name}</p>
+                </div>
+                <button className="mypurchase-view-details" onClick={() => openModal(order)}>
+                  View Details
+                </button>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
+      {selectedOrder && <MyPurchaseModal order={selectedOrder} onClose={closeModal} />}
+    </div>
+  );
+};
+
+export default MyPurchase;
