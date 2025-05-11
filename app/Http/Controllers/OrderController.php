@@ -61,7 +61,7 @@ class OrderController extends Controller
             $total = $subtotal + $shippingFee;
 
             $order = Order::create([
-                'user_id' => $user->user_id, // Use user_id instead of id
+                'user_id' => $user->user_id,
                 'address_id' => $billingDetails['address_id'] ?? null,
                 'barangay' => $billingDetails['barangay'],
                 'city' => $billingDetails['city'],
@@ -82,6 +82,12 @@ class OrderController extends Controller
                     'price' => $item['price'],
                     'subtotal' => $item['price'] * $item['quantity'],
                 ]);
+
+                // Delete only the ordered cart item for the current user
+                \App\Models\CartItem::where('user_id', $user->user_id)
+                    ->where('product_id', $item['id'])
+                    ->where('quantity', $item['quantity'])
+                    ->delete();
             }
 
             PaymentDetail::create([
@@ -89,11 +95,6 @@ class OrderController extends Controller
                 'payment_method' => $paymentMethod,
                 'details' => $paymentDetailsData,
             ]);
-
-            // Clear cart
-            if ($user->cart) {
-                $user->cart->items()->delete();
-            }
 
             DB::commit();
 

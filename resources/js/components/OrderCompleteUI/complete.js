@@ -38,8 +38,8 @@ const Complete = () => {
         </p>
         <h3>Order #{order.id}</h3>
         <div className="order-items">
-          {order.orderItems && order.orderItems.length > 0 ? (
-            order.orderItems.map((item) => (
+          {order.order_items && order.order_items.length > 0 ? (
+            order.order_items.map((item) => (
               <div key={item.id} className="order-item">
                 <img
                   src={item.product.image || '/images/tuf.svg'}
@@ -48,8 +48,6 @@ const Complete = () => {
                 />
                 <div className="order-item-details">
                   <p>{item.product.name}</p>
-                  <p>Qty: {item.quantity}</p>
-                  <p>Price: ₱{item.price.toLocaleString()}</p>
                 </div>
               </div>
             ))

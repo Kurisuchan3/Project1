@@ -15853,136 +15853,228 @@ footer {
     font-size: 12px;
   }
 }
-.mypurchase-wrapper {
-  width: 100%;
+.purchases-page {
+  width: 100vw;
   min-height: 100vh;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+.purchases-layout {
   display: flex;
-  flex-direction: column;
-  font-family: "Inter", sans-serif;
-  background: #f8f8f8;
+  margin-top: 60px;
 }
-.mypurchase-wrapper .mypurchase-content {
+
+.purchases-content {
   flex: 1;
-  max-width: 1200px;
+  padding: 20px;
+  margin-left: 250px;
+}
+
+.purchases-container {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 30px 40px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-@media (max-width: 768px) {
-  .mypurchase-wrapper .mypurchase-content {
-    padding: 20px 15px;
-  }
-}
-.mypurchase-wrapper .mypurchase-title {
+.purchases-container h2, .purchases-container .h2 {
   font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #1a1a1a;
+  color: #24067e;
+  margin-bottom: 10px;
 }
-.mypurchase-wrapper .mypurchase-list .mypurchase-item {
+.purchases-container h3, .purchases-container .h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 20px 0;
+}
+
+.purchases-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-.mypurchase-wrapper .mypurchase-list .mypurchase-item .mypurchase-info p {
-  margin: 0 0 5px;
-  font-size: 14px;
-  color: #333;
-}
-.mypurchase-wrapper .mypurchase-list .mypurchase-item .mypurchase-view-details {
-  padding: 10px 20px;
-  background: #0066cc;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.mypurchase-wrapper .mypurchase-list .mypurchase-item .mypurchase-view-details:hover {
-  background: #004499;
+  margin-bottom: 20px;
 }
 
-.mypurchase-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+.purchase-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.purchase-item:last-child {
+  border-bottom: none;
+}
+.purchase-item .purchase-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.purchase-item .purchase-left .purchase-item-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.purchase-item .purchase-left .purchase-item-details .purchase-image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+.purchase-item .purchase-left .purchase-item-details .purchase-image img {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.mypurchase-modal-content {
-  background: white;
-  width: 90%;
-  max-width: 800px;
-  max-height: 80vh;
-  overflow-y: auto;
-  border-radius: 8px;
-  padding: 20px;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.mypurchase-modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: #666;
-}
-.mypurchase-modal-close:hover {
-  color: #333;
-}
-
-.mypurchase-modal-title {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #1a1a1a;
-}
-
-.mypurchase-modal-section {
-  margin-bottom: 20px;
-}
-.mypurchase-modal-section h3, .mypurchase-modal-section .h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #1a1a1a;
-}
-.mypurchase-modal-section p {
-  font-size: 14px;
-  color: #333;
-  margin: 0 0 5px;
-}
-.mypurchase-modal-section .mypurchase-modal-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #e0e0e0;
-}
-.mypurchase-modal-section .mypurchase-modal-item .mypurchase-modal-product-image {
-  width: 60px;
-  height: 60px;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-right: 15px;
-  background: #f5f5f5;
-  border-radius: 6px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
 }
-.mypurchase-modal-section .mypurchase-modal-item .mypurchase-modal-product-info p {
-  margin: 0 0 5px;
+.purchase-item .purchase-left .purchase-item-details .purchase-info {
+  flex: 1;
+}
+.purchase-item .purchase-left .purchase-item-details .purchase-info p {
+  margin: 5px 0;
   font-size: 14px;
+  color: #333;
+}
+.purchase-item .purchase-left .purchase-item-details .purchase-info .product-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #24067e;
+}
+.purchase-item .purchase-left .purchase-item-details .item-separator {
+  border: 0;
+  border-top: 1px dashed #ddd;
+  width: 100%;
+  margin: 10px 0;
+}
+.purchase-item .purchase-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  min-width: 150px;
+}
+.purchase-item .purchase-right .purchase-meta p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+.purchase-item .purchase-right .purchase-status p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+.purchase-item .purchase-right .purchase-status p .status-pending {
+  color: #ff4d4f;
+  font-weight: 500;
+}
+.purchase-item .purchase-right .purchase-status p .status-delivered {
+  color: #28a745;
+  font-weight: 500;
+}
+.purchase-item .purchase-right .purchase-status p .status-shipped {
+  color: #ffd500;
+  font-weight: 500;
+}
+.purchase-item .purchase-right .view-btn {
+  padding: 5px 10px;
+  background-color: #24067e;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.purchase-item .purchase-right .view-btn:hover {
+  background-color: #1a045a;
+}
+
+@media (max-width: 768px) {
+  .purchases-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+  .purchases-container {
+    padding: 20px;
+  }
+  .purchases-container h2, .purchases-container .h2 {
+    font-size: 24px;
+  }
+  .purchases-container h3, .purchases-container .h3 {
+    font-size: 18px;
+  }
+  .purchase-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .purchase-item .purchase-left {
+    width: 100%;
+  }
+  .purchase-item .purchase-left .purchase-item-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .purchase-item .purchase-left .purchase-item-details .purchase-image {
+    width: 60px;
+    height: 60px;
+  }
+  .purchase-item .purchase-left .purchase-item-details .item-separator {
+    margin: 10px 0;
+  }
+  .purchase-item .purchase-right {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .purchase-item .purchase-right .view-btn {
+    width: 100%;
+  }
+}
+.modal-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.modal-section {
+  margin-bottom: 20px;
+}
+.modal-section h3, .modal-section .h3 {
+  font-size: 18px;
+  color: #24067e;
+  margin-bottom: 10px;
+}
+.modal-section p {
+  font-size: 14px;
+  color: #333;
+  margin: 4px 0;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.modal-grid div {
+  font-size: 14px;
+  color: #333;
 }

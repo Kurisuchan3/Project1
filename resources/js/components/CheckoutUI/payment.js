@@ -159,6 +159,8 @@ const Payment = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (response.data.success) {
+        // Notify other components that the cart has been updated
+        window.dispatchEvent(new Event('cartCleared'));
         navigate('/complete', { state: { order: response.data.data } });
       } else {
         alert('Failed to place order: ' + response.data.message);

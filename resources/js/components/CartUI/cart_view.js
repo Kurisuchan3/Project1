@@ -20,68 +20,89 @@ const CartView = () => {
 
   const navigate = useNavigate();
 
+  const fetchCart = async () => {
+    const token = localStorage.getItem('authToken');
+    try {
+      const response = await axios.get('/api/cart', {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (response.data.success) {
+        const items = response.data.data.map(item => ({
+          id: item.product.id,
+          name: item.product.name,
+          price: parseFloat(item.product.price),
+          quantity: item.quantity,
+          image: item.product.image,
+          cartItemId: item.id
+        }));
+        setCartItems(items);
+      } else {
+        setCartItems([]);
+      }
+    } catch (error) {
+      console.error('Error fetching cart:', error);
+      if (error.response?.status === 401) {
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('userRole');
+        navigate('/login');
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const fetchDefaultAddress = async () => {
+    const token = localStorage.getItem('authToken');
+    try {
+      const response = await axios.get('/api/addresses', {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (response.data.success) {
+        const defaultAddress = response.data.data.find(addr => addr.is_default) || response.data.data[0];
+        if (defaultAddress) {
+          setAddress({
+            barangay: defaultAddress.barangay || '',
+            city: defaultAddress.city || '',
+            province: defaultAddress.province || '',
+            country: defaultAddress.country || 'Philippines'
+          });
+        }
+      }
+    } catch (error) {
+      console.error('Error fetching address:', error);
+      if (error.response?.status === 401) {
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('userRole');
+        navigate('/login');
+      }
+    }
+  };
+
   useEffect(() => {
     const token = localStorage.getItem('authToken');
-    const fetchCart = async () => {
-      try {
-        const response = await axios.get('/api/cart', {
-          headers: { Authorization: `Bearer ${token}` }
-        });
-        if (response.data.success) {
-          const items = response.data.data.map(item => ({
-            id: item.product.id,
-            name: item.product.name,
-            price: parseFloat(item.product.price),
-            quantity: item.quantity,
-            image: item.product.image,
-            cartItemId: item.id
-          }));
-          setCartItems(items);
-        }
-      } catch (error) {
-        console.error('Error fetching cart:', error);
-        if (error.response?.status === 401) {
-          localStorage.removeItem('authToken');
-          localStorage.removeItem('userRole');
-          navigate('/login');
-        }
-      }
-    };
-
-    const fetchDefaultAddress = async () => {
-      try {
-        const response = await axios.get('/api/addresses', {
-          headers: { Authorization: `Bearer ${token}` }
-        });
-        if (response.data.success) {
-          const defaultAddress = response.data.data.find(addr => addr.is_default) || response.data.data[0];
-          if (defaultAddress) {
-            setAddress({
-              barangay: defaultAddress.barangay || '',
-              city: defaultAddress.city || '',
-              province: defaultAddress.province || '',
-              country: defaultAddress.country || 'Philippines'
-            });
-          }
-        }
-      } catch (error) {
-        console.error('Error fetching address:', error);
-        if (error.response?.status === 401) {
-          localStorage.removeItem('authToken');
-          localStorage.removeItem('userRole');
-          navigate('/login');
-        }
-      }
-    };
-
     if (token) {
-      Promise.all([fetchCart(), fetchDefaultAddress()]).finally(() => setLoading(false));
+      Promise.all([fetchCart(), fetchDefaultAddress()]).catch(() => setLoading(false));
     } else {
       const guestCart = JSON.parse(localStorage.getItem('guestCart') || '[]');
       setCartItems(guestCart);
       setLoading(false);
     }
-  }, []);
+
+    // Listen for cartCleared event to refresh cart
+    const handleCartCleared = () => {
+      if (token) {
+        fetchCart();
+      } else {
+        setCartItems([]);
+        localStorage.removeItem('guestCart');
+      }
+    };
+
+    window.addEventListener('cartCleared', handleCartCleared);
+    return () => {
+      window.removeEventListener('cartCleared', handleCartCleared);
+    };
+  }, [navigate]);
 
   const updateCart = (newCart) => {
     const token = localStorage.getItem('authToken');

@@ -1,87 +1,47 @@
-.mypurchase-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.mypurchase-modal-content {
-  background: white;
-  width: 90%;
-  max-width: 800px;
-  max-height: 80vh;
-  overflow-y: auto;
-  border-radius: 8px;
+.modal-content {
+  background: #ffffff;
   padding: 20px;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
   position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 
-.mypurchase-modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: #666;
-
-  &:hover {
-    color: #333;
-  }
+.scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
 }
 
-.mypurchase-modal-title {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #1a1a1a;
-}
-
-.mypurchase-modal-section {
+.modal-section {
   margin-bottom: 20px;
 
   h3 {
     font-size: 18px;
-    font-weight: 600;
+    color: #24067e;
     margin-bottom: 10px;
-    color: #1a1a1a;
   }
 
   p {
     font-size: 14px;
     color: #333;
-    margin: 0 0 5px;
+    margin: 4px 0;
   }
+}
 
-  .mypurchase-modal-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e0e0e0;
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
 
-    .mypurchase-modal-product-image {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-      margin-right: 15px;
-      background: #f5f5f5;
-      border-radius: 6px;
-    }
-
-    .mypurchase-modal-product-info {
-      p {
-        margin: 0 0 5px;
-        font-size: 14px;
-      }
-    }
+  div {
+    font-size: 14px;
+    color: #333;
   }
 }

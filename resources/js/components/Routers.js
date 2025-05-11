@@ -21,6 +21,7 @@ import AdminRegister from "../components/AdminRegister/adminregister";
 import ProdModal from "./ModalUI/ProdModal";
 import MyAddresses from "../components/MyAddress/myaddress";
 import MyPurchases from "../components/MyPurchase/mypurchase"; // Add new import
+import AboutUs from "../components/AboutUs/AboutUs";
 
 const ProtectedRoute = ({ element, allowedRoles }) => {
   const authToken = localStorage.getItem("authToken");
@@ -57,6 +58,9 @@ export default function Routers() {
         <Route path="/orders" element={<Orders />} />
         <Route path="/ordersmodal" element={<OrdersModal />} />
         <Route path="/prodmodal" element={<ProdModal />} />
+        <Route path="/about" element={<AboutUs />} />
+
+
         <Route
           path="/adminsetting"
           element={<ProtectedRoute element={<AdminRegister />} allowedRoles={[1]} />}

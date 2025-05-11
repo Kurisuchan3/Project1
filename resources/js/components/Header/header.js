@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import useLogout from '../logout';
 import Logo from "../../../../public/images/lapnixlogo.svg";
-import { Dropdown, Menu } from 'antd'; // Import Ant Design components
+import { Dropdown, Menu } from 'antd';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -139,7 +139,11 @@ const Header = () => {
     navigate('/shopui?category=Peripherals');
   };
 
-  // Define the dropdown menu items using Ant Design's Menu
+  const handleAboutClick = (e) => {
+    e.preventDefault();
+    navigate('/about');
+  };
+
   const menu = (
     <Menu>
       <Menu.Item key="profile" onClick={handleProfileClick}>
@@ -162,23 +166,14 @@ const Header = () => {
           style={{ cursor: 'pointer' }}
         />
         <nav className="header__nav">
-          <a href="#" className="header__link" onClick={handleHomeClick}>
-            Home
-          </a>
-          <a href="#" className="header__link" onClick={handleBrandsClick}>
-            Brands
-          </a>
-          <a href="#" className="header__link" onClick={handlePeripheralsClick}>
-            Peripherals
-          </a>
-          <a href="#" className="header__link">
-            Support
-          </a>
-          <a href="#" className="header__link">
-            About us
-          </a>
+          <a href="#" className="header__link" onClick={handleHomeClick}>Home</a>
+          <a href="#" className="header__link" onClick={handleBrandsClick}>Brands</a>
+          <a href="#" className="header__link" onClick={handlePeripheralsClick}>Peripherals</a>
+          <a href="#" className="header__link">Support</a>
+          <a href="#" className="header__link" onClick={handleAboutClick}>About us</a>
         </nav>
       </div>
+
       <div className="header__right">
         <IconSearch className="header__icon" />
         <IconBellFilled className="header__icon" />
