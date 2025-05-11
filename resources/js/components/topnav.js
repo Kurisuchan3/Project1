@@ -92,14 +92,6 @@ const TopNav = () => {
           </div>
         </div>
       </nav>
-
-      <div className="nav-links">
-        <a href="/">Home</a>
-        <a href="/brands">Brands</a>
-        <a href="/peripherals">Peripherals</a>
-        <a href="/support">Support</a>
-        <a href="/about">About Us</a>
-      </div>
     </>
   );
 };

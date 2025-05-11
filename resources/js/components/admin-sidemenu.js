@@ -55,13 +55,20 @@ const AdminSideMenu = () => {
 
   return (
     <Sider
-      collapsible
-      collapsed={collapsed}
-      onCollapse={toggleCollapsed}
-      className="side-menu"
-      width={200}
-      style={{ background: "#001529" }}
-    >
+       collapsible
+       collapsed={collapsed}
+       onCollapse={toggleCollapsed}
+       className="side-menu"
+       width={200}
+      style={{
+         background: "#24067e",
+         position: "fixed",
+         top: 64,         // exactly the height of your Header
+         left: 0,
+         bottom: 0,
+         overflowY: "auto"
+       }}
+     >
       <Menu
         theme="dark"
         mode="inline"

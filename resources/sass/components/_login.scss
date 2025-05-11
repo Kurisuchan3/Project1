@@ -1,3 +1,9 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --purple: #24067e;
   --yellow: #ffcd38;
@@ -13,23 +19,23 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  margin-top: 2rem;
+  margin-top: 0;             // removed the 2rem so it sits right under the nav
 }
 
 .login-box {
   background: #fff;
   width: 100%;
-  max-width: 360px;     // controls overall width
+  max-width: 360px;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  text-align: center;   // center‐align logo & headings
+  text-align: center;
 
   .login-logo {
     margin-bottom: 1.5rem;
 
     img {
-      width: 120px;     // smaller, controlled logo size
+      width: 120px;
       height: auto;
     }
   }

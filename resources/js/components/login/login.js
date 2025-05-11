@@ -21,13 +21,11 @@ const Login = () => {
         .get("/api/user", { headers: { Authorization: token } })
         .then((response) => {
           if (isMounted) {
-            console.log("Token validated:", response.data);
             const role = parseInt(userRole, 10);
             navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
           }
         })
-        .catch((err) => {
-          console.error("Token validation failed:", err.response?.data);
+        .catch(() => {
           if (isMounted) {
             localStorage.removeItem("authToken");
             localStorage.removeItem("userRole");
@@ -53,25 +51,16 @@ const Login = () => {
 
     try {
       const response = await axios.post("/api/login", credentials);
-      console.log("Login response:", response.data);
-
-      if (!response.data.token) {
-        throw new Error("Authentication token not received.");
-      }
-
       const token = `Bearer ${response.data.token}`;
       localStorage.setItem("authToken", token);
 
       const role = parseInt(response.data.user.roles_id, 10);
       localStorage.setItem("userRole", role);
-
-      // Set default header for future calls
       axios.defaults.headers.common["Authorization"] = token;
 
       message.success("Login successful!");
       navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
     } catch (err) {
-      console.error("Login failed:", err.response?.data);
       message.error(
         err.response?.data?.error || "Login failed. Please check your credentials."
       );

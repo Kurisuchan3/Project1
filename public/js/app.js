@@ -78462,7 +78462,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.login-page {\n  background: #fafafa;\n  min-height: 100vh;\n}\n\n.login-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 2rem;\n  margin-top: 2rem;\n}\n\n.login-box {\n  background: #fff;\n  width: 100%;\n  max-width: 360px;\n  padding: 2rem;\n  border-radius: 8px;\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);\n  text-align: center;\n}\n.login-box .login-logo {\n  margin-bottom: 1.5rem;\n}\n.login-box .login-logo img {\n  width: 120px;\n  height: auto;\n}\n.login-box h2 {\n  font-size: 1.75rem;\n  font-weight: 700;\n  color: var(--purple);\n  margin-bottom: 0.25rem;\n}\n.login-box h3 {\n  font-size: 1.125rem;\n  font-weight: 500;\n  margin-bottom: 1.5rem;\n  color: #333;\n}\n.login-box h3 .highlight {\n  color: var(--yellow);\n}\n.login-box label {\n  display: block;\n  text-align: left;\n  margin-bottom: 0.5rem;\n  font-weight: 500;\n  color: #555;\n}\n.login-box .ant-input,\n.login-box .ant-input-password {\n  width: 100%;\n  height: 44px;\n  border-radius: 4px;\n  margin-bottom: 1rem;\n}\n.login-box .login-button {\n  width: 100%;\n  height: 44px;\n  font-size: 1rem;\n  font-weight: 500;\n  background-color: var(--purple);\n  border-color: var(--purple);\n  transition: filter 0.2s;\n}\n.login-box .login-button:hover, .login-box .login-button:focus {\n  filter: brightness(0.9);\n}\n.login-box p {\n  margin-top: 1rem;\n  font-size: 0.9rem;\n  color: #333;\n}\n.login-box p .signup-link {\n  color: var(--purple);\n}\n.login-box p .signup-link:hover {\n  text-decoration: underline;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "html,\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n:root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.login-page {\n  background: #fafafa;\n  min-height: 100vh;\n}\n\n.login-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 2rem;\n  margin-top: 0;\n}\n\n.login-box {\n  background: #fff;\n  width: 100%;\n  max-width: 360px;\n  padding: 2rem;\n  border-radius: 8px;\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);\n  text-align: center;\n}\n.login-box .login-logo {\n  margin-bottom: 1.5rem;\n}\n.login-box .login-logo img {\n  width: 120px;\n  height: auto;\n}\n.login-box h2 {\n  font-size: 1.75rem;\n  font-weight: 700;\n  color: var(--purple);\n  margin-bottom: 0.25rem;\n}\n.login-box h3 {\n  font-size: 1.125rem;\n  font-weight: 500;\n  margin-bottom: 1.5rem;\n  color: #333;\n}\n.login-box h3 .highlight {\n  color: var(--yellow);\n}\n.login-box label {\n  display: block;\n  text-align: left;\n  margin-bottom: 0.5rem;\n  font-weight: 500;\n  color: #555;\n}\n.login-box .ant-input,\n.login-box .ant-input-password {\n  width: 100%;\n  height: 44px;\n  border-radius: 4px;\n  margin-bottom: 1rem;\n}\n.login-box .login-button {\n  width: 100%;\n  height: 44px;\n  font-size: 1rem;\n  font-weight: 500;\n  background-color: var(--purple);\n  border-color: var(--purple);\n  transition: filter 0.2s;\n}\n.login-box .login-button:hover, .login-box .login-button:focus {\n  filter: brightness(0.9);\n}\n.login-box p {\n  margin-top: 1rem;\n  font-size: 0.9rem;\n  color: #333;\n}\n.login-box p .signup-link {\n  color: var(--purple);\n}\n.login-box p .signup-link:hover {\n  text-decoration: underline;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -78486,7 +78486,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".side-menu {\n  background: #001529;\n}\n.side-menu .ant-menu {\n  border-right: none;\n}\n.side-menu .ant-menu-item {\n  font-size: 16px;\n}\n.side-menu .ant-menu-item-selected {\n  background-color: #1890ff !important;\n  color: white !important;\n}\n.side-menu .logout-container {\n  position: absolute;\n  bottom: 20px;\n  width: 100%;\n  text-align: center;\n}\n.side-menu .logout-container .logout-button {\n  width: 100%;\n  color: #ffffff;\n}\n.side-menu .logout-container .logout-button:hover {\n  color: #1890ff;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".side-menu {\n  background: #24067e;\n  position: fixed !important;\n  top: 64px;\n  bottom: 0;\n  left: 0;\n  width: 200px !important;\n  z-index: 900;\n}\n.side-menu .ant-menu {\n  background: transparent;\n  border-right: none;\n}\n.side-menu .ant-menu .ant-menu-item {\n  color: #ffffff;\n  font-size: 16px;\n}\n.side-menu .ant-menu .ant-menu-item:hover {\n  color: #ffcd38;\n}\n.side-menu .ant-menu .ant-menu-item-selected {\n  background-color: #ffcd38 !important;\n  color: #24067e !important;\n}\n.side-menu .logout-container {\n  position: absolute;\n  bottom: 20px;\n  width: 100%;\n  text-align: center;\n}\n.side-menu .logout-container .logout-button {\n  width: 100%;\n  color: #ffffff;\n}\n.side-menu .logout-container .logout-button:hover {\n  color: #ffcd38;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -169654,7 +169654,13 @@ var AdminSideMenu = function AdminSideMenu() {
     className: "side-menu",
     width: 200,
     style: {
-      background: "#001529"
+      background: "#24067e",
+      position: "fixed",
+      top: 64,
+      // exactly the height of your Header
+      left: 0,
+      bottom: 0,
+      overflowY: "auto"
     },
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {
       theme: "dark",
@@ -169695,7 +169701,7 @@ var AdminSideMenu = function AdminSideMenu() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ DashboardWelcome)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/typography/index.js");
@@ -169705,6 +169711,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _topnav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../topnav */ "./resources/js/components/topnav.js");
 /* harmony import */ var _sass_components_admindashboard_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../sass/components/_admindashboard.scss */ "./resources/sass/components/_admindashboard.scss");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+// Adm indashboard.js
 
 
 
@@ -169713,30 +169726,38 @@ __webpack_require__.r(__webpack_exports__);
 
 var Title = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Title;
 var Header = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Header,
-  Sider = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Sider,
   Content = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Content;
-var DashboardWelcome = function DashboardWelcome() {
+function DashboardWelcome() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState2 = _slicedToArray(_useState, 2),
+    collapsed = _useState2[0],
+    setCollapsed = _useState2[1];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
     style: {
       minHeight: "100vh"
     },
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Header, {
       style: {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: 64,
         padding: 0,
         background: "#008cff",
-        position: "fixed",
-        width: "100%",
         zIndex: 1000
       },
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_2__["default"], {})
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      style: {
-        marginTop: 64
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Sider, {
-        width: 200,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_1__["default"], {})
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        collapsed: collapsed,
+        onCollapse: setCollapsed
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        style: {
+          marginTop: 64,
+          // header height
+          marginLeft: collapsed ? 80 : 200 // sider width (collapsed vs open)
+        },
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Content, {
           style: {
             margin: "24px 16px",
@@ -169755,8 +169776,7 @@ var DashboardWelcome = function DashboardWelcome() {
       })]
     })]
   });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DashboardWelcome);
+}
 
 /***/ }),
 
@@ -171067,13 +171087,10 @@ var Login = function Login() {
         }
       }).then(function (response) {
         if (isMounted) {
-          console.log("Token validated:", response.data);
           var role = parseInt(userRole, 10);
           navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
         }
-      })["catch"](function (err) {
-        var _err$response;
-        console.error("Token validation failed:", (_err$response = err.response) === null || _err$response === void 0 ? void 0 : _err$response.data);
+      })["catch"](function () {
         if (isMounted) {
           localStorage.removeItem("authToken");
           localStorage.removeItem("userRole");
@@ -171089,7 +171106,7 @@ var Login = function Login() {
   };
   var handleLogin = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var response, token, role, _err$response2, _err$response3;
+      var response, token, role, _err$response;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
@@ -171105,38 +171122,28 @@ var Login = function Login() {
             return axios__WEBPACK_IMPORTED_MODULE_5__["default"].post("/api/login", credentials);
           case 6:
             response = _context.sent;
-            console.log("Login response:", response.data);
-            if (response.data.token) {
-              _context.next = 10;
-              break;
-            }
-            throw new Error("Authentication token not received.");
-          case 10:
             token = "Bearer ".concat(response.data.token);
             localStorage.setItem("authToken", token);
             role = parseInt(response.data.user.roles_id, 10);
             localStorage.setItem("userRole", role);
-
-            // Set default header for future calls
             axios__WEBPACK_IMPORTED_MODULE_5__["default"].defaults.headers.common["Authorization"] = token;
             antd__WEBPACK_IMPORTED_MODULE_6__["default"].success("Login successful!");
             navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
-            _context.next = 23;
+            _context.next = 19;
             break;
+          case 16:
+            _context.prev = 16;
+            _context.t0 = _context["catch"](3);
+            antd__WEBPACK_IMPORTED_MODULE_6__["default"].error(((_err$response = _context.t0.response) === null || _err$response === void 0 || (_err$response = _err$response.data) === null || _err$response === void 0 ? void 0 : _err$response.error) || "Login failed. Please check your credentials.");
           case 19:
             _context.prev = 19;
-            _context.t0 = _context["catch"](3);
-            console.error("Login failed:", (_err$response2 = _context.t0.response) === null || _err$response2 === void 0 ? void 0 : _err$response2.data);
-            antd__WEBPACK_IMPORTED_MODULE_6__["default"].error(((_err$response3 = _context.t0.response) === null || _err$response3 === void 0 || (_err$response3 = _err$response3.data) === null || _err$response3 === void 0 ? void 0 : _err$response3.error) || "Login failed. Please check your credentials.");
-          case 23:
-            _context.prev = 23;
             setLoading(false);
-            return _context.finish(23);
-          case 26:
+            return _context.finish(19);
+          case 22:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[3, 19, 23, 26]]);
+      }, _callee, null, [[3, 16, 19, 22]]);
     }));
     return function handleLogin() {
       return _ref.apply(this, arguments);
@@ -171499,8 +171506,8 @@ var TopNav = function TopNav() {
       children: "Logout"
     }, "logout")]
   });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("nav", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("nav", {
       className: "topnav",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "logo",
@@ -171557,25 +171564,7 @@ var TopNav = function TopNav() {
           })]
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "nav-links",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-        href: "/",
-        children: "Home"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-        href: "/brands",
-        children: "Brands"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-        href: "/peripherals",
-        children: "Peripherals"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-        href: "/support",
-        children: "Support"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-        href: "/about",
-        children: "About Us"
-      })]
-    })]
+    })
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TopNav);
