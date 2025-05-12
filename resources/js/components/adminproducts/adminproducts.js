@@ -32,7 +32,9 @@ const ProductPage = () => {
   const [editingProduct, setEditingProduct] = useState(null);
   const [form] = Form.useForm();
 
-  const authToken = localStorage.getItem("authToken");
+  // ✅ Ensure Authorization token is formatted as "Bearer ..."
+  const rawToken = localStorage.getItem("authToken");
+  const authToken = rawToken?.startsWith("Bearer ") ? rawToken : `Bearer ${rawToken}`;
   if (authToken) {
     axios.defaults.headers.common["Authorization"] = authToken;
   }
@@ -56,7 +58,7 @@ const ProductPage = () => {
   const fetchStatuses = async () => {
     try {
       const response = await axios.get("/api/statuses");
-      setStatuses(response.data);
+      setStatuses(response.data.data || []); // ✅ your API response wraps statuses under "data"
     } catch (error) {
       message.error("Error fetching statuses");
       console.error("Fetch error:", error);
@@ -280,7 +282,7 @@ const ProductPage = () => {
 
             <Modal
               title={isAdding ? "Add Product" : "Edit Product"}
-              visible={isModalVisible}
+              open={isModalVisible}
               onCancel={() => setIsModalVisible(false)}
               onOk={() => form.submit()}
             >
@@ -288,27 +290,16 @@ const ProductPage = () => {
                 <Form.Item
                   label="Product Image"
                   name="image"
-                  getValueFromEvent={(e) => {
-                    if (Array.isArray(e)) return e;
-                    return e && e.fileList;
-                  }}
+                  getValueFromEvent={(e) => (Array.isArray(e) ? e : e?.fileList)}
                 >
                   <Upload beforeUpload={() => false} listType="picture">
                     <Button icon={<UploadOutlined />}>Select Image</Button>
                   </Upload>
                 </Form.Item>
-                <Form.Item
-                  label="Product Name"
-                  name="name"
-                  rules={[{ required: true, message: "Please input the product name!" }]}
-                >
+                <Form.Item label="Product Name" name="name" rules={[{ required: true }]}>
                   <Input />
                 </Form.Item>
-                <Form.Item
-                  label="Brand"
-                  name="subcategory_id"
-                  rules={[{ required: true, message: "Please select a brand!" }]}
-                >
+                <Form.Item label="Brand" name="subcategory_id" rules={[{ required: true }]}>
                   <Select placeholder="Select brand">
                     {subcategories.map((subcategory) => (
                       <Option key={subcategory.id} value={subcategory.id}>
@@ -317,18 +308,10 @@ const ProductPage = () => {
                     ))}
                   </Select>
                 </Form.Item>
-                <Form.Item
-                  label="Price"
-                  name="price"
-                  rules={[{ required: true, message: "Please input the price" }]}
-                >
+                <Form.Item label="Price" name="price" rules={[{ required: true }]}>
                   <InputNumber min={0} step={1} style={{ width: "100%" }} />
                 </Form.Item>
-                <Form.Item
-                  label="Quantity"
-                  name="quantity"
-                  rules={[{ required: true, message: "Please input the quantity!" }]}
-                >
+                <Form.Item label="Quantity" name="quantity" rules={[{ required: true }]}>
                   <InputNumber min={0} style={{ width: "100%" }} />
                 </Form.Item>
                 <Form.Item label="Description" name="description">
@@ -351,7 +334,7 @@ const ProductPage = () => {
 
             <Modal
               title="Archived Products"
-              visible={isArchiveModalVisible}
+              open={isArchiveModalVisible}
               onCancel={() => setIsArchiveModalVisible(false)}
               footer={null}
             >

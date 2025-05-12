@@ -1,19 +1,28 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Layout, Table, Tag, Tooltip, Checkbox, Button } from "antd";
+import { Layout, Table, Tag, Tooltip, Button } from "antd";
 import { EditOutlined, StopOutlined, PlusOutlined } from "@ant-design/icons";
-import TopNav from "../../topnav"; // Importing Top Navigation
-import AdminSideMenu from "../../admin-sidemenu"; // Importing Sidebar
+import TopNav from "../../topnav";
+import AdminSideMenu from "../../admin-sidemenu";
+import "../../../../sass/components/_usertable.scss"; // ✅ Import SCSS styles
 
 const { Content } = Layout;
 
 const UserTable = () => {
   const [users, setUsers] = useState([]);
   const [archivedUsers, setArchivedUsers] = useState([]);
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]); // Track selected users
-  const [viewArchived, setViewArchived] = useState(false); // Toggle state for Active/Archived users
+  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const [viewArchived, setViewArchived] = useState(false);
 
-  const authToken = localStorage.getItem("token") || null;
+  const rawToken = localStorage.getItem("authToken");
+  const authToken = rawToken?.startsWith("Bearer ") ? rawToken : `Bearer ${rawToken}`;
+
+  const axiosConfig = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: authToken,
+    },
+  };
 
   useEffect(() => {
     fetchUsers();
@@ -22,55 +31,27 @@ const UserTable = () => {
 
   const fetchUsers = async () => {
     try {
-      const authToken = localStorage.getItem("authToken");
-      if (!authToken) {
-        alert("Authentication token is missing. Please log in again.");
-        return;
-      }
-
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: authToken, // Ensure token is passed
-        },
-      };
-
-      const response = await axios.get("http://127.0.0.1:8000/api/users", config);
-
+      const response = await axios.get("http://127.0.0.1:8000/api/users", axiosConfig);
       if (response.data.success) {
         setUsers(response.data.data);
       } else {
         console.error("API returned unsuccessful response:", response.data);
       }
     } catch (error) {
-      console.error("Error fetching users:", error.response ? error.response.data : error.message);
+      console.error("Error fetching users:", error.response?.data || error.message);
     }
   };
 
   const fetchArchivedUsers = async () => {
     try {
-      const authToken = localStorage.getItem("authToken");
-      if (!authToken) {
-        alert("Authentication token is missing. Please log in again.");
-        return;
-      }
-
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: authToken,
-        },
-      };
-
-      const response = await axios.get("http://127.0.0.1:8000/api/users/archived", config);
-
+      const response = await axios.get("http://127.0.0.1:8000/api/users/archived", axiosConfig);
       if (response.data.success) {
         setArchivedUsers(response.data.data);
       } else {
         console.error("API returned unsuccessful response:", response.data);
       }
     } catch (error) {
-      console.error("Error fetching archived users:", error.response ? error.response.data : error.message);
+      console.error("Error fetching archived users:", error.response?.data || error.message);
     }
   };
 
@@ -89,33 +70,13 @@ const UserTable = () => {
     if (!confirmAction) return;
 
     try {
-      const authToken = localStorage.getItem("authToken");
-      if (!authToken) {
-        alert("Authentication token is missing. Please log in again.");
-        return;
-      }
-
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: authToken,
-        },
-      };
-
-      await axios.put(`http://127.0.0.1:8000/api/users/${user.user_id}/${action}`, {}, config);
-
+      await axios.put(`http://127.0.0.1:8000/api/users/${user.user_id}/${action}`, {}, axiosConfig);
       fetchUsers();
       fetchArchivedUsers();
     } catch (error) {
-      console.error(`Error trying to ${action} user:`, error.response ? error.response.data : error.message);
+      console.error(`Error trying to ${action} user:`, error.response?.data || error.message);
     }
   };
-
-  const onSelectChange = (selectedKeys) => {
-    setSelectedRowKeys(selectedKeys);
-  };
-
-  const filteredUsers = viewArchived ? archivedUsers : users;
 
   const columns = [
     {
@@ -131,23 +92,19 @@ const UserTable = () => {
           </Tooltip>
           <Tooltip title={user.deleted_at ? "Restore" : "Archive"}>
             <StopOutlined
-              style={{ fontSize: "18px", color: user.deleted_at ? "#52c41a" : "#ff4d4f", cursor: "pointer" }}
+              style={{
+                fontSize: "18px",
+                color: user.deleted_at ? "#52c41a" : "#ff4d4f",
+                cursor: "pointer",
+              }}
               onClick={() => handleArchiveRestore(user)}
             />
           </Tooltip>
         </div>
       ),
     },
-    {
-      title: "User Name",
-      dataIndex: "username",
-      key: "username",
-    },
-    {
-      title: "Email",
-      dataIndex: "email",
-      key: "email",
-    },
+    { title: "User Name", dataIndex: "username", key: "username" },
+    { title: "Email", dataIndex: "email", key: "email" },
     {
       title: "Role",
       dataIndex: ["role", "role_name"],
@@ -165,30 +122,23 @@ const UserTable = () => {
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      {/* Top Navigation */}
       <TopNav />
-
       <Layout style={{ display: "flex", flexDirection: "row" }}>
-        {/* Sidebar Navigation */}
         <AdminSideMenu />
-
-        {/* Content Area */}
         <Layout style={{ padding: "20px", width: "100%" }}>
-          <Content style={{ background: "#fff", padding: "20px", borderRadius: "8px" }}>
-            <div className="flex justify-between items-center mb-4">
-              <div>
+          <Content style={{ background: "#f5f5f5", padding: "20px", borderRadius: "8px" }}>
+            <div className="user-table-container">
+              <div className="button-container">
                 <Button type="primary" icon={<PlusOutlined />}>
                   Add User
                 </Button>
-                <Button type="default" style={{ marginLeft: "10px" }} onClick={toggleView}>
+                <Button type="default" onClick={toggleView}>
                   {viewArchived ? "View Active" : "View Archived"}
                 </Button>
               </div>
-            </div>
 
-            <div className="user-table-container">
               <Table
-                dataSource={filteredUsers}
+                dataSource={viewArchived ? archivedUsers : users}
                 columns={columns}
                 rowKey="user_id"
                 pagination={{ pageSize: 10 }}

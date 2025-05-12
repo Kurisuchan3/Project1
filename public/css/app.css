@@ -15500,13 +15500,19 @@ footer {
     border-bottom: 2px solid #ffd500;
   }
 }
+.user-table-container {
+  margin-top: 10px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 .user-table-container .button-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
   margin-bottom: 20px;
-  padding: 10px 0;
 }
 .user-table-container .button-container .ant-btn-primary {
   background-color: #1890ff;
@@ -15521,6 +15527,15 @@ footer {
   font-weight: 500;
   padding: 0 20px;
   height: 40px;
+}
+.user-table-container .ant-table {
+  border-radius: 6px;
+  overflow: hidden;
+}
+.user-table-container .ant-table-thead > tr > th {
+  background-color: #1890ff;
+  color: white;
+  font-weight: 600;
 }
 
 .dashboard-card {
@@ -16077,4 +16092,101 @@ footer {
 .modal-grid div {
   font-size: 14px;
   color: #333;
+}
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.about-page .about-page-container {
+  flex: 1;
+  position: relative;
+  background: #0052a3;
+  overflow: hidden;
+  font-family: sans-serif;
+  color: #333;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
+}
+.about-page .about-page-container .wave {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  left: 0;
+}
+.about-page .about-page-container .wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.about-page .about-page-container .wave svg path {
+  fill: #ffffff;
+}
+.about-page .about-page-container .wave.wave-top {
+  top: 0;
+}
+.about-page .about-page-container .wave.wave-top svg path {
+  fill: #0052a3;
+}
+.about-page .about-page-container .wave.wave-bottom {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+.about-page .about-page-container .wave.wave-bottom svg path {
+  fill: #0052a3;
+}
+.about-page .about-page-container .about-card {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 80px 40px;
+  min-height: 70vh;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.about-page .about-page-container .about-card h1, .about-page .about-page-container .about-card .h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0052a3;
+}
+.about-page .about-page-container .about-card .section {
+  margin-bottom: 2rem;
+}
+.about-page .about-page-container .about-card .section p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.about-page .about-page-container .about-card .core-values h2, .about-page .about-page-container .about-card .core-values .h2 {
+  margin-bottom: 1rem;
+  color: #0052a3;
+}
+.about-page .about-page-container .about-card .core-values ul {
+  list-style: none;
+  padding: 0;
+}
+.about-page .about-page-container .about-card .core-values ul li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.about-page .about-page-container .about-card .core-values ul li .dot {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  background: #0052a3;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  margin-top: 0.4rem;
+}
+.about-page .about-page-container .about-card .core-values ul li strong {
+  margin-right: 0.25rem;
+}
+.about-page footer,
+.about-page .footer-content {
+  flex-shrink: 0;
+  margin-top: auto;
 }

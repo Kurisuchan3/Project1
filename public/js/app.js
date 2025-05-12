@@ -77585,7 +77585,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".about-page {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\n.about-page .about-page-container {\n  flex: 1;\n  position: relative;\n  background: #0052a3;\n  overflow: hidden;\n  font-family: sans-serif;\n  color: #333;\n  padding-top: 25vh;\n  padding-bottom: 25vh;\n}\n.about-page .about-page-container .wave {\n  position: absolute;\n  width: 100%;\n  height: 200px;\n  left: 0;\n}\n.about-page .about-page-container .wave svg {\n  display: block;\n  width: 100%;\n  height: 100%;\n}\n.about-page .about-page-container .wave svg path {\n  fill: #ffffff;\n}\n.about-page .about-page-container .wave.wave-top {\n  top: 0;\n}\n.about-page .about-page-container .wave.wave-top svg path {\n  fill: #0052a3;\n}\n.about-page .about-page-container .wave.wave-bottom {\n  bottom: 0;\n  transform: rotate(180deg);\n}\n.about-page .about-page-container .wave.wave-bottom svg path {\n  fill: #0052a3;\n}\n.about-page .about-page-container .about-card {\n  position: relative;\n  width: 90%;\n  max-width: 1200px;\n  margin: 0 auto;\n  background: #fff;\n  padding: 80px 40px;\n  min-height: 70vh;\n  border-radius: 50px;\n  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);\n  z-index: 1;\n}\n.about-page .about-page-container .about-card h1 {\n  text-align: center;\n  margin-bottom: 1rem;\n  color: #0052a3;\n}\n.about-page .about-page-container .about-card .section {\n  margin-bottom: 2rem;\n}\n.about-page .about-page-container .about-card .section p {\n  line-height: 1.6;\n  margin-bottom: 1rem;\n}\n.about-page .about-page-container .about-card .core-values h2 {\n  margin-bottom: 1rem;\n  color: #0052a3;\n}\n.about-page .about-page-container .about-card .core-values ul {\n  list-style: none;\n  padding: 0;\n}\n.about-page .about-page-container .about-card .core-values ul li {\n  display: flex;\n  align-items: flex-start;\n  margin-bottom: 1rem;\n}\n.about-page .about-page-container .about-card .core-values ul li .dot {\n  flex-shrink: 0;\n  width: 12px;\n  height: 12px;\n  background: #0052a3;\n  border-radius: 50%;\n  margin-right: 0.75rem;\n  margin-top: 0.4rem;\n}\n.about-page .about-page-container .about-card .core-values ul li strong {\n  margin-right: 0.25rem;\n}\n.about-page footer,\n.about-page .footer-content {\n  flex-shrink: 0;\n  margin-top: auto;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -77730,6 +77730,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "@charset \"UTF-8\";\n:root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.topnav {\n  background-color: var(--purple);\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n}\n.topnav .logo {\n  display: flex;\n  align-items: center;\n}\n.topnav .logo img {\n  height: 40px;\n}\n.topnav .search-bar {\n  flex: 1;\n  margin: 0 2rem;\n  display: flex;\n  justify-content: center;\n  /* AntD input field */\n  /* AntD search button */\n}\n.topnav .search-bar input.ant-input {\n  border-radius: 4px 0 0 4px;\n  border: none;\n  height: 44px;\n  padding: 0 1rem;\n}\n.topnav .search-bar .ant-btn {\n  border-radius: 0 4px 4px 0;\n  background: var(--yellow);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .search-bar .ant-btn:hover, .topnav .search-bar .ant-btn:focus {\n  filter: brightness(0.9);\n}\n.topnav .nav-right {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n.topnav .nav-right .username-inline {\n  color: #fff;\n  font-size: 0.9rem;\n}\n.topnav .nav-right .nav-icons {\n  display: flex;\n  gap: 1rem;\n  /* The “Login” or “Profile” button when not an icon */\n}\n.topnav .nav-right .nav-icons svg,\n.topnav .nav-right .nav-icons .ant-dropdown-trigger {\n  font-size: 1.25rem;\n  color: #fff;\n  cursor: pointer;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary {\n  background: var(--yellow);\n  border-color: var(--yellow);\n  color: var(--purple);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary:hover, .topnav .nav-right .nav-icons .ant-btn-primary:focus {\n  filter: brightness(0.9);\n}\n\n/* Secondary nav links below topnav */\n.nav-links {\n  background: #fff;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  justify-content: center;\n  padding: 0.5rem 0;\n}\n.nav-links a {\n  margin: 0 1rem;\n  color: #333;\n  font-weight: 500;\n  text-decoration: none;\n  padding: 0.5rem;\n  transition: color 0.2s;\n}\n.nav-links a:hover {\n  color: var(--purple);\n}\n.nav-links a.active {\n  color: var(--purple);\n  font-weight: 600;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/_usertable.scss":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/_usertable.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".user-table-container {\n  margin-top: 10px;\n  padding: 20px;\n  background: #fff;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.user-table-container .button-container {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  gap: 15px;\n  margin-bottom: 20px;\n}\n.user-table-container .button-container .ant-btn-primary {\n  background-color: #1890ff;\n  border-color: #1890ff;\n  font-weight: 500;\n  padding: 0 20px;\n  height: 40px;\n}\n.user-table-container .button-container .ant-btn-default {\n  border-color: #1890ff;\n  color: #1890ff;\n  font-weight: 500;\n  padding: 0 20px;\n  height: 40px;\n}\n.user-table-container .ant-table {\n  border-radius: 6px;\n  overflow: hidden;\n}\n.user-table-container .ant-table-thead > tr > th {\n  background-color: #1890ff;\n  color: white;\n  font-weight: 600;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -171018,7 +171042,10 @@ var ProductPage = function ProductPage() {
   var _Form$useForm = antd__WEBPACK_IMPORTED_MODULE_7__["default"].useForm(),
     _Form$useForm2 = _slicedToArray(_Form$useForm, 1),
     form = _Form$useForm2[0];
-  var authToken = localStorage.getItem("authToken");
+
+  // ✅ Ensure Authorization token is formatted as "Bearer ..."
+  var rawToken = localStorage.getItem("authToken");
+  var authToken = rawToken !== null && rawToken !== void 0 && rawToken.startsWith("Bearer ") ? rawToken : "Bearer ".concat(rawToken);
   if (authToken) {
     axios__WEBPACK_IMPORTED_MODULE_8__["default"].defaults.headers.common["Authorization"] = authToken;
   }
@@ -171067,7 +171094,7 @@ var ProductPage = function ProductPage() {
             return axios__WEBPACK_IMPORTED_MODULE_8__["default"].get("/api/statuses");
           case 3:
             response = _context2.sent;
-            setStatuses(response.data);
+            setStatuses(response.data.data || []); // ✅ your API response wraps statuses under "data"
             _context2.next = 11;
             break;
           case 7:
@@ -171457,7 +171484,7 @@ var ProductPage = function ProductPage() {
             }
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {
             title: isAdding ? "Add Product" : "Edit Product",
-            visible: isModalVisible,
+            open: isModalVisible,
             onCancel: function onCancel() {
               return setIsModalVisible(false);
             },
@@ -171472,8 +171499,7 @@ var ProductPage = function ProductPage() {
                 label: "Product Image",
                 name: "image",
                 getValueFromEvent: function getValueFromEvent(e) {
-                  if (Array.isArray(e)) return e;
-                  return e && e.fileList;
+                  return Array.isArray(e) ? e : e === null || e === void 0 ? void 0 : e.fileList;
                 },
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_16__["default"], {
                   beforeUpload: function beforeUpload() {
@@ -171489,16 +171515,14 @@ var ProductPage = function ProductPage() {
                 label: "Product Name",
                 name: "name",
                 rules: [{
-                  required: true,
-                  message: "Please input the product name!"
+                  required: true
                 }],
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_18__["default"], {})
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
                 label: "Brand",
                 name: "subcategory_id",
                 rules: [{
-                  required: true,
-                  message: "Please select a brand!"
+                  required: true
                 }],
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
                   placeholder: "Select brand",
@@ -171513,8 +171537,7 @@ var ProductPage = function ProductPage() {
                 label: "Price",
                 name: "price",
                 rules: [{
-                  required: true,
-                  message: "Please input the price"
+                  required: true
                 }],
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_19__["default"], {
                   min: 0,
@@ -171527,8 +171550,7 @@ var ProductPage = function ProductPage() {
                 label: "Quantity",
                 name: "quantity",
                 rules: [{
-                  required: true,
-                  message: "Please input the quantity!"
+                  required: true
                 }],
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_19__["default"], {
                   min: 0,
@@ -171560,7 +171582,7 @@ var ProductPage = function ProductPage() {
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {
             title: "Archived Products",
-            visible: isArchiveModalVisible,
+            open: isArchiveModalVisible,
             onCancel: function onCancel() {
               return setIsArchiveModalVisible(false);
             },
@@ -171757,7 +171779,10 @@ var Inventory = function Inventory() {
   var _Form$useForm = antd__WEBPACK_IMPORTED_MODULE_6__["default"].useForm(),
     _Form$useForm2 = _slicedToArray(_Form$useForm, 1),
     editForm = _Form$useForm2[0];
-  var authToken = localStorage.getItem("authToken");
+
+  // ✅ Fix: Apply token with "Bearer " prefix
+  var rawToken = localStorage.getItem("authToken");
+  var authToken = rawToken !== null && rawToken !== void 0 && rawToken.startsWith("Bearer ") ? rawToken : "Bearer ".concat(rawToken);
   if (authToken) {
     axios__WEBPACK_IMPORTED_MODULE_7__["default"].defaults.headers.common["Authorization"] = authToken;
   }
@@ -171784,7 +171809,7 @@ var Inventory = function Inventory() {
                 product_name: (_item$product3 = item.product) === null || _item$product3 === void 0 ? void 0 : _item$product3.name,
                 price: (_item$product4 = item.product) === null || _item$product4 === void 0 ? void 0 : _item$product4.price,
                 stock_quantity: item.stock_quantity,
-                stock_status: item.stock_status ? item.stock_status : item.stock_quantity === 0 ? "Out of Stock" : "In Stock",
+                stock_status: item.stock_status || (item.stock_quantity === 0 ? "Out of Stock" : "In Stock"),
                 last_restock: item.last_restock ? new Date(item.last_restock).toLocaleDateString() : new Date().toLocaleDateString()
               };
             }));
@@ -171824,7 +171849,7 @@ var Inventory = function Inventory() {
                 product_name: (_item$product6 = item.product) === null || _item$product6 === void 0 ? void 0 : _item$product6.name,
                 price: (_item$product7 = item.product) === null || _item$product7 === void 0 ? void 0 : _item$product7.price,
                 stock_quantity: item.stock_quantity,
-                stock_status: item.stock_status ? item.stock_status : item.stock_quantity === 0 ? "Out of Stock" : "In Stock",
+                stock_status: item.stock_status || (item.stock_quantity === 0 ? "Out of Stock" : "In Stock"),
                 last_restock: item.last_restock ? new Date(item.last_restock).toLocaleDateString() : new Date().toLocaleDateString()
               };
             }));
@@ -171953,8 +171978,7 @@ var Inventory = function Inventory() {
         src: window.location.origin + image,
         alt: "product",
         style: {
-          width: 50,
-          height: "auto"
+          width: 50
         }
       }) : "No Image";
     }
@@ -172008,8 +172032,7 @@ var Inventory = function Inventory() {
         src: window.location.origin + image,
         alt: "product",
         style: {
-          width: 50,
-          height: "auto"
+          width: 50
         }
       }) : "No Image";
     }
@@ -172097,7 +172120,7 @@ var Inventory = function Inventory() {
             }
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
             title: "Edit Inventory Item",
-            visible: isEditModalVisible,
+            open: isEditModalVisible,
             onCancel: function onCancel() {
               return setIsEditModalVisible(false);
             },
@@ -172112,16 +172135,14 @@ var Inventory = function Inventory() {
                 label: "Product Name",
                 name: "product_name",
                 rules: [{
-                  required: true,
-                  message: "Please input the product name!"
+                  required: true
                 }],
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {})
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"].Item, {
                 label: "Price",
                 name: "price",
                 rules: [{
-                  required: true,
-                  message: "Please input the price!"
+                  required: true
                 }],
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_16__["default"], {
                   min: 0,
@@ -172133,8 +172154,7 @@ var Inventory = function Inventory() {
                 label: "Stock Quantity",
                 name: "stock_quantity",
                 rules: [{
-                  required: true,
-                  message: "Please input the stock quantity!"
+                  required: true
                 }],
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_16__["default"], {
                   min: 0,
@@ -172146,7 +172166,7 @@ var Inventory = function Inventory() {
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
             title: "Archived Inventory",
-            visible: isArchiveModalVisible,
+            open: isArchiveModalVisible,
             onCancel: function onCancel() {
               return setIsArchiveModalVisible(false);
             },
@@ -172768,18 +172788,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/tooltip/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/tag/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/table/index.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/EditOutlined.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/StopOutlined.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/PlusOutlined.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/tooltip/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/tag/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/table/index.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/EditOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/StopOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/PlusOutlined.js");
 /* harmony import */ var _topnav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../topnav */ "./resources/js/components/topnav.js");
 /* harmony import */ var _admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../admin-sidemenu */ "./resources/js/components/admin-sidemenu.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _sass_components_usertable_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../sass/components/_usertable.scss */ "./resources/sass/components/_usertable.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return r; }; var t, r = {}, e = Object.prototype, n = e.hasOwnProperty, o = "function" == typeof Symbol ? Symbol : {}, i = o.iterator || "@@iterator", a = o.asyncIterator || "@@asyncIterator", u = o.toStringTag || "@@toStringTag"; function c(t, r, e, n) { return Object.defineProperty(t, r, { value: e, enumerable: !n, configurable: !n, writable: !n }); } try { c({}, ""); } catch (t) { c = function c(t, r, e) { return t[r] = e; }; } function h(r, e, n, o) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype); return c(a, "_invoke", function (r, e, n) { var o = 1; return function (i, a) { if (3 === o) throw Error("Generator is already running"); if (4 === o) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var u = n.delegate; if (u) { var c = d(u, n); if (c) { if (c === f) continue; return c; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (1 === o) throw o = 4, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = 3; var h = s(r, e, n); if ("normal" === h.type) { if (o = n.done ? 4 : 2, h.arg === f) continue; return { value: h.arg, done: n.done }; } "throw" === h.type && (o = 4, n.method = "throw", n.arg = h.arg); } }; }(r, n, new Context(o || [])), !0), a; } function s(t, r, e) { try { return { type: "normal", arg: t.call(r, e) }; } catch (t) { return { type: "throw", arg: t }; } } r.wrap = h; var f = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var l = {}; c(l, i, function () { return this; }); var p = Object.getPrototypeOf, y = p && p(p(x([]))); y && y !== e && n.call(y, i) && (l = y); var v = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(l); function g(t) { ["next", "throw", "return"].forEach(function (r) { c(t, r, function (t) { return this._invoke(r, t); }); }); } function AsyncIterator(t, r) { function e(o, i, a, u) { var c = s(t[o], t, i); if ("throw" !== c.type) { var h = c.arg, f = h.value; return f && "object" == _typeof(f) && n.call(f, "__await") ? r.resolve(f.__await).then(function (t) { e("next", t, a, u); }, function (t) { e("throw", t, a, u); }) : r.resolve(f).then(function (t) { h.value = t, a(h); }, function (t) { return e("throw", t, a, u); }); } u(c.arg); } var o; c(this, "_invoke", function (t, n) { function i() { return new r(function (r, o) { e(t, n, r, o); }); } return o = o ? o.then(i, i) : i(); }, !0); } function d(r, e) { var n = e.method, o = r.i[n]; if (o === t) return e.delegate = null, "throw" === n && r.i["return"] && (e.method = "return", e.arg = t, d(r, e), "throw" === e.method) || "return" !== n && (e.method = "throw", e.arg = new TypeError("The iterator does not provide a '" + n + "' method")), f; var i = s(o, r.i, e.arg); if ("throw" === i.type) return e.method = "throw", e.arg = i.arg, e.delegate = null, f; var a = i.arg; return a ? a.done ? (e[r.r] = a.value, e.next = r.n, "return" !== e.method && (e.method = "next", e.arg = t), e.delegate = null, f) : a : (e.method = "throw", e.arg = new TypeError("iterator result is not an object"), e.delegate = null, f); } function w(t) { this.tryEntries.push(t); } function m(r) { var e = r[4] || {}; e.type = "normal", e.arg = t, r[4] = e; } function Context(t) { this.tryEntries = [[-1]], t.forEach(w, this), this.reset(!0); } function x(r) { if (null != r) { var e = r[i]; if (e) return e.call(r); if ("function" == typeof r.next) return r; if (!isNaN(r.length)) { var o = -1, a = function e() { for (; ++o < r.length;) if (n.call(r, o)) return e.value = r[o], e.done = !1, e; return e.value = t, e.done = !0, e; }; return a.next = a; } } throw new TypeError(_typeof(r) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, c(v, "constructor", GeneratorFunctionPrototype), c(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = c(GeneratorFunctionPrototype, u, "GeneratorFunction"), r.isGeneratorFunction = function (t) { var r = "function" == typeof t && t.constructor; return !!r && (r === GeneratorFunction || "GeneratorFunction" === (r.displayName || r.name)); }, r.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, c(t, u, "GeneratorFunction")), t.prototype = Object.create(v), t; }, r.awrap = function (t) { return { __await: t }; }, g(AsyncIterator.prototype), c(AsyncIterator.prototype, a, function () { return this; }), r.AsyncIterator = AsyncIterator, r.async = function (t, e, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(h(t, e, n, o), i); return r.isGeneratorFunction(e) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, g(v), c(v, u, "Generator"), c(v, i, function () { return this; }), c(v, "toString", function () { return "[object Generator]"; }), r.keys = function (t) { var r = Object(t), e = []; for (var n in r) e.unshift(n); return function t() { for (; e.length;) if ((n = e.pop()) in r) return t.value = n, t.done = !1, t; return t.done = !0, t; }; }, r.values = x, Context.prototype = { constructor: Context, reset: function reset(r) { if (this.prev = this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(m), !r) for (var e in this) "t" === e.charAt(0) && n.call(this, e) && !isNaN(+e.slice(1)) && (this[e] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0][4]; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(r) { if (this.done) throw r; var e = this; function n(t) { a.type = "throw", a.arg = r, e.next = t; } for (var o = e.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i[4], u = this.prev, c = i[1], h = i[2]; if (-1 === i[0]) return n("end"), !1; if (!c && !h) throw Error("try statement without catch or finally"); if (null != i[0] && i[0] <= u) { if (u < c) return this.method = "next", this.arg = t, n(c), !0; if (u < h) return n(h), !1; } } }, abrupt: function abrupt(t, r) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var n = this.tryEntries[e]; if (n[0] > -1 && n[0] <= this.prev && this.prev < n[2]) { var o = n; break; } } o && ("break" === t || "continue" === t) && o[0] <= r && r <= o[2] && (o = null); var i = o ? o[4] : {}; return i.type = t, i.arg = r, o ? (this.method = "next", this.next = o[2], f) : this.complete(i); }, complete: function complete(t, r) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && r && (this.next = r), f; }, finish: function finish(t) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var e = this.tryEntries[r]; if (e[2] === t) return this.complete(e[4], e[3]), m(e), f; } }, "catch": function _catch(t) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var e = this.tryEntries[r]; if (e[0] === t) { var n = e[4]; if ("throw" === n.type) { var o = n.arg; m(e); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(r, e, n) { return this.delegate = { i: x(r), r: e, n: n }, "next" === this.method && (this.arg = t), f; } }, r; }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
@@ -172794,10 +172815,11 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
- // Importing Top Navigation
- // Importing Sidebar
 
-var Content = antd__WEBPACK_IMPORTED_MODULE_4__["default"].Content;
+
+ // ✅ Import SCSS styles
+
+var Content = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Content;
 var UserTable = function UserTable() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState2 = _slicedToArray(_useState, 2),
@@ -172810,58 +172832,50 @@ var UserTable = function UserTable() {
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState6 = _slicedToArray(_useState5, 2),
     selectedRowKeys = _useState6[0],
-    setSelectedRowKeys = _useState6[1]; // Track selected users
+    setSelectedRowKeys = _useState6[1];
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
     _useState8 = _slicedToArray(_useState7, 2),
     viewArchived = _useState8[0],
-    setViewArchived = _useState8[1]; // Toggle state for Active/Archived users
-
-  var authToken = localStorage.getItem("token") || null;
+    setViewArchived = _useState8[1];
+  var rawToken = localStorage.getItem("authToken");
+  var authToken = rawToken !== null && rawToken !== void 0 && rawToken.startsWith("Bearer ") ? rawToken : "Bearer ".concat(rawToken);
+  var axiosConfig = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: authToken
+    }
+  };
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     fetchUsers();
     fetchArchivedUsers();
   }, []);
   var fetchUsers = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var _authToken, config, response;
+      var response, _error$response;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             _context.prev = 0;
-            _authToken = localStorage.getItem("authToken");
-            if (_authToken) {
-              _context.next = 5;
-              break;
-            }
-            alert("Authentication token is missing. Please log in again.");
-            return _context.abrupt("return");
-          case 5:
-            config = {
-              headers: {
-                "Content-Type": "application/json",
-                Authorization: _authToken // Ensure token is passed
-              }
-            };
-            _context.next = 8;
-            return axios__WEBPACK_IMPORTED_MODULE_5__["default"].get("http://127.0.0.1:8000/api/users", config);
-          case 8:
+            _context.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_6__["default"].get("http://127.0.0.1:8000/api/users", axiosConfig);
+          case 3:
             response = _context.sent;
             if (response.data.success) {
               setUsers(response.data.data);
             } else {
               console.error("API returned unsuccessful response:", response.data);
             }
-            _context.next = 15;
+            _context.next = 10;
             break;
-          case 12:
-            _context.prev = 12;
+          case 7:
+            _context.prev = 7;
             _context.t0 = _context["catch"](0);
-            console.error("Error fetching users:", _context.t0.response ? _context.t0.response.data : _context.t0.message);
-          case 15:
+            console.error("Error fetching users:", ((_error$response = _context.t0.response) === null || _error$response === void 0 ? void 0 : _error$response.data) || _context.t0.message);
+          case 10:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[0, 12]]);
+      }, _callee, null, [[0, 7]]);
     }));
     return function fetchUsers() {
       return _ref.apply(this, arguments);
@@ -172869,45 +172883,31 @@ var UserTable = function UserTable() {
   }();
   var fetchArchivedUsers = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-      var _authToken2, config, response;
+      var response, _error$response2;
       return _regeneratorRuntime().wrap(function _callee2$(_context2) {
         while (1) switch (_context2.prev = _context2.next) {
           case 0:
             _context2.prev = 0;
-            _authToken2 = localStorage.getItem("authToken");
-            if (_authToken2) {
-              _context2.next = 5;
-              break;
-            }
-            alert("Authentication token is missing. Please log in again.");
-            return _context2.abrupt("return");
-          case 5:
-            config = {
-              headers: {
-                "Content-Type": "application/json",
-                Authorization: _authToken2
-              }
-            };
-            _context2.next = 8;
-            return axios__WEBPACK_IMPORTED_MODULE_5__["default"].get("http://127.0.0.1:8000/api/users/archived", config);
-          case 8:
+            _context2.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_6__["default"].get("http://127.0.0.1:8000/api/users/archived", axiosConfig);
+          case 3:
             response = _context2.sent;
             if (response.data.success) {
               setArchivedUsers(response.data.data);
             } else {
               console.error("API returned unsuccessful response:", response.data);
             }
-            _context2.next = 15;
+            _context2.next = 10;
             break;
-          case 12:
-            _context2.prev = 12;
+          case 7:
+            _context2.prev = 7;
             _context2.t0 = _context2["catch"](0);
-            console.error("Error fetching archived users:", _context2.t0.response ? _context2.t0.response.data : _context2.t0.message);
-          case 15:
+            console.error("Error fetching archived users:", ((_error$response2 = _context2.t0.response) === null || _error$response2 === void 0 ? void 0 : _error$response2.data) || _context2.t0.message);
+          case 10:
           case "end":
             return _context2.stop();
         }
-      }, _callee2, null, [[0, 12]]);
+      }, _callee2, null, [[0, 7]]);
     }));
     return function fetchArchivedUsers() {
       return _ref2.apply(this, arguments);
@@ -172921,7 +172921,7 @@ var UserTable = function UserTable() {
   };
   var handleArchiveRestore = /*#__PURE__*/function () {
     var _ref3 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3(user) {
-      var action, confirmAction, _authToken3, config;
+      var action, confirmAction, _error$response3;
       return _regeneratorRuntime().wrap(function _callee3$(_context3) {
         while (1) switch (_context3.prev = _context3.next) {
           case 0:
@@ -172934,58 +172934,40 @@ var UserTable = function UserTable() {
             return _context3.abrupt("return");
           case 4:
             _context3.prev = 4;
-            _authToken3 = localStorage.getItem("authToken");
-            if (_authToken3) {
-              _context3.next = 9;
-              break;
-            }
-            alert("Authentication token is missing. Please log in again.");
-            return _context3.abrupt("return");
-          case 9:
-            config = {
-              headers: {
-                "Content-Type": "application/json",
-                Authorization: _authToken3
-              }
-            };
-            _context3.next = 12;
-            return axios__WEBPACK_IMPORTED_MODULE_5__["default"].put("http://127.0.0.1:8000/api/users/".concat(user.user_id, "/").concat(action), {}, config);
-          case 12:
+            _context3.next = 7;
+            return axios__WEBPACK_IMPORTED_MODULE_6__["default"].put("http://127.0.0.1:8000/api/users/".concat(user.user_id, "/").concat(action), {}, axiosConfig);
+          case 7:
             fetchUsers();
             fetchArchivedUsers();
-            _context3.next = 19;
+            _context3.next = 14;
             break;
-          case 16:
-            _context3.prev = 16;
+          case 11:
+            _context3.prev = 11;
             _context3.t0 = _context3["catch"](4);
-            console.error("Error trying to ".concat(action, " user:"), _context3.t0.response ? _context3.t0.response.data : _context3.t0.message);
-          case 19:
+            console.error("Error trying to ".concat(action, " user:"), ((_error$response3 = _context3.t0.response) === null || _error$response3 === void 0 ? void 0 : _error$response3.data) || _context3.t0.message);
+          case 14:
           case "end":
             return _context3.stop();
         }
-      }, _callee3, null, [[4, 16]]);
+      }, _callee3, null, [[4, 11]]);
     }));
     return function handleArchiveRestore(_x) {
       return _ref3.apply(this, arguments);
     };
   }();
-  var onSelectChange = function onSelectChange(selectedKeys) {
-    setSelectedRowKeys(selectedKeys);
-  };
-  var filteredUsers = viewArchived ? archivedUsers : users;
   var columns = [{
     title: "Actions",
     key: "actions",
     render: function render(_, user) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         style: {
           display: "flex",
           alignItems: "center",
           gap: "10px"
         },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
           title: "Edit",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_8__["default"], {
             style: {
               fontSize: "18px",
               color: "#1890ff",
@@ -172995,9 +172977,9 @@ var UserTable = function UserTable() {
               return handleEdit(user);
             }
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
           title: user.deleted_at ? "Restore" : "Archive",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_9__["default"], {
             style: {
               fontSize: "18px",
               color: user.deleted_at ? "#52c41a" : "#ff4d4f",
@@ -173030,63 +173012,58 @@ var UserTable = function UserTable() {
     dataIndex: "deleted_at",
     key: "status",
     render: function render(deleted_at) {
-      return deleted_at ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      return deleted_at ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
         color: "red",
         children: "ARCHIVED"
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
         color: "green",
         children: "ACTIVE"
       });
     }
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
     style: {
       minHeight: "100vh"
     },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
       style: {
         display: "flex",
         flexDirection: "row"
       },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
         style: {
           padding: "20px",
           width: "100%"
         },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(Content, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Content, {
           style: {
-            background: "#fff",
+            background: "#f5f5f5",
             padding: "20px",
             borderRadius: "8px"
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: "flex justify-between items-center mb-4",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            className: "user-table-container",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "button-container",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
                 type: "primary",
-                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_11__["default"], {}),
+                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {}),
                 children: "Add User"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
                 type: "default",
-                style: {
-                  marginLeft: "10px"
-                },
                 onClick: toggleView,
                 children: viewArchived ? "View Active" : "View Archived"
               })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: "user-table-container",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_12__["default"], {
-              dataSource: filteredUsers,
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_13__["default"], {
+              dataSource: viewArchived ? archivedUsers : users,
               columns: columns,
               rowKey: "user_id",
               pagination: {
                 pageSize: 10
               },
               bordered: true
-            })
-          })]
+            })]
+          })
         })
       })]
     })]
@@ -173631,6 +173608,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_topnav_scss__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/sass/components/_usertable.scss":
+/*!***************************************************!*\
+  !*** ./resources/sass/components/_usertable.scss ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_usertable_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./_usertable.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/components/_usertable.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_usertable_scss__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_usertable_scss__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 

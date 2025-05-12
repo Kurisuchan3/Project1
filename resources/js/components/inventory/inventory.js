@@ -16,7 +16,9 @@ const Inventory = () => {
   const [editingInventoryItem, setEditingInventoryItem] = useState(null);
   const [editForm] = Form.useForm();
 
-  const authToken = localStorage.getItem("authToken");
+  // ✅ Fix: Apply token with "Bearer " prefix
+  const rawToken = localStorage.getItem("authToken");
+  const authToken = rawToken?.startsWith("Bearer ") ? rawToken : `Bearer ${rawToken}`;
   if (authToken) {
     axios.defaults.headers.common["Authorization"] = authToken;
   }
@@ -36,7 +38,7 @@ const Inventory = () => {
           product_name: item.product?.name,
           price: item.product?.price,
           stock_quantity: item.stock_quantity,
-          stock_status: item.stock_status ? item.stock_status : (item.stock_quantity === 0 ? "Out of Stock" : "In Stock"),
+          stock_status: item.stock_status || (item.stock_quantity === 0 ? "Out of Stock" : "In Stock"),
           last_restock: item.last_restock
             ? new Date(item.last_restock).toLocaleDateString()
             : new Date().toLocaleDateString(),
@@ -58,7 +60,7 @@ const Inventory = () => {
           product_name: item.product?.name,
           price: item.product?.price,
           stock_quantity: item.stock_quantity,
-          stock_status: item.stock_status ? item.stock_status : (item.stock_quantity === 0 ? "Out of Stock" : "In Stock"),
+          stock_status: item.stock_status || (item.stock_quantity === 0 ? "Out of Stock" : "In Stock"),
           last_restock: item.last_restock
             ? new Date(item.last_restock).toLocaleDateString()
             : new Date().toLocaleDateString(),
@@ -126,11 +128,7 @@ const Inventory = () => {
       key: "image",
       render: (image) =>
         image ? (
-          <img
-            src={window.location.origin + image}
-            alt="product"
-            style={{ width: 50, height: "auto" }}
-          />
+          <img src={window.location.origin + image} alt="product" style={{ width: 50 }} />
         ) : (
           "No Image"
         ),
@@ -161,11 +159,7 @@ const Inventory = () => {
       key: "image",
       render: (image) =>
         image ? (
-          <img
-            src={window.location.origin + image}
-            alt="product"
-            style={{ width: 50, height: "auto" }}
-          />
+          <img src={window.location.origin + image} alt="product" style={{ width: 50 }} />
         ) : (
           "No Image"
         ),
@@ -215,30 +209,18 @@ const Inventory = () => {
 
             <Modal
               title="Edit Inventory Item"
-              visible={isEditModalVisible}
+              open={isEditModalVisible}
               onCancel={() => setIsEditModalVisible(false)}
               onOk={() => editForm.submit()}
             >
               <Form form={editForm} onFinish={handleEditSubmit} layout="vertical">
-                <Form.Item
-                  label="Product Name"
-                  name="product_name"
-                  rules={[{ required: true, message: "Please input the product name!" }]}
-                >
+                <Form.Item label="Product Name" name="product_name" rules={[{ required: true }]}>
                   <Input />
                 </Form.Item>
-                <Form.Item
-                  label="Price"
-                  name="price"
-                  rules={[{ required: true, message: "Please input the price!" }]}
-                >
+                <Form.Item label="Price" name="price" rules={[{ required: true }]}>
                   <InputNumber min={0} style={{ width: "100%" }} />
                 </Form.Item>
-                <Form.Item
-                  label="Stock Quantity"
-                  name="stock_quantity"
-                  rules={[{ required: true, message: "Please input the stock quantity!" }]}
-                >
+                <Form.Item label="Stock Quantity" name="stock_quantity" rules={[{ required: true }]}>
                   <InputNumber min={0} style={{ width: "100%" }} />
                 </Form.Item>
               </Form>
@@ -246,7 +228,7 @@ const Inventory = () => {
 
             <Modal
               title="Archived Inventory"
-              visible={isArchiveModalVisible}
+              open={isArchiveModalVisible}
               onCancel={() => setIsArchiveModalVisible(false)}
               footer={null}
             >
