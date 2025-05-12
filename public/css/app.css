@@ -12005,6 +12005,12 @@ textarea.form-control-lg {
   color: #ffcd38;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --purple: #24067e;
   --yellow: #ffcd38;
@@ -12020,7 +12026,7 @@ textarea.form-control-lg {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 .login-box {
@@ -12098,6 +12104,11 @@ textarea.form-control-lg {
 }
 
 .topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: var(--purple);
   display: flex;
   align-items: center;
@@ -15579,6 +15590,10 @@ footer {
   font-size: 20px;
   font-weight: bold;
   color: #333;
+}
+
+.inventory-page {
+  padding-top: 76px;
 }
 
 .modal-overlay {

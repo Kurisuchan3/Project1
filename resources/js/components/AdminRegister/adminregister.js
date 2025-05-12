@@ -28,7 +28,7 @@ const AdminRegister = () => {
   return (
     <div className="admin-register-page">
       <TopNav />
-      <div style={{ display: "flex", marginTop: "110px" }}>
+      <div style={{ display: "flex", marginTop: "64px" }}>
         <AdminSideMenu />
         <div className="register-content" style={{ flex: 1, padding: "20px" }}>
           <div className="register-container">

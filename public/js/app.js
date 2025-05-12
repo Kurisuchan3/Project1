@@ -5038,24 +5038,6 @@ var DownOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 89
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons-svg/es/asn/DownloadOutlined.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/es/asn/DownloadOutlined.js ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-// This icon file is generated automatically.
-var DownloadOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M505.7 661a8 8 0 0012.6 0l112-141.7c4.1-5.2.4-12.9-6.3-12.9h-74.1V168c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v338.3H400c-6.7 0-10.4 7.7-6.3 12.9l112 141.8zM878 626h-60c-4.4 0-8 3.6-8 8v154H214V634c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v198c0 17.7 14.3 32 32 32h684c17.7 0 32-14.3 32-32V634c0-4.4-3.6-8-8-8z" } }] }, "name": "download", "theme": "outlined" };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DownloadOutlined);
-
-
-/***/ }),
-
 /***/ "./node_modules/@ant-design/icons-svg/es/asn/EditOutlined.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@ant-design/icons-svg/es/asn/EditOutlined.js ***!
@@ -5178,24 +5160,6 @@ __webpack_require__.r(__webpack_exports__);
 // This icon file is generated automatically.
 var FileOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM790.2 326H602V137.8L790.2 326zm1.8 562H232V136h302v216a42 42 0 0042 42h216v494z" } }] }, "name": "file", "theme": "outlined" };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FileOutlined);
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/es/asn/FileTwoTone.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/es/asn/FileTwoTone.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-// This icon file is generated automatically.
-var FileTwoTone = { "icon": function render(primaryColor, secondaryColor) { return { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M534 352V136H232v752h560V394H576a42 42 0 01-42-42z", "fill": secondaryColor } }, { "tag": "path", "attrs": { "d": "M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM602 137.8L790.2 326H602V137.8zM792 888H232V136h302v216a42 42 0 0042 42h216v494z", "fill": primaryColor } }] }; }, "name": "file", "theme": "twotone" };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FileTwoTone);
 
 
 /***/ }),
@@ -5376,42 +5340,6 @@ __webpack_require__.r(__webpack_exports__);
 // This icon file is generated automatically.
 var MinusSquareOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M328 544h368c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8z" } }, { "tag": "path", "attrs": { "d": "M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z" } }] }, "name": "minus-square", "theme": "outlined" };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MinusSquareOutlined);
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/es/asn/PaperClipOutlined.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/es/asn/PaperClipOutlined.js ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-// This icon file is generated automatically.
-var PaperClipOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M779.3 196.6c-94.2-94.2-247.6-94.2-341.7 0l-261 260.8c-1.7 1.7-2.6 4-2.6 6.4s.9 4.7 2.6 6.4l36.9 36.9a9 9 0 0012.7 0l261-260.8c32.4-32.4 75.5-50.2 121.3-50.2s88.9 17.8 121.2 50.2c32.4 32.4 50.2 75.5 50.2 121.2 0 45.8-17.8 88.8-50.2 121.2l-266 265.9-43.1 43.1c-40.3 40.3-105.8 40.3-146.1 0-19.5-19.5-30.2-45.4-30.2-73s10.7-53.5 30.2-73l263.9-263.8c6.7-6.6 15.5-10.3 24.9-10.3h.1c9.4 0 18.1 3.7 24.7 10.3 6.7 6.7 10.3 15.5 10.3 24.9 0 9.3-3.7 18.1-10.3 24.7L372.4 653c-1.7 1.7-2.6 4-2.6 6.4s.9 4.7 2.6 6.4l36.9 36.9a9 9 0 0012.7 0l215.6-215.6c19.9-19.9 30.8-46.3 30.8-74.4s-11-54.6-30.8-74.4c-41.1-41.1-107.9-41-149 0L463 364 224.8 602.1A172.22 172.22 0 00174 724.8c0 46.3 18.1 89.8 50.8 122.5 33.9 33.8 78.3 50.7 122.7 50.7 44.4 0 88.8-16.9 122.6-50.7l309.2-309C824.8 492.7 850 432 850 367.5c.1-64.6-25.1-125.3-70.7-170.9z" } }] }, "name": "paper-clip", "theme": "outlined" };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PaperClipOutlined);
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/es/asn/PictureTwoTone.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/es/asn/PictureTwoTone.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-// This icon file is generated automatically.
-var PictureTwoTone = { "icon": function render(primaryColor, secondaryColor) { return { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 632H136v-39.9l138.5-164.3 150.1 178L658.1 489 888 761.6V792zm0-129.8L664.2 396.8c-3.2-3.8-9-3.8-12.2 0L424.6 666.4l-144-170.7c-3.2-3.8-9-3.8-12.2 0L136 652.7V232h752v430.2z", "fill": primaryColor } }, { "tag": "path", "attrs": { "d": "M424.6 765.8l-150.1-178L136 752.1V792h752v-30.4L658.1 489z", "fill": secondaryColor } }, { "tag": "path", "attrs": { "d": "M136 652.7l132.4-157c3.2-3.8 9-3.8 12.2 0l144 170.7L652 396.8c3.2-3.8 9-3.8 12.2 0L888 662.2V232H136v420.7zM304 280a88 88 0 110 176 88 88 0 010-176z", "fill": secondaryColor } }, { "tag": "path", "attrs": { "d": "M276 368a28 28 0 1056 0 28 28 0 10-56 0z", "fill": secondaryColor } }, { "tag": "path", "attrs": { "d": "M304 456a88 88 0 100-176 88 88 0 000 176zm0-116c15.5 0 28 12.5 28 28s-12.5 28-28 28-28-12.5-28-28 12.5-28 28-28z", "fill": primaryColor } }] }; }, "name": "picture", "theme": "twotone" };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PictureTwoTone);
 
 
 /***/ }),
@@ -5628,24 +5556,6 @@ __webpack_require__.r(__webpack_exports__);
 // This icon file is generated automatically.
 var UpOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z" } }] }, "name": "up", "theme": "outlined" };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UpOutlined);
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/es/asn/UploadOutlined.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/es/asn/UploadOutlined.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-// This icon file is generated automatically.
-var UploadOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M400 317.7h73.9V656c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V317.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 163a8 8 0 00-12.6 0l-112 141.7c-4.1 5.3-.4 13 6.3 13zM878 626h-60c-4.4 0-8 3.6-8 8v154H214V634c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v198c0 17.7 14.3 32 32 32h684c17.7 0 32-14.3 32-32V634c0-4.4-3.6-8-8-8z" } }] }, "name": "upload", "theme": "outlined" };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UploadOutlined);
 
 
 /***/ }),
@@ -6543,44 +6453,6 @@ if (true) {
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons/es/icons/DownloadOutlined.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/es/icons/DownloadOutlined.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ant_design_icons_svg_es_asn_DownloadOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons-svg/es/asn/DownloadOutlined */ "./node_modules/@ant-design/icons-svg/es/asn/DownloadOutlined.js");
-/* harmony import */ var _components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/es/components/AntdIcon.js");
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-
-
-
-
-var DownloadOutlined = function DownloadOutlined(props, ref) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    ref: ref,
-    icon: _ant_design_icons_svg_es_asn_DownloadOutlined__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }));
-};
-
-/**![download](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUwNS43IDY2MWE4IDggMCAwMDEyLjYgMGwxMTItMTQxLjdjNC4xLTUuMi40LTEyLjktNi4zLTEyLjloLTc0LjFWMTY4YzAtNC40LTMuNi04LTgtOGgtNjBjLTQuNCAwLTggMy42LTggOHYzMzguM0g0MDBjLTYuNyAwLTEwLjQgNy43LTYuMyAxMi45bDExMiAxNDEuOHpNODc4IDYyNmgtNjBjLTQuNCAwLTggMy42LTggOHYxNTRIMjE0VjYzNGMwLTQuNC0zLjYtOC04LThoLTYwYy00LjQgMC04IDMuNi04IDh2MTk4YzAgMTcuNyAxNC4zIDMyIDMyIDMyaDY4NGMxNy43IDAgMzItMTQuMyAzMi0zMlY2MzRjMC00LjQtMy42LTgtOC04eiIgLz48L3N2Zz4=) */
-var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(DownloadOutlined);
-if (true) {
-  RefIcon.displayName = 'DownloadOutlined';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
-
-/***/ }),
-
 /***/ "./node_modules/@ant-design/icons/es/icons/EditOutlined.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/@ant-design/icons/es/icons/EditOutlined.js ***!
@@ -6842,44 +6714,6 @@ var FileOutlined = function FileOutlined(props, ref) {
 var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(FileOutlined);
 if (true) {
   RefIcon.displayName = 'FileOutlined';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/es/icons/FileTwoTone.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/es/icons/FileTwoTone.js ***!
-  \****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ant_design_icons_svg_es_asn_FileTwoTone__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons-svg/es/asn/FileTwoTone */ "./node_modules/@ant-design/icons-svg/es/asn/FileTwoTone.js");
-/* harmony import */ var _components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/es/components/AntdIcon.js");
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-
-
-
-
-var FileTwoTone = function FileTwoTone(props, ref) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    ref: ref,
-    icon: _ant_design_icons_svg_es_asn_FileTwoTone__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }));
-};
-
-/**![file](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUzNCAzNTJWMTM2SDIzMnY3NTJoNTYwVjM5NEg1NzZhNDIgNDIgMCAwMS00Mi00MnoiIGZpbGw9IiNlNmY0ZmYiIC8+PHBhdGggZD0iTTg1NC42IDI4OC42TDYzOS40IDczLjRjLTYtNi0xNC4xLTkuNC0yMi42LTkuNEgxOTJjLTE3LjcgMC0zMiAxNC4zLTMyIDMydjgzMmMwIDE3LjcgMTQuMyAzMiAzMiAzMmg2NDBjMTcuNyAwIDMyLTE0LjMgMzItMzJWMzExLjNjMC04LjUtMy40LTE2LjctOS40LTIyLjd6TTYwMiAxMzcuOEw3OTAuMiAzMjZINjAyVjEzNy44ek03OTIgODg4SDIzMlYxMzZoMzAydjIxNmE0MiA0MiAwIDAwNDIgNDJoMjE2djQ5NHoiIGZpbGw9IiMxNjc3ZmYiIC8+PC9zdmc+) */
-var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(FileTwoTone);
-if (true) {
-  RefIcon.displayName = 'FileTwoTone';
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
 
@@ -7260,82 +7094,6 @@ var MinusSquareOutlined = function MinusSquareOutlined(props, ref) {
 var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(MinusSquareOutlined);
 if (true) {
   RefIcon.displayName = 'MinusSquareOutlined';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/es/icons/PaperClipOutlined.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/es/icons/PaperClipOutlined.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ant_design_icons_svg_es_asn_PaperClipOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons-svg/es/asn/PaperClipOutlined */ "./node_modules/@ant-design/icons-svg/es/asn/PaperClipOutlined.js");
-/* harmony import */ var _components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/es/components/AntdIcon.js");
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-
-
-
-
-var PaperClipOutlined = function PaperClipOutlined(props, ref) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    ref: ref,
-    icon: _ant_design_icons_svg_es_asn_PaperClipOutlined__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }));
-};
-
-/**![paper-clip](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTc3OS4zIDE5Ni42Yy05NC4yLTk0LjItMjQ3LjYtOTQuMi0zNDEuNyAwbC0yNjEgMjYwLjhjLTEuNyAxLjctMi42IDQtMi42IDYuNHMuOSA0LjcgMi42IDYuNGwzNi45IDM2LjlhOSA5IDAgMDAxMi43IDBsMjYxLTI2MC44YzMyLjQtMzIuNCA3NS41LTUwLjIgMTIxLjMtNTAuMnM4OC45IDE3LjggMTIxLjIgNTAuMmMzMi40IDMyLjQgNTAuMiA3NS41IDUwLjIgMTIxLjIgMCA0NS44LTE3LjggODguOC01MC4yIDEyMS4ybC0yNjYgMjY1LjktNDMuMSA0My4xYy00MC4zIDQwLjMtMTA1LjggNDAuMy0xNDYuMSAwLTE5LjUtMTkuNS0zMC4yLTQ1LjQtMzAuMi03M3MxMC43LTUzLjUgMzAuMi03M2wyNjMuOS0yNjMuOGM2LjctNi42IDE1LjUtMTAuMyAyNC45LTEwLjNoLjFjOS40IDAgMTguMSAzLjcgMjQuNyAxMC4zIDYuNyA2LjcgMTAuMyAxNS41IDEwLjMgMjQuOSAwIDkuMy0zLjcgMTguMS0xMC4zIDI0LjdMMzcyLjQgNjUzYy0xLjcgMS43LTIuNiA0LTIuNiA2LjRzLjkgNC43IDIuNiA2LjRsMzYuOSAzNi45YTkgOSAwIDAwMTIuNyAwbDIxNS42LTIxNS42YzE5LjktMTkuOSAzMC44LTQ2LjMgMzAuOC03NC40cy0xMS01NC42LTMwLjgtNzQuNGMtNDEuMS00MS4xLTEwNy45LTQxLTE0OSAwTDQ2MyAzNjQgMjI0LjggNjAyLjFBMTcyLjIyIDE3Mi4yMiAwIDAwMTc0IDcyNC44YzAgNDYuMyAxOC4xIDg5LjggNTAuOCAxMjIuNSAzMy45IDMzLjggNzguMyA1MC43IDEyMi43IDUwLjcgNDQuNCAwIDg4LjgtMTYuOSAxMjIuNi01MC43bDMwOS4yLTMwOUM4MjQuOCA0OTIuNyA4NTAgNDMyIDg1MCAzNjcuNWMuMS02NC42LTI1LjEtMTI1LjMtNzAuNy0xNzAuOXoiIC8+PC9zdmc+) */
-var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(PaperClipOutlined);
-if (true) {
-  RefIcon.displayName = 'PaperClipOutlined';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/es/icons/PictureTwoTone.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/es/icons/PictureTwoTone.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ant_design_icons_svg_es_asn_PictureTwoTone__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons-svg/es/asn/PictureTwoTone */ "./node_modules/@ant-design/icons-svg/es/asn/PictureTwoTone.js");
-/* harmony import */ var _components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/es/components/AntdIcon.js");
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-
-
-
-
-var PictureTwoTone = function PictureTwoTone(props, ref) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    ref: ref,
-    icon: _ant_design_icons_svg_es_asn_PictureTwoTone__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }));
-};
-
-/**![picture](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTkyOCAxNjBIOTZjLTE3LjcgMC0zMiAxNC4zLTMyIDMydjY0MGMwIDE3LjcgMTQuMyAzMiAzMiAzMmg4MzJjMTcuNyAwIDMyLTE0LjMgMzItMzJWMTkyYzAtMTcuNy0xNC4zLTMyLTMyLTMyem0tNDAgNjMySDEzNnYtMzkuOWwxMzguNS0xNjQuMyAxNTAuMSAxNzhMNjU4LjEgNDg5IDg4OCA3NjEuNlY3OTJ6bTAtMTI5LjhMNjY0LjIgMzk2LjhjLTMuMi0zLjgtOS0zLjgtMTIuMiAwTDQyNC42IDY2Ni40bC0xNDQtMTcwLjdjLTMuMi0zLjgtOS0zLjgtMTIuMiAwTDEzNiA2NTIuN1YyMzJoNzUydjQzMC4yeiIgZmlsbD0iIzE2NzdmZiIgLz48cGF0aCBkPSJNNDI0LjYgNzY1LjhsLTE1MC4xLTE3OEwxMzYgNzUyLjFWNzkyaDc1MnYtMzAuNEw2NTguMSA0ODl6IiBmaWxsPSIjZTZmNGZmIiAvPjxwYXRoIGQ9Ik0xMzYgNjUyLjdsMTMyLjQtMTU3YzMuMi0zLjggOS0zLjggMTIuMiAwbDE0NCAxNzAuN0w2NTIgMzk2LjhjMy4yLTMuOCA5LTMuOCAxMi4yIDBMODg4IDY2Mi4yVjIzMkgxMzZ2NDIwLjd6TTMwNCAyODBhODggODggMCAxMTAgMTc2IDg4IDg4IDAgMDEwLTE3NnoiIGZpbGw9IiNlNmY0ZmYiIC8+PHBhdGggZD0iTTI3NiAzNjhhMjggMjggMCAxMDU2IDAgMjggMjggMCAxMC01NiAweiIgZmlsbD0iI2U2ZjRmZiIgLz48cGF0aCBkPSJNMzA0IDQ1NmE4OCA4OCAwIDEwMC0xNzYgODggODggMCAwMDAgMTc2em0wLTExNmMxNS41IDAgMjggMTIuNSAyOCAyOHMtMTIuNSAyOC0yOCAyOC0yOC0xMi41LTI4LTI4IDEyLjUtMjggMjgtMjh6IiBmaWxsPSIjMTY3N2ZmIiAvPjwvc3ZnPg==) */
-var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(PictureTwoTone);
-if (true) {
-  RefIcon.displayName = 'PictureTwoTone';
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
 
@@ -7792,44 +7550,6 @@ var UpOutlined = function UpOutlined(props, ref) {
 var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(UpOutlined);
 if (true) {
   RefIcon.displayName = 'UpOutlined';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/es/icons/UploadOutlined.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/es/icons/UploadOutlined.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ant_design_icons_svg_es_asn_UploadOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons-svg/es/asn/UploadOutlined */ "./node_modules/@ant-design/icons-svg/es/asn/UploadOutlined.js");
-/* harmony import */ var _components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/es/components/AntdIcon.js");
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-
-
-
-
-var UploadOutlined = function UploadOutlined(props, ref) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    ref: ref,
-    icon: _ant_design_icons_svg_es_asn_UploadOutlined__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }));
-};
-
-/**![upload](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTQwMCAzMTcuN2g3My45VjY1NmMwIDQuNCAzLjYgOCA4IDhoNjBjNC40IDAgOC0zLjYgOC04VjMxNy43SDYyNGM2LjcgMCAxMC40LTcuNyA2LjMtMTIuOUw1MTguMyAxNjNhOCA4IDAgMDAtMTIuNiAwbC0xMTIgMTQxLjdjLTQuMSA1LjMtLjQgMTMgNi4zIDEzek04NzggNjI2aC02MGMtNC40IDAtOCAzLjYtOCA4djE1NEgyMTRWNjM0YzAtNC40LTMuNi04LTgtOGgtNjBjLTQuNCAwLTggMy42LTggOHYxOThjMCAxNy43IDE0LjMgMzIgMzIgMzJoNjg0YzE3LjcgMCAzMi0xNC4zIDMyLTMyVjYzNGMwLTQuNC0zLjYtOC04LTh6IiAvPjwvc3ZnPg==) */
-var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(UploadOutlined);
-if (true) {
-  RefIcon.displayName = 'UploadOutlined';
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
 
@@ -43224,985 +42944,6 @@ function useShowSizeChanger(showSizeChanger) {
 
 /***/ }),
 
-/***/ "./node_modules/antd/es/progress/Circle.js":
-/*!*************************************************!*\
-  !*** ./node_modules/antd/es/progress/Circle.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var rc_progress__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rc-progress */ "./node_modules/rc-progress/es/index.js");
-/* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../tooltip */ "./node_modules/antd/es/tooltip/index.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils */ "./node_modules/antd/es/progress/utils.js");
-"use client";
-
-
-
-
-
-
-const CIRCLE_MIN_STROKE_WIDTH = 3;
-const getMinPercent = width => CIRCLE_MIN_STROKE_WIDTH / width * 100;
-const Circle = props => {
-  const {
-    prefixCls,
-    trailColor = null,
-    strokeLinecap = 'round',
-    gapPosition,
-    gapDegree,
-    width: originWidth = 120,
-    type,
-    children,
-    success,
-    size = originWidth,
-    steps
-  } = props;
-  const [width, height] = (0,_utils__WEBPACK_IMPORTED_MODULE_3__.getSize)(size, 'circle');
-  let {
-    strokeWidth
-  } = props;
-  if (strokeWidth === undefined) {
-    strokeWidth = Math.max(getMinPercent(width), 6);
-  }
-  const circleStyle = {
-    width,
-    height,
-    fontSize: width * 0.15 + 6
-  };
-  const realGapDegree = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => {
-    // Support gapDeg = 0 when type = 'dashboard'
-    if (gapDegree || gapDegree === 0) {
-      return gapDegree;
-    }
-    if (type === 'dashboard') {
-      return 75;
-    }
-    return undefined;
-  }, [gapDegree, type]);
-  const percentArray = (0,_utils__WEBPACK_IMPORTED_MODULE_3__.getPercentage)(props);
-  const gapPos = gapPosition || type === 'dashboard' && 'bottom' || undefined;
-  // using className to style stroke color
-  const isGradient = Object.prototype.toString.call(props.strokeColor) === '[object Object]';
-  const strokeColor = (0,_utils__WEBPACK_IMPORTED_MODULE_3__.getStrokeColor)({
-    success,
-    strokeColor: props.strokeColor
-  });
-  const wrapperClassName = classnames__WEBPACK_IMPORTED_MODULE_1___default()(`${prefixCls}-inner`, {
-    [`${prefixCls}-circle-gradient`]: isGradient
-  });
-  const circleContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(rc_progress__WEBPACK_IMPORTED_MODULE_2__.Circle, {
-    steps: steps,
-    percent: steps ? percentArray[1] : percentArray,
-    strokeWidth: strokeWidth,
-    trailWidth: strokeWidth,
-    strokeColor: steps ? strokeColor[1] : strokeColor,
-    strokeLinecap: strokeLinecap,
-    trailColor: trailColor,
-    prefixCls: prefixCls,
-    gapDegree: realGapDegree,
-    gapPosition: gapPos
-  });
-  const smallCircle = width <= 20;
-  const node = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: wrapperClassName,
-    style: circleStyle
-  }, circleContent, !smallCircle && children);
-  if (smallCircle) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tooltip__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      title: children
-    }, node);
-  }
-  return node;
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Circle);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/progress/Line.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/es/progress/Line.js ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   handleGradient: () => (/* binding */ handleGradient),
-/* harmony export */   sortGradient: () => (/* binding */ sortGradient)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ant_design_colors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ant-design/colors */ "./node_modules/@ant-design/colors/es/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util_warning__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../_util/warning */ "./node_modules/antd/es/_util/warning.js");
-/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style */ "./node_modules/antd/es/progress/style/index.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils */ "./node_modules/antd/es/progress/utils.js");
-"use client";
-
-var __rest = undefined && undefined.__rest || function (s, e) {
-  var t = {};
-  for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-
-
-
-
-
-/**
- * @example
- *   {
- *     "0%": "#afc163",
- *     "75%": "#009900",
- *     "50%": "green", // ====> '#afc163 0%, #66FF00 25%, #00CC00 50%, #009900 75%, #ffffff 100%'
- *     "25%": "#66FF00",
- *     "100%": "#ffffff"
- *   }
- */
-const sortGradient = gradients => {
-  let tempArr = [];
-  Object.keys(gradients).forEach(key => {
-    const formattedKey = parseFloat(key.replace(/%/g, ''));
-    if (!Number.isNaN(formattedKey)) {
-      tempArr.push({
-        key: formattedKey,
-        value: gradients[key]
-      });
-    }
-  });
-  tempArr = tempArr.sort((a, b) => a.key - b.key);
-  return tempArr.map(_ref => {
-    let {
-      key,
-      value
-    } = _ref;
-    return `${value} ${key}%`;
-  }).join(', ');
-};
-/**
- * Then this man came to realize the truth: Besides six pence, there is the moon. Besides bread and
- * butter, there is the bug. And... Besides women, there is the code.
- *
- * @example
- *   {
- *     "0%": "#afc163",
- *     "25%": "#66FF00",
- *     "50%": "#00CC00", // ====>  linear-gradient(to right, #afc163 0%, #66FF00 25%,
- *     "75%": "#009900", //        #00CC00 50%, #009900 75%, #ffffff 100%)
- *     "100%": "#ffffff"
- *   }
- */
-const handleGradient = (strokeColor, directionConfig) => {
-  const {
-      from = _ant_design_colors__WEBPACK_IMPORTED_MODULE_1__.presetPrimaryColors.blue,
-      to = _ant_design_colors__WEBPACK_IMPORTED_MODULE_1__.presetPrimaryColors.blue,
-      direction = directionConfig === 'rtl' ? 'to left' : 'to right'
-    } = strokeColor,
-    rest = __rest(strokeColor, ["from", "to", "direction"]);
-  if (Object.keys(rest).length !== 0) {
-    const sortedGradients = sortGradient(rest);
-    const background = `linear-gradient(${direction}, ${sortedGradients})`;
-    return {
-      background,
-      [_style__WEBPACK_IMPORTED_MODULE_3__.LineStrokeColorVar]: background
-    };
-  }
-  const background = `linear-gradient(${direction}, ${from}, ${to})`;
-  return {
-    background,
-    [_style__WEBPACK_IMPORTED_MODULE_3__.LineStrokeColorVar]: background
-  };
-};
-const Line = props => {
-  const {
-    prefixCls,
-    direction: directionConfig,
-    percent,
-    size,
-    strokeWidth,
-    strokeColor,
-    strokeLinecap = 'round',
-    children,
-    trailColor = null,
-    percentPosition,
-    success
-  } = props;
-  const {
-    align: infoAlign,
-    type: infoPosition
-  } = percentPosition;
-  const backgroundProps = strokeColor && typeof strokeColor !== 'string' ? handleGradient(strokeColor, directionConfig) : {
-    [_style__WEBPACK_IMPORTED_MODULE_3__.LineStrokeColorVar]: strokeColor,
-    background: strokeColor
-  };
-  const borderRadius = strokeLinecap === 'square' || strokeLinecap === 'butt' ? 0 : undefined;
-  const mergedSize = size !== null && size !== void 0 ? size : [-1, strokeWidth || (size === 'small' ? 6 : 8)];
-  const [width, height] = (0,_utils__WEBPACK_IMPORTED_MODULE_4__.getSize)(mergedSize, 'line', {
-    strokeWidth
-  });
-  if (true) {
-    const warning = (0,_util_warning__WEBPACK_IMPORTED_MODULE_5__.devUseWarning)('Progress');
-    warning.deprecated(!('strokeWidth' in props), 'strokeWidth', 'size');
-  }
-  const trailStyle = {
-    backgroundColor: trailColor || undefined,
-    borderRadius
-  };
-  const percentStyle = Object.assign(Object.assign({
-    width: `${(0,_utils__WEBPACK_IMPORTED_MODULE_4__.validProgress)(percent)}%`,
-    height,
-    borderRadius
-  }, backgroundProps), {
-    [_style__WEBPACK_IMPORTED_MODULE_3__.Percent]: (0,_utils__WEBPACK_IMPORTED_MODULE_4__.validProgress)(percent) / 100
-  });
-  const successPercent = (0,_utils__WEBPACK_IMPORTED_MODULE_4__.getSuccessPercent)(props);
-  const successPercentStyle = {
-    width: `${(0,_utils__WEBPACK_IMPORTED_MODULE_4__.validProgress)(successPercent)}%`,
-    height,
-    borderRadius,
-    backgroundColor: success === null || success === void 0 ? void 0 : success.strokeColor
-  };
-  const outerStyle = {
-    width: width < 0 ? '100%' : width
-  };
-  const lineInner = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: `${prefixCls}-inner`,
-    style: trailStyle
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(`${prefixCls}-bg`, `${prefixCls}-bg-${infoPosition}`),
-    style: percentStyle
-  }, infoPosition === 'inner' && children), successPercent !== undefined && (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: `${prefixCls}-success-bg`,
-    style: successPercentStyle
-  })));
-  const isOuterStart = infoPosition === 'outer' && infoAlign === 'start';
-  const isOuterEnd = infoPosition === 'outer' && infoAlign === 'end';
-  return infoPosition === 'outer' && infoAlign === 'center' ? (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: `${prefixCls}-layout-bottom`
-  }, lineInner, children)) : (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: `${prefixCls}-outer`,
-    style: outerStyle
-  }, isOuterStart && children, lineInner, isOuterEnd && children));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Line);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/progress/Steps.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/es/progress/Steps.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils */ "./node_modules/antd/es/progress/utils.js");
-"use client";
-
-
-
-
-const Steps = props => {
-  const {
-    size,
-    steps,
-    rounding: customRounding = Math.round,
-    percent = 0,
-    strokeWidth = 8,
-    strokeColor,
-    trailColor = null,
-    prefixCls,
-    children
-  } = props;
-  const current = customRounding(steps * (percent / 100));
-  const stepWidth = size === 'small' ? 2 : 14;
-  const mergedSize = size !== null && size !== void 0 ? size : [stepWidth, strokeWidth];
-  const [width, height] = (0,_utils__WEBPACK_IMPORTED_MODULE_2__.getSize)(mergedSize, 'step', {
-    steps,
-    strokeWidth
-  });
-  const unitWidth = width / steps;
-  const styledSteps = Array.from({
-    length: steps
-  });
-  for (let i = 0; i < steps; i++) {
-    const color = Array.isArray(strokeColor) ? strokeColor[i] : strokeColor;
-    styledSteps[i] = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      key: i,
-      className: classnames__WEBPACK_IMPORTED_MODULE_1___default()(`${prefixCls}-steps-item`, {
-        [`${prefixCls}-steps-item-active`]: i <= current - 1
-      }),
-      style: {
-        backgroundColor: i <= current - 1 ? color : trailColor,
-        width: unitWidth,
-        height
-      }
-    });
-  }
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: `${prefixCls}-steps-outer`
-  }, styledSteps, children);
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Steps);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/progress/index.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/es/progress/index.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _progress__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./progress */ "./node_modules/antd/es/progress/progress.js");
-"use client";
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_progress__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/progress/progress.js":
-/*!***************************************************!*\
-  !*** ./node_modules/antd/es/progress/progress.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ProgressTypes: () => (/* binding */ ProgressTypes),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ant_design_fast_color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ant-design/fast-color */ "./node_modules/@ant-design/fast-color/es/index.js");
-/* harmony import */ var _ant_design_icons_es_icons_CheckCircleFilled__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ant-design/icons/es/icons/CheckCircleFilled */ "./node_modules/@ant-design/icons/es/icons/CheckCircleFilled.js");
-/* harmony import */ var _ant_design_icons_es_icons_CheckOutlined__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ant-design/icons/es/icons/CheckOutlined */ "./node_modules/@ant-design/icons/es/icons/CheckOutlined.js");
-/* harmony import */ var _ant_design_icons_es_icons_CloseCircleFilled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ant-design/icons/es/icons/CloseCircleFilled */ "./node_modules/@ant-design/icons/es/icons/CloseCircleFilled.js");
-/* harmony import */ var _ant_design_icons_es_icons_CloseOutlined__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ant-design/icons/es/icons/CloseOutlined */ "./node_modules/@ant-design/icons/es/icons/CloseOutlined.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var rc_util_es_omit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rc-util/es/omit */ "./node_modules/rc-util/es/omit.js");
-/* harmony import */ var _util_warning__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../_util/warning */ "./node_modules/antd/es/_util/warning.js");
-/* harmony import */ var _config_provider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/es/config-provider/context.js");
-/* harmony import */ var _Circle__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Circle */ "./node_modules/antd/es/progress/Circle.js");
-/* harmony import */ var _Line__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Line */ "./node_modules/antd/es/progress/Line.js");
-/* harmony import */ var _Steps__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Steps */ "./node_modules/antd/es/progress/Steps.js");
-/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style */ "./node_modules/antd/es/progress/style/index.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils */ "./node_modules/antd/es/progress/utils.js");
-"use client";
-
-var __rest = undefined && undefined.__rest || function (s, e) {
-  var t = {};
-  for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const ProgressTypes = ['line', 'circle', 'dashboard'];
-const ProgressStatuses = ['normal', 'exception', 'active', 'success'];
-const Progress = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef((props, ref) => {
-  const {
-      prefixCls: customizePrefixCls,
-      className,
-      rootClassName,
-      steps,
-      strokeColor,
-      percent = 0,
-      size = 'default',
-      showInfo = true,
-      type = 'line',
-      status,
-      format,
-      style,
-      percentPosition = {}
-    } = props,
-    restProps = __rest(props, ["prefixCls", "className", "rootClassName", "steps", "strokeColor", "percent", "size", "showInfo", "type", "status", "format", "style", "percentPosition"]);
-  const {
-    align: infoAlign = 'end',
-    type: infoPosition = 'outer'
-  } = percentPosition;
-  const strokeColorNotArray = Array.isArray(strokeColor) ? strokeColor[0] : strokeColor;
-  const strokeColorNotGradient = typeof strokeColor === 'string' || Array.isArray(strokeColor) ? strokeColor : undefined;
-  const strokeColorIsBright = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => {
-    if (strokeColorNotArray) {
-      const color = typeof strokeColorNotArray === 'string' ? strokeColorNotArray : Object.values(strokeColorNotArray)[0];
-      return new _ant_design_fast_color__WEBPACK_IMPORTED_MODULE_1__.FastColor(color).isLight();
-    }
-    return false;
-  }, [strokeColor]);
-  const percentNumber = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => {
-    var _a, _b;
-    const successPercent = (0,_utils__WEBPACK_IMPORTED_MODULE_4__.getSuccessPercent)(props);
-    return parseInt(successPercent !== undefined ? (_a = successPercent !== null && successPercent !== void 0 ? successPercent : 0) === null || _a === void 0 ? void 0 : _a.toString() : (_b = percent !== null && percent !== void 0 ? percent : 0) === null || _b === void 0 ? void 0 : _b.toString(), 10);
-  }, [percent, props.success, props.successPercent]);
-  const progressStatus = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => {
-    if (!ProgressStatuses.includes(status) && percentNumber >= 100) {
-      return 'success';
-    }
-    return status || 'normal';
-  }, [status, percentNumber]);
-  const {
-    getPrefixCls,
-    direction,
-    progress: progressStyle
-  } = react__WEBPACK_IMPORTED_MODULE_0__.useContext(_config_provider__WEBPACK_IMPORTED_MODULE_5__.ConfigContext);
-  const prefixCls = getPrefixCls('progress', customizePrefixCls);
-  const [wrapCSSVar, hashId, cssVarCls] = (0,_style__WEBPACK_IMPORTED_MODULE_6__["default"])(prefixCls);
-  const isLineType = type === 'line';
-  const isPureLineType = isLineType && !steps;
-  const progressInfo = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => {
-    if (!showInfo) {
-      return null;
-    }
-    const successPercent = (0,_utils__WEBPACK_IMPORTED_MODULE_4__.getSuccessPercent)(props);
-    let text;
-    const textFormatter = format || (number => `${number}%`);
-    const isBrightInnerColor = isLineType && strokeColorIsBright && infoPosition === 'inner';
-    if (infoPosition === 'inner' || format || progressStatus !== 'exception' && progressStatus !== 'success') {
-      text = textFormatter((0,_utils__WEBPACK_IMPORTED_MODULE_4__.validProgress)(percent), (0,_utils__WEBPACK_IMPORTED_MODULE_4__.validProgress)(successPercent));
-    } else if (progressStatus === 'exception') {
-      text = isLineType ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ant_design_icons_es_icons_CloseCircleFilled__WEBPACK_IMPORTED_MODULE_7__["default"], null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ant_design_icons_es_icons_CloseOutlined__WEBPACK_IMPORTED_MODULE_8__["default"], null);
-    } else if (progressStatus === 'success') {
-      text = isLineType ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ant_design_icons_es_icons_CheckCircleFilled__WEBPACK_IMPORTED_MODULE_9__["default"], null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ant_design_icons_es_icons_CheckOutlined__WEBPACK_IMPORTED_MODULE_10__["default"], null);
-    }
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-      className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(`${prefixCls}-text`, {
-        [`${prefixCls}-text-bright`]: isBrightInnerColor,
-        [`${prefixCls}-text-${infoAlign}`]: isPureLineType,
-        [`${prefixCls}-text-${infoPosition}`]: isPureLineType
-      }),
-      title: typeof text === 'string' ? text : undefined
-    }, text);
-  }, [showInfo, percent, percentNumber, progressStatus, type, prefixCls, format]);
-  if (true) {
-    const warning = (0,_util_warning__WEBPACK_IMPORTED_MODULE_11__.devUseWarning)('Progress');
-    warning.deprecated(!('successPercent' in props), 'successPercent', 'success.percent');
-    warning.deprecated(!('width' in props), 'width', 'size');
-    if (type === 'circle' || type === 'dashboard') {
-      if (Array.isArray(size)) {
-         true ? warning(false, 'usage', 'Type "circle" and "dashboard" do not accept array as `size`, please use number or preset size instead.') : 0;
-      } else if (typeof size === 'object') {
-         true ? warning(false, 'usage', 'Type "circle" and "dashboard" do not accept object as `size`, please use number or preset size instead.') : 0;
-      }
-    }
-    if (props.success && 'progress' in props.success) {
-      warning.deprecated(false, 'success.progress', 'success.percent');
-    }
-  }
-  let progress;
-  // Render progress shape
-  if (type === 'line') {
-    progress = steps ? (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Steps__WEBPACK_IMPORTED_MODULE_12__["default"], Object.assign({}, props, {
-      strokeColor: strokeColorNotGradient,
-      prefixCls: prefixCls,
-      steps: typeof steps === 'object' ? steps.count : steps
-    }), progressInfo)) : (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Line__WEBPACK_IMPORTED_MODULE_13__["default"], Object.assign({}, props, {
-      strokeColor: strokeColorNotArray,
-      prefixCls: prefixCls,
-      direction: direction,
-      percentPosition: {
-        align: infoAlign,
-        type: infoPosition
-      }
-    }), progressInfo));
-  } else if (type === 'circle' || type === 'dashboard') {
-    progress = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Circle__WEBPACK_IMPORTED_MODULE_14__["default"], Object.assign({}, props, {
-      strokeColor: strokeColorNotArray,
-      prefixCls: prefixCls,
-      progressStatus: progressStatus
-    }), progressInfo);
-  }
-  const classString = classnames__WEBPACK_IMPORTED_MODULE_2___default()(prefixCls, `${prefixCls}-status-${progressStatus}`, {
-    [`${prefixCls}-${type === 'dashboard' && 'circle' || type}`]: type !== 'line',
-    [`${prefixCls}-inline-circle`]: type === 'circle' && (0,_utils__WEBPACK_IMPORTED_MODULE_4__.getSize)(size, 'circle')[0] <= 20,
-    [`${prefixCls}-line`]: isPureLineType,
-    [`${prefixCls}-line-align-${infoAlign}`]: isPureLineType,
-    [`${prefixCls}-line-position-${infoPosition}`]: isPureLineType,
-    [`${prefixCls}-steps`]: steps,
-    [`${prefixCls}-show-info`]: showInfo,
-    [`${prefixCls}-${size}`]: typeof size === 'string',
-    [`${prefixCls}-rtl`]: direction === 'rtl'
-  }, progressStyle === null || progressStyle === void 0 ? void 0 : progressStyle.className, className, rootClassName, hashId, cssVarCls);
-  return wrapCSSVar(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", Object.assign({
-    ref: ref,
-    style: Object.assign(Object.assign({}, progressStyle === null || progressStyle === void 0 ? void 0 : progressStyle.style), style),
-    className: classString,
-    role: "progressbar",
-    "aria-valuenow": percentNumber,
-    "aria-valuemin": 0,
-    "aria-valuemax": 100
-  }, (0,rc_util_es_omit__WEBPACK_IMPORTED_MODULE_3__["default"])(restProps, ['trailColor', 'strokeWidth', 'width', 'gapDegree', 'gapPosition', 'strokeLinecap', 'success', 'successPercent'])), progress));
-});
-if (true) {
-  Progress.displayName = 'Progress';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Progress);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/progress/style/index.js":
-/*!******************************************************!*\
-  !*** ./node_modules/antd/es/progress/style/index.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   LineStrokeColorVar: () => (/* binding */ LineStrokeColorVar),
-/* harmony export */   Percent: () => (/* binding */ Percent),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   prepareComponentToken: () => (/* binding */ prepareComponentToken)
-/* harmony export */ });
-/* harmony import */ var _ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ant-design/cssinjs */ "./node_modules/@ant-design/cssinjs/es/index.js");
-/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../style */ "./node_modules/antd/es/style/index.js");
-/* harmony import */ var _theme_internal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../theme/internal */ "./node_modules/antd/es/theme/util/genStyleUtils.js");
-/* harmony import */ var _theme_internal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../theme/internal */ "./node_modules/@ant-design/cssinjs-utils/es/index.js");
-
-
-
-const LineStrokeColorVar = '--progress-line-stroke-color';
-const Percent = '--progress-percent';
-const genAntProgressActive = isRtl => {
-  const direction = isRtl ? '100%' : '-100%';
-  return new _ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_0__.Keyframes(`antProgress${isRtl ? 'RTL' : 'LTR'}Active`, {
-    '0%': {
-      transform: `translateX(${direction}) scaleX(0)`,
-      opacity: 0.1
-    },
-    '20%': {
-      transform: `translateX(${direction}) scaleX(0)`,
-      opacity: 0.5
-    },
-    to: {
-      transform: 'translateX(0) scaleX(1)',
-      opacity: 0
-    }
-  });
-};
-const genBaseStyle = token => {
-  const {
-    componentCls: progressCls,
-    iconCls: iconPrefixCls
-  } = token;
-  return {
-    [progressCls]: Object.assign(Object.assign({}, (0,_style__WEBPACK_IMPORTED_MODULE_1__.resetComponent)(token)), {
-      display: 'inline-block',
-      '&-rtl': {
-        direction: 'rtl'
-      },
-      '&-line': {
-        position: 'relative',
-        width: '100%',
-        fontSize: token.fontSize
-      },
-      [`${progressCls}-outer`]: {
-        display: 'inline-flex',
-        alignItems: 'center',
-        width: '100%'
-      },
-      [`${progressCls}-inner`]: {
-        position: 'relative',
-        display: 'inline-block',
-        width: '100%',
-        flex: 1,
-        overflow: 'hidden',
-        verticalAlign: 'middle',
-        backgroundColor: token.remainingColor,
-        borderRadius: token.lineBorderRadius
-      },
-      [`${progressCls}-inner:not(${progressCls}-circle-gradient)`]: {
-        [`${progressCls}-circle-path`]: {
-          stroke: token.defaultColor
-        }
-      },
-      [`${progressCls}-success-bg, ${progressCls}-bg`]: {
-        position: 'relative',
-        background: token.defaultColor,
-        borderRadius: token.lineBorderRadius,
-        transition: `all ${token.motionDurationSlow} ${token.motionEaseInOutCirc}`
-      },
-      [`${progressCls}-layout-bottom`]: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        [`${progressCls}-text`]: {
-          width: 'max-content',
-          marginInlineStart: 0,
-          marginTop: token.marginXXS
-        }
-      },
-      [`${progressCls}-bg`]: {
-        overflow: 'hidden',
-        '&::after': {
-          content: '""',
-          background: {
-            _multi_value_: true,
-            value: ['inherit', `var(${LineStrokeColorVar})`]
-          },
-          height: '100%',
-          width: `calc(1 / var(${Percent}) * 100%)`,
-          display: 'block'
-        },
-        [`&${progressCls}-bg-inner`]: {
-          minWidth: 'max-content',
-          '&::after': {
-            content: 'none'
-          },
-          [`${progressCls}-text-inner`]: {
-            color: token.colorWhite,
-            [`&${progressCls}-text-bright`]: {
-              color: 'rgba(0, 0, 0, 0.45)'
-            }
-          }
-        }
-      },
-      [`${progressCls}-success-bg`]: {
-        position: 'absolute',
-        insetBlockStart: 0,
-        insetInlineStart: 0,
-        backgroundColor: token.colorSuccess
-      },
-      [`${progressCls}-text`]: {
-        display: 'inline-block',
-        marginInlineStart: token.marginXS,
-        color: token.colorText,
-        lineHeight: 1,
-        width: '2em',
-        whiteSpace: 'nowrap',
-        textAlign: 'start',
-        verticalAlign: 'middle',
-        wordBreak: 'normal',
-        [iconPrefixCls]: {
-          fontSize: token.fontSize
-        },
-        [`&${progressCls}-text-outer`]: {
-          width: 'max-content'
-        },
-        [`&${progressCls}-text-outer${progressCls}-text-start`]: {
-          width: 'max-content',
-          marginInlineStart: 0,
-          marginInlineEnd: token.marginXS
-        }
-      },
-      [`${progressCls}-text-inner`]: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',
-        height: '100%',
-        marginInlineStart: 0,
-        padding: `0 ${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_0__.unit)(token.paddingXXS)}`,
-        [`&${progressCls}-text-start`]: {
-          justifyContent: 'start'
-        },
-        [`&${progressCls}-text-end`]: {
-          justifyContent: 'end'
-        }
-      },
-      [`&${progressCls}-status-active`]: {
-        [`${progressCls}-bg::before`]: {
-          position: 'absolute',
-          inset: 0,
-          backgroundColor: token.colorBgContainer,
-          borderRadius: token.lineBorderRadius,
-          opacity: 0,
-          animationName: genAntProgressActive(),
-          animationDuration: token.progressActiveMotionDuration,
-          animationTimingFunction: token.motionEaseOutQuint,
-          animationIterationCount: 'infinite',
-          content: '""'
-        }
-      },
-      [`&${progressCls}-rtl${progressCls}-status-active`]: {
-        [`${progressCls}-bg::before`]: {
-          animationName: genAntProgressActive(true)
-        }
-      },
-      [`&${progressCls}-status-exception`]: {
-        [`${progressCls}-bg`]: {
-          backgroundColor: token.colorError
-        },
-        [`${progressCls}-text`]: {
-          color: token.colorError
-        }
-      },
-      [`&${progressCls}-status-exception ${progressCls}-inner:not(${progressCls}-circle-gradient)`]: {
-        [`${progressCls}-circle-path`]: {
-          stroke: token.colorError
-        }
-      },
-      [`&${progressCls}-status-success`]: {
-        [`${progressCls}-bg`]: {
-          backgroundColor: token.colorSuccess
-        },
-        [`${progressCls}-text`]: {
-          color: token.colorSuccess
-        }
-      },
-      [`&${progressCls}-status-success ${progressCls}-inner:not(${progressCls}-circle-gradient)`]: {
-        [`${progressCls}-circle-path`]: {
-          stroke: token.colorSuccess
-        }
-      }
-    })
-  };
-};
-const genCircleStyle = token => {
-  const {
-    componentCls: progressCls,
-    iconCls: iconPrefixCls
-  } = token;
-  return {
-    [progressCls]: {
-      [`${progressCls}-circle-trail`]: {
-        stroke: token.remainingColor
-      },
-      [`&${progressCls}-circle ${progressCls}-inner`]: {
-        position: 'relative',
-        lineHeight: 1,
-        backgroundColor: 'transparent'
-      },
-      [`&${progressCls}-circle ${progressCls}-text`]: {
-        position: 'absolute',
-        insetBlockStart: '50%',
-        insetInlineStart: 0,
-        width: '100%',
-        margin: 0,
-        padding: 0,
-        color: token.circleTextColor,
-        fontSize: token.circleTextFontSize,
-        lineHeight: 1,
-        whiteSpace: 'normal',
-        textAlign: 'center',
-        transform: 'translateY(-50%)',
-        [iconPrefixCls]: {
-          fontSize: token.circleIconFontSize
-        }
-      },
-      [`${progressCls}-circle&-status-exception`]: {
-        [`${progressCls}-text`]: {
-          color: token.colorError
-        }
-      },
-      [`${progressCls}-circle&-status-success`]: {
-        [`${progressCls}-text`]: {
-          color: token.colorSuccess
-        }
-      }
-    },
-    [`${progressCls}-inline-circle`]: {
-      lineHeight: 1,
-      [`${progressCls}-inner`]: {
-        verticalAlign: 'bottom'
-      }
-    }
-  };
-};
-const genStepStyle = token => {
-  const {
-    componentCls: progressCls
-  } = token;
-  return {
-    [progressCls]: {
-      [`${progressCls}-steps`]: {
-        display: 'inline-block',
-        '&-outer': {
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center'
-        },
-        '&-item': {
-          flexShrink: 0,
-          minWidth: token.progressStepMinWidth,
-          marginInlineEnd: token.progressStepMarginInlineEnd,
-          backgroundColor: token.remainingColor,
-          transition: `all ${token.motionDurationSlow}`,
-          '&-active': {
-            backgroundColor: token.defaultColor
-          }
-        }
-      }
-    }
-  };
-};
-const genSmallLine = token => {
-  const {
-    componentCls: progressCls,
-    iconCls: iconPrefixCls
-  } = token;
-  return {
-    [progressCls]: {
-      [`${progressCls}-small&-line, ${progressCls}-small&-line ${progressCls}-text ${iconPrefixCls}`]: {
-        fontSize: token.fontSizeSM
-      }
-    }
-  };
-};
-const prepareComponentToken = token => ({
-  circleTextColor: token.colorText,
-  defaultColor: token.colorInfo,
-  remainingColor: token.colorFillSecondary,
-  lineBorderRadius: 100,
-  // magic for capsule shape, should be a very large number
-  circleTextFontSize: '1em',
-  circleIconFontSize: `${token.fontSize / token.fontSizeSM}em`
-});
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_theme_internal__WEBPACK_IMPORTED_MODULE_2__.genStyleHooks)('Progress', token => {
-  const progressStepMarginInlineEnd = token.calc(token.marginXXS).div(2).equal();
-  const progressToken = (0,_theme_internal__WEBPACK_IMPORTED_MODULE_3__.mergeToken)(token, {
-    progressStepMarginInlineEnd,
-    progressStepMinWidth: progressStepMarginInlineEnd,
-    progressActiveMotionDuration: '2.4s'
-  });
-  return [genBaseStyle(progressToken), genCircleStyle(progressToken), genStepStyle(progressToken), genSmallLine(progressToken)];
-}, prepareComponentToken));
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/progress/utils.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/es/progress/utils.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getPercentage: () => (/* binding */ getPercentage),
-/* harmony export */   getSize: () => (/* binding */ getSize),
-/* harmony export */   getStrokeColor: () => (/* binding */ getStrokeColor),
-/* harmony export */   getSuccessPercent: () => (/* binding */ getSuccessPercent),
-/* harmony export */   validProgress: () => (/* binding */ validProgress)
-/* harmony export */ });
-/* harmony import */ var _ant_design_colors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ant-design/colors */ "./node_modules/@ant-design/colors/es/index.js");
-
-function validProgress(progress) {
-  if (!progress || progress < 0) {
-    return 0;
-  }
-  if (progress > 100) {
-    return 100;
-  }
-  return progress;
-}
-function getSuccessPercent(_ref) {
-  let {
-    success,
-    successPercent
-  } = _ref;
-  let percent = successPercent;
-  /** @deprecated Use `percent` instead */
-  if (success && 'progress' in success) {
-    percent = success.progress;
-  }
-  if (success && 'percent' in success) {
-    percent = success.percent;
-  }
-  return percent;
-}
-const getPercentage = _ref2 => {
-  let {
-    percent,
-    success,
-    successPercent
-  } = _ref2;
-  const realSuccessPercent = validProgress(getSuccessPercent({
-    success,
-    successPercent
-  }));
-  return [realSuccessPercent, validProgress(validProgress(percent) - realSuccessPercent)];
-};
-const getStrokeColor = _ref3 => {
-  let {
-    success = {},
-    strokeColor
-  } = _ref3;
-  const {
-    strokeColor: successColor
-  } = success;
-  return [successColor || _ant_design_colors__WEBPACK_IMPORTED_MODULE_0__.presetPrimaryColors.green, strokeColor || null];
-};
-const getSize = (size, type, extra) => {
-  var _a, _b, _c, _d;
-  let width = -1;
-  let height = -1;
-  if (type === 'step') {
-    const steps = extra.steps;
-    const strokeWidth = extra.strokeWidth;
-    if (typeof size === 'string' || typeof size === 'undefined') {
-      width = size === 'small' ? 2 : 14;
-      height = strokeWidth !== null && strokeWidth !== void 0 ? strokeWidth : 8;
-    } else if (typeof size === 'number') {
-      [width, height] = [size, size];
-    } else {
-      [width = 14, height = 8] = Array.isArray(size) ? size : [size.width, size.height];
-    }
-    width *= steps;
-  } else if (type === 'line') {
-    const strokeWidth = extra === null || extra === void 0 ? void 0 : extra.strokeWidth;
-    if (typeof size === 'string' || typeof size === 'undefined') {
-      height = strokeWidth || (size === 'small' ? 6 : 8);
-    } else if (typeof size === 'number') {
-      [width, height] = [size, size];
-    } else {
-      [width = -1, height = 8] = Array.isArray(size) ? size : [size.width, size.height];
-    }
-  } else if (type === 'circle' || type === 'dashboard') {
-    if (typeof size === 'string' || typeof size === 'undefined') {
-      [width, height] = size === 'small' ? [60, 60] : [120, 120];
-    } else if (typeof size === 'number') {
-      [width, height] = [size, size];
-    } else if (Array.isArray(size)) {
-      width = (_b = (_a = size[0]) !== null && _a !== void 0 ? _a : size[1]) !== null && _b !== void 0 ? _b : 120;
-      height = (_d = (_c = size[0]) !== null && _c !== void 0 ? _c : size[1]) !== null && _d !== void 0 ? _d : 120;
-    }
-  }
-  return [width, height];
-};
-
-/***/ }),
-
 /***/ "./node_modules/antd/es/radio/context.js":
 /*!***********************************************!*\
   !*** ./node_modules/antd/es/radio/context.js ***!
@@ -60495,1719 +59236,6 @@ const getEllipsisStyles = () => ({
 
 /***/ }),
 
-/***/ "./node_modules/antd/es/upload/Dragger.js":
-/*!************************************************!*\
-  !*** ./node_modules/antd/es/upload/Dragger.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Upload__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Upload */ "./node_modules/antd/es/upload/Upload.js");
-"use client";
-
-var __rest = undefined && undefined.__rest || function (s, e) {
-  var t = {};
-  for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-
-const Dragger = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef((_a, ref) => {
-  var {
-      style,
-      height,
-      hasControlInside = false
-    } = _a,
-    restProps = __rest(_a, ["style", "height", "hasControlInside"]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Upload__WEBPACK_IMPORTED_MODULE_1__["default"], Object.assign({
-    ref: ref,
-    hasControlInside: hasControlInside
-  }, restProps, {
-    type: "drag",
-    style: Object.assign(Object.assign({}, style), {
-      height
-    })
-  }));
-});
-if (true) {
-  Dragger.displayName = 'Dragger';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Dragger);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/upload/Upload.js":
-/*!***********************************************!*\
-  !*** ./node_modules/antd/es/upload/Upload.js ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   LIST_IGNORE: () => (/* binding */ LIST_IGNORE),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var rc_upload__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rc-upload */ "./node_modules/rc-upload/es/index.js");
-/* harmony import */ var rc_util_es_hooks_useMergedState__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rc-util/es/hooks/useMergedState */ "./node_modules/rc-util/es/hooks/useMergedState.js");
-/* harmony import */ var _util_warning__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../_util/warning */ "./node_modules/antd/es/_util/warning.js");
-/* harmony import */ var _config_provider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../config-provider */ "./node_modules/antd/es/config-provider/context.js");
-/* harmony import */ var _config_provider_DisabledContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../config-provider/DisabledContext */ "./node_modules/antd/es/config-provider/DisabledContext.js");
-/* harmony import */ var _locale__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../locale */ "./node_modules/antd/es/locale/useLocale.js");
-/* harmony import */ var _locale_en_US__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../locale/en_US */ "./node_modules/antd/es/locale/en_US.js");
-/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./style */ "./node_modules/antd/es/upload/style/index.js");
-/* harmony import */ var _UploadList__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./UploadList */ "./node_modules/antd/es/upload/UploadList/index.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./utils */ "./node_modules/antd/es/upload/utils.js");
-"use client";
-
-
-var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
-  function adopt(value) {
-    return value instanceof P ? value : new P(function (resolve) {
-      resolve(value);
-    });
-  }
-  return new (P || (P = Promise))(function (resolve, reject) {
-    function fulfilled(value) {
-      try {
-        step(generator.next(value));
-      } catch (e) {
-        reject(e);
-      }
-    }
-    function rejected(value) {
-      try {
-        step(generator["throw"](value));
-      } catch (e) {
-        reject(e);
-      }
-    }
-    function step(result) {
-      result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-    }
-    step((generator = generator.apply(thisArg, _arguments || [])).next());
-  });
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-const LIST_IGNORE = `__LIST_IGNORE_${Date.now()}__`;
-const InternalUpload = (props, ref) => {
-  const {
-    fileList,
-    defaultFileList,
-    onRemove,
-    showUploadList = true,
-    listType = 'text',
-    onPreview,
-    onDownload,
-    onChange,
-    onDrop,
-    previewFile,
-    disabled: customDisabled,
-    locale: propLocale,
-    iconRender,
-    isImageUrl,
-    progress,
-    prefixCls: customizePrefixCls,
-    className,
-    type = 'select',
-    children,
-    style,
-    itemRender,
-    maxCount,
-    data = {},
-    multiple = false,
-    hasControlInside = true,
-    action = '',
-    accept = '',
-    supportServerRender = true,
-    rootClassName
-  } = props;
-  // ===================== Disabled =====================
-  const disabled = react__WEBPACK_IMPORTED_MODULE_1__.useContext(_config_provider_DisabledContext__WEBPACK_IMPORTED_MODULE_6__["default"]);
-  const mergedDisabled = customDisabled !== null && customDisabled !== void 0 ? customDisabled : disabled;
-  const [mergedFileList, setMergedFileList] = (0,rc_util_es_hooks_useMergedState__WEBPACK_IMPORTED_MODULE_5__["default"])(defaultFileList || [], {
-    value: fileList,
-    postState: list => list !== null && list !== void 0 ? list : []
-  });
-  const [dragState, setDragState] = react__WEBPACK_IMPORTED_MODULE_1__.useState('drop');
-  const upload = react__WEBPACK_IMPORTED_MODULE_1__.useRef(null);
-  const wrapRef = react__WEBPACK_IMPORTED_MODULE_1__.useRef(null);
-  if (true) {
-    const warning = (0,_util_warning__WEBPACK_IMPORTED_MODULE_7__.devUseWarning)('Upload');
-     true ? warning('fileList' in props || !('value' in props), 'usage', '`value` is not a valid prop, do you mean `fileList`?') : 0;
-    warning.deprecated(!('transformFile' in props), 'transformFile', 'beforeUpload');
-  }
-  // Control mode will auto fill file uid if not provided
-  react__WEBPACK_IMPORTED_MODULE_1__.useMemo(() => {
-    const timestamp = Date.now();
-    (fileList || []).forEach((file, index) => {
-      if (!file.uid && !Object.isFrozen(file)) {
-        file.uid = `__AUTO__${timestamp}_${index}__`;
-      }
-    });
-  }, [fileList]);
-  const onInternalChange = (file, changedFileList, event) => {
-    let cloneList = (0,_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(changedFileList);
-    let exceedMaxCount = false;
-    // Cut to match count
-    if (maxCount === 1) {
-      cloneList = cloneList.slice(-1);
-    } else if (maxCount) {
-      exceedMaxCount = cloneList.length > maxCount;
-      cloneList = cloneList.slice(0, maxCount);
-    }
-    // Prevent React18 auto batch since input[upload] trigger process at same time
-    // which makes fileList closure problem
-    (0,react_dom__WEBPACK_IMPORTED_MODULE_2__.flushSync)(() => {
-      setMergedFileList(cloneList);
-    });
-    const changeInfo = {
-      file: file,
-      fileList: cloneList
-    };
-    if (event) {
-      changeInfo.event = event;
-    }
-    if (!exceedMaxCount || file.status === 'removed' ||
-    // We should ignore event if current file is exceed `maxCount`
-    cloneList.some(f => f.uid === file.uid)) {
-      (0,react_dom__WEBPACK_IMPORTED_MODULE_2__.flushSync)(() => {
-        onChange === null || onChange === void 0 ? void 0 : onChange(changeInfo);
-      });
-    }
-  };
-  const mergedBeforeUpload = (file, fileListArgs) => __awaiter(void 0, void 0, void 0, function* () {
-    const {
-      beforeUpload,
-      transformFile
-    } = props;
-    let parsedFile = file;
-    if (beforeUpload) {
-      const result = yield beforeUpload(file, fileListArgs);
-      if (result === false) {
-        return false;
-      }
-      // Hack for LIST_IGNORE, we add additional info to remove from the list
-      delete file[LIST_IGNORE];
-      if (result === LIST_IGNORE) {
-        Object.defineProperty(file, LIST_IGNORE, {
-          value: true,
-          configurable: true
-        });
-        return false;
-      }
-      if (typeof result === 'object' && result) {
-        parsedFile = result;
-      }
-    }
-    if (transformFile) {
-      parsedFile = yield transformFile(parsedFile);
-    }
-    return parsedFile;
-  });
-  const onBatchStart = batchFileInfoList => {
-    // Skip file which marked as `LIST_IGNORE`, these file will not add to file list
-    const filteredFileInfoList = batchFileInfoList.filter(info => !info.file[LIST_IGNORE]);
-    // Nothing to do since no file need upload
-    if (!filteredFileInfoList.length) {
-      return;
-    }
-    const objectFileList = filteredFileInfoList.map(info => (0,_utils__WEBPACK_IMPORTED_MODULE_8__.file2Obj)(info.file));
-    // Concat new files with prev files
-    let newFileList = (0,_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(mergedFileList);
-    objectFileList.forEach(fileObj => {
-      // Replace file if exist
-      newFileList = (0,_utils__WEBPACK_IMPORTED_MODULE_8__.updateFileList)(fileObj, newFileList);
-    });
-    objectFileList.forEach((fileObj, index) => {
-      // Repeat trigger `onChange` event for compatible
-      let triggerFileObj = fileObj;
-      if (!filteredFileInfoList[index].parsedFile) {
-        // `beforeUpload` return false
-        const {
-          originFileObj
-        } = fileObj;
-        let clone;
-        try {
-          clone = new File([originFileObj], originFileObj.name, {
-            type: originFileObj.type
-          });
-        } catch (_a) {
-          clone = new Blob([originFileObj], {
-            type: originFileObj.type
-          });
-          clone.name = originFileObj.name;
-          clone.lastModifiedDate = new Date();
-          clone.lastModified = new Date().getTime();
-        }
-        clone.uid = fileObj.uid;
-        triggerFileObj = clone;
-      } else {
-        // Inject `uploading` status
-        fileObj.status = 'uploading';
-      }
-      onInternalChange(triggerFileObj, newFileList);
-    });
-  };
-  const onSuccess = (response, file, xhr) => {
-    try {
-      if (typeof response === 'string') {
-        // biome-ignore lint/style/noParameterAssign: we need to modify response
-        response = JSON.parse(response);
-      }
-    } catch (_a) {
-      /* do nothing */
-    }
-    // removed
-    if (!(0,_utils__WEBPACK_IMPORTED_MODULE_8__.getFileItem)(file, mergedFileList)) {
-      return;
-    }
-    const targetItem = (0,_utils__WEBPACK_IMPORTED_MODULE_8__.file2Obj)(file);
-    targetItem.status = 'done';
-    targetItem.percent = 100;
-    targetItem.response = response;
-    targetItem.xhr = xhr;
-    const nextFileList = (0,_utils__WEBPACK_IMPORTED_MODULE_8__.updateFileList)(targetItem, mergedFileList);
-    onInternalChange(targetItem, nextFileList);
-  };
-  const onProgress = (e, file) => {
-    // removed
-    if (!(0,_utils__WEBPACK_IMPORTED_MODULE_8__.getFileItem)(file, mergedFileList)) {
-      return;
-    }
-    const targetItem = (0,_utils__WEBPACK_IMPORTED_MODULE_8__.file2Obj)(file);
-    targetItem.status = 'uploading';
-    targetItem.percent = e.percent;
-    const nextFileList = (0,_utils__WEBPACK_IMPORTED_MODULE_8__.updateFileList)(targetItem, mergedFileList);
-    onInternalChange(targetItem, nextFileList, e);
-  };
-  const onError = (error, response, file) => {
-    // removed
-    if (!(0,_utils__WEBPACK_IMPORTED_MODULE_8__.getFileItem)(file, mergedFileList)) {
-      return;
-    }
-    const targetItem = (0,_utils__WEBPACK_IMPORTED_MODULE_8__.file2Obj)(file);
-    targetItem.error = error;
-    targetItem.response = response;
-    targetItem.status = 'error';
-    const nextFileList = (0,_utils__WEBPACK_IMPORTED_MODULE_8__.updateFileList)(targetItem, mergedFileList);
-    onInternalChange(targetItem, nextFileList);
-  };
-  const handleRemove = file => {
-    let currentFile;
-    Promise.resolve(typeof onRemove === 'function' ? onRemove(file) : onRemove).then(ret => {
-      var _a;
-      // Prevent removing file
-      if (ret === false) {
-        return;
-      }
-      const removedFileList = (0,_utils__WEBPACK_IMPORTED_MODULE_8__.removeFileItem)(file, mergedFileList);
-      if (removedFileList) {
-        currentFile = Object.assign(Object.assign({}, file), {
-          status: 'removed'
-        });
-        mergedFileList === null || mergedFileList === void 0 ? void 0 : mergedFileList.forEach(item => {
-          const matchKey = currentFile.uid !== undefined ? 'uid' : 'name';
-          if (item[matchKey] === currentFile[matchKey] && !Object.isFrozen(item)) {
-            item.status = 'removed';
-          }
-        });
-        (_a = upload.current) === null || _a === void 0 ? void 0 : _a.abort(currentFile);
-        onInternalChange(currentFile, removedFileList);
-      }
-    });
-  };
-  const onFileDrop = e => {
-    setDragState(e.type);
-    if (e.type === 'drop') {
-      onDrop === null || onDrop === void 0 ? void 0 : onDrop(e);
-    }
-  };
-  // Test needs
-  react__WEBPACK_IMPORTED_MODULE_1__.useImperativeHandle(ref, () => ({
-    onBatchStart,
-    onSuccess,
-    onProgress,
-    onError,
-    fileList: mergedFileList,
-    upload: upload.current,
-    nativeElement: wrapRef.current
-  }));
-  const {
-    getPrefixCls,
-    direction,
-    upload: ctxUpload
-  } = react__WEBPACK_IMPORTED_MODULE_1__.useContext(_config_provider__WEBPACK_IMPORTED_MODULE_9__.ConfigContext);
-  const prefixCls = getPrefixCls('upload', customizePrefixCls);
-  const rcUploadProps = Object.assign(Object.assign({
-    onBatchStart,
-    onError,
-    onProgress,
-    onSuccess
-  }, props), {
-    data,
-    multiple,
-    action,
-    accept,
-    supportServerRender,
-    prefixCls,
-    disabled: mergedDisabled,
-    beforeUpload: mergedBeforeUpload,
-    onChange: undefined,
-    hasControlInside
-  });
-  delete rcUploadProps.className;
-  delete rcUploadProps.style;
-  // Remove id to avoid open by label when trigger is hidden
-  // !children: https://github.com/ant-design/ant-design/issues/14298
-  // disabled: https://github.com/ant-design/ant-design/issues/16478
-  //           https://github.com/ant-design/ant-design/issues/24197
-  if (!children || mergedDisabled) {
-    delete rcUploadProps.id;
-  }
-  const wrapperCls = `${prefixCls}-wrapper`;
-  const [wrapCSSVar, hashId, cssVarCls] = (0,_style__WEBPACK_IMPORTED_MODULE_10__["default"])(prefixCls, wrapperCls);
-  const [contextLocale] = (0,_locale__WEBPACK_IMPORTED_MODULE_11__["default"])('Upload', _locale_en_US__WEBPACK_IMPORTED_MODULE_12__["default"].Upload);
-  const {
-    showRemoveIcon,
-    showPreviewIcon,
-    showDownloadIcon,
-    removeIcon,
-    previewIcon,
-    downloadIcon,
-    extra
-  } = typeof showUploadList === 'boolean' ? {} : showUploadList;
-  // use showRemoveIcon if it is specified explicitly
-  const realShowRemoveIcon = typeof showRemoveIcon === 'undefined' ? !mergedDisabled : showRemoveIcon;
-  const renderUploadList = (button, buttonVisible) => {
-    if (!showUploadList) {
-      return button;
-    }
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_UploadList__WEBPACK_IMPORTED_MODULE_13__["default"], {
-      prefixCls: prefixCls,
-      listType: listType,
-      items: mergedFileList,
-      previewFile: previewFile,
-      onPreview: onPreview,
-      onDownload: onDownload,
-      onRemove: handleRemove,
-      showRemoveIcon: realShowRemoveIcon,
-      showPreviewIcon: showPreviewIcon,
-      showDownloadIcon: showDownloadIcon,
-      removeIcon: removeIcon,
-      previewIcon: previewIcon,
-      downloadIcon: downloadIcon,
-      iconRender: iconRender,
-      extra: extra,
-      locale: Object.assign(Object.assign({}, contextLocale), propLocale),
-      isImageUrl: isImageUrl,
-      progress: progress,
-      appendAction: button,
-      appendActionVisible: buttonVisible,
-      itemRender: itemRender,
-      disabled: mergedDisabled
-    });
-  };
-  const mergedCls = classnames__WEBPACK_IMPORTED_MODULE_3___default()(wrapperCls, className, rootClassName, hashId, cssVarCls, ctxUpload === null || ctxUpload === void 0 ? void 0 : ctxUpload.className, {
-    [`${prefixCls}-rtl`]: direction === 'rtl',
-    [`${prefixCls}-picture-card-wrapper`]: listType === 'picture-card',
-    [`${prefixCls}-picture-circle-wrapper`]: listType === 'picture-circle'
-  });
-  const mergedStyle = Object.assign(Object.assign({}, ctxUpload === null || ctxUpload === void 0 ? void 0 : ctxUpload.style), style);
-  // ======================== Render ========================
-  if (type === 'drag') {
-    const dragCls = classnames__WEBPACK_IMPORTED_MODULE_3___default()(hashId, prefixCls, `${prefixCls}-drag`, {
-      [`${prefixCls}-drag-uploading`]: mergedFileList.some(file => file.status === 'uploading'),
-      [`${prefixCls}-drag-hover`]: dragState === 'dragover',
-      [`${prefixCls}-disabled`]: mergedDisabled,
-      [`${prefixCls}-rtl`]: direction === 'rtl'
-    });
-    return wrapCSSVar(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("span", {
-      className: mergedCls,
-      ref: wrapRef
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-      className: dragCls,
-      style: mergedStyle,
-      onDrop: onFileDrop,
-      onDragOver: onFileDrop,
-      onDragLeave: onFileDrop
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(rc_upload__WEBPACK_IMPORTED_MODULE_4__["default"], Object.assign({}, rcUploadProps, {
-      ref: upload,
-      className: `${prefixCls}-btn`
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-      className: `${prefixCls}-drag-container`
-    }, children))), renderUploadList()));
-  }
-  const uploadBtnCls = classnames__WEBPACK_IMPORTED_MODULE_3___default()(prefixCls, `${prefixCls}-select`, {
-    [`${prefixCls}-disabled`]: mergedDisabled,
-    [`${prefixCls}-hidden`]: !children
-  });
-  const uploadButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-    className: uploadBtnCls
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(rc_upload__WEBPACK_IMPORTED_MODULE_4__["default"], Object.assign({}, rcUploadProps, {
-    ref: upload
-  })));
-  if (listType === 'picture-card' || listType === 'picture-circle') {
-    return wrapCSSVar(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("span", {
-      className: mergedCls,
-      ref: wrapRef
-    }, renderUploadList(uploadButton, !!children)));
-  }
-  return wrapCSSVar(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("span", {
-    className: mergedCls,
-    ref: wrapRef
-  }, uploadButton, renderUploadList()));
-};
-const Upload = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(InternalUpload);
-if (true) {
-  Upload.displayName = 'Upload';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Upload);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/upload/UploadList/ListItem.js":
-/*!************************************************************!*\
-  !*** ./node_modules/antd/es/upload/UploadList/ListItem.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ant_design_icons_es_icons_DeleteOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons/es/icons/DeleteOutlined */ "./node_modules/@ant-design/icons/es/icons/DeleteOutlined.js");
-/* harmony import */ var _ant_design_icons_es_icons_DownloadOutlined__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ant-design/icons/es/icons/DownloadOutlined */ "./node_modules/@ant-design/icons/es/icons/DownloadOutlined.js");
-/* harmony import */ var _ant_design_icons_es_icons_EyeOutlined__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ant-design/icons/es/icons/EyeOutlined */ "./node_modules/@ant-design/icons/es/icons/EyeOutlined.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var rc_motion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rc-motion */ "./node_modules/rc-motion/es/index.js");
-/* harmony import */ var _config_provider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../config-provider */ "./node_modules/antd/es/config-provider/context.js");
-/* harmony import */ var _progress__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../progress */ "./node_modules/antd/es/progress/index.js");
-/* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../tooltip */ "./node_modules/antd/es/tooltip/index.js");
-"use client";
-
-
-
-
-
-
-
-
-
-
-const ListItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef((_ref, ref) => {
-  let {
-    prefixCls,
-    className,
-    style,
-    locale,
-    listType,
-    file,
-    items,
-    progress: progressProps,
-    iconRender,
-    actionIconRender,
-    itemRender,
-    isImgUrl,
-    showPreviewIcon,
-    showRemoveIcon,
-    showDownloadIcon,
-    previewIcon: customPreviewIcon,
-    removeIcon: customRemoveIcon,
-    downloadIcon: customDownloadIcon,
-    extra: customExtra,
-    onPreview,
-    onDownload,
-    onClose
-  } = _ref;
-  var _a, _b;
-  // Status: which will ignore `removed` status
-  const {
-    status
-  } = file;
-  const [mergedStatus, setMergedStatus] = react__WEBPACK_IMPORTED_MODULE_0__.useState(status);
-  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
-    if (status !== 'removed') {
-      setMergedStatus(status);
-    }
-  }, [status]);
-  // Delay to show the progress bar
-  const [showProgress, setShowProgress] = react__WEBPACK_IMPORTED_MODULE_0__.useState(false);
-  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowProgress(true);
-    }, 300);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
-  const iconNode = iconRender(file);
-  let icon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: `${prefixCls}-icon`
-  }, iconNode);
-  if (listType === 'picture' || listType === 'picture-card' || listType === 'picture-circle') {
-    if (mergedStatus === 'uploading' || !file.thumbUrl && !file.url) {
-      const uploadingClassName = classnames__WEBPACK_IMPORTED_MODULE_1___default()(`${prefixCls}-list-item-thumbnail`, {
-        [`${prefixCls}-list-item-file`]: mergedStatus !== 'uploading'
-      });
-      icon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: uploadingClassName
-      }, iconNode);
-    } else {
-      const thumbnail = (isImgUrl === null || isImgUrl === void 0 ? void 0 : isImgUrl(file)) ? (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: file.thumbUrl || file.url,
-        alt: file.name,
-        className: `${prefixCls}-list-item-image`,
-        crossOrigin: file.crossOrigin
-      })) : iconNode;
-      const aClassName = classnames__WEBPACK_IMPORTED_MODULE_1___default()(`${prefixCls}-list-item-thumbnail`, {
-        [`${prefixCls}-list-item-file`]: isImgUrl && !isImgUrl(file)
-      });
-      icon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        className: aClassName,
-        onClick: e => onPreview(file, e),
-        href: file.url || file.thumbUrl,
-        target: "_blank",
-        rel: "noopener noreferrer"
-      }, thumbnail);
-    }
-  }
-  const listItemClassName = classnames__WEBPACK_IMPORTED_MODULE_1___default()(`${prefixCls}-list-item`, `${prefixCls}-list-item-${mergedStatus}`);
-  const linkProps = typeof file.linkProps === 'string' ? JSON.parse(file.linkProps) : file.linkProps;
-  const removeIcon = (typeof showRemoveIcon === 'function' ? showRemoveIcon(file) : showRemoveIcon) ? actionIconRender((typeof customRemoveIcon === 'function' ? customRemoveIcon(file) : customRemoveIcon) || (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ant_design_icons_es_icons_DeleteOutlined__WEBPACK_IMPORTED_MODULE_3__["default"], null)), () => onClose(file), prefixCls, locale.removeFile,
-  // acceptUploadDisabled is true, only remove icon will follow Upload disabled prop
-  // https://github.com/ant-design/ant-design/issues/46171
-  true) : null;
-  const downloadIcon = (typeof showDownloadIcon === 'function' ? showDownloadIcon(file) : showDownloadIcon) && mergedStatus === 'done' ? actionIconRender((typeof customDownloadIcon === 'function' ? customDownloadIcon(file) : customDownloadIcon) || /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ant_design_icons_es_icons_DownloadOutlined__WEBPACK_IMPORTED_MODULE_4__["default"], null), () => onDownload(file), prefixCls, locale.downloadFile) : null;
-  const downloadOrDelete = listType !== 'picture-card' && listType !== 'picture-circle' && (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    key: "download-delete",
-    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()(`${prefixCls}-list-item-actions`, {
-      picture: listType === 'picture'
-    })
-  }, downloadIcon, removeIcon));
-  const extraContent = typeof customExtra === 'function' ? customExtra(file) : customExtra;
-  const extra = extraContent && (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: `${prefixCls}-list-item-extra`
-  }, extraContent));
-  const listItemNameClass = classnames__WEBPACK_IMPORTED_MODULE_1___default()(`${prefixCls}-list-item-name`);
-  const fileName = file.url ? (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", Object.assign({
-    key: "view",
-    target: "_blank",
-    rel: "noopener noreferrer",
-    className: listItemNameClass,
-    title: file.name
-  }, linkProps, {
-    href: file.url,
-    onClick: e => onPreview(file, e)
-  }), file.name, extra)) : (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    key: "view",
-    className: listItemNameClass,
-    onClick: e => onPreview(file, e),
-    title: file.name
-  }, file.name, extra));
-  const previewIcon = (typeof showPreviewIcon === 'function' ? showPreviewIcon(file) : showPreviewIcon) && (file.url || file.thumbUrl) ? (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: file.url || file.thumbUrl,
-    target: "_blank",
-    rel: "noopener noreferrer",
-    onClick: e => onPreview(file, e),
-    title: locale.previewFile
-  }, typeof customPreviewIcon === 'function' ? customPreviewIcon(file) : customPreviewIcon || /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ant_design_icons_es_icons_EyeOutlined__WEBPACK_IMPORTED_MODULE_5__["default"], null))) : null;
-  const pictureCardActions = (listType === 'picture-card' || listType === 'picture-circle') && mergedStatus !== 'uploading' && (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: `${prefixCls}-list-item-actions`
-  }, previewIcon, mergedStatus === 'done' && downloadIcon, removeIcon));
-  const {
-    getPrefixCls
-  } = react__WEBPACK_IMPORTED_MODULE_0__.useContext(_config_provider__WEBPACK_IMPORTED_MODULE_6__.ConfigContext);
-  const rootPrefixCls = getPrefixCls();
-  const dom = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: listItemClassName
-  }, icon, fileName, downloadOrDelete, pictureCardActions, showProgress && (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(rc_motion__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    motionName: `${rootPrefixCls}-fade`,
-    visible: mergedStatus === 'uploading',
-    motionDeadline: 2000
-  }, _ref2 => {
-    let {
-      className: motionClassName
-    } = _ref2;
-    // show loading icon if upload progress listener is disabled
-    const loadingProgress = 'percent' in file ? (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_progress__WEBPACK_IMPORTED_MODULE_7__["default"], Object.assign({}, progressProps, {
-      type: "line",
-      percent: file.percent,
-      "aria-label": file['aria-label'],
-      "aria-labelledby": file['aria-labelledby']
-    }))) : null;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: classnames__WEBPACK_IMPORTED_MODULE_1___default()(`${prefixCls}-list-item-progress`, motionClassName)
-    }, loadingProgress);
-  })));
-  const message = file.response && typeof file.response === 'string' ? file.response : ((_a = file.error) === null || _a === void 0 ? void 0 : _a.statusText) || ((_b = file.error) === null || _b === void 0 ? void 0 : _b.message) || locale.uploadError;
-  const item = mergedStatus === 'error' ? (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tooltip__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    title: message,
-    getPopupContainer: node => node.parentNode
-  }, dom)) : dom;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()(`${prefixCls}-list-item-container`, className),
-    style: style,
-    ref: ref
-  }, itemRender ? itemRender(item, file, items, {
-    download: onDownload.bind(null, file),
-    preview: onPreview.bind(null, file),
-    remove: onClose.bind(null, file)
-  }) : item);
-});
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ListItem);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/upload/UploadList/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/antd/es/upload/UploadList/index.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ant_design_icons_es_icons_FileTwoTone__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ant-design/icons/es/icons/FileTwoTone */ "./node_modules/@ant-design/icons/es/icons/FileTwoTone.js");
-/* harmony import */ var _ant_design_icons_es_icons_LoadingOutlined__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ant-design/icons/es/icons/LoadingOutlined */ "./node_modules/@ant-design/icons/es/icons/LoadingOutlined.js");
-/* harmony import */ var _ant_design_icons_es_icons_PaperClipOutlined__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ant-design/icons/es/icons/PaperClipOutlined */ "./node_modules/@ant-design/icons/es/icons/PaperClipOutlined.js");
-/* harmony import */ var _ant_design_icons_es_icons_PictureTwoTone__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ant-design/icons/es/icons/PictureTwoTone */ "./node_modules/@ant-design/icons/es/icons/PictureTwoTone.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var rc_motion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rc-motion */ "./node_modules/rc-motion/es/index.js");
-/* harmony import */ var rc_util_es_omit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rc-util/es/omit */ "./node_modules/rc-util/es/omit.js");
-/* harmony import */ var _util_hooks_useForceUpdate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../_util/hooks/useForceUpdate */ "./node_modules/antd/es/_util/hooks/useForceUpdate.js");
-/* harmony import */ var _util_motion__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../_util/motion */ "./node_modules/antd/es/_util/motion.js");
-/* harmony import */ var _util_reactNode__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../_util/reactNode */ "./node_modules/antd/es/_util/reactNode.js");
-/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../button */ "./node_modules/antd/es/button/index.js");
-/* harmony import */ var _config_provider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../config-provider */ "./node_modules/antd/es/config-provider/context.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils */ "./node_modules/antd/es/upload/utils.js");
-/* harmony import */ var _ListItem__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./ListItem */ "./node_modules/antd/es/upload/UploadList/ListItem.js");
-"use client";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const InternalUploadList = (props, ref) => {
-  const {
-    listType = 'text',
-    previewFile = _utils__WEBPACK_IMPORTED_MODULE_5__.previewImage,
-    onPreview,
-    onDownload,
-    onRemove,
-    locale,
-    iconRender,
-    isImageUrl: isImgUrl = _utils__WEBPACK_IMPORTED_MODULE_5__.isImageUrl,
-    prefixCls: customizePrefixCls,
-    items = [],
-    showPreviewIcon = true,
-    showRemoveIcon = true,
-    showDownloadIcon = false,
-    removeIcon,
-    previewIcon,
-    downloadIcon,
-    extra,
-    progress = {
-      size: [-1, 2],
-      showInfo: false
-    },
-    appendAction,
-    appendActionVisible = true,
-    itemRender,
-    disabled
-  } = props;
-  const forceUpdate = (0,_util_hooks_useForceUpdate__WEBPACK_IMPORTED_MODULE_6__["default"])();
-  const [motionAppear, setMotionAppear] = react__WEBPACK_IMPORTED_MODULE_1__.useState(false);
-  const isPictureCardOrCirle = ['picture-card', 'picture-circle'].includes(listType);
-  // ============================= Effect =============================
-  react__WEBPACK_IMPORTED_MODULE_1__.useEffect(() => {
-    if (!listType.startsWith('picture')) {
-      return;
-    }
-    (items || []).forEach(file => {
-      if (!(file.originFileObj instanceof File || file.originFileObj instanceof Blob) || file.thumbUrl !== undefined) {
-        return;
-      }
-      file.thumbUrl = '';
-      previewFile === null || previewFile === void 0 ? void 0 : previewFile(file.originFileObj).then(previewDataUrl => {
-        // Need append '' to avoid dead loop
-        file.thumbUrl = previewDataUrl || '';
-        forceUpdate();
-      });
-    });
-  }, [listType, items, previewFile]);
-  react__WEBPACK_IMPORTED_MODULE_1__.useEffect(() => {
-    setMotionAppear(true);
-  }, []);
-  // ============================= Events =============================
-  const onInternalPreview = (file, e) => {
-    if (!onPreview) {
-      return;
-    }
-    e === null || e === void 0 ? void 0 : e.preventDefault();
-    return onPreview(file);
-  };
-  const onInternalDownload = file => {
-    if (typeof onDownload === 'function') {
-      onDownload(file);
-    } else if (file.url) {
-      window.open(file.url);
-    }
-  };
-  const onInternalClose = file => {
-    onRemove === null || onRemove === void 0 ? void 0 : onRemove(file);
-  };
-  const internalIconRender = file => {
-    if (iconRender) {
-      return iconRender(file, listType);
-    }
-    const isLoading = file.status === 'uploading';
-    if (listType.startsWith('picture')) {
-      const loadingIcon = listType === 'picture' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_ant_design_icons_es_icons_LoadingOutlined__WEBPACK_IMPORTED_MODULE_7__["default"], null) : locale.uploading;
-      const fileIcon = (isImgUrl === null || isImgUrl === void 0 ? void 0 : isImgUrl(file)) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_ant_design_icons_es_icons_PictureTwoTone__WEBPACK_IMPORTED_MODULE_8__["default"], null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_ant_design_icons_es_icons_FileTwoTone__WEBPACK_IMPORTED_MODULE_9__["default"], null);
-      return isLoading ? loadingIcon : fileIcon;
-    }
-    return isLoading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_ant_design_icons_es_icons_LoadingOutlined__WEBPACK_IMPORTED_MODULE_7__["default"], null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_ant_design_icons_es_icons_PaperClipOutlined__WEBPACK_IMPORTED_MODULE_10__["default"], null);
-  };
-  const actionIconRender = (customIcon, callback, prefixCls, title, acceptUploadDisabled) => {
-    const btnProps = {
-      type: 'text',
-      size: 'small',
-      title,
-      onClick: e => {
-        var _a, _b;
-        callback();
-        if (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.isValidElement(customIcon)) {
-          (_b = (_a = customIcon.props).onClick) === null || _b === void 0 ? void 0 : _b.call(_a, e);
-        }
-      },
-      className: `${prefixCls}-list-item-action`
-    };
-    if (acceptUploadDisabled) {
-      btnProps.disabled = disabled;
-    }
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.isValidElement(customIcon) ? (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_button__WEBPACK_IMPORTED_MODULE_11__["default"], Object.assign({}, btnProps, {
-      icon: (0,_util_reactNode__WEBPACK_IMPORTED_MODULE_12__.cloneElement)(customIcon, Object.assign(Object.assign({}, customIcon.props), {
-        onClick: () => {}
-      }))
-    }))) : (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_button__WEBPACK_IMPORTED_MODULE_11__["default"], Object.assign({}, btnProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("span", null, customIcon)));
-  };
-  // ============================== Ref ===============================
-  // Test needs
-  react__WEBPACK_IMPORTED_MODULE_1__.useImperativeHandle(ref, () => ({
-    handlePreview: onInternalPreview,
-    handleDownload: onInternalDownload
-  }));
-  const {
-    getPrefixCls
-  } = react__WEBPACK_IMPORTED_MODULE_1__.useContext(_config_provider__WEBPACK_IMPORTED_MODULE_13__.ConfigContext);
-  // ============================= Render =============================
-  const prefixCls = getPrefixCls('upload', customizePrefixCls);
-  const rootPrefixCls = getPrefixCls();
-  const listClassNames = classnames__WEBPACK_IMPORTED_MODULE_2___default()(`${prefixCls}-list`, `${prefixCls}-list-${listType}`);
-  const listItemMotion = react__WEBPACK_IMPORTED_MODULE_1__.useMemo(() => (0,rc_util_es_omit__WEBPACK_IMPORTED_MODULE_4__["default"])((0,_util_motion__WEBPACK_IMPORTED_MODULE_14__["default"])(rootPrefixCls), ['onAppearEnd', 'onEnterEnd', 'onLeaveEnd']), [rootPrefixCls]);
-  const motionConfig = Object.assign(Object.assign({}, isPictureCardOrCirle ? {} : listItemMotion), {
-    motionDeadline: 2000,
-    motionName: `${prefixCls}-${isPictureCardOrCirle ? 'animate-inline' : 'animate'}`,
-    keys: (0,_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(items.map(file => ({
-      key: file.uid,
-      file
-    }))),
-    motionAppear
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-    className: listClassNames
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(rc_motion__WEBPACK_IMPORTED_MODULE_3__.CSSMotionList, Object.assign({}, motionConfig, {
-    component: false
-  }), _ref => {
-    let {
-      key,
-      file,
-      className: motionClassName,
-      style: motionStyle
-    } = _ref;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_ListItem__WEBPACK_IMPORTED_MODULE_15__["default"], {
-      key: key,
-      locale: locale,
-      prefixCls: prefixCls,
-      className: motionClassName,
-      style: motionStyle,
-      file: file,
-      items: items,
-      progress: progress,
-      listType: listType,
-      isImgUrl: isImgUrl,
-      showPreviewIcon: showPreviewIcon,
-      showRemoveIcon: showRemoveIcon,
-      showDownloadIcon: showDownloadIcon,
-      removeIcon: removeIcon,
-      previewIcon: previewIcon,
-      downloadIcon: downloadIcon,
-      extra: extra,
-      iconRender: internalIconRender,
-      actionIconRender: actionIconRender,
-      itemRender: itemRender,
-      onPreview: onInternalPreview,
-      onDownload: onInternalDownload,
-      onClose: onInternalClose
-    });
-  }), appendAction && (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(rc_motion__WEBPACK_IMPORTED_MODULE_3__["default"], Object.assign({}, motionConfig, {
-    visible: appendActionVisible,
-    forceRender: true
-  }), _ref2 => {
-    let {
-      className: motionClassName,
-      style: motionStyle
-    } = _ref2;
-    return (0,_util_reactNode__WEBPACK_IMPORTED_MODULE_12__.cloneElement)(appendAction, oriProps => ({
-      className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(oriProps.className, motionClassName),
-      style: Object.assign(Object.assign(Object.assign({}, motionStyle), {
-        // prevent the element has hover css pseudo-class that may cause animation to end prematurely.
-        pointerEvents: motionClassName ? 'none' : undefined
-      }), oriProps.style)
-    }));
-  })));
-};
-const UploadList = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(InternalUploadList);
-if (true) {
-  UploadList.displayName = 'UploadList';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UploadList);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/upload/index.js":
-/*!**********************************************!*\
-  !*** ./node_modules/antd/es/upload/index.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _Dragger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dragger */ "./node_modules/antd/es/upload/Dragger.js");
-/* harmony import */ var _Upload__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Upload */ "./node_modules/antd/es/upload/Upload.js");
-"use client";
-
-
-
-const Upload = _Upload__WEBPACK_IMPORTED_MODULE_0__["default"];
-Upload.Dragger = _Dragger__WEBPACK_IMPORTED_MODULE_1__["default"];
-Upload.LIST_IGNORE = _Upload__WEBPACK_IMPORTED_MODULE_0__.LIST_IGNORE;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Upload);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/upload/style/dragger.js":
-/*!******************************************************!*\
-  !*** ./node_modules/antd/es/upload/style/dragger.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ant-design/cssinjs */ "./node_modules/@ant-design/cssinjs/es/index.js");
-
-const genDraggerStyle = token => {
-  const {
-    componentCls,
-    iconCls
-  } = token;
-  return {
-    [`${componentCls}-wrapper`]: {
-      [`${componentCls}-drag`]: {
-        position: 'relative',
-        width: '100%',
-        height: '100%',
-        textAlign: 'center',
-        background: token.colorFillAlter,
-        border: `${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_0__.unit)(token.lineWidth)} dashed ${token.colorBorder}`,
-        borderRadius: token.borderRadiusLG,
-        cursor: 'pointer',
-        transition: `border-color ${token.motionDurationSlow}`,
-        [componentCls]: {
-          padding: token.padding
-        },
-        [`${componentCls}-btn`]: {
-          display: 'table',
-          width: '100%',
-          height: '100%',
-          outline: 'none',
-          borderRadius: token.borderRadiusLG,
-          '&:focus-visible': {
-            outline: `${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_0__.unit)(token.lineWidthFocus)} solid ${token.colorPrimaryBorder}`
-          }
-        },
-        [`${componentCls}-drag-container`]: {
-          display: 'table-cell',
-          verticalAlign: 'middle'
-        },
-        [`
-          &:not(${componentCls}-disabled):hover,
-          &-hover:not(${componentCls}-disabled)
-        `]: {
-          borderColor: token.colorPrimaryHover
-        },
-        [`p${componentCls}-drag-icon`]: {
-          marginBottom: token.margin,
-          [iconCls]: {
-            color: token.colorPrimary,
-            fontSize: token.uploadThumbnailSize
-          }
-        },
-        [`p${componentCls}-text`]: {
-          margin: `0 0 ${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_0__.unit)(token.marginXXS)}`,
-          color: token.colorTextHeading,
-          fontSize: token.fontSizeLG
-        },
-        [`p${componentCls}-hint`]: {
-          color: token.colorTextDescription,
-          fontSize: token.fontSize
-        },
-        // ===================== Disabled =====================
-        [`&${componentCls}-disabled`]: {
-          [`p${componentCls}-drag-icon ${iconCls},
-            p${componentCls}-text,
-            p${componentCls}-hint
-          `]: {
-            color: token.colorTextDisabled
-          }
-        }
-      }
-    }
-  };
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (genDraggerStyle);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/upload/style/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/antd/es/upload/style/index.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   prepareComponentToken: () => (/* binding */ prepareComponentToken)
-/* harmony export */ });
-/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../style */ "./node_modules/antd/es/style/index.js");
-/* harmony import */ var _style_motion__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../style/motion */ "./node_modules/antd/es/style/motion/collapse.js");
-/* harmony import */ var _theme_internal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../theme/internal */ "./node_modules/antd/es/theme/util/genStyleUtils.js");
-/* harmony import */ var _theme_internal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../theme/internal */ "./node_modules/@ant-design/cssinjs-utils/es/index.js");
-/* harmony import */ var _dragger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dragger */ "./node_modules/antd/es/upload/style/dragger.js");
-/* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./list */ "./node_modules/antd/es/upload/style/list.js");
-/* harmony import */ var _motion__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./motion */ "./node_modules/antd/es/upload/style/motion.js");
-/* harmony import */ var _picture__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./picture */ "./node_modules/antd/es/upload/style/picture.js");
-/* harmony import */ var _rtl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./rtl */ "./node_modules/antd/es/upload/style/rtl.js");
-
-
-
-
-
-
-
-
-const genBaseStyle = token => {
-  const {
-    componentCls,
-    colorTextDisabled
-  } = token;
-  return {
-    [`${componentCls}-wrapper`]: Object.assign(Object.assign({}, (0,_style__WEBPACK_IMPORTED_MODULE_0__.resetComponent)(token)), {
-      [componentCls]: {
-        outline: 0,
-        "input[type='file']": {
-          cursor: 'pointer'
-        }
-      },
-      [`${componentCls}-select`]: {
-        display: 'inline-block'
-      },
-      [`${componentCls}-hidden`]: {
-        display: 'none'
-      },
-      [`${componentCls}-disabled`]: {
-        color: colorTextDisabled,
-        cursor: 'not-allowed'
-      }
-    })
-  };
-};
-const prepareComponentToken = token => ({
-  actionsColor: token.colorTextDescription
-});
-// ============================== Export ==============================
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_theme_internal__WEBPACK_IMPORTED_MODULE_1__.genStyleHooks)('Upload', token => {
-  const {
-    fontSizeHeading3,
-    fontHeight,
-    lineWidth,
-    controlHeightLG,
-    calc
-  } = token;
-  const uploadToken = (0,_theme_internal__WEBPACK_IMPORTED_MODULE_2__.mergeToken)(token, {
-    uploadThumbnailSize: calc(fontSizeHeading3).mul(2).equal(),
-    uploadProgressOffset: calc(calc(fontHeight).div(2)).add(lineWidth).equal(),
-    uploadPicCardSize: calc(controlHeightLG).mul(2.55).equal()
-  });
-  return [genBaseStyle(uploadToken), (0,_dragger__WEBPACK_IMPORTED_MODULE_3__["default"])(uploadToken), (0,_picture__WEBPACK_IMPORTED_MODULE_4__.genPictureStyle)(uploadToken), (0,_picture__WEBPACK_IMPORTED_MODULE_4__.genPictureCardStyle)(uploadToken), (0,_list__WEBPACK_IMPORTED_MODULE_5__["default"])(uploadToken), (0,_motion__WEBPACK_IMPORTED_MODULE_6__["default"])(uploadToken), (0,_rtl__WEBPACK_IMPORTED_MODULE_7__["default"])(uploadToken), (0,_style_motion__WEBPACK_IMPORTED_MODULE_8__["default"])(uploadToken)];
-}, prepareComponentToken));
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/upload/style/list.js":
-/*!***************************************************!*\
-  !*** ./node_modules/antd/es/upload/style/list.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ant-design/cssinjs */ "./node_modules/@ant-design/cssinjs/es/index.js");
-/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../style */ "./node_modules/antd/es/style/index.js");
-
-
-const genListStyle = token => {
-  const {
-    componentCls,
-    iconCls,
-    fontSize,
-    lineHeight,
-    calc
-  } = token;
-  const itemCls = `${componentCls}-list-item`;
-  const actionsCls = `${itemCls}-actions`;
-  const actionCls = `${itemCls}-action`;
-  return {
-    [`${componentCls}-wrapper`]: {
-      [`${componentCls}-list`]: Object.assign(Object.assign({}, (0,_style__WEBPACK_IMPORTED_MODULE_1__.clearFix)()), {
-        lineHeight: token.lineHeight,
-        [itemCls]: {
-          position: 'relative',
-          height: calc(token.lineHeight).mul(fontSize).equal(),
-          marginTop: token.marginXS,
-          fontSize,
-          display: 'flex',
-          alignItems: 'center',
-          transition: `background-color ${token.motionDurationSlow}`,
-          borderRadius: token.borderRadiusSM,
-          '&:hover': {
-            backgroundColor: token.controlItemBgHover
-          },
-          [`${itemCls}-name`]: Object.assign(Object.assign({}, _style__WEBPACK_IMPORTED_MODULE_1__.textEllipsis), {
-            padding: `0 ${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_0__.unit)(token.paddingXS)}`,
-            lineHeight,
-            flex: 'auto',
-            transition: `all ${token.motionDurationSlow}`
-          }),
-          [actionsCls]: {
-            whiteSpace: 'nowrap',
-            [actionCls]: {
-              opacity: 0
-            },
-            [iconCls]: {
-              color: token.actionsColor,
-              transition: `all ${token.motionDurationSlow}`
-            },
-            [`
-              ${actionCls}:focus-visible,
-              &.picture ${actionCls}
-            `]: {
-              opacity: 1
-            }
-          },
-          [`${componentCls}-icon ${iconCls}`]: {
-            color: token.colorTextDescription,
-            fontSize
-          },
-          [`${itemCls}-progress`]: {
-            position: 'absolute',
-            bottom: token.calc(token.uploadProgressOffset).mul(-1).equal(),
-            width: '100%',
-            paddingInlineStart: calc(fontSize).add(token.paddingXS).equal(),
-            fontSize,
-            lineHeight: 0,
-            pointerEvents: 'none',
-            '> div': {
-              margin: 0
-            }
-          }
-        },
-        [`${itemCls}:hover ${actionCls}`]: {
-          opacity: 1
-        },
-        [`${itemCls}-error`]: {
-          color: token.colorError,
-          [`${itemCls}-name, ${componentCls}-icon ${iconCls}`]: {
-            color: token.colorError
-          },
-          [actionsCls]: {
-            [`${iconCls}, ${iconCls}:hover`]: {
-              color: token.colorError
-            },
-            [actionCls]: {
-              opacity: 1
-            }
-          }
-        },
-        [`${componentCls}-list-item-container`]: {
-          transition: `opacity ${token.motionDurationSlow}, height ${token.motionDurationSlow}`,
-          // For smooth removing animation
-          '&::before': {
-            display: 'table',
-            width: 0,
-            height: 0,
-            content: '""'
-          }
-        }
-      })
-    }
-  };
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (genListStyle);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/upload/style/motion.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/antd/es/upload/style/motion.js ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ant-design/cssinjs */ "./node_modules/@ant-design/cssinjs/es/index.js");
-/* harmony import */ var _style_motion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../style/motion */ "./node_modules/antd/es/style/motion/fade.js");
-
-
-// =========================== Motion ===========================
-const genMotionStyle = token => {
-  const {
-    componentCls
-  } = token;
-  const uploadAnimateInlineIn = new _ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_0__.Keyframes('uploadAnimateInlineIn', {
-    from: {
-      width: 0,
-      height: 0,
-      padding: 0,
-      opacity: 0,
-      margin: token.calc(token.marginXS).div(-2).equal()
-    }
-  });
-  const uploadAnimateInlineOut = new _ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_0__.Keyframes('uploadAnimateInlineOut', {
-    to: {
-      width: 0,
-      height: 0,
-      padding: 0,
-      opacity: 0,
-      margin: token.calc(token.marginXS).div(-2).equal()
-    }
-  });
-  const inlineCls = `${componentCls}-animate-inline`;
-  return [{
-    [`${componentCls}-wrapper`]: {
-      [`${inlineCls}-appear, ${inlineCls}-enter, ${inlineCls}-leave`]: {
-        animationDuration: token.motionDurationSlow,
-        animationTimingFunction: token.motionEaseInOutCirc,
-        animationFillMode: 'forwards'
-      },
-      [`${inlineCls}-appear, ${inlineCls}-enter`]: {
-        animationName: uploadAnimateInlineIn
-      },
-      [`${inlineCls}-leave`]: {
-        animationName: uploadAnimateInlineOut
-      }
-    }
-  }, {
-    [`${componentCls}-wrapper`]: (0,_style_motion__WEBPACK_IMPORTED_MODULE_1__.initFadeMotion)(token)
-  }, uploadAnimateInlineIn, uploadAnimateInlineOut];
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (genMotionStyle);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/upload/style/picture.js":
-/*!******************************************************!*\
-  !*** ./node_modules/antd/es/upload/style/picture.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   genPictureCardStyle: () => (/* binding */ genPictureCardStyle),
-/* harmony export */   genPictureStyle: () => (/* binding */ genPictureStyle)
-/* harmony export */ });
-/* harmony import */ var _ant_design_colors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ant-design/colors */ "./node_modules/@ant-design/colors/es/index.js");
-/* harmony import */ var _ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ant-design/cssinjs */ "./node_modules/@ant-design/cssinjs/es/index.js");
-/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../style */ "./node_modules/antd/es/style/index.js");
-
-
-
-const genPictureStyle = token => {
-  const {
-    componentCls,
-    iconCls,
-    uploadThumbnailSize,
-    uploadProgressOffset,
-    calc
-  } = token;
-  const listCls = `${componentCls}-list`;
-  const itemCls = `${listCls}-item`;
-  return {
-    [`${componentCls}-wrapper`]: {
-      // ${listCls} 增加优先级
-      [`
-        ${listCls}${listCls}-picture,
-        ${listCls}${listCls}-picture-card,
-        ${listCls}${listCls}-picture-circle
-      `]: {
-        [itemCls]: {
-          position: 'relative',
-          height: calc(uploadThumbnailSize).add(calc(token.lineWidth).mul(2)).add(calc(token.paddingXS).mul(2)).equal(),
-          padding: token.paddingXS,
-          border: `${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_1__.unit)(token.lineWidth)} ${token.lineType} ${token.colorBorder}`,
-          borderRadius: token.borderRadiusLG,
-          '&:hover': {
-            background: 'transparent'
-          },
-          [`${itemCls}-thumbnail`]: Object.assign(Object.assign({}, _style__WEBPACK_IMPORTED_MODULE_2__.textEllipsis), {
-            width: uploadThumbnailSize,
-            height: uploadThumbnailSize,
-            lineHeight: (0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_1__.unit)(calc(uploadThumbnailSize).add(token.paddingSM).equal()),
-            textAlign: 'center',
-            flex: 'none',
-            [iconCls]: {
-              fontSize: token.fontSizeHeading2,
-              color: token.colorPrimary
-            },
-            img: {
-              display: 'block',
-              width: '100%',
-              height: '100%',
-              overflow: 'hidden'
-            }
-          }),
-          [`${itemCls}-progress`]: {
-            bottom: uploadProgressOffset,
-            width: `calc(100% - ${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_1__.unit)(calc(token.paddingSM).mul(2).equal())})`,
-            marginTop: 0,
-            paddingInlineStart: calc(uploadThumbnailSize).add(token.paddingXS).equal()
-          }
-        },
-        [`${itemCls}-error`]: {
-          borderColor: token.colorError,
-          // Adjust the color of the error icon : https://github.com/ant-design/ant-design/pull/24160
-          [`${itemCls}-thumbnail ${iconCls}`]: {
-            [`svg path[fill='${_ant_design_colors__WEBPACK_IMPORTED_MODULE_0__.blue[0]}']`]: {
-              fill: token.colorErrorBg
-            },
-            [`svg path[fill='${_ant_design_colors__WEBPACK_IMPORTED_MODULE_0__.blue.primary}']`]: {
-              fill: token.colorError
-            }
-          }
-        },
-        [`${itemCls}-uploading`]: {
-          borderStyle: 'dashed',
-          [`${itemCls}-name`]: {
-            marginBottom: uploadProgressOffset
-          }
-        }
-      },
-      [`${listCls}${listCls}-picture-circle ${itemCls}`]: {
-        [`&, &::before, ${itemCls}-thumbnail`]: {
-          borderRadius: '50%'
-        }
-      }
-    }
-  };
-};
-const genPictureCardStyle = token => {
-  const {
-    componentCls,
-    iconCls,
-    fontSizeLG,
-    colorTextLightSolid,
-    calc
-  } = token;
-  const listCls = `${componentCls}-list`;
-  const itemCls = `${listCls}-item`;
-  const uploadPictureCardSize = token.uploadPicCardSize;
-  return {
-    [`
-      ${componentCls}-wrapper${componentCls}-picture-card-wrapper,
-      ${componentCls}-wrapper${componentCls}-picture-circle-wrapper
-    `]: Object.assign(Object.assign({}, (0,_style__WEBPACK_IMPORTED_MODULE_2__.clearFix)()), {
-      display: 'block',
-      [`${componentCls}${componentCls}-select`]: {
-        width: uploadPictureCardSize,
-        height: uploadPictureCardSize,
-        textAlign: 'center',
-        verticalAlign: 'top',
-        backgroundColor: token.colorFillAlter,
-        border: `${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_1__.unit)(token.lineWidth)} dashed ${token.colorBorder}`,
-        borderRadius: token.borderRadiusLG,
-        cursor: 'pointer',
-        transition: `border-color ${token.motionDurationSlow}`,
-        [`> ${componentCls}`]: {
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '100%',
-          textAlign: 'center'
-        },
-        [`&:not(${componentCls}-disabled):hover`]: {
-          borderColor: token.colorPrimary
-        }
-      },
-      // list
-      [`${listCls}${listCls}-picture-card, ${listCls}${listCls}-picture-circle`]: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        '@supports not (gap: 1px)': {
-          '& > *': {
-            marginBlockEnd: token.marginXS,
-            marginInlineEnd: token.marginXS
-          }
-        },
-        '@supports (gap: 1px)': {
-          gap: token.marginXS
-        },
-        [`${listCls}-item-container`]: {
-          display: 'inline-block',
-          width: uploadPictureCardSize,
-          height: uploadPictureCardSize,
-          verticalAlign: 'top'
-        },
-        '&::after': {
-          display: 'none'
-        },
-        '&::before': {
-          display: 'none'
-        },
-        [itemCls]: {
-          height: '100%',
-          margin: 0,
-          '&::before': {
-            position: 'absolute',
-            zIndex: 1,
-            width: `calc(100% - ${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_1__.unit)(calc(token.paddingXS).mul(2).equal())})`,
-            height: `calc(100% - ${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_1__.unit)(calc(token.paddingXS).mul(2).equal())})`,
-            backgroundColor: token.colorBgMask,
-            opacity: 0,
-            transition: `all ${token.motionDurationSlow}`,
-            content: '" "'
-          }
-        },
-        [`${itemCls}:hover`]: {
-          [`&::before, ${itemCls}-actions`]: {
-            opacity: 1
-          }
-        },
-        [`${itemCls}-actions`]: {
-          position: 'absolute',
-          insetInlineStart: 0,
-          zIndex: 10,
-          width: '100%',
-          whiteSpace: 'nowrap',
-          textAlign: 'center',
-          opacity: 0,
-          transition: `all ${token.motionDurationSlow}`,
-          [`
-            ${iconCls}-eye,
-            ${iconCls}-download,
-            ${iconCls}-delete
-          `]: {
-            zIndex: 10,
-            width: fontSizeLG,
-            margin: `0 ${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_1__.unit)(token.marginXXS)}`,
-            fontSize: fontSizeLG,
-            cursor: 'pointer',
-            transition: `all ${token.motionDurationSlow}`,
-            color: colorTextLightSolid,
-            '&:hover': {
-              color: colorTextLightSolid
-            },
-            svg: {
-              verticalAlign: 'baseline'
-            }
-          }
-        },
-        [`${itemCls}-thumbnail, ${itemCls}-thumbnail img`]: {
-          position: 'static',
-          display: 'block',
-          width: '100%',
-          height: '100%',
-          objectFit: 'contain'
-        },
-        [`${itemCls}-name`]: {
-          display: 'none',
-          textAlign: 'center'
-        },
-        [`${itemCls}-file + ${itemCls}-name`]: {
-          position: 'absolute',
-          bottom: token.margin,
-          display: 'block',
-          width: `calc(100% - ${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_1__.unit)(calc(token.paddingXS).mul(2).equal())})`
-        },
-        [`${itemCls}-uploading`]: {
-          [`&${itemCls}`]: {
-            backgroundColor: token.colorFillAlter
-          },
-          [`&::before, ${iconCls}-eye, ${iconCls}-download, ${iconCls}-delete`]: {
-            display: 'none'
-          }
-        },
-        [`${itemCls}-progress`]: {
-          bottom: token.marginXL,
-          width: `calc(100% - ${(0,_ant_design_cssinjs__WEBPACK_IMPORTED_MODULE_1__.unit)(calc(token.paddingXS).mul(2).equal())})`,
-          paddingInlineStart: 0
-        }
-      }
-    }),
-    [`${componentCls}-wrapper${componentCls}-picture-circle-wrapper`]: {
-      [`${componentCls}${componentCls}-select`]: {
-        borderRadius: '50%'
-      }
-    }
-  };
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/upload/style/rtl.js":
-/*!**************************************************!*\
-  !*** ./node_modules/antd/es/upload/style/rtl.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-// =========================== Motion ===========================
-const genRtlStyle = token => {
-  const {
-    componentCls
-  } = token;
-  return {
-    [`${componentCls}-rtl`]: {
-      direction: 'rtl'
-    }
-  };
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (genRtlStyle);
-
-/***/ }),
-
-/***/ "./node_modules/antd/es/upload/utils.js":
-/*!**********************************************!*\
-  !*** ./node_modules/antd/es/upload/utils.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   file2Obj: () => (/* binding */ file2Obj),
-/* harmony export */   getFileItem: () => (/* binding */ getFileItem),
-/* harmony export */   isImageUrl: () => (/* binding */ isImageUrl),
-/* harmony export */   previewImage: () => (/* binding */ previewImage),
-/* harmony export */   removeFileItem: () => (/* binding */ removeFileItem),
-/* harmony export */   updateFileList: () => (/* binding */ updateFileList)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-
-function file2Obj(file) {
-  return Object.assign(Object.assign({}, file), {
-    lastModified: file.lastModified,
-    lastModifiedDate: file.lastModifiedDate,
-    name: file.name,
-    size: file.size,
-    type: file.type,
-    uid: file.uid,
-    percent: 0,
-    originFileObj: file
-  });
-}
-/** Upload fileList. Replace file if exist or just push into it. */
-function updateFileList(file, fileList) {
-  const nextFileList = (0,_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(fileList);
-  const fileIndex = nextFileList.findIndex(_ref => {
-    let {
-      uid
-    } = _ref;
-    return uid === file.uid;
-  });
-  if (fileIndex === -1) {
-    nextFileList.push(file);
-  } else {
-    nextFileList[fileIndex] = file;
-  }
-  return nextFileList;
-}
-function getFileItem(file, fileList) {
-  const matchKey = file.uid !== undefined ? 'uid' : 'name';
-  return fileList.filter(item => item[matchKey] === file[matchKey])[0];
-}
-function removeFileItem(file, fileList) {
-  const matchKey = file.uid !== undefined ? 'uid' : 'name';
-  const removed = fileList.filter(item => item[matchKey] !== file[matchKey]);
-  if (removed.length === fileList.length) {
-    return null;
-  }
-  return removed;
-}
-// ==================== Default Image Preview ====================
-const extname = function () {
-  let url = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-  const temp = url.split('/');
-  const filename = temp[temp.length - 1];
-  const filenameWithoutSuffix = filename.split(/#|\?/)[0];
-  return (/\.[^./\\]*$/.exec(filenameWithoutSuffix) || [''])[0];
-};
-const isImageFileType = type => type.indexOf('image/') === 0;
-const isImageUrl = file => {
-  if (file.type && !file.thumbUrl) {
-    return isImageFileType(file.type);
-  }
-  const url = file.thumbUrl || file.url || '';
-  const extension = extname(url);
-  if (/^data:image\//.test(url) || /(webp|svg|png|gif|jpg|jpeg|jfif|bmp|dpg|ico|heic|heif)$/i.test(extension)) {
-    return true;
-  }
-  if (/^data:/.test(url)) {
-    // other file types of base64
-    return false;
-  }
-  if (extension) {
-    // other file types which have extension
-    return false;
-  }
-  return true;
-};
-const MEASURE_SIZE = 200;
-function previewImage(file) {
-  return new Promise(resolve => {
-    if (!file.type || !isImageFileType(file.type)) {
-      resolve('');
-      return;
-    }
-    const canvas = document.createElement('canvas');
-    canvas.width = MEASURE_SIZE;
-    canvas.height = MEASURE_SIZE;
-    canvas.style.cssText = `position: fixed; left: 0; top: 0; width: ${MEASURE_SIZE}px; height: ${MEASURE_SIZE}px; z-index: 9999; display: none;`;
-    document.body.appendChild(canvas);
-    const ctx = canvas.getContext('2d');
-    const img = new Image();
-    img.onload = () => {
-      const {
-        width,
-        height
-      } = img;
-      let drawWidth = MEASURE_SIZE;
-      let drawHeight = MEASURE_SIZE;
-      let offsetX = 0;
-      let offsetY = 0;
-      if (width > height) {
-        drawHeight = height * (MEASURE_SIZE / width);
-        offsetY = -(drawHeight - drawWidth) / 2;
-      } else {
-        drawWidth = width * (MEASURE_SIZE / height);
-        offsetX = -(drawWidth - drawHeight) / 2;
-      }
-      ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
-      const dataURL = canvas.toDataURL();
-      document.body.removeChild(canvas);
-      window.URL.revokeObjectURL(img.src);
-      resolve(dataURL);
-    };
-    img.crossOrigin = 'anonymous';
-    if (file.type.startsWith('image/svg+xml')) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        if (reader.result && typeof reader.result === 'string') {
-          img.src = reader.result;
-        }
-      };
-      reader.readAsDataURL(file);
-    } else if (file.type.startsWith('image/gif')) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        if (reader.result) {
-          resolve(reader.result);
-        }
-      };
-      reader.readAsDataURL(file);
-    } else {
-      img.src = window.URL.createObjectURL(file);
-    }
-  });
-}
-
-/***/ }),
-
 /***/ "./node_modules/antd/es/version/index.js":
 /*!***********************************************!*\
   !*** ./node_modules/antd/es/version/index.js ***!
@@ -77657,7 +74685,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".inventory-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 16px;\n}\n.inventory-header h2 {\n  font-size: 20px;\n  font-weight: bold;\n  color: #333;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".inventory-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 16px;\n}\n.inventory-header h2 {\n  font-size: 20px;\n  font-weight: bold;\n  color: #333;\n}\n\n.inventory-page {\n  padding-top: 76px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -77681,7 +74709,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.login-page {\n  background: #fafafa;\n  min-height: 100vh;\n}\n\n.login-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 2rem;\n  margin-top: 2rem;\n}\n\n.login-box {\n  background: #fff;\n  width: 100%;\n  max-width: 360px;\n  padding: 2rem;\n  border-radius: 8px;\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);\n  text-align: center;\n}\n.login-box .login-logo {\n  margin-bottom: 1.5rem;\n}\n.login-box .login-logo img {\n  width: 120px;\n  height: auto;\n}\n.login-box h2 {\n  font-size: 1.75rem;\n  font-weight: 700;\n  color: var(--purple);\n  margin-bottom: 0.25rem;\n}\n.login-box h3 {\n  font-size: 1.125rem;\n  font-weight: 500;\n  margin-bottom: 1.5rem;\n  color: #333;\n}\n.login-box h3 .highlight {\n  color: var(--yellow);\n}\n.login-box label {\n  display: block;\n  text-align: left;\n  margin-bottom: 0.5rem;\n  font-weight: 500;\n  color: #555;\n}\n.login-box .ant-input,\n.login-box .ant-input-password {\n  width: 100%;\n  height: 44px;\n  border-radius: 4px;\n  margin-bottom: 1rem;\n}\n.login-box .login-button {\n  width: 100%;\n  height: 44px;\n  font-size: 1rem;\n  font-weight: 500;\n  background-color: var(--purple);\n  border-color: var(--purple);\n  transition: filter 0.2s;\n}\n.login-box .login-button:hover, .login-box .login-button:focus {\n  filter: brightness(0.9);\n}\n.login-box p {\n  margin-top: 1rem;\n  font-size: 0.9rem;\n  color: #333;\n}\n.login-box p .signup-link {\n  color: var(--purple);\n}\n.login-box p .signup-link:hover {\n  text-decoration: underline;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "html,\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n:root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.login-page {\n  background: #fafafa;\n  min-height: 100vh;\n}\n\n.login-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 2rem;\n  margin-top: 0;\n}\n\n.login-box {\n  background: #fff;\n  width: 100%;\n  max-width: 360px;\n  padding: 2rem;\n  border-radius: 8px;\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);\n  text-align: center;\n}\n.login-box .login-logo {\n  margin-bottom: 1.5rem;\n}\n.login-box .login-logo img {\n  width: 120px;\n  height: auto;\n}\n.login-box h2 {\n  font-size: 1.75rem;\n  font-weight: 700;\n  color: var(--purple);\n  margin-bottom: 0.25rem;\n}\n.login-box h3 {\n  font-size: 1.125rem;\n  font-weight: 500;\n  margin-bottom: 1.5rem;\n  color: #333;\n}\n.login-box h3 .highlight {\n  color: var(--yellow);\n}\n.login-box label {\n  display: block;\n  text-align: left;\n  margin-bottom: 0.5rem;\n  font-weight: 500;\n  color: #555;\n}\n.login-box .ant-input,\n.login-box .ant-input-password {\n  width: 100%;\n  height: 44px;\n  border-radius: 4px;\n  margin-bottom: 1rem;\n}\n.login-box .login-button {\n  width: 100%;\n  height: 44px;\n  font-size: 1rem;\n  font-weight: 500;\n  background-color: var(--purple);\n  border-color: var(--purple);\n  transition: filter 0.2s;\n}\n.login-box .login-button:hover, .login-box .login-button:focus {\n  filter: brightness(0.9);\n}\n.login-box p {\n  margin-top: 1rem;\n  font-size: 0.9rem;\n  color: #333;\n}\n.login-box p .signup-link {\n  color: var(--purple);\n}\n.login-box p .signup-link:hover {\n  text-decoration: underline;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -77729,7 +74757,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.topnav {\n  background-color: var(--purple);\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n}\n.topnav .logo {\n  display: flex;\n  align-items: center;\n}\n.topnav .logo img {\n  height: 40px;\n}\n.topnav .search-bar {\n  flex: 1;\n  margin: 0 2rem;\n  display: flex;\n  justify-content: center;\n}\n.topnav .search-bar input.ant-input {\n  border-radius: 4px 0 0 4px;\n  border: none;\n  height: 44px;\n  padding: 0 1rem;\n}\n.topnav .search-bar .ant-btn {\n  border-radius: 0 4px 4px 0;\n  background: var(--yellow);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .search-bar .ant-btn:hover, .topnav .search-bar .ant-btn:focus {\n  filter: brightness(0.9);\n}\n.topnav .nav-right {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n.topnav .nav-right .username-inline {\n  color: #fff;\n  font-size: 0.9rem;\n}\n.topnav .nav-right .nav-icons {\n  display: flex;\n  gap: 1rem;\n}\n.topnav .nav-right .nav-icons svg,\n.topnav .nav-right .nav-icons .ant-dropdown-trigger {\n  font-size: 1.25rem;\n  color: #fff;\n  cursor: pointer;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary {\n  background: var(--yellow);\n  border-color: var(--yellow);\n  color: var(--purple);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary:hover, .topnav .nav-right .nav-icons .ant-btn-primary:focus {\n  filter: brightness(0.9);\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.topnav {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  z-index: 1000;\n  background-color: var(--purple);\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n}\n.topnav .logo {\n  display: flex;\n  align-items: center;\n}\n.topnav .logo img {\n  height: 40px;\n}\n.topnav .search-bar {\n  flex: 1;\n  margin: 0 2rem;\n  display: flex;\n  justify-content: center;\n}\n.topnav .search-bar input.ant-input {\n  border-radius: 4px 0 0 4px;\n  border: none;\n  height: 44px;\n  padding: 0 1rem;\n}\n.topnav .search-bar .ant-btn {\n  border-radius: 0 4px 4px 0;\n  background: var(--yellow);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .search-bar .ant-btn:hover, .topnav .search-bar .ant-btn:focus {\n  filter: brightness(0.9);\n}\n.topnav .nav-right {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n.topnav .nav-right .username-inline {\n  color: #fff;\n  font-size: 0.9rem;\n}\n.topnav .nav-right .nav-icons {\n  display: flex;\n  gap: 1rem;\n}\n.topnav .nav-right .nav-icons svg,\n.topnav .nav-right .nav-icons .ant-dropdown-trigger {\n  font-size: 1.25rem;\n  color: #fff;\n  cursor: pointer;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary {\n  background: var(--yellow);\n  border-color: var(--yellow);\n  color: var(--purple);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary:hover, .topnav .nav-right .nav-icons .ant-btn-primary:focus {\n  filter: brightness(0.9);\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -107960,534 +104988,6 @@ var locale = (0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODUL
 
 /***/ }),
 
-/***/ "./node_modules/rc-progress/es/Circle/PtgCircle.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/rc-progress/es/Circle/PtgCircle.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/typeof */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var Block = function Block(_ref) {
-  var bg = _ref.bg,
-    children = _ref.children;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-    style: {
-      width: '100%',
-      height: '100%',
-      background: bg
-    }
-  }, children);
-};
-function getPtgColors(color, scale) {
-  return Object.keys(color).map(function (key) {
-    var parsedKey = parseFloat(key);
-    var ptgKey = "".concat(Math.floor(parsedKey * scale), "%");
-    return "".concat(color[key], " ").concat(ptgKey);
-  });
-}
-var PtgCircle = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(function (props, ref) {
-  var prefixCls = props.prefixCls,
-    color = props.color,
-    gradientId = props.gradientId,
-    radius = props.radius,
-    circleStyleForStack = props.style,
-    ptg = props.ptg,
-    strokeLinecap = props.strokeLinecap,
-    strokeWidth = props.strokeWidth,
-    size = props.size,
-    gapDegree = props.gapDegree;
-  var isGradient = color && (0,_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__["default"])(color) === 'object';
-  var stroke = isGradient ? "#FFF" : undefined;
-
-  // ========================== Circle ==========================
-  var halfSize = size / 2;
-  var circleNode = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("circle", {
-    className: "".concat(prefixCls, "-circle-path"),
-    r: radius,
-    cx: halfSize,
-    cy: halfSize,
-    stroke: stroke,
-    strokeLinecap: strokeLinecap,
-    strokeWidth: strokeWidth,
-    opacity: ptg === 0 ? 0 : 1,
-    style: circleStyleForStack,
-    ref: ref
-  });
-
-  // ========================== Render ==========================
-  if (!isGradient) {
-    return circleNode;
-  }
-  var maskId = "".concat(gradientId, "-conic");
-  var fromDeg = gapDegree ? "".concat(180 + gapDegree / 2, "deg") : '0deg';
-  var conicColors = getPtgColors(color, (360 - gapDegree) / 360);
-  var linearColors = getPtgColors(color, 1);
-  var conicColorBg = "conic-gradient(from ".concat(fromDeg, ", ").concat(conicColors.join(', '), ")");
-  var linearColorBg = "linear-gradient(to ".concat(gapDegree ? 'bottom' : 'top', ", ").concat(linearColors.join(', '), ")");
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("mask", {
-    id: maskId
-  }, circleNode), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("foreignObject", {
-    x: 0,
-    y: 0,
-    width: size,
-    height: size,
-    mask: "url(#".concat(maskId, ")")
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Block, {
-    bg: linearColorBg
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Block, {
-    bg: conicColorBg
-  }))));
-});
-if (true) {
-  PtgCircle.displayName = 'PtgCircle';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PtgCircle);
-
-/***/ }),
-
-/***/ "./node_modules/rc-progress/es/Circle/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/rc-progress/es/Circle/index.js ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/typeof */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../common */ "./node_modules/rc-progress/es/common.js");
-/* harmony import */ var _hooks_useId__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../hooks/useId */ "./node_modules/rc-progress/es/hooks/useId.js");
-/* harmony import */ var _PtgCircle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./PtgCircle */ "./node_modules/rc-progress/es/Circle/PtgCircle.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./util */ "./node_modules/rc-progress/es/Circle/util.js");
-
-
-
-
-var _excluded = ["id", "prefixCls", "steps", "strokeWidth", "trailWidth", "gapDegree", "gapPosition", "trailColor", "strokeLinecap", "style", "className", "strokeColor", "percent"];
-
-
-
-
-
-
-function toArray(value) {
-  var mergedValue = value !== null && value !== void 0 ? value : [];
-  return Array.isArray(mergedValue) ? mergedValue : [mergedValue];
-}
-var Circle = function Circle(props) {
-  var _defaultProps$props = (0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])((0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__["default"])({}, _common__WEBPACK_IMPORTED_MODULE_6__.defaultProps), props),
-    id = _defaultProps$props.id,
-    prefixCls = _defaultProps$props.prefixCls,
-    steps = _defaultProps$props.steps,
-    strokeWidth = _defaultProps$props.strokeWidth,
-    trailWidth = _defaultProps$props.trailWidth,
-    _defaultProps$props$g = _defaultProps$props.gapDegree,
-    gapDegree = _defaultProps$props$g === void 0 ? 0 : _defaultProps$props$g,
-    gapPosition = _defaultProps$props.gapPosition,
-    trailColor = _defaultProps$props.trailColor,
-    strokeLinecap = _defaultProps$props.strokeLinecap,
-    style = _defaultProps$props.style,
-    className = _defaultProps$props.className,
-    strokeColor = _defaultProps$props.strokeColor,
-    percent = _defaultProps$props.percent,
-    restProps = (0,_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__["default"])(_defaultProps$props, _excluded);
-  var halfSize = _util__WEBPACK_IMPORTED_MODULE_9__.VIEW_BOX_SIZE / 2;
-  var mergedId = (0,_hooks_useId__WEBPACK_IMPORTED_MODULE_7__["default"])(id);
-  var gradientId = "".concat(mergedId, "-gradient");
-  var radius = halfSize - strokeWidth / 2;
-  var perimeter = Math.PI * 2 * radius;
-  var rotateDeg = gapDegree > 0 ? 90 + gapDegree / 2 : -90;
-  var perimeterWithoutGap = perimeter * ((360 - gapDegree) / 360);
-  var _ref = (0,_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_1__["default"])(steps) === 'object' ? steps : {
-      count: steps,
-      gap: 2
-    },
-    stepCount = _ref.count,
-    stepGap = _ref.gap;
-  var percentList = toArray(percent);
-  var strokeColorList = toArray(strokeColor);
-  var gradient = strokeColorList.find(function (color) {
-    return color && (0,_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_1__["default"])(color) === 'object';
-  });
-  var isConicGradient = gradient && (0,_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_1__["default"])(gradient) === 'object';
-  var mergedStrokeLinecap = isConicGradient ? 'butt' : strokeLinecap;
-  var circleStyle = (0,_util__WEBPACK_IMPORTED_MODULE_9__.getCircleStyle)(perimeter, perimeterWithoutGap, 0, 100, rotateDeg, gapDegree, gapPosition, trailColor, mergedStrokeLinecap, strokeWidth);
-  var paths = (0,_common__WEBPACK_IMPORTED_MODULE_6__.useTransitionDuration)();
-  var getStokeList = function getStokeList() {
-    var stackPtg = 0;
-    return percentList.map(function (ptg, index) {
-      var color = strokeColorList[index] || strokeColorList[strokeColorList.length - 1];
-      var circleStyleForStack = (0,_util__WEBPACK_IMPORTED_MODULE_9__.getCircleStyle)(perimeter, perimeterWithoutGap, stackPtg, ptg, rotateDeg, gapDegree, gapPosition, color, mergedStrokeLinecap, strokeWidth);
-      stackPtg += ptg;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement(_PtgCircle__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        key: index,
-        color: color,
-        ptg: ptg,
-        radius: radius,
-        prefixCls: prefixCls,
-        gradientId: gradientId,
-        style: circleStyleForStack,
-        strokeLinecap: mergedStrokeLinecap,
-        strokeWidth: strokeWidth,
-        gapDegree: gapDegree,
-        ref: function ref(elem) {
-          // https://reactjs.org/docs/refs-and-the-dom.html#callback-refs
-          // React will call the ref callback with the DOM element when the component mounts,
-          // and call it with `null` when it unmounts.
-          // Refs are guaranteed to be up-to-date before componentDidMount or componentDidUpdate fires.
-
-          paths[index] = elem;
-        },
-        size: _util__WEBPACK_IMPORTED_MODULE_9__.VIEW_BOX_SIZE
-      });
-    }).reverse();
-  };
-  var getStepStokeList = function getStepStokeList() {
-    // only show the first percent when pass steps
-    var current = Math.round(stepCount * (percentList[0] / 100));
-    var stepPtg = 100 / stepCount;
-    var stackPtg = 0;
-    return new Array(stepCount).fill(null).map(function (_, index) {
-      var color = index <= current - 1 ? strokeColorList[0] : trailColor;
-      var stroke = color && (0,_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_1__["default"])(color) === 'object' ? "url(#".concat(gradientId, ")") : undefined;
-      var circleStyleForStack = (0,_util__WEBPACK_IMPORTED_MODULE_9__.getCircleStyle)(perimeter, perimeterWithoutGap, stackPtg, stepPtg, rotateDeg, gapDegree, gapPosition, color, 'butt', strokeWidth, stepGap);
-      stackPtg += (perimeterWithoutGap - circleStyleForStack.strokeDashoffset + stepGap) * 100 / perimeterWithoutGap;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("circle", {
-        key: index,
-        className: "".concat(prefixCls, "-circle-path"),
-        r: radius,
-        cx: halfSize,
-        cy: halfSize,
-        stroke: stroke,
-        strokeWidth: strokeWidth,
-        opacity: 1,
-        style: circleStyleForStack,
-        ref: function ref(elem) {
-          paths[index] = elem;
-        }
-      });
-    });
-  };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("svg", (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    className: classnames__WEBPACK_IMPORTED_MODULE_5___default()("".concat(prefixCls, "-circle"), className),
-    viewBox: "0 0 ".concat(_util__WEBPACK_IMPORTED_MODULE_9__.VIEW_BOX_SIZE, " ").concat(_util__WEBPACK_IMPORTED_MODULE_9__.VIEW_BOX_SIZE),
-    style: style,
-    id: id,
-    role: "presentation"
-  }, restProps), !stepCount && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("circle", {
-    className: "".concat(prefixCls, "-circle-trail"),
-    r: radius,
-    cx: halfSize,
-    cy: halfSize,
-    stroke: trailColor,
-    strokeLinecap: mergedStrokeLinecap,
-    strokeWidth: trailWidth || strokeWidth,
-    style: circleStyle
-  }), stepCount ? getStepStokeList() : getStokeList());
-};
-if (true) {
-  Circle.displayName = 'Circle';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Circle);
-
-/***/ }),
-
-/***/ "./node_modules/rc-progress/es/Circle/util.js":
-/*!****************************************************!*\
-  !*** ./node_modules/rc-progress/es/Circle/util.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   VIEW_BOX_SIZE: () => (/* binding */ VIEW_BOX_SIZE),
-/* harmony export */   getCircleStyle: () => (/* binding */ getCircleStyle)
-/* harmony export */ });
-var VIEW_BOX_SIZE = 100;
-var getCircleStyle = function getCircleStyle(perimeter, perimeterWithoutGap, offset, percent, rotateDeg, gapDegree, gapPosition, strokeColor, strokeLinecap, strokeWidth) {
-  var stepSpace = arguments.length > 10 && arguments[10] !== undefined ? arguments[10] : 0;
-  var offsetDeg = offset / 100 * 360 * ((360 - gapDegree) / 360);
-  var positionDeg = gapDegree === 0 ? 0 : {
-    bottom: 0,
-    top: 180,
-    left: 90,
-    right: -90
-  }[gapPosition];
-  var strokeDashoffset = (100 - percent) / 100 * perimeterWithoutGap;
-  // Fix percent accuracy when strokeLinecap is round
-  // https://github.com/ant-design/ant-design/issues/35009
-  if (strokeLinecap === 'round' && percent !== 100) {
-    strokeDashoffset += strokeWidth / 2;
-    // when percent is small enough (<= 1%), keep smallest value to avoid it's disappearance
-    if (strokeDashoffset >= perimeterWithoutGap) {
-      strokeDashoffset = perimeterWithoutGap - 0.01;
-    }
-  }
-  var halfSize = VIEW_BOX_SIZE / 2;
-  return {
-    stroke: typeof strokeColor === 'string' ? strokeColor : undefined,
-    strokeDasharray: "".concat(perimeterWithoutGap, "px ").concat(perimeter),
-    strokeDashoffset: strokeDashoffset + stepSpace,
-    transform: "rotate(".concat(rotateDeg + offsetDeg + positionDeg, "deg)"),
-    transformOrigin: "".concat(halfSize, "px ").concat(halfSize, "px"),
-    transition: 'stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s',
-    fillOpacity: 0
-  };
-};
-
-/***/ }),
-
-/***/ "./node_modules/rc-progress/es/Line.js":
-/*!*********************************************!*\
-  !*** ./node_modules/rc-progress/es/Line.js ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./common */ "./node_modules/rc-progress/es/common.js");
-
-
-
-var _excluded = ["className", "percent", "prefixCls", "strokeColor", "strokeLinecap", "strokeWidth", "style", "trailColor", "trailWidth", "transition"];
-
-
-
-var Line = function Line(props) {
-  var _defaultProps$props = (0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])((0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])({}, _common__WEBPACK_IMPORTED_MODULE_5__.defaultProps), props),
-    className = _defaultProps$props.className,
-    percent = _defaultProps$props.percent,
-    prefixCls = _defaultProps$props.prefixCls,
-    strokeColor = _defaultProps$props.strokeColor,
-    strokeLinecap = _defaultProps$props.strokeLinecap,
-    strokeWidth = _defaultProps$props.strokeWidth,
-    style = _defaultProps$props.style,
-    trailColor = _defaultProps$props.trailColor,
-    trailWidth = _defaultProps$props.trailWidth,
-    transition = _defaultProps$props.transition,
-    restProps = (0,_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(_defaultProps$props, _excluded);
-
-  // eslint-disable-next-line no-param-reassign
-  delete restProps.gapPosition;
-  var percentList = Array.isArray(percent) ? percent : [percent];
-  var strokeColorList = Array.isArray(strokeColor) ? strokeColor : [strokeColor];
-  var paths = (0,_common__WEBPACK_IMPORTED_MODULE_5__.useTransitionDuration)();
-  var center = strokeWidth / 2;
-  var right = 100 - strokeWidth / 2;
-  var pathString = "M ".concat(strokeLinecap === 'round' ? center : 0, ",").concat(center, "\n         L ").concat(strokeLinecap === 'round' ? right : 100, ",").concat(center);
-  var viewBoxString = "0 0 100 ".concat(strokeWidth);
-  var stackPtg = 0;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement("svg", (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    className: classnames__WEBPACK_IMPORTED_MODULE_4___default()("".concat(prefixCls, "-line"), className),
-    viewBox: viewBoxString,
-    preserveAspectRatio: "none",
-    style: style
-  }, restProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement("path", {
-    className: "".concat(prefixCls, "-line-trail"),
-    d: pathString,
-    strokeLinecap: strokeLinecap,
-    stroke: trailColor,
-    strokeWidth: trailWidth || strokeWidth,
-    fillOpacity: "0"
-  }), percentList.map(function (ptg, index) {
-    var dashPercent = 1;
-    switch (strokeLinecap) {
-      case 'round':
-        dashPercent = 1 - strokeWidth / 100;
-        break;
-      case 'square':
-        dashPercent = 1 - strokeWidth / 2 / 100;
-        break;
-      default:
-        dashPercent = 1;
-        break;
-    }
-    var pathStyle = {
-      strokeDasharray: "".concat(ptg * dashPercent, "px, 100px"),
-      strokeDashoffset: "-".concat(stackPtg, "px"),
-      transition: transition || 'stroke-dashoffset 0.3s ease 0s, stroke-dasharray .3s ease 0s, stroke 0.3s linear'
-    };
-    var color = strokeColorList[index] || strokeColorList[strokeColorList.length - 1];
-    stackPtg += ptg;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement("path", {
-      key: index,
-      className: "".concat(prefixCls, "-line-path"),
-      d: pathString,
-      strokeLinecap: strokeLinecap,
-      stroke: color,
-      strokeWidth: strokeWidth,
-      fillOpacity: "0",
-      ref: function ref(elem) {
-        // https://reactjs.org/docs/refs-and-the-dom.html#callback-refs
-        // React will call the ref callback with the DOM element when the component mounts,
-        // and call it with `null` when it unmounts.
-        // Refs are guaranteed to be up-to-date before componentDidMount or componentDidUpdate fires.
-
-        paths[index] = elem;
-      },
-      style: pathStyle
-    });
-  }));
-};
-if (true) {
-  Line.displayName = 'Line';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Line);
-
-/***/ }),
-
-/***/ "./node_modules/rc-progress/es/common.js":
-/*!***********************************************!*\
-  !*** ./node_modules/rc-progress/es/common.js ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   defaultProps: () => (/* binding */ defaultProps),
-/* harmony export */   useTransitionDuration: () => (/* binding */ useTransitionDuration)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var defaultProps = {
-  percent: 0,
-  prefixCls: 'rc-progress',
-  strokeColor: '#2db7f5',
-  strokeLinecap: 'round',
-  strokeWidth: 1,
-  trailColor: '#D9D9D9',
-  trailWidth: 1,
-  gapPosition: 'bottom'
-};
-var useTransitionDuration = function useTransitionDuration() {
-  var pathsRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)([]);
-  var prevTimeStamp = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    var now = Date.now();
-    var updated = false;
-    pathsRef.current.forEach(function (path) {
-      if (!path) {
-        return;
-      }
-      updated = true;
-      var pathStyle = path.style;
-      pathStyle.transitionDuration = '.3s, .3s, .3s, .06s';
-      if (prevTimeStamp.current && now - prevTimeStamp.current < 100) {
-        pathStyle.transitionDuration = '0s, 0s';
-      }
-    });
-    if (updated) {
-      prevTimeStamp.current = Date.now();
-    }
-  });
-  return pathsRef.current;
-};
-
-/***/ }),
-
-/***/ "./node_modules/rc-progress/es/hooks/useId.js":
-/*!****************************************************!*\
-  !*** ./node_modules/rc-progress/es/hooks/useId.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   isBrowserClient: () => (/* binding */ isBrowserClient)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var rc_util_es_Dom_canUseDom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rc-util/es/Dom/canUseDom */ "./node_modules/rc-util/es/Dom/canUseDom.js");
-
-
-
-var uuid = 0;
-
-/** Is client side and not jsdom */
-var isBrowserClient =  true && (0,rc_util_es_Dom_canUseDom__WEBPACK_IMPORTED_MODULE_2__["default"])();
-
-/** Get unique id for accessibility usage */
-function getUUID() {
-  var retId;
-
-  // Test never reach
-  /* istanbul ignore if */
-  if (isBrowserClient) {
-    retId = uuid;
-    uuid += 1;
-  } else {
-    retId = 'TEST_OR_SSR';
-  }
-  return retId;
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (id) {
-  // Inner id for accessibility usage. Only work in client side
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1__.useState(),
-    _React$useState2 = (0,_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$useState, 2),
-    innerId = _React$useState2[0],
-    setInnerId = _React$useState2[1];
-  react__WEBPACK_IMPORTED_MODULE_1__.useEffect(function () {
-    setInnerId("rc_progress_".concat(getUUID()));
-  }, []);
-  return id || innerId;
-});
-
-/***/ }),
-
-/***/ "./node_modules/rc-progress/es/index.js":
-/*!**********************************************!*\
-  !*** ./node_modules/rc-progress/es/index.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Circle: () => (/* reexport safe */ _Circle__WEBPACK_IMPORTED_MODULE_1__["default"]),
-/* harmony export */   Line: () => (/* reexport safe */ _Line__WEBPACK_IMPORTED_MODULE_0__["default"]),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _Line__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Line */ "./node_modules/rc-progress/es/Line.js");
-/* harmony import */ var _Circle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Circle */ "./node_modules/rc-progress/es/Circle/index.js");
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  Line: _Line__WEBPACK_IMPORTED_MODULE_0__["default"],
-  Circle: _Circle__WEBPACK_IMPORTED_MODULE_1__["default"]
-});
-
-/***/ }),
-
 /***/ "./node_modules/rc-resize-observer/es/Collection.js":
 /*!**********************************************************!*\
   !*** ./node_modules/rc-resize-observer/es/Collection.js ***!
@@ -123026,923 +119526,6 @@ function convertNodePropsToEventData(props) {
     });
   }
   return eventData;
-}
-
-/***/ }),
-
-/***/ "./node_modules/rc-upload/es/AjaxUploader.js":
-/*!***************************************************!*\
-  !*** ./node_modules/rc-upload/es/AjaxUploader.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/typeof */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
-/* harmony import */ var _babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/regeneratorRuntime */ "./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js");
-/* harmony import */ var _babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_esm_createSuper__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createSuper */ "./node_modules/@babel/runtime/helpers/esm/createSuper.js");
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var rc_util_es_pickAttrs__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! rc-util/es/pickAttrs */ "./node_modules/rc-util/es/pickAttrs.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _attr_accept__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./attr-accept */ "./node_modules/rc-upload/es/attr-accept.js");
-/* harmony import */ var _request__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./request */ "./node_modules/rc-upload/es/request.js");
-/* harmony import */ var _traverseFileTree__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./traverseFileTree */ "./node_modules/rc-upload/es/traverseFileTree.js");
-/* harmony import */ var _uid__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./uid */ "./node_modules/rc-upload/es/uid.js");
-
-
-
-
-
-
-
-
-
-
-
-
-
-var _excluded = ["component", "prefixCls", "className", "classNames", "disabled", "id", "name", "style", "styles", "multiple", "accept", "capture", "children", "directory", "openFileDialogOnClick", "onMouseEnter", "onMouseLeave", "hasControlInside"];
-/* eslint react/no-is-mounted:0,react/sort-comp:0,react/prop-types:0 */
-
-
-
-
-
-
-
-var AjaxUploader = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_10__["default"])(AjaxUploader, _Component);
-  var _super = (0,_babel_runtime_helpers_esm_createSuper__WEBPACK_IMPORTED_MODULE_11__["default"])(AjaxUploader);
-  function AjaxUploader() {
-    var _this;
-    (0,_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_7__["default"])(this, AjaxUploader);
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    _this = _super.call.apply(_super, [this].concat(args));
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__["default"])(_this), "state", {
-      uid: (0,_uid__WEBPACK_IMPORTED_MODULE_19__["default"])()
-    });
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__["default"])(_this), "reqs", {});
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__["default"])(_this), "fileInput", void 0);
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__["default"])(_this), "_isMounted", void 0);
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__["default"])(_this), "onChange", function (e) {
-      var _this$props = _this.props,
-        accept = _this$props.accept,
-        directory = _this$props.directory;
-      var files = e.target.files;
-      var acceptedFiles = (0,_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_6__["default"])(files).filter(function (file) {
-        return !directory || (0,_attr_accept__WEBPACK_IMPORTED_MODULE_16__["default"])(file, accept);
-      });
-      _this.uploadFiles(acceptedFiles);
-      _this.reset();
-    });
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__["default"])(_this), "onClick", function (event) {
-      var el = _this.fileInput;
-      if (!el) {
-        return;
-      }
-      var target = event.target;
-      var onClick = _this.props.onClick;
-      if (target && target.tagName === 'BUTTON') {
-        var parent = el.parentNode;
-        parent.focus();
-        target.blur();
-      }
-      el.click();
-      if (onClick) {
-        onClick(event);
-      }
-    });
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__["default"])(_this), "onKeyDown", function (e) {
-      if (e.key === 'Enter') {
-        _this.onClick(e);
-      }
-    });
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__["default"])(_this), "onFileDrop", /*#__PURE__*/function () {
-      var _ref = (0,_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/(0,_babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_4__["default"])().mark(function _callee(e) {
-        var multiple, files, _files;
-        return (0,_babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_4__["default"])().wrap(function _callee$(_context) {
-          while (1) switch (_context.prev = _context.next) {
-            case 0:
-              multiple = _this.props.multiple;
-              e.preventDefault();
-              if (!(e.type === 'dragover')) {
-                _context.next = 4;
-                break;
-              }
-              return _context.abrupt("return");
-            case 4:
-              if (!_this.props.directory) {
-                _context.next = 11;
-                break;
-              }
-              _context.next = 7;
-              return (0,_traverseFileTree__WEBPACK_IMPORTED_MODULE_18__["default"])(Array.prototype.slice.call(e.dataTransfer.items), function (_file) {
-                return (0,_attr_accept__WEBPACK_IMPORTED_MODULE_16__["default"])(_file, _this.props.accept);
-              });
-            case 7:
-              files = _context.sent;
-              _this.uploadFiles(files);
-              _context.next = 14;
-              break;
-            case 11:
-              _files = (0,_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_6__["default"])(e.dataTransfer.files).filter(function (file) {
-                return (0,_attr_accept__WEBPACK_IMPORTED_MODULE_16__["default"])(file, _this.props.accept);
-              });
-              if (multiple === false) {
-                _files = _files.slice(0, 1);
-              }
-              _this.uploadFiles(_files);
-            case 14:
-            case "end":
-              return _context.stop();
-          }
-        }, _callee);
-      }));
-      return function (_x) {
-        return _ref.apply(this, arguments);
-      };
-    }());
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__["default"])(_this), "uploadFiles", function (files) {
-      var originFiles = (0,_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_6__["default"])(files);
-      var postFiles = originFiles.map(function (file) {
-        // eslint-disable-next-line no-param-reassign
-        file.uid = (0,_uid__WEBPACK_IMPORTED_MODULE_19__["default"])();
-        return _this.processFile(file, originFiles);
-      });
-
-      // Batch upload files
-      Promise.all(postFiles).then(function (fileList) {
-        var onBatchStart = _this.props.onBatchStart;
-        onBatchStart === null || onBatchStart === void 0 || onBatchStart(fileList.map(function (_ref2) {
-          var origin = _ref2.origin,
-            parsedFile = _ref2.parsedFile;
-          return {
-            file: origin,
-            parsedFile: parsedFile
-          };
-        }));
-        fileList.filter(function (file) {
-          return file.parsedFile !== null;
-        }).forEach(function (file) {
-          _this.post(file);
-        });
-      });
-    });
-    /**
-     * Process file before upload. When all the file is ready, we start upload.
-     */
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__["default"])(_this), "processFile", /*#__PURE__*/function () {
-      var _ref3 = (0,_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/(0,_babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_4__["default"])().mark(function _callee2(file, fileList) {
-        var beforeUpload, transformedFile, action, mergedAction, data, mergedData, parsedData, parsedFile, mergedParsedFile;
-        return (0,_babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_4__["default"])().wrap(function _callee2$(_context2) {
-          while (1) switch (_context2.prev = _context2.next) {
-            case 0:
-              beforeUpload = _this.props.beforeUpload;
-              transformedFile = file;
-              if (!beforeUpload) {
-                _context2.next = 14;
-                break;
-              }
-              _context2.prev = 3;
-              _context2.next = 6;
-              return beforeUpload(file, fileList);
-            case 6:
-              transformedFile = _context2.sent;
-              _context2.next = 12;
-              break;
-            case 9:
-              _context2.prev = 9;
-              _context2.t0 = _context2["catch"](3);
-              // Rejection will also trade as false
-              transformedFile = false;
-            case 12:
-              if (!(transformedFile === false)) {
-                _context2.next = 14;
-                break;
-              }
-              return _context2.abrupt("return", {
-                origin: file,
-                parsedFile: null,
-                action: null,
-                data: null
-              });
-            case 14:
-              // Get latest action
-              action = _this.props.action;
-              if (!(typeof action === 'function')) {
-                _context2.next = 21;
-                break;
-              }
-              _context2.next = 18;
-              return action(file);
-            case 18:
-              mergedAction = _context2.sent;
-              _context2.next = 22;
-              break;
-            case 21:
-              mergedAction = action;
-            case 22:
-              // Get latest data
-              data = _this.props.data;
-              if (!(typeof data === 'function')) {
-                _context2.next = 29;
-                break;
-              }
-              _context2.next = 26;
-              return data(file);
-            case 26:
-              mergedData = _context2.sent;
-              _context2.next = 30;
-              break;
-            case 29:
-              mergedData = data;
-            case 30:
-              parsedData =
-              // string type is from legacy `transformFile`.
-              // Not sure if this will work since no related test case works with it
-              ((0,_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_3__["default"])(transformedFile) === 'object' || typeof transformedFile === 'string') && transformedFile ? transformedFile : file;
-              if (parsedData instanceof File) {
-                parsedFile = parsedData;
-              } else {
-                parsedFile = new File([parsedData], file.name, {
-                  type: file.type
-                });
-              }
-              mergedParsedFile = parsedFile;
-              mergedParsedFile.uid = file.uid;
-              return _context2.abrupt("return", {
-                origin: file,
-                data: mergedData,
-                parsedFile: mergedParsedFile,
-                action: mergedAction
-              });
-            case 35:
-            case "end":
-              return _context2.stop();
-          }
-        }, _callee2, null, [[3, 9]]);
-      }));
-      return function (_x2, _x3) {
-        return _ref3.apply(this, arguments);
-      };
-    }());
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_9__["default"])(_this), "saveFileInput", function (node) {
-      _this.fileInput = node;
-    });
-    return _this;
-  }
-  (0,_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_8__["default"])(AjaxUploader, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this._isMounted = true;
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this._isMounted = false;
-      this.abort();
-    }
-  }, {
-    key: "post",
-    value: function post(_ref4) {
-      var _this2 = this;
-      var data = _ref4.data,
-        origin = _ref4.origin,
-        action = _ref4.action,
-        parsedFile = _ref4.parsedFile;
-      if (!this._isMounted) {
-        return;
-      }
-      var _this$props2 = this.props,
-        onStart = _this$props2.onStart,
-        customRequest = _this$props2.customRequest,
-        name = _this$props2.name,
-        headers = _this$props2.headers,
-        withCredentials = _this$props2.withCredentials,
-        method = _this$props2.method;
-      var uid = origin.uid;
-      var request = customRequest || _request__WEBPACK_IMPORTED_MODULE_17__["default"];
-      var requestOption = {
-        action: action,
-        filename: name,
-        data: data,
-        file: parsedFile,
-        headers: headers,
-        withCredentials: withCredentials,
-        method: method || 'post',
-        onProgress: function onProgress(e) {
-          var onProgress = _this2.props.onProgress;
-          onProgress === null || onProgress === void 0 || onProgress(e, parsedFile);
-        },
-        onSuccess: function onSuccess(ret, xhr) {
-          var onSuccess = _this2.props.onSuccess;
-          onSuccess === null || onSuccess === void 0 || onSuccess(ret, parsedFile, xhr);
-          delete _this2.reqs[uid];
-        },
-        onError: function onError(err, ret) {
-          var onError = _this2.props.onError;
-          onError === null || onError === void 0 || onError(err, ret, parsedFile);
-          delete _this2.reqs[uid];
-        }
-      };
-      onStart(origin);
-      this.reqs[uid] = request(requestOption);
-    }
-  }, {
-    key: "reset",
-    value: function reset() {
-      this.setState({
-        uid: (0,_uid__WEBPACK_IMPORTED_MODULE_19__["default"])()
-      });
-    }
-  }, {
-    key: "abort",
-    value: function abort(file) {
-      var reqs = this.reqs;
-      if (file) {
-        var uid = file.uid ? file.uid : file;
-        if (reqs[uid] && reqs[uid].abort) {
-          reqs[uid].abort();
-        }
-        delete reqs[uid];
-      } else {
-        Object.keys(reqs).forEach(function (uid) {
-          if (reqs[uid] && reqs[uid].abort) {
-            reqs[uid].abort();
-          }
-          delete reqs[uid];
-        });
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props3 = this.props,
-        Tag = _this$props3.component,
-        prefixCls = _this$props3.prefixCls,
-        className = _this$props3.className,
-        _this$props3$classNam = _this$props3.classNames,
-        classNames = _this$props3$classNam === void 0 ? {} : _this$props3$classNam,
-        disabled = _this$props3.disabled,
-        id = _this$props3.id,
-        name = _this$props3.name,
-        style = _this$props3.style,
-        _this$props3$styles = _this$props3.styles,
-        styles = _this$props3$styles === void 0 ? {} : _this$props3$styles,
-        multiple = _this$props3.multiple,
-        accept = _this$props3.accept,
-        capture = _this$props3.capture,
-        children = _this$props3.children,
-        directory = _this$props3.directory,
-        openFileDialogOnClick = _this$props3.openFileDialogOnClick,
-        onMouseEnter = _this$props3.onMouseEnter,
-        onMouseLeave = _this$props3.onMouseLeave,
-        hasControlInside = _this$props3.hasControlInside,
-        otherProps = (0,_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(_this$props3, _excluded);
-      var cls = classnames__WEBPACK_IMPORTED_MODULE_13___default()((0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])((0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])({}, prefixCls, true), "".concat(prefixCls, "-disabled"), disabled), className, className));
-      // because input don't have directory/webkitdirectory type declaration
-      var dirProps = directory ? {
-        directory: 'directory',
-        webkitdirectory: 'webkitdirectory'
-      } : {};
-      var events = disabled ? {} : {
-        onClick: openFileDialogOnClick ? this.onClick : function () {},
-        onKeyDown: openFileDialogOnClick ? this.onKeyDown : function () {},
-        onMouseEnter: onMouseEnter,
-        onMouseLeave: onMouseLeave,
-        onDrop: this.onFileDrop,
-        onDragOver: this.onFileDrop,
-        tabIndex: hasControlInside ? undefined : '0'
-      };
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15__.createElement(Tag, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, events, {
-        className: cls,
-        role: hasControlInside ? undefined : 'button',
-        style: style
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15__.createElement("input", (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, (0,rc_util_es_pickAttrs__WEBPACK_IMPORTED_MODULE_14__["default"])(otherProps, {
-        aria: true,
-        data: true
-      }), {
-        id: id
-        /**
-         * https://github.com/ant-design/ant-design/issues/50643,
-         * https://github.com/react-component/upload/pull/575#issuecomment-2320646552
-         */,
-        name: name,
-        disabled: disabled,
-        type: "file",
-        ref: this.saveFileInput,
-        onClick: function onClick(e) {
-          return e.stopPropagation();
-        } // https://github.com/ant-design/ant-design/issues/19948
-        ,
-        key: this.state.uid,
-        style: (0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])({
-          display: 'none'
-        }, styles.input),
-        className: classNames.input,
-        accept: accept
-      }, dirProps, {
-        multiple: multiple,
-        onChange: this.onChange
-      }, capture != null ? {
-        capture: capture
-      } : {})), children);
-    }
-  }]);
-  return AjaxUploader;
-}(react__WEBPACK_IMPORTED_MODULE_15__.Component);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AjaxUploader);
-
-/***/ }),
-
-/***/ "./node_modules/rc-upload/es/Upload.js":
-/*!*********************************************!*\
-  !*** ./node_modules/rc-upload/es/Upload.js ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_esm_createSuper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createSuper */ "./node_modules/@babel/runtime/helpers/esm/createSuper.js");
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _AjaxUploader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./AjaxUploader */ "./node_modules/rc-upload/es/AjaxUploader.js");
-
-
-
-
-
-
-
-/* eslint react/prop-types:0 */
-
-
-function empty() {}
-var Upload = /*#__PURE__*/function (_Component) {
-  (0,_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Upload, _Component);
-  var _super = (0,_babel_runtime_helpers_esm_createSuper__WEBPACK_IMPORTED_MODULE_5__["default"])(Upload);
-  function Upload() {
-    var _this;
-    (0,_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Upload);
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    _this = _super.call.apply(_super, [this].concat(args));
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "uploader", void 0);
-    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "saveUploader", function (node) {
-      _this.uploader = node;
-    });
-    return _this;
-  }
-  (0,_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Upload, [{
-    key: "abort",
-    value: function abort(file) {
-      this.uploader.abort(file);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement(_AjaxUploader__WEBPACK_IMPORTED_MODULE_8__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
-        ref: this.saveUploader
-      }));
-    }
-  }]);
-  return Upload;
-}(react__WEBPACK_IMPORTED_MODULE_7__.Component);
-(0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Upload, "defaultProps", {
-  component: 'span',
-  prefixCls: 'rc-upload',
-  data: {},
-  headers: {},
-  name: 'file',
-  multipart: false,
-  onStart: empty,
-  onError: empty,
-  onSuccess: empty,
-  multiple: false,
-  beforeUpload: null,
-  customRequest: null,
-  withCredentials: false,
-  openFileDialogOnClick: true,
-  hasControlInside: false
-});
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Upload);
-
-/***/ }),
-
-/***/ "./node_modules/rc-upload/es/attr-accept.js":
-/*!**************************************************!*\
-  !*** ./node_modules/rc-upload/es/attr-accept.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var rc_util_es_warning__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rc-util/es/warning */ "./node_modules/rc-util/es/warning.js");
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (file, acceptedFiles) {
-  if (file && acceptedFiles) {
-    var acceptedFilesArray = Array.isArray(acceptedFiles) ? acceptedFiles : acceptedFiles.split(',');
-    var fileName = file.name || '';
-    var mimeType = file.type || '';
-    var baseMimeType = mimeType.replace(/\/.*$/, '');
-    return acceptedFilesArray.some(function (type) {
-      var validType = type.trim();
-      // This is something like */*,*  allow all files
-      if (/^\*(\/\*)?$/.test(type)) {
-        return true;
-      }
-
-      // like .jpg, .png
-      if (validType.charAt(0) === '.') {
-        var lowerFileName = fileName.toLowerCase();
-        var lowerType = validType.toLowerCase();
-        var affixList = [lowerType];
-        if (lowerType === '.jpg' || lowerType === '.jpeg') {
-          affixList = ['.jpg', '.jpeg'];
-        }
-        return affixList.some(function (affix) {
-          return lowerFileName.endsWith(affix);
-        });
-      }
-
-      // This is something like a image/* mime type
-      if (/\/\*$/.test(validType)) {
-        return baseMimeType === validType.replace(/\/.*$/, '');
-      }
-
-      // Full match
-      if (mimeType === validType) {
-        return true;
-      }
-
-      // Invalidate type should skip
-      if (/^\w+$/.test(validType)) {
-        (0,rc_util_es_warning__WEBPACK_IMPORTED_MODULE_0__["default"])(false, "Upload takes an invalidate 'accept' type '".concat(validType, "'.Skip for check."));
-        return true;
-      }
-      return false;
-    });
-  }
-  return true;
-});
-
-/***/ }),
-
-/***/ "./node_modules/rc-upload/es/index.js":
-/*!********************************************!*\
-  !*** ./node_modules/rc-upload/es/index.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _Upload__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Upload */ "./node_modules/rc-upload/es/Upload.js");
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_Upload__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-/***/ }),
-
-/***/ "./node_modules/rc-upload/es/request.js":
-/*!**********************************************!*\
-  !*** ./node_modules/rc-upload/es/request.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ upload)
-/* harmony export */ });
-function getError(option, xhr) {
-  var msg = "cannot ".concat(option.method, " ").concat(option.action, " ").concat(xhr.status, "'");
-  var err = new Error(msg);
-  err.status = xhr.status;
-  err.method = option.method;
-  err.url = option.action;
-  return err;
-}
-function getBody(xhr) {
-  var text = xhr.responseText || xhr.response;
-  if (!text) {
-    return text;
-  }
-  try {
-    return JSON.parse(text);
-  } catch (e) {
-    return text;
-  }
-}
-function upload(option) {
-  // eslint-disable-next-line no-undef
-  var xhr = new XMLHttpRequest();
-  if (option.onProgress && xhr.upload) {
-    xhr.upload.onprogress = function progress(e) {
-      if (e.total > 0) {
-        e.percent = e.loaded / e.total * 100;
-      }
-      option.onProgress(e);
-    };
-  }
-
-  // eslint-disable-next-line no-undef
-  var formData = new FormData();
-  if (option.data) {
-    Object.keys(option.data).forEach(function (key) {
-      var value = option.data[key];
-      // support key-value array data
-      if (Array.isArray(value)) {
-        value.forEach(function (item) {
-          // { list: [ 11, 22 ] }
-          // formData.append('list[]', 11);
-          formData.append("".concat(key, "[]"), item);
-        });
-        return;
-      }
-      formData.append(key, value);
-    });
-  }
-
-  // eslint-disable-next-line no-undef
-  if (option.file instanceof Blob) {
-    formData.append(option.filename, option.file, option.file.name);
-  } else {
-    formData.append(option.filename, option.file);
-  }
-  xhr.onerror = function error(e) {
-    option.onError(e);
-  };
-  xhr.onload = function onload() {
-    // allow success when 2xx status
-    // see https://github.com/react-component/upload/issues/34
-    if (xhr.status < 200 || xhr.status >= 300) {
-      return option.onError(getError(option, xhr), getBody(xhr));
-    }
-    return option.onSuccess(getBody(xhr), xhr);
-  };
-  xhr.open(option.method, option.action, true);
-
-  // Has to be after `.open()`. See https://github.com/enyo/dropzone/issues/179
-  if (option.withCredentials && 'withCredentials' in xhr) {
-    xhr.withCredentials = true;
-  }
-  var headers = option.headers || {};
-
-  // when set headers['X-Requested-With'] = null , can close default XHR header
-  // see https://github.com/react-component/upload/issues/33
-  if (headers['X-Requested-With'] !== null) {
-    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-  }
-  Object.keys(headers).forEach(function (h) {
-    if (headers[h] !== null) {
-      xhr.setRequestHeader(h, headers[h]);
-    }
-  });
-  xhr.send(formData);
-  return {
-    abort: function abort() {
-      xhr.abort();
-    }
-  };
-}
-
-/***/ }),
-
-/***/ "./node_modules/rc-upload/es/traverseFileTree.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/rc-upload/es/traverseFileTree.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/regeneratorRuntime */ "./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js");
-/* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-
-
-
-// https://github.com/ant-design/ant-design/issues/50080
-var traverseFileTree = /*#__PURE__*/function () {
-  var _ref = (0,_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/(0,_babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_0__["default"])().mark(function _callee4(files, isAccepted) {
-    var flattenFileList, progressFileList, readDirectory, _readDirectory, readFile, _readFile, _traverseFileTree, wipIndex;
-    return (0,_babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_0__["default"])().wrap(function _callee4$(_context4) {
-      while (1) switch (_context4.prev = _context4.next) {
-        case 0:
-          _readFile = function _readFile3() {
-            _readFile = (0,_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/(0,_babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_0__["default"])().mark(function _callee3(item) {
-              return (0,_babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_0__["default"])().wrap(function _callee3$(_context3) {
-                while (1) switch (_context3.prev = _context3.next) {
-                  case 0:
-                    return _context3.abrupt("return", new Promise(function (reslove) {
-                      item.file(function (file) {
-                        if (isAccepted(file)) {
-                          // https://github.com/ant-design/ant-design/issues/16426
-                          if (item.fullPath && !file.webkitRelativePath) {
-                            Object.defineProperties(file, {
-                              webkitRelativePath: {
-                                writable: true
-                              }
-                            });
-                            // eslint-disable-next-line no-param-reassign
-                            file.webkitRelativePath = item.fullPath.replace(/^\//, '');
-                            Object.defineProperties(file, {
-                              webkitRelativePath: {
-                                writable: false
-                              }
-                            });
-                          }
-                          reslove(file);
-                        } else {
-                          reslove(null);
-                        }
-                      });
-                    }));
-                  case 1:
-                  case "end":
-                    return _context3.stop();
-                }
-              }, _callee3);
-            }));
-            return _readFile.apply(this, arguments);
-          };
-          readFile = function _readFile2(_x4) {
-            return _readFile.apply(this, arguments);
-          };
-          _readDirectory = function _readDirectory3() {
-            _readDirectory = (0,_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/(0,_babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_0__["default"])().mark(function _callee2(directory) {
-              var dirReader, entries, results, n, i;
-              return (0,_babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_0__["default"])().wrap(function _callee2$(_context2) {
-                while (1) switch (_context2.prev = _context2.next) {
-                  case 0:
-                    dirReader = directory.createReader();
-                    entries = [];
-                  case 2:
-                    if (false) {}
-                    _context2.next = 5;
-                    return new Promise(function (resolve) {
-                      dirReader.readEntries(resolve, function () {
-                        return resolve([]);
-                      });
-                    });
-                  case 5:
-                    results = _context2.sent;
-                    n = results.length;
-                    if (n) {
-                      _context2.next = 9;
-                      break;
-                    }
-                    return _context2.abrupt("break", 12);
-                  case 9:
-                    for (i = 0; i < n; i++) {
-                      entries.push(results[i]);
-                    }
-                    _context2.next = 2;
-                    break;
-                  case 12:
-                    return _context2.abrupt("return", entries);
-                  case 13:
-                  case "end":
-                    return _context2.stop();
-                }
-              }, _callee2);
-            }));
-            return _readDirectory.apply(this, arguments);
-          };
-          readDirectory = function _readDirectory2(_x3) {
-            return _readDirectory.apply(this, arguments);
-          };
-          flattenFileList = [];
-          progressFileList = [];
-          files.forEach(function (file) {
-            return progressFileList.push(file.webkitGetAsEntry());
-          });
-
-          // eslint-disable-next-line @typescript-eslint/naming-convention
-          _traverseFileTree = /*#__PURE__*/function () {
-            var _ref2 = (0,_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/(0,_babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_0__["default"])().mark(function _callee(item, path) {
-              var _file, entries;
-              return (0,_babel_runtime_helpers_esm_regeneratorRuntime__WEBPACK_IMPORTED_MODULE_0__["default"])().wrap(function _callee$(_context) {
-                while (1) switch (_context.prev = _context.next) {
-                  case 0:
-                    if (item) {
-                      _context.next = 2;
-                      break;
-                    }
-                    return _context.abrupt("return");
-                  case 2:
-                    // eslint-disable-next-line no-param-reassign
-                    item.path = path || '';
-                    if (!item.isFile) {
-                      _context.next = 10;
-                      break;
-                    }
-                    _context.next = 6;
-                    return readFile(item);
-                  case 6:
-                    _file = _context.sent;
-                    if (_file) {
-                      flattenFileList.push(_file);
-                    }
-                    _context.next = 15;
-                    break;
-                  case 10:
-                    if (!item.isDirectory) {
-                      _context.next = 15;
-                      break;
-                    }
-                    _context.next = 13;
-                    return readDirectory(item);
-                  case 13:
-                    entries = _context.sent;
-                    progressFileList.push.apply(progressFileList, (0,_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(entries));
-                  case 15:
-                  case "end":
-                    return _context.stop();
-                }
-              }, _callee);
-            }));
-            return function _traverseFileTree(_x5, _x6) {
-              return _ref2.apply(this, arguments);
-            };
-          }();
-          wipIndex = 0;
-        case 9:
-          if (!(wipIndex < progressFileList.length)) {
-            _context4.next = 15;
-            break;
-          }
-          _context4.next = 12;
-          return _traverseFileTree(progressFileList[wipIndex]);
-        case 12:
-          wipIndex++;
-          _context4.next = 9;
-          break;
-        case 15:
-          return _context4.abrupt("return", flattenFileList);
-        case 16:
-        case "end":
-          return _context4.stop();
-      }
-    }, _callee4);
-  }));
-  return function traverseFileTree(_x, _x2) {
-    return _ref.apply(this, arguments);
-  };
-}();
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (traverseFileTree);
-
-/***/ }),
-
-/***/ "./node_modules/rc-upload/es/uid.js":
-/*!******************************************!*\
-  !*** ./node_modules/rc-upload/es/uid.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ uid)
-/* harmony export */ });
-var now = +new Date();
-var index = 0;
-function uid() {
-  // eslint-disable-next-line no-plusplus
-  return "rc-upload-".concat(now, "-").concat(++index);
 }
 
 /***/ }),
@@ -165233,7 +160816,7 @@ var AdminRegister = function AdminRegister() {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       style: {
         display: "flex",
-        marginTop: "110px"
+        marginTop: "64px"
       },
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "register-content",
@@ -170907,23 +166490,23 @@ var AdminSideMenu = function AdminSideMenu() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ DashboardWelcome)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/typography/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/card/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/typography/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/card/index.js");
 /* harmony import */ var _admin_sidemenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../admin-sidemenu */ "./resources/js/components/admin-sidemenu.js");
 /* harmony import */ var _topnav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../topnav */ "./resources/js/components/topnav.js");
-/* harmony import */ var _sass_components_admindashboard_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../sass/components/_admindashboard.scss */ "./resources/sass/components/_admindashboard.scss");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _sass_components_topnav_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../sass/components/_topnav.scss */ "./resources/sass/components/_topnav.scss");
+/* harmony import */ var _sass_components_admindashboard_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../sass/components/_admindashboard.scss */ "./resources/sass/components/_admindashboard.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-// C:\project-ecommerce-new\resources\js\components\admindashboard\admindashboard.js
 
 
 
@@ -170931,51 +166514,41 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
-var Title = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Title;
-var Header = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Header,
-  Content = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Content;
-var DashboardWelcome = function DashboardWelcome() {
-  // Sidebar collapse state
+var Title = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Title;
+var Content = antd__WEBPACK_IMPORTED_MODULE_7__["default"].Content;
+
+// Calculate this the same way you did elsewhere:
+// 44px input height + 16px padding-top + 16px padding-bottom
+var NAV_HEIGHT = 76;
+function DashboardWelcome() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
     _useState2 = _slicedToArray(_useState, 2),
     collapsed = _useState2[0],
     setCollapsed = _useState2[1];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    style: {
-      minHeight: "100vh"
-    },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Header, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    className: "dashboard-page",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
       style: {
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: 64,
-        padding: 0,
-        background: "#008cff",
-        zIndex: 1000
+        minHeight: "100vh",
+        marginTop: NAV_HEIGHT
       },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_2__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_1__["default"], {
         collapsed: collapsed,
         onCollapse: setCollapsed
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
         style: {
-          marginTop: 64,
-          // Header height
-          marginLeft: collapsed ? 80 : 200 // Sidebar width (collapsed or not)
+          marginLeft: collapsed ? 80 : 200
         },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Content, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Content, {
           style: {
             margin: "24px 16px",
             padding: 24,
             background: "#fff",
             minHeight: 280
           },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
             className: "dashboard-card",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Title, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Title, {
               level: 2,
               children: "Welcome to Dashboard"
             })
@@ -170984,8 +166557,7 @@ var DashboardWelcome = function DashboardWelcome() {
       })]
     })]
   });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DashboardWelcome);
+}
 
 /***/ }),
 
@@ -170998,28 +166570,25 @@ var DashboardWelcome = function DashboardWelcome() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ ProductPage)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/select/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/form/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/message/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/space/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/table/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/modal/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/upload/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/input/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/input-number/index.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/EditOutlined.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/PlusOutlined.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/UploadOutlined.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/select/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/form/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/message/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/space/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/table/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/modal/index.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/EditOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/PlusOutlined.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
 /* harmony import */ var _topnav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../topnav */ "./resources/js/components/topnav.js");
 /* harmony import */ var _admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../admin-sidemenu */ "./resources/js/components/admin-sidemenu.js");
-/* harmony import */ var _sass_components_adminproducts_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../sass/components/_adminproducts.scss */ "./resources/sass/components/_adminproducts.scss");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _sass_components_topnav_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../sass/components/_topnav.scss */ "./resources/sass/components/_topnav.scss");
+/* harmony import */ var _sass_components_adminproducts_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../sass/components/_adminproducts.scss */ "./resources/sass/components/_adminproducts.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return r; }; var t, r = {}, e = Object.prototype, n = e.hasOwnProperty, o = "function" == typeof Symbol ? Symbol : {}, i = o.iterator || "@@iterator", a = o.asyncIterator || "@@asyncIterator", u = o.toStringTag || "@@toStringTag"; function c(t, r, e, n) { return Object.defineProperty(t, r, { value: e, enumerable: !n, configurable: !n, writable: !n }); } try { c({}, ""); } catch (t) { c = function c(t, r, e) { return t[r] = e; }; } function h(r, e, n, o) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype); return c(a, "_invoke", function (r, e, n) { var o = 1; return function (i, a) { if (3 === o) throw Error("Generator is already running"); if (4 === o) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var u = n.delegate; if (u) { var c = d(u, n); if (c) { if (c === f) continue; return c; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (1 === o) throw o = 4, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = 3; var h = s(r, e, n); if ("normal" === h.type) { if (o = n.done ? 4 : 2, h.arg === f) continue; return { value: h.arg, done: n.done }; } "throw" === h.type && (o = 4, n.method = "throw", n.arg = h.arg); } }; }(r, n, new Context(o || [])), !0), a; } function s(t, r, e) { try { return { type: "normal", arg: t.call(r, e) }; } catch (t) { return { type: "throw", arg: t }; } } r.wrap = h; var f = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var l = {}; c(l, i, function () { return this; }); var p = Object.getPrototypeOf, y = p && p(p(x([]))); y && y !== e && n.call(y, i) && (l = y); var v = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(l); function g(t) { ["next", "throw", "return"].forEach(function (r) { c(t, r, function (t) { return this._invoke(r, t); }); }); } function AsyncIterator(t, r) { function e(o, i, a, u) { var c = s(t[o], t, i); if ("throw" !== c.type) { var h = c.arg, f = h.value; return f && "object" == _typeof(f) && n.call(f, "__await") ? r.resolve(f.__await).then(function (t) { e("next", t, a, u); }, function (t) { e("throw", t, a, u); }) : r.resolve(f).then(function (t) { h.value = t, a(h); }, function (t) { return e("throw", t, a, u); }); } u(c.arg); } var o; c(this, "_invoke", function (t, n) { function i() { return new r(function (r, o) { e(t, n, r, o); }); } return o = o ? o.then(i, i) : i(); }, !0); } function d(r, e) { var n = e.method, o = r.i[n]; if (o === t) return e.delegate = null, "throw" === n && r.i["return"] && (e.method = "return", e.arg = t, d(r, e), "throw" === e.method) || "return" !== n && (e.method = "throw", e.arg = new TypeError("The iterator does not provide a '" + n + "' method")), f; var i = s(o, r.i, e.arg); if ("throw" === i.type) return e.method = "throw", e.arg = i.arg, e.delegate = null, f; var a = i.arg; return a ? a.done ? (e[r.r] = a.value, e.next = r.n, "return" !== e.method && (e.method = "next", e.arg = t), e.delegate = null, f) : a : (e.method = "throw", e.arg = new TypeError("iterator result is not an object"), e.delegate = null, f); } function w(t) { this.tryEntries.push(t); } function m(r) { var e = r[4] || {}; e.type = "normal", e.arg = t, r[4] = e; } function Context(t) { this.tryEntries = [[-1]], t.forEach(w, this), this.reset(!0); } function x(r) { if (null != r) { var e = r[i]; if (e) return e.call(r); if ("function" == typeof r.next) return r; if (!isNaN(r.length)) { var o = -1, a = function e() { for (; ++o < r.length;) if (n.call(r, o)) return e.value = r[o], e.done = !1, e; return e.value = t, e.done = !0, e; }; return a.next = a; } } throw new TypeError(_typeof(r) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, c(v, "constructor", GeneratorFunctionPrototype), c(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = c(GeneratorFunctionPrototype, u, "GeneratorFunction"), r.isGeneratorFunction = function (t) { var r = "function" == typeof t && t.constructor; return !!r && (r === GeneratorFunction || "GeneratorFunction" === (r.displayName || r.name)); }, r.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, c(t, u, "GeneratorFunction")), t.prototype = Object.create(v), t; }, r.awrap = function (t) { return { __await: t }; }, g(AsyncIterator.prototype), c(AsyncIterator.prototype, a, function () { return this; }), r.AsyncIterator = AsyncIterator, r.async = function (t, e, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(h(t, e, n, o), i); return r.isGeneratorFunction(e) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, g(v), c(v, u, "Generator"), c(v, i, function () { return this; }), c(v, "toString", function () { return "[object Generator]"; }), r.keys = function (t) { var r = Object(t), e = []; for (var n in r) e.unshift(n); return function t() { for (; e.length;) if ((n = e.pop()) in r) return t.value = n, t.done = !1, t; return t.done = !0, t; }; }, r.values = x, Context.prototype = { constructor: Context, reset: function reset(r) { if (this.prev = this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(m), !r) for (var e in this) "t" === e.charAt(0) && n.call(this, e) && !isNaN(+e.slice(1)) && (this[e] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0][4]; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(r) { if (this.done) throw r; var e = this; function n(t) { a.type = "throw", a.arg = r, e.next = t; } for (var o = e.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i[4], u = this.prev, c = i[1], h = i[2]; if (-1 === i[0]) return n("end"), !1; if (!c && !h) throw Error("try statement without catch or finally"); if (null != i[0] && i[0] <= u) { if (u < c) return this.method = "next", this.arg = t, n(c), !0; if (u < h) return n(h), !1; } } }, abrupt: function abrupt(t, r) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var n = this.tryEntries[e]; if (n[0] > -1 && n[0] <= this.prev && this.prev < n[2]) { var o = n; break; } } o && ("break" === t || "continue" === t) && o[0] <= r && r <= o[2] && (o = null); var i = o ? o[4] : {}; return i.type = t, i.arg = r, o ? (this.method = "next", this.next = o[2], f) : this.complete(i); }, complete: function complete(t, r) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && r && (this.next = r), f; }, finish: function finish(t) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var e = this.tryEntries[r]; if (e[2] === t) return this.complete(e[4], e[3]), m(e), f; } }, "catch": function _catch(t) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var e = this.tryEntries[r]; if (e[0] === t) { var n = e[4]; if ("throw" === n.type) { var o = n.arg; m(e); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(r, e, n) { return this.delegate = { i: x(r), r: e, n: n }, "next" === this.method && (this.arg = t), f; } }, r; }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
@@ -171038,11 +166607,13 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
-var Header = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Header,
-  Sider = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Sider,
-  Content = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Content;
-var Option = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Option;
-var ProductPage = function ProductPage() {
+
+var Sider = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Sider,
+  Content = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Content;
+var Option = antd__WEBPACK_IMPORTED_MODULE_7__["default"].Option;
+var NAV_HEIGHT = 76;
+var SIDEBAR_WIDTH = 200;
+function ProductPage() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState2 = _slicedToArray(_useState, 2),
     products = _useState2[0],
@@ -171075,16 +166646,12 @@ var ProductPage = function ProductPage() {
     _useState16 = _slicedToArray(_useState15, 2),
     editingProduct = _useState16[0],
     setEditingProduct = _useState16[1];
-  var _Form$useForm = antd__WEBPACK_IMPORTED_MODULE_7__["default"].useForm(),
+  var _Form$useForm = antd__WEBPACK_IMPORTED_MODULE_8__["default"].useForm(),
     _Form$useForm2 = _slicedToArray(_Form$useForm, 1),
     form = _Form$useForm2[0];
-
-  // ✅ Ensure Authorization token is formatted as "Bearer ..."
   var rawToken = localStorage.getItem("authToken");
   var authToken = rawToken !== null && rawToken !== void 0 && rawToken.startsWith("Bearer ") ? rawToken : "Bearer ".concat(rawToken);
-  if (authToken) {
-    axios__WEBPACK_IMPORTED_MODULE_8__["default"].defaults.headers.common["Authorization"] = authToken;
-  }
+  if (authToken) axios__WEBPACK_IMPORTED_MODULE_9__["default"].defaults.headers.common["Authorization"] = authToken;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     fetchProducts();
     fetchStatuses();
@@ -171092,28 +166659,28 @@ var ProductPage = function ProductPage() {
   }, []);
   var fetchProducts = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var response;
+      var _yield$axios$get, data;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             _context.prev = 0;
             _context.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_8__["default"].get("/api/products");
+            return axios__WEBPACK_IMPORTED_MODULE_9__["default"].get("/api/products");
           case 3:
-            response = _context.sent;
-            setProducts(response.data);
+            _yield$axios$get = _context.sent;
+            data = _yield$axios$get.data;
+            setProducts(data);
             _context.next = 11;
             break;
-          case 7:
-            _context.prev = 7;
+          case 8:
+            _context.prev = 8;
             _context.t0 = _context["catch"](0);
-            antd__WEBPACK_IMPORTED_MODULE_9__["default"].error("Error fetching products");
-            console.error("Fetch error:", _context.t0);
+            antd__WEBPACK_IMPORTED_MODULE_10__["default"].error("Error fetching products");
           case 11:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[0, 7]]);
+      }, _callee, null, [[0, 8]]);
     }));
     return function fetchProducts() {
       return _ref.apply(this, arguments);
@@ -171121,28 +166688,28 @@ var ProductPage = function ProductPage() {
   }();
   var fetchStatuses = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-      var response;
+      var _yield$axios$get2, data;
       return _regeneratorRuntime().wrap(function _callee2$(_context2) {
         while (1) switch (_context2.prev = _context2.next) {
           case 0:
             _context2.prev = 0;
             _context2.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_8__["default"].get("/api/statuses");
+            return axios__WEBPACK_IMPORTED_MODULE_9__["default"].get("/api/statuses");
           case 3:
-            response = _context2.sent;
-            setStatuses(response.data.data || []); // ✅ your API response wraps statuses under "data"
+            _yield$axios$get2 = _context2.sent;
+            data = _yield$axios$get2.data;
+            setStatuses(data.data || []);
             _context2.next = 11;
             break;
-          case 7:
-            _context2.prev = 7;
+          case 8:
+            _context2.prev = 8;
             _context2.t0 = _context2["catch"](0);
-            antd__WEBPACK_IMPORTED_MODULE_9__["default"].error("Error fetching statuses");
-            console.error("Fetch error:", _context2.t0);
+            antd__WEBPACK_IMPORTED_MODULE_10__["default"].error("Error fetching statuses");
           case 11:
           case "end":
             return _context2.stop();
         }
-      }, _callee2, null, [[0, 7]]);
+      }, _callee2, null, [[0, 8]]);
     }));
     return function fetchStatuses() {
       return _ref2.apply(this, arguments);
@@ -171150,28 +166717,28 @@ var ProductPage = function ProductPage() {
   }();
   var fetchSubcategories = /*#__PURE__*/function () {
     var _ref3 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
-      var response;
+      var _yield$axios$get3, data;
       return _regeneratorRuntime().wrap(function _callee3$(_context3) {
         while (1) switch (_context3.prev = _context3.next) {
           case 0:
             _context3.prev = 0;
             _context3.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_8__["default"].get("/api/subcategories");
+            return axios__WEBPACK_IMPORTED_MODULE_9__["default"].get("/api/subcategories");
           case 3:
-            response = _context3.sent;
-            setSubcategories(response.data);
+            _yield$axios$get3 = _context3.sent;
+            data = _yield$axios$get3.data;
+            setSubcategories(data);
             _context3.next = 11;
             break;
-          case 7:
-            _context3.prev = 7;
+          case 8:
+            _context3.prev = 8;
             _context3.t0 = _context3["catch"](0);
-            antd__WEBPACK_IMPORTED_MODULE_9__["default"].error("Error fetching subcategories");
-            console.error("Fetch error:", _context3.t0);
+            antd__WEBPACK_IMPORTED_MODULE_10__["default"].error("Error fetching subcategories");
           case 11:
           case "end":
             return _context3.stop();
         }
-      }, _callee3, null, [[0, 7]]);
+      }, _callee3, null, [[0, 8]]);
     }));
     return function fetchSubcategories() {
       return _ref3.apply(this, arguments);
@@ -171179,45 +166746,45 @@ var ProductPage = function ProductPage() {
   }();
   var fetchArchivedProducts = /*#__PURE__*/function () {
     var _ref4 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
-      var response;
+      var _yield$axios$get4, data;
       return _regeneratorRuntime().wrap(function _callee4$(_context4) {
         while (1) switch (_context4.prev = _context4.next) {
           case 0:
             _context4.prev = 0;
             _context4.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_8__["default"].get("/api/products/archived");
+            return axios__WEBPACK_IMPORTED_MODULE_9__["default"].get("/api/products/archived");
           case 3:
-            response = _context4.sent;
-            setArchivedProducts(response.data);
+            _yield$axios$get4 = _context4.sent;
+            data = _yield$axios$get4.data;
+            setArchivedProducts(data);
             _context4.next = 11;
             break;
-          case 7:
-            _context4.prev = 7;
+          case 8:
+            _context4.prev = 8;
             _context4.t0 = _context4["catch"](0);
-            antd__WEBPACK_IMPORTED_MODULE_9__["default"].error("Error fetching archived products");
-            console.error("Fetch error:", _context4.t0);
+            antd__WEBPACK_IMPORTED_MODULE_10__["default"].error("Error fetching archived products");
           case 11:
           case "end":
             return _context4.stop();
         }
-      }, _callee4, null, [[0, 7]]);
+      }, _callee4, null, [[0, 8]]);
     }));
     return function fetchArchivedProducts() {
       return _ref4.apply(this, arguments);
     };
   }();
-  var showEditModal = function showEditModal(record) {
+  var showEditModal = function showEditModal(r) {
     setIsAdding(false);
-    setEditingProduct(record);
+    setEditingProduct(r);
     form.setFieldsValue({
       image: [],
-      name: record.name,
-      price: record.price,
-      quantity: record.quantity,
-      description: record.description,
-      specifications: record.specifications,
-      status_id: record.status_id,
-      subcategory_id: record.subcategory_id
+      name: r.name,
+      price: r.price,
+      quantity: r.quantity,
+      description: r.description,
+      specifications: r.specifications,
+      status_id: r.status_id,
+      subcategory_id: r.subcategory_id
     });
     setIsModalVisible(true);
   };
@@ -171228,57 +166795,55 @@ var ProductPage = function ProductPage() {
   };
   var handleSubmit = /*#__PURE__*/function () {
     var _ref5 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(values) {
-      var formData;
+      var _values$image;
+      var fd;
       return _regeneratorRuntime().wrap(function _callee5$(_context5) {
         while (1) switch (_context5.prev = _context5.next) {
           case 0:
-            formData = new FormData();
-            if (values.image && values.image.length > 0) {
-              formData.append("image", values.image[0].originFileObj);
-            }
-            formData.append("name", values.name);
-            formData.append("price", values.price);
-            formData.append("quantity", values.quantity);
-            formData.append("description", values.description || "");
-            formData.append("specifications", values.specifications || "");
-            formData.append("status_id", values.status_id || "");
-            formData.append("subcategory_id", values.subcategory_id || "");
+            fd = new FormData();
+            if ((_values$image = values.image) !== null && _values$image !== void 0 && _values$image.length) fd.append("image", values.image[0].originFileObj);
+            fd.append("name", values.name);
+            fd.append("price", values.price);
+            fd.append("quantity", values.quantity);
+            fd.append("description", values.description || "");
+            fd.append("specifications", values.specifications || "");
+            fd.append("status_id", values.status_id || "");
+            fd.append("subcategory_id", values.subcategory_id || "");
             _context5.prev = 9;
             if (!isAdding) {
               _context5.next = 16;
               break;
             }
             _context5.next = 13;
-            return axios__WEBPACK_IMPORTED_MODULE_8__["default"].post("/api/products", formData, {
+            return axios__WEBPACK_IMPORTED_MODULE_9__["default"].post("/api/products", fd, {
               headers: {
                 "Content-Type": "multipart/form-data"
               }
             });
           case 13:
-            antd__WEBPACK_IMPORTED_MODULE_9__["default"].success("Product added successfully");
+            antd__WEBPACK_IMPORTED_MODULE_10__["default"].success("Product added");
             _context5.next = 20;
             break;
           case 16:
-            formData.append("_method", "PUT");
+            fd.append("_method", "PUT");
             _context5.next = 19;
-            return axios__WEBPACK_IMPORTED_MODULE_8__["default"].post("/api/products/".concat(editingProduct.id), formData, {
+            return axios__WEBPACK_IMPORTED_MODULE_9__["default"].post("/api/products/".concat(editingProduct.id), fd, {
               headers: {
                 "Content-Type": "multipart/form-data"
               }
             });
           case 19:
-            antd__WEBPACK_IMPORTED_MODULE_9__["default"].success("Product updated successfully");
+            antd__WEBPACK_IMPORTED_MODULE_10__["default"].success("Product updated");
           case 20:
             setIsModalVisible(false);
             fetchProducts();
-            _context5.next = 28;
+            _context5.next = 27;
             break;
           case 24:
             _context5.prev = 24;
             _context5.t0 = _context5["catch"](9);
-            antd__WEBPACK_IMPORTED_MODULE_9__["default"].error("Error saving product");
-            console.error("Save error:", _context5.t0);
-          case 28:
+            antd__WEBPACK_IMPORTED_MODULE_10__["default"].error("Error saving product");
+          case 27:
           case "end":
             return _context5.stop();
         }
@@ -171289,24 +166854,23 @@ var ProductPage = function ProductPage() {
     };
   }();
   var handleArchive = /*#__PURE__*/function () {
-    var _ref6 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee6(record) {
+    var _ref6 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee6(r) {
       return _regeneratorRuntime().wrap(function _callee6$(_context6) {
         while (1) switch (_context6.prev = _context6.next) {
           case 0:
             _context6.prev = 0;
             _context6.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_8__["default"]["delete"]("/api/products/".concat(record.id));
+            return axios__WEBPACK_IMPORTED_MODULE_9__["default"]["delete"]("/api/products/".concat(r.id));
           case 3:
-            antd__WEBPACK_IMPORTED_MODULE_9__["default"].success("Product archived successfully");
+            antd__WEBPACK_IMPORTED_MODULE_10__["default"].success("Product archived");
             fetchProducts();
-            _context6.next = 11;
+            _context6.next = 10;
             break;
           case 7:
             _context6.prev = 7;
             _context6.t0 = _context6["catch"](0);
-            antd__WEBPACK_IMPORTED_MODULE_9__["default"].error("Error archiving product");
-            console.error("Archive error:", _context6.t0);
-          case 11:
+            antd__WEBPACK_IMPORTED_MODULE_10__["default"].error("Error archiving");
+          case 10:
           case "end":
             return _context6.stop();
         }
@@ -171317,25 +166881,24 @@ var ProductPage = function ProductPage() {
     };
   }();
   var handleRestore = /*#__PURE__*/function () {
-    var _ref7 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee7(record) {
+    var _ref7 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee7(r) {
       return _regeneratorRuntime().wrap(function _callee7$(_context7) {
         while (1) switch (_context7.prev = _context7.next) {
           case 0:
             _context7.prev = 0;
             _context7.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_8__["default"].put("/api/products/".concat(record.id, "/restore"));
+            return axios__WEBPACK_IMPORTED_MODULE_9__["default"].put("/api/products/".concat(r.id, "/restore"));
           case 3:
-            antd__WEBPACK_IMPORTED_MODULE_9__["default"].success("Product restored successfully");
+            antd__WEBPACK_IMPORTED_MODULE_10__["default"].success("Product restored");
             fetchArchivedProducts();
             fetchProducts();
-            _context7.next = 12;
+            _context7.next = 11;
             break;
           case 8:
             _context7.prev = 8;
             _context7.t0 = _context7["catch"](0);
-            antd__WEBPACK_IMPORTED_MODULE_9__["default"].error("Error restoring product");
-            console.error("Restore error:", _context7.t0);
-          case 12:
+            antd__WEBPACK_IMPORTED_MODULE_10__["default"].error("Error restoring");
+          case 11:
           case "end":
             return _context7.stop();
         }
@@ -171349,13 +166912,12 @@ var ProductPage = function ProductPage() {
     title: "Image",
     dataIndex: "image",
     key: "image",
-    render: function render(image) {
-      return image ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-        src: window.location.origin + image,
-        alt: "product",
+    render: function render(img) {
+      return img ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+        src: window.location.origin + img,
+        alt: "",
         style: {
-          width: 50,
-          height: "auto"
+          width: 50
         }
       }) : "No Image";
     }
@@ -171367,8 +166929,8 @@ var ProductPage = function ProductPage() {
     title: "Brand",
     dataIndex: "subcategory",
     key: "subcategory",
-    render: function render(subcategory) {
-      return subcategory ? subcategory.name : "N/A";
+    render: function render(s) {
+      return (s === null || s === void 0 ? void 0 : s.name) || "N/A";
     }
   }, {
     title: "Price",
@@ -171390,27 +166952,27 @@ var ProductPage = function ProductPage() {
     title: "Status",
     dataIndex: "status_id",
     key: "status_id",
-    render: function render(status) {
+    render: function render(id) {
       var _statuses$find;
       return ((_statuses$find = statuses.find(function (s) {
-        return s.id === status;
+        return s.id === id;
       })) === null || _statuses$find === void 0 ? void 0 : _statuses$find.status_name) || "N/A";
     }
   }, {
     title: "Actions",
     key: "actions",
-    render: function render(_, record) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
-          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {}),
+    render: function render(_, r) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_12__["default"], {
+          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_13__["default"], {}),
           onClick: function onClick() {
-            return showEditModal(record);
+            return showEditModal(r);
           }
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
-          onClick: function onClick() {
-            return handleArchive(record);
-          },
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_12__["default"], {
           danger: true,
+          onClick: function onClick() {
+            return handleArchive(r);
+          },
           children: "Archive"
         })]
       });
@@ -171420,13 +166982,12 @@ var ProductPage = function ProductPage() {
     title: "Image",
     dataIndex: "image",
     key: "image",
-    render: function render(image) {
-      return image ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-        src: window.location.origin + image,
-        alt: "product",
+    render: function render(img) {
+      return img ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+        src: window.location.origin + img,
+        alt: "",
         style: {
-          width: 50,
-          height: "auto"
+          width: 50
         }
       }) : "No Image";
     }
@@ -171438,8 +166999,8 @@ var ProductPage = function ProductPage() {
     title: "Brand",
     dataIndex: "subcategory",
     key: "subcategory",
-    render: function render(subcategory) {
-      return subcategory ? subcategory.name : "N/A";
+    render: function render(s) {
+      return (s === null || s === void 0 ? void 0 : s.name) || "N/A";
     }
   }, {
     title: "Price",
@@ -171452,57 +167013,51 @@ var ProductPage = function ProductPage() {
   }, {
     title: "Actions",
     key: "actions",
-    render: function render(_, record) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
-          onClick: function onClick() {
-            return handleRestore(record);
-          },
+    render: function render(_, r) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_12__["default"], {
           type: "primary",
+          onClick: function onClick() {
+            return handleRestore(r);
+          },
           children: "Restore"
         })
       });
     }
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    style: {
-      minHeight: "100vh"
-    },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Header, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    className: "products-page",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
       style: {
-        padding: 0,
-        background: "#008cff",
-        position: "fixed",
-        width: "100%",
-        zIndex: 1000
+        minHeight: "100vh",
+        marginTop: NAV_HEIGHT
       },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_1__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      style: {
-        marginTop: 64
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Sider, {
-        width: 200,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(Content, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Sider, {
+        width: SIDEBAR_WIDTH,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        style: {
+          marginLeft: SIDEBAR_WIDTH,
+          width: "calc(100% - ".concat(SIDEBAR_WIDTH, "px)")
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(Content, {
           style: {
-            margin: "24px 16px",
+            margin: "24px 0",
             padding: 24,
             background: "#fff",
             minHeight: 280
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
             className: "products-header",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
               children: "Product List"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_12__["default"], {
                 type: "primary",
-                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_13__["default"], {}),
+                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_14__["default"], {}),
                 onClick: showAddModal,
                 children: "Add Product"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_12__["default"], {
                 className: "archive-btn",
                 onClick: function onClick() {
                   setIsArchiveModalVisible(true);
@@ -171511,14 +167066,14 @@ var ProductPage = function ProductPage() {
                 children: "Show Archived"
               })]
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {
             columns: columns,
             dataSource: products,
             bordered: true,
             pagination: {
               pageSize: 5
             }
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_16__["default"], {
             title: isAdding ? "Add Product" : "Edit Product",
             open: isModalVisible,
             onCancel: function onCancel() {
@@ -171527,103 +167082,19 @@ var ProductPage = function ProductPage() {
             onOk: function onOk() {
               return form.submit();
             },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
               form: form,
               onFinish: handleSubmit,
-              layout: "vertical",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
-                label: "Product Image",
-                name: "image",
-                getValueFromEvent: function getValueFromEvent(e) {
-                  return Array.isArray(e) ? e : e === null || e === void 0 ? void 0 : e.fileList;
-                },
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                  beforeUpload: function beforeUpload() {
-                    return false;
-                  },
-                  listType: "picture",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
-                    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_17__["default"], {}),
-                    children: "Select Image"
-                  })
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
-                label: "Product Name",
-                name: "name",
-                rules: [{
-                  required: true
-                }],
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_18__["default"], {})
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
-                label: "Brand",
-                name: "subcategory_id",
-                rules: [{
-                  required: true
-                }],
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
-                  placeholder: "Select brand",
-                  children: subcategories.map(function (subcategory) {
-                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Option, {
-                      value: subcategory.id,
-                      children: subcategory.name
-                    }, subcategory.id);
-                  })
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
-                label: "Price",
-                name: "price",
-                rules: [{
-                  required: true
-                }],
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_19__["default"], {
-                  min: 0,
-                  step: 1,
-                  style: {
-                    width: "100%"
-                  }
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
-                label: "Quantity",
-                name: "quantity",
-                rules: [{
-                  required: true
-                }],
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_19__["default"], {
-                  min: 0,
-                  style: {
-                    width: "100%"
-                  }
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
-                label: "Description",
-                name: "description",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_18__["default"].TextArea, {})
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
-                label: "Specifications",
-                name: "specifications",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_18__["default"].TextArea, {})
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
-                label: "Status",
-                name: "status_id",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
-                  placeholder: "Select status",
-                  children: statuses.map(function (status) {
-                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Option, {
-                      value: status.id,
-                      children: status.status_name
-                    }, status.id);
-                  })
-                })
-              })]
+              layout: "vertical"
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_16__["default"], {
             title: "Archived Products",
             open: isArchiveModalVisible,
             onCancel: function onCancel() {
               return setIsArchiveModalVisible(false);
             },
             footer: null,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {
               columns: archiveColumns,
               dataSource: archivedProducts,
               bordered: true,
@@ -171636,8 +167107,7 @@ var ProductPage = function ProductPage() {
       })]
     })]
   });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProductPage);
+}
 
 /***/ }),
 
@@ -171751,25 +167221,26 @@ var Footer = function Footer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ Inventory)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/form/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/message/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/space/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/table/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/modal/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/input/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/input-number/index.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/EditOutlined.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/DeleteOutlined.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/form/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/message/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/space/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/table/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/modal/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/input/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/input-number/index.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/EditOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/DeleteOutlined.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
 /* harmony import */ var _topnav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../topnav */ "./resources/js/components/topnav.js");
 /* harmony import */ var _admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../admin-sidemenu */ "./resources/js/components/admin-sidemenu.js");
-/* harmony import */ var _sass_components_inventory_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../sass/components/_inventory.scss */ "./resources/sass/components/_inventory.scss");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _sass_components_topnav_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../sass/components/_topnav.scss */ "./resources/sass/components/_topnav.scss");
+/* harmony import */ var _sass_components_inventory_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../sass/components/_inventory.scss */ "./resources/sass/components/_inventory.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return r; }; var t, r = {}, e = Object.prototype, n = e.hasOwnProperty, o = "function" == typeof Symbol ? Symbol : {}, i = o.iterator || "@@iterator", a = o.asyncIterator || "@@asyncIterator", u = o.toStringTag || "@@toStringTag"; function c(t, r, e, n) { return Object.defineProperty(t, r, { value: e, enumerable: !n, configurable: !n, writable: !n }); } try { c({}, ""); } catch (t) { c = function c(t, r, e) { return t[r] = e; }; } function h(r, e, n, o) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype); return c(a, "_invoke", function (r, e, n) { var o = 1; return function (i, a) { if (3 === o) throw Error("Generator is already running"); if (4 === o) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var u = n.delegate; if (u) { var c = d(u, n); if (c) { if (c === f) continue; return c; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (1 === o) throw o = 4, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = 3; var h = s(r, e, n); if ("normal" === h.type) { if (o = n.done ? 4 : 2, h.arg === f) continue; return { value: h.arg, done: n.done }; } "throw" === h.type && (o = 4, n.method = "throw", n.arg = h.arg); } }; }(r, n, new Context(o || [])), !0), a; } function s(t, r, e) { try { return { type: "normal", arg: t.call(r, e) }; } catch (t) { return { type: "throw", arg: t }; } } r.wrap = h; var f = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var l = {}; c(l, i, function () { return this; }); var p = Object.getPrototypeOf, y = p && p(p(x([]))); y && y !== e && n.call(y, i) && (l = y); var v = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(l); function g(t) { ["next", "throw", "return"].forEach(function (r) { c(t, r, function (t) { return this._invoke(r, t); }); }); } function AsyncIterator(t, r) { function e(o, i, a, u) { var c = s(t[o], t, i); if ("throw" !== c.type) { var h = c.arg, f = h.value; return f && "object" == _typeof(f) && n.call(f, "__await") ? r.resolve(f.__await).then(function (t) { e("next", t, a, u); }, function (t) { e("throw", t, a, u); }) : r.resolve(f).then(function (t) { h.value = t, a(h); }, function (t) { return e("throw", t, a, u); }); } u(c.arg); } var o; c(this, "_invoke", function (t, n) { function i() { return new r(function (r, o) { e(t, n, r, o); }); } return o = o ? o.then(i, i) : i(); }, !0); } function d(r, e) { var n = e.method, o = r.i[n]; if (o === t) return e.delegate = null, "throw" === n && r.i["return"] && (e.method = "return", e.arg = t, d(r, e), "throw" === e.method) || "return" !== n && (e.method = "throw", e.arg = new TypeError("The iterator does not provide a '" + n + "' method")), f; var i = s(o, r.i, e.arg); if ("throw" === i.type) return e.method = "throw", e.arg = i.arg, e.delegate = null, f; var a = i.arg; return a ? a.done ? (e[r.r] = a.value, e.next = r.n, "return" !== e.method && (e.method = "next", e.arg = t), e.delegate = null, f) : a : (e.method = "throw", e.arg = new TypeError("iterator result is not an object"), e.delegate = null, f); } function w(t) { this.tryEntries.push(t); } function m(r) { var e = r[4] || {}; e.type = "normal", e.arg = t, r[4] = e; } function Context(t) { this.tryEntries = [[-1]], t.forEach(w, this), this.reset(!0); } function x(r) { if (null != r) { var e = r[i]; if (e) return e.call(r); if ("function" == typeof r.next) return r; if (!isNaN(r.length)) { var o = -1, a = function e() { for (; ++o < r.length;) if (n.call(r, o)) return e.value = r[o], e.done = !1, e; return e.value = t, e.done = !0, e; }; return a.next = a; } } throw new TypeError(_typeof(r) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, c(v, "constructor", GeneratorFunctionPrototype), c(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = c(GeneratorFunctionPrototype, u, "GeneratorFunction"), r.isGeneratorFunction = function (t) { var r = "function" == typeof t && t.constructor; return !!r && (r === GeneratorFunction || "GeneratorFunction" === (r.displayName || r.name)); }, r.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, c(t, u, "GeneratorFunction")), t.prototype = Object.create(v), t; }, r.awrap = function (t) { return { __await: t }; }, g(AsyncIterator.prototype), c(AsyncIterator.prototype, a, function () { return this; }), r.AsyncIterator = AsyncIterator, r.async = function (t, e, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(h(t, e, n, o), i); return r.isGeneratorFunction(e) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, g(v), c(v, u, "Generator"), c(v, i, function () { return this; }), c(v, "toString", function () { return "[object Generator]"; }), r.keys = function (t) { var r = Object(t), e = []; for (var n in r) e.unshift(n); return function t() { for (; e.length;) if ((n = e.pop()) in r) return t.value = n, t.done = !1, t; return t.done = !0, t; }; }, r.values = x, Context.prototype = { constructor: Context, reset: function reset(r) { if (this.prev = this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(m), !r) for (var e in this) "t" === e.charAt(0) && n.call(this, e) && !isNaN(+e.slice(1)) && (this[e] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0][4]; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(r) { if (this.done) throw r; var e = this; function n(t) { a.type = "throw", a.arg = r, e.next = t; } for (var o = e.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i[4], u = this.prev, c = i[1], h = i[2]; if (-1 === i[0]) return n("end"), !1; if (!c && !h) throw Error("try statement without catch or finally"); if (null != i[0] && i[0] <= u) { if (u < c) return this.method = "next", this.arg = t, n(c), !0; if (u < h) return n(h), !1; } } }, abrupt: function abrupt(t, r) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var n = this.tryEntries[e]; if (n[0] > -1 && n[0] <= this.prev && this.prev < n[2]) { var o = n; break; } } o && ("break" === t || "continue" === t) && o[0] <= r && r <= o[2] && (o = null); var i = o ? o[4] : {}; return i.type = t, i.arg = r, o ? (this.method = "next", this.next = o[2], f) : this.complete(i); }, complete: function complete(t, r) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && r && (this.next = r), f; }, finish: function finish(t) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var e = this.tryEntries[r]; if (e[2] === t) return this.complete(e[4], e[3]), m(e), f; } }, "catch": function _catch(t) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var e = this.tryEntries[r]; if (e[0] === t) { var n = e[4]; if ("throw" === n.type) { var o = n.arg; m(e); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(r, e, n) { return this.delegate = { i: x(r), r: e, n: n }, "next" === this.method && (this.arg = t), f; } }, r; }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
@@ -171786,12 +167257,14 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
+ // ensure your nav styles are loaded
+ // your inventory-header styles
 
+var Sider = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Sider,
+  Content = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Content;
+var NAV_HEIGHT = 76; // 44px input + 16px top padding +16px bottom padding
 
-var Header = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Header,
-  Sider = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Sider,
-  Content = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Content;
-var Inventory = function Inventory() {
+function Inventory() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState2 = _slicedToArray(_useState, 2),
     inventoryItems = _useState2[0],
@@ -171812,31 +167285,32 @@ var Inventory = function Inventory() {
     _useState10 = _slicedToArray(_useState9, 2),
     editingInventoryItem = _useState10[0],
     setEditingInventoryItem = _useState10[1];
-  var _Form$useForm = antd__WEBPACK_IMPORTED_MODULE_6__["default"].useForm(),
+  var _Form$useForm = antd__WEBPACK_IMPORTED_MODULE_7__["default"].useForm(),
     _Form$useForm2 = _slicedToArray(_Form$useForm, 1),
     editForm = _Form$useForm2[0];
 
-  // ✅ Fix: Apply token with "Bearer " prefix
+  // apply Bearer prefix if needed
   var rawToken = localStorage.getItem("authToken");
   var authToken = rawToken !== null && rawToken !== void 0 && rawToken.startsWith("Bearer ") ? rawToken : "Bearer ".concat(rawToken);
   if (authToken) {
-    axios__WEBPACK_IMPORTED_MODULE_7__["default"].defaults.headers.common["Authorization"] = authToken;
+    axios__WEBPACK_IMPORTED_MODULE_8__["default"].defaults.headers.common["Authorization"] = authToken;
   }
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     fetchInventory();
   }, []);
   var fetchInventory = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var response;
+      var _yield$axios$get, data;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             _context.prev = 0;
             _context.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_7__["default"].get("/api/inventory");
+            return axios__WEBPACK_IMPORTED_MODULE_8__["default"].get("/api/inventory");
           case 3:
-            response = _context.sent;
-            setInventoryItems(response.data.map(function (item) {
+            _yield$axios$get = _context.sent;
+            data = _yield$axios$get.data;
+            setInventoryItems(data.map(function (item) {
               var _item$product, _item$product2, _item$product3, _item$product4;
               return {
                 key: item.id,
@@ -171849,18 +167323,18 @@ var Inventory = function Inventory() {
                 last_restock: item.last_restock ? new Date(item.last_restock).toLocaleDateString() : new Date().toLocaleDateString()
               };
             }));
-            _context.next = 11;
+            _context.next = 12;
             break;
-          case 7:
-            _context.prev = 7;
+          case 8:
+            _context.prev = 8;
             _context.t0 = _context["catch"](0);
-            antd__WEBPACK_IMPORTED_MODULE_8__["default"].error("Error fetching inventory data");
-            console.error("Fetch error:", _context.t0);
-          case 11:
+            antd__WEBPACK_IMPORTED_MODULE_9__["default"].error("Error fetching inventory data");
+            console.error(_context.t0);
+          case 12:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[0, 7]]);
+      }, _callee, null, [[0, 8]]);
     }));
     return function fetchInventory() {
       return _ref.apply(this, arguments);
@@ -171868,16 +167342,17 @@ var Inventory = function Inventory() {
   }();
   var fetchArchivedInventory = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-      var response;
+      var _yield$axios$get2, data;
       return _regeneratorRuntime().wrap(function _callee2$(_context2) {
         while (1) switch (_context2.prev = _context2.next) {
           case 0:
             _context2.prev = 0;
             _context2.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_7__["default"].get("/api/inventory/archived");
+            return axios__WEBPACK_IMPORTED_MODULE_8__["default"].get("/api/inventory/archived");
           case 3:
-            response = _context2.sent;
-            setArchivedInventory(response.data.map(function (item) {
+            _yield$axios$get2 = _context2.sent;
+            data = _yield$axios$get2.data;
+            setArchivedInventory(data.map(function (item) {
               var _item$product5, _item$product6, _item$product7;
               return {
                 key: item.id,
@@ -171889,18 +167364,18 @@ var Inventory = function Inventory() {
                 last_restock: item.last_restock ? new Date(item.last_restock).toLocaleDateString() : new Date().toLocaleDateString()
               };
             }));
-            _context2.next = 11;
+            _context2.next = 12;
             break;
-          case 7:
-            _context2.prev = 7;
+          case 8:
+            _context2.prev = 8;
             _context2.t0 = _context2["catch"](0);
-            antd__WEBPACK_IMPORTED_MODULE_8__["default"].error("Error fetching archived inventory");
-            console.error("Fetch error:", _context2.t0);
-          case 11:
+            antd__WEBPACK_IMPORTED_MODULE_9__["default"].error("Error fetching archived inventory");
+            console.error(_context2.t0);
+          case 12:
           case "end":
             return _context2.stop();
         }
-      }, _callee2, null, [[0, 7]]);
+      }, _callee2, null, [[0, 8]]);
     }));
     return function fetchArchivedInventory() {
       return _ref2.apply(this, arguments);
@@ -171913,17 +167388,17 @@ var Inventory = function Inventory() {
           case 0:
             _context3.prev = 0;
             _context3.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_7__["default"]["delete"]("/api/inventory/".concat(id));
+            return axios__WEBPACK_IMPORTED_MODULE_8__["default"]["delete"]("/api/inventory/".concat(id));
           case 3:
-            antd__WEBPACK_IMPORTED_MODULE_8__["default"].success("Inventory item archived successfully");
+            antd__WEBPACK_IMPORTED_MODULE_9__["default"].success("Inventory item archived successfully");
             fetchInventory();
             _context3.next = 11;
             break;
           case 7:
             _context3.prev = 7;
             _context3.t0 = _context3["catch"](0);
-            antd__WEBPACK_IMPORTED_MODULE_8__["default"].error("Error archiving inventory item");
-            console.error("Archive error:", _context3.t0);
+            antd__WEBPACK_IMPORTED_MODULE_9__["default"].error("Error archiving inventory item");
+            console.error(_context3.t0);
           case 11:
           case "end":
             return _context3.stop();
@@ -171941,9 +167416,9 @@ var Inventory = function Inventory() {
           case 0:
             _context4.prev = 0;
             _context4.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_7__["default"].put("/api/inventory/".concat(id, "/restore"));
+            return axios__WEBPACK_IMPORTED_MODULE_8__["default"].put("/api/inventory/".concat(id, "/restore"));
           case 3:
-            antd__WEBPACK_IMPORTED_MODULE_8__["default"].success("Inventory item restored successfully");
+            antd__WEBPACK_IMPORTED_MODULE_9__["default"].success("Inventory item restored successfully");
             fetchArchivedInventory();
             fetchInventory();
             _context4.next = 12;
@@ -171951,8 +167426,8 @@ var Inventory = function Inventory() {
           case 8:
             _context4.prev = 8;
             _context4.t0 = _context4["catch"](0);
-            antd__WEBPACK_IMPORTED_MODULE_8__["default"].error("Error restoring inventory item");
-            console.error("Restore error:", _context4.t0);
+            antd__WEBPACK_IMPORTED_MODULE_9__["default"].error("Error restoring inventory item");
+            console.error(_context4.t0);
           case 12:
           case "end":
             return _context4.stop();
@@ -171979,13 +167454,13 @@ var Inventory = function Inventory() {
           case 0:
             _context5.prev = 0;
             _context5.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_7__["default"].put("/api/products/".concat(editingInventoryItem.product_id), {
+            return axios__WEBPACK_IMPORTED_MODULE_8__["default"].put("/api/products/".concat(editingInventoryItem.product_id), {
               name: values.product_name,
               price: values.price,
               quantity: values.stock_quantity
             });
           case 3:
-            antd__WEBPACK_IMPORTED_MODULE_8__["default"].success("Inventory item updated successfully");
+            antd__WEBPACK_IMPORTED_MODULE_9__["default"].success("Inventory item updated successfully");
             setIsEditModalVisible(false);
             fetchInventory();
             _context5.next = 12;
@@ -171993,8 +167468,8 @@ var Inventory = function Inventory() {
           case 8:
             _context5.prev = 8;
             _context5.t0 = _context5["catch"](0);
-            antd__WEBPACK_IMPORTED_MODULE_8__["default"].error("Error updating inventory item");
-            console.error("Edit update error:", _context5.t0);
+            antd__WEBPACK_IMPORTED_MODULE_9__["default"].error("Error updating inventory item");
+            console.error(_context5.t0);
           case 12:
           case "end":
             return _context5.stop();
@@ -172009,9 +167484,9 @@ var Inventory = function Inventory() {
     title: "Image",
     dataIndex: "image",
     key: "image",
-    render: function render(image) {
-      return image ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-        src: window.location.origin + image,
+    render: function render(src) {
+      return src ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+        src: window.location.origin + src,
         alt: "product",
         style: {
           width: 50
@@ -172042,14 +167517,14 @@ var Inventory = function Inventory() {
     title: "Actions",
     key: "actions",
     render: function render(_, record) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_11__["default"], {}),
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {}),
           onClick: function onClick() {
             return showEditModal(record);
           }
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {}),
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_13__["default"], {}),
           danger: true,
           onClick: function onClick() {
             return handleArchive(record.key);
@@ -172063,9 +167538,9 @@ var Inventory = function Inventory() {
     title: "Image",
     dataIndex: "image",
     key: "image",
-    render: function render(image) {
-      return image ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-        src: window.location.origin + image,
+    render: function render(src) {
+      return src ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+        src: window.location.origin + src,
         alt: "product",
         style: {
           width: 50
@@ -172096,50 +167571,38 @@ var Inventory = function Inventory() {
     title: "Actions",
     key: "actions",
     render: function render(_, record) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          type: "primary",
-          onClick: function onClick() {
-            return handleRestore(record.key);
-          },
-          children: "Restore"
-        })
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        type: "primary",
+        onClick: function onClick() {
+          return handleRestore(record.key);
+        },
+        children: "Restore"
       });
     }
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    style: {
-      minHeight: "100vh"
-    },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Header, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    className: "inventory-page",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
       style: {
-        padding: 0,
-        background: "#008cff",
-        position: "fixed",
-        width: "100%",
-        zIndex: 1000
+        minHeight: "100vh",
+        marginTop: NAV_HEIGHT
       },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_1__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      style: {
-        marginTop: 64
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Sider, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Sider, {
         width: 200,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(Content, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(Content, {
           style: {
             margin: "24px 16px",
             padding: 24,
             background: "#fff",
             minHeight: 280
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
             className: "inventory-header",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
               children: "Inventory List"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
               type: "primary",
               onClick: function onClick() {
                 setIsArchiveModalVisible(true);
@@ -172147,14 +167610,14 @@ var Inventory = function Inventory() {
               },
               children: "Show Archived"
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
             columns: columns,
             dataSource: inventoryItems,
             bordered: true,
             pagination: {
               pageSize: 5
             }
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {
             title: "Edit Inventory Item",
             open: isEditModalVisible,
             onCancel: function onCancel() {
@@ -172163,36 +167626,36 @@ var Inventory = function Inventory() {
             onOk: function onOk() {
               return editForm.submit();
             },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
               form: editForm,
               onFinish: handleEditSubmit,
               layout: "vertical",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"].Item, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
                 label: "Product Name",
                 name: "product_name",
                 rules: [{
                   required: true
                 }],
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {})
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"].Item, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_16__["default"], {})
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
                 label: "Price",
                 name: "price",
                 rules: [{
                   required: true
                 }],
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_16__["default"], {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_17__["default"], {
                   min: 0,
                   style: {
                     width: "100%"
                   }
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"].Item, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
                 label: "Stock Quantity",
                 name: "stock_quantity",
                 rules: [{
                   required: true
                 }],
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_16__["default"], {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_17__["default"], {
                   min: 0,
                   style: {
                     width: "100%"
@@ -172200,14 +167663,14 @@ var Inventory = function Inventory() {
                 })
               })]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {
             title: "Archived Inventory",
             open: isArchiveModalVisible,
             onCancel: function onCancel() {
               return setIsArchiveModalVisible(false);
             },
             footer: null,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_13__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
               columns: archiveColumns,
               dataSource: archivedInventory,
               bordered: true,
@@ -172220,8 +167683,7 @@ var Inventory = function Inventory() {
       })]
     })]
   });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Inventory);
+}
 
 /***/ }),
 
@@ -172288,17 +167750,14 @@ var Login = function Login() {
     if (token) {
       axios__WEBPACK_IMPORTED_MODULE_5__["default"].get("/api/user", {
         headers: {
-          Authorization: "Bearer ".concat(token)
+          Authorization: token
         }
       }).then(function (response) {
         if (isMounted) {
-          console.log("Token validated:", response.data);
           var role = parseInt(userRole, 10);
           navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
         }
-      })["catch"](function (err) {
-        var _err$response;
-        console.error("Token validation failed:", (_err$response = err.response) === null || _err$response === void 0 ? void 0 : _err$response.data);
+      })["catch"](function () {
         if (isMounted) {
           localStorage.removeItem("authToken");
           localStorage.removeItem("userRole");
@@ -172314,7 +167773,7 @@ var Login = function Login() {
   };
   var handleLogin = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var response, token, role, _err$response2, _err$response3;
+      var response, token, role, _err$response;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
@@ -172330,38 +167789,28 @@ var Login = function Login() {
             return axios__WEBPACK_IMPORTED_MODULE_5__["default"].post("/api/login", credentials);
           case 6:
             response = _context.sent;
-            console.log("Login response:", response.data);
-            if (response.data.token) {
-              _context.next = 10;
-              break;
-            }
-            throw new Error("Authentication token not received.");
-          case 10:
-            token = response.data.token; // Store raw token
+            token = "Bearer ".concat(response.data.token);
             localStorage.setItem("authToken", token);
             role = parseInt(response.data.user.roles_id, 10);
             localStorage.setItem("userRole", role);
-
-            // Set default header for future calls
-            axios__WEBPACK_IMPORTED_MODULE_5__["default"].defaults.headers.common["Authorization"] = "Bearer ".concat(token);
+            axios__WEBPACK_IMPORTED_MODULE_5__["default"].defaults.headers.common["Authorization"] = token;
             antd__WEBPACK_IMPORTED_MODULE_6__["default"].success("Login successful!");
             navigate(role === 1 ? "/admindashboard" : "/homepagecontent");
-            _context.next = 23;
+            _context.next = 19;
             break;
+          case 16:
+            _context.prev = 16;
+            _context.t0 = _context["catch"](3);
+            antd__WEBPACK_IMPORTED_MODULE_6__["default"].error(((_err$response = _context.t0.response) === null || _err$response === void 0 || (_err$response = _err$response.data) === null || _err$response === void 0 ? void 0 : _err$response.error) || "Login failed. Please check your credentials.");
           case 19:
             _context.prev = 19;
-            _context.t0 = _context["catch"](3);
-            console.error("Login failed:", (_err$response2 = _context.t0.response) === null || _err$response2 === void 0 ? void 0 : _err$response2.data);
-            antd__WEBPACK_IMPORTED_MODULE_6__["default"].error(((_err$response3 = _context.t0.response) === null || _err$response3 === void 0 || (_err$response3 = _err$response3.data) === null || _err$response3 === void 0 ? void 0 : _err$response3.error) || "Login failed. Please check your credentials.");
-          case 23:
-            _context.prev = 23;
             setLoading(false);
-            return _context.finish(23);
-          case 26:
+            return _context.finish(19);
+          case 22:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[3, 19, 23, 26]]);
+      }, _callee, null, [[3, 16, 19, 22]]);
     }));
     return function handleLogin() {
       return _ref.apply(this, arguments);

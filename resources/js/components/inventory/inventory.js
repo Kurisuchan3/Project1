@@ -1,14 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { Layout, Table, Button, Modal, Form, Input, InputNumber, message, Space } from "antd";
+import {
+  Layout,
+  Table,
+  Button,
+  Modal,
+  Form,
+  Input,
+  InputNumber,
+  message,
+  Space,
+} from "antd";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import axios from "axios";
+
 import TopNav from "../topnav";
 import AdminSideMenu from "../admin-sidemenu";
-import "../../../sass/components/_inventory.scss";
 
-const { Header, Sider, Content } = Layout;
+import "../../../sass/components/_topnav.scss";     // ensure your nav styles are loaded
+import "../../../sass/components/_inventory.scss";  // your inventory-header styles
 
-const Inventory = () => {
+const { Sider, Content } = Layout;
+
+const NAV_HEIGHT = 76; // 44px input + 16px top padding +16px bottom padding
+
+export default function Inventory() {
   const [inventoryItems, setInventoryItems] = useState([]);
   const [archivedInventory, setArchivedInventory] = useState([]);
   const [isArchiveModalVisible, setIsArchiveModalVisible] = useState(false);
@@ -16,9 +31,11 @@ const Inventory = () => {
   const [editingInventoryItem, setEditingInventoryItem] = useState(null);
   const [editForm] = Form.useForm();
 
-  // ✅ Fix: Apply token with "Bearer " prefix
+  // apply Bearer prefix if needed
   const rawToken = localStorage.getItem("authToken");
-  const authToken = rawToken?.startsWith("Bearer ") ? rawToken : `Bearer ${rawToken}`;
+  const authToken = rawToken?.startsWith("Bearer ")
+    ? rawToken
+    : `Bearer ${rawToken}`;
   if (authToken) {
     axios.defaults.headers.common["Authorization"] = authToken;
   }
@@ -29,46 +46,50 @@ const Inventory = () => {
 
   const fetchInventory = async () => {
     try {
-      const response = await axios.get("/api/inventory");
+      const { data } = await axios.get("/api/inventory");
       setInventoryItems(
-        response.data.map((item) => ({
+        data.map((item) => ({
           key: item.id,
           product_id: item.product?.id,
           image: item.product?.image,
           product_name: item.product?.name,
           price: item.product?.price,
           stock_quantity: item.stock_quantity,
-          stock_status: item.stock_status || (item.stock_quantity === 0 ? "Out of Stock" : "In Stock"),
+          stock_status:
+            item.stock_status ||
+            (item.stock_quantity === 0 ? "Out of Stock" : "In Stock"),
           last_restock: item.last_restock
             ? new Date(item.last_restock).toLocaleDateString()
             : new Date().toLocaleDateString(),
         }))
       );
-    } catch (error) {
+    } catch (err) {
       message.error("Error fetching inventory data");
-      console.error("Fetch error:", error);
+      console.error(err);
     }
   };
 
   const fetchArchivedInventory = async () => {
     try {
-      const response = await axios.get("/api/inventory/archived");
+      const { data } = await axios.get("/api/inventory/archived");
       setArchivedInventory(
-        response.data.map((item) => ({
+        data.map((item) => ({
           key: item.id,
           image: item.product?.image,
           product_name: item.product?.name,
           price: item.product?.price,
           stock_quantity: item.stock_quantity,
-          stock_status: item.stock_status || (item.stock_quantity === 0 ? "Out of Stock" : "In Stock"),
+          stock_status:
+            item.stock_status ||
+            (item.stock_quantity === 0 ? "Out of Stock" : "In Stock"),
           last_restock: item.last_restock
             ? new Date(item.last_restock).toLocaleDateString()
             : new Date().toLocaleDateString(),
         }))
       );
-    } catch (error) {
+    } catch (err) {
       message.error("Error fetching archived inventory");
-      console.error("Fetch error:", error);
+      console.error(err);
     }
   };
 
@@ -77,9 +98,9 @@ const Inventory = () => {
       await axios.delete(`/api/inventory/${id}`);
       message.success("Inventory item archived successfully");
       fetchInventory();
-    } catch (error) {
+    } catch (err) {
       message.error("Error archiving inventory item");
-      console.error("Archive error:", error);
+      console.error(err);
     }
   };
 
@@ -89,9 +110,9 @@ const Inventory = () => {
       message.success("Inventory item restored successfully");
       fetchArchivedInventory();
       fetchInventory();
-    } catch (error) {
+    } catch (err) {
       message.error("Error restoring inventory item");
-      console.error("Restore error:", error);
+      console.error(err);
     }
   };
 
@@ -115,9 +136,9 @@ const Inventory = () => {
       message.success("Inventory item updated successfully");
       setIsEditModalVisible(false);
       fetchInventory();
-    } catch (error) {
+    } catch (err) {
       message.error("Error updating inventory item");
-      console.error("Edit update error:", error);
+      console.error(err);
     }
   };
 
@@ -126,9 +147,13 @@ const Inventory = () => {
       title: "Image",
       dataIndex: "image",
       key: "image",
-      render: (image) =>
-        image ? (
-          <img src={window.location.origin + image} alt="product" style={{ width: 50 }} />
+      render: (src) =>
+        src ? (
+          <img
+            src={window.location.origin + src}
+            alt="product"
+            style={{ width: 50 }}
+          />
         ) : (
           "No Image"
         ),
@@ -157,9 +182,13 @@ const Inventory = () => {
       title: "Image",
       dataIndex: "image",
       key: "image",
-      render: (image) =>
-        image ? (
-          <img src={window.location.origin + image} alt="product" style={{ width: 50 }} />
+      render: (src) =>
+        src ? (
+          <img
+            src={window.location.origin + src}
+            alt="product"
+            style={{ width: 50 }}
+          />
         ) : (
           "No Image"
         ),
@@ -173,26 +202,32 @@ const Inventory = () => {
       title: "Actions",
       key: "actions",
       render: (_, record) => (
-        <Space>
-          <Button type="primary" onClick={() => handleRestore(record.key)}>
-            Restore
-          </Button>
-        </Space>
+        <Button type="primary" onClick={() => handleRestore(record.key)}>
+          Restore
+        </Button>
       ),
     },
   ];
 
   return (
-    <Layout style={{ minHeight: "100vh" }}>
-      <Header style={{ padding: 0, background: "#008cff", position: "fixed", width: "100%", zIndex: 1000 }}>
-        <TopNav />
-      </Header>
-      <Layout style={{ marginTop: 64 }}>
+    <div className="inventory-page">
+      {/* fixed top nav */}
+      <TopNav />
+
+      {/* push layout down by NAV_HEIGHT */}
+      <Layout style={{ minHeight: "100vh", marginTop: NAV_HEIGHT }}>
         <Sider width={200}>
           <AdminSideMenu />
         </Sider>
         <Layout>
-          <Content style={{ margin: "24px 16px", padding: 24, background: "#fff", minHeight: 280 }}>
+          <Content
+            style={{
+              margin: "24px 16px",
+              padding: 24,
+              background: "#fff",
+              minHeight: 280,
+            }}
+          >
             <div className="inventory-header">
               <h2>Inventory List</h2>
               <Button
@@ -205,8 +240,15 @@ const Inventory = () => {
                 Show Archived
               </Button>
             </div>
-            <Table columns={columns} dataSource={inventoryItems} bordered pagination={{ pageSize: 5 }} />
 
+            <Table
+              columns={columns}
+              dataSource={inventoryItems}
+              bordered
+              pagination={{ pageSize: 5 }}
+            />
+
+            {/* Edit Modal */}
             <Modal
               title="Edit Inventory Item"
               open={isEditModalVisible}
@@ -214,31 +256,43 @@ const Inventory = () => {
               onOk={() => editForm.submit()}
             >
               <Form form={editForm} onFinish={handleEditSubmit} layout="vertical">
-                <Form.Item label="Product Name" name="product_name" rules={[{ required: true }]}>
+                <Form.Item
+                  label="Product Name"
+                  name="product_name"
+                  rules={[{ required: true }]}
+                >
                   <Input />
                 </Form.Item>
                 <Form.Item label="Price" name="price" rules={[{ required: true }]}>
                   <InputNumber min={0} style={{ width: "100%" }} />
                 </Form.Item>
-                <Form.Item label="Stock Quantity" name="stock_quantity" rules={[{ required: true }]}>
+                <Form.Item
+                  label="Stock Quantity"
+                  name="stock_quantity"
+                  rules={[{ required: true }]}
+                >
                   <InputNumber min={0} style={{ width: "100%" }} />
                 </Form.Item>
               </Form>
             </Modal>
 
+            {/* Archived Inventory Modal */}
             <Modal
               title="Archived Inventory"
               open={isArchiveModalVisible}
               onCancel={() => setIsArchiveModalVisible(false)}
               footer={null}
             >
-              <Table columns={archiveColumns} dataSource={archivedInventory} bordered pagination={{ pageSize: 5 }} />
+              <Table
+                columns={archiveColumns}
+                dataSource={archivedInventory}
+                bordered
+                pagination={{ pageSize: 5 }}
+              />
             </Modal>
           </Content>
         </Layout>
       </Layout>
-    </Layout>
+    </div>
   );
-};
-
-export default Inventory;
+}
