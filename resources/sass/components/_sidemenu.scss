@@ -1,17 +1,29 @@
 .side-menu {
-  background: #001529; // Dark background to match your images
+  background: #24067e;
+  position: fixed !important;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  width: 200px !important;
+  z-index: 900;
 
   .ant-menu {
+    background: transparent;
     border-right: none;
-  }
 
-  .ant-menu-item {
-    font-size: 16px;
-  }
+    .ant-menu-item {
+      color: #ffffff;
+      font-size: 16px;
 
-  .ant-menu-item-selected {
-    background-color: #1890ff !important;
-    color: white !important;
+      &:hover {
+        color: #ffcd38;
+      }
+    }
+
+    .ant-menu-item-selected {
+      background-color: #ffcd38 !important;
+      color: #24067e !important;
+    }
   }
 
   .logout-container {
@@ -25,7 +37,7 @@
       color: #ffffff;
 
       &:hover {
-        color: #1890ff;
+        color: #ffcd38;
       }
     }
   }

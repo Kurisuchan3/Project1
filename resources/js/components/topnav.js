@@ -58,49 +58,39 @@ const TopNav = () => {
   );
 
   return (
-    <>
-      <nav className="topnav">
-        <div className="logo">
-          <img src={logo} alt="Lapnix Logo" width={100} />
-        </div>
-
-        <div className="search-bar">
-          <Search
-            placeholder="Search product here..."
-            enterButton={<Button icon={<SearchOutlined />} />}
-            size="large"
-            style={{ maxWidth: "400px", width: "100%" }}
-          />
-        </div>
-
-        <div className="nav-right">
-          {isAuthenticated && (
-            <span className="username-inline">Welcome, {userName}</span>
-          )}
-          <div className="nav-icons">
-            <ShoppingCartOutlined style={{ fontSize: "18px", cursor: "pointer" }} />
-            <BellOutlined style={{ fontSize: "18px", cursor: "pointer" }} />
-            {isAuthenticated ? (
-              <Dropdown overlay={userMenu} placement="bottomRight">
-                <UserOutlined style={{ fontSize: "18px", cursor: "pointer" }} />
-              </Dropdown>
-            ) : (
-              <Button type="primary" onClick={() => navigate("/login")}>
-                Login
-              </Button>
-            )}
-          </div>
-        </div>
-      </nav>
-
-      <div className="nav-links">
-        <a href="/">Home</a>
-        <a href="/brands">Brands</a>
-        <a href="/peripherals">Peripherals</a>
-        <a href="/support">Support</a>
-        <a href="/about">About Us</a>
+    <nav className="topnav">
+      <div className="logo">
+        <img src={logo} alt="Lapnix Logo" width={100} />
       </div>
-    </>
+
+      <div className="search-bar">
+        <Search
+          placeholder="Search product here..."
+          enterButton={<Button icon={<SearchOutlined />} />}
+          size="large"
+          style={{ maxWidth: "400px", width: "100%" }}
+        />
+      </div>
+
+      <div className="nav-right">
+        {isAuthenticated && (
+          <span className="username-inline">Welcome, {userName}</span>
+        )}
+        <div className="nav-icons">
+          <ShoppingCartOutlined style={{ fontSize: "18px", cursor: "pointer" }} />
+          <BellOutlined style={{ fontSize: "18px", cursor: "pointer" }} />
+          {isAuthenticated ? (
+            <Dropdown overlay={userMenu} placement="bottomRight">
+              <UserOutlined style={{ fontSize: "18px", cursor: "pointer" }} />
+            </Dropdown>
+          ) : (
+            <Button type="primary" onClick={() => navigate("/login")}>
+              Login
+            </Button>
+          )}
+        </div>
+      </div>
+    </nav>
   );
 };
 

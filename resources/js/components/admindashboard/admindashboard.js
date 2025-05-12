@@ -1,24 +1,59 @@
-import React from "react";
+// C:\project-ecommerce-new\resources\js\components\admindashboard\admindashboard.js
+
+import React, { useState } from "react";
 import { Card, Typography, Layout } from "antd";
 import AdminSideMenu from "../admin-sidemenu";
 import TopNav from "../topnav";
 import "../../../sass/components/_admindashboard.scss";
 
 const { Title } = Typography;
-const { Header, Sider, Content } = Layout;
+const { Header, Content } = Layout;
 
 const DashboardWelcome = () => {
+  // Sidebar collapse state
+  const [collapsed, setCollapsed] = useState(false);
+
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Header style={{ padding: 0, background: "#008cff", position: "fixed", width: "100%", zIndex: 1000 }}>
+      
+      {/* Fixed Header */}
+      <Header
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: 64,
+          padding: 0,
+          background: "#008cff",
+          zIndex: 1000,
+        }}
+      >
         <TopNav />
       </Header>
-      <Layout style={{ marginTop: 64 }}>
-        <Sider width={200}>
-          <AdminSideMenu />
-        </Sider>
-        <Layout>
-          <Content style={{ margin: "24px 16px", padding: 24, background: "#fff", minHeight: 280 }}>
+
+      <Layout>
+        {/* Collapsible Sidebar */}
+        <AdminSideMenu
+          collapsed={collapsed}
+          onCollapse={setCollapsed}
+        />
+
+        {/* Main Content Layout (adjusts based on sidebar width) */}
+        <Layout
+          style={{
+            marginTop: 64,                     // Header height
+            marginLeft: collapsed ? 80 : 200,  // Sidebar width (collapsed or not)
+          }}
+        >
+          <Content
+            style={{
+              margin: "24px 16px",
+              padding: 24,
+              background: "#fff",
+              minHeight: 280,
+            }}
+          >
             <Card className="dashboard-card">
               <Title level={2}>Welcome to Dashboard</Title>
             </Card>

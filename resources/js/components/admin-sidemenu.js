@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Layout, Menu, Button } from "antd";
 import {
   DashboardOutlined,
@@ -11,11 +11,9 @@ import {
   StarOutlined,
   ShopOutlined,
   LogoutOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "../../sass/components/_sidemenu.scss";
 
 const { Sider } = Layout;
@@ -35,16 +33,26 @@ const menuItems = [
 
 const AdminSideMenu = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const [selectedKey, setSelectedKey] = useState("dashboard");
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const currentItem = menuItems.find(item => location.pathname.startsWith(item.path));
+    if (currentItem) {
+      setSelectedKey(currentItem.key);
+    }
+  }, [location.pathname]);
 
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
   };
 
   const handleMenuClick = ({ key }) => {
-    const selectedItem = menuItems.find((item) => item.key === key);
+    const selectedItem = menuItems.find(item => item.key === key);
     if (selectedItem?.path) {
       navigate(selectedItem.path);
+      setSelectedKey(key);
     }
   };
 
@@ -60,12 +68,19 @@ const AdminSideMenu = () => {
       onCollapse={toggleCollapsed}
       className="side-menu"
       width={200}
-      style={{ background: "#001529" }}
+      style={{
+        background: "#24067e",
+        position: "fixed",
+        top: 64,
+        left: 0,
+        bottom: 0,
+        overflowY: "auto"
+      }}
     >
       <Menu
         theme="dark"
         mode="inline"
-        defaultSelectedKeys={["dashboard"]}
+        selectedKeys={[selectedKey]}
         onClick={handleMenuClick}
       >
         {menuItems.map(({ key, icon, label }) => (

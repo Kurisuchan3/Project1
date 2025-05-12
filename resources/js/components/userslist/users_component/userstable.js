@@ -143,6 +143,7 @@ const UserTable = () => {
                 rowKey="user_id"
                 pagination={{ pageSize: 10 }}
                 bordered
+                scroll={{ x: true }} // ✅ Ant Design native responsive scroll
               />
             </div>
           </Content>

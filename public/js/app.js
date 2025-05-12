@@ -77705,7 +77705,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".side-menu {\n  background: #001529;\n}\n.side-menu .ant-menu {\n  border-right: none;\n}\n.side-menu .ant-menu-item {\n  font-size: 16px;\n}\n.side-menu .ant-menu-item-selected {\n  background-color: #1890ff !important;\n  color: white !important;\n}\n.side-menu .logout-container {\n  position: absolute;\n  bottom: 20px;\n  width: 100%;\n  text-align: center;\n}\n.side-menu .logout-container .logout-button {\n  width: 100%;\n  color: #ffffff;\n}\n.side-menu .logout-container .logout-button:hover {\n  color: #1890ff;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".side-menu {\n  background: #24067e;\n  position: fixed !important;\n  top: 64px;\n  bottom: 0;\n  left: 0;\n  width: 200px !important;\n  z-index: 900;\n}\n.side-menu .ant-menu {\n  background: transparent;\n  border-right: none;\n}\n.side-menu .ant-menu .ant-menu-item {\n  color: #ffffff;\n  font-size: 16px;\n}\n.side-menu .ant-menu .ant-menu-item:hover {\n  color: #ffcd38;\n}\n.side-menu .ant-menu .ant-menu-item-selected {\n  background-color: #ffcd38 !important;\n  color: #24067e !important;\n}\n.side-menu .logout-container {\n  position: absolute;\n  bottom: 20px;\n  width: 100%;\n  text-align: center;\n}\n.side-menu .logout-container .logout-button {\n  width: 100%;\n  color: #ffffff;\n}\n.side-menu .logout-container .logout-button:hover {\n  color: #ffcd38;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -77729,7 +77729,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@charset \"UTF-8\";\n:root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.topnav {\n  background-color: var(--purple);\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n}\n.topnav .logo {\n  display: flex;\n  align-items: center;\n}\n.topnav .logo img {\n  height: 40px;\n}\n.topnav .search-bar {\n  flex: 1;\n  margin: 0 2rem;\n  display: flex;\n  justify-content: center;\n  /* AntD input field */\n  /* AntD search button */\n}\n.topnav .search-bar input.ant-input {\n  border-radius: 4px 0 0 4px;\n  border: none;\n  height: 44px;\n  padding: 0 1rem;\n}\n.topnav .search-bar .ant-btn {\n  border-radius: 0 4px 4px 0;\n  background: var(--yellow);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .search-bar .ant-btn:hover, .topnav .search-bar .ant-btn:focus {\n  filter: brightness(0.9);\n}\n.topnav .nav-right {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n.topnav .nav-right .username-inline {\n  color: #fff;\n  font-size: 0.9rem;\n}\n.topnav .nav-right .nav-icons {\n  display: flex;\n  gap: 1rem;\n  /* The “Login” or “Profile” button when not an icon */\n}\n.topnav .nav-right .nav-icons svg,\n.topnav .nav-right .nav-icons .ant-dropdown-trigger {\n  font-size: 1.25rem;\n  color: #fff;\n  cursor: pointer;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary {\n  background: var(--yellow);\n  border-color: var(--yellow);\n  color: var(--purple);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary:hover, .topnav .nav-right .nav-icons .ant-btn-primary:focus {\n  filter: brightness(0.9);\n}\n\n/* Secondary nav links below topnav */\n.nav-links {\n  background: #fff;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  justify-content: center;\n  padding: 0.5rem 0;\n}\n.nav-links a {\n  margin: 0 1rem;\n  color: #333;\n  font-weight: 500;\n  text-decoration: none;\n  padding: 0.5rem;\n  transition: color 0.2s;\n}\n.nav-links a:hover {\n  color: var(--purple);\n}\n.nav-links a.active {\n  color: var(--purple);\n  font-weight: 600;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.topnav {\n  background-color: var(--purple);\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n}\n.topnav .logo {\n  display: flex;\n  align-items: center;\n}\n.topnav .logo img {\n  height: 40px;\n}\n.topnav .search-bar {\n  flex: 1;\n  margin: 0 2rem;\n  display: flex;\n  justify-content: center;\n}\n.topnav .search-bar input.ant-input {\n  border-radius: 4px 0 0 4px;\n  border: none;\n  height: 44px;\n  padding: 0 1rem;\n}\n.topnav .search-bar .ant-btn {\n  border-radius: 0 4px 4px 0;\n  background: var(--yellow);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .search-bar .ant-btn:hover, .topnav .search-bar .ant-btn:focus {\n  filter: brightness(0.9);\n}\n.topnav .nav-right {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n.topnav .nav-right .username-inline {\n  color: #fff;\n  font-size: 0.9rem;\n}\n.topnav .nav-right .nav-icons {\n  display: flex;\n  gap: 1rem;\n}\n.topnav .nav-right .nav-icons svg,\n.topnav .nav-right .nav-icons .ant-dropdown-trigger {\n  font-size: 1.25rem;\n  color: #fff;\n  cursor: pointer;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary {\n  background: var(--yellow);\n  border-color: var(--yellow);\n  color: var(--purple);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary:hover, .topnav .nav-right .nav-icons .ant-btn-primary:focus {\n  filter: brightness(0.9);\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -77753,7 +77753,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".user-table-container {\n  margin-top: 10px;\n  padding: 20px;\n  background: #fff;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.user-table-container .button-container {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  gap: 15px;\n  margin-bottom: 20px;\n}\n.user-table-container .button-container .ant-btn-primary {\n  background-color: #1890ff;\n  border-color: #1890ff;\n  font-weight: 500;\n  padding: 0 20px;\n  height: 40px;\n}\n.user-table-container .button-container .ant-btn-default {\n  border-color: #1890ff;\n  color: #1890ff;\n  font-weight: 500;\n  padding: 0 20px;\n  height: 40px;\n}\n.user-table-container .ant-table {\n  border-radius: 6px;\n  overflow: hidden;\n}\n.user-table-container .ant-table-thead > tr > th {\n  background-color: #1890ff;\n  color: white;\n  font-weight: 600;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".user-table-container {\n  margin-top: 10px;\n  padding: 20px;\n  background: #fff;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n  overflow-x: auto;\n}\n.user-table-container .button-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-items: center;\n  gap: 10px;\n  margin-bottom: 20px;\n}\n.user-table-container .button-container .ant-btn-primary,\n.user-table-container .button-container .ant-btn-default {\n  min-width: 130px;\n  font-weight: 500;\n  padding: 0 16px;\n  height: 40px;\n}\n.user-table-container .ant-table {\n  border-radius: 6px;\n  overflow: auto;\n  min-width: 600px;\n}\n.user-table-container .ant-table-thead > tr > th {\n  background-color: #1890ff;\n  color: white;\n  font-weight: 600;\n  white-space: nowrap;\n}\n.user-table-container .ant-table-cell {\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\n@media screen and (max-width: 992px) {\n  .user-table-container {\n    padding: 10px;\n  }\n  .user-table-container .button-container {\n    flex-direction: column;\n    align-items: stretch;\n  }\n  .user-table-container .button-container .ant-btn-primary,\n  .user-table-container .button-container .ant-btn-default {\n    width: 100%;\n  }\n  .user-table-container .ant-table {\n    min-width: unset;\n  }\n  .user-table-container .ant-table-thead > tr > th,\n  .user-table-container .ant-table-cell {\n    font-size: 14px;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -170823,7 +170823,20 @@ var AdminSideMenu = function AdminSideMenu() {
     _useState2 = _slicedToArray(_useState, 2),
     collapsed = _useState2[0],
     setCollapsed = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("dashboard"),
+    _useState4 = _slicedToArray(_useState3, 2),
+    selectedKey = _useState4[0],
+    setSelectedKey = _useState4[1];
   var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_14__.useNavigate)();
+  var location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_14__.useLocation)();
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var currentItem = menuItems.find(function (item) {
+      return location.pathname.startsWith(item.path);
+    });
+    if (currentItem) {
+      setSelectedKey(currentItem.key);
+    }
+  }, [location.pathname]);
   var toggleCollapsed = function toggleCollapsed() {
     setCollapsed(!collapsed);
   };
@@ -170834,6 +170847,7 @@ var AdminSideMenu = function AdminSideMenu() {
     });
     if (selectedItem !== null && selectedItem !== void 0 && selectedItem.path) {
       navigate(selectedItem.path);
+      setSelectedKey(key);
     }
   };
   var handleLogout = function handleLogout() {
@@ -170847,12 +170861,17 @@ var AdminSideMenu = function AdminSideMenu() {
     className: "side-menu",
     width: 200,
     style: {
-      background: "#001529"
+      background: "#24067e",
+      position: "fixed",
+      top: 64,
+      left: 0,
+      bottom: 0,
+      overflowY: "auto"
     },
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {
       theme: "dark",
       mode: "inline",
-      defaultSelectedKeys: ["dashboard"],
+      selectedKeys: [selectedKey],
       onClick: handleMenuClick,
       children: menuItems.map(function (_ref2) {
         var key = _ref2.key,
@@ -170898,6 +170917,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _topnav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../topnav */ "./resources/js/components/topnav.js");
 /* harmony import */ var _sass_components_admindashboard_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../sass/components/_admindashboard.scss */ "./resources/sass/components/_admindashboard.scss");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+// C:\project-ecommerce-new\resources\js\components\admindashboard\admindashboard.js
+
 
 
 
@@ -170906,30 +170933,39 @@ __webpack_require__.r(__webpack_exports__);
 
 var Title = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Title;
 var Header = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Header,
-  Sider = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Sider,
   Content = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Content;
 var DashboardWelcome = function DashboardWelcome() {
+  // Sidebar collapse state
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState2 = _slicedToArray(_useState, 2),
+    collapsed = _useState2[0],
+    setCollapsed = _useState2[1];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
     style: {
       minHeight: "100vh"
     },
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Header, {
       style: {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: 64,
         padding: 0,
         background: "#008cff",
-        position: "fixed",
-        width: "100%",
         zIndex: 1000
       },
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_2__["default"], {})
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      style: {
-        marginTop: 64
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Sider, {
-        width: 200,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_1__["default"], {})
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        collapsed: collapsed,
+        onCollapse: setCollapsed
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        style: {
+          marginTop: 64,
+          // Header height
+          marginLeft: collapsed ? 80 : 200 // Sidebar width (collapsed or not)
+        },
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Content, {
           style: {
             margin: "24px 16px",
@@ -172693,81 +172729,61 @@ var TopNav = function TopNav() {
       children: "Logout"
     }, "logout")]
   });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("nav", {
-      className: "topnav",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "logo",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-          src: _public_images_lapnixlogo_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
-          alt: "Lapnix Logo",
-          width: 100
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "search-bar",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Search, {
-          placeholder: "Search product here...",
-          enterButton: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
-            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_11__["default"], {})
-          }),
-          size: "large",
-          style: {
-            maxWidth: "400px",
-            width: "100%"
-          }
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "nav-right",
-        children: [isAuthenticated && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-          className: "username-inline",
-          children: ["Welcome, ", userName]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "nav-icons",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {
-            style: {
-              fontSize: "18px",
-              cursor: "pointer"
-            }
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_13__["default"], {
-            style: {
-              fontSize: "18px",
-              cursor: "pointer"
-            }
-          }), isAuthenticated ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
-            overlay: userMenu,
-            placement: "bottomRight",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_15__["default"], {
-              style: {
-                fontSize: "18px",
-                cursor: "pointer"
-              }
-            })
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
-            type: "primary",
-            onClick: function onClick() {
-              return navigate("/login");
-            },
-            children: "Login"
-          })]
-        })]
-      })]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("nav", {
+    className: "topnav",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "logo",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+        src: _public_images_lapnixlogo_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
+        alt: "Lapnix Logo",
+        width: 100
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "search-bar",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Search, {
+        placeholder: "Search product here...",
+        enterButton: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_11__["default"], {})
+        }),
+        size: "large",
+        style: {
+          maxWidth: "400px",
+          width: "100%"
+        }
+      })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "nav-links",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-        href: "/",
-        children: "Home"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-        href: "/brands",
-        children: "Brands"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-        href: "/peripherals",
-        children: "Peripherals"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-        href: "/support",
-        children: "Support"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-        href: "/about",
-        children: "About Us"
+      className: "nav-right",
+      children: [isAuthenticated && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+        className: "username-inline",
+        children: ["Welcome, ", userName]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "nav-icons",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {
+          style: {
+            fontSize: "18px",
+            cursor: "pointer"
+          }
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          style: {
+            fontSize: "18px",
+            cursor: "pointer"
+          }
+        }), isAuthenticated ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          overlay: userMenu,
+          placement: "bottomRight",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            style: {
+              fontSize: "18px",
+              cursor: "pointer"
+            }
+          })
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          type: "primary",
+          onClick: function onClick() {
+            return navigate("/login");
+          },
+          children: "Login"
+        })]
       })]
     })]
   });
@@ -173061,7 +173077,10 @@ var UserTable = function UserTable() {
               pagination: {
                 pageSize: 10
               },
-              bordered: true
+              bordered: true,
+              scroll: {
+                x: true
+              } // ✅ Ant Design native responsive scroll
             })]
           })
         })
