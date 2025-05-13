@@ -4894,24 +4894,6 @@ var CheckCircleFilled = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 8
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons-svg/es/asn/CheckCircleOutlined.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/es/asn/CheckCircleOutlined.js ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-// This icon file is generated automatically.
-var CheckCircleOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M699 353h-46.9c-10.2 0-19.9 4.9-25.9 13.3L469 584.3l-71.2-98.8c-6-8.3-15.6-13.3-25.9-13.3H325c-6.5 0-10.3 7.4-6.5 12.7l124.6 172.8a31.8 31.8 0 0051.7 0l210.6-292c3.9-5.3.1-12.7-6.4-12.7z" } }, { "tag": "path", "attrs": { "d": "M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" } }] }, "name": "check-circle", "theme": "outlined" };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CheckCircleOutlined);
-
-
-/***/ }),
-
 /***/ "./node_modules/@ant-design/icons-svg/es/asn/CheckOutlined.js":
 /*!********************************************************************!*\
   !*** ./node_modules/@ant-design/icons-svg/es/asn/CheckOutlined.js ***!
@@ -4926,6 +4908,24 @@ __webpack_require__.r(__webpack_exports__);
 // This icon file is generated automatically.
 var CheckOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" } }] }, "name": "check", "theme": "outlined" };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CheckOutlined);
+
+
+/***/ }),
+
+/***/ "./node_modules/@ant-design/icons-svg/es/asn/ClockCircleOutlined.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@ant-design/icons-svg/es/asn/ClockCircleOutlined.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// This icon file is generated automatically.
+var ClockCircleOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" } }, { "tag": "path", "attrs": { "d": "M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z" } }] }, "name": "clock-circle", "theme": "outlined" };
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ClockCircleOutlined);
 
 
 /***/ }),
@@ -5160,24 +5160,6 @@ __webpack_require__.r(__webpack_exports__);
 // This icon file is generated automatically.
 var ExclamationCircleFilled = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm-32 232c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V296zm32 440a48.01 48.01 0 010-96 48.01 48.01 0 010 96z" } }] }, "name": "exclamation-circle", "theme": "filled" };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ExclamationCircleFilled);
-
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons-svg/es/asn/ExclamationCircleOutlined.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons-svg/es/asn/ExclamationCircleOutlined.js ***!
-  \********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-// This icon file is generated automatically.
-var ExclamationCircleOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" } }, { "tag": "path", "attrs": { "d": "M464 688a48 48 0 1096 0 48 48 0 10-96 0zm24-112h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8z" } }] }, "name": "exclamation-circle", "theme": "outlined" };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ExclamationCircleOutlined);
 
 
 /***/ }),
@@ -6239,44 +6221,6 @@ if (true) {
 
 /***/ }),
 
-/***/ "./node_modules/@ant-design/icons/es/icons/CheckCircleOutlined.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/es/icons/CheckCircleOutlined.js ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ant_design_icons_svg_es_asn_CheckCircleOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons-svg/es/asn/CheckCircleOutlined */ "./node_modules/@ant-design/icons-svg/es/asn/CheckCircleOutlined.js");
-/* harmony import */ var _components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/es/components/AntdIcon.js");
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-
-
-
-
-var CheckCircleOutlined = function CheckCircleOutlined(props, ref) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    ref: ref,
-    icon: _ant_design_icons_svg_es_asn_CheckCircleOutlined__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }));
-};
-
-/**![check-circle](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTY5OSAzNTNoLTQ2LjljLTEwLjIgMC0xOS45IDQuOS0yNS45IDEzLjNMNDY5IDU4NC4zbC03MS4yLTk4LjhjLTYtOC4zLTE1LjYtMTMuMy0yNS45LTEzLjNIMzI1Yy02LjUgMC0xMC4zIDcuNC02LjUgMTIuN2wxMjQuNiAxNzIuOGEzMS44IDMxLjggMCAwMDUxLjcgMGwyMTAuNi0yOTJjMy45LTUuMy4xLTEyLjctNi40LTEyLjd6IiAvPjxwYXRoIGQ9Ik01MTIgNjRDMjY0LjYgNjQgNjQgMjY0LjYgNjQgNTEyczIwMC42IDQ0OCA0NDggNDQ4IDQ0OC0yMDAuNiA0NDgtNDQ4Uzc1OS40IDY0IDUxMiA2NHptMCA4MjBjLTIwNS40IDAtMzcyLTE2Ni42LTM3Mi0zNzJzMTY2LjYtMzcyIDM3Mi0zNzIgMzcyIDE2Ni42IDM3MiAzNzItMTY2LjYgMzcyLTM3MiAzNzJ6IiAvPjwvc3ZnPg==) */
-var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(CheckCircleOutlined);
-if (true) {
-  RefIcon.displayName = 'CheckCircleOutlined';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
-
-/***/ }),
-
 /***/ "./node_modules/@ant-design/icons/es/icons/CheckOutlined.js":
 /*!******************************************************************!*\
   !*** ./node_modules/@ant-design/icons/es/icons/CheckOutlined.js ***!
@@ -6310,6 +6254,44 @@ var CheckOutlined = function CheckOutlined(props, ref) {
 var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(CheckOutlined);
 if (true) {
   RefIcon.displayName = 'CheckOutlined';
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
+
+/***/ }),
+
+/***/ "./node_modules/@ant-design/icons/es/icons/ClockCircleOutlined.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@ant-design/icons/es/icons/ClockCircleOutlined.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _ant_design_icons_svg_es_asn_ClockCircleOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons-svg/es/asn/ClockCircleOutlined */ "./node_modules/@ant-design/icons-svg/es/asn/ClockCircleOutlined.js");
+/* harmony import */ var _components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/es/components/AntdIcon.js");
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+
+
+
+var ClockCircleOutlined = function ClockCircleOutlined(props, ref) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    ref: ref,
+    icon: _ant_design_icons_svg_es_asn_ClockCircleOutlined__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }));
+};
+
+/**![clock-circle](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUxMiA2NEMyNjQuNiA2NCA2NCAyNjQuNiA2NCA1MTJzMjAwLjYgNDQ4IDQ0OCA0NDggNDQ4LTIwMC42IDQ0OC00NDhTNzU5LjQgNjQgNTEyIDY0em0wIDgyMGMtMjA1LjQgMC0zNzItMTY2LjYtMzcyLTM3MnMxNjYuNi0zNzIgMzcyLTM3MiAzNzIgMTY2LjYgMzcyIDM3Mi0xNjYuNiAzNzItMzcyIDM3MnoiIC8+PHBhdGggZD0iTTY4Ni43IDYzOC42TDU0NC4xIDUzNS41VjI4OGMwLTQuNC0zLjYtOC04LThINDg4Yy00LjQgMC04IDMuNi04IDh2Mjc1LjRjMCAyLjYgMS4yIDUgMy4zIDYuNWwxNjUuNCAxMjAuNmMzLjYgMi42IDguNiAxLjggMTEuMi0xLjdsMjguNi0zOWMyLjYtMy43IDEuOC04LjctMS44LTExLjJ6IiAvPjwvc3ZnPg==) */
+var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(ClockCircleOutlined);
+if (true) {
+  RefIcon.displayName = 'ClockCircleOutlined';
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
 
@@ -6804,44 +6786,6 @@ var ExclamationCircleFilled = function ExclamationCircleFilled(props, ref) {
 var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(ExclamationCircleFilled);
 if (true) {
   RefIcon.displayName = 'ExclamationCircleFilled';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
-
-/***/ }),
-
-/***/ "./node_modules/@ant-design/icons/es/icons/ExclamationCircleOutlined.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@ant-design/icons/es/icons/ExclamationCircleOutlined.js ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ant_design_icons_svg_es_asn_ExclamationCircleOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons-svg/es/asn/ExclamationCircleOutlined */ "./node_modules/@ant-design/icons-svg/es/asn/ExclamationCircleOutlined.js");
-/* harmony import */ var _components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AntdIcon */ "./node_modules/@ant-design/icons/es/components/AntdIcon.js");
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-
-
-
-
-var ExclamationCircleOutlined = function ExclamationCircleOutlined(props, ref) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_AntdIcon__WEBPACK_IMPORTED_MODULE_2__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    ref: ref,
-    icon: _ant_design_icons_svg_es_asn_ExclamationCircleOutlined__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }));
-};
-
-/**![exclamation-circle](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUxMiA2NEMyNjQuNiA2NCA2NCAyNjQuNiA2NCA1MTJzMjAwLjYgNDQ4IDQ0OCA0NDggNDQ4LTIwMC42IDQ0OC00NDhTNzU5LjQgNjQgNTEyIDY0em0wIDgyMGMtMjA1LjQgMC0zNzItMTY2LjYtMzcyLTM3MnMxNjYuNi0zNzIgMzcyLTM3MiAzNzIgMTY2LjYgMzcyIDM3Mi0xNjYuNiAzNzItMzcyIDM3MnoiIC8+PHBhdGggZD0iTTQ2NCA2ODhhNDggNDggMCAxMDk2IDAgNDggNDggMCAxMC05NiAwem0yNC0xMTJoNDhjNC40IDAgOC0zLjYgOC04VjI5NmMwLTQuNC0zLjYtOC04LThoLTQ4Yy00LjQgMC04IDMuNi04IDh2MjcyYzAgNC40IDMuNiA4IDggOHoiIC8+PC9zdmc+) */
-var RefIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(ExclamationCircleOutlined);
-if (true) {
-  RefIcon.displayName = 'ExclamationCircleOutlined';
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefIcon);
 
@@ -76148,7 +76092,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".dashboard-card {\n  text-align: center;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.dashboard-card h2 {\n  font-size: 28px;\n  color: #333;\n}\n\n.dashboard-page .ant-card {\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".dashboard-card {\n  text-align: center;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.dashboard-card h2 {\n  font-size: 28px;\n  color: #333;\n}\n\n.dashboard-page .ant-card {\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);\n}\n.dashboard-page .ant-card-head {\n  border-bottom: none;\n}\n.dashboard-page .ant-table-container table thead.ant-table-thead > tr > th {\n  background-color: #24067e !important;\n  color: #fff !important;\n}\n.dashboard-page .ant-btn-primary {\n  background-color: #24067e !important;\n  border-color: #24067e !important;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -76292,7 +76236,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.topnav {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  z-index: 1000;\n  background-color: var(--purple);\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n}\n.topnav .logo {\n  display: flex;\n  align-items: center;\n}\n.topnav .logo img {\n  height: 40px;\n}\n.topnav .search-bar {\n  flex: 1;\n  margin: 0 2rem;\n  display: flex;\n  justify-content: center;\n}\n.topnav .search-bar input.ant-input {\n  border-radius: 4px 0 0 4px;\n  border: none;\n  height: 44px;\n  padding: 0 1rem;\n}\n.topnav .search-bar .ant-btn {\n  border-radius: 0 4px 4px 0;\n  background: var(--yellow);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .search-bar .ant-btn:hover, .topnav .search-bar .ant-btn:focus {\n  filter: brightness(0.9);\n}\n.topnav .nav-right {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n.topnav .nav-right .username-inline {\n  color: #fff;\n  font-size: 0.9rem;\n}\n.topnav .nav-right .nav-icons {\n  display: flex;\n  gap: 1rem;\n}\n.topnav .nav-right .nav-icons svg,\n.topnav .nav-right .nav-icons .ant-dropdown-trigger {\n  font-size: 1.25rem;\n  color: #fff;\n  cursor: pointer;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary {\n  background: var(--yellow);\n  border-color: var(--yellow);\n  color: var(--purple);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary:hover, .topnav .nav-right .nav-icons .ant-btn-primary:focus {\n  filter: brightness(0.9);\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.topnav {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  z-index: 1000;\n  background-color: var(--purple);\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 2rem;\n}\n.topnav .logo {\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n}\n.topnav .logo img {\n  height: 40px;\n}\n.topnav .search-bar {\n  flex: 1;\n  margin: 0 2rem;\n  display: flex;\n  justify-content: center;\n}\n.topnav .search-bar input.ant-input {\n  border-radius: 4px 0 0 4px;\n  border: none;\n  height: 44px;\n  padding: 0 1rem;\n}\n.topnav .search-bar .ant-btn {\n  border-radius: 0 4px 4px 0;\n  background: var(--yellow);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .search-bar .ant-btn:hover, .topnav .search-bar .ant-btn:focus {\n  filter: brightness(0.9);\n}\n.topnav .nav-right {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n.topnav .nav-right .username-inline {\n  color: #fff;\n  font-size: 0.9rem;\n}\n.topnav .nav-right .nav-icons {\n  display: flex;\n  gap: 1rem;\n}\n.topnav .nav-right .nav-icons svg,\n.topnav .nav-right .nav-icons .ant-dropdown-trigger {\n  font-size: 1.25rem;\n  color: #fff;\n  cursor: pointer;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary {\n  background: var(--yellow);\n  border-color: var(--yellow);\n  color: var(--purple);\n  font-weight: 500;\n  transition: filter 0.2s;\n}\n.topnav .nav-right .nav-icons .ant-btn-primary:hover, .topnav .nav-right .nav-icons .ant-btn-primary:focus {\n  filter: brightness(0.9);\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -182344,6 +182288,584 @@ var memoize = function memoize(fn) {
 
 /***/ }),
 
+/***/ "./node_modules/recharts/es6/cartesian/Area.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/recharts/es6/cartesian/Area.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Area: () => (/* binding */ Area)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.mjs");
+/* harmony import */ var react_smooth__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-smooth */ "./node_modules/react-smooth/es6/index.js");
+/* harmony import */ var lodash_isFunction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/isFunction */ "./node_modules/lodash/isFunction.js");
+/* harmony import */ var lodash_isFunction__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_isFunction__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash_max__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/max */ "./node_modules/lodash/max.js");
+/* harmony import */ var lodash_max__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_max__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var lodash_isNil__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash/isNil */ "./node_modules/lodash/isNil.js");
+/* harmony import */ var lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_isNil__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var lodash_isNaN__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash/isNaN */ "./node_modules/lodash/isNaN.js");
+/* harmony import */ var lodash_isNaN__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash_isNaN__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lodash/isEqual */ "./node_modules/lodash/isEqual.js");
+/* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(lodash_isEqual__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _shape_Curve__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../shape/Curve */ "./node_modules/recharts/es6/shape/Curve.js");
+/* harmony import */ var _shape_Dot__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../shape/Dot */ "./node_modules/recharts/es6/shape/Dot.js");
+/* harmony import */ var _container_Layer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../container/Layer */ "./node_modules/recharts/es6/container/Layer.js");
+/* harmony import */ var _component_LabelList__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../component/LabelList */ "./node_modules/recharts/es6/component/LabelList.js");
+/* harmony import */ var _util_Global__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../util/Global */ "./node_modules/recharts/es6/util/Global.js");
+/* harmony import */ var _util_DataUtils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../util/DataUtils */ "./node_modules/recharts/es6/util/DataUtils.js");
+/* harmony import */ var _util_ChartUtils__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../util/ChartUtils */ "./node_modules/recharts/es6/util/ChartUtils.js");
+/* harmony import */ var _util_ReactUtils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../util/ReactUtils */ "./node_modules/recharts/es6/util/ReactUtils.js");
+var _excluded = ["layout", "type", "stroke", "connectNulls", "isRange", "ref"],
+  _excluded2 = ["key"];
+var _Area;
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } } return target; }
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+/**
+ * @fileOverview Area
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Area = /*#__PURE__*/function (_PureComponent) {
+  function Area() {
+    var _this;
+    _classCallCheck(this, Area);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+    _this = _callSuper(this, Area, [].concat(args));
+    _defineProperty(_this, "state", {
+      isAnimationFinished: true
+    });
+    _defineProperty(_this, "id", (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.uniqueId)('recharts-area-'));
+    _defineProperty(_this, "handleAnimationEnd", function () {
+      var onAnimationEnd = _this.props.onAnimationEnd;
+      _this.setState({
+        isAnimationFinished: true
+      });
+      if (lodash_isFunction__WEBPACK_IMPORTED_MODULE_2___default()(onAnimationEnd)) {
+        onAnimationEnd();
+      }
+    });
+    _defineProperty(_this, "handleAnimationStart", function () {
+      var onAnimationStart = _this.props.onAnimationStart;
+      _this.setState({
+        isAnimationFinished: false
+      });
+      if (lodash_isFunction__WEBPACK_IMPORTED_MODULE_2___default()(onAnimationStart)) {
+        onAnimationStart();
+      }
+    });
+    return _this;
+  }
+  _inherits(Area, _PureComponent);
+  return _createClass(Area, [{
+    key: "renderDots",
+    value: function renderDots(needClip, clipDot, clipPathId) {
+      var isAnimationActive = this.props.isAnimationActive;
+      var isAnimationFinished = this.state.isAnimationFinished;
+      if (isAnimationActive && !isAnimationFinished) {
+        return null;
+      }
+      var _this$props = this.props,
+        dot = _this$props.dot,
+        points = _this$props.points,
+        dataKey = _this$props.dataKey;
+      var areaProps = (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_8__.filterProps)(this.props, false);
+      var customDotProps = (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_8__.filterProps)(dot, true);
+      var dots = points.map(function (entry, i) {
+        var dotProps = _objectSpread(_objectSpread(_objectSpread({
+          key: "dot-".concat(i),
+          r: 3
+        }, areaProps), customDotProps), {}, {
+          index: i,
+          cx: entry.x,
+          cy: entry.y,
+          dataKey: dataKey,
+          value: entry.value,
+          payload: entry.payload,
+          points: points
+        });
+        return Area.renderDotItem(dot, dotProps);
+      });
+      var dotsProps = {
+        clipPath: needClip ? "url(#clipPath-".concat(clipDot ? '' : 'dots-').concat(clipPathId, ")") : null
+      };
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_9__.Layer, _extends({
+        className: "recharts-area-dots"
+      }, dotsProps), dots);
+    }
+  }, {
+    key: "renderHorizontalRect",
+    value: function renderHorizontalRect(alpha) {
+      var _this$props2 = this.props,
+        baseLine = _this$props2.baseLine,
+        points = _this$props2.points,
+        strokeWidth = _this$props2.strokeWidth;
+      var startX = points[0].x;
+      var endX = points[points.length - 1].x;
+      var width = alpha * Math.abs(startX - endX);
+      var maxY = lodash_max__WEBPACK_IMPORTED_MODULE_3___default()(points.map(function (entry) {
+        return entry.y || 0;
+      }));
+      if ((0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.isNumber)(baseLine) && typeof baseLine === 'number') {
+        maxY = Math.max(baseLine, maxY);
+      } else if (baseLine && Array.isArray(baseLine) && baseLine.length) {
+        maxY = Math.max(lodash_max__WEBPACK_IMPORTED_MODULE_3___default()(baseLine.map(function (entry) {
+          return entry.y || 0;
+        })), maxY);
+      }
+      if ((0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.isNumber)(maxY)) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("rect", {
+          x: startX < endX ? startX : startX - width,
+          y: 0,
+          width: width,
+          height: Math.floor(maxY + (strokeWidth ? parseInt("".concat(strokeWidth), 10) : 1))
+        });
+      }
+      return null;
+    }
+  }, {
+    key: "renderVerticalRect",
+    value: function renderVerticalRect(alpha) {
+      var _this$props3 = this.props,
+        baseLine = _this$props3.baseLine,
+        points = _this$props3.points,
+        strokeWidth = _this$props3.strokeWidth;
+      var startY = points[0].y;
+      var endY = points[points.length - 1].y;
+      var height = alpha * Math.abs(startY - endY);
+      var maxX = lodash_max__WEBPACK_IMPORTED_MODULE_3___default()(points.map(function (entry) {
+        return entry.x || 0;
+      }));
+      if ((0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.isNumber)(baseLine) && typeof baseLine === 'number') {
+        maxX = Math.max(baseLine, maxX);
+      } else if (baseLine && Array.isArray(baseLine) && baseLine.length) {
+        maxX = Math.max(lodash_max__WEBPACK_IMPORTED_MODULE_3___default()(baseLine.map(function (entry) {
+          return entry.x || 0;
+        })), maxX);
+      }
+      if ((0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.isNumber)(maxX)) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("rect", {
+          x: 0,
+          y: startY < endY ? startY : startY - height,
+          width: maxX + (strokeWidth ? parseInt("".concat(strokeWidth), 10) : 1),
+          height: Math.floor(height)
+        });
+      }
+      return null;
+    }
+  }, {
+    key: "renderClipRect",
+    value: function renderClipRect(alpha) {
+      var layout = this.props.layout;
+      if (layout === 'vertical') {
+        return this.renderVerticalRect(alpha);
+      }
+      return this.renderHorizontalRect(alpha);
+    }
+  }, {
+    key: "renderAreaStatically",
+    value: function renderAreaStatically(points, baseLine, needClip, clipPathId) {
+      var _this$props4 = this.props,
+        layout = _this$props4.layout,
+        type = _this$props4.type,
+        stroke = _this$props4.stroke,
+        connectNulls = _this$props4.connectNulls,
+        isRange = _this$props4.isRange,
+        ref = _this$props4.ref,
+        others = _objectWithoutProperties(_this$props4, _excluded);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_9__.Layer, {
+        clipPath: needClip ? "url(#clipPath-".concat(clipPathId, ")") : null
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_shape_Curve__WEBPACK_IMPORTED_MODULE_10__.Curve, _extends({}, (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_8__.filterProps)(others, true), {
+        points: points,
+        connectNulls: connectNulls,
+        type: type,
+        baseLine: baseLine,
+        layout: layout,
+        stroke: "none",
+        className: "recharts-area-area"
+      })), stroke !== 'none' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_shape_Curve__WEBPACK_IMPORTED_MODULE_10__.Curve, _extends({}, (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_8__.filterProps)(this.props, false), {
+        className: "recharts-area-curve",
+        layout: layout,
+        type: type,
+        connectNulls: connectNulls,
+        fill: "none",
+        points: points
+      })), stroke !== 'none' && isRange && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_shape_Curve__WEBPACK_IMPORTED_MODULE_10__.Curve, _extends({}, (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_8__.filterProps)(this.props, false), {
+        className: "recharts-area-curve",
+        layout: layout,
+        type: type,
+        connectNulls: connectNulls,
+        fill: "none",
+        points: baseLine
+      })));
+    }
+  }, {
+    key: "renderAreaWithAnimation",
+    value: function renderAreaWithAnimation(needClip, clipPathId) {
+      var _this2 = this;
+      var _this$props5 = this.props,
+        points = _this$props5.points,
+        baseLine = _this$props5.baseLine,
+        isAnimationActive = _this$props5.isAnimationActive,
+        animationBegin = _this$props5.animationBegin,
+        animationDuration = _this$props5.animationDuration,
+        animationEasing = _this$props5.animationEasing,
+        animationId = _this$props5.animationId;
+      var _this$state = this.state,
+        prevPoints = _this$state.prevPoints,
+        prevBaseLine = _this$state.prevBaseLine;
+      // const clipPathId = isNil(id) ? this.id : id;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_smooth__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        begin: animationBegin,
+        duration: animationDuration,
+        isActive: isAnimationActive,
+        easing: animationEasing,
+        from: {
+          t: 0
+        },
+        to: {
+          t: 1
+        },
+        key: "area-".concat(animationId),
+        onAnimationEnd: this.handleAnimationEnd,
+        onAnimationStart: this.handleAnimationStart
+      }, function (_ref) {
+        var t = _ref.t;
+        if (prevPoints) {
+          var prevPointsDiffFactor = prevPoints.length / points.length;
+          // update animtaion
+          var stepPoints = points.map(function (entry, index) {
+            var prevPointIndex = Math.floor(index * prevPointsDiffFactor);
+            if (prevPoints[prevPointIndex]) {
+              var prev = prevPoints[prevPointIndex];
+              var interpolatorX = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.interpolateNumber)(prev.x, entry.x);
+              var interpolatorY = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.interpolateNumber)(prev.y, entry.y);
+              return _objectSpread(_objectSpread({}, entry), {}, {
+                x: interpolatorX(t),
+                y: interpolatorY(t)
+              });
+            }
+            return entry;
+          });
+          var stepBaseLine;
+          if ((0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.isNumber)(baseLine) && typeof baseLine === 'number') {
+            var interpolator = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.interpolateNumber)(prevBaseLine, baseLine);
+            stepBaseLine = interpolator(t);
+          } else if (lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(baseLine) || lodash_isNaN__WEBPACK_IMPORTED_MODULE_5___default()(baseLine)) {
+            var _interpolator = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.interpolateNumber)(prevBaseLine, 0);
+            stepBaseLine = _interpolator(t);
+          } else {
+            stepBaseLine = baseLine.map(function (entry, index) {
+              var prevPointIndex = Math.floor(index * prevPointsDiffFactor);
+              if (prevBaseLine[prevPointIndex]) {
+                var prev = prevBaseLine[prevPointIndex];
+                var interpolatorX = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.interpolateNumber)(prev.x, entry.x);
+                var interpolatorY = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.interpolateNumber)(prev.y, entry.y);
+                return _objectSpread(_objectSpread({}, entry), {}, {
+                  x: interpolatorX(t),
+                  y: interpolatorY(t)
+                });
+              }
+              return entry;
+            });
+          }
+          return _this2.renderAreaStatically(stepPoints, stepBaseLine, needClip, clipPathId);
+        }
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_9__.Layer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("clipPath", {
+          id: "animationClipPath-".concat(clipPathId)
+        }, _this2.renderClipRect(t))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_9__.Layer, {
+          clipPath: "url(#animationClipPath-".concat(clipPathId, ")")
+        }, _this2.renderAreaStatically(points, baseLine, needClip, clipPathId)));
+      });
+    }
+  }, {
+    key: "renderArea",
+    value: function renderArea(needClip, clipPathId) {
+      var _this$props6 = this.props,
+        points = _this$props6.points,
+        baseLine = _this$props6.baseLine,
+        isAnimationActive = _this$props6.isAnimationActive;
+      var _this$state2 = this.state,
+        prevPoints = _this$state2.prevPoints,
+        prevBaseLine = _this$state2.prevBaseLine,
+        totalLength = _this$state2.totalLength;
+      if (isAnimationActive && points && points.length && (!prevPoints && totalLength > 0 || !lodash_isEqual__WEBPACK_IMPORTED_MODULE_6___default()(prevPoints, points) || !lodash_isEqual__WEBPACK_IMPORTED_MODULE_6___default()(prevBaseLine, baseLine))) {
+        return this.renderAreaWithAnimation(needClip, clipPathId);
+      }
+      return this.renderAreaStatically(points, baseLine, needClip, clipPathId);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _filterProps;
+      var _this$props7 = this.props,
+        hide = _this$props7.hide,
+        dot = _this$props7.dot,
+        points = _this$props7.points,
+        className = _this$props7.className,
+        top = _this$props7.top,
+        left = _this$props7.left,
+        xAxis = _this$props7.xAxis,
+        yAxis = _this$props7.yAxis,
+        width = _this$props7.width,
+        height = _this$props7.height,
+        isAnimationActive = _this$props7.isAnimationActive,
+        id = _this$props7.id;
+      if (hide || !points || !points.length) {
+        return null;
+      }
+      var isAnimationFinished = this.state.isAnimationFinished;
+      var hasSinglePoint = points.length === 1;
+      var layerClass = (0,clsx__WEBPACK_IMPORTED_MODULE_1__["default"])('recharts-area', className);
+      var needClipX = xAxis && xAxis.allowDataOverflow;
+      var needClipY = yAxis && yAxis.allowDataOverflow;
+      var needClip = needClipX || needClipY;
+      var clipPathId = lodash_isNil__WEBPACK_IMPORTED_MODULE_4___default()(id) ? this.id : id;
+      var _ref2 = (_filterProps = (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_8__.filterProps)(dot, false)) !== null && _filterProps !== void 0 ? _filterProps : {
+          r: 3,
+          strokeWidth: 2
+        },
+        _ref2$r = _ref2.r,
+        r = _ref2$r === void 0 ? 3 : _ref2$r,
+        _ref2$strokeWidth = _ref2.strokeWidth,
+        strokeWidth = _ref2$strokeWidth === void 0 ? 2 : _ref2$strokeWidth;
+      var _ref3 = (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_8__.hasClipDot)(dot) ? dot : {},
+        _ref3$clipDot = _ref3.clipDot,
+        clipDot = _ref3$clipDot === void 0 ? true : _ref3$clipDot;
+      var dotSize = r * 2 + strokeWidth;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_9__.Layer, {
+        className: layerClass
+      }, needClipX || needClipY ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("clipPath", {
+        id: "clipPath-".concat(clipPathId)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("rect", {
+        x: needClipX ? left : left - width / 2,
+        y: needClipY ? top : top - height / 2,
+        width: needClipX ? width : width * 2,
+        height: needClipY ? height : height * 2
+      })), !clipDot && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("clipPath", {
+        id: "clipPath-dots-".concat(clipPathId)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("rect", {
+        x: left - dotSize / 2,
+        y: top - dotSize / 2,
+        width: width + dotSize,
+        height: height + dotSize
+      }))) : null, !hasSinglePoint ? this.renderArea(needClip, clipPathId) : null, (dot || hasSinglePoint) && this.renderDots(needClip, clipDot, clipPathId), (!isAnimationActive || isAnimationFinished) && _component_LabelList__WEBPACK_IMPORTED_MODULE_12__.LabelList.renderCallByParent(this.props, points));
+    }
+  }], [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps, prevState) {
+      if (nextProps.animationId !== prevState.prevAnimationId) {
+        return {
+          prevAnimationId: nextProps.animationId,
+          curPoints: nextProps.points,
+          curBaseLine: nextProps.baseLine,
+          prevPoints: prevState.curPoints,
+          prevBaseLine: prevState.curBaseLine
+        };
+      }
+      if (nextProps.points !== prevState.curPoints || nextProps.baseLine !== prevState.curBaseLine) {
+        return {
+          curPoints: nextProps.points,
+          curBaseLine: nextProps.baseLine
+        };
+      }
+      return null;
+    }
+  }]);
+}(react__WEBPACK_IMPORTED_MODULE_0__.PureComponent);
+_Area = Area;
+_defineProperty(Area, "displayName", 'Area');
+_defineProperty(Area, "defaultProps", {
+  stroke: '#3182bd',
+  fill: '#3182bd',
+  fillOpacity: 0.6,
+  xAxisId: 0,
+  yAxisId: 0,
+  legendType: 'line',
+  connectNulls: false,
+  // points of area
+  points: [],
+  dot: false,
+  activeDot: true,
+  hide: false,
+  isAnimationActive: !_util_Global__WEBPACK_IMPORTED_MODULE_13__.Global.isSsr,
+  animationBegin: 0,
+  animationDuration: 1500,
+  animationEasing: 'ease'
+});
+_defineProperty(Area, "getBaseValue", function (props, item, xAxis, yAxis) {
+  var layout = props.layout,
+    chartBaseValue = props.baseValue;
+  var itemBaseValue = item.props.baseValue;
+
+  // The baseValue can be defined both on the AreaChart as well as on the Area.
+  // The value for the item takes precedence.
+  var baseValue = itemBaseValue !== null && itemBaseValue !== void 0 ? itemBaseValue : chartBaseValue;
+  if ((0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.isNumber)(baseValue) && typeof baseValue === 'number') {
+    return baseValue;
+  }
+  var numericAxis = layout === 'horizontal' ? yAxis : xAxis;
+  var domain = numericAxis.scale.domain();
+  if (numericAxis.type === 'number') {
+    var domainMax = Math.max(domain[0], domain[1]);
+    var domainMin = Math.min(domain[0], domain[1]);
+    if (baseValue === 'dataMin') {
+      return domainMin;
+    }
+    if (baseValue === 'dataMax') {
+      return domainMax;
+    }
+    return domainMax < 0 ? domainMax : Math.max(Math.min(domain[0], domain[1]), 0);
+  }
+  if (baseValue === 'dataMin') {
+    return domain[0];
+  }
+  if (baseValue === 'dataMax') {
+    return domain[1];
+  }
+  return domain[0];
+});
+_defineProperty(Area, "getComposedData", function (_ref4) {
+  var props = _ref4.props,
+    item = _ref4.item,
+    xAxis = _ref4.xAxis,
+    yAxis = _ref4.yAxis,
+    xAxisTicks = _ref4.xAxisTicks,
+    yAxisTicks = _ref4.yAxisTicks,
+    bandSize = _ref4.bandSize,
+    dataKey = _ref4.dataKey,
+    stackedData = _ref4.stackedData,
+    dataStartIndex = _ref4.dataStartIndex,
+    displayedData = _ref4.displayedData,
+    offset = _ref4.offset;
+  var layout = props.layout;
+  var hasStack = stackedData && stackedData.length;
+  var baseValue = _Area.getBaseValue(props, item, xAxis, yAxis);
+  var isHorizontalLayout = layout === 'horizontal';
+  var isRange = false;
+  var points = displayedData.map(function (entry, index) {
+    var value;
+    if (hasStack) {
+      value = stackedData[dataStartIndex + index];
+    } else {
+      value = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_14__.getValueByDataKey)(entry, dataKey);
+      if (!Array.isArray(value)) {
+        value = [baseValue, value];
+      } else {
+        isRange = true;
+      }
+    }
+    var isBreakPoint = value[1] == null || hasStack && (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_14__.getValueByDataKey)(entry, dataKey) == null;
+    if (isHorizontalLayout) {
+      return {
+        x: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_14__.getCateCoordinateOfLine)({
+          axis: xAxis,
+          ticks: xAxisTicks,
+          bandSize: bandSize,
+          entry: entry,
+          index: index
+        }),
+        y: isBreakPoint ? null : yAxis.scale(value[1]),
+        value: value,
+        payload: entry
+      };
+    }
+    return {
+      x: isBreakPoint ? null : xAxis.scale(value[1]),
+      y: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_14__.getCateCoordinateOfLine)({
+        axis: yAxis,
+        ticks: yAxisTicks,
+        bandSize: bandSize,
+        entry: entry,
+        index: index
+      }),
+      value: value,
+      payload: entry
+    };
+  });
+  var baseLine;
+  if (hasStack || isRange) {
+    baseLine = points.map(function (entry) {
+      var x = Array.isArray(entry.value) ? entry.value[0] : null;
+      if (isHorizontalLayout) {
+        return {
+          x: entry.x,
+          y: x != null && entry.y != null ? yAxis.scale(x) : null
+        };
+      }
+      return {
+        x: x != null ? xAxis.scale(x) : null,
+        y: entry.y
+      };
+    });
+  } else {
+    baseLine = isHorizontalLayout ? yAxis.scale(baseValue) : xAxis.scale(baseValue);
+  }
+  return _objectSpread({
+    points: points,
+    baseLine: baseLine,
+    layout: layout,
+    isRange: isRange
+  }, offset);
+});
+_defineProperty(Area, "renderDotItem", function (option, props) {
+  var dotItem;
+  if ( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.isValidElement(option)) {
+    dotItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.cloneElement(option, props);
+  } else if (lodash_isFunction__WEBPACK_IMPORTED_MODULE_2___default()(option)) {
+    dotItem = option(props);
+  } else {
+    var className = (0,clsx__WEBPACK_IMPORTED_MODULE_1__["default"])('recharts-area-dot', typeof option !== 'boolean' ? option.className : '');
+    var key = props.key,
+      rest = _objectWithoutProperties(props, _excluded2);
+    dotItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_shape_Dot__WEBPACK_IMPORTED_MODULE_15__.Dot, _extends({}, rest, {
+      key: key,
+      className: className
+    }));
+  }
+  return dotItem;
+});
+
+/***/ }),
+
 /***/ "./node_modules/recharts/es6/cartesian/Bar.js":
 /*!****************************************************!*\
   !*** ./node_modules/recharts/es6/cartesian/Bar.js ***!
@@ -184422,549 +184944,6 @@ _defineProperty(ErrorBar, "displayName", 'ErrorBar');
 
 /***/ }),
 
-/***/ "./node_modules/recharts/es6/cartesian/Line.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/recharts/es6/cartesian/Line.js ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Line: () => (/* binding */ Line)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_smooth__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-smooth */ "./node_modules/react-smooth/es6/index.js");
-/* harmony import */ var lodash_isFunction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/isFunction */ "./node_modules/lodash/isFunction.js");
-/* harmony import */ var lodash_isFunction__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_isFunction__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var lodash_isNil__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/isNil */ "./node_modules/lodash/isNil.js");
-/* harmony import */ var lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_isNil__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/isEqual */ "./node_modules/lodash/isEqual.js");
-/* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_isEqual__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.mjs");
-/* harmony import */ var _shape_Curve__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../shape/Curve */ "./node_modules/recharts/es6/shape/Curve.js");
-/* harmony import */ var _shape_Dot__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../shape/Dot */ "./node_modules/recharts/es6/shape/Dot.js");
-/* harmony import */ var _container_Layer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../container/Layer */ "./node_modules/recharts/es6/container/Layer.js");
-/* harmony import */ var _component_LabelList__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../component/LabelList */ "./node_modules/recharts/es6/component/LabelList.js");
-/* harmony import */ var _ErrorBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ErrorBar */ "./node_modules/recharts/es6/cartesian/ErrorBar.js");
-/* harmony import */ var _util_DataUtils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../util/DataUtils */ "./node_modules/recharts/es6/util/DataUtils.js");
-/* harmony import */ var _util_ReactUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../util/ReactUtils */ "./node_modules/recharts/es6/util/ReactUtils.js");
-/* harmony import */ var _util_Global__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../util/Global */ "./node_modules/recharts/es6/util/Global.js");
-/* harmony import */ var _util_ChartUtils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../util/ChartUtils */ "./node_modules/recharts/es6/util/ChartUtils.js");
-var _excluded = ["type", "layout", "connectNulls", "ref"],
-  _excluded2 = ["key"];
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } } return target; }
-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-/**
- * @fileOverview Line
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var Line = /*#__PURE__*/function (_PureComponent) {
-  function Line() {
-    var _this;
-    _classCallCheck(this, Line);
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    _this = _callSuper(this, Line, [].concat(args));
-    _defineProperty(_this, "state", {
-      isAnimationFinished: true,
-      totalLength: 0
-    });
-    _defineProperty(_this, "generateSimpleStrokeDasharray", function (totalLength, length) {
-      return "".concat(length, "px ").concat(totalLength - length, "px");
-    });
-    _defineProperty(_this, "getStrokeDasharray", function (length, totalLength, lines) {
-      var lineLength = lines.reduce(function (pre, next) {
-        return pre + next;
-      });
-
-      // if lineLength is 0 return the default when no strokeDasharray is provided
-      if (!lineLength) {
-        return _this.generateSimpleStrokeDasharray(totalLength, length);
-      }
-      var count = Math.floor(length / lineLength);
-      var remainLength = length % lineLength;
-      var restLength = totalLength - length;
-      var remainLines = [];
-      for (var i = 0, sum = 0; i < lines.length; sum += lines[i], ++i) {
-        if (sum + lines[i] > remainLength) {
-          remainLines = [].concat(_toConsumableArray(lines.slice(0, i)), [remainLength - sum]);
-          break;
-        }
-      }
-      var emptyLines = remainLines.length % 2 === 0 ? [0, restLength] : [restLength];
-      return [].concat(_toConsumableArray(Line.repeat(lines, count)), _toConsumableArray(remainLines), emptyLines).map(function (line) {
-        return "".concat(line, "px");
-      }).join(', ');
-    });
-    _defineProperty(_this, "id", (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.uniqueId)('recharts-line-'));
-    _defineProperty(_this, "pathRef", function (node) {
-      _this.mainCurve = node;
-    });
-    _defineProperty(_this, "handleAnimationEnd", function () {
-      _this.setState({
-        isAnimationFinished: true
-      });
-      if (_this.props.onAnimationEnd) {
-        _this.props.onAnimationEnd();
-      }
-    });
-    _defineProperty(_this, "handleAnimationStart", function () {
-      _this.setState({
-        isAnimationFinished: false
-      });
-      if (_this.props.onAnimationStart) {
-        _this.props.onAnimationStart();
-      }
-    });
-    return _this;
-  }
-  _inherits(Line, _PureComponent);
-  return _createClass(Line, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      if (!this.props.isAnimationActive) {
-        return;
-      }
-      var totalLength = this.getTotalLength();
-      this.setState({
-        totalLength: totalLength
-      });
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      if (!this.props.isAnimationActive) {
-        return;
-      }
-      var totalLength = this.getTotalLength();
-      if (totalLength !== this.state.totalLength) {
-        this.setState({
-          totalLength: totalLength
-        });
-      }
-    }
-  }, {
-    key: "getTotalLength",
-    value: function getTotalLength() {
-      var curveDom = this.mainCurve;
-      try {
-        return curveDom && curveDom.getTotalLength && curveDom.getTotalLength() || 0;
-      } catch (err) {
-        return 0;
-      }
-    }
-  }, {
-    key: "renderErrorBar",
-    value: function renderErrorBar(needClip, clipPathId) {
-      if (this.props.isAnimationActive && !this.state.isAnimationFinished) {
-        return null;
-      }
-      var _this$props = this.props,
-        points = _this$props.points,
-        xAxis = _this$props.xAxis,
-        yAxis = _this$props.yAxis,
-        layout = _this$props.layout,
-        children = _this$props.children;
-      var errorBarItems = (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_6__.findAllByType)(children, _ErrorBar__WEBPACK_IMPORTED_MODULE_7__.ErrorBar);
-      if (!errorBarItems) {
-        return null;
-      }
-      var dataPointFormatter = function dataPointFormatter(dataPoint, dataKey) {
-        return {
-          x: dataPoint.x,
-          y: dataPoint.y,
-          value: dataPoint.value,
-          errorVal: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_8__.getValueByDataKey)(dataPoint.payload, dataKey)
-        };
-      };
-      var errorBarProps = {
-        clipPath: needClip ? "url(#clipPath-".concat(clipPathId, ")") : null
-      };
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_9__.Layer, errorBarProps, errorBarItems.map(function (item) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.cloneElement(item, {
-          key: "bar-".concat(item.props.dataKey),
-          data: points,
-          xAxis: xAxis,
-          yAxis: yAxis,
-          layout: layout,
-          dataPointFormatter: dataPointFormatter
-        });
-      }));
-    }
-  }, {
-    key: "renderDots",
-    value: function renderDots(needClip, clipDot, clipPathId) {
-      var isAnimationActive = this.props.isAnimationActive;
-      if (isAnimationActive && !this.state.isAnimationFinished) {
-        return null;
-      }
-      var _this$props2 = this.props,
-        dot = _this$props2.dot,
-        points = _this$props2.points,
-        dataKey = _this$props2.dataKey;
-      var lineProps = (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_6__.filterProps)(this.props, false);
-      var customDotProps = (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_6__.filterProps)(dot, true);
-      var dots = points.map(function (entry, i) {
-        var dotProps = _objectSpread(_objectSpread(_objectSpread({
-          key: "dot-".concat(i),
-          r: 3
-        }, lineProps), customDotProps), {}, {
-          index: i,
-          cx: entry.x,
-          cy: entry.y,
-          value: entry.value,
-          dataKey: dataKey,
-          payload: entry.payload,
-          points: points
-        });
-        return Line.renderDotItem(dot, dotProps);
-      });
-      var dotsProps = {
-        clipPath: needClip ? "url(#clipPath-".concat(clipDot ? '' : 'dots-').concat(clipPathId, ")") : null
-      };
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_9__.Layer, _extends({
-        className: "recharts-line-dots",
-        key: "dots"
-      }, dotsProps), dots);
-    }
-  }, {
-    key: "renderCurveStatically",
-    value: function renderCurveStatically(points, needClip, clipPathId, props) {
-      var _this$props3 = this.props,
-        type = _this$props3.type,
-        layout = _this$props3.layout,
-        connectNulls = _this$props3.connectNulls,
-        ref = _this$props3.ref,
-        others = _objectWithoutProperties(_this$props3, _excluded);
-      var curveProps = _objectSpread(_objectSpread(_objectSpread({}, (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_6__.filterProps)(others, true)), {}, {
-        fill: 'none',
-        className: 'recharts-line-curve',
-        clipPath: needClip ? "url(#clipPath-".concat(clipPathId, ")") : null,
-        points: points
-      }, props), {}, {
-        type: type,
-        layout: layout,
-        connectNulls: connectNulls
-      });
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_shape_Curve__WEBPACK_IMPORTED_MODULE_10__.Curve, _extends({}, curveProps, {
-        pathRef: this.pathRef
-      }));
-    }
-  }, {
-    key: "renderCurveWithAnimation",
-    value: function renderCurveWithAnimation(needClip, clipPathId) {
-      var _this2 = this;
-      var _this$props4 = this.props,
-        points = _this$props4.points,
-        strokeDasharray = _this$props4.strokeDasharray,
-        isAnimationActive = _this$props4.isAnimationActive,
-        animationBegin = _this$props4.animationBegin,
-        animationDuration = _this$props4.animationDuration,
-        animationEasing = _this$props4.animationEasing,
-        animationId = _this$props4.animationId,
-        animateNewValues = _this$props4.animateNewValues,
-        width = _this$props4.width,
-        height = _this$props4.height;
-      var _this$state = this.state,
-        prevPoints = _this$state.prevPoints,
-        totalLength = _this$state.totalLength;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_smooth__WEBPACK_IMPORTED_MODULE_11__["default"], {
-        begin: animationBegin,
-        duration: animationDuration,
-        isActive: isAnimationActive,
-        easing: animationEasing,
-        from: {
-          t: 0
-        },
-        to: {
-          t: 1
-        },
-        key: "line-".concat(animationId),
-        onAnimationEnd: this.handleAnimationEnd,
-        onAnimationStart: this.handleAnimationStart
-      }, function (_ref) {
-        var t = _ref.t;
-        if (prevPoints) {
-          var prevPointsDiffFactor = prevPoints.length / points.length;
-          var stepData = points.map(function (entry, index) {
-            var prevPointIndex = Math.floor(index * prevPointsDiffFactor);
-            if (prevPoints[prevPointIndex]) {
-              var prev = prevPoints[prevPointIndex];
-              var interpolatorX = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.interpolateNumber)(prev.x, entry.x);
-              var interpolatorY = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.interpolateNumber)(prev.y, entry.y);
-              return _objectSpread(_objectSpread({}, entry), {}, {
-                x: interpolatorX(t),
-                y: interpolatorY(t)
-              });
-            }
-
-            // magic number of faking previous x and y location
-            if (animateNewValues) {
-              var _interpolatorX = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.interpolateNumber)(width * 2, entry.x);
-              var _interpolatorY = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.interpolateNumber)(height / 2, entry.y);
-              return _objectSpread(_objectSpread({}, entry), {}, {
-                x: _interpolatorX(t),
-                y: _interpolatorY(t)
-              });
-            }
-            return _objectSpread(_objectSpread({}, entry), {}, {
-              x: entry.x,
-              y: entry.y
-            });
-          });
-          return _this2.renderCurveStatically(stepData, needClip, clipPathId);
-        }
-        var interpolator = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_5__.interpolateNumber)(0, totalLength);
-        var curLength = interpolator(t);
-        var currentStrokeDasharray;
-        if (strokeDasharray) {
-          var lines = "".concat(strokeDasharray).split(/[,\s]+/gim).map(function (num) {
-            return parseFloat(num);
-          });
-          currentStrokeDasharray = _this2.getStrokeDasharray(curLength, totalLength, lines);
-        } else {
-          currentStrokeDasharray = _this2.generateSimpleStrokeDasharray(totalLength, curLength);
-        }
-        return _this2.renderCurveStatically(points, needClip, clipPathId, {
-          strokeDasharray: currentStrokeDasharray
-        });
-      });
-    }
-  }, {
-    key: "renderCurve",
-    value: function renderCurve(needClip, clipPathId) {
-      var _this$props5 = this.props,
-        points = _this$props5.points,
-        isAnimationActive = _this$props5.isAnimationActive;
-      var _this$state2 = this.state,
-        prevPoints = _this$state2.prevPoints,
-        totalLength = _this$state2.totalLength;
-      if (isAnimationActive && points && points.length && (!prevPoints && totalLength > 0 || !lodash_isEqual__WEBPACK_IMPORTED_MODULE_3___default()(prevPoints, points))) {
-        return this.renderCurveWithAnimation(needClip, clipPathId);
-      }
-      return this.renderCurveStatically(points, needClip, clipPathId);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _filterProps;
-      var _this$props6 = this.props,
-        hide = _this$props6.hide,
-        dot = _this$props6.dot,
-        points = _this$props6.points,
-        className = _this$props6.className,
-        xAxis = _this$props6.xAxis,
-        yAxis = _this$props6.yAxis,
-        top = _this$props6.top,
-        left = _this$props6.left,
-        width = _this$props6.width,
-        height = _this$props6.height,
-        isAnimationActive = _this$props6.isAnimationActive,
-        id = _this$props6.id;
-      if (hide || !points || !points.length) {
-        return null;
-      }
-      var isAnimationFinished = this.state.isAnimationFinished;
-      var hasSinglePoint = points.length === 1;
-      var layerClass = (0,clsx__WEBPACK_IMPORTED_MODULE_4__["default"])('recharts-line', className);
-      var needClipX = xAxis && xAxis.allowDataOverflow;
-      var needClipY = yAxis && yAxis.allowDataOverflow;
-      var needClip = needClipX || needClipY;
-      var clipPathId = lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default()(id) ? this.id : id;
-      var _ref2 = (_filterProps = (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_6__.filterProps)(dot, false)) !== null && _filterProps !== void 0 ? _filterProps : {
-          r: 3,
-          strokeWidth: 2
-        },
-        _ref2$r = _ref2.r,
-        r = _ref2$r === void 0 ? 3 : _ref2$r,
-        _ref2$strokeWidth = _ref2.strokeWidth,
-        strokeWidth = _ref2$strokeWidth === void 0 ? 2 : _ref2$strokeWidth;
-      var _ref3 = (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_6__.hasClipDot)(dot) ? dot : {},
-        _ref3$clipDot = _ref3.clipDot,
-        clipDot = _ref3$clipDot === void 0 ? true : _ref3$clipDot;
-      var dotSize = r * 2 + strokeWidth;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_9__.Layer, {
-        className: layerClass
-      }, needClipX || needClipY ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("clipPath", {
-        id: "clipPath-".concat(clipPathId)
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("rect", {
-        x: needClipX ? left : left - width / 2,
-        y: needClipY ? top : top - height / 2,
-        width: needClipX ? width : width * 2,
-        height: needClipY ? height : height * 2
-      })), !clipDot && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("clipPath", {
-        id: "clipPath-dots-".concat(clipPathId)
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("rect", {
-        x: left - dotSize / 2,
-        y: top - dotSize / 2,
-        width: width + dotSize,
-        height: height + dotSize
-      }))) : null, !hasSinglePoint && this.renderCurve(needClip, clipPathId), this.renderErrorBar(needClip, clipPathId), (hasSinglePoint || dot) && this.renderDots(needClip, clipDot, clipPathId), (!isAnimationActive || isAnimationFinished) && _component_LabelList__WEBPACK_IMPORTED_MODULE_12__.LabelList.renderCallByParent(this.props, points));
-    }
-  }], [{
-    key: "getDerivedStateFromProps",
-    value: function getDerivedStateFromProps(nextProps, prevState) {
-      if (nextProps.animationId !== prevState.prevAnimationId) {
-        return {
-          prevAnimationId: nextProps.animationId,
-          curPoints: nextProps.points,
-          prevPoints: prevState.curPoints
-        };
-      }
-      if (nextProps.points !== prevState.curPoints) {
-        return {
-          curPoints: nextProps.points
-        };
-      }
-      return null;
-    }
-  }, {
-    key: "repeat",
-    value: function repeat(lines, count) {
-      var linesUnit = lines.length % 2 !== 0 ? [].concat(_toConsumableArray(lines), [0]) : lines;
-      var result = [];
-      for (var i = 0; i < count; ++i) {
-        result = [].concat(_toConsumableArray(result), _toConsumableArray(linesUnit));
-      }
-      return result;
-    }
-  }, {
-    key: "renderDotItem",
-    value: function renderDotItem(option, props) {
-      var dotItem;
-      if ( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.isValidElement(option)) {
-        dotItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.cloneElement(option, props);
-      } else if (lodash_isFunction__WEBPACK_IMPORTED_MODULE_1___default()(option)) {
-        dotItem = option(props);
-      } else {
-        var key = props.key,
-          dotProps = _objectWithoutProperties(props, _excluded2);
-        var className = (0,clsx__WEBPACK_IMPORTED_MODULE_4__["default"])('recharts-line-dot', typeof option !== 'boolean' ? option.className : '');
-        dotItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_shape_Dot__WEBPACK_IMPORTED_MODULE_13__.Dot, _extends({
-          key: key
-        }, dotProps, {
-          className: className
-        }));
-      }
-      return dotItem;
-    }
-  }]);
-}(react__WEBPACK_IMPORTED_MODULE_0__.PureComponent);
-_defineProperty(Line, "displayName", 'Line');
-_defineProperty(Line, "defaultProps", {
-  xAxisId: 0,
-  yAxisId: 0,
-  connectNulls: false,
-  activeDot: true,
-  dot: true,
-  legendType: 'line',
-  stroke: '#3182bd',
-  strokeWidth: 1,
-  fill: '#fff',
-  points: [],
-  isAnimationActive: !_util_Global__WEBPACK_IMPORTED_MODULE_14__.Global.isSsr,
-  animateNewValues: true,
-  animationBegin: 0,
-  animationDuration: 1500,
-  animationEasing: 'ease',
-  hide: false,
-  label: false
-});
-/**
- * Compose the data of each group
- * @param {Object} props The props from the component
- * @param  {Object} xAxis   The configuration of x-axis
- * @param  {Object} yAxis   The configuration of y-axis
- * @param  {String} dataKey The unique key of a group
- * @return {Array}  Composed data
- */
-_defineProperty(Line, "getComposedData", function (_ref4) {
-  var props = _ref4.props,
-    xAxis = _ref4.xAxis,
-    yAxis = _ref4.yAxis,
-    xAxisTicks = _ref4.xAxisTicks,
-    yAxisTicks = _ref4.yAxisTicks,
-    dataKey = _ref4.dataKey,
-    bandSize = _ref4.bandSize,
-    displayedData = _ref4.displayedData,
-    offset = _ref4.offset;
-  var layout = props.layout;
-  var points = displayedData.map(function (entry, index) {
-    var value = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_8__.getValueByDataKey)(entry, dataKey);
-    if (layout === 'horizontal') {
-      return {
-        x: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_8__.getCateCoordinateOfLine)({
-          axis: xAxis,
-          ticks: xAxisTicks,
-          bandSize: bandSize,
-          entry: entry,
-          index: index
-        }),
-        y: lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default()(value) ? null : yAxis.scale(value),
-        value: value,
-        payload: entry
-      };
-    }
-    return {
-      x: lodash_isNil__WEBPACK_IMPORTED_MODULE_2___default()(value) ? null : xAxis.scale(value),
-      y: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_8__.getCateCoordinateOfLine)({
-        axis: yAxis,
-        ticks: yAxisTicks,
-        bandSize: bandSize,
-        entry: entry,
-        index: index
-      }),
-      value: value,
-      payload: entry
-    };
-  });
-  return _objectSpread({
-    points: points,
-    layout: layout
-  }, offset);
-});
-
-/***/ }),
-
 /***/ "./node_modules/recharts/es6/cartesian/ReferenceArea.js":
 /*!**************************************************************!*\
   !*** ./node_modules/recharts/es6/cartesian/ReferenceArea.js ***!
@@ -186077,33 +186056,33 @@ var AccessibilityManager = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./node_modules/recharts/es6/chart/LineChart.js":
+/***/ "./node_modules/recharts/es6/chart/AreaChart.js":
 /*!******************************************************!*\
-  !*** ./node_modules/recharts/es6/chart/LineChart.js ***!
+  !*** ./node_modules/recharts/es6/chart/AreaChart.js ***!
   \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   LineChart: () => (/* binding */ LineChart)
+/* harmony export */   AreaChart: () => (/* binding */ AreaChart)
 /* harmony export */ });
 /* harmony import */ var _generateCategoricalChart__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./generateCategoricalChart */ "./node_modules/recharts/es6/chart/generateCategoricalChart.js");
-/* harmony import */ var _cartesian_Line__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cartesian/Line */ "./node_modules/recharts/es6/cartesian/Line.js");
+/* harmony import */ var _cartesian_Area__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cartesian/Area */ "./node_modules/recharts/es6/cartesian/Area.js");
 /* harmony import */ var _cartesian_XAxis__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../cartesian/XAxis */ "./node_modules/recharts/es6/cartesian/XAxis.js");
 /* harmony import */ var _cartesian_YAxis__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../cartesian/YAxis */ "./node_modules/recharts/es6/cartesian/YAxis.js");
 /* harmony import */ var _util_CartesianUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../util/CartesianUtils */ "./node_modules/recharts/es6/util/CartesianUtils.js");
 /**
- * @fileOverview Line Chart
+ * @fileOverview Area Chart
  */
 
 
 
 
 
-var LineChart = (0,_generateCategoricalChart__WEBPACK_IMPORTED_MODULE_0__.generateCategoricalChart)({
-  chartName: 'LineChart',
-  GraphicalChild: _cartesian_Line__WEBPACK_IMPORTED_MODULE_1__.Line,
+var AreaChart = (0,_generateCategoricalChart__WEBPACK_IMPORTED_MODULE_0__.generateCategoricalChart)({
+  chartName: 'AreaChart',
+  GraphicalChild: _cartesian_Area__WEBPACK_IMPORTED_MODULE_1__.Area,
   axisComponents: [{
     axisType: 'xAxis',
     AxisComp: _cartesian_XAxis__WEBPACK_IMPORTED_MODULE_2__.XAxis
@@ -200585,101 +200564,28 @@ var Payment = function Payment() {
 
 /***/ }),
 
-/***/ "./resources/js/components/Dashboard-Comp/DateCard.js":
-/*!************************************************************!*\
-  !*** ./resources/js/components/Dashboard-Comp/DateCard.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ DateCard)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/typography/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/card/index.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/ExclamationCircleOutlined.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-var Text = antd__WEBPACK_IMPORTED_MODULE_2__["default"].Text,
-  Title = antd__WEBPACK_IMPORTED_MODULE_2__["default"].Title;
-function DateCard() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Title, {
-      level: 4,
-      children: "As of Date"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Title, {
-      level: 2,
-      children: new Date().toLocaleDateString()
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Text, {
-      children: "last refresh"
-    }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_4__["default"], {})]
-  });
-}
-
-/***/ }),
-
-/***/ "./resources/js/components/Dashboard-Comp/OrdersNumberCard.js":
-/*!********************************************************************!*\
-  !*** ./resources/js/components/Dashboard-Comp/OrdersNumberCard.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ OrdersNumberCard)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/typography/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/card/index.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/CheckCircleOutlined.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-var Text = antd__WEBPACK_IMPORTED_MODULE_2__["default"].Text,
-  Title = antd__WEBPACK_IMPORTED_MODULE_2__["default"].Title;
-function OrdersNumberCard() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Title, {
-      level: 4,
-      children: "Orders Processed"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Title, {
-      level: 2,
-      children: "74,914"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Text, {
-      children: "this period"
-    }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      style: {
-        color: '#1890ff'
-      }
-    })]
-  });
-}
-
-/***/ }),
-
-/***/ "./resources/js/components/Dashboard-Comp/PercentageCard.js":
+/***/ "./resources/js/components/Dashboard-Comp/DashboardCards.js":
 /*!******************************************************************!*\
-  !*** ./resources/js/components/Dashboard-Comp/PercentageCard.js ***!
+  !*** ./resources/js/components/Dashboard-Comp/DashboardCards.js ***!
   \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ PercentageCard)
+/* harmony export */   "default": () => (/* binding */ DashboardCards)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/typography/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/card/index.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/ArrowDownOutlined.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/row/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/col/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/card/index.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/AppstoreOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/UserOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/ShoppingCartOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/ClockCircleOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/ArrowUpOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/ArrowDownOutlined.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
@@ -200687,109 +200593,202 @@ __webpack_require__.r(__webpack_exports__);
 
 var Text = antd__WEBPACK_IMPORTED_MODULE_2__["default"].Text,
   Title = antd__WEBPACK_IMPORTED_MODULE_2__["default"].Title;
-function PercentageCard() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Title, {
-      level: 4,
-      children: "Conversion Rate"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Title, {
-      level: 2,
-      children: "15%"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Text, {
-      children: "vs. target"
-    }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_4__["default"], {
+function DashboardCards() {
+  var cards = [{
+    title: 'Total Products',
+    value: 25,
+    change: '15%',
+    up: true,
+    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_3__["default"], {
       style: {
-        color: 'red'
+        fontSize: 24
       }
-    })]
+    })
+  }, {
+    title: 'Total Users',
+    value: 15,
+    change: '6%',
+    up: true,
+    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      style: {
+        fontSize: 24
+      }
+    })
+  }, {
+    title: 'Total Orders',
+    value: 10,
+    change: '2%',
+    up: true,
+    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      style: {
+        fontSize: 24
+      }
+    })
+  }, {
+    title: 'Pending Orders',
+    value: 2,
+    change: '1%',
+    up: false,
+    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      style: {
+        fontSize: 24
+      }
+    })
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    gutter: [16, 16],
+    children: cards.map(function (_ref) {
+      var title = _ref.title,
+        value = _ref.value,
+        change = _ref.change,
+        up = _ref.up,
+        icon = _ref.icon;
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        xs: 24,
+        sm: 12,
+        md: 6,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
+            align: "middle",
+            justify: "space-between",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Title, {
+              level: 5,
+              children: title
+            }), icon]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Title, {
+            level: 2,
+            children: value
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(Text, {
+            style: {
+              color: up ? '#3f8600' : '#cf1322'
+            },
+            children: [up ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_10__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_11__["default"], {}), " ", change, " from last month"]
+          })]
+        })
+      }, title);
+    })
   });
 }
 
 /***/ }),
 
-/***/ "./resources/js/components/Dashboard-Comp/SalesTrendCard.js":
+/***/ "./resources/js/components/Dashboard-Comp/OrdersOverview.js":
 /*!******************************************************************!*\
-  !*** ./resources/js/components/Dashboard-Comp/SalesTrendCard.js ***!
+  !*** ./resources/js/components/Dashboard-Comp/OrdersOverview.js ***!
   \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ SalesTrendChart)
+/* harmony export */   "default": () => (/* binding */ OrdersOverview)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/typography/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/card/index.js");
 /* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/component/ResponsiveContainer.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/chart/LineChart.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/CartesianGrid.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/XAxis.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/YAxis.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/chart/AreaChart.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/XAxis.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/YAxis.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/CartesianGrid.js");
 /* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/component/Tooltip.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/Line.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/Area.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
 var Title = antd__WEBPACK_IMPORTED_MODULE_2__["default"].Title;
+
+// 12-month data sample — replace “orders” values with your real numbers
 var data = [{
-  month: 'Jan',
-  sales: 65000
+  name: 'Jan',
+  orders: 10
 }, {
-  month: 'Feb',
-  sales: 30000
+  name: 'Feb',
+  orders: 25
 }, {
-  month: 'Mar',
-  sales: 48000
+  name: 'Mar',
+  orders: 18
 }, {
-  month: 'Apr',
-  sales: 31000
+  name: 'Apr',
+  orders: 30
 }, {
-  month: 'May',
-  sales: 64000
+  name: 'May',
+  orders: 45
 }, {
-  month: 'Jun',
-  sales: 52000
+  name: 'Jun',
+  orders: 40
 }, {
-  month: 'Jul',
-  sales: 38000
+  name: 'Jul',
+  orders: 22
 }, {
-  month: 'Aug',
-  sales: 55000
+  name: 'Aug',
+  orders: 35
 }, {
-  month: 'Sep',
-  sales: 50000
+  name: 'Sep',
+  orders: 48
 }, {
-  month: 'Oct',
-  sales: 75000
+  name: 'Oct',
+  orders: 50
 }, {
-  month: 'Nov',
-  sales: 42000
+  name: 'Nov',
+  orders: 28
 }, {
-  month: 'Dec',
-  sales: 60000
+  name: 'Dec',
+  orders: 33
 }];
-function SalesTrendChart() {
+function OrdersOverview() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    style: {
+      marginTop: 16
+    },
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Title, {
       level: 4,
-      children: "Monthly Sales Trend (2025)"
+      children: "Orders Overview"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_4__.ResponsiveContainer, {
       width: "100%",
-      height: 250,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(recharts__WEBPACK_IMPORTED_MODULE_5__.LineChart, {
+      height: 240,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(recharts__WEBPACK_IMPORTED_MODULE_5__.AreaChart, {
         data: data,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_6__.CartesianGrid, {
+        margin: {
+          top: 10,
+          right: 30,
+          left: 0,
+          bottom: 0
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("defs", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("linearGradient", {
+            id: "colorOrders",
+            x1: "0",
+            y1: "0",
+            x2: "0",
+            y2: "1",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("stop", {
+              offset: "5%",
+              stopColor: "#8884d8",
+              stopOpacity: 0.4
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("stop", {
+              offset: "95%",
+              stopColor: "#8884d8",
+              stopOpacity: 0
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_6__.XAxis, {
+          dataKey: "name"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_7__.YAxis, {
+          allowDecimals: false,
+          domain: [0, 50] // scale from 0 up to 50
+          ,
+          ticks: [0, 10, 20, 30, 40, 50]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_8__.CartesianGrid, {
           strokeDasharray: "3 3"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_7__.XAxis, {
-          dataKey: "month"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_8__.YAxis, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_9__.Tooltip, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_10__.Line, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_9__.Tooltip, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_10__.Area, {
           type: "monotone",
-          dataKey: "sales",
-          stroke: "#1890ff",
-          strokeWidth: 2
+          dataKey: "orders",
+          stroke: "#8884d8",
+          fillOpacity: 1,
+          fill: "url(#colorOrders)"
         })]
       })
     })]
@@ -200798,45 +200797,106 @@ function SalesTrendChart() {
 
 /***/ }),
 
-/***/ "./resources/js/components/Dashboard-Comp/TotalSalesCard.js":
-/*!******************************************************************!*\
-  !*** ./resources/js/components/Dashboard-Comp/TotalSalesCard.js ***!
-  \******************************************************************/
+/***/ "./resources/js/components/Dashboard-Comp/RecentOrders.js":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/Dashboard-Comp/RecentOrders.js ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ TotalSalesCard)
+/* harmony export */   "default": () => (/* binding */ RecentOrders)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/typography/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/tag/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/card/index.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/ArrowUpOutlined.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/table/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
-
-var Text = antd__WEBPACK_IMPORTED_MODULE_2__["default"].Text,
-  Title = antd__WEBPACK_IMPORTED_MODULE_2__["default"].Title;
-function TotalSalesCard() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Title, {
-      level: 4,
-      children: "Total Sales"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Title, {
-      level: 2,
-      children: "$1,921,384.00"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Text, {
-      children: "vs. last month"
-    }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      style: {
-        color: 'green'
-      }
-    })]
+var data = [{
+  key: '1',
+  id: '02',
+  customer: 'John Doe',
+  product: 'Gaming Laptop',
+  status: 'Pending'
+}, {
+  key: '2',
+  id: '01',
+  customer: 'Jane Smith',
+  product: 'Headphones',
+  status: 'Completed'
+}, {
+  key: '3',
+  id: '03',
+  customer: 'Bob Johnson',
+  product: 'Mouse',
+  status: 'Ongoing'
+}];
+var columns = [{
+  title: 'Order ID',
+  dataIndex: 'id',
+  key: 'id'
+}, {
+  title: 'Customer',
+  dataIndex: 'customer',
+  key: 'customer'
+}, {
+  title: 'Product',
+  dataIndex: 'product',
+  key: 'product'
+}, {
+  title: 'Status',
+  dataIndex: 'status',
+  key: 'status',
+  render: function render(status) {
+    var color = status === 'Completed' ? 'green' : status === 'Pending' ? 'gold' : 'blue';
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(antd__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      color: color,
+      children: status
+    });
+  }
+}];
+function RecentOrders() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(antd__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    style: {
+      marginTop: 16
+    },
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(antd__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      title: function title() {
+        return 'Recent Orders';
+      },
+      pagination: false,
+      dataSource: data,
+      columns: columns,
+      bordered: false
+    })
   });
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/Dashboard-Comp/index.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/Dashboard-Comp/index.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DashboardCards: () => (/* reexport safe */ _DashboardCards__WEBPACK_IMPORTED_MODULE_0__["default"]),
+/* harmony export */   OrdersOverview: () => (/* reexport safe */ _OrdersOverview__WEBPACK_IMPORTED_MODULE_1__["default"]),
+/* harmony export */   RecentOrders: () => (/* reexport safe */ _RecentOrders__WEBPACK_IMPORTED_MODULE_2__["default"])
+/* harmony export */ });
+/* harmony import */ var _DashboardCards__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DashboardCards */ "./resources/js/components/Dashboard-Comp/DashboardCards.js");
+/* harmony import */ var _OrdersOverview__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OrdersOverview */ "./resources/js/components/Dashboard-Comp/OrdersOverview.js");
+/* harmony import */ var _RecentOrders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RecentOrders */ "./resources/js/components/Dashboard-Comp/RecentOrders.js");
+
+
+
 
 /***/ }),
 
@@ -201084,9 +201144,11 @@ var Header = function Header() {
     _useState6 = _slicedToArray(_useState5, 2),
     cartCount = _useState6[0],
     setCartCount = _useState6[1];
+
+  // Fetch user info (and optionally store role_id if returned)
   var fetchUserData = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var token, response, _error$response;
+      var token, _yield$axios$get, data, _error$response;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
@@ -201107,14 +201169,17 @@ var Header = function Header() {
               }
             });
           case 8:
-            response = _context.sent;
-            if (response.data.success) {
-              setUsername(response.data.data.username);
+            _yield$axios$get = _context.sent;
+            data = _yield$axios$get.data;
+            if (data.success) {
+              setUsername(data.data.username);
+              // If API returns role_id, you can also do:
+              // localStorage.setItem('userRole', data.data.role_id.toString());
             }
-            _context.next = 16;
+            _context.next = 17;
             break;
-          case 12:
-            _context.prev = 12;
+          case 13:
+            _context.prev = 13;
             _context.t0 = _context["catch"](5);
             console.error("Failed to fetch user:", _context.t0);
             if (((_error$response = _context.t0.response) === null || _error$response === void 0 ? void 0 : _error$response.status) === 401) {
@@ -201124,19 +201189,21 @@ var Header = function Header() {
               setUsername('');
               navigate('/login');
             }
-          case 16:
+          case 17:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[5, 12]]);
+      }, _callee, null, [[5, 13]]);
     }));
     return function fetchUserData() {
       return _ref.apply(this, arguments);
     };
   }();
+
+  // Fetch cart count
   var fetchCartCount = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-      var token, guestCart, response, _error$response2, _error$response3;
+      var token, guestCart, _yield$axios$get2, data, _error$response2;
       return _regeneratorRuntime().wrap(function _callee2$(_context2) {
         while (1) switch (_context2.prev = _context2.next) {
           case 0:
@@ -201157,15 +201224,16 @@ var Header = function Header() {
               }
             });
           case 8:
-            response = _context2.sent;
-            setCartCount(response.data.length || 0);
-            _context2.next = 16;
+            _yield$axios$get2 = _context2.sent;
+            data = _yield$axios$get2.data;
+            setCartCount(data.length || 0);
+            _context2.next = 17;
             break;
-          case 12:
-            _context2.prev = 12;
+          case 13:
+            _context2.prev = 13;
             _context2.t0 = _context2["catch"](5);
-            console.error("Failed to fetch cart:", ((_error$response2 = _context2.t0.response) === null || _error$response2 === void 0 ? void 0 : _error$response2.data) || _context2.t0.message);
-            if (((_error$response3 = _context2.t0.response) === null || _error$response3 === void 0 ? void 0 : _error$response3.status) === 401) {
+            console.error("Failed to fetch cart:", _context2.t0);
+            if (((_error$response2 = _context2.t0.response) === null || _error$response2 === void 0 ? void 0 : _error$response2.status) === 401) {
               localStorage.removeItem("authToken");
               localStorage.removeItem("userRole");
               setCartCount(0);
@@ -201173,19 +201241,21 @@ var Header = function Header() {
             } else {
               setCartCount(0);
             }
-          case 16:
+          case 17:
           case "end":
             return _context2.stop();
         }
-      }, _callee2, null, [[5, 12]]);
+      }, _callee2, null, [[5, 13]]);
     }));
     return function fetchCartCount() {
       return _ref2.apply(this, arguments);
     };
   }();
+
+  // (Optional) fetch addresses if you use them elsewhere
   var fetchAddresses = /*#__PURE__*/function () {
     var _ref3 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
-      var token, response, _error$response4, _error$response5;
+      var token, _error$response3;
       return _regeneratorRuntime().wrap(function _callee3$(_context3) {
         while (1) switch (_context3.prev = _context3.next) {
           case 0:
@@ -201204,26 +201274,22 @@ var Header = function Header() {
               }
             });
           case 6:
-            response = _context3.sent;
-            if (response.data.success) {
-              // No need to set state here unless used elsewhere
-            }
-            _context3.next = 14;
+            _context3.next = 12;
             break;
-          case 10:
-            _context3.prev = 10;
+          case 8:
+            _context3.prev = 8;
             _context3.t0 = _context3["catch"](3);
-            console.error("Error fetching address:", ((_error$response4 = _context3.t0.response) === null || _error$response4 === void 0 ? void 0 : _error$response4.data) || _context3.t0.message);
-            if (((_error$response5 = _context3.t0.response) === null || _error$response5 === void 0 ? void 0 : _error$response5.status) === 401) {
+            console.error("Error fetching address:", _context3.t0);
+            if (((_error$response3 = _context3.t0.response) === null || _error$response3 === void 0 ? void 0 : _error$response3.status) === 401) {
               localStorage.removeItem("authToken");
               localStorage.removeItem("userRole");
               navigate('/login');
             }
-          case 14:
+          case 12:
           case "end":
             return _context3.stop();
         }
-      }, _callee3, null, [[3, 10]]);
+      }, _callee3, null, [[3, 8]]);
     }));
     return function fetchAddresses() {
       return _ref3.apply(this, arguments);
@@ -201233,6 +201299,8 @@ var Header = function Header() {
     fetchUserData();
     fetchCartCount();
     fetchAddresses();
+
+    // If something changes elsewhere (e.g. login/logout in another tab)
     var handleStorageChange = function handleStorageChange() {
       fetchUserData();
       fetchCartCount();
@@ -201243,6 +201311,8 @@ var Header = function Header() {
       return window.removeEventListener('storage', handleStorageChange);
     };
   }, [navigate]);
+
+  // Logout → reset state + send to homepagecontent
   var handleLogoutClick = /*#__PURE__*/function () {
     var _ref4 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
       return _regeneratorRuntime().wrap(function _callee4$(_context4) {
@@ -201272,9 +201342,18 @@ var Header = function Header() {
   var handleCartClick = function handleCartClick() {
     navigate('/cartview');
   };
+
+  // === ROLE-BASED LOGO CLICK ===
   var handleLogoClick = function handleLogoClick() {
-    navigate('/homepagecontent');
+    var role = localStorage.getItem('userRole'); // "1" = Admin, "2" = Customer
+    if (role === '1') {
+      navigate('/admindashboard');
+    } else {
+      navigate('/homepagecontent');
+    }
   };
+
+  // Other nav links
   var handleHomeClick = function handleHomeClick(e) {
     e.preventDefault();
     navigate('/homepagecontent');
@@ -205267,18 +205346,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ DashboardWelcome)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/row/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/col/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
 /* harmony import */ var _admin_sidemenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../admin-sidemenu */ "./resources/js/components/admin-sidemenu.js");
 /* harmony import */ var _topnav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../topnav */ "./resources/js/components/topnav.js");
-/* harmony import */ var _Dashboard_Comp_DateCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Dashboard-Comp/DateCard */ "./resources/js/components/Dashboard-Comp/DateCard.js");
-/* harmony import */ var _Dashboard_Comp_OrdersNumberCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Dashboard-Comp/OrdersNumberCard */ "./resources/js/components/Dashboard-Comp/OrdersNumberCard.js");
-/* harmony import */ var _Dashboard_Comp_PercentageCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Dashboard-Comp/PercentageCard */ "./resources/js/components/Dashboard-Comp/PercentageCard.js");
-/* harmony import */ var _Dashboard_Comp_SalesTrendCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Dashboard-Comp/SalesTrendCard */ "./resources/js/components/Dashboard-Comp/SalesTrendCard.js");
-/* harmony import */ var _Dashboard_Comp_TotalSalesCard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Dashboard-Comp/TotalSalesCard */ "./resources/js/components/Dashboard-Comp/TotalSalesCard.js");
-/* harmony import */ var _sass_components_admindashboard_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../sass/components/_admindashboard.scss */ "./resources/sass/components/_admindashboard.scss");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Dashboard_Comp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Dashboard-Comp */ "./resources/js/components/Dashboard-Comp/index.js");
+/* harmony import */ var _sass_components_admindashboard_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../sass/components/_admindashboard.scss */ "./resources/sass/components/_admindashboard.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -205292,62 +205365,32 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
-
-
-
-
-var Content = antd__WEBPACK_IMPORTED_MODULE_10__["default"].Content;
+var Content = antd__WEBPACK_IMPORTED_MODULE_6__["default"].Content;
 var NAV_HEIGHT = 76;
 function DashboardWelcome() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
     _useState2 = _slicedToArray(_useState, 2),
     collapsed = _useState2[0],
     setCollapsed = _useState2[1];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: "dashboard-page",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
       style: {
         minHeight: '100vh',
         marginTop: NAV_HEIGHT
       },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_1__["default"], {
         collapsed: collapsed,
         onCollapse: setCollapsed
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
         style: {
           marginLeft: collapsed ? 80 : 200
         },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(Content, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(Content, {
           style: {
             padding: 24
           },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
-            gutter: [16, 16],
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(antd__WEBPACK_IMPORTED_MODULE_12__["default"], {
-              xs: 24,
-              sm: 12,
-              md: 6,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Dashboard_Comp_DateCard__WEBPACK_IMPORTED_MODULE_3__["default"], {})
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(antd__WEBPACK_IMPORTED_MODULE_12__["default"], {
-              xs: 24,
-              sm: 12,
-              md: 6,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Dashboard_Comp_OrdersNumberCard__WEBPACK_IMPORTED_MODULE_4__["default"], {})
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(antd__WEBPACK_IMPORTED_MODULE_12__["default"], {
-              xs: 24,
-              sm: 12,
-              md: 6,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Dashboard_Comp_PercentageCard__WEBPACK_IMPORTED_MODULE_5__["default"], {})
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(antd__WEBPACK_IMPORTED_MODULE_12__["default"], {
-              xs: 24,
-              sm: 12,
-              md: 6,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Dashboard_Comp_SalesTrendCard__WEBPACK_IMPORTED_MODULE_6__["default"], {})
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(antd__WEBPACK_IMPORTED_MODULE_12__["default"], {
-              xs: 24,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Dashboard_Comp_TotalSalesCard__WEBPACK_IMPORTED_MODULE_7__["default"], {})
-            })]
-          })
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Dashboard_Comp__WEBPACK_IMPORTED_MODULE_3__.DashboardCards, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Dashboard_Comp__WEBPACK_IMPORTED_MODULE_3__.OrdersOverview, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Dashboard_Comp__WEBPACK_IMPORTED_MODULE_3__.RecentOrders, {})]
         })
       })]
     })]
@@ -206935,14 +206978,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/input/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/message/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/menu/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/dropdown/index.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/LogoutOutlined.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/SearchOutlined.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/ShoppingCartOutlined.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/BellOutlined.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/UserOutlined.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/dropdown/index.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/LogoutOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/SearchOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/ShoppingCartOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/BellOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/UserOutlined.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
@@ -206991,17 +207035,17 @@ var TopNav = function TopNav() {
       return _ref.apply(this, arguments);
     };
   }();
-  var isAuthenticated = localStorage.getItem("authToken");
+  var isAuthenticated = !!localStorage.getItem("authToken");
   var userName = localStorage.getItem("userName");
   var userMenu = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"].Item, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-        href: "/profile",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
+        to: "/profile",
         children: "Profile"
       })
     }, "profile"), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"].Item, {
       onClick: handleLogout,
-      icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_9__["default"], {}),
+      icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_10__["default"], {}),
       children: "Logout"
     }, "logout")]
   });
@@ -207009,17 +207053,20 @@ var TopNav = function TopNav() {
     className: "topnav",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "logo",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-        src: _public_images_lapnixlogo_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
-        alt: "Lapnix Logo",
-        width: 100
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
+        to: "/admindashboard",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+          src: _public_images_lapnixlogo_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
+          alt: "Lapnix Logo",
+          width: 100
+        })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "search-bar",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Search, {
         placeholder: "Search product here...",
-        enterButton: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_11__["default"], {})
+        enterButton: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {})
         }),
         size: "large",
         style: {
@@ -207034,26 +207081,26 @@ var TopNav = function TopNav() {
         children: ["Welcome, ", userName]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "nav-icons",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_13__["default"], {
           style: {
             fontSize: "18px",
             cursor: "pointer"
           }
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_14__["default"], {
           style: {
             fontSize: "18px",
             cursor: "pointer"
           }
-        }), isAuthenticated ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        }), isAuthenticated ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {
           overlay: userMenu,
           placement: "bottomRight",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_15__["default"], {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_16__["default"], {
             style: {
               fontSize: "18px",
               cursor: "pointer"
             }
           })
-        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
           type: "primary",
           onClick: function onClick() {
             return navigate("/login");

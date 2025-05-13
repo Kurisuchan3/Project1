@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { Layout, Row, Col } from 'antd';
+import { Layout } from 'antd';
 import AdminSideMenu from '../admin-sidemenu';
 import TopNav from '../topnav';
-
-import TotalSalesCard from '../Dashboard-Comp/DateCard';
-import PercentageCard from '../Dashboard-Comp/OrdersNumberCard';
-import OrdersNumberCard from '../Dashboard-Comp/PercentageCard';
-import DateCard from '../Dashboard-Comp/SalesTrendCard';
-import SalesTrendChart from '../Dashboard-Comp/TotalSalesCard';
+import {
+  DashboardCards,
+  OrdersOverview,
+  RecentOrders,
+} from '../Dashboard-Comp';
 
 import '../../../sass/components/_admindashboard.scss';
 
@@ -24,13 +23,9 @@ export default function DashboardWelcome() {
         <AdminSideMenu collapsed={collapsed} onCollapse={setCollapsed} />
         <Layout style={{ marginLeft: collapsed ? 80 : 200 }}>
           <Content style={{ padding: 24 }}>
-            <Row gutter={[16, 16]}>
-              <Col xs={24} sm={12} md={6}><TotalSalesCard /></Col>
-              <Col xs={24} sm={12} md={6}><PercentageCard /></Col>
-              <Col xs={24} sm={12} md={6}><OrdersNumberCard /></Col>
-              <Col xs={24} sm={12} md={6}><DateCard /></Col>
-              <Col xs={24}><SalesTrendChart /></Col>
-            </Row>
+            <DashboardCards />
+            <OrdersOverview />
+            <RecentOrders />
           </Content>
         </Layout>
       </Layout>

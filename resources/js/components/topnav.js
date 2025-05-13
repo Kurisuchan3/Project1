@@ -15,7 +15,7 @@ import {
   BellOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 const { Search } = Input;
@@ -26,11 +26,9 @@ const TopNav = () => {
   const handleLogout = async () => {
     try {
       await axios.post("/api/logout");
-
       localStorage.removeItem("authToken");
       localStorage.removeItem("userRole");
       localStorage.removeItem("userName");
-
       message.success("Logout successful!");
       navigate("/login");
     } catch (error) {
@@ -39,13 +37,13 @@ const TopNav = () => {
     }
   };
 
-  const isAuthenticated = localStorage.getItem("authToken");
+  const isAuthenticated = !!localStorage.getItem("authToken");
   const userName = localStorage.getItem("userName");
 
   const userMenu = (
     <Menu>
       <Menu.Item key="profile">
-        <a href="/profile">Profile</a>
+        <Link to="/profile">Profile</Link>
       </Menu.Item>
       <Menu.Item
         key="logout"
@@ -60,7 +58,10 @@ const TopNav = () => {
   return (
     <nav className="topnav">
       <div className="logo">
-        <img src={logo} alt="Lapnix Logo" width={100} />
+        {/* Wrap the logo in a Link */}
+        <Link to="/admindashboard">
+          <img src={logo} alt="Lapnix Logo" width={100} />
+        </Link>
       </div>
 
       <div className="search-bar">

@@ -10,10 +10,12 @@ import { Dropdown, Menu } from 'antd';
 const Header = () => {
   const navigate = useNavigate();
   const handleLogout = useLogout();
-  const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem("authToken"));
-  const [username, setUsername] = useState('');
-  const [cartCount, setCartCount] = useState(0);
 
+  const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem("authToken"));
+  const [username, setUsername]       = useState('');
+  const [cartCount, setCartCount]     = useState(0);
+
+  // Fetch user info (and optionally store role_id if returned)
   const fetchUserData = async () => {
     const token = localStorage.getItem("authToken");
     if (!token) {
@@ -23,11 +25,13 @@ const Header = () => {
     }
 
     try {
-      const response = await axios.get("/api/user", {
+      const { data } = await axios.get("/api/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
-      if (response.data.success) {
-        setUsername(response.data.data.username);
+      if (data.success) {
+        setUsername(data.data.username);
+        // If API returns role_id, you can also do:
+        // localStorage.setItem('userRole', data.data.role_id.toString());
       }
     } catch (error) {
       console.error("Failed to fetch user:", error);
@@ -41,6 +45,7 @@ const Header = () => {
     }
   };
 
+  // Fetch cart count
   const fetchCartCount = async () => {
     const token = localStorage.getItem("authToken");
     if (!token) {
@@ -50,12 +55,12 @@ const Header = () => {
     }
 
     try {
-      const response = await axios.get("/api/cart", {
+      const { data } = await axios.get("/api/cart", {
         headers: { Authorization: `Bearer ${token}` },
       });
-      setCartCount(response.data.length || 0);
+      setCartCount(data.length || 0);
     } catch (error) {
-      console.error("Failed to fetch cart:", error.response?.data || error.message);
+      console.error("Failed to fetch cart:", error);
       if (error.response?.status === 401) {
         localStorage.removeItem("authToken");
         localStorage.removeItem("userRole");
@@ -67,19 +72,16 @@ const Header = () => {
     }
   };
 
+  // (Optional) fetch addresses if you use them elsewhere
   const fetchAddresses = async () => {
     const token = localStorage.getItem("authToken");
     if (!token) return;
-
     try {
-      const response = await axios.get("/api/addresses", {
+      await axios.get("/api/addresses", {
         headers: { Authorization: `Bearer ${token}` },
       });
-      if (response.data.success) {
-        // No need to set state here unless used elsewhere
-      }
     } catch (error) {
-      console.error("Error fetching address:", error.response?.data || error.message);
+      console.error("Error fetching address:", error);
       if (error.response?.status === 401) {
         localStorage.removeItem("authToken");
         localStorage.removeItem("userRole");
@@ -93,16 +95,17 @@ const Header = () => {
     fetchCartCount();
     fetchAddresses();
 
+    // If something changes elsewhere (e.g. login/logout in another tab)
     const handleStorageChange = () => {
       fetchUserData();
       fetchCartCount();
       fetchAddresses();
     };
-
     window.addEventListener('storage', handleStorageChange);
     return () => window.removeEventListener('storage', handleStorageChange);
   }, [navigate]);
 
+  // Logout → reset state + send to homepagecontent
   const handleLogoutClick = async () => {
     await handleLogout();
     setIsAuthenticated(false);
@@ -120,25 +123,29 @@ const Header = () => {
     navigate('/cartview');
   };
 
+  // === ROLE-BASED LOGO CLICK ===
   const handleLogoClick = () => {
-    navigate('/homepagecontent');
+    const role = localStorage.getItem('userRole');  // "1" = Admin, "2" = Customer
+    if (role === '1') {
+      navigate('/admindashboard');
+    } else {
+      navigate('/homepagecontent');
+    }
   };
 
+  // Other nav links
   const handleHomeClick = (e) => {
     e.preventDefault();
     navigate('/homepagecontent');
   };
-
   const handleBrandsClick = (e) => {
     e.preventDefault();
     navigate('/shopui?category=Brands');
   };
-
   const handlePeripheralsClick = (e) => {
     e.preventDefault();
     navigate('/shopui?category=Peripherals');
   };
-
   const handleAboutClick = (e) => {
     e.preventDefault();
     navigate('/about');
