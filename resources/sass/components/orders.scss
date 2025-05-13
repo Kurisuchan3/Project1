@@ -11,9 +11,12 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px 40px;
+    margin-top: 64px;
+    margin-left: 200px;
 
     @media (max-width: 768px) {
       padding: 20px 15px;
+      margin-left: 80px;
     }
   }
 

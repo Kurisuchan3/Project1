@@ -20,7 +20,7 @@ import OrdersModal from "./OrderModal/ordersmodal";
 import AdminRegister from "../components/AdminRegister/adminregister";
 import ProdModal from "./ModalUI/ProdModal";
 import MyAddresses from "../components/MyAddress/myaddress";
-import MyPurchases from "../components/MyPurchase/mypurchase"; // Add new import
+import MyPurchases from "../components/MyPurchase/mypurchase";
 import AboutUs from "../components/AboutUs/AboutUs";
 
 const ProtectedRoute = ({ element, allowedRoles }) => {
@@ -55,12 +55,10 @@ export default function Routers() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/complete" element={<Complete />} />
         <Route path="/footercontent" element={<FooterContent />} />
-        <Route path="/orders" element={<Orders />} />
+        <Route path="/orders" element={<ProtectedRoute element={<Orders />} allowedRoles={[1]} />} />
         <Route path="/ordersmodal" element={<OrdersModal />} />
         <Route path="/prodmodal" element={<ProdModal />} />
         <Route path="/about" element={<AboutUs />} />
-
-
         <Route
           path="/adminsetting"
           element={<ProtectedRoute element={<AdminRegister />} allowedRoles={[1]} />}
@@ -80,7 +78,7 @@ export default function Routers() {
         <Route
           path="/purchases"
           element={<ProtectedRoute element={<MyPurchases />} allowedRoles={[1, 2]} />}
-        /> {/* New protected route */}
+        />
       </Routes>
     </Router>
   );

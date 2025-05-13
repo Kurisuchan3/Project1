@@ -51,4 +51,5 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/orders', [OrderController::class, 'store']);
     Route::get('/orders/{id}', [OrderController::class, 'show']);
     Route::put('/orders/{id}/status', [OrderController::class, 'updateStatus']);
+    Route::get('/admin/orders', [OrderController::class, 'adminIndex']); // Added admin orders endpoint
 });

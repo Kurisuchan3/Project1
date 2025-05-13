@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, HasApiTokens, SoftDeletes; // ✅ Merge traits
+    use HasFactory, Notifiable, HasApiTokens, SoftDeletes;
 
     protected $table = 'users';
     protected $primaryKey = 'user_id';
@@ -18,12 +18,12 @@ class User extends Authenticatable
     protected $fillable = [
         'username',
         'email',
-        'password', // ✅ Use 'password' for authentication
+        'password',
         'roles_id',
     ];
 
     protected $hidden = [
-        'password', // ✅ Hide sensitive fields
+        'password',
         'remember_token',
     ];
 
@@ -31,11 +31,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    /**
-     * Define the relationship with the Role model
-     */
     public function role()
     {
         return $this->belongsTo(Role::class, 'roles_id');
+    }
+
+    public function profile()
+    {
+        return $this->hasOne(Profile::class, 'user_id', 'user_id');
+    }
+
+    public function isAdmin()
+    {
+        return $this->roles_id === 1; // Assuming roles_id 1 is for admin
     }
 }

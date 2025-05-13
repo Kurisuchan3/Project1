@@ -83,7 +83,6 @@ class OrderController extends Controller
                     'subtotal' => $item['price'] * $item['quantity'],
                 ]);
 
-                // Delete only the ordered cart item for the current user
                 \App\Models\CartItem::where('user_id', $user->user_id)
                     ->where('product_id', $item['id'])
                     ->where('quantity', $item['quantity'])
@@ -119,8 +118,29 @@ class OrderController extends Controller
     public function index()
     {
         $orders = Order::where('user_id', Auth::id())
-            ->with(['orderItems.product', 'status', 'paymentDetail'])
+            ->with(['orderItems.product', 'status', 'paymentDetail', 'user.profile'])
             ->get();
+
+        return response()->json([
+            'success' => true,
+            'data' => $orders,
+        ]);
+    }
+
+    public function adminIndex()
+    {
+        $user = Auth::user();
+        if (!$user || !$user->isAdmin()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Unauthorized',
+            ], 403);
+        }
+
+        $orders = Order::with(['orderItems.product', 'status', 'paymentDetail', 'user.profile'])
+            ->get();
+
+        Log::info('Admin orders fetched', ['orders_count' => $orders->count()]);
 
         return response()->json([
             'success' => true,
@@ -132,7 +152,7 @@ class OrderController extends Controller
     {
         $order = Order::where('user_id', Auth::id())
             ->where('id', $id)
-            ->with(['orderItems.product', 'status', 'paymentDetail'])
+            ->with(['orderItems.product', 'status', 'paymentDetail', 'user.profile'])
             ->firstOrFail();
 
         return response()->json([
@@ -148,7 +168,7 @@ class OrderController extends Controller
         ]);
 
         $user = Auth::user();
-        if (!$user->is_admin) {
+        if (!$user || !$user->isAdmin()) {
             return response()->json([
                 'success' => false,
                 'message' => 'Unauthorized',
