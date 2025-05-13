@@ -1,16 +1,31 @@
 .inventory-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  
-    h2 {
-      font-size: 20px;
-      font-weight: bold;
-      color: #333;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
   }
+}
 
 .inventory-page {
   padding-top: 76px;
+}
+
+.ant-btn-primary {
+  background-color: #24067e !important;
+  border-color: #24067e !important;
+}
+
+.inventory-page
+  .ant-table-container
+  table
+  thead.ant-table-thead
+  > tr
+  > th {
+  background-color: #24067e !important;
+  color: #fff !important;
 }

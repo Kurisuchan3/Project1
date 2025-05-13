@@ -1,16 +1,45 @@
 .products-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  
-    h2 {
-      font-size: 20px;
-      font-weight: bold;
-      color: #333;
-    }
-  
-    .archive-btn {
-      margin-left: 8px;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
   }
+
+  .archive-btn {
+    margin-left: 8px;
+    color: #24067e;
+    border-color: #24067e;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// OVERRIDES: swap #1890ff → #24067e everywhere on this page
+// ----------------------------------------------------------------------------
+
+// 1) All primary buttons (including Add Product)
+.products-page .ant-btn-primary {
+  background-color: #24067e !important;
+  border-color: #24067e !important;
+}
+
+// 2) Table header background/text
+.products-page
+  .ant-table-container
+  table
+  thead.ant-table-thead
+  > tr
+  > th {
+  background-color: #24067e !important;
+  color: #fff !important;
+}
+
+// 3) Ensure modal “OK” buttons also match
+.products-page .ant-modal-footer .ant-btn-primary {
+  background-color: #24067e !important;
+  border-color: #24067e !important;
+}

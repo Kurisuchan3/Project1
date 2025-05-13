@@ -9,11 +9,22 @@
   .button-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
     gap: 10px;
     margin-bottom: 20px;
 
+    // primary button (Add User)
+    .ant-btn-primary {
+      background-color: #24067e !important;
+      border-color: #24067e !important;
+    }
+
+    // default button (View Archived)
+    .ant-btn-default {
+      color: #24067e !important;
+      border-color: #24067e !important;
+    }
+
+    // ensure consistent sizing
     .ant-btn-primary,
     .ant-btn-default {
       min-width: 130px;
@@ -26,12 +37,13 @@
   .ant-table {
     border-radius: 6px;
     overflow: auto;
-    min-width: 600px; // Prevent columns from squishing too much
+    min-width: 600px;
   }
 
+  // table header → purple
   .ant-table-thead > tr > th {
-    background-color: #1890ff;
-    color: white;
+    background-color: #24067e !important;
+    color: #fff !important;
     font-weight: 600;
     white-space: nowrap;
   }
@@ -42,12 +54,12 @@
     overflow: hidden;
   }
 
+  // responsive tweaks
   @media screen and (max-width: 992px) {
     padding: 10px;
 
     .button-container {
       flex-direction: column;
-      align-items: stretch;
 
       .ant-btn-primary,
       .ant-btn-default {

@@ -38,6 +38,7 @@ export default function ProductPage() {
   const [editingProduct, setEditingProduct] = useState(null);
   const [form] = Form.useForm();
 
+  // attach auth header
   const rawToken = localStorage.getItem("authToken");
   const authToken = rawToken?.startsWith("Bearer ")
     ? rawToken
@@ -54,7 +55,7 @@ export default function ProductPage() {
     try {
       const { data } = await axios.get("/api/products");
       setProducts(data);
-    } catch (err) {
+    } catch {
       message.error("Error fetching products");
     }
   };
@@ -63,7 +64,7 @@ export default function ProductPage() {
     try {
       const { data } = await axios.get("/api/statuses");
       setStatuses(data.data || []);
-    } catch (err) {
+    } catch {
       message.error("Error fetching statuses");
     }
   };
@@ -72,7 +73,7 @@ export default function ProductPage() {
     try {
       const { data } = await axios.get("/api/subcategories");
       setSubcategories(data);
-    } catch (err) {
+    } catch {
       message.error("Error fetching subcategories");
     }
   };
@@ -81,23 +82,23 @@ export default function ProductPage() {
     try {
       const { data } = await axios.get("/api/products/archived");
       setArchivedProducts(data);
-    } catch (err) {
+    } catch {
       message.error("Error fetching archived products");
     }
   };
 
-  const showEditModal = (r) => {
+  const showEditModal = (record) => {
     setIsAdding(false);
-    setEditingProduct(r);
+    setEditingProduct(record);
     form.setFieldsValue({
       image: [],
-      name: r.name,
-      price: r.price,
-      quantity: r.quantity,
-      description: r.description,
-      specifications: r.specifications,
-      status_id: r.status_id,
-      subcategory_id: r.subcategory_id,
+      name: record.name,
+      price: record.price,
+      quantity: record.quantity,
+      description: record.description,
+      specifications: record.specifications,
+      status_id: record.status_id,
+      subcategory_id: record.subcategory_id,
     });
     setIsModalVisible(true);
   };
@@ -139,9 +140,9 @@ export default function ProductPage() {
     }
   };
 
-  const handleArchive = async (r) => {
+  const handleArchive = async (record) => {
     try {
-      await axios.delete(`/api/products/${r.id}`);
+      await axios.delete(`/api/products/${record.id}`);
       message.success("Product archived");
       fetchProducts();
     } catch {
@@ -149,9 +150,9 @@ export default function ProductPage() {
     }
   };
 
-  const handleRestore = async (r) => {
+  const handleRestore = async (record) => {
     try {
-      await axios.put(`/api/products/${r.id}/restore`);
+      await axios.put(`/api/products/${record.id}/restore`);
       message.success("Product restored");
       fetchArchivedProducts();
       fetchProducts();
@@ -167,11 +168,7 @@ export default function ProductPage() {
       key: "image",
       render: (img) =>
         img ? (
-          <img
-            src={window.location.origin + img}
-            alt=""
-            style={{ width: 50 }}
-          />
+          <img src={window.location.origin + img} alt="" style={{ width: 50 }} />
         ) : (
           "No Image"
         ),
@@ -186,7 +183,11 @@ export default function ProductPage() {
     { title: "Price", dataIndex: "price", key: "price" },
     { title: "Quantity", dataIndex: "quantity", key: "quantity" },
     { title: "Description", dataIndex: "description", key: "description" },
-    { title: "Specifications", dataIndex: "specifications", key: "specifications" },
+    {
+      title: "Specifications",
+      dataIndex: "specifications",
+      key: "specifications",
+    },
     {
       title: "Status",
       dataIndex: "status_id",
@@ -214,11 +215,7 @@ export default function ProductPage() {
       key: "image",
       render: (img) =>
         img ? (
-          <img
-            src={window.location.origin + img}
-            alt=""
-            style={{ width: 50 }}
-          />
+          <img src={window.location.origin + img} alt="" style={{ width: 50 }} />
         ) : (
           "No Image"
         ),
@@ -236,11 +233,13 @@ export default function ProductPage() {
       title: "Actions",
       key: "actions",
       render: (_, r) => (
-        <Space>
-          <Button type="primary" onClick={() => handleRestore(r)}>
-            Restore
-          </Button>
-        </Space>
+        <Button
+          type="primary"
+          onClick={() => handleRestore(r)}
+          style={{ backgroundColor: "#24067e", borderColor: "#24067e" }}
+        >
+          Restore
+        </Button>
       ),
     },
   ];
@@ -275,6 +274,7 @@ export default function ProductPage() {
                   type="primary"
                   icon={<PlusOutlined />}
                   onClick={showAddModal}
+                  style={{ backgroundColor: "#24067e", borderColor: "#24067e" }}
                 >
                   Add Product
                 </Button>
@@ -304,7 +304,7 @@ export default function ProductPage() {
               onOk={() => form.submit()}
             >
               <Form form={form} onFinish={handleSubmit} layout="vertical">
-                {/* …form items… */}
+                {/* …your form items here… */}
               </Form>
             </Modal>
 

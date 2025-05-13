@@ -15506,10 +15506,16 @@ footer {
 .user-table-container .button-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
   gap: 10px;
   margin-bottom: 20px;
+}
+.user-table-container .button-container .ant-btn-primary {
+  background-color: #24067e !important;
+  border-color: #24067e !important;
+}
+.user-table-container .button-container .ant-btn-default {
+  color: #24067e !important;
+  border-color: #24067e !important;
 }
 .user-table-container .button-container .ant-btn-primary,
 .user-table-container .button-container .ant-btn-default {
@@ -15524,8 +15530,8 @@ footer {
   min-width: 600px;
 }
 .user-table-container .ant-table-thead > tr > th {
-  background-color: #1890ff;
-  color: white;
+  background-color: #24067e !important;
+  color: #fff !important;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -15540,7 +15546,6 @@ footer {
   }
   .user-table-container .button-container {
     flex-direction: column;
-    align-items: stretch;
   }
   .user-table-container .button-container .ant-btn-primary,
   .user-table-container .button-container .ant-btn-default {
@@ -15578,6 +15583,23 @@ footer {
 }
 .products-header .archive-btn {
   margin-left: 8px;
+  color: #24067e;
+  border-color: #24067e;
+}
+
+.products-page .ant-btn-primary {
+  background-color: #24067e !important;
+  border-color: #24067e !important;
+}
+
+.products-page .ant-table-container table thead.ant-table-thead > tr > th {
+  background-color: #24067e !important;
+  color: #fff !important;
+}
+
+.products-page .ant-modal-footer .ant-btn-primary {
+  background-color: #24067e !important;
+  border-color: #24067e !important;
 }
 
 .inventory-header {
@@ -15594,6 +15616,16 @@ footer {
 
 .inventory-page {
   padding-top: 76px;
+}
+
+.ant-btn-primary {
+  background-color: #24067e !important;
+  border-color: #24067e !important;
+}
+
+.inventory-page .ant-table-container table thead.ant-table-thead > tr > th {
+  background-color: #24067e !important;
+  color: #fff !important;
 }
 
 .modal-overlay {

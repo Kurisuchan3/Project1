@@ -4,18 +4,19 @@ import { Layout, Table, Tag, Tooltip, Button } from "antd";
 import { EditOutlined, StopOutlined, PlusOutlined } from "@ant-design/icons";
 import TopNav from "../../topnav";
 import AdminSideMenu from "../../admin-sidemenu";
-import "../../../../sass/components/_usertable.scss"; // ✅ Import SCSS styles
+import "../../../../sass/components/_usertable.scss"; // ✅ your updated SCSS
 
 const { Content } = Layout;
 
 const UserTable = () => {
   const [users, setUsers] = useState([]);
   const [archivedUsers, setArchivedUsers] = useState([]);
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const [viewArchived, setViewArchived] = useState(false);
 
   const rawToken = localStorage.getItem("authToken");
-  const authToken = rawToken?.startsWith("Bearer ") ? rawToken : `Bearer ${rawToken}`;
+  const authToken = rawToken?.startsWith("Bearer ")
+    ? rawToken
+    : `Bearer ${rawToken}`;
 
   const axiosConfig = {
     headers: {
@@ -31,33 +32,23 @@ const UserTable = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:8000/api/users", axiosConfig);
-      if (response.data.success) {
-        setUsers(response.data.data);
-      } else {
-        console.error("API returned unsuccessful response:", response.data);
-      }
-    } catch (error) {
-      console.error("Error fetching users:", error.response?.data || error.message);
+      const resp = await axios.get("/api/users", axiosConfig);
+      if (resp.data.success) setUsers(resp.data.data);
+    } catch (e) {
+      console.error("Error fetching users:", e);
     }
   };
 
   const fetchArchivedUsers = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:8000/api/users/archived", axiosConfig);
-      if (response.data.success) {
-        setArchivedUsers(response.data.data);
-      } else {
-        console.error("API returned unsuccessful response:", response.data);
-      }
-    } catch (error) {
-      console.error("Error fetching archived users:", error.response?.data || error.message);
+      const resp = await axios.get("/api/users/archived", axiosConfig);
+      if (resp.data.success) setArchivedUsers(resp.data.data);
+    } catch (e) {
+      console.error("Error fetching archived users:", e);
     }
   };
 
-  const toggleView = () => {
-    setViewArchived(!viewArchived);
-  };
+  const toggleView = () => setViewArchived((v) => !v);
 
   const handleEdit = (user) => {
     alert(`Editing user: ${user.username}`);
@@ -65,16 +56,14 @@ const UserTable = () => {
 
   const handleArchiveRestore = async (user) => {
     const action = user.deleted_at ? "restore" : "archive";
-    const confirmAction = window.confirm(`Are you sure you want to ${action} ${user.username}?`);
-
-    if (!confirmAction) return;
-
+    if (!window.confirm(`Are you sure you want to ${action} ${user.username}?`))
+      return;
     try {
-      await axios.put(`http://127.0.0.1:8000/api/users/${user.user_id}/${action}`, {}, axiosConfig);
+      await axios.put(`/api/users/${user.user_id}/${action}`, {}, axiosConfig);
       fetchUsers();
       fetchArchivedUsers();
-    } catch (error) {
-      console.error(`Error trying to ${action} user:`, error.response?.data || error.message);
+    } catch (e) {
+      console.error(`Error trying to ${action}:`, e);
     }
   };
 
@@ -83,17 +72,17 @@ const UserTable = () => {
       title: "Actions",
       key: "actions",
       render: (_, user) => (
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+        <div style={{ display: "flex", gap: 12 }}>
           <Tooltip title="Edit">
             <EditOutlined
-              style={{ fontSize: "18px", color: "#1890ff", cursor: "pointer" }}
+              style={{ fontSize: 18, color: "#24067e", cursor: "pointer" }}
               onClick={() => handleEdit(user)}
             />
           </Tooltip>
           <Tooltip title={user.deleted_at ? "Restore" : "Archive"}>
             <StopOutlined
               style={{
-                fontSize: "18px",
+                fontSize: 18,
                 color: user.deleted_at ? "#52c41a" : "#ff4d4f",
                 cursor: "pointer",
               }}
@@ -109,41 +98,50 @@ const UserTable = () => {
       title: "Role",
       dataIndex: ["role", "role_name"],
       key: "role",
-      render: (role_name) => role_name || "N/A",
+      render: (r) => r || "N/A",
     },
     {
       title: "Status",
       dataIndex: "deleted_at",
       key: "status",
-      render: (deleted_at) =>
-        deleted_at ? <Tag color="red">ARCHIVED</Tag> : <Tag color="green">ACTIVE</Tag>,
+      render: (del) =>
+        del ? (
+          <Tag color="red">ARCHIVED</Tag>
+        ) : (
+          <Tag color="green">ACTIVE</Tag>
+        ),
     },
   ];
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <TopNav />
-      <Layout style={{ display: "flex", flexDirection: "row" }}>
+      <Layout style={{ display: "flex" }}>
         <AdminSideMenu />
-        <Layout style={{ padding: "20px", width: "100%" }}>
-          <Content style={{ background: "#f5f5f5", padding: "20px", borderRadius: "8px" }}>
+        <Layout style={{ padding: 20, width: "100%" }}>
+          <Content
+            style={{ background: "#f5f5f5", padding: 20, borderRadius: 8 }}
+          >
             <div className="user-table-container">
               <div className="button-container">
-                <Button type="primary" icon={<PlusOutlined />}>
+                <Button
+                  type="primary"
+                  icon={<PlusOutlined />}
+                  onClick={() => alert("Add User")}
+                >
                   Add User
                 </Button>
-                <Button type="default" onClick={toggleView}>
+                <Button onClick={toggleView}>
                   {viewArchived ? "View Active" : "View Archived"}
                 </Button>
               </div>
-
               <Table
                 dataSource={viewArchived ? archivedUsers : users}
                 columns={columns}
                 rowKey="user_id"
                 pagination={{ pageSize: 10 }}
                 bordered
-                scroll={{ x: true }} // ✅ Ant Design native responsive scroll
+                scroll={{ x: true }}
               />
             </div>
           </Content>

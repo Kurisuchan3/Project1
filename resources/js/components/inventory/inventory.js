@@ -16,11 +16,12 @@ import axios from "axios";
 import TopNav from "../topnav";
 import AdminSideMenu from "../admin-sidemenu";
 
-import "../../../sass/components/_topnav.scss";     // ensure your nav styles are loaded
-import "../../../sass/components/_inventory.scss";  // your inventory-header styles
+// ensure your nav styles are loaded
+import "../../../sass/components/_topnav.scss";
+// your inventory-header styles (including our overrides)
+import "../../../sass/components/_inventory.scss";
 
 const { Sider, Content } = Layout;
-
 const NAV_HEIGHT = 76; // 44px input + 16px top padding +16px bottom padding
 
 export default function Inventory() {
@@ -160,7 +161,11 @@ export default function Inventory() {
     },
     { title: "Product Name", dataIndex: "product_name", key: "product_name" },
     { title: "Price", dataIndex: "price", key: "price" },
-    { title: "Stock Quantity", dataIndex: "stock_quantity", key: "stock_quantity" },
+    {
+      title: "Stock Quantity",
+      dataIndex: "stock_quantity",
+      key: "stock_quantity",
+    },
     { title: "Stock Status", dataIndex: "stock_status", key: "stock_status" },
     { title: "Last Restock", dataIndex: "last_restock", key: "last_restock" },
     {
@@ -168,8 +173,15 @@ export default function Inventory() {
       key: "actions",
       render: (_, record) => (
         <Space>
-          <Button icon={<EditOutlined />} onClick={() => showEditModal(record)} />
-          <Button icon={<DeleteOutlined />} danger onClick={() => handleArchive(record.key)}>
+          <Button
+            icon={<EditOutlined />}
+            onClick={() => showEditModal(record)}
+          />
+          <Button
+            icon={<DeleteOutlined />}
+            danger
+            onClick={() => handleArchive(record.key)}
+          >
             Archive
           </Button>
         </Space>
@@ -195,14 +207,22 @@ export default function Inventory() {
     },
     { title: "Product Name", dataIndex: "product_name", key: "product_name" },
     { title: "Price", dataIndex: "price", key: "price" },
-    { title: "Stock Quantity", dataIndex: "stock_quantity", key: "stock_quantity" },
+    {
+      title: "Stock Quantity",
+      dataIndex: "stock_quantity",
+      key: "stock_quantity",
+    },
     { title: "Stock Status", dataIndex: "stock_status", key: "stock_status" },
     { title: "Last Restock", dataIndex: "last_restock", key: "last_restock" },
     {
       title: "Actions",
       key: "actions",
       render: (_, record) => (
-        <Button type="primary" onClick={() => handleRestore(record.key)}>
+        <Button
+          type="primary"
+          style={{ backgroundColor: "#24067e", borderColor: "#24067e" }}
+          onClick={() => handleRestore(record.key)}
+        >
           Restore
         </Button>
       ),
@@ -232,6 +252,7 @@ export default function Inventory() {
               <h2>Inventory List</h2>
               <Button
                 type="primary"
+                style={{ backgroundColor: "#24067e", borderColor: "#24067e" }}
                 onClick={() => {
                   setIsArchiveModalVisible(true);
                   fetchArchivedInventory();
@@ -263,7 +284,11 @@ export default function Inventory() {
                 >
                   <Input />
                 </Form.Item>
-                <Form.Item label="Price" name="price" rules={[{ required: true }]}>
+                <Form.Item
+                  label="Price"
+                  name="price"
+                  rules={[{ required: true }]}
+                >
                   <InputNumber min={0} style={{ width: "100%" }} />
                 </Form.Item>
                 <Form.Item
