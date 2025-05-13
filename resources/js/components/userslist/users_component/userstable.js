@@ -1,12 +1,13 @@
+// src/js/components/UserTable/UserTable.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Layout, Table, Tag, Tooltip, Button } from "antd";
 import { EditOutlined, StopOutlined, PlusOutlined } from "@ant-design/icons";
 import TopNav from "../../topnav";
 import AdminSideMenu from "../../admin-sidemenu";
-import "../../../../sass/components/_usertable.scss"; // ✅ your updated SCSS
+import "../../../../sass/components/_usertable.scss";
 
-const { Content } = Layout;
+const { Header, Content } = Layout;
 
 const UserTable = () => {
   const [users, setUsers] = useState([]);
@@ -38,7 +39,6 @@ const UserTable = () => {
       console.error("Error fetching users:", e);
     }
   };
-
   const fetchArchivedUsers = async () => {
     try {
       const resp = await axios.get("/api/users/archived", axiosConfig);
@@ -47,19 +47,18 @@ const UserTable = () => {
       console.error("Error fetching archived users:", e);
     }
   };
-
-  const toggleView = () => setViewArchived((v) => !v);
-
-  const handleEdit = (user) => {
-    alert(`Editing user: ${user.username}`);
-  };
-
-  const handleArchiveRestore = async (user) => {
+  const toggleView = () => setViewArchived(v => !v);
+  const handleEdit = user => alert(`Editing user: ${user.username}`);
+  const handleArchiveRestore = async user => {
     const action = user.deleted_at ? "restore" : "archive";
     if (!window.confirm(`Are you sure you want to ${action} ${user.username}?`))
       return;
     try {
-      await axios.put(`/api/users/${user.user_id}/${action}`, {}, axiosConfig);
+      await axios.put(
+        `/api/users/${user.user_id}/${action}`,
+        {},
+        axiosConfig
+      );
       fetchUsers();
       fetchArchivedUsers();
     } catch (e) {
@@ -98,29 +97,46 @@ const UserTable = () => {
       title: "Role",
       dataIndex: ["role", "role_name"],
       key: "role",
-      render: (r) => r || "N/A",
+      render: r => r || "N/A",
     },
     {
       title: "Status",
       dataIndex: "deleted_at",
       key: "status",
-      render: (del) =>
-        del ? (
-          <Tag color="red">ARCHIVED</Tag>
-        ) : (
-          <Tag color="green">ACTIVE</Tag>
-        ),
+      render: del =>
+        del ? <Tag color="red">ARCHIVED</Tag> : <Tag color="green">ACTIVE</Tag>,
     },
   ];
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <TopNav />
-      <Layout style={{ display: "flex" }}>
+      {/* 1) Fixed header */}
+      <Header
+        style={{
+          padding: 0,
+          background: "#24067e",
+          position: "fixed",
+          width: "100%",
+          zIndex: 1000,
+        }}
+      >
+        <TopNav />
+      </Header>
+
+      {/* 2) Push everything down by header height (64px) */}
+      <Layout style={{ marginTop: 64, display: "flex" }}>
+        {/* 3) Side menu */}
         <AdminSideMenu />
-        <Layout style={{ padding: 20, width: "100%" }}>
+
+        {/* 4) Main content area */}
+        <Layout style={{ width: "100%", padding: 20 }}>
           <Content
-            style={{ background: "#f5f5f5", padding: 20, borderRadius: 8 }}
+            style={{
+              background: "#f5f5f5",
+              padding: 20,
+              borderRadius: 8,
+              minHeight: "calc(100vh - 64px)",
+            }}
           >
             <div className="user-table-container">
               <div className="button-container">

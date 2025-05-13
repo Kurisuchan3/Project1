@@ -1,16 +1,17 @@
-import React, { useState } from "react";
-import { Card, Typography, Layout } from "antd";
-import AdminSideMenu from "../admin-sidemenu";
-import TopNav from "../topnav";
+import React, { useState } from 'react';
+import { Layout, Row, Col } from 'antd';
+import AdminSideMenu from '../admin-sidemenu';
+import TopNav from '../topnav';
 
-import "../../../sass/components/_topnav.scss";
-import "../../../sass/components/_admindashboard.scss";
+import TotalSalesCard from '../Dashboard-Comp/DateCard';
+import PercentageCard from '../Dashboard-Comp/OrdersNumberCard';
+import OrdersNumberCard from '../Dashboard-Comp/PercentageCard';
+import DateCard from '../Dashboard-Comp/SalesTrendCard';
+import SalesTrendChart from '../Dashboard-Comp/TotalSalesCard';
 
-const { Title } = Typography;
+import '../../../sass/components/_admindashboard.scss';
+
 const { Content } = Layout;
-
-// Calculate this the same way you did elsewhere:
-// 44px input height + 16px padding-top + 16px padding-bottom
 const NAV_HEIGHT = 76;
 
 export default function DashboardWelcome() {
@@ -18,27 +19,18 @@ export default function DashboardWelcome() {
 
   return (
     <div className="dashboard-page">
-      {/* Fixed TopNav */}
       <TopNav />
-
-      {/* Push the Ant Layout down by NAV_HEIGHT */}
-      <Layout style={{ minHeight: "100vh", marginTop: NAV_HEIGHT }}>
-        {/* Sidebar (collapsible) */}
+      <Layout style={{ minHeight: '100vh', marginTop: NAV_HEIGHT }}>
         <AdminSideMenu collapsed={collapsed} onCollapse={setCollapsed} />
-
-        {/* Main content shifts right when sidebar collapses */}
         <Layout style={{ marginLeft: collapsed ? 80 : 200 }}>
-          <Content
-            style={{
-              margin: "24px 16px",
-              padding: 24,
-              background: "#fff",
-              minHeight: 280,
-            }}
-          >
-            <Card className="dashboard-card">
-              <Title level={2}>Welcome to Dashboard</Title>
-            </Card>
+          <Content style={{ padding: 24 }}>
+            <Row gutter={[16, 16]}>
+              <Col xs={24} sm={12} md={6}><TotalSalesCard /></Col>
+              <Col xs={24} sm={12} md={6}><PercentageCard /></Col>
+              <Col xs={24} sm={12} md={6}><OrdersNumberCard /></Col>
+              <Col xs={24} sm={12} md={6}><DateCard /></Col>
+              <Col xs={24}><SalesTrendChart /></Col>
+            </Row>
           </Content>
         </Layout>
       </Layout>
