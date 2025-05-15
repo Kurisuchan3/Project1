@@ -46,7 +46,7 @@ const Profile = () => {
           profile_picture: response.data.data.profile_picture || null,
         });
         if (response.data.data.profile_picture) {
-          setPreviewImage(`/storage/${response.data.data.profile_picture}`);
+          setPreviewImage(`http://localhost:8000/${response.data.data.profile_picture}`);
         }
       } else {
         setError("Profile not found.");
@@ -133,7 +133,7 @@ const Profile = () => {
         setProfile(response.data.data);
         setFormData({ ...response.data.data, profile_picture: null, password: '' });
         if (response.data.data.profile_picture) {
-          setPreviewImage(`/storage/${response.data.data.profile_picture}`);
+          setPreviewImage(`http://localhost:8000/${response.data.data.profile_picture}`);
         }
         setEditMode(false);
         setError("");

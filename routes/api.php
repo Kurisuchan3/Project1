@@ -13,6 +13,9 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\RateController;
+use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\DashboardController;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -20,9 +23,14 @@ Route::get('/users', [UsersController::class, 'getUsers']);
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/subcategories', [SubcategoryController::class, 'index']);
 Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/ratings/product/{productId}', [RateController::class, 'getProductRatings']);
+Route::get('/dashboard/stats', [DashboardController::class, 'getStats']);
+Route::get('/dashboard/order-stats', [DashboardController::class, 'getOrderStats']);
+Route::get('/dashboard/recent-orders', [DashboardController::class, 'getRecentOrders']);
 
 Route::middleware('auth:api')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
+    Route::post('/ratings', [RateController::class, 'store']);
     Route::get('/user', [AuthController::class, 'userProfile']);
     Route::get('/profile', [ProfileController::class, 'getProfile']);
     Route::put('/profile', [ProfileController::class, 'updateProfile']);
@@ -51,5 +59,6 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/orders', [OrderController::class, 'store']);
     Route::get('/orders/{id}', [OrderController::class, 'show']);
     Route::put('/orders/{id}/status', [OrderController::class, 'updateStatus']);
-    Route::get('/admin/orders', [OrderController::class, 'adminIndex']); // Added admin orders endpoint
+    Route::get('/admin/orders', [OrderController::class, 'adminIndex']);
+    Route::get('/notifications', [NotificationController::class, 'index']);
 });

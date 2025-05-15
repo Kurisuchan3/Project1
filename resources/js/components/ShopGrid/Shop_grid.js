@@ -13,12 +13,14 @@ const ShopGrid = ({ filteredBrand }) => {
     const savedCart = localStorage.getItem('guestCart');
     return savedCart ? JSON.parse(savedCart) : [];
   });
+  const [productRatings, setProductRatings] = useState({});
+  const [failedImages, setFailedImages] = useState(new Set());
 
   useEffect(() => {
     const fetchCategories = async () => {
       try {
         const response = await axios.get('/api/categories');
-        console.log('Fetched Categories:', response.data); // Debug log
+        console.log('Fetched Categories:', response.data);
         setCategories(response.data);
       } catch (error) {
         console.error('Error fetching categories:', error);
@@ -28,12 +30,43 @@ const ShopGrid = ({ filteredBrand }) => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get('/api/products');
-        console.log('Fetched Products:', response.data); // Debug log
+        console.log('Fetched Products:', response.data);
         setProducts(response.data);
         setLoading(false);
+        fetchProductRatings(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
         setLoading(false);
+      }
+    };
+
+    const fetchProductRatings = async (products) => {
+      try {
+        const ratingsPromises = products.map(async (product) => {
+          try {
+            const response = await axios.get(`/api/ratings/product/${product.id}`);
+            const ratings = response.data.data || [];
+            const averageRating =
+              ratings.length > 0
+                ? Math.round(
+                    ratings.reduce((sum, r) => sum + r.rating, 0) / ratings.length
+                  )
+                : 0;
+            return { productId: product.id, averageRating };
+          } catch (err) {
+            console.warn(`No ratings for product ${product.id}:`, err.message);
+            return { productId: product.id, averageRating: 0 };
+          }
+        });
+
+        const ratingsData = await Promise.all(ratingsPromises);
+        const ratingsMap = ratingsData.reduce((acc, { productId, averageRating }) => {
+          acc[productId] = averageRating;
+          return acc;
+        }, {});
+        setProductRatings(ratingsMap);
+      } catch (error) {
+        console.error('Error fetching product ratings:', error);
       }
     };
 
@@ -50,13 +83,16 @@ const ShopGrid = ({ filteredBrand }) => {
     if (token) {
       axios
         .post('/api/cart', { product_id: product.id, quantity: 1 }, {
-          headers: { Authorization: token }
+          headers: { Authorization: `Bearer ${token}` }
         })
         .then(() => {
           alert(`${product.name} added to cart!`);
           window.dispatchEvent(new Event('storage'));
         })
-        .catch((error) => console.error('Error adding to cart:', error));
+        .catch((error) => {
+          console.error('Error adding to cart:', error);
+          alert('Failed to add to cart.');
+        });
     } else {
       setGuestCart((prevCart) => {
         const existingItem = prevCart.find((item) => item.id === product.id);
@@ -81,7 +117,8 @@ const ShopGrid = ({ filteredBrand }) => {
     }
   };
 
-  const renderStars = (rating) => {
+  const renderStars = (productId) => {
+    const rating = productRatings[productId] || 0;
     return (
       <div className="product-rating">
         {[...Array(5)].map((_, index) => (
@@ -93,41 +130,40 @@ const ShopGrid = ({ filteredBrand }) => {
             )}
           </span>
         ))}
+        {rating === 0 && <span className="no-rating">No ratings</span>}
       </div>
     );
   };
 
-  // Filter products based on the selected filter (category or subcategory)
-  console.log('Filtered Brand:', filteredBrand);
-  console.log('Categories:', categories); // Debug log
-  console.log('Products:', products); // Debug log
   const filteredProducts = filteredBrand
-    ? products.filter(product => {
+    ? products.filter((product) => {
         if (!product.subcategory) {
-          console.log(`Product ${product.name} has no subcategory`); // Debug log
+          console.log(`Product ${product.name} has no subcategory`);
           return false;
         }
-
         if (filteredBrand.type === 'category') {
-          const categoryId = categories.find(cat => cat.name === filteredBrand.value)?.id;
+          const categoryId = categories.find((cat) => cat.name === filteredBrand.value)?.id;
           if (!categoryId) {
-            console.log(`Category ${filteredBrand.value} not found`); // Debug log
+            console.log(`Category ${filteredBrand.value} not found`);
             return false;
           }
-
           const matches = product.subcategory.category_id === categoryId;
-          console.log(`Product: ${product.name}, Subcategory: ${product.subcategory.name}, Category ID: ${product.subcategory.category_id}, Expected Category ID: ${categoryId}, Matches: ${matches}`); // Debug log
+          console.log(
+            `Product: ${product.name}, Subcategory: ${product.subcategory.name}, Category ID: ${product.subcategory.category_id}, Expected Category ID: ${categoryId}, Matches: ${matches}`
+          );
           return matches;
         } else if (filteredBrand.type === 'subcategory') {
           const matches = product.subcategory.name === filteredBrand.value;
-          console.log(`Product: ${product.name}, Subcategory: ${product.subcategory.name}, Expected Subcategory: ${filteredBrand.value}, Matches: ${matches}`); // Debug log
+          console.log(
+            `Product: ${product.name}, Subcategory: ${product.subcategory.name}, Expected Subcategory: ${filteredBrand.value}, Matches: ${matches}`
+          );
           return matches;
         }
         return false;
       })
     : products;
 
-  console.log('Filtered Products:', filteredProducts); // Debug log
+  console.log('Filtered Products:', filteredProducts);
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
@@ -135,6 +171,13 @@ const ShopGrid = ({ filteredBrand }) => {
 
   const handleCloseModal = () => {
     setSelectedProduct(null);
+  };
+
+  const getImageUrl = (imagePath) => {
+    if (!imagePath || failedImages.has(imagePath)) return '/images/placeholder.jpg';
+    // Handle inconsistent paths (e.g., public/images/ or images/)
+    const cleanPath = imagePath.replace(/^\/?(public\/)?images\//, 'images/');
+    return `http://127.0.0.1:8000/${cleanPath}`;
   };
 
   return (
@@ -151,14 +194,21 @@ const ShopGrid = ({ filteredBrand }) => {
             >
               <div className="product-top">
                 <img
-                  src={product.image ? window.location.origin + product.image : '/images/placeholder.jpg'}
+                  src={getImageUrl(product.image)}
                   alt={product.name}
                   className="product-image"
+                  onError={(e) => {
+                    if (!failedImages.has(product.image)) {
+                      console.warn(`Failed to load image for ${product.name}: ${product.image}`);
+                      setFailedImages((prev) => new Set(prev).add(product.image));
+                    }
+                    e.target.src = '/images/placeholder.jpg';
+                  }}
                 />
               </div>
               <div className="product-details">
                 <h3 className="product-name">{product.name}</h3>
-                {renderStars(product.rating || 4)}
+                {renderStars(product.id)}
                 <p className="product-price">₱{parseFloat(product.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}</p>
                 <div className="button-container">
                   <button
@@ -168,7 +218,7 @@ const ShopGrid = ({ filteredBrand }) => {
                       addToCart(product);
                     }}
                   >
-                    add to cart
+                    Add to Cart
                   </button>
                 </div>
               </div>

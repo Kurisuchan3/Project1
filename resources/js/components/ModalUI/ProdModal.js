@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./../../../sass/components/ProdModal.scss";
 import { IconStarFilled } from '@tabler/icons-react';
 
@@ -6,7 +6,44 @@ const ProdModal = ({ product, onClose, addToCart }) => {
   if (!product) return null;
 
   const [quantity, setQuantity] = useState(1);
+  const [reviews, setReviews] = useState([]);
+  const [averageRating, setAverageRating] = useState(0);
   const stockQuantity = product.inventory?.stock_quantity || 0;
+
+  useEffect(() => {
+    const fetchRatings = async () => {
+      try {
+        const token = localStorage.getItem('authToken');
+        if (!token) {
+          console.error('No token found. Please login.');
+          return;
+        }
+
+        const response = await fetch(`/api/ratings/product/${product.id}`, {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/json',
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(`Failed to fetch ratings: ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        if (data.success && Array.isArray(data.data)) {
+          setReviews(data.data);
+          const totalRating = data.data.reduce((sum, review) => sum + review.rating, 0);
+          const avg = data.data.length > 0 ? totalRating / data.data.length : 0;
+          setAverageRating(Math.round(avg * 10) / 10); // Round to 1 decimal place
+        }
+      } catch (err) {
+        console.error('Fetch Error:', err);
+      }
+    };
+
+    fetchRatings();
+  }, [product.id]);
 
   const handleIncrement = () => {
     if (quantity < stockQuantity) {
@@ -20,46 +57,31 @@ const ProdModal = ({ product, onClose, addToCart }) => {
     }
   };
 
-  const reviews = [
-    {
-      id: 1,
-      name: "Kaan, ju",
-      rating: 3,
-      text: "I bought a laptop from this site and it arrived in just a few days. It runs fast and looks great. Really happy with the quality and service!",
-      avatar: '/images/tuf.svg',
-      date: "2 weeks ago",
-      hasImage: true
-    },
-    {
-      id: 2,
-      name: "Christine, Medo",
-      rating: 3,
-      text: "The keyboard I ordered feels really good to type on. It's quiet and comfortable. Great for both work and gaming.",
-      avatar: '/images/tuf.svg',
-      date: "1 month ago",
-      hasImage: false
-    },
-    {
-      id: 3,
-      name: "Jhon, Vand",
-      rating: 3,
-      text: "I needed a new mouse for my setup and found the perfect one here. It's smooth, fits well in my hand, and works great with my laptop.",
-      avatar: '/images/tuf.svg',
-      date: "3 weeks ago",
-      hasImage: false
-    }
-  ];
-
   const renderStars = (rating) => {
+    const fullStars = Math.floor(rating); // Number of full stars
+    const fractionalPart = rating - fullStars; // Decimal part for partial star
+    const hasPartialStar = fractionalPart > 0;
+
     return (
       <div className="lapnix-rating-stars">
-        {[...Array(5)].map((_, index) => (
-          <IconStarFilled 
-            key={index} 
-            size={18} 
-            className={index < rating ? "lapnix-filled" : "lapnix-empty"} 
-          />
-        ))}
+        {[...Array(5)].map((_, index) => {
+          let starClass = 'lapnix-empty';
+          let fillPercentage = 0;
+
+          if (index < fullStars) {
+            starClass = 'lapnix-filled';
+            fillPercentage = 100;
+          } else if (index === fullStars && hasPartialStar) {
+            starClass = 'lapnix-partial';
+            fillPercentage = Math.round(fractionalPart * 100); // Convert to percentage
+          }
+
+          return (
+            <div key={index} className={`lapnix-star-wrapper ${starClass}`} style={{ '--fill-percentage': `${fillPercentage}%` }}>
+              <IconStarFilled size={18} />
+            </div>
+          );
+        })}
       </div>
     );
   };
@@ -92,8 +114,8 @@ const ProdModal = ({ product, onClose, addToCart }) => {
               <h1 className="lapnix-product-name">{product.name}</h1>
               
               <div className="lapnix-product-rating">
-                {renderStars(4)}
-                <span className="lapnix-rating-count">4.7 (85 reviews)</span>
+                {renderStars(averageRating || 4)}
+                <span className="lapnix-rating-count">{averageRating ? `${averageRating} (${reviews.length} reviews)` : '0 (0 reviews)'}</span>
               </div>
               
               <div className="lapnix-price-section">
@@ -183,34 +205,38 @@ const ProdModal = ({ product, onClose, addToCart }) => {
             <div className="lapnix-reviews-section">
               <h3 className="lapnix-section-title">Reviews and ratings</h3>
               <div className="lapnix-rating-summary">
-                <span className="lapnix-average-rating">4.7</span>
+                <span className="lapnix-average-rating">{averageRating || 0}</span>
                 <div className="lapnix-rating-details">
-                  {renderStars(4)}
-                  <span className="lapnix-rating-count">Based on 85 ratings</span>
+                  {renderStars(averageRating || 0)}
+                  <span className="lapnix-rating-count">Based on {reviews.length || 0} ratings</span>
                 </div>
               </div>
               
               <div className="lapnix-reviews-list">
-                {reviews.map(review => (
-                  <div key={review.id} className="lapnix-review-item">
-                    <div className="lapnix-review-header">
-                      <img src={review.avatar} alt={review.name} className="lapnix-review-avatar" />
-                      <div className="lapnix-review-meta">
-                        <span className="lapnix-reviewer-name">{review.name}</span>
-                        <div className="lapnix-review-rating">
-                          {renderStars(review.rating)}
-                          <span className="lapnix-review-date">{review.date}</span>
+                {reviews.length > 0 ? (
+                  reviews.map(review => (
+                    <div key={review.id} className="lapnix-review-item">
+                      <div className="lapnix-review-header">
+                        <img src={review.profile_picture} alt={review.name} className="lapnix-review-avatar" />
+                        <div className="lapnix-review-meta">
+                          <span className="lapnix-reviewer-name">{review.name}</span>
+                          <div className="lapnix-review-rating">
+                            {renderStars(review.rating)}
+                            <span className="lapnix-review-date">{new Date(review.created_at).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                          </div>
                         </div>
                       </div>
+                      <p className="lapnix-review-text">{review.comment}</p>
+                      {review.photo && (
+                        <div className="lapnix-review-image-container">
+                          <img src={review.photo} alt="Review" className="lapnix-review-image" />
+                        </div>
+                      )}
                     </div>
-                    <p className="lapnix-review-text">{review.text}</p>
-                    {review.hasImage && (
-                      <div className="lapnix-review-image-container">
-                        <img src='/images/tuf.svg' alt="Review" className="lapnix-review-image" />
-                      </div>
-                    )}
-                  </div>
-                ))}
+                  ))
+                ) : (
+                  <p>No reviews available for this product.</p>
+                )}
               </div>
             </div>
           </div>

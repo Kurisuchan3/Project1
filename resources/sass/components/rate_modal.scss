@@ -1,0 +1,237 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+
+  h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+  }
+
+  .modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 5px;
+    line-height: 1;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.no-items {
+  text-align: center;
+  color: #666;
+}
+
+.product-rating-section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .product-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .error-message {
+    color: #ff0000;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .rating-section {
+    margin-bottom: 15px;
+
+    .rating-label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .star-rating {
+      display: flex;
+      gap: 5px;
+
+      .star {
+        cursor: pointer;
+
+        &.disabled {
+          cursor: not-allowed;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  .review-section {
+    margin-bottom: 15px;
+
+    .review-label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      resize: vertical;
+
+      &:disabled {
+        background-color: #f5f5f5;
+        cursor: not-allowed;
+      }
+    }
+
+    .char-count {
+      font-size: 12px;
+      color: #666;
+      text-align: right;
+      margin-top: 5px;
+    }
+  }
+
+  .photo-section {
+    margin-bottom: 15px;
+
+    .photo-label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .photo-input {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    .photo-preview-container {
+      margin-top: 10px;
+
+      .photo-preview {
+        position: relative;
+        display: inline-block;
+
+        img {
+          max-width: 100%;
+          max-height: 150px;
+          border-radius: 4px;
+        }
+
+        .remove-photo {
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          background-color: blue;
+          color: #fff;
+          border: none;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          font-size: 14px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #fff;
+
+      &.submit-btn {
+        background-color: #4b0082;
+
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+
+.modal-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: flex-end;
+
+  .cancel-btn {
+    background-color: #666;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+
+    &:hover {
+      background-color: #555;
+    }
+  }
+}

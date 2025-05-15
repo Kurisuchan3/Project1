@@ -45,4 +45,9 @@ class User extends Authenticatable
     {
         return $this->roles_id === 1; // Assuming roles_id 1 is for admin
     }
+
+    public function ratings()
+    {
+        return $this->hasMany(Rating::class, 'user_id', 'user_id');
+    }
 }

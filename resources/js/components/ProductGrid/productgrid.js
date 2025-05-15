@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "../../../sass/components/productgrid.scss";
 import ProdModal from '../ModalUI/ProdModal';
 import axios from 'axios';
+import { IconStarFilled, IconStar } from '@tabler/icons-react';
 
 const Grid = () => {
   const [products, setProducts] = useState([]);
@@ -11,6 +12,7 @@ const Grid = () => {
     const savedCart = localStorage.getItem('guestCart');
     return savedCart ? JSON.parse(savedCart) : [];
   });
+  const [productRatings, setProductRatings] = useState({});
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -18,11 +20,43 @@ const Grid = () => {
         const response = await axios.get('/api/products');
         setProducts(response.data);
         setLoading(false);
+        fetchProductRatings(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
         setLoading(false);
       }
     };
+
+    const fetchProductRatings = async (products) => {
+      try {
+        const ratingsPromises = products.map(async (product) => {
+          try {
+            const response = await axios.get(`/api/ratings/product/${product.id}`);
+            const ratings = response.data.data || [];
+            const averageRating =
+              ratings.length > 0
+                ? Math.round(
+                    ratings.reduce((sum, r) => sum + r.rating, 0) / ratings.length
+                  )
+                : 0;
+            return { productId: product.id, averageRating };
+          } catch (err) {
+            console.warn(`No ratings for product ${product.id}:`, err.message);
+            return { productId: product.id, averageRating: 0 };
+          }
+        });
+
+        const ratingsData = await Promise.all(ratingsPromises);
+        const ratingsMap = ratingsData.reduce((acc, { productId, averageRating }) => {
+          acc[productId] = averageRating;
+          return acc;
+        }, {});
+        setProductRatings(ratingsMap);
+      } catch (error) {
+        console.error('Error fetching product ratings:', error);
+      }
+    };
+
     fetchProducts();
   }, []);
 
@@ -74,14 +108,20 @@ const Grid = () => {
     setSelectedProduct(null);
   };
 
-  const renderStars = (rating) => {
+  const renderStars = (productId) => {
+    const rating = productRatings[productId] || 0;
     return (
       <div className="product-rating">
         {[...Array(5)].map((_, index) => (
-          <span key={index} className={index < rating ? "star filled" : "star"}>
-            {index < rating ? "★" : "☆"}
+          <span key={index}>
+            {index < rating ? (
+              <IconStarFilled className="star filled" size={16} />
+            ) : (
+              <IconStar className="star" size={16} />
+            )}
           </span>
         ))}
+        {rating === 0 && <span className="no-rating">No ratings</span>}
       </div>
     );
   };
@@ -106,7 +146,7 @@ const Grid = () => {
               />
               <div className="product-details">
                 <h3 className="product-name">{product.name}</h3>
-                {renderStars(product.rating || 4)}
+                {renderStars(product.id)}
                 <p className="product-price">₱{parseFloat(product.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}</p>
                 <div className="button-container">
                   <button className="add-to-cart" onClick={(e) => {
