@@ -117,11 +117,39 @@
         display: flex;
         gap: 2px;
 
-        svg {
-          color: #ffb800;
-          
+        .lapnix-star-wrapper {
+          position: relative;
+          display: inline-block;
+
+          svg {
+            color: #e0e0e0; // Gray for empty stars
+            width: 18px;
+            height: 18px;
+          }
+
+          &.lapnix-filled {
+            svg {
+              color: #0055ff; // Blue for filled stars
+            }
+          }
+
+          &.lapnix-partial {
+            svg {
+              background: linear-gradient(
+                to right,
+                #0055ff var(--fill-percentage),
+                #e0e0e0 var(--fill-percentage)
+              );
+              background-clip: text;
+              -webkit-background-clip: text;
+              color: transparent;
+            }
+          }
+
           &.lapnix-empty {
-            opacity: 0.5;
+            svg {
+              color: #e0e0e0; // Gray for empty stars
+            }
           }
         }
       }
@@ -350,11 +378,39 @@
           display: flex;
           gap: 4px;
 
-          svg {
-            color: #ffb800;
-            
+          .lapnix-star-wrapper {
+            position: relative;
+            display: inline-block;
+
+            svg {
+              color: #e0e0e0; // Gray for empty stars
+              width: 18px;
+              height: 18px;
+            }
+
+            &.lapnix-filled {
+              svg {
+                color: #0055ff; // Blue for filled stars
+              }
+            }
+
+            &.lapnix-partial {
+              svg {
+                background: linear-gradient(
+                  to right,
+                  #0055ff var(--fill-percentage),
+                  #e0e0e0 var(--fill-percentage)
+                );
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+              }
+            }
+
             &.lapnix-empty {
-              opacity: 0.5;
+              svg {
+                color: #e0e0e0; // Gray for empty stars
+              }
             }
           }
         }
@@ -404,13 +460,39 @@
                 display: flex;
                 gap: 2px;
                 
-                svg {
-                  width: 16px;
-                  height: 16px;
-                  color: #ffb800;
-                  
-                  &.lapnix-empty {
-                    opacity: 0.5;
+                .lapnix-star-wrapper {
+                  position: relative;
+                  display: inline-block;
+
+                  svg {
+                    color: #e0e0e0; // Gray for empty stars
+                    width: 16px;
+                    height: 16px;
+                  }
+
+                  &.lapnix-filled {
+                    svg {
+                      color: #0055ff; // Blue for filled stars
+                    }
+                  }
+
+                  &.lapnix-partial {
+                    svg {
+                      background: linear-gradient(
+                        to right,
+                        #0055ff var(--fill-percentage),
+                        #e0e0e0 var(--fill-percentage)
+                      );
+                      background-clip: text;
+                      -webkit-background-clip: text;
+                      color: transparent;
+                    }
+                  }
+
+                  &.lap47nix-empty {
+                    svg {
+                      color: #e0e0e0; // Gray for empty stars
+                    }
                   }
                 }
               }

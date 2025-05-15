@@ -19,15 +19,13 @@ import "../../sass/components/_sidemenu.scss";
 const { Sider } = Layout;
 
 const menuItems = [
+  { key: "shop", icon: <ShopOutlined />, label: "Go to Shop", path: "/homepagecontent" },
   { key: "dashboard", icon: <DashboardOutlined />, label: "Dashboard", path: "/admindashboard" },
   { key: "orders", icon: <ShoppingCartOutlined />, label: "Orders", path: "/orders" },
   { key: "products", icon: <AppstoreOutlined />, label: "Products", path: "/adminproducts" },
   { key: "inventory", icon: <InboxOutlined />, label: "Inventory", path: "/inventory" },
-  { key: "cancellations", icon: <CloseCircleOutlined />, label: "Cancellation Requests", path: "/cancellations" },
   { key: "users", icon: <UserOutlined />, label: "Users", path: "/usertable" },
-  { key: "customers", icon: <TeamOutlined />, label: "Customers", path: "/customers" },
   { key: "reviews", icon: <StarOutlined />, label: "Reviews", path: "/reviews" },
-  { key: "shop", icon: <ShopOutlined />, label: "Shop Here", path: "/shop" },
   { key: "adminsetting", icon: <SettingOutlined />, label: "Admin Setting", path: "/adminsetting" },
 ];
 

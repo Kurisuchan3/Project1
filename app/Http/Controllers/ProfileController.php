@@ -94,14 +94,16 @@ class ProfileController extends Controller
                 $file = $request->file('profile_picture');
                 // Validate file (e.g., size, type)
                 if ($file->isValid()) {
-                    // Store the file in storage/app/public/profile_pictures
-                    $path = $file->store('profile_pictures', 'public');
-                    // The path will be something like "profile_pictures/filename.jpg"
-                    $profileData['profile_picture'] = $path;
+                    // Generate a unique filename
+                    $filename = uniqid('pfp_') . '.' . $file->getClientOriginalExtension();
+                    // Store the file directly in public/images/pfp
+                    $file->move(public_path('images/pfp'), $filename);
+                    // Store the relative path
+                    $profileData['profile_picture'] = 'images/pfp/' . $filename;
 
                     // Optionally, delete the old profile picture if it exists
-                    if ($profile->profile_picture) {
-                        Storage::disk('public')->delete($profile->profile_picture);
+                    if ($profile->profile_picture && file_exists(public_path($profile->profile_picture))) {
+                        unlink(public_path($profile->profile_picture));
                     }
                 } else {
                     Log::warning('Invalid profile picture upload for user_id: ' . $user->user_id);

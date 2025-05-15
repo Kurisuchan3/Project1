@@ -1,81 +1,140 @@
-import React from "react";
-import { Layout, Button, Avatar, Rate } from "antd";
-import { UserOutlined } from "@ant-design/icons";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { Rate } from "antd";
 import TopNav from "../topnav";
 import AdminSideMenu from "../admin-sidemenu";
-import "../../../sass/components/_topnav.scss";
-import "../../../sass/components/_reviews.scss";
+import ReviewsModal from "../../components/Reviews/ReviewsModal";
+import "../../../sass/components/reviews.scss";
+import moment from "moment";
 
-const { Sider, Content } = Layout;
+const Reviews = ({ productId = 1 }) => {
+  const [reviews, setReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [selectedReview, setSelectedReview] = useState(null);
+  const navigate = useNavigate();
 
-const NAV_HEIGHT = 76;
-const SIDEBAR_WIDTH = 200;
+  useEffect(() => {
+    let isMounted = true;
+    const source = axios.CancelToken.source();
 
-const Reviews = () => {
-  const reviews = [
-    {
-      username: "YanzzieBoi",
-      date: "01/31/2025",
-      content:
-        "A good laptop for its price. It’s a gaming and work laptop in one. I played Hogwarts Legacy on high settings, and the gameplay was smooth. It’s definitely worth it for its price. Kudos to MSI.",
-    },
-    {
-      username: "AnotherUser",
-      date: "02/05/2025",
-      content:
-        "Solid build quality and performance. Battery life could be better, but overall a great machine for both gaming and productivity.",
-    },
-    {
-      username: "TechFan99",
-      date: "02/10/2025",
-      content:
-        "Fantastic display and speakers. Ran heavy workloads without a hitch. Fans can get loud under load, but it’s manageable.",
-    },
-  ];
+    const fetchReviews = async () => {
+      const token = localStorage.getItem("authToken");
+      if (!token) {
+        alert("Please log in to view reviews");
+        navigate("/login");
+        return;
+      }
+
+      try {
+        const userResponse = await axios.get("http://localhost:8000/api/user", {
+          headers: { Authorization: `Bearer ${token}` },
+          cancelToken: source.token,
+        });
+
+        if (isMounted) {
+          if (userResponse.data.data && userResponse.data.data.roles_id === 1) {
+            setIsAdmin(true);
+          } else {
+            alert("Access denied. Admins only.");
+            navigate("/homepagecontent");
+            return;
+          }
+        }
+
+        const response = await axios.get(
+          `http://localhost:8000/api/ratings/product/${productId}`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+            cancelToken: source.token,
+          }
+        );
+
+        if (isMounted && response.data.success) {
+          setReviews(response.data.data);
+        }
+      } catch (error) {
+        if (axios.isCancel(error)) return;
+        console.error("Error fetching reviews:", error);
+        if (isMounted && error.response?.status === 401) {
+          localStorage.removeItem("authToken");
+          alert("Session expired. Please log in again.");
+          navigate("/login");
+        }
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    };
+
+    fetchReviews();
+
+    return () => {
+      isMounted = false;
+      source.cancel("Component unmounted");
+    };
+  }, [navigate, productId]);
+
+  const openModal = (review) => {
+    setSelectedReview(review);
+  };
+
+  const closeModal = () => {
+    setSelectedReview(null);
+  };
 
   return (
-    <div className="reviews-page">
+    <div className="reviews-wrapper">
       <TopNav />
-
-      <Layout style={{ minHeight: "100vh", marginTop: NAV_HEIGHT }}>
-        <Sider width={SIDEBAR_WIDTH}>
-          <AdminSideMenu />
-        </Sider>
-
-        <Layout
-          style={{
-            marginLeft: SIDEBAR_WIDTH,
-            width: `calc(100% - ${SIDEBAR_WIDTH}px)`,
-          }}
-        >
-          <Content style={{ padding: 24, background: "#fff" }}>
-            <div className="reviews-container">
-              <div className="reviews-header">Reviews</div>
-
-              {reviews.map((r, i) => (
-                <div key={i} className="review-item">
-                  <div className="review-item-header">
-                    <div className="user-info">
-                      <Avatar size="small" icon={<UserOutlined />} />
-                      <span className="username">{r.username}</span>
-                      <Rate disabled defaultValue={5} className="star-rating" />
+      <AdminSideMenu />
+      <div className="reviews-content">
+        <h1 className="reviews-title">Product Reviews</h1>
+        <div className="reviews-list">
+          {loading ? (
+            <p className="reviews-empty">Loading reviews...</p>
+          ) : reviews.length === 0 ? (
+            <p className="reviews-empty">No reviews found for this product.</p>
+          ) : (
+            reviews.map((review) => {
+              const userProfileImage = review.profile_picture
+                ? review.profile_picture
+                : "https://via.placeholder.com/80";
+              const truncatedComment =
+                review.comment && review.comment.length > 100
+                  ? `${review.comment.substring(0, 100)}...`
+                  : review.comment || "No comment";
+              return (
+                <div className="reviews-card" key={review.id}>
+                  <div className="reviews-card-header">
+                    <img
+                      src={userProfileImage}
+                      alt="User Profile"
+                      className="reviews-card-image"
+                    />
+                    <div className="reviews-card-info">
+                      <p className="reviews-username">{review.name || "Anonymous"}</p>
+                      <p className="reviews-date">
+                        {moment(review.created_at).format("MM/DD/YYYY")}
+                      </p>
                     </div>
-                    <span className="review-date">{r.date}</span>
                   </div>
-
-                  <p className="review-content">{r.content}</p>
-
-                  {i < reviews.length - 1 && <div className="divider" />}
+                  <div className="reviews-card-details">
+                  </div>
+                  <button
+                    className="reviews-card-button"
+                    onClick={() => openModal(review)}
+                  >
+                    View Details
+                  </button>
                 </div>
-              ))}
-
-              <div className="view-more">
-                <Button>View more</Button>
-              </div>
-            </div>
-          </Content>
-        </Layout>
-      </Layout>
+              );
+            })
+          )}
+        </div>
+      </div>
+      {selectedReview && (
+        <ReviewsModal review={selectedReview} onClose={closeModal} />
+      )}
     </div>
   );
 };

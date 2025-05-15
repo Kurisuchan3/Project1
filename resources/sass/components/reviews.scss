@@ -1,0 +1,124 @@
+:root {
+  --purple: #24067e;
+  --yellow: #ffcd38;
+}
+
+.reviews-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  background: #f9fafb;
+
+  .reviews-content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    margin-top: 64px;
+    margin-left: 200px;
+
+    @media (max-width: 768px) {
+      padding: 20px;
+      margin-left: 80px;
+    }
+  }
+
+  .reviews-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--purple);
+  }
+
+  .reviews-list {
+    display: grid;
+    gap: 16px;
+
+    .reviews-empty {
+      font-size: 16px;
+      color: #6b7280;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .reviews-card {
+      display: flex;
+      align-items: center;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .reviews-card-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        min-width: 200px;
+
+        .reviews-card-image {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2px solid var(--yellow);
+        }
+
+        .reviews-card-info {
+          .reviews-username {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--purple);
+            margin: 0;
+          }
+
+          .reviews-date {
+            font-size: 14px;
+            color: #6b7280;
+            margin: 4px 0 0;
+          }
+        }
+      }
+
+      .reviews-card-details {
+        flex: 1;
+        padding: 0 20px;
+
+        .reviews-rating {
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+
+        .reviews-comment {
+          font-size: 14px;
+          color: #444;
+          margin: 0;
+          line-height: 1.5;
+        }
+      }
+
+      .reviews-card-button {
+        padding: 10px 24px;
+        background: var(--yellow);
+        color: var(--purple);
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.2s;
+
+        &:hover {
+          background: #f4b400;
+        }
+      }
+    }
+  }
+}

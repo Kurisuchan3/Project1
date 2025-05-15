@@ -1,0 +1,82 @@
+.reviews-modal {
+  .reviews-modal-content {
+    padding: 24px;
+
+    .reviews-modal-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #24067e;
+      margin-bottom: 20px;
+    }
+
+    .reviews-modal-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+
+      .reviews-modal-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ffcd38;
+      }
+
+      .reviews-modal-info {
+        .reviews-modal-username {
+          font-size: 18px;
+          font-weight: 600;
+          color: #24067e;
+          margin: 0;
+        }
+
+        .reviews-modal-date {
+          font-size: 14px;
+          color: #6b7280;
+          margin: 4px 0 0;
+        }
+      }
+    }
+
+    .reviews-modal-details {
+      margin-bottom: 20px;
+
+      .reviews-modal-rating {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+      .reviews-modal-comment {
+        font-size: 16px;
+        color: #444;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .reviews-modal-photo {
+        max-width: 300px;
+        margin-top: 12px;
+        border-radius: 6px;
+      }
+    }
+
+    .reviews-modal-user {
+      border-top: 1px solid #eee;
+      padding-top: 16px;
+
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #24067e;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 14px;
+        color: #444;
+        margin: 4px 0;
+      }
+    }
+  }
+}

@@ -194,11 +194,6 @@ const Header = () => {
     navigate('/shopui?category=Brands');
   };
 
-  const handlePeripheralsClick = (e) => {
-    e.preventDefault();
-    navigate('/shopui?category=Peripherals');
-  };
-
   const handleAboutClick = (e) => {
     e.preventDefault();
     navigate('/about');
@@ -256,8 +251,7 @@ const Header = () => {
         />
         <nav className="header__nav">
           <a href="#" className="header__link" onClick={handleHomeClick}>Home</a>
-          <a href="#" className="header__link" onClick={handleBrandsClick}>Brands</a>
-          <a href="#" className="header__link" onClick={handlePeripheralsClick}>Peripherals</a>
+          <a href="#" className="header__link" onClick={handleBrandsClick}>Shop</a>
           <a href="#" className="header__link">Support</a>
           <a href="#" className="header__link" onClick={handleAboutClick}>About us</a>
         </nav>

@@ -93,7 +93,7 @@ const Orders = () => {
           ) : (
             orders.map((order) => {
               const userProfileImage = order.user?.profile?.profile_picture
-                ? `http://localhost:8000/storage/${order.user.profile.profile_picture}`
+                ? `http://localhost:8000/${order.user.profile.profile_picture}`
                 : 'https://via.placeholder.com/40';
               return (
                 <div className="orders-card" key={order.id}>
