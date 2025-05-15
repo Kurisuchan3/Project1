@@ -97,35 +97,35 @@
     font-weight: 500;
   }
 
-  &__dropdown {
-    position: absolute;
-    top: 40px;
-    right: 0;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-    min-width: 120px;
-  }
-
-  &__dropdown-item {
-    display: block;
-    width: 100%;
-    padding: 10px 15px;
-    background: none;
-    border: none;
-    text-align: left;
-    font-size: 14px;
-    color: #1e1d1d;
+  &__notifications {
+    position: relative;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #f0f0f0;
-    }
+    display: flex;
+    align-items: center;
   }
 
-  // Added styling for the cart container and count
+  &__notification-toggle {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .notification-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ffd500;
+    color: #1e1d1d;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
   &__cart {
     position: relative;
     cursor: pointer;
@@ -137,7 +137,7 @@
     position: absolute;
     top: -8px;
     right: -8px;
-    background-color: #ffd500; // Matches your login button for consistency
+    background-color: #ffd500;
     color: #1e1d1d;
     border-radius: 50%;
     width: 16px;

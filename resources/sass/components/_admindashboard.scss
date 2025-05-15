@@ -1,10 +1,34 @@
 .dashboard-card {
-    text-align: center;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 28px;
+    color: #333;
+  }
+}
+
+.dashboard-page {
+  .ant-card {
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  
-    h2 {
-      font-size: 28px;
-      color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  .ant-card-head {
+    border-bottom: none;
+  }
+
+  .ant-table-container {
+    table {
+      thead.ant-table-thead > tr > th {
+        background-color: #24067e !important;
+        color: #fff !important;
+      }
     }
   }
+
+  .ant-btn-primary {
+    background-color: #24067e !important;
+    border-color: #24067e !important;
+  }
+}

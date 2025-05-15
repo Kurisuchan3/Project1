@@ -12098,6 +12098,11 @@ textarea.form-control-lg {
 }
 
 .topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: var(--purple);
   display: flex;
   align-items: center;
@@ -12107,6 +12112,7 @@ textarea.form-control-lg {
 .topnav .logo {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .topnav .logo img {
   height: 40px;
@@ -13040,30 +13046,31 @@ footer {
   font-size: 16px;
   font-weight: 500;
 }
-.header__dropdown {
-  position: absolute;
-  top: 40px;
-  right: 0;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
-  min-width: 120px;
-}
-.header__dropdown-item {
-  display: block;
-  width: 100%;
-  padding: 10px 15px;
-  background: none;
-  border: none;
-  text-align: left;
-  font-size: 14px;
-  color: #1e1d1d;
+.header__notifications {
+  position: relative;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
 }
-.header__dropdown-item:hover {
-  background-color: #f0f0f0;
+.header__notification-toggle {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header .notification-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ffd500;
+  color: #1e1d1d;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
 }
 .header__cart {
   position: relative;
@@ -15681,6 +15688,22 @@ footer {
   color: #333;
 }
 
+.dashboard-page .ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.dashboard-page .ant-card-head {
+  border-bottom: none;
+}
+.dashboard-page .ant-table-container table thead.ant-table-thead > tr > th {
+  background-color: #24067e !important;
+  color: #fff !important;
+}
+.dashboard-page .ant-btn-primary {
+  background-color: #24067e !important;
+  border-color: #24067e !important;
+}
+
 :root {
   --purple: #24067e;
   --yellow: #ffcd38;
@@ -16771,4 +16794,77 @@ footer {
 .about-page .footer-content {
   flex-shrink: 0;
   margin-top: auto;
+}
+
+.reviews-container {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 24px;
+  /* full width inside Content */
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.reviews-header {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  background: #fff;
+  padding: 0 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.review-item:not(:first-child) {
+  margin-top: 24px;
+}
+
+.review-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+.user-info .ant-avatar {
+  margin-right: 8px;
+}
+.user-info .username {
+  font-weight: 500;
+  color: #333;
+  margin-right: 8px;
+}
+.user-info .star-rating {
+  font-size: 14px; /* slightly smaller stars */
+}
+
+.review-date {
+  color: #888;
+  font-size: 14px;
+}
+
+.review-content {
+  color: #444;
+  line-height: 1.6;
+}
+
+.divider {
+  height: 1px;
+  background: #ddd;
+  margin: 16px 0;
+}
+
+.view-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.view-more .ant-btn {
+  border-radius: 4px;
 }

@@ -13,6 +13,8 @@ const Header = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem("authToken"));
   const [username, setUsername] = useState('');
   const [cartCount, setCartCount] = useState(0);
+  const [notifications, setNotifications] = useState([]);
+  const [notificationCount, setNotificationCount] = useState(0);
 
   const fetchUserData = async () => {
     const token = localStorage.getItem("authToken");
@@ -28,6 +30,7 @@ const Header = () => {
       });
       if (response.data.success) {
         setUsername(response.data.data.username);
+        localStorage.setItem('userRole', response.data.data.role_id.toString());
       }
     } catch (error) {
       console.error("Failed to fetch user:", error);
@@ -88,26 +91,78 @@ const Header = () => {
     }
   };
 
+  const fetchNotifications = async () => {
+    const token = localStorage.getItem("authToken");
+    if (!token) return;
+
+    try {
+      const response = await axios.get("/api/notifications", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (response.data.success) {
+        setNotifications(response.data.data);
+        setNotificationCount(response.data.data.filter(n => !n.is_read).length);
+      }
+    } catch (error) {
+      console.error("Failed to fetch notifications:", error.response?.data || error.message);
+      if (error.response?.status === 401) {
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("userRole");
+        navigate('/login');
+      }
+    }
+  };
+
+  const markNotificationAsRead = async (id) => {
+    const token = localStorage.getItem("authToken");
+    if (!token) return;
+
+    try {
+      await axios.post(`/api/notifications/${id}/read`, {}, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setNotifications(prev =>
+        prev.map(n => n.id === id ? { ...n, is_read: true } : n)
+      );
+      setNotificationCount(prev => prev - 1);
+    } catch (error) {
+      console.error("Failed to mark notification as read:", error.response?.data || error.message);
+    }
+  };
+
   useEffect(() => {
     fetchUserData();
     fetchCartCount();
     fetchAddresses();
+    fetchNotifications();
 
     const handleStorageChange = () => {
       fetchUserData();
       fetchCartCount();
       fetchAddresses();
+      fetchNotifications();
     };
 
     window.addEventListener('storage', handleStorageChange);
     return () => window.removeEventListener('storage', handleStorageChange);
   }, [navigate]);
 
+  useEffect(() => {
+    const handleCartCleared = () => {
+      fetchCartCount();
+    };
+
+    window.addEventListener('cartCleared', handleCartCleared);
+    return () => window.removeEventListener('cartCleared', handleCartCleared);
+  }, []);
+
   const handleLogoutClick = async () => {
     await handleLogout();
     setIsAuthenticated(false);
     setUsername('');
     setCartCount(0);
+    setNotifications([]);
+    setNotificationCount(0);
     localStorage.removeItem('guestCart');
     navigate('/homepagecontent');
   };
@@ -121,7 +176,12 @@ const Header = () => {
   };
 
   const handleLogoClick = () => {
-    navigate('/homepagecontent');
+    const role = localStorage.getItem('userRole');
+    if (role === '1') {
+      navigate('/admindashboard');
+    } else {
+      navigate('/homepagecontent');
+    }
   };
 
   const handleHomeClick = (e) => {
@@ -144,7 +204,36 @@ const Header = () => {
     navigate('/about');
   };
 
-  const menu = (
+  const notificationMenu = (
+    <Menu style={{ maxHeight: '300px', overflowY: 'auto' }}>
+      {notifications.length === 0 ? (
+        <Menu.Item key="no-notifications">
+          No notifications
+        </Menu.Item>
+      ) : (
+        notifications.map(notification => (
+          <Menu.Item
+            key={notification.id}
+            onClick={() => {
+              markNotificationAsRead(notification.id);
+              if (notification.order_id) {
+                navigate(`/purchases`);
+              }
+            }}
+            style={{ backgroundColor: notification.is_read ? '#fff' : '#f0f0f0' }}
+          >
+            <div>
+              <span>{notification.message}</span>
+              <br />
+              <small>{new Date(notification.created_at).toLocaleString()}</small>
+            </div>
+          </Menu.Item>
+        ))
+      )}
+    </Menu>
+  );
+
+  const profileMenu = (
     <Menu>
       <Menu.Item key="profile" onClick={handleProfileClick}>
         Profile
@@ -176,14 +265,23 @@ const Header = () => {
 
       <div className="header__right">
         <IconSearch className="header__icon" />
-        <IconBellFilled className="header__icon" />
+        <div className="header__notifications">
+          <Dropdown overlay={notificationMenu} trigger={['click']}>
+            <div className="header__notification-toggle">
+              <IconBellFilled className="header__icon" />
+              {notificationCount > 0 && (
+                <span className="notification-count">{notificationCount}</span>
+              )}
+            </div>
+          </Dropdown>
+        </div>
         <div className="header__cart" onClick={handleCartClick}>
           <IconShoppingCart className="header__icon" />
           {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
         </div>
         {isAuthenticated ? (
           <div className="header__profile">
-            <Dropdown overlay={menu} trigger={['click']}>
+            <Dropdown overlay={profileMenu} trigger={['click']}>
               <div className="header__profile-toggle">
                 <IconUser className="header__icon" />
                 <span className="header__username">{username || 'User'}</span>
