@@ -46,7 +46,12 @@ const Orders = () => {
         });
 
         if (isMounted && response.data.success) {
-          setOrders(response.data.data);
+          const transformedOrders = response.data.data.map(order => ({
+            ...order,
+            orderItems: order.order_items || [],
+            paymentDetail: order.payment_detail || {},
+          }));
+          setOrders(transformedOrders);
         }
       } catch (error) {
         if (axios.isCancel(error)) return;
@@ -80,31 +85,32 @@ const Orders = () => {
     <div className="orders-wrapper">
       <TopNav />
       <AdminSideMenu />
-      <div className="orders-content" style={{ marginLeft: '200px' }}>
+      <div className="orders-content">
         <h1 className="orders-title">All Customer Orders</h1>
         <div className="orders-list">
           {orders.length === 0 ? (
-            <p>No orders found.</p>
+            <p className="orders-empty">No orders found.</p>
           ) : (
             orders.map((order) => {
-              const firstItem = order.orderItems && order.orderItems.length > 0 ? order.orderItems[0] : null;
+              const userProfileImage = order.user?.profile?.profile_picture
+                ? `http://localhost:8000/storage/${order.user.profile.profile_picture}`
+                : 'https://via.placeholder.com/40';
               return (
-                <div className="orders-item" key={order.id}>
-                  <div className="orders-info">
-                    {firstItem ? (
-                      <>
-                        <p>Product: {firstItem.product?.name || 'N/A'}</p>
-                        <p>Price: ₱{firstItem.price.toLocaleString()}</p>
-                        <p>Quantity: {firstItem.quantity}</p>
-                      </>
-                    ) : (
-                      <p>No items in this order.</p>
-                    )}
-                    <p>Order Date: {new Date(order.created_at).toLocaleDateString()}</p>
-                    <p>Total: ₱{order.total.toLocaleString()}</p>
-                    <p>Status: {order.status?.status_name || 'N/A'}</p>
+                <div className="orders-card" key={order.id}>
+                  <div className="orders-card-header">
+                    <img src={userProfileImage} alt="User Profile" className="orders-card-image" />
+                    <div className="orders-card-info">
+                      <p className="orders-username">{order.user?.username || 'N/A'}</p>
+                      <p className="orders-date">Order Date: {new Date(order.created_at).toLocaleDateString()}</p>
+                    </div>
                   </div>
-                  <button className="orders-view-details" onClick={() => openModal(order)}>
+                  <div className="orders-card-details">
+                    <p className="orders-total">Total: ₱{order.total?.toLocaleString() || 'N/A'}</p>
+                    <p className={`orders-status orders-status-${order.status?.status_name?.toLowerCase() || 'na'}`}>
+                      Status: {order.status?.status_name || 'N/A'}
+                    </p>
+                  </div>
+                  <button className="orders-card-button" onClick={() => openModal(order)}>
                     View Details
                   </button>
                 </div>

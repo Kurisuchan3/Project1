@@ -77633,7 +77633,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".products-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 16px;\n}\n.products-header h2 {\n  font-size: 20px;\n  font-weight: bold;\n  color: #333;\n}\n.products-header .archive-btn {\n  margin-left: 8px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n  --green: #10b981;\n}\n\n.products-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 24px;\n  padding: 16px 0;\n  border-bottom: 2px solid var(--yellow);\n}\n.products-header .products-title {\n  font-size: 28px;\n  font-weight: 700;\n  color: var(--purple);\n  margin: 0;\n}\n.products-header .products-actions {\n  display: flex;\n  gap: 12px;\n}\n.products-header .products-actions .ant-btn-primary {\n  background: var(--yellow);\n  color: var(--purple);\n  border: none;\n  padding: 8px 20px;\n  font-weight: 600;\n  transition: background 0.2s;\n}\n.products-header .products-actions .ant-btn-primary:hover {\n  background: #f4b400;\n}\n.products-header .products-actions .archive-btn {\n  background: #fff;\n  color: var(--purple);\n  border: 1px solid var(--purple);\n  padding: 8px 20px;\n  transition: all 0.2s;\n}\n.products-header .products-actions .archive-btn:hover {\n  background: var(--purple);\n  color: #fff;\n}\n\n.products-table .ant-table {\n  border-radius: 8px;\n  overflow: hidden;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n}\n.products-table .ant-table .ant-table-thead > tr > th {\n  background: var(--purple) !important;\n  color: #fff;\n  font-weight: 600;\n  border-bottom: 2px solid var(--yellow);\n}\n.products-table .ant-table .ant-table-tbody > tr > td {\n  border-bottom: 1px solid #e0e0e0;\n}\n.products-table .ant-table .ant-table-tbody > tr:hover > td {\n  background: #f9fafb;\n}\n.products-table .ant-table .ant-table-pagination {\n  margin: 16px 0;\n}\n.products-table .ant-table .edit-btn {\n  background: var(--green);\n  color: #fff;\n  border: none;\n  transition: background 0.2s;\n}\n.products-table .ant-table .edit-btn:hover {\n  background: #059669;\n}\n.products-table .ant-table .archive-btn-action {\n  background: #ef4444;\n  color: #fff;\n  border: none;\n  transition: background 0.2s;\n}\n.products-table .ant-table .archive-btn-action:hover {\n  background: #dc2626;\n}\n\n.products-modal .ant-modal-content {\n  border-radius: 12px;\n  padding: 24px;\n}\n.products-modal .ant-modal-content .ant-modal-header {\n  background: var(--purple);\n  color: #fff;\n  border-radius: 12px 12px 0 0;\n  padding: 16px 24px;\n}\n.products-modal .ant-modal-content .ant-modal-header .ant-modal-title {\n  font-size: 20px;\n  font-weight: 600;\n}\n.products-modal .ant-modal-content .ant-modal-body {\n  padding: 24px;\n}\n.products-modal .ant-modal-content .ant-modal-body .ant-form-item-label label {\n  color: var(--purple);\n  font-weight: 500;\n}\n.products-modal .ant-modal-content .ant-modal-body .ant-input,\n.products-modal .ant-modal-content .ant-modal-body .ant-input-number,\n.products-modal .ant-modal-content .ant-modal-body .ant-select-selector,\n.products-modal .ant-modal-content .ant-modal-body .ant-upload {\n  border-radius: 6px;\n  border-color: #d1d5db;\n}\n.products-modal .ant-modal-content .ant-modal-body .ant-input:focus,\n.products-modal .ant-modal-content .ant-modal-body .ant-input-number:focus,\n.products-modal .ant-modal-content .ant-modal-body .ant-select-selector:focus,\n.products-modal .ant-modal-content .ant-modal-body .ant-upload:focus {\n  border-color: var(--yellow);\n  box-shadow: 0 0 0 2px rgba(255, 205, 56, 0.2);\n}\n.products-modal .ant-modal-content .ant-modal-body .ant-btn {\n  background: var(--yellow);\n  color: var(--purple);\n  border: none;\n  padding: 8px 20px;\n  font-weight: 600;\n  transition: background 0.2s;\n}\n.products-modal .ant-modal-content .ant-modal-body .ant-btn:hover {\n  background: #f4b400;\n}\n.products-modal .ant-modal-content .ant-modal-footer {\n  padding: 16px 24px;\n  border-top: 1px solid #e0e0e0;\n}\n\n.archived-products-modal .ant-modal-content {\n  border-radius: 12px;\n  padding: 0;\n  background: #fff;\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);\n  overflow: hidden;\n}\n.archived-products-modal .ant-modal-content .ant-modal-header {\n  background: var(--purple);\n  border-bottom: 2px solid var(--yellow);\n  border-radius: 12px 12px 0 0;\n  padding: 20px 24px;\n  margin: 0;\n}\n.archived-products-modal .ant-modal-content .ant-modal-header .archived-modal-title {\n  font-size: 22px;\n  font-weight: 600;\n  color: #fff;\n  font-family: \"Inter\", sans-serif;\n}\n.archived-products-modal .ant-modal-content .ant-modal-close {\n  color: #fff;\n}\n.archived-products-modal .ant-modal-content .ant-modal-close:hover {\n  color: var(--yellow);\n}\n.archived-products-modal .ant-modal-content .ant-modal-body {\n  padding: 0;\n}\n.archived-products-modal .ant-modal-content .archived-products-content {\n  padding: 24px;\n  background: #fafafa;\n}\n.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table {\n  border-radius: 8px;\n  overflow: hidden;\n  background: #fff;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);\n}\n.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-thead > tr > th {\n  background: var(--purple) !important; /* Ensure header row uses #24067e */\n  color: #fff;\n  font-weight: 600;\n  font-size: 14px;\n  padding: 12px 16px;\n  border-bottom: 2px solid var(--yellow);\n  font-family: \"Inter\", sans-serif;\n}\n.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-tbody > tr > td {\n  padding: 12px 16px;\n  border-bottom: 1px solid #e5e7eb;\n  font-size: 14px;\n  color: #4b5563;\n  font-family: \"Inter\", sans-serif;\n}\n.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-tbody > tr:hover > td {\n  background: #f1f5f9;\n}\n.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-tbody > tr:last-child > td {\n  border-bottom: none;\n}\n.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-pagination {\n  margin: 16px 0;\n  padding: 8px 0;\n}\n.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-pagination .ant-pagination-item-active {\n  background: var(--purple);\n  border-color: var(--purple);\n}\n.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-pagination .ant-pagination-item-active a {\n  color: #fff;\n}\n.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-pagination .ant-pagination-item:hover {\n  border-color: var(--yellow);\n}\n.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-pagination .ant-pagination-item:hover a {\n  color: var(--purple);\n}\n.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .restore-btn {\n  background: var(--yellow);\n  color: var(--purple);\n  border: none;\n  padding: 8px 16px;\n  font-weight: 600;\n  border-radius: 6px;\n  transition: background 0.2s;\n  font-family: \"Inter\", sans-serif;\n}\n.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .restore-btn:hover {\n  background: #f4b400;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -77657,7 +77657,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".inventory-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 16px;\n}\n.inventory-header h2 {\n  font-size: 20px;\n  font-weight: bold;\n  color: #333;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n  --green: #10b981;\n}\n\n.inventory-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 24px;\n  padding: 16px 0;\n  border-bottom: 2px solid var(--yellow);\n}\n.inventory-header .inventory-title {\n  font-size: 28px;\n  font-weight: 700;\n  color: var(--purple);\n  margin: 0;\n  font-family: \"Inter\", sans-serif;\n}\n.inventory-header .archive-btn {\n  background: #fff;\n  color: var(--purple);\n  border: 1px solid var(--purple);\n  padding: 8px 20px;\n  font-weight: 600;\n  border-radius: 6px;\n  transition: all 0.2s;\n}\n.inventory-header .archive-btn:hover {\n  background: var(--purple);\n  color: #fff;\n}\n\n.inventory-table .ant-table {\n  border-radius: 8px;\n  overflow: hidden;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n}\n.inventory-table .ant-table .ant-table-thead > tr > th {\n  background: var(--purple) !important; /* Ensure #24067e background */\n  color: #fff;\n  font-weight: 600;\n  font-size: 14px;\n  padding: 12px 16px;\n  border-bottom: 2px solid var(--yellow);\n  font-family: \"Inter\", sans-serif;\n}\n.inventory-table .ant-table .ant-table-tbody > tr > td {\n  padding: 12px 16px;\n  border-bottom: 1px solid #e5e7eb;\n  font-size: 14px;\n  color: #4b5563;\n  font-family: \"Inter\", sans-serif;\n}\n.inventory-table .ant-table .ant-table-tbody > tr:hover > td {\n  background: #f1f5f9;\n}\n.inventory-table .ant-table .ant-table-tbody > tr:last-child > td {\n  border-bottom: none;\n}\n.inventory-table .ant-table .ant-table-pagination {\n  margin: 16px 0;\n  padding: 8px 0;\n}\n.inventory-table .ant-table .ant-table-pagination .ant-pagination-item-active {\n  background: var(--purple);\n  border-color: var(--purple);\n}\n.inventory-table .ant-table .ant-table-pagination .ant-pagination-item-active a {\n  color: #fff;\n}\n.inventory-table .ant-table .ant-table-pagination .ant-pagination-item:hover {\n  border-color: var(--yellow);\n}\n.inventory-table .ant-table .ant-table-pagination .ant-pagination-item:hover a {\n  color: var(--purple);\n}\n.inventory-table .ant-table .edit-btn {\n  background: var(--green);\n  color: #fff;\n  border: none;\n  padding: 6px 12px;\n  font-weight: 600;\n  border-radius: 4px;\n  transition: background 0.2s;\n}\n.inventory-table .ant-table .edit-btn:hover {\n  background: #059669;\n}\n.inventory-table .ant-table .archive-btn {\n  background: #ef4444;\n  color: #fff;\n  border: none;\n  padding: 6px 12px;\n  font-weight: 600;\n  border-radius: 4px;\n  transition: background 0.2s;\n}\n.inventory-table .ant-table .archive-btn:hover {\n  background: #dc2626;\n}\n\n.inventory-modal .ant-modal-content {\n  border-radius: 12px;\n  padding: 24px;\n}\n.inventory-modal .ant-modal-content .ant-modal-header {\n  background: var(--purple);\n  color: #fff;\n  border-radius: 12px 12px 0 0;\n  padding: 16px 24px;\n}\n.inventory-modal .ant-modal-content .ant-modal-header .ant-modal-title {\n  font-size: 20px;\n  font-weight: 600;\n  font-family: \"Inter\", sans-serif;\n}\n.inventory-modal .ant-modal-content .ant-modal-body {\n  padding: 24px;\n}\n.inventory-modal .ant-modal-content .ant-modal-body .ant-form-item-label label {\n  color: var(--purple);\n  font-weight: 500;\n  font-family: \"Inter\", sans-serif;\n}\n.inventory-modal .ant-modal-content .ant-modal-body .ant-input,\n.inventory-modal .ant-modal-content .ant-modal-body .ant-input-number,\n.inventory-modal .ant-modal-content .ant-modal-body .ant-select-selector {\n  border-radius: 6px;\n  border-color: #d1d5db;\n}\n.inventory-modal .ant-modal-content .ant-modal-body .ant-input:focus,\n.inventory-modal .ant-modal-content .ant-modal-body .ant-input-number:focus,\n.inventory-modal .ant-modal-content .ant-modal-body .ant-select-selector:focus {\n  border-color: var(--yellow);\n  box-shadow: 0 0 0 2px rgba(255, 205, 56, 0.2);\n}\n.inventory-modal .ant-modal-content .ant-modal-body .ant-btn {\n  background: var(--yellow);\n  color: var(--purple);\n  border: none;\n  padding: 8px 20px;\n  font-weight: 600;\n  border-radius: 6px;\n  transition: background 0.2s;\n}\n.inventory-modal .ant-modal-content .ant-modal-body .ant-btn:hover {\n  background: #f4b400;\n}\n.inventory-modal .ant-modal-content .ant-modal-footer {\n  padding: 16px 24px;\n  border-top: 1px solid #e0e0e0;\n}\n\n.archived-inventory-modal .ant-modal-content {\n  border-radius: 12px;\n  padding: 0;\n  background: #fff;\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);\n  overflow: hidden;\n}\n.archived-inventory-modal .ant-modal-content .ant-modal-header {\n  background: var(--purple);\n  border-bottom: 2px solid var(--yellow);\n  border-radius: 12px 12px 0 0;\n  padding: 20px 24px;\n}\n.archived-inventory-modal .ant-modal-content .ant-modal-header .archived-modal-title {\n  font-size: 22px;\n  font-weight: 600;\n  color: #fff;\n  font-family: \"Inter\", sans-serif;\n}\n.archived-inventory-modal .ant-modal-content .ant-modal-close {\n  color: #fff;\n}\n.archived-inventory-modal .ant-modal-content .ant-modal-close:hover {\n  color: var(--yellow);\n}\n.archived-inventory-modal .ant-modal-content .ant-modal-body {\n  padding: 0;\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content {\n  padding: 24px;\n  background: #fafafa;\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table {\n  border-radius: 8px;\n  overflow: hidden;\n  background: #fff;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-thead > tr > th {\n  background: var(--purple) !important; /* Ensure #24067e background for modal table header */\n  color: #fff;\n  font-weight: 600;\n  font-size: 14px;\n  padding: 12px 16px;\n  border-bottom: 2px solid var(--yellow);\n  font-family: \"Inter\", sans-serif;\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-tbody > tr > td {\n  padding: 12px 16px;\n  border-bottom: 1px solid #e5e7eb;\n  font-size: 14px;\n  color: #4b5563;\n  font-family: \"Inter\", sans-serif;\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-tbody > tr:hover > td {\n  background: #f1f5f9;\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-tbody > tr:last-child > td {\n  border-bottom: none;\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-pagination {\n  margin: 16px 0;\n  padding: 8px 0;\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-pagination .ant-pagination-item-active {\n  background: var(--purple);\n  border-color: var(--purple);\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-pagination .ant-pagination-item-active a {\n  color: #fff;\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-pagination .ant-pagination-item:hover {\n  border-color: var(--yellow);\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-pagination .ant-pagination-item:hover a {\n  color: var(--purple);\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .restore-btn {\n  background: var(--yellow);\n  color: var(--purple);\n  border: none;\n  padding: 8px 16px;\n  font-weight: 600;\n  border-radius: 6px;\n  transition: background 0.2s;\n  font-family: \"Inter\", sans-serif;\n}\n.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .restore-btn:hover {\n  background: #f4b400;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -77753,7 +77753,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".user-table-container {\n  margin-top: 10px;\n  padding: 20px;\n  background: #fff;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n  overflow-x: auto;\n}\n.user-table-container .button-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-items: center;\n  gap: 10px;\n  margin-bottom: 20px;\n}\n.user-table-container .button-container .ant-btn-primary,\n.user-table-container .button-container .ant-btn-default {\n  min-width: 130px;\n  font-weight: 500;\n  padding: 0 16px;\n  height: 40px;\n}\n.user-table-container .ant-table {\n  border-radius: 6px;\n  overflow: auto;\n  min-width: 600px;\n}\n.user-table-container .ant-table-thead > tr > th {\n  background-color: #1890ff;\n  color: white;\n  font-weight: 600;\n  white-space: nowrap;\n}\n.user-table-container .ant-table-cell {\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\n@media screen and (max-width: 992px) {\n  .user-table-container {\n    padding: 10px;\n  }\n  .user-table-container .button-container {\n    flex-direction: column;\n    align-items: stretch;\n  }\n  .user-table-container .button-container .ant-btn-primary,\n  .user-table-container .button-container .ant-btn-default {\n    width: 100%;\n  }\n  .user-table-container .ant-table {\n    min-width: unset;\n  }\n  .user-table-container .ant-table-thead > tr > th,\n  .user-table-container .ant-table-cell {\n    font-size: 14px;\n  }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n  --green: #10b981;\n}\n\n.user-table-container {\n  margin-top: 10px;\n  padding: 20px;\n  background: #fff;\n  border-radius: 8px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n  overflow-x: auto;\n}\n.user-table-container .user-table-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 24px;\n  padding: 16px 0;\n  border-bottom: 2px solid var(--yellow);\n}\n.user-table-container .user-table-header .user-table-title {\n  font-size: 28px;\n  font-weight: 700;\n  color: var(--purple);\n  margin: 0;\n  font-family: \"Inter\", sans-serif;\n}\n.user-table-container .user-table-header .button-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-end;\n  align-items: center;\n  gap: 12px;\n}\n.user-table-container .user-table-header .button-container .add-user-btn {\n  background: var(--yellow);\n  color: var(--purple);\n  border: none;\n  padding: 8px 20px;\n  font-weight: 600;\n  border-radius: 6px;\n  transition: background 0.2s;\n}\n.user-table-container .user-table-header .button-container .add-user-btn:hover {\n  background: #f4b400;\n}\n.user-table-container .user-table-header .button-container .toggle-view-btn {\n  background: #fff;\n  color: var(--purple);\n  border: 1px solid var(--purple);\n  padding: 8px 20px;\n  font-weight: 600;\n  border-radius: 6px;\n  transition: all 0.2s;\n}\n.user-table-container .user-table-header .button-container .toggle-view-btn:hover {\n  background: var(--purple);\n  color: #fff;\n}\n.user-table-container .user-table .ant-table {\n  border-radius: 8px;\n  overflow: hidden;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);\n}\n.user-table-container .user-table .ant-table .ant-table-thead > tr > th {\n  background: var(--purple) !important; /* Ensure #24067e background */\n  color: #fff;\n  font-weight: 600;\n  font-size: 14px;\n  padding: 12px 16px;\n  border-bottom: 2px solid var(--yellow);\n  font-family: \"Inter\", sans-serif;\n  white-space: nowrap;\n}\n.user-table-container .user-table .ant-table .ant-table-tbody > tr > td {\n  padding: 12px 16px;\n  border-bottom: 1px solid #e5e7eb;\n  font-size: 14px;\n  color: #4b5563;\n  font-family: \"Inter\", sans-serif;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\n.user-table-container .user-table .ant-table .ant-table-tbody > tr:hover > td {\n  background: #f1f5f9;\n}\n.user-table-container .user-table .ant-table .ant-table-tbody > tr:last-child > td {\n  border-bottom: none;\n}\n.user-table-container .user-table .ant-table .ant-table-pagination {\n  margin: 16px 0;\n  padding: 8px 0;\n}\n.user-table-container .user-table .ant-table .ant-table-pagination .ant-pagination-item-active {\n  background: var(--purple);\n  border-color: var(--purple);\n}\n.user-table-container .user-table .ant-table .ant-table-pagination .ant-pagination-item-active a {\n  color: #fff;\n}\n.user-table-container .user-table .ant-table .ant-table-pagination .ant-pagination-item:hover {\n  border-color: var(--yellow);\n}\n.user-table-container .user-table .ant-table .ant-table-pagination .ant-pagination-item:hover a {\n  color: var(--purple);\n}\n.user-table-container .user-table .ant-table .action-buttons {\n  display: flex;\n  align-items: center;\n  gap: 8px; /* Reduced gap for tighter spacing */\n}\n.user-table-container .user-table .ant-table .action-buttons .edit-btn,\n.user-table-container .user-table .ant-table .action-buttons .archive-btn,\n.user-table-container .user-table .ant-table .action-buttons .restore-btn {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  width: 32px; /* Fixed width to prevent stretching */\n  height: 32px; /* Fixed height for consistency */\n  padding: 0; /* Remove default padding to fit icon */\n  border-radius: 4px;\n  transition: background 0.2s;\n}\n.user-table-container .user-table .ant-table .action-buttons .edit-btn .anticon,\n.user-table-container .user-table .ant-table .action-buttons .archive-btn .anticon,\n.user-table-container .user-table .ant-table .action-buttons .restore-btn .anticon {\n  margin: 0; /* Ensure icon is centered without extra margin */\n}\n.user-table-container .user-table .ant-table .action-buttons .edit-btn {\n  background: var(--green);\n  color: #fff;\n  border: none;\n}\n.user-table-container .user-table .ant-table .action-buttons .edit-btn:hover {\n  background: #059669;\n}\n.user-table-container .user-table .ant-table .action-buttons .archive-btn {\n  background: #ef4444;\n  color: #fff;\n  border: none;\n}\n.user-table-container .user-table .ant-table .action-buttons .archive-btn:hover {\n  background: #dc2626;\n}\n.user-table-container .user-table .ant-table .action-buttons .restore-btn {\n  background: var(--yellow);\n  color: var(--purple);\n  border: none;\n}\n.user-table-container .user-table .ant-table .action-buttons .restore-btn:hover {\n  background: #f4b400;\n}\n@media screen and (max-width: 992px) {\n  .user-table-container {\n    padding: 10px;\n  }\n  .user-table-container .user-table-header {\n    flex-direction: column;\n    align-items: flex-start;\n  }\n  .user-table-container .user-table-header .button-container {\n    justify-content: flex-start;\n    width: 100%;\n    margin-top: 16px;\n  }\n  .user-table-container .user-table-header .button-container .add-user-btn,\n  .user-table-container .user-table-header .button-container .toggle-view-btn {\n    width: 100%;\n  }\n  .user-table-container .user-table .ant-table {\n    min-width: unset;\n  }\n  .user-table-container .user-table .ant-table .ant-table-thead > tr > th,\n  .user-table-container .user-table .ant-table .ant-table-tbody > tr > td {\n    font-size: 14px;\n  }\n  .user-table-container .user-table .ant-table .action-buttons .edit-btn,\n  .user-table-container .user-table .ant-table .action-buttons .archive-btn,\n  .user-table-container .user-table .ant-table .action-buttons .restore-btn {\n    width: 28px; /* Slightly smaller on mobile */\n    height: 28px;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -78018,7 +78018,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".orders-wrapper {\n  width: 100%;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  font-family: \"Inter\", sans-serif;\n  background: #f8f8f8;\n}\n.orders-wrapper .orders-content {\n  flex: 1;\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 30px 40px;\n  margin-top: 64px;\n  margin-left: 200px;\n}\n@media (max-width: 768px) {\n  .orders-wrapper .orders-content {\n    padding: 20px 15px;\n    margin-left: 80px;\n  }\n}\n.orders-wrapper .orders-title {\n  font-size: 28px;\n  font-weight: 600;\n  margin-bottom: 20px;\n  color: #1a1a1a;\n}\n.orders-wrapper .orders-list .orders-item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background: white;\n  padding: 20px;\n  margin-bottom: 15px;\n  border-radius: 8px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n}\n.orders-wrapper .orders-list .orders-item .orders-info p {\n  margin: 0 0 5px;\n  font-size: 14px;\n  color: #333;\n}\n.orders-wrapper .orders-list .orders-item .orders-view-details {\n  padding: 10px 20px;\n  background: #0066cc;\n  color: white;\n  border: none;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: background 0.2s;\n}\n.orders-wrapper .orders-list .orders-item .orders-view-details:hover {\n  background: #004499;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.orders-wrapper {\n  width: 100%;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  font-family: \"Inter\", sans-serif;\n  background: #f9fafb;\n}\n.orders-wrapper .orders-content {\n  flex: 1;\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 40px;\n  margin-top: 64px;\n  margin-left: 200px;\n}\n@media (max-width: 768px) {\n  .orders-wrapper .orders-content {\n    padding: 20px;\n    margin-left: 80px;\n  }\n}\n.orders-wrapper .orders-title {\n  font-size: 32px;\n  font-weight: 700;\n  margin-bottom: 30px;\n  color: var(--purple);\n}\n.orders-wrapper .orders-list {\n  display: grid;\n  gap: 20px;\n}\n.orders-wrapper .orders-list .orders-empty {\n  font-size: 16px;\n  color: #6b7280;\n  text-align: center;\n  padding: 20px;\n}\n.orders-wrapper .orders-list .orders-card {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background: white;\n  padding: 30px; /* Increased padding for larger card */\n  border-radius: 12px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);\n  transition: transform 0.2s, box-shadow 0.2s;\n  width: 100%; /* Ensure full width within grid */\n  max-width: 100%; /* Allow flexibility */\n  min-height: 120px; /* Minimum height to ensure proper spacing */\n}\n.orders-wrapper .orders-list .orders-card:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);\n}\n.orders-wrapper .orders-list .orders-card .orders-card-header {\n  display: flex;\n  align-items: center;\n  gap: 20px; /* Increased gap for better spacing */\n}\n.orders-wrapper .orders-list .orders-card .orders-card-header .orders-card-image {\n  width: 100px; /* Updated to 100x100 */\n  height: 100px;\n  border-radius: 50%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border: 2px solid var(--yellow);\n}\n.orders-wrapper .orders-list .orders-card .orders-card-header .orders-card-info .orders-username {\n  font-size: 16px;\n  font-weight: 600;\n  color: var(--purple);\n  margin: 0;\n}\n.orders-wrapper .orders-list .orders-card .orders-card-header .orders-card-info .orders-date {\n  font-size: 14px;\n  color: #6b7280;\n  margin: 4px 0 0;\n}\n.orders-wrapper .orders-list .orders-card .orders-card-details {\n  text-align: right;\n  flex: 1; /* Allow details to take available space */\n  padding-left: 20px; /* Add spacing between details and button */\n}\n.orders-wrapper .orders-list .orders-card .orders-card-details .orders-total {\n  font-size: 16px;\n  font-weight: 600;\n  color: var(--purple);\n  margin: 0;\n}\n.orders-wrapper .orders-list .orders-card .orders-card-details .orders-status {\n  font-size: 14px;\n  margin: 4px 0 0;\n}\n.orders-wrapper .orders-list .orders-card .orders-card-details .orders-status.orders-status-pending {\n  color: #f59e0b;\n}\n.orders-wrapper .orders-list .orders-card .orders-card-details .orders-status.orders-status-shipped {\n  color: #10b981;\n}\n.orders-wrapper .orders-list .orders-card .orders-card-details .orders-status.orders-status-delivered {\n  color: #3b82f6;\n}\n.orders-wrapper .orders-list .orders-card .orders-card-details .orders-status.orders-status-cancelled {\n  color: #ef4444;\n}\n.orders-wrapper .orders-list .orders-card .orders-card-details .orders-status.orders-status-na {\n  color: #6b7280;\n}\n.orders-wrapper .orders-list .orders-card .orders-card-button {\n  padding: 12px 30px; /* Increased padding for wider button */\n  background: var(--yellow);\n  color: var(--purple);\n  border: none;\n  border-radius: 8px;\n  font-weight: 600;\n  cursor: pointer;\n  transition: background 0.2s;\n  margin-left: 20px; /* Add margin to separate from details */\n}\n.orders-wrapper .orders-list .orders-card .orders-card-button:hover {\n  background: #f4b400;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -78042,7 +78042,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".orders-modal-overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 1000;\n}\n\n.orders-modal-content {\n  background: white;\n  width: 90%;\n  max-width: 800px;\n  max-height: 80vh;\n  overflow-y: auto;\n  border-radius: 8px;\n  padding: 20px;\n  position: relative;\n  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);\n}\n\n.orders-modal-close {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  background: none;\n  border: none;\n  font-size: 20px;\n  cursor: pointer;\n  color: #666;\n}\n.orders-modal-close:hover {\n  color: #333;\n}\n\n.orders-modal-title {\n  font-size: 24px;\n  font-weight: 600;\n  margin-bottom: 20px;\n  color: #1a1a1a;\n}\n\n.orders-modal-section {\n  margin-bottom: 20px;\n}\n.orders-modal-section h3 {\n  font-size: 18px;\n  font-weight: 600;\n  margin-bottom: 10px;\n  color: #1a1a1a;\n}\n.orders-modal-section p {\n  font-size: 14px;\n  color: #333;\n  margin: 0 0 5px;\n}\n.orders-modal-section .orders-modal-item {\n  display: flex;\n  align-items: center;\n  margin-bottom: 15px;\n  padding-bottom: 15px;\n  border-bottom: 1px solid #e0e0e0;\n}\n.orders-modal-section .orders-modal-item .orders-modal-product-image {\n  width: 60px;\n  height: 60px;\n  -o-object-fit: contain;\n     object-fit: contain;\n  margin-right: 15px;\n  background: #f5f5f5;\n  border-radius: 6px;\n}\n.orders-modal-section .orders-modal-item .orders-modal-product-info p {\n  margin: 0 0 5px;\n  font-size: 14px;\n}\n.orders-modal-section .orders-modal-status-update {\n  margin-top: 15px;\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n.orders-modal-section .orders-modal-status-update label {\n  font-size: 14px;\n  color: #333;\n  font-weight: 500;\n}\n.orders-modal-section .orders-modal-status-update select {\n  padding: 8px;\n  border: 1px solid #e0e0e0;\n  border-radius: 6px;\n  font-size: 14px;\n  color: #333;\n}\n.orders-modal-section .orders-modal-status-update select:focus {\n  outline: none;\n  border-color: #0066cc;\n}\n.orders-modal-section .orders-modal-status-update .orders-modal-update-status {\n  padding: 8px 16px;\n  background: #0066cc;\n  color: white;\n  border: none;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: background 0.2s;\n}\n.orders-modal-section .orders-modal-status-update .orders-modal-update-status:hover {\n  background: #004499;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --purple: #24067e;\n  --yellow: #ffcd38;\n}\n\n.modal-overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.6);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 1000;\n}\n\n.modal-content {\n  background: white;\n  width: 90%;\n  max-width: 900px;\n  max-height: 85vh;\n  overflow-y: auto;\n  border-radius: 12px;\n  padding: 30px;\n  position: relative;\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);\n}\n\n.modal-close {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  background: none;\n  border: none;\n  font-size: 24px;\n  cursor: pointer;\n  color: #9ca3af;\n}\n.modal-close:hover {\n  color: var(--purple);\n}\n\n.modal-title {\n  font-size: 28px;\n  font-weight: 700;\n  margin-bottom: 25px;\n  color: var(--purple);\n}\n\n.modal-section {\n  margin-bottom: 30px;\n}\n.modal-section .modal-section-title {\n  font-size: 20px;\n  font-weight: 600;\n  margin-bottom: 15px;\n  color: var(--purple);\n  border-bottom: 2px solid var(--yellow);\n  padding-bottom: 5px;\n}\n.modal-section p {\n  font-size: 15px; /* Already 15px, ensuring consistency */\n  color: #4b5563;\n  margin: 0 0 8px;\n  line-height: 1.5;\n}\n.modal-section p strong {\n  color: var(--purple);\n  font-weight: 600;\n}\n.modal-section .modal-summary {\n  display: flex;\n  align-items: center;\n  gap: 20px;\n  background: #f9fafb;\n  padding: 15px;\n  border-radius: 8px;\n}\n.modal-section .modal-summary .modal-user-image {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border: 2px solid var(--yellow);\n}\n.modal-section .modal-summary .modal-summary-details {\n  flex: 1;\n}\n.modal-section .modal-summary .modal-summary-details .modal-status.modal-status-pending {\n  color: #f59e0b;\n}\n.modal-section .modal-summary .modal-summary-details .modal-status.modal-status-shipped {\n  color: #10b981;\n}\n.modal-section .modal-summary .modal-summary-details .modal-status.modal-status-delivered {\n  color: #3b82f6;\n}\n.modal-section .modal-summary .modal-summary-details .modal-status.modal-status-cancelled {\n  color: #ef4444;\n}\n.modal-section .modal-summary .modal-summary-details .modal-status.modal-status-na {\n  color: #6b7280;\n}\n.modal-section .modal-status-update {\n  margin-top: 20px;\n  display: flex;\n  align-items: center;\n  gap: 15px;\n}\n.modal-section .modal-status-update label {\n  font-size: 15px;\n  color: var(--purple);\n  font-weight: 600;\n}\n.modal-section .modal-status-update select {\n  padding: 10px;\n  border: 1px solid #d1d5db;\n  border-radius: 8px;\n  font-size: 15px;\n  color: #4b5563;\n  min-width: 200px;\n}\n.modal-section .modal-status-update select:focus {\n  outline: none;\n  border-color: var(--yellow);\n  box-shadow: 0 0 0 3px rgba(255, 205, 56, 0.1);\n}\n.modal-section .modal-status-update .modal-update-button {\n  padding: 10px 20px;\n  background: var(--yellow);\n  color: var(--purple);\n  border: none;\n  border-radius: 8px;\n  font-weight: 600;\n  cursor: pointer;\n  transition: background 0.2s;\n}\n.modal-section .modal-status-update .modal-update-button:hover {\n  background: #f4b400;\n}\n.modal-section .modal-item {\n  display: flex;\n  align-items: center;\n  margin-bottom: 20px;\n  padding: 15px;\n  background: #f9fafb;\n  border-radius: 8px;\n  transition: background 0.2s;\n}\n.modal-section .modal-item:hover {\n  background: #f1f5f9;\n}\n.modal-section .modal-item .modal-product-image {\n  width: 100px; /* Updated to 100x100 */\n  height: 100px;\n  -o-object-fit: contain;\n     object-fit: contain;\n  margin-right: 20px;\n  background: #ffffff;\n  border-radius: 8px;\n  border: 1px solid #e5e7eb;\n}\n.modal-section .modal-item .modal-product-info {\n  flex: 1;\n}\n.modal-section .modal-item .modal-product-info .modal-product-name {\n  font-size: 16px;\n  font-weight: 600;\n  color: var(--purple);\n  margin: 0 0 5px;\n}\n.modal-section .modal-item .modal-product-info p {\n  font-size: 15px; /* Ensured 15px for consistency */\n  color: #4b5563;\n  margin: 0 0 5px;\n}\n.modal-section .modal-empty {\n  font-size: 15px;\n  color: #6b7280;\n  text-align: center;\n  padding: 20px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -168630,7 +168630,7 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 var OrdersModal = function OrdersModal(_ref) {
-  var _order$status, _order$status2, _order$paymentDetail, _order$paymentDetail2, _order$paymentDetail3;
+  var _order$user, _order$paymentDetail, _order$user2, _order$user3, _order$total, _order$status, _order$status2;
   var order = _ref.order,
     onClose = _ref.onClose;
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
@@ -168759,6 +168759,9 @@ var OrdersModal = function OrdersModal(_ref) {
       source.cancel('Component unmounted');
     };
   }, [navigate]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    console.log('Order data in modal:', order);
+  }, [order]);
   var handleStatusChange = /*#__PURE__*/function () {
     var _ref4 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
       var token, response, _error$response3, _error$response4;
@@ -168803,53 +168806,99 @@ var OrdersModal = function OrdersModal(_ref) {
       return _ref4.apply(this, arguments);
     };
   }();
+  var getImageUrl = function getImageUrl(imagePath) {
+    if (imagePath !== null && imagePath !== void 0 && imagePath.startsWith('/images/') || imagePath !== null && imagePath !== void 0 && imagePath.startsWith('/storage/')) {
+      return "http://localhost:8000".concat(encodeURI(imagePath));
+    }
+    return 'https://via.placeholder.com/80';
+  };
+  var userProfileImage = (_order$user = order.user) !== null && _order$user !== void 0 && (_order$user = _order$user.profile) !== null && _order$user !== void 0 && _order$user.profile_picture ? "http://localhost:8000/storage/".concat(order.user.profile.profile_picture) : 'https://via.placeholder.com/40';
+  var paymentMethod = (_order$paymentDetail = order.paymentDetail) !== null && _order$paymentDetail !== void 0 && _order$paymentDetail.payment_method ? order.paymentDetail.payment_method === 'credit_card' ? 'Credit Card' : order.paymentDetail.payment_method === 'cod' ? 'Cash on Delivery' : order.paymentDetail.payment_method === 'gcash' ? 'GCash' : 'N/A' : 'N/A';
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    className: "orders-modal-overlay",
+    className: "modal-overlay",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "orders-modal-content",
+      className: "modal-content",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
-        className: "orders-modal-close",
+        className: "modal-close",
         onClick: onClose,
         children: "\xD7"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h2", {
-        className: "orders-modal-title",
+        className: "modal-title",
         children: ["Order Details #", order.id]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "orders-modal-section",
+        className: "modal-section",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+          className: "modal-section-title",
           children: "Order Summary"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["Order Date: ", new Date(order.created_at).toLocaleDateString()]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["Total: \u20B1", order.total.toLocaleString()]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["Status: ", ((_order$status = order.status) === null || _order$status === void 0 ? void 0 : _order$status.status_name) || 'N/A']
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "modal-summary",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            src: userProfileImage,
+            alt: "User Profile",
+            className: "modal-user-image"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "modal-summary-details",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+                children: "Username:"
+              }), " ", ((_order$user2 = order.user) === null || _order$user2 === void 0 ? void 0 : _order$user2.username) || 'N/A']
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+                children: "Phone Number:"
+              }), " ", ((_order$user3 = order.user) === null || _order$user3 === void 0 || (_order$user3 = _order$user3.profile) === null || _order$user3 === void 0 ? void 0 : _order$user3.phone) || 'N/A']
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+                children: "Order Date:"
+              }), " ", new Date(order.created_at).toLocaleDateString()]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+                children: "Total:"
+              }), " \u20B1", ((_order$total = order.total) === null || _order$total === void 0 ? void 0 : _order$total.toLocaleString()) || 'N/A']
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              className: "modal-status modal-status-".concat(((_order$status = order.status) === null || _order$status === void 0 || (_order$status = _order$status.status_name) === null || _order$status === void 0 ? void 0 : _order$status.toLowerCase()) || 'na'),
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+                children: "Status:"
+              }), " ", ((_order$status2 = order.status) === null || _order$status2 === void 0 ? void 0 : _order$status2.status_name) || 'N/A']
+            })]
+          })]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "orders-modal-section",
+        className: "modal-section",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+          className: "modal-section-title",
           children: "Shipping Details"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["Barangay: ", order.barangay]
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "Barangay:"
+          }), " ", order.barangay || 'N/A']
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["City: ", order.city]
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "City:"
+          }), " ", order.city || 'N/A']
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["Province: ", order.province]
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "Province:"
+          }), " ", order.province || 'N/A']
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["Country: ", order.country]
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "Country:"
+          }), " ", order.country || 'N/A']
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["Order Note: ", order.order_notes || 'None']
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "Order Note:"
+          }), " ", order.order_notes || 'None']
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "orders-modal-section",
+        className: "modal-section",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+          className: "modal-section-title",
           children: "Payment & Status"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["Status: ", ((_order$status2 = order.status) === null || _order$status2 === void 0 ? void 0 : _order$status2.status_name) || 'N/A']
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-          children: ["Payment: ", ((_order$paymentDetail = order.paymentDetail) === null || _order$paymentDetail === void 0 ? void 0 : _order$paymentDetail.payment_method) === 'credit_card' ? 'Credit Card' : ((_order$paymentDetail2 = order.paymentDetail) === null || _order$paymentDetail2 === void 0 ? void 0 : _order$paymentDetail2.payment_method) === 'cod' ? 'Cash on Delivery' : ((_order$paymentDetail3 = order.paymentDetail) === null || _order$paymentDetail3 === void 0 ? void 0 : _order$paymentDetail3.payment_method) === 'gcash' ? 'GCash' : 'N/A']
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            children: "Payment Method:"
+          }), " ", paymentMethod]
         }), isAdmin && statuses.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "orders-modal-status-update",
+          className: "modal-status-update",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
             htmlFor: "status",
             children: "Update Status:"
@@ -168866,35 +168915,38 @@ var OrdersModal = function OrdersModal(_ref) {
               }, status.id);
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
-            className: "orders-modal-update-status",
+            className: "modal-update-button",
             onClick: handleStatusChange,
             children: "Update"
           })]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "orders-modal-section",
+        className: "modal-section",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+          className: "modal-section-title",
           children: "Ordered Items"
         }), order.orderItems && order.orderItems.length > 0 ? order.orderItems.map(function (item) {
-          var _item$product, _item$product2, _item$product3;
+          var _item$product, _item$product2, _item$product3, _item$price;
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "orders-modal-item",
+            className: "modal-item",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-              src: ((_item$product = item.product) === null || _item$product === void 0 ? void 0 : _item$product.image) || '/images/tuf.svg',
+              src: getImageUrl((_item$product = item.product) === null || _item$product === void 0 ? void 0 : _item$product.image),
               alt: ((_item$product2 = item.product) === null || _item$product2 === void 0 ? void 0 : _item$product2.name) || 'Product',
-              className: "orders-modal-product-image"
+              className: "modal-product-image"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-              className: "orders-modal-product-info",
+              className: "modal-product-info",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                className: "modal-product-name",
                 children: ((_item$product3 = item.product) === null || _item$product3 === void 0 ? void 0 : _item$product3.name) || 'N/A'
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-                children: ["Price: \u20B1", item.price.toLocaleString()]
+                children: ["Price: \u20B1", ((_item$price = item.price) === null || _item$price === void 0 ? void 0 : _item$price.toLocaleString()) || 'N/A']
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-                children: ["Quantity: ", item.quantity]
+                children: ["Quantity: ", item.quantity || 'N/A']
               })]
             })]
           }, item.id);
         }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+          className: "modal-empty",
           children: "No items found."
         })]
       })]
@@ -168926,6 +168978,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return r; }; var t, r = {}, e = Object.prototype, n = e.hasOwnProperty, o = "function" == typeof Symbol ? Symbol : {}, i = o.iterator || "@@iterator", a = o.asyncIterator || "@@asyncIterator", u = o.toStringTag || "@@toStringTag"; function c(t, r, e, n) { return Object.defineProperty(t, r, { value: e, enumerable: !n, configurable: !n, writable: !n }); } try { c({}, ""); } catch (t) { c = function c(t, r, e) { return t[r] = e; }; } function h(r, e, n, o) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype); return c(a, "_invoke", function (r, e, n) { var o = 1; return function (i, a) { if (3 === o) throw Error("Generator is already running"); if (4 === o) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var u = n.delegate; if (u) { var c = d(u, n); if (c) { if (c === f) continue; return c; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (1 === o) throw o = 4, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = 3; var h = s(r, e, n); if ("normal" === h.type) { if (o = n.done ? 4 : 2, h.arg === f) continue; return { value: h.arg, done: n.done }; } "throw" === h.type && (o = 4, n.method = "throw", n.arg = h.arg); } }; }(r, n, new Context(o || [])), !0), a; } function s(t, r, e) { try { return { type: "normal", arg: t.call(r, e) }; } catch (t) { return { type: "throw", arg: t }; } } r.wrap = h; var f = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var l = {}; c(l, i, function () { return this; }); var p = Object.getPrototypeOf, y = p && p(p(x([]))); y && y !== e && n.call(y, i) && (l = y); var v = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(l); function g(t) { ["next", "throw", "return"].forEach(function (r) { c(t, r, function (t) { return this._invoke(r, t); }); }); } function AsyncIterator(t, r) { function e(o, i, a, u) { var c = s(t[o], t, i); if ("throw" !== c.type) { var h = c.arg, f = h.value; return f && "object" == _typeof(f) && n.call(f, "__await") ? r.resolve(f.__await).then(function (t) { e("next", t, a, u); }, function (t) { e("throw", t, a, u); }) : r.resolve(f).then(function (t) { h.value = t, a(h); }, function (t) { return e("throw", t, a, u); }); } u(c.arg); } var o; c(this, "_invoke", function (t, n) { function i() { return new r(function (r, o) { e(t, n, r, o); }); } return o = o ? o.then(i, i) : i(); }, !0); } function d(r, e) { var n = e.method, o = r.i[n]; if (o === t) return e.delegate = null, "throw" === n && r.i["return"] && (e.method = "return", e.arg = t, d(r, e), "throw" === e.method) || "return" !== n && (e.method = "throw", e.arg = new TypeError("The iterator does not provide a '" + n + "' method")), f; var i = s(o, r.i, e.arg); if ("throw" === i.type) return e.method = "throw", e.arg = i.arg, e.delegate = null, f; var a = i.arg; return a ? a.done ? (e[r.r] = a.value, e.next = r.n, "return" !== e.method && (e.method = "next", e.arg = t), e.delegate = null, f) : a : (e.method = "throw", e.arg = new TypeError("iterator result is not an object"), e.delegate = null, f); } function w(t) { this.tryEntries.push(t); } function m(r) { var e = r[4] || {}; e.type = "normal", e.arg = t, r[4] = e; } function Context(t) { this.tryEntries = [[-1]], t.forEach(w, this), this.reset(!0); } function x(r) { if (null != r) { var e = r[i]; if (e) return e.call(r); if ("function" == typeof r.next) return r; if (!isNaN(r.length)) { var o = -1, a = function e() { for (; ++o < r.length;) if (n.call(r, o)) return e.value = r[o], e.done = !1, e; return e.value = t, e.done = !0, e; }; return a.next = a; } } throw new TypeError(_typeof(r) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, c(v, "constructor", GeneratorFunctionPrototype), c(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = c(GeneratorFunctionPrototype, u, "GeneratorFunction"), r.isGeneratorFunction = function (t) { var r = "function" == typeof t && t.constructor; return !!r && (r === GeneratorFunction || "GeneratorFunction" === (r.displayName || r.name)); }, r.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, c(t, u, "GeneratorFunction")), t.prototype = Object.create(v), t; }, r.awrap = function (t) { return { __await: t }; }, g(AsyncIterator.prototype), c(AsyncIterator.prototype, a, function () { return this; }), r.AsyncIterator = AsyncIterator, r.async = function (t, e, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(h(t, e, n, o), i); return r.isGeneratorFunction(e) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, g(v), c(v, u, "Generator"), c(v, i, function () { return this; }), c(v, "toString", function () { return "[object Generator]"; }), r.keys = function (t) { var r = Object(t), e = []; for (var n in r) e.unshift(n); return function t() { for (; e.length;) if ((n = e.pop()) in r) return t.value = n, t.done = !1, t; return t.done = !0, t; }; }, r.values = x, Context.prototype = { constructor: Context, reset: function reset(r) { if (this.prev = this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(m), !r) for (var e in this) "t" === e.charAt(0) && n.call(this, e) && !isNaN(+e.slice(1)) && (this[e] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0][4]; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(r) { if (this.done) throw r; var e = this; function n(t) { a.type = "throw", a.arg = r, e.next = t; } for (var o = e.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i[4], u = this.prev, c = i[1], h = i[2]; if (-1 === i[0]) return n("end"), !1; if (!c && !h) throw Error("try statement without catch or finally"); if (null != i[0] && i[0] <= u) { if (u < c) return this.method = "next", this.arg = t, n(c), !0; if (u < h) return n(h), !1; } } }, abrupt: function abrupt(t, r) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var n = this.tryEntries[e]; if (n[0] > -1 && n[0] <= this.prev && this.prev < n[2]) { var o = n; break; } } o && ("break" === t || "continue" === t) && o[0] <= r && r <= o[2] && (o = null); var i = o ? o[4] : {}; return i.type = t, i.arg = r, o ? (this.method = "next", this.next = o[2], f) : this.complete(i); }, complete: function complete(t, r) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && r && (this.next = r), f; }, finish: function finish(t) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var e = this.tryEntries[r]; if (e[2] === t) return this.complete(e[4], e[3]), m(e), f; } }, "catch": function _catch(t) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var e = this.tryEntries[r]; if (e[0] === t) { var n = e[4]; if ("throw" === n.type) { var o = n.arg; m(e); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(r, e, n) { return this.delegate = { i: x(r), r: e, n: n }, "next" === this.method && (this.arg = t), f; } }, r; }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
 function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
@@ -168961,7 +169018,7 @@ var Orders = function Orders() {
     var source = axios__WEBPACK_IMPORTED_MODULE_7__["default"].CancelToken.source();
     var fetchOrders = /*#__PURE__*/function () {
       var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-        var token, userResponse, response, _error$response;
+        var token, userResponse, response, transformedOrders, _error$response;
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
@@ -169010,7 +169067,13 @@ var Orders = function Orders() {
             case 19:
               response = _context.sent;
               if (isMounted && response.data.success) {
-                setOrders(response.data.data);
+                transformedOrders = response.data.data.map(function (order) {
+                  return _objectSpread(_objectSpread({}, order), {}, {
+                    orderItems: order.order_items || [],
+                    paymentDetail: order.payment_detail || {}
+                  });
+                });
+                setOrders(transformedOrders);
               }
               _context.next = 29;
               break;
@@ -169056,42 +169119,46 @@ var Orders = function Orders() {
     className: "orders-wrapper",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "orders-content",
-      style: {
-        marginLeft: '200px'
-      },
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h1", {
         className: "orders-title",
         children: "All Customer Orders"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "orders-list",
         children: orders.length === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+          className: "orders-empty",
           children: "No orders found."
         }) : orders.map(function (order) {
-          var _firstItem$product, _order$status;
-          var firstItem = order.orderItems && order.orderItems.length > 0 ? order.orderItems[0] : null;
+          var _order$user, _order$user2, _order$total, _order$status, _order$status2;
+          var userProfileImage = (_order$user = order.user) !== null && _order$user !== void 0 && (_order$user = _order$user.profile) !== null && _order$user !== void 0 && _order$user.profile_picture ? "http://localhost:8000/storage/".concat(order.user.profile.profile_picture) : 'https://via.placeholder.com/40';
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-            className: "orders-item",
+            className: "orders-card",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-              className: "orders-info",
-              children: [firstItem ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-                  children: ["Product: ", ((_firstItem$product = firstItem.product) === null || _firstItem$product === void 0 ? void 0 : _firstItem$product.name) || 'N/A']
+              className: "orders-card-header",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                src: userProfileImage,
+                alt: "User Profile",
+                className: "orders-card-image"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                className: "orders-card-info",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+                  className: "orders-username",
+                  children: ((_order$user2 = order.user) === null || _order$user2 === void 0 ? void 0 : _order$user2.username) || 'N/A'
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-                  children: ["Price: \u20B1", firstItem.price.toLocaleString()]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-                  children: ["Quantity: ", firstItem.quantity]
+                  className: "orders-date",
+                  children: ["Order Date: ", new Date(order.created_at).toLocaleDateString()]
                 })]
-              }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
-                children: "No items in this order."
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "orders-card-details",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+                className: "orders-total",
+                children: ["Total: \u20B1", ((_order$total = order.total) === null || _order$total === void 0 ? void 0 : _order$total.toLocaleString()) || 'N/A']
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-                children: ["Order Date: ", new Date(order.created_at).toLocaleDateString()]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-                children: ["Total: \u20B1", order.total.toLocaleString()]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-                children: ["Status: ", ((_order$status = order.status) === null || _order$status === void 0 ? void 0 : _order$status.status_name) || 'N/A']
+                className: "orders-status orders-status-".concat(((_order$status = order.status) === null || _order$status === void 0 || (_order$status = _order$status.status_name) === null || _order$status === void 0 ? void 0 : _order$status.toLowerCase()) || 'na'),
+                children: ["Status: ", ((_order$status2 = order.status) === null || _order$status2 === void 0 ? void 0 : _order$status2.status_name) || 'N/A']
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-              className: "orders-view-details",
+              className: "orders-card-button",
               onClick: function onClick() {
                 return openModal(order);
               },
@@ -171151,8 +171218,6 @@ var ProductPage = function ProductPage() {
   var _Form$useForm = antd__WEBPACK_IMPORTED_MODULE_7__["default"].useForm(),
     _Form$useForm2 = _slicedToArray(_Form$useForm, 1),
     form = _Form$useForm2[0];
-
-  // ✅ Ensure Authorization token is formatted as "Bearer ..."
   var rawToken = localStorage.getItem("authToken");
   var authToken = rawToken !== null && rawToken !== void 0 && rawToken.startsWith("Bearer ") ? rawToken : "Bearer ".concat(rawToken);
   if (authToken) {
@@ -171203,7 +171268,7 @@ var ProductPage = function ProductPage() {
             return axios__WEBPACK_IMPORTED_MODULE_8__["default"].get("/api/statuses");
           case 3:
             response = _context2.sent;
-            setStatuses(response.data.data || []); // ✅ your API response wraps statuses under "data"
+            setStatuses(response.data.data || []);
             _context2.next = 11;
             break;
           case 7:
@@ -171427,8 +171492,9 @@ var ProductPage = function ProductPage() {
         src: window.location.origin + image,
         alt: "product",
         style: {
-          width: 50,
-          height: "auto"
+          width: 60,
+          height: "auto",
+          objectFit: "contain"
         }
       }) : "No Image";
     }
@@ -171475,11 +171541,13 @@ var ProductPage = function ProductPage() {
     render: function render(_, record) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          className: "edit-btn",
           icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {}),
           onClick: function onClick() {
             return showEditModal(record);
           }
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          className: "archive-btn-action",
           onClick: function onClick() {
             return handleArchive(record);
           },
@@ -171498,8 +171566,9 @@ var ProductPage = function ProductPage() {
         src: window.location.origin + image,
         alt: "product",
         style: {
-          width: 50,
-          height: "auto"
+          width: 60,
+          height: "auto",
+          objectFit: "contain"
         }
       }) : "No Image";
     }
@@ -171528,6 +171597,7 @@ var ProductPage = function ProductPage() {
     render: function render(_, record) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          className: "restore-btn",
           onClick: function onClick() {
             return handleRestore(record);
           },
@@ -171568,8 +171638,10 @@ var ProductPage = function ProductPage() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             className: "products-header",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+              className: "products-title",
               children: "Product List"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "products-actions",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
                 type: "primary",
                 icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_13__["default"], {}),
@@ -171585,6 +171657,7 @@ var ProductPage = function ProductPage() {
               })]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
+            className: "products-table",
             columns: columns,
             dataSource: products,
             bordered: true,
@@ -171600,6 +171673,7 @@ var ProductPage = function ProductPage() {
             onOk: function onOk() {
               return form.submit();
             },
+            className: "products-modal",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
               form: form,
               onFinish: handleSubmit,
@@ -171690,19 +171764,28 @@ var ProductPage = function ProductPage() {
               })]
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_15__["default"], {
-            title: "Archived Products",
+            title: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+              className: "archived-modal-title",
+              children: "Archived Products"
+            }),
             open: isArchiveModalVisible,
             onCancel: function onCancel() {
               return setIsArchiveModalVisible(false);
             },
             footer: null,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              columns: archiveColumns,
-              dataSource: archivedProducts,
-              bordered: true,
-              pagination: {
-                pageSize: 5
-              }
+            className: "archived-products-modal",
+            width: 800,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+              className: "archived-products-content",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
+                className: "archived-products-table",
+                columns: archiveColumns,
+                dataSource: archivedProducts,
+                bordered: true,
+                pagination: {
+                  pageSize: 5
+                }
+              })
             })
           })]
         })
@@ -171888,8 +171971,6 @@ var Inventory = function Inventory() {
   var _Form$useForm = antd__WEBPACK_IMPORTED_MODULE_6__["default"].useForm(),
     _Form$useForm2 = _slicedToArray(_Form$useForm, 1),
     editForm = _Form$useForm2[0];
-
-  // ✅ Fix: Apply token with "Bearer " prefix
   var rawToken = localStorage.getItem("authToken");
   var authToken = rawToken !== null && rawToken !== void 0 && rawToken.startsWith("Bearer ") ? rawToken : "Bearer ".concat(rawToken);
   if (authToken) {
@@ -172087,7 +172168,9 @@ var Inventory = function Inventory() {
         src: window.location.origin + image,
         alt: "product",
         style: {
-          width: 50
+          width: 60,
+          height: "auto",
+          objectFit: "contain"
         }
       }) : "No Image";
     }
@@ -172117,11 +172200,13 @@ var Inventory = function Inventory() {
     render: function render(_, record) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_9__["default"], {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          className: "edit-btn",
           icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_11__["default"], {}),
           onClick: function onClick() {
             return showEditModal(record);
           }
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          className: "archive-btn",
           icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {}),
           danger: true,
           onClick: function onClick() {
@@ -172141,7 +172226,9 @@ var Inventory = function Inventory() {
         src: window.location.origin + image,
         alt: "product",
         style: {
-          width: 50
+          width: 60,
+          height: "auto",
+          objectFit: "contain"
         }
       }) : "No Image";
     }
@@ -172171,6 +172258,7 @@ var Inventory = function Inventory() {
     render: function render(_, record) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_9__["default"], {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          className: "restore-btn",
           type: "primary",
           onClick: function onClick() {
             return handleRestore(record.key);
@@ -172211,9 +172299,10 @@ var Inventory = function Inventory() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             className: "inventory-header",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+              className: "inventory-title",
               children: "Inventory List"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
-              type: "primary",
+              className: "archive-btn",
               onClick: function onClick() {
                 setIsArchiveModalVisible(true);
                 fetchArchivedInventory();
@@ -172221,6 +172310,7 @@ var Inventory = function Inventory() {
               children: "Show Archived"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_13__["default"], {
+            className: "inventory-table",
             columns: columns,
             dataSource: inventoryItems,
             bordered: true,
@@ -172236,6 +172326,7 @@ var Inventory = function Inventory() {
             onOk: function onOk() {
               return editForm.submit();
             },
+            className: "inventory-modal",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
               form: editForm,
               onFinish: handleEditSubmit,
@@ -172274,19 +172365,28 @@ var Inventory = function Inventory() {
               })]
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_14__["default"], {
-            title: "Archived Inventory",
+            title: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+              className: "archived-modal-title",
+              children: "Archived Inventory"
+            }),
             open: isArchiveModalVisible,
             onCancel: function onCancel() {
               return setIsArchiveModalVisible(false);
             },
             footer: null,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_13__["default"], {
-              columns: archiveColumns,
-              dataSource: archivedInventory,
-              bordered: true,
-              pagination: {
-                pageSize: 5
-              }
+            className: "inventory-modal archived-inventory-modal",
+            width: 900,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+              className: "archived-inventory-content",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_13__["default"], {
+                className: "archived-inventory-table",
+                columns: archiveColumns,
+                dataSource: archivedInventory,
+                bordered: true,
+                pagination: {
+                  pageSize: 5
+                }
+              })
             })
           })]
         })
@@ -172880,11 +172980,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/tooltip/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/tag/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/tag/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/table/index.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/EditOutlined.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/StopOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/EditOutlined.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/StopOutlined.js");
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/PlusOutlined.js");
 /* harmony import */ var _topnav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../topnav */ "./resources/js/components/topnav.js");
 /* harmony import */ var _admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../admin-sidemenu */ "./resources/js/components/admin-sidemenu.js");
@@ -172906,9 +173006,11 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
- // ✅ Import SCSS styles
 
-var Content = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Content;
+
+var Header = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Header,
+  Sider = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Sider,
+  Content = antd__WEBPACK_IMPORTED_MODULE_5__["default"].Content;
 var UserTable = function UserTable() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState2 = _slicedToArray(_useState, 2),
@@ -173049,31 +173151,21 @@ var UserTable = function UserTable() {
     key: "actions",
     render: function render(_, user) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        style: {
-          display: "flex",
-          alignItems: "center",
-          gap: "10px"
-        },
+        className: "action-buttons",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
           title: "Edit",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_8__["default"], {
-            style: {
-              fontSize: "18px",
-              color: "#1890ff",
-              cursor: "pointer"
-            },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
+            className: "edit-btn",
+            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_9__["default"], {}),
             onClick: function onClick() {
               return handleEdit(user);
             }
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
           title: user.deleted_at ? "Restore" : "Archive",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_9__["default"], {
-            style: {
-              fontSize: "18px",
-              color: user.deleted_at ? "#52c41a" : "#ff4d4f",
-              cursor: "pointer"
-            },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
+            className: user.deleted_at ? "restore-btn" : "archive-btn",
+            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_10__["default"], {}),
             onClick: function onClick() {
               return handleArchiveRestore(user);
             }
@@ -173101,10 +173193,10 @@ var UserTable = function UserTable() {
     dataIndex: "deleted_at",
     key: "status",
     render: function render(deleted_at) {
-      return deleted_at ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      return deleted_at ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
         color: "red",
         children: "ARCHIVED"
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
         color: "green",
         children: "ACTIVE"
       });
@@ -173114,36 +173206,53 @@ var UserTable = function UserTable() {
     style: {
       minHeight: "100vh"
     },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Header, {
       style: {
-        display: "flex",
-        flexDirection: "row"
+        padding: 0,
+        background: "#008cff",
+        position: "fixed",
+        width: "100%",
+        zIndex: 1000
       },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        style: {
-          padding: "20px",
-          width: "100%"
-        },
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_topnav__WEBPACK_IMPORTED_MODULE_1__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      style: {
+        marginTop: 64
+      },
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Sider, {
+        width: 200,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_admin_sidemenu__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Content, {
           style: {
-            background: "#f5f5f5",
-            padding: "20px",
-            borderRadius: "8px"
+            margin: "24px 16px",
+            padding: 24,
+            background: "#fff",
+            minHeight: 280
           },
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             className: "user-table-container",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-              className: "button-container",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
-                type: "primary",
-                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {}),
-                children: "Add User"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_11__["default"], {
-                type: "default",
-                onClick: toggleView,
-                children: viewArchived ? "View Active" : "View Archived"
+              className: "user-table-header",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+                className: "user-table-title",
+                children: "User List"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                className: "button-container",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                  className: "add-user-btn",
+                  type: "primary",
+                  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_12__["default"], {}),
+                  children: "Add User"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                  className: "toggle-view-btn",
+                  type: "default",
+                  onClick: toggleView,
+                  children: viewArchived ? "View Active" : "View Archived"
+                })]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_13__["default"], {
+              className: "user-table",
               dataSource: viewArchived ? archivedUsers : users,
               columns: columns,
               rowKey: "user_id",
@@ -173153,7 +173262,7 @@ var UserTable = function UserTable() {
               bordered: true,
               scroll: {
                 x: true
-              } // ✅ Ant Design native responsive scroll
+              }
             })]
           })
         })

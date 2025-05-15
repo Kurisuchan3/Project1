@@ -1,62 +1,142 @@
+:root {
+  --purple: #24067e;
+  --yellow: #ffcd38;
+}
+
 .orders-wrapper {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: 'Inter', sans-serif;
-  background: #f8f8f8;
+  background: #f9fafb;
 
   .orders-content {
     flex: 1;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px 40px;
+    padding: 40px;
     margin-top: 64px;
     margin-left: 200px;
 
     @media (max-width: 768px) {
-      padding: 20px 15px;
+      padding: 20px;
       margin-left: 80px;
     }
   }
 
   .orders-title {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #1a1a1a;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--purple);
   }
 
   .orders-list {
-    .orders-item {
+    display: grid;
+    gap: 20px;
+
+    .orders-empty {
+      font-size: 16px;
+      color: #6b7280;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .orders-card {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: white;
-      padding: 20px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 30px; /* Increased padding for larger card */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 100%; /* Ensure full width within grid */
+      max-width: 100%; /* Allow flexibility */
+      min-height: 120px; /* Minimum height to ensure proper spacing */
 
-      .orders-info {
-        p {
-          margin: 0 0 5px;
-          font-size: 14px;
-          color: #333;
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .orders-card-header {
+        display: flex;
+        align-items: center;
+        gap: 20px; /* Increased gap for better spacing */
+
+        .orders-card-image {
+          width: 100px; /* Updated to 100x100 */
+          height: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2px solid var(--yellow);
+        }
+
+        .orders-card-info {
+          .orders-username {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--purple);
+            margin: 0;
+          }
+
+          .orders-date {
+            font-size: 14px;
+            color: #6b7280;
+            margin: 4px 0 0;
+          }
         }
       }
 
-      .orders-view-details {
-        padding: 10px 20px;
-        background: #0066cc;
-        color: white;
+      .orders-card-details {
+        text-align: right;
+        flex: 1; /* Allow details to take available space */
+        padding-left: 20px; /* Add spacing between details and button */
+
+        .orders-total {
+          font-size: 16px;
+          font-weight: 600;
+          color: var(--purple);
+          margin: 0;
+        }
+
+        .orders-status {
+          font-size: 14px;
+          margin: 4px 0 0;
+
+          &.orders-status-pending {
+            color: #f59e0b;
+          }
+          &.orders-status-shipped {
+            color: #10b981;
+          }
+          &.orders-status-delivered {
+            color: #3b82f6;
+          }
+          &.orders-status-cancelled {
+            color: #ef4444;
+          }
+          &.orders-status-na {
+            color: #6b7280;
+          }
+        }
+      }
+
+      .orders-card-button {
+        padding: 12px 30px; /* Increased padding for wider button */
+        background: var(--yellow);
+        color: var(--purple);
         border: none;
-        border-radius: 6px;
+        border-radius: 8px;
+        font-weight: 600;
         cursor: pointer;
         transition: background 0.2s;
+        margin-left: 20px; /* Add margin to separate from details */
 
         &:hover {
-          background: #004499;
+          background: #f4b400;
         }
       }
     }

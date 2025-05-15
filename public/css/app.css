@@ -15484,63 +15484,190 @@ footer {
     border-bottom: 2px solid #ffd500;
   }
 }
+:root {
+  --purple: #24067e;
+  --yellow: #ffcd38;
+  --green: #10b981;
+}
+
 .user-table-container {
   margin-top: 10px;
   padding: 20px;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   overflow-x: auto;
 }
-.user-table-container .button-container {
+.user-table-container .user-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 16px 0;
+  border-bottom: 2px solid var(--yellow);
+}
+.user-table-container .user-table-header .user-table-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+.user-table-container .user-table-header .button-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 12px;
 }
-.user-table-container .button-container .ant-btn-primary,
-.user-table-container .button-container .ant-btn-default {
-  min-width: 130px;
-  font-weight: 500;
-  padding: 0 16px;
-  height: 40px;
-}
-.user-table-container .ant-table {
-  border-radius: 6px;
-  overflow: auto;
-  min-width: 600px;
-}
-.user-table-container .ant-table-thead > tr > th {
-  background-color: #1890ff;
-  color: white;
+.user-table-container .user-table-header .button-container .add-user-btn {
+  background: var(--yellow);
+  color: var(--purple);
+  border: none;
+  padding: 8px 20px;
   font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.user-table-container .user-table-header .button-container .add-user-btn:hover {
+  background: #f4b400;
+}
+.user-table-container .user-table-header .button-container .toggle-view-btn {
+  background: #fff;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  padding: 8px 20px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.user-table-container .user-table-header .button-container .toggle-view-btn:hover {
+  background: var(--purple);
+  color: #fff;
+}
+.user-table-container .user-table .ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.user-table-container .user-table .ant-table .ant-table-thead > tr > th {
+  background: var(--purple) !important; /* Ensure #24067e background */
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--yellow);
+  font-family: "Inter", sans-serif;
   white-space: nowrap;
 }
-.user-table-container .ant-table-cell {
+.user-table-container .user-table .ant-table .ant-table-tbody > tr > td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #4b5563;
+  font-family: "Inter", sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+.user-table-container .user-table .ant-table .ant-table-tbody > tr:hover > td {
+  background: #f1f5f9;
+}
+.user-table-container .user-table .ant-table .ant-table-tbody > tr:last-child > td {
+  border-bottom: none;
+}
+.user-table-container .user-table .ant-table .ant-table-pagination {
+  margin: 16px 0;
+  padding: 8px 0;
+}
+.user-table-container .user-table .ant-table .ant-table-pagination .ant-pagination-item-active {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+.user-table-container .user-table .ant-table .ant-table-pagination .ant-pagination-item-active a {
+  color: #fff;
+}
+.user-table-container .user-table .ant-table .ant-table-pagination .ant-pagination-item:hover {
+  border-color: var(--yellow);
+}
+.user-table-container .user-table .ant-table .ant-table-pagination .ant-pagination-item:hover a {
+  color: var(--purple);
+}
+.user-table-container .user-table .ant-table .action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Reduced gap for tighter spacing */
+}
+.user-table-container .user-table .ant-table .action-buttons .edit-btn,
+.user-table-container .user-table .ant-table .action-buttons .archive-btn,
+.user-table-container .user-table .ant-table .action-buttons .restore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; /* Fixed width to prevent stretching */
+  height: 32px; /* Fixed height for consistency */
+  padding: 0; /* Remove default padding to fit icon */
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.user-table-container .user-table .ant-table .action-buttons .edit-btn .anticon,
+.user-table-container .user-table .ant-table .action-buttons .archive-btn .anticon,
+.user-table-container .user-table .ant-table .action-buttons .restore-btn .anticon {
+  margin: 0; /* Ensure icon is centered without extra margin */
+}
+.user-table-container .user-table .ant-table .action-buttons .edit-btn {
+  background: var(--green);
+  color: #fff;
+  border: none;
+}
+.user-table-container .user-table .ant-table .action-buttons .edit-btn:hover {
+  background: #059669;
+}
+.user-table-container .user-table .ant-table .action-buttons .archive-btn {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+}
+.user-table-container .user-table .ant-table .action-buttons .archive-btn:hover {
+  background: #dc2626;
+}
+.user-table-container .user-table .ant-table .action-buttons .restore-btn {
+  background: var(--yellow);
+  color: var(--purple);
+  border: none;
+}
+.user-table-container .user-table .ant-table .action-buttons .restore-btn:hover {
+  background: #f4b400;
 }
 @media screen and (max-width: 992px) {
   .user-table-container {
     padding: 10px;
   }
-  .user-table-container .button-container {
+  .user-table-container .user-table-header {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
   }
-  .user-table-container .button-container .ant-btn-primary,
-  .user-table-container .button-container .ant-btn-default {
+  .user-table-container .user-table-header .button-container {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 16px;
+  }
+  .user-table-container .user-table-header .button-container .add-user-btn,
+  .user-table-container .user-table-header .button-container .toggle-view-btn {
     width: 100%;
   }
-  .user-table-container .ant-table {
+  .user-table-container .user-table .ant-table {
     min-width: unset;
   }
-  .user-table-container .ant-table-thead > tr > th,
-  .user-table-container .ant-table-cell {
+  .user-table-container .user-table .ant-table .ant-table-thead > tr > th,
+  .user-table-container .user-table .ant-table .ant-table-tbody > tr > td {
     font-size: 14px;
+  }
+  .user-table-container .user-table .ant-table .action-buttons .edit-btn,
+  .user-table-container .user-table .ant-table .action-buttons .archive-btn,
+  .user-table-container .user-table .ant-table .action-buttons .restore-btn {
+    width: 28px; /* Slightly smaller on mobile */
+    height: 28px;
   }
 }
 
@@ -15554,31 +15681,480 @@ footer {
   color: #333;
 }
 
+:root {
+  --purple: #24067e;
+  --yellow: #ffcd38;
+  --green: #10b981;
+}
+
 .products-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  padding: 16px 0;
+  border-bottom: 2px solid var(--yellow);
 }
-.products-header h2, .products-header .h2 {
+.products-header .products-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0;
+}
+.products-header .products-actions {
+  display: flex;
+  gap: 12px;
+}
+.products-header .products-actions .ant-btn-primary {
+  background: var(--yellow);
+  color: var(--purple);
+  border: none;
+  padding: 8px 20px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.products-header .products-actions .ant-btn-primary:hover {
+  background: #f4b400;
+}
+.products-header .products-actions .archive-btn {
+  background: #fff;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  padding: 8px 20px;
+  transition: all 0.2s;
+}
+.products-header .products-actions .archive-btn:hover {
+  background: var(--purple);
+  color: #fff;
+}
+
+.products-table .ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.products-table .ant-table .ant-table-thead > tr > th {
+  background: var(--purple) !important;
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 2px solid var(--yellow);
+}
+.products-table .ant-table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #e0e0e0;
+}
+.products-table .ant-table .ant-table-tbody > tr:hover > td {
+  background: #f9fafb;
+}
+.products-table .ant-table .ant-table-pagination {
+  margin: 16px 0;
+}
+.products-table .ant-table .edit-btn {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  transition: background 0.2s;
+}
+.products-table .ant-table .edit-btn:hover {
+  background: #059669;
+}
+.products-table .ant-table .archive-btn-action {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  transition: background 0.2s;
+}
+.products-table .ant-table .archive-btn-action:hover {
+  background: #dc2626;
+}
+
+.products-modal .ant-modal-content {
+  border-radius: 12px;
+  padding: 24px;
+}
+.products-modal .ant-modal-content .ant-modal-header {
+  background: var(--purple);
+  color: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 16px 24px;
+}
+.products-modal .ant-modal-content .ant-modal-header .ant-modal-title {
   font-size: 20px;
-  font-weight: bold;
-  color: #333;
+  font-weight: 600;
 }
-.products-header .archive-btn {
-  margin-left: 8px;
+.products-modal .ant-modal-content .ant-modal-body {
+  padding: 24px;
+}
+.products-modal .ant-modal-content .ant-modal-body .ant-form-item-label label {
+  color: var(--purple);
+  font-weight: 500;
+}
+.products-modal .ant-modal-content .ant-modal-body .ant-input,
+.products-modal .ant-modal-content .ant-modal-body .ant-input-number,
+.products-modal .ant-modal-content .ant-modal-body .ant-select-selector,
+.products-modal .ant-modal-content .ant-modal-body .ant-upload {
+  border-radius: 6px;
+  border-color: #d1d5db;
+}
+.products-modal .ant-modal-content .ant-modal-body .ant-input:focus,
+.products-modal .ant-modal-content .ant-modal-body .ant-input-number:focus,
+.products-modal .ant-modal-content .ant-modal-body .ant-select-selector:focus,
+.products-modal .ant-modal-content .ant-modal-body .ant-upload:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 2px rgba(255, 205, 56, 0.2);
+}
+.products-modal .ant-modal-content .ant-modal-body .ant-btn {
+  background: var(--yellow);
+  color: var(--purple);
+  border: none;
+  padding: 8px 20px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.products-modal .ant-modal-content .ant-modal-body .ant-btn:hover {
+  background: #f4b400;
+}
+.products-modal .ant-modal-content .ant-modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.archived-products-modal .ant-modal-content {
+  border-radius: 12px;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.archived-products-modal .ant-modal-content .ant-modal-header {
+  background: var(--purple);
+  border-bottom: 2px solid var(--yellow);
+  border-radius: 12px 12px 0 0;
+  padding: 20px 24px;
+  margin: 0;
+}
+.archived-products-modal .ant-modal-content .ant-modal-header .archived-modal-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+.archived-products-modal .ant-modal-content .ant-modal-close {
+  color: #fff;
+}
+.archived-products-modal .ant-modal-content .ant-modal-close:hover {
+  color: var(--yellow);
+}
+.archived-products-modal .ant-modal-content .ant-modal-body {
+  padding: 0;
+}
+.archived-products-modal .ant-modal-content .archived-products-content {
+  padding: 24px;
+  background: #fafafa;
+}
+.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-thead > tr > th {
+  background: var(--purple) !important; /* Ensure header row uses #24067e */
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--yellow);
+  font-family: "Inter", sans-serif;
+}
+.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-tbody > tr > td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #4b5563;
+  font-family: "Inter", sans-serif;
+}
+.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-tbody > tr:hover > td {
+  background: #f1f5f9;
+}
+.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-tbody > tr:last-child > td {
+  border-bottom: none;
+}
+.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-pagination {
+  margin: 16px 0;
+  padding: 8px 0;
+}
+.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-pagination .ant-pagination-item-active {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-pagination .ant-pagination-item-active a {
+  color: #fff;
+}
+.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-pagination .ant-pagination-item:hover {
+  border-color: var(--yellow);
+}
+.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .ant-table-pagination .ant-pagination-item:hover a {
+  color: var(--purple);
+}
+.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .restore-btn {
+  background: var(--yellow);
+  color: var(--purple);
+  border: none;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.2s;
+  font-family: "Inter", sans-serif;
+}
+.archived-products-modal .ant-modal-content .archived-products-content .archived-products-table .ant-table .restore-btn:hover {
+  background: #f4b400;
+}
+
+:root {
+  --purple: #24067e;
+  --yellow: #ffcd38;
+  --green: #10b981;
 }
 
 .inventory-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  padding: 16px 0;
+  border-bottom: 2px solid var(--yellow);
 }
-.inventory-header h2, .inventory-header .h2 {
+.inventory-header .inventory-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+.inventory-header .archive-btn {
+  background: #fff;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  padding: 8px 20px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.inventory-header .archive-btn:hover {
+  background: var(--purple);
+  color: #fff;
+}
+
+.inventory-table .ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.inventory-table .ant-table .ant-table-thead > tr > th {
+  background: var(--purple) !important; /* Ensure #24067e background */
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--yellow);
+  font-family: "Inter", sans-serif;
+}
+.inventory-table .ant-table .ant-table-tbody > tr > td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #4b5563;
+  font-family: "Inter", sans-serif;
+}
+.inventory-table .ant-table .ant-table-tbody > tr:hover > td {
+  background: #f1f5f9;
+}
+.inventory-table .ant-table .ant-table-tbody > tr:last-child > td {
+  border-bottom: none;
+}
+.inventory-table .ant-table .ant-table-pagination {
+  margin: 16px 0;
+  padding: 8px 0;
+}
+.inventory-table .ant-table .ant-table-pagination .ant-pagination-item-active {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+.inventory-table .ant-table .ant-table-pagination .ant-pagination-item-active a {
+  color: #fff;
+}
+.inventory-table .ant-table .ant-table-pagination .ant-pagination-item:hover {
+  border-color: var(--yellow);
+}
+.inventory-table .ant-table .ant-table-pagination .ant-pagination-item:hover a {
+  color: var(--purple);
+}
+.inventory-table .ant-table .edit-btn {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.inventory-table .ant-table .edit-btn:hover {
+  background: #059669;
+}
+.inventory-table .ant-table .archive-btn {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.inventory-table .ant-table .archive-btn:hover {
+  background: #dc2626;
+}
+
+.inventory-modal .ant-modal-content {
+  border-radius: 12px;
+  padding: 24px;
+}
+.inventory-modal .ant-modal-content .ant-modal-header {
+  background: var(--purple);
+  color: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 16px 24px;
+}
+.inventory-modal .ant-modal-content .ant-modal-header .ant-modal-title {
   font-size: 20px;
-  font-weight: bold;
-  color: #333;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+.inventory-modal .ant-modal-content .ant-modal-body {
+  padding: 24px;
+}
+.inventory-modal .ant-modal-content .ant-modal-body .ant-form-item-label label {
+  color: var(--purple);
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+}
+.inventory-modal .ant-modal-content .ant-modal-body .ant-input,
+.inventory-modal .ant-modal-content .ant-modal-body .ant-input-number,
+.inventory-modal .ant-modal-content .ant-modal-body .ant-select-selector {
+  border-radius: 6px;
+  border-color: #d1d5db;
+}
+.inventory-modal .ant-modal-content .ant-modal-body .ant-input:focus,
+.inventory-modal .ant-modal-content .ant-modal-body .ant-input-number:focus,
+.inventory-modal .ant-modal-content .ant-modal-body .ant-select-selector:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 2px rgba(255, 205, 56, 0.2);
+}
+.inventory-modal .ant-modal-content .ant-modal-body .ant-btn {
+  background: var(--yellow);
+  color: var(--purple);
+  border: none;
+  padding: 8px 20px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.inventory-modal .ant-modal-content .ant-modal-body .ant-btn:hover {
+  background: #f4b400;
+}
+.inventory-modal .ant-modal-content .ant-modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.archived-inventory-modal .ant-modal-content {
+  border-radius: 12px;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.archived-inventory-modal .ant-modal-content .ant-modal-header {
+  background: var(--purple);
+  border-bottom: 2px solid var(--yellow);
+  border-radius: 12px 12px 0 0;
+  padding: 20px 24px;
+}
+.archived-inventory-modal .ant-modal-content .ant-modal-header .archived-modal-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+.archived-inventory-modal .ant-modal-content .ant-modal-close {
+  color: #fff;
+}
+.archived-inventory-modal .ant-modal-content .ant-modal-close:hover {
+  color: var(--yellow);
+}
+.archived-inventory-modal .ant-modal-content .ant-modal-body {
+  padding: 0;
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content {
+  padding: 24px;
+  background: #fafafa;
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-thead > tr > th {
+  background: var(--purple) !important; /* Ensure #24067e background for modal table header */
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--yellow);
+  font-family: "Inter", sans-serif;
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-tbody > tr > td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #4b5563;
+  font-family: "Inter", sans-serif;
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-tbody > tr:hover > td {
+  background: #f1f5f9;
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-tbody > tr:last-child > td {
+  border-bottom: none;
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-pagination {
+  margin: 16px 0;
+  padding: 8px 0;
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-pagination .ant-pagination-item-active {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-pagination .ant-pagination-item-active a {
+  color: #fff;
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-pagination .ant-pagination-item:hover {
+  border-color: var(--yellow);
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .ant-table-pagination .ant-pagination-item:hover a {
+  color: var(--purple);
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .restore-btn {
+  background: var(--yellow);
+  color: var(--purple);
+  border: none;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.2s;
+  font-family: "Inter", sans-serif;
+}
+.archived-inventory-modal .ant-modal-content .archived-inventory-content .archived-inventory-table .ant-table .restore-btn:hover {
+  background: #f4b400;
 }
 
 .modal-overlay {

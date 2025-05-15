@@ -32,7 +32,6 @@ const ProductPage = () => {
   const [editingProduct, setEditingProduct] = useState(null);
   const [form] = Form.useForm();
 
-  // ✅ Ensure Authorization token is formatted as "Bearer ..."
   const rawToken = localStorage.getItem("authToken");
   const authToken = rawToken?.startsWith("Bearer ") ? rawToken : `Bearer ${rawToken}`;
   if (authToken) {
@@ -58,7 +57,7 @@ const ProductPage = () => {
   const fetchStatuses = async () => {
     try {
       const response = await axios.get("/api/statuses");
-      setStatuses(response.data.data || []); // ✅ your API response wraps statuses under "data"
+      setStatuses(response.data.data || []);
     } catch (error) {
       message.error("Error fetching statuses");
       console.error("Fetch error:", error);
@@ -174,7 +173,7 @@ const ProductPage = () => {
           <img
             src={window.location.origin + image}
             alt="product"
-            style={{ width: 50, height: "auto" }}
+            style={{ width: 60, height: "auto", objectFit: "contain" }}
           />
         ) : (
           "No Image"
@@ -203,8 +202,8 @@ const ProductPage = () => {
       key: "actions",
       render: (_, record) => (
         <Space>
-          <Button icon={<EditOutlined />} onClick={() => showEditModal(record)} />
-          <Button onClick={() => handleArchive(record)} danger>
+          <Button className="edit-btn" icon={<EditOutlined />} onClick={() => showEditModal(record)} />
+          <Button className="archive-btn-action" onClick={() => handleArchive(record)} danger>
             Archive
           </Button>
         </Space>
@@ -222,7 +221,7 @@ const ProductPage = () => {
           <img
             src={window.location.origin + image}
             alt="product"
-            style={{ width: 50, height: "auto" }}
+            style={{ width: 60, height: "auto", objectFit: "contain" }}
           />
         ) : (
           "No Image"
@@ -242,7 +241,7 @@ const ProductPage = () => {
       key: "actions",
       render: (_, record) => (
         <Space>
-          <Button onClick={() => handleRestore(record)} type="primary">
+          <Button className="restore-btn" onClick={() => handleRestore(record)} type="primary">
             Restore
           </Button>
         </Space>
@@ -262,29 +261,24 @@ const ProductPage = () => {
         <Layout>
           <Content style={{ margin: "24px 16px", padding: 24, background: "#fff", minHeight: 280 }}>
             <div className="products-header">
-              <h2>Product List</h2>
-              <div>
+              <h2 className="products-title">Product List</h2>
+              <div className="products-actions">
                 <Button type="primary" icon={<PlusOutlined />} onClick={showAddModal}>
                   Add Product
                 </Button>
-                <Button
-                  className="archive-btn"
-                  onClick={() => {
-                    setIsArchiveModalVisible(true);
-                    fetchArchivedProducts();
-                  }}
-                >
+                <Button className="archive-btn" onClick={() => { setIsArchiveModalVisible(true); fetchArchivedProducts(); }}>
                   Show Archived
                 </Button>
               </div>
             </div>
-            <Table columns={columns} dataSource={products} bordered pagination={{ pageSize: 5 }} />
+            <Table className="products-table" columns={columns} dataSource={products} bordered pagination={{ pageSize: 5 }} />
 
             <Modal
               title={isAdding ? "Add Product" : "Edit Product"}
               open={isModalVisible}
               onCancel={() => setIsModalVisible(false)}
               onOk={() => form.submit()}
+              className="products-modal"
             >
               <Form form={form} onFinish={handleSubmit} layout="vertical">
                 <Form.Item
@@ -333,17 +327,16 @@ const ProductPage = () => {
             </Modal>
 
             <Modal
-              title="Archived Products"
+              title={<span className="archived-modal-title">Archived Products</span>}
               open={isArchiveModalVisible}
               onCancel={() => setIsArchiveModalVisible(false)}
               footer={null}
+              className="archived-products-modal"
+              width={800}
             >
-              <Table
-                columns={archiveColumns}
-                dataSource={archivedProducts}
-                bordered
-                pagination={{ pageSize: 5 }}
-              />
+              <div className="archived-products-content">
+                <Table className="archived-products-table" columns={archiveColumns} dataSource={archivedProducts} bordered pagination={{ pageSize: 5 }} />
+              </div>
             </Modal>
           </Content>
         </Layout>

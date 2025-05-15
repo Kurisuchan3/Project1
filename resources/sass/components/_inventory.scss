@@ -1,12 +1,297 @@
+:root {
+  --purple: #24067e;
+  --yellow: #ffcd38;
+  --green: #10b981;
+}
+
 .inventory-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  
-    h2 {
-      font-size: 20px;
-      font-weight: bold;
-      color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 16px 0;
+  border-bottom: 2px solid var(--yellow);
+
+  .inventory-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--purple);
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .archive-btn {
+    background: #fff;
+    color: var(--purple);
+    border: 1px solid var(--purple);
+    padding: 8px 20px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.2s;
+
+    &:hover {
+      background: var(--purple);
+      color: #fff;
     }
   }
+}
+
+.inventory-table {
+  .ant-table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+    .ant-table-thead > tr > th {
+      background: var(--purple) !important; /* Ensure #24067e background */
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--yellow);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .ant-table-tbody > tr > td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 14px;
+      color: #4b5563;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .ant-table-tbody > tr:hover > td {
+      background: #f1f5f9;
+    }
+
+    .ant-table-tbody > tr:last-child > td {
+      border-bottom: none;
+    }
+
+    .ant-table-pagination {
+      margin: 16px 0;
+      padding: 8px 0;
+
+      .ant-pagination-item-active {
+        background: var(--purple);
+        border-color: var(--purple);
+
+        a {
+          color: #fff;
+        }
+      }
+
+      .ant-pagination-item:hover {
+        border-color: var(--yellow);
+
+        a {
+          color: var(--purple);
+        }
+      }
+    }
+
+    .edit-btn {
+      background: var(--green);
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #059669;
+      }
+    }
+
+    .archive-btn {
+      background: #ef4444;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #dc2626;
+      }
+    }
+  }
+}
+
+.inventory-modal {
+  .ant-modal-content {
+    border-radius: 12px;
+    padding: 24px;
+
+    .ant-modal-header {
+      background: var(--purple);
+      color: #fff;
+      border-radius: 12px 12px 0 0;
+      padding: 16px 24px;
+
+      .ant-modal-title {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'Inter', sans-serif;
+      }
+    }
+
+    .ant-modal-body {
+      padding: 24px;
+
+      .ant-form-item-label {
+        label {
+          color: var(--purple);
+          font-weight: 500;
+          font-family: 'Inter', sans-serif;
+        }
+      }
+
+      .ant-input,
+      .ant-input-number,
+      .ant-select-selector {
+        border-radius: 6px;
+        border-color: #d1d5db;
+
+        &:focus {
+          border-color: var(--yellow);
+          box-shadow: 0 0 0 2px rgba(255, 205, 56, 0.2);
+        }
+      }
+
+      .ant-btn {
+        background: var(--yellow);
+        color: var(--purple);
+        border: none;
+        padding: 8px 20px;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: background 0.2s;
+
+        &:hover {
+          background: #f4b400;
+        }
+      }
+    }
+
+    .ant-modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid #e0e0e0;
+    }
+  }
+}
+
+.archived-inventory-modal {
+  .ant-modal-content {
+    border-radius: 12px;
+    padding: 0;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+
+    .ant-modal-header {
+      background: var(--purple);
+      border-bottom: 2px solid var(--yellow);
+      border-radius: 12px 12px 0 0;
+      padding: 20px 24px;
+
+      .archived-modal-title {
+        font-size: 22px;
+        font-weight: 600;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+      }
+    }
+
+    .ant-modal-close {
+      color: #fff;
+
+      &:hover {
+        color: var(--yellow);
+      }
+    }
+
+    .ant-modal-body {
+      padding: 0;
+    }
+
+    .archived-inventory-content {
+      padding: 24px;
+      background: #fafafa;
+
+      .archived-inventory-table {
+        .ant-table {
+          border-radius: 8px;
+          overflow: hidden;
+          background: #fff;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+          .ant-table-thead > tr > th {
+            background: var(--purple) !important; /* Ensure #24067e background for modal table header */
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 12px 16px;
+            border-bottom: 2px solid var(--yellow);
+            font-family: 'Inter', sans-serif;
+          }
+
+          .ant-table-tbody > tr > td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 14px;
+            color: #4b5563;
+            font-family: 'Inter', sans-serif;
+          }
+
+          .ant-table-tbody > tr:hover > td {
+            background: #f1f5f9;
+          }
+
+          .ant-table-tbody > tr:last-child > td {
+            border-bottom: none;
+          }
+
+          .ant-table-pagination {
+            margin: 16px 0;
+            padding: 8px 0;
+
+            .ant-pagination-item-active {
+              background: var(--purple);
+              border-color: var(--purple);
+
+              a {
+                color: #fff;
+              }
+            }
+
+            .ant-pagination-item:hover {
+              border-color: var(--yellow);
+
+              a {
+                color: var(--purple);
+              }
+            }
+          }
+
+          .restore-btn {
+            background: var(--yellow);
+            color: var(--purple);
+            border: none;
+            padding: 8px 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background 0.2s;
+            font-family: 'Inter', sans-serif;
+
+            &:hover {
+              background: #f4b400;
+            }
+          }
+        }
+      }
+    }
+  }
+}

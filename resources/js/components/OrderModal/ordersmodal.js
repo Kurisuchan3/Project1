@@ -74,6 +74,10 @@ const OrdersModal = ({ order, onClose }) => {
     };
   }, [navigate]);
 
+  useEffect(() => {
+    console.log('Order data in modal:', order);
+  }, [order]);
+
   const handleStatusChange = async () => {
     const token = localStorage.getItem('authToken');
     try {
@@ -97,34 +101,59 @@ const OrdersModal = ({ order, onClose }) => {
     }
   };
 
+  const getImageUrl = (imagePath) => {
+    if (imagePath?.startsWith('/images/') || imagePath?.startsWith('/storage/')) {
+      return `http://localhost:8000${encodeURI(imagePath)}`;
+    }
+    return 'https://via.placeholder.com/80';
+  };
+
+  const userProfileImage = order.user?.profile?.profile_picture
+    ? `http://localhost:8000/storage/${order.user.profile.profile_picture}`
+    : 'https://via.placeholder.com/40';
+
+  const paymentMethod = order.paymentDetail?.payment_method
+    ? (order.paymentDetail.payment_method === 'credit_card' ? 'Credit Card' :
+       order.paymentDetail.payment_method === 'cod' ? 'Cash on Delivery' :
+       order.paymentDetail.payment_method === 'gcash' ? 'GCash' : 'N/A')
+    : 'N/A';
+
   return (
-    <div className="orders-modal-overlay">
-      <div className="orders-modal-content">
-        <button className="orders-modal-close" onClick={onClose}>×</button>
-        <h2 className="orders-modal-title">Order Details #{order.id}</h2>
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <button className="modal-close" onClick={onClose}>×</button>
+        <h2 className="modal-title">Order Details #{order.id}</h2>
 
-        <div className="orders-modal-section">
-          <h3>Order Summary</h3>
-          <p>Order Date: {new Date(order.created_at).toLocaleDateString()}</p>
-          <p>Total: ₱{order.total.toLocaleString()}</p>
-          <p>Status: {order.status?.status_name || 'N/A'}</p>
+        <div className="modal-section">
+          <h3 className="modal-section-title">Order Summary</h3>
+          <div className="modal-summary">
+            <img src={userProfileImage} alt="User Profile" className="modal-user-image" />
+            <div className="modal-summary-details">
+              <p><strong>Username:</strong> {order.user?.username || 'N/A'}</p>
+              <p><strong>Phone Number:</strong> {order.user?.profile?.phone || 'N/A'}</p>
+              <p><strong>Order Date:</strong> {new Date(order.created_at).toLocaleDateString()}</p>
+              <p><strong>Total:</strong> ₱{order.total?.toLocaleString() || 'N/A'}</p>
+              <p className={`modal-status modal-status-${order.status?.status_name?.toLowerCase() || 'na'}`}>
+                <strong>Status:</strong> {order.status?.status_name || 'N/A'}
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="orders-modal-section">
-          <h3>Shipping Details</h3>
-          <p>Barangay: {order.barangay}</p>
-          <p>City: {order.city}</p>
-          <p>Province: {order.province}</p>
-          <p>Country: {order.country}</p>
-          <p>Order Note: {order.order_notes || 'None'}</p>
+        <div className="modal-section">
+          <h3 className="modal-section-title">Shipping Details</h3>
+          <p><strong>Barangay:</strong> {order.barangay || 'N/A'}</p>
+          <p><strong>City:</strong> {order.city || 'N/A'}</p>
+          <p><strong>Province:</strong> {order.province || 'N/A'}</p>
+          <p><strong>Country:</strong> {order.country || 'N/A'}</p>
+          <p><strong>Order Note:</strong> {order.order_notes || 'None'}</p>
         </div>
 
-        <div className="orders-modal-section">
-          <h3>Payment & Status</h3>
-          <p>Status: {order.status?.status_name || 'N/A'}</p>
-          <p>Payment: {order.paymentDetail?.payment_method === 'credit_card' ? 'Credit Card' : order.paymentDetail?.payment_method === 'cod' ? 'Cash on Delivery' : order.paymentDetail?.payment_method === 'gcash' ? 'GCash' : 'N/A'}</p>
+        <div className="modal-section">
+          <h3 className="modal-section-title">Payment & Status</h3>
+          <p><strong>Payment Method:</strong> {paymentMethod}</p>
           {isAdmin && statuses.length > 0 && (
-            <div className="orders-modal-status-update">
+            <div className="modal-status-update">
               <label htmlFor="status">Update Status:</label>
               <select
                 id="status"
@@ -137,28 +166,28 @@ const OrdersModal = ({ order, onClose }) => {
                   </option>
                 ))}
               </select>
-              <button className="orders-modal-update-status" onClick={handleStatusChange}>
+              <button className="modal-update-button" onClick={handleStatusChange}>
                 Update
               </button>
             </div>
           )}
         </div>
 
-        <div className="orders-modal-section">
-          <h3>Ordered Items</h3>
+        <div className="modal-section">
+          <h3 className="modal-section-title">Ordered Items</h3>
           {order.orderItems && order.orderItems.length > 0 ? (
             order.orderItems.map((item) => (
-              <div className="orders-modal-item" key={item.id}>
-                <img src={item.product?.image || '/images/tuf.svg'} alt={item.product?.name || 'Product'} className="orders-modal-product-image" />
-                <div className="orders-modal-product-info">
-                  <p>{item.product?.name || 'N/A'}</p>
-                  <p>Price: ₱{item.price.toLocaleString()}</p>
-                  <p>Quantity: {item.quantity}</p>
+              <div className="modal-item" key={item.id}>
+                <img src={getImageUrl(item.product?.image)} alt={item.product?.name || 'Product'} className="modal-product-image" />
+                <div className="modal-product-info">
+                  <p className="modal-product-name">{item.product?.name || 'N/A'}</p>
+                  <p>Price: ₱{item.price?.toLocaleString() || 'N/A'}</p>
+                  <p>Quantity: {item.quantity || 'N/A'}</p>
                 </div>
               </div>
             ))
           ) : (
-            <p>No items found.</p>
+            <p className="modal-empty">No items found.</p>
           )}
         </div>
       </div>

@@ -4,9 +4,9 @@ import { Layout, Table, Tag, Tooltip, Button } from "antd";
 import { EditOutlined, StopOutlined, PlusOutlined } from "@ant-design/icons";
 import TopNav from "../../topnav";
 import AdminSideMenu from "../../admin-sidemenu";
-import "../../../../sass/components/_usertable.scss"; // ✅ Import SCSS styles
+import "../../../../sass/components/_usertable.scss";
 
-const { Content } = Layout;
+const { Header, Sider, Content } = Layout;
 
 const UserTable = () => {
   const [users, setUsers] = useState([]);
@@ -83,20 +83,18 @@ const UserTable = () => {
       title: "Actions",
       key: "actions",
       render: (_, user) => (
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+        <div className="action-buttons">
           <Tooltip title="Edit">
-            <EditOutlined
-              style={{ fontSize: "18px", color: "#1890ff", cursor: "pointer" }}
+            <Button
+              className="edit-btn"
+              icon={<EditOutlined />}
               onClick={() => handleEdit(user)}
             />
           </Tooltip>
           <Tooltip title={user.deleted_at ? "Restore" : "Archive"}>
-            <StopOutlined
-              style={{
-                fontSize: "18px",
-                color: user.deleted_at ? "#52c41a" : "#ff4d4f",
-                cursor: "pointer",
-              }}
+            <Button
+              className={user.deleted_at ? "restore-btn" : "archive-btn"}
+              icon={<StopOutlined />}
               onClick={() => handleArchiveRestore(user)}
             />
           </Tooltip>
@@ -122,28 +120,36 @@ const UserTable = () => {
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <TopNav />
-      <Layout style={{ display: "flex", flexDirection: "row" }}>
-        <AdminSideMenu />
-        <Layout style={{ padding: "20px", width: "100%" }}>
-          <Content style={{ background: "#f5f5f5", padding: "20px", borderRadius: "8px" }}>
+      <Header style={{ padding: 0, background: "#008cff", position: "fixed", width: "100%", zIndex: 1000 }}>
+        <TopNav />
+      </Header>
+      <Layout style={{ marginTop: 64 }}>
+        <Sider width={200}>
+          <AdminSideMenu />
+        </Sider>
+        <Layout>
+          <Content style={{ margin: "24px 16px", padding: 24, background: "#fff", minHeight: 280 }}>
             <div className="user-table-container">
-              <div className="button-container">
-                <Button type="primary" icon={<PlusOutlined />}>
-                  Add User
-                </Button>
-                <Button type="default" onClick={toggleView}>
-                  {viewArchived ? "View Active" : "View Archived"}
-                </Button>
+              <div className="user-table-header">
+                <h2 className="user-table-title">User List</h2>
+                <div className="button-container">
+                  <Button className="add-user-btn" type="primary" icon={<PlusOutlined />}>
+                    Add User
+                  </Button>
+                  <Button className="toggle-view-btn" type="default" onClick={toggleView}>
+                    {viewArchived ? "View Active" : "View Archived"}
+                  </Button>
+                </div>
               </div>
 
               <Table
+                className="user-table"
                 dataSource={viewArchived ? archivedUsers : users}
                 columns={columns}
                 rowKey="user_id"
                 pagination={{ pageSize: 10 }}
                 bordered
-                scroll={{ x: true }} // ✅ Ant Design native responsive scroll
+                scroll={{ x: true }}
               />
             </div>
           </Content>

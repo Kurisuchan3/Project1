@@ -16,7 +16,6 @@ const Inventory = () => {
   const [editingInventoryItem, setEditingInventoryItem] = useState(null);
   const [editForm] = Form.useForm();
 
-  // ✅ Fix: Apply token with "Bearer " prefix
   const rawToken = localStorage.getItem("authToken");
   const authToken = rawToken?.startsWith("Bearer ") ? rawToken : `Bearer ${rawToken}`;
   if (authToken) {
@@ -128,7 +127,7 @@ const Inventory = () => {
       key: "image",
       render: (image) =>
         image ? (
-          <img src={window.location.origin + image} alt="product" style={{ width: 50 }} />
+          <img src={window.location.origin + image} alt="product" style={{ width: 60, height: "auto", objectFit: "contain" }} />
         ) : (
           "No Image"
         ),
@@ -143,8 +142,8 @@ const Inventory = () => {
       key: "actions",
       render: (_, record) => (
         <Space>
-          <Button icon={<EditOutlined />} onClick={() => showEditModal(record)} />
-          <Button icon={<DeleteOutlined />} danger onClick={() => handleArchive(record.key)}>
+          <Button className="edit-btn" icon={<EditOutlined />} onClick={() => showEditModal(record)} />
+          <Button className="archive-btn" icon={<DeleteOutlined />} danger onClick={() => handleArchive(record.key)}>
             Archive
           </Button>
         </Space>
@@ -159,7 +158,7 @@ const Inventory = () => {
       key: "image",
       render: (image) =>
         image ? (
-          <img src={window.location.origin + image} alt="product" style={{ width: 50 }} />
+          <img src={window.location.origin + image} alt="product" style={{ width: 60, height: "auto", objectFit: "contain" }} />
         ) : (
           "No Image"
         ),
@@ -174,7 +173,7 @@ const Inventory = () => {
       key: "actions",
       render: (_, record) => (
         <Space>
-          <Button type="primary" onClick={() => handleRestore(record.key)}>
+          <Button className="restore-btn" type="primary" onClick={() => handleRestore(record.key)}>
             Restore
           </Button>
         </Space>
@@ -194,24 +193,19 @@ const Inventory = () => {
         <Layout>
           <Content style={{ margin: "24px 16px", padding: 24, background: "#fff", minHeight: 280 }}>
             <div className="inventory-header">
-              <h2>Inventory List</h2>
-              <Button
-                type="primary"
-                onClick={() => {
-                  setIsArchiveModalVisible(true);
-                  fetchArchivedInventory();
-                }}
-              >
+              <h2 className="inventory-title">Inventory List</h2>
+              <Button className="archive-btn" onClick={() => { setIsArchiveModalVisible(true); fetchArchivedInventory(); }}>
                 Show Archived
               </Button>
             </div>
-            <Table columns={columns} dataSource={inventoryItems} bordered pagination={{ pageSize: 5 }} />
+            <Table className="inventory-table" columns={columns} dataSource={inventoryItems} bordered pagination={{ pageSize: 5 }} />
 
             <Modal
               title="Edit Inventory Item"
               open={isEditModalVisible}
               onCancel={() => setIsEditModalVisible(false)}
               onOk={() => editForm.submit()}
+              className="inventory-modal"
             >
               <Form form={editForm} onFinish={handleEditSubmit} layout="vertical">
                 <Form.Item label="Product Name" name="product_name" rules={[{ required: true }]}>
@@ -227,12 +221,16 @@ const Inventory = () => {
             </Modal>
 
             <Modal
-              title="Archived Inventory"
+              title={<span className="archived-modal-title">Archived Inventory</span>}
               open={isArchiveModalVisible}
               onCancel={() => setIsArchiveModalVisible(false)}
               footer={null}
+              className="inventory-modal archived-inventory-modal"
+              width={900}
             >
-              <Table columns={archiveColumns} dataSource={archivedInventory} bordered pagination={{ pageSize: 5 }} />
+              <div className="archived-inventory-content">
+                <Table className="archived-inventory-table" columns={archiveColumns} dataSource={archivedInventory} bordered pagination={{ pageSize: 5 }} />
+              </div>
             </Modal>
           </Content>
         </Layout>
