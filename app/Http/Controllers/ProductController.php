@@ -7,6 +7,7 @@ use App\Models\Inventory;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\JsonResponse;
 
 class ProductController extends Controller
 {
@@ -128,5 +129,10 @@ class ProductController extends Controller
         $product = Product::withTrashed()->findOrFail($id);
         $product->restore();
         return response()->json(['message' => 'Product restored successfully']);
+    }
+    public function count(): JsonResponse
+    {
+        $total = Product::whereNull('deleted_at')->count();
+        return response()->json(['count' => $total]);
     }
 }

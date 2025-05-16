@@ -1,5 +1,6 @@
-import React from 'react';
-import { Row, Col, Card, Typography } from 'antd';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Row, Col, Card, Typography, Spin } from 'antd';
 import {
   AppstoreOutlined,
   UserOutlined,
@@ -12,17 +13,40 @@ import {
 const { Text, Title } = Typography;
 
 export default function DashboardCards() {
+  // users
+  const [userCount, setUserCount] = useState(null);
+  const [loadingUsers, setLoadingUsers] = useState(true);
+
+  // products
+  const [productCount, setProductCount] = useState(null);
+  const [loadingProducts, setLoadingProducts] = useState(true);
+
+  useEffect(() => {
+    // fetch users
+    axios.get('/api/users/count')
+      .then(({ data }) => setUserCount(data.count))
+      .catch(console.error)
+      .finally(() => setLoadingUsers(false));
+
+    // fetch products
+    axios.get('/api/products/count')
+      .then(({ data }) => setProductCount(data.count))
+      .catch(console.error)
+      .finally(() => setLoadingProducts(false));
+  }, []);
+
   const cards = [
     {
       title: 'Total Products',
-      value: 25,
+      // show spinner until we get the count
+      value: loadingProducts ? <Spin size="small" /> : productCount,
       change: '15%',
       up: true,
       icon: <AppstoreOutlined style={{ fontSize: 24 }} />,
     },
     {
       title: 'Total Users',
-      value: 15,
+      value: loadingUsers ? <Spin size="small" /> : userCount,
       change: '6%',
       up: true,
       icon: <UserOutlined style={{ fontSize: 24 }} />,

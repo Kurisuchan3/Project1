@@ -20,6 +20,8 @@ Route::get('/users', [UsersController::class, 'getUsers']);
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/subcategories', [SubcategoryController::class, 'index']);
 Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/users/count', [UsersController::class, 'count']);
+Route::get('/products/count', [ProductController::class, 'count']);
 
 Route::middleware('auth:api')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
@@ -51,5 +53,4 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/orders', [OrderController::class, 'store']);
     Route::get('/orders/{id}', [OrderController::class, 'show']);
     Route::put('/orders/{id}/status', [OrderController::class, 'updateStatus']);
-    Route::get('/admin/orders', [OrderController::class, 'adminIndex']); // Added admin orders endpoint
 });

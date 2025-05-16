@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -89,5 +90,10 @@ class UsersController extends Controller
             'success' => true,
             'data' => $archivedUsers,
         ], 200);
+    }
+    public function count(): JsonResponse
+    {
+        $total = User::whereNull('deleted_at')->count();
+        return response()->json(['count' => $total]);
     }
 }
