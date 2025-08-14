@@ -8,7 +8,7 @@ import ReviewsModal from "../../components/Reviews/ReviewsModal";
 import "../../../sass/components/reviews.scss";
 import moment from "moment";
 
-const Reviews = ({ productId = 1 }) => {
+const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
@@ -44,7 +44,7 @@ const Reviews = ({ productId = 1 }) => {
         }
 
         const response = await axios.get(
-          `http://localhost:8000/api/ratings/product/${productId}`,
+          `http://localhost:8000/api/ratings`,
           {
             headers: { Authorization: `Bearer ${token}` },
             cancelToken: source.token,
@@ -73,7 +73,7 @@ const Reviews = ({ productId = 1 }) => {
       isMounted = false;
       source.cancel("Component unmounted");
     };
-  }, [navigate, productId]);
+  }, [navigate]);
 
   const openModal = (review) => {
     setSelectedReview(review);
@@ -88,12 +88,12 @@ const Reviews = ({ productId = 1 }) => {
       <TopNav />
       <AdminSideMenu />
       <div className="reviews-content">
-        <h1 className="reviews-title">Product Reviews</h1>
+        <h1 className="reviews-title">All Reviews</h1>
         <div className="reviews-list">
           {loading ? (
             <p className="reviews-empty">Loading reviews...</p>
           ) : reviews.length === 0 ? (
-            <p className="reviews-empty">No reviews found for this product.</p>
+            <p className="reviews-empty">No reviews found.</p>
           ) : (
             reviews.map((review) => {
               const userProfileImage = review.profile_picture

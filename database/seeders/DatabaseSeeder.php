@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             InventorySeeder::class, // Now runs after ProductsSeeder
             UsersSeeder::class,
             ProfilesSeeder::class,
+            NotificationMessagesSeeder::class,
         ]);
     }
 }

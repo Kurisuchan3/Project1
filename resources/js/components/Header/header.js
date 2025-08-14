@@ -28,9 +28,16 @@ const Header = () => {
       const response = await axios.get("/api/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
-      if (response.data.success) {
-        setUsername(response.data.data.username);
-        localStorage.setItem('userRole', response.data.data.role_id.toString());
+      if (response.data.success && response.data.data) {
+        setUsername(response.data.data.username || '');
+        if (response.data.data.roles_id) {
+          localStorage.setItem('userRole', response.data.data.roles_id.toString());
+        } else {
+          console.warn("roles_id not found in user data:", response.data.data);
+          localStorage.setItem('userRole', '2'); // Default to customer role
+        }
+      } else {
+        console.warn("Unexpected user data structure:", response.data);
       }
     } catch (error) {
       console.error("Failed to fetch user:", error);
@@ -99,8 +106,9 @@ const Header = () => {
       const response = await axios.get("/api/notifications", {
         headers: { Authorization: `Bearer ${token}` },
       });
+      console.log("Notifications response:", response.data);
       if (response.data.success) {
-        setNotifications(response.data.data);
+        setNotifications(response.data.data || []);
         setNotificationCount(response.data.data.filter(n => !n.is_read).length);
       }
     } catch (error) {
@@ -118,13 +126,14 @@ const Header = () => {
     if (!token) return;
 
     try {
-      await axios.post(`/api/notifications/${id}/read`, {}, {
+      const response = await axios.post(`/api/notifications/${id}/read`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
+      console.log("Mark as read response:", response.data);
       setNotifications(prev =>
         prev.map(n => n.id === id ? { ...n, is_read: true } : n)
       );
-      setNotificationCount(prev => prev - 1);
+      setNotificationCount(prev => Math.max(prev - 1, 0));
     } catch (error) {
       console.error("Failed to mark notification as read:", error.response?.data || error.message);
     }
@@ -194,99 +203,116 @@ const Header = () => {
     navigate('/shopui?category=Brands');
   };
 
+  const handlePeripheralsClick = (e) => {
+    e.preventDefault();
+    navigate('/shopui?category=Peripherals');
+  };
+
   const handleAboutClick = (e) => {
     e.preventDefault();
     navigate('/about');
   };
 
   const notificationMenu = (
-    <Menu style={{ maxHeight: '300px', overflowY: 'auto' }}>
-      {notifications.length === 0 ? (
-        <Menu.Item key="no-notifications">
-          No notifications
-        </Menu.Item>
-      ) : (
-        notifications.map(notification => (
-          <Menu.Item
-            key={notification.id}
-            onClick={() => {
-              markNotificationAsRead(notification.id);
-              if (notification.order_id) {
-                navigate(`/purchases`);
-              }
-            }}
-            style={{ backgroundColor: notification.is_read ? '#fff' : '#f0f0f0' }}
-          >
-            <div>
-              <span>{notification.message}</span>
-              <br />
-              <small>{new Date(notification.created_at).toLocaleString()}</small>
-            </div>
-          </Menu.Item>
-        ))
-      )}
-    </Menu>
+    <Menu
+      items={
+        notifications.length === 0
+          ? [
+              {
+                key: 'no-notifications',
+                label: 'No notifications',
+              },
+            ]
+          : notifications.map(notification => ({
+              key: notification.id,
+              label: (
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <span style={{ fontSize: '14px', color: notification.is_read ? '#666' : '#1a1a1a', fontWeight: notification.is_read ? 'normal' : '500' }}>
+                    {notification.message}
+                  </span>
+                  <span style={{ fontSize: '12px', color: '#999', marginTop: '4px' }}>
+                    {new Date(notification.created_at).toLocaleString()}
+                  </span>
+                </div>
+              ),
+              onClick: () => {
+                markNotificationAsRead(notification.id);
+                if (notification.order_id) {
+                  navigate(`/purchases`);
+                }
+              },
+              style: {
+                backgroundColor: notification.is_read ? '#fff' : '#e6f0ff',
+                padding: '10px 15px',
+                borderBottom: '1px solid #f0f0f0',
+              },
+            }))
+      }
+      style={{ maxHeight: '300px', overflowY: 'auto', width: '300px' }}
+    />
   );
 
-  const profileMenu = (
-    <Menu>
-      <Menu.Item key="profile" onClick={handleProfileClick}>
-        Profile
-      </Menu.Item>
-      <Menu.Item key="logout" onClick={handleLogoutClick}>
-        Logout
-      </Menu.Item>
-    </Menu>
+  const userMenu = (
+    <Menu
+      items={[
+        {
+          key: 'profile',
+          label: 'Profile',
+          onClick: handleProfileClick,
+        },
+        {
+          key: 'logout',
+          label: 'Logout',
+          onClick: handleLogoutClick,
+        },
+      ]}
+    />
   );
 
   return (
     <header className="header">
-      <div className="header__left">
-        <img
-          src={Logo}
-          alt="Lapnix Logo"
-          className="header__logo"
-          onClick={handleLogoClick}
-          style={{ cursor: 'pointer' }}
-        />
-        <nav className="header__nav">
-          <a href="#" className="header__link" onClick={handleHomeClick}>Home</a>
-          <a href="#" className="header__link" onClick={handleBrandsClick}>Shop</a>
-          <a href="#" className="header__link">Support</a>
-          <a href="#" className="header__link" onClick={handleAboutClick}>About us</a>
+      <div className="header-container">
+        <div className="header-logo" onClick={handleLogoClick}>
+          <img src={Logo} alt="Lapnix Logo" />
+        </div>
+        <nav className="header-nav">
+          <a href="#" onClick={handleHomeClick}>Home</a>
+          <a href="#" onClick={handleBrandsClick}>Brands</a>
+          <a href="#" onClick={handlePeripheralsClick}>Peripherals</a>
+          <a href="#" onClick={handleAboutClick}>About</a>
         </nav>
-      </div>
-
-      <div className="header__right">
-        <IconSearch className="header__icon" />
-        <div className="header__notifications">
+        <div className="header-actions">
+          <div className="header-search">
+            <IconSearch size={20} />
+          </div>
           <Dropdown overlay={notificationMenu} trigger={['click']}>
-            <div className="header__notification-toggle">
-              <IconBellFilled className="header__icon" />
+            <div className="header-notification">
+              <IconBellFilled size={20} />
               {notificationCount > 0 && (
-                <span className="notification-count">{notificationCount}</span>
+                <span className="header-notification-count">{notificationCount}</span>
               )}
             </div>
           </Dropdown>
-        </div>
-        <div className="header__cart" onClick={handleCartClick}>
-          <IconShoppingCart className="header__icon" />
-          {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-        </div>
-        {isAuthenticated ? (
-          <div className="header__profile">
-            <Dropdown overlay={profileMenu} trigger={['click']}>
-              <div className="header__profile-toggle">
-                <IconUser className="header__icon" />
-                <span className="header__username">{username || 'User'}</span>
+          <div className="header-cart" onClick={handleCartClick}>
+            <IconShoppingCart size={20} />
+            {cartCount > 0 && (
+              <span className="header-cart-count">{cartCount}</span>
+            )}
+          </div>
+          {isAuthenticated ? (
+            <Dropdown overlay={userMenu} trigger={['click']}>
+              <div className="header-user">
+                <IconUser size={20} />
+                <span>{username}</span>
               </div>
             </Dropdown>
-          </div>
-        ) : (
-          <button className="header__login-btn" onClick={() => navigate('/login')}>
-            Login
-          </button>
-        )}
+          ) : (
+            <div className="header-user" onClick={() => navigate('/login')}>
+              <IconUser size={20} />
+              <span>Login</span>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );

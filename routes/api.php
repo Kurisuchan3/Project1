@@ -24,6 +24,7 @@ Route::get('/products', [ProductController::class, 'index']);
 Route::get('/subcategories', [SubcategoryController::class, 'index']);
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/ratings/product/{productId}', [RateController::class, 'getProductRatings']);
+Route::get('/ratings', [RateController::class, 'getAllRatings']); // New route to fetch all reviews
 Route::get('/dashboard/stats', [DashboardController::class, 'getStats']);
 Route::get('/dashboard/order-stats', [DashboardController::class, 'getOrderStats']);
 Route::get('/dashboard/recent-orders', [DashboardController::class, 'getRecentOrders']);
@@ -61,4 +62,5 @@ Route::middleware('auth:api')->group(function () {
     Route::put('/orders/{id}/status', [OrderController::class, 'updateStatus']);
     Route::get('/admin/orders', [OrderController::class, 'adminIndex']);
     Route::get('/notifications', [NotificationController::class, 'index']);
+    Route::post('/notifications/{id}/read', [NotificationController::class, 'markAsRead']);
 });

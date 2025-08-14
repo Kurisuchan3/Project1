@@ -7,6 +7,14 @@ const ReviewsModal = ({ review, onClose }) => {
   const userProfileImage = review.profile_picture
     ? review.profile_picture
     : "https://via.placeholder.com/80";
+  const productImage = review.product?.image
+    ? review.product.image
+    : "https://via.placeholder.com/80";
+
+  // Safely format price, converting string to number if necessary
+  const formattedPrice = review.product?.price
+    ? `$${Number(review.product.price).toFixed(2)}`
+    : "N/A";
 
   return (
     <Modal
@@ -19,6 +27,24 @@ const ReviewsModal = ({ review, onClose }) => {
     >
       <div className="reviews-modal-content">
         <h2 className="reviews-modal-title">Review Details</h2>
+        {review.product && (
+          <div className="reviews-modal-product">
+            <h3>Product Reviewed</h3>
+            <div className="reviews-modal-product-header">
+              <img
+                src={productImage}
+                alt="Product"
+                className="reviews-modal-product-image"
+              />
+              <div className="reviews-modal-product-info">
+                <p className="reviews-modal-product-name">{review.product.name || "N/A"}</p>
+                <p className="reviews-modal-product-price">
+                  Price: {formattedPrice}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
         <div className="reviews-modal-header">
           <img
             src={userProfileImage}

@@ -7,6 +7,8 @@ use App\Models\OrderItem;
 use App\Models\PaymentDetail;
 use App\Models\Status;
 use App\Models\User;
+use App\Models\Notification;
+use App\Models\NotificationMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -17,6 +19,45 @@ class OrderController extends Controller
     public function __construct()
     {
         $this->middleware('auth:api');
+    }
+
+    /**
+     * Create a notification for the user based on the order's status
+     */
+    private function createNotification($userId, $orderId, $statusId)
+    {
+        try {
+            Log::info('Attempting to create notification', [
+                'user_id' => $userId,
+                'order_id' => $orderId,
+                'status_id' => $statusId,
+            ]);
+
+            $notificationMessage = NotificationMessage::where('status_id', $statusId)->first();
+            if (!$notificationMessage) {
+                Log::warning('No notification message found for status_id', ['status_id' => $statusId]);
+                return;
+            }
+
+            $notification = Notification::create([
+                'user_id' => $userId,
+                'order_id' => $orderId,
+                'message' => $notificationMessage->message_template,
+                'is_read' => false,
+            ]);
+
+            Log::info('Notification created successfully', [
+                'notification_id' => $notification->id,
+                'message' => $notification->message,
+            ]);
+        } catch (\Exception $e) {
+            Log::error('Failed to create notification', [
+                'error' => $e->getMessage(),
+                'user_id' => $userId,
+                'order_id' => $orderId,
+                'status_id' => $statusId,
+            ]);
+        }
     }
 
     public function store(Request $request)
@@ -94,6 +135,9 @@ class OrderController extends Controller
                 'payment_method' => $paymentMethod,
                 'details' => $paymentDetailsData,
             ]);
+
+            // Create notification for the new order
+            $this->createNotification($user->user_id, $order->id, $order->status_id);
 
             DB::commit();
 
@@ -176,7 +220,16 @@ class OrderController extends Controller
         }
 
         $order = Order::findOrFail($id);
+        Log::info('Updating order status', [
+            'order_id' => $id,
+            'new_status_id' => $request->status_id,
+            'user_id' => $order->user_id,
+        ]);
+
         $order->update(['status_id' => $request->status_id]);
+
+        // Create notification for status update
+        $this->createNotification($order->user_id, $order->id, $request->status_id);
 
         return response()->json([
             'success' => true,

@@ -78550,7 +78550,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".reviews-modal .reviews-modal-content {\n  padding: 24px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-title {\n  font-size: 24px;\n  font-weight: 700;\n  color: #24067e;\n  margin-bottom: 20px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-header {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  margin-bottom: 20px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-header .reviews-modal-image {\n  width: 80px;\n  height: 80px;\n  border-radius: 50%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border: 2px solid #ffcd38;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-header .reviews-modal-info .reviews-modal-username {\n  font-size: 18px;\n  font-weight: 600;\n  color: #24067e;\n  margin: 0;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-header .reviews-modal-info .reviews-modal-date {\n  font-size: 14px;\n  color: #6b7280;\n  margin: 4px 0 0;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-details {\n  margin-bottom: 20px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-details .reviews-modal-rating {\n  font-size: 16px;\n  margin-bottom: 12px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-details .reviews-modal-comment {\n  font-size: 16px;\n  color: #444;\n  line-height: 1.6;\n  margin: 0;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-details .reviews-modal-photo {\n  max-width: 300px;\n  margin-top: 12px;\n  border-radius: 6px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-user {\n  border-top: 1px solid #eee;\n  padding-top: 16px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-user h3 {\n  font-size: 18px;\n  font-weight: 600;\n  color: #24067e;\n  margin-bottom: 12px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-user p {\n  font-size: 14px;\n  color: #444;\n  margin: 4px 0;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@charset \"UTF-8\";\n.reviews-modal .reviews-modal-content {\n  padding: 24px;\n}\n.reviews-modal .reviews-modal-content 农场 .reviews-modal-title {\n  font-size: 24px;\n  font-weight: 700;\n  color: #24067e;\n  margin-bottom: 20px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-product {\n  margin-bottom: 20px;\n  border-bottom: 1px solid #eee;\n  padding-bottom: 16px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-product h3 {\n  font-size: 18px;\n  font-weight: 600;\n  color: #24067e;\n  margin-bottom: 12px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-product .reviews-modal-product-header {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-product .reviews-modal-product-header .reviews-modal-product-image {\n  width: 80px;\n  height: 80px;\n  border-radius: 6px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border: 2px solid #ffcd38;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-product .reviews-modal-product-header .reviews-modal-product-info .reviews-modal-product-name {\n  font-size: 16px;\n  font-weight: 600;\n  color: #24067e;\n  margin: 0;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-product .reviews-modal-product-header .reviews-modal-product-info .reviews-modal-product-price {\n  font-size: 14px;\n  color: #6b7280;\n  margin: 4px 0 0;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-header {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  margin-bottom: 20px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-header .reviews-modal-image {\n  width: 80px;\n  height: 80px;\n  border-radius: 50%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border: 2px solid #ffcd38;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-header .reviews-modal-info .reviews-modal-username {\n  font-size: 18px;\n  font-weight: 600;\n  color: #24067e;\n  margin: 0;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-header .reviews-modal-info .reviews-modal-date {\n  font-size: 14px;\n  color: #6b7280;\n  margin: 4px 0 0;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-details {\n  margin-bottom: 20px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-details .reviews-modal-rating {\n  font-size: 16px;\n  margin-bottom: 12px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-details .reviews-modal-comment {\n  font-size: 16px;\n  color: #444;\n  line-height: 1.6;\n  margin: 0;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-details .reviews-modal-photo {\n  max-width: 300px;\n  margin-top: 12px;\n  border-radius: 6px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-user {\n  border-top: 1px solid #eee;\n  padding-top: 16px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-user h3 {\n  font-size: 18px;\n  font-weight: 600;\n  color: #24067e;\n  margin-bottom: 12px;\n}\n.reviews-modal .reviews-modal-content .reviews-modal-user p {\n  font-size: 14px;\n  color: #444;\n  margin: 4px 0;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -78694,7 +78694,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100vw;\n  height: 60px;\n  background-color: #24067e;\n  padding: 0 20px;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 1000;\n}\n.header__left {\n  display: flex;\n  align-items: center;\n  gap: 30px;\n}\n.header__logo {\n  font-size: 24px;\n  font-weight: bold;\n  color: #ffffff;\n}\n.header__nav {\n  display: flex;\n  gap: 20px;\n}\n.header__link {\n  color: #ffffff;\n  text-decoration: none;\n  font-size: 16px;\n  transition: color 0.3s ease;\n}\n.header__link:hover {\n  color: #cccccc;\n}\n.header__right {\n  display: flex;\n  align-items: center;\n  gap: 15px;\n}\n.header__icon {\n  color: #ffffff;\n  width: 24px;\n  height: 24px;\n  cursor: pointer;\n  transition: color 0.3s ease;\n}\n.header__icon:hover {\n  color: #cccccc;\n}\n.header__login-btn {\n  background-color: #ffd500;\n  color: #1e1d1d;\n  border: none;\n  border-radius: 5px;\n  padding: 8px 16px;\n  font-size: 16px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n.header__login-btn:hover {\n  background-color: #fafa8f;\n}\n.header__profile {\n  position: relative;\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  cursor: pointer;\n  color: #ffffff;\n  transition: color 0.3s ease;\n}\n.header__profile:hover {\n  color: #cccccc;\n}\n.header__profile-toggle {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n.header__username {\n  font-size: 16px;\n  font-weight: 500;\n}\n.header__notifications {\n  position: relative;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n}\n.header__notification-toggle {\n  display: flex;\n  align-items: center;\n  position: relative;\n}\n.header .notification-count {\n  position: absolute;\n  top: -8px;\n  right: -8px;\n  background-color: #ffd500;\n  color: #1e1d1d;\n  border-radius: 50%;\n  width: 16px;\n  height: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 10px;\n  font-weight: bold;\n}\n.header__cart {\n  position: relative;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n}\n.header .cart-count {\n  position: absolute;\n  top: -8px;\n  right: -8px;\n  background-color: #ffd500;\n  color: #1e1d1d;\n  border-radius: 50%;\n  width: 16px;\n  height: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 10px;\n  font-weight: bold;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".header {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  background: #24067e;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  z-index: 1000;\n  font-family: \"Inter\", sans-serif;\n}\n.header .header-container {\n  max-width: 1400px;\n  margin: 0 auto;\n  padding: 15px 10px;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start; /* Changed from space-between to flex-start */\n  gap: 30px; /* Added gap to control spacing between logo, nav, and actions */\n}\n.header .header-logo {\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n}\n.header .header-logo img {\n  height: 40px;\n}\n.header .header-nav {\n  display: flex;\n  align-items: center;\n  gap: 30px;\n  margin-left: 0; /* Removed margin-left to align with logo */\n}\n.header .header-nav a {\n  font-size: 16px;\n  color: #ffffff;\n  text-decoration: none;\n  font-weight: 500;\n  transition: color 0.2s;\n}\n.header .header-nav a:hover {\n  color: #a8b0ff;\n}\n.header .header-actions {\n  display: flex;\n  align-items: center;\n  gap: 20px;\n  margin-left: auto; /* Pushes actions to the right */\n}\n.header .header-actions .header-search,\n.header .header-actions .header-notification,\n.header .header-actions .header-cart,\n.header .header-actions .header-user {\n  position: relative;\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  cursor: pointer;\n  color: #ffffff;\n  transition: color 0.2s;\n}\n.header .header-actions .header-search:hover,\n.header .header-actions .header-notification:hover,\n.header .header-actions .header-cart:hover,\n.header .header-actions .header-user:hover {\n  color: #a8b0ff;\n}\n.header .header-actions .header-search span,\n.header .header-actions .header-notification span,\n.header .header-actions .header-cart span,\n.header .header-actions .header-user span {\n  font-size: 14px;\n  font-weight: 500;\n}\n.header .header-actions .header-notification-count,\n.header .header-actions .header-cart-count {\n  position: absolute;\n  top: -8px;\n  right: -8px;\n  background: #ff4444;\n  color: white;\n  font-size: 12px;\n  font-weight: 600;\n  border-radius: 50%;\n  width: 18px;\n  height: 18px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.header .header-actions .header-notification .ant-dropdown-menu {\n  padding: 0;\n  border-radius: 8px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);\n  background: #ffffff;\n}\n.header .header-actions .header-notification .ant-dropdown-menu .ant-dropdown-menu-item {\n  padding: 10px 15px;\n  font-size: 14px;\n  color: #333;\n  border-bottom: 1px solid #f0f0f0;\n}\n.header .header-actions .header-notification .ant-dropdown-menu .ant-dropdown-menu-item:last-child {\n  border-bottom: none;\n}\n.header .header-actions .header-notification .ant-dropdown-menu .ant-dropdown-menu-item:hover {\n  background: #f5f5f5;\n}\n.header .header-actions .header-notification .ant-dropdown-menu .ant-dropdown-menu-item div {\n  display: flex;\n  flex-direction: column;\n}\n.header .header-actions .header-notification .ant-dropdown-menu .ant-dropdown-menu-item div span:first-child {\n  font-weight: 500;\n}\n.header .header-actions .header-notification .ant-dropdown-menu .ant-dropdown-menu-item div span:last-child {\n  font-size: 12px;\n  color: #999;\n  margin-top: 4px;\n}\n@media (max-width: 768px) {\n  .header .header-container {\n    padding: 10px 15px;\n    flex-wrap: wrap;\n    justify-content: flex-start; /* Maintain left alignment on mobile */\n  }\n  .header .header-nav {\n    gap: 15px;\n    margin-left: 0; /* Ensure no extra margin on mobile */\n  }\n  .header .header-nav a {\n    font-size: 14px;\n  }\n  .header .header-actions {\n    gap: 15px;\n    margin-left: auto; /* Keep actions on the right on mobile */\n  }\n  .header .header-actions .header-user span {\n    display: none;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -226732,9 +226732,16 @@ var Header = function Header() {
             });
           case 8:
             response = _context.sent;
-            if (response.data.success) {
-              setUsername(response.data.data.username);
-              localStorage.setItem('userRole', response.data.data.role_id.toString());
+            if (response.data.success && response.data.data) {
+              setUsername(response.data.data.username || '');
+              if (response.data.data.roles_id) {
+                localStorage.setItem('userRole', response.data.data.roles_id.toString());
+              } else {
+                console.warn("roles_id not found in user data:", response.data.data);
+                localStorage.setItem('userRole', '2'); // Default to customer role
+              }
+            } else {
+              console.warn("Unexpected user data structure:", response.data);
             }
             _context.next = 16;
             break;
@@ -226876,16 +226883,17 @@ var Header = function Header() {
             });
           case 6:
             response = _context4.sent;
+            console.log("Notifications response:", response.data);
             if (response.data.success) {
-              setNotifications(response.data.data);
+              setNotifications(response.data.data || []);
               setNotificationCount(response.data.data.filter(function (n) {
                 return !n.is_read;
               }).length);
             }
-            _context4.next = 14;
+            _context4.next = 15;
             break;
-          case 10:
-            _context4.prev = 10;
+          case 11:
+            _context4.prev = 11;
             _context4.t0 = _context4["catch"](3);
             console.error("Failed to fetch notifications:", ((_error$response6 = _context4.t0.response) === null || _error$response6 === void 0 ? void 0 : _error$response6.data) || _context4.t0.message);
             if (((_error$response7 = _context4.t0.response) === null || _error$response7 === void 0 ? void 0 : _error$response7.status) === 401) {
@@ -226893,11 +226901,11 @@ var Header = function Header() {
               localStorage.removeItem("userRole");
               navigate('/login');
             }
-          case 14:
+          case 15:
           case "end":
             return _context4.stop();
         }
-      }, _callee4, null, [[3, 10]]);
+      }, _callee4, null, [[3, 11]]);
     }));
     return function fetchNotifications() {
       return _ref4.apply(this, arguments);
@@ -226905,7 +226913,7 @@ var Header = function Header() {
   }();
   var markNotificationAsRead = /*#__PURE__*/function () {
     var _ref5 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(id) {
-      var token, _error$response8;
+      var token, response, _error$response8;
       return _regeneratorRuntime().wrap(function _callee5$(_context5) {
         while (1) switch (_context5.prev = _context5.next) {
           case 0:
@@ -226924,6 +226932,8 @@ var Header = function Header() {
               }
             });
           case 6:
+            response = _context5.sent;
+            console.log("Mark as read response:", response.data);
             setNotifications(function (prev) {
               return prev.map(function (n) {
                 return n.id === id ? _objectSpread(_objectSpread({}, n), {}, {
@@ -226932,19 +226942,19 @@ var Header = function Header() {
               });
             });
             setNotificationCount(function (prev) {
-              return prev - 1;
+              return Math.max(prev - 1, 0);
             });
-            _context5.next = 13;
+            _context5.next = 15;
             break;
-          case 10:
-            _context5.prev = 10;
+          case 12:
+            _context5.prev = 12;
             _context5.t0 = _context5["catch"](3);
             console.error("Failed to mark notification as read:", ((_error$response8 = _context5.t0.response) === null || _error$response8 === void 0 ? void 0 : _error$response8.data) || _context5.t0.message);
-          case 13:
+          case 15:
           case "end":
             return _context5.stop();
         }
-      }, _callee5, null, [[3, 10]]);
+      }, _callee5, null, [[3, 12]]);
     }));
     return function markNotificationAsRead(_x) {
       return _ref5.apply(this, arguments);
@@ -227022,19 +227032,42 @@ var Header = function Header() {
     e.preventDefault();
     navigate('/shopui?category=Brands');
   };
+  var handlePeripheralsClick = function handlePeripheralsClick(e) {
+    e.preventDefault();
+    navigate('/shopui?category=Peripherals');
+  };
   var handleAboutClick = function handleAboutClick(e) {
     e.preventDefault();
     navigate('/about');
   };
   var notificationMenu = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    style: {
-      maxHeight: '300px',
-      overflowY: 'auto'
-    },
-    children: notifications.length === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
-      children: "No notifications"
-    }, "no-notifications") : notifications.map(function (notification) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
+    items: notifications.length === 0 ? [{
+      key: 'no-notifications',
+      label: 'No notifications'
+    }] : notifications.map(function (notification) {
+      return {
+        key: notification.id,
+        label: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          style: {
+            display: 'flex',
+            flexDirection: 'column'
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            style: {
+              fontSize: '14px',
+              color: notification.is_read ? '#666' : '#1a1a1a',
+              fontWeight: notification.is_read ? 'normal' : '500'
+            },
+            children: notification.message
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            style: {
+              fontSize: '12px',
+              color: '#999',
+              marginTop: '4px'
+            },
+            children: new Date(notification.created_at).toLocaleString()
+          })]
+        }),
         onClick: function onClick() {
           markNotificationAsRead(notification.id);
           if (notification.order_id) {
@@ -227042,113 +227075,111 @@ var Header = function Header() {
           }
         },
         style: {
-          backgroundColor: notification.is_read ? '#fff' : '#f0f0f0'
-        },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-            children: notification.message
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("small", {
-            children: new Date(notification.created_at).toLocaleString()
-          })]
-        })
-      }, notification.id);
-    })
-  });
-  var profileMenu = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
-      onClick: handleProfileClick,
-      children: "Profile"
-    }, "profile"), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
-      onClick: handleLogoutClick,
-      children: "Logout"
-    }, "logout")]
-  });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("header", {
-    className: "header",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      className: "header__left",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-        src: _public_images_lapnixlogo_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
-        alt: "Lapnix Logo",
-        className: "header__logo",
-        onClick: handleLogoClick,
-        style: {
-          cursor: 'pointer'
+          backgroundColor: notification.is_read ? '#fff' : '#e6f0ff',
+          padding: '10px 15px',
+          borderBottom: '1px solid #f0f0f0'
         }
+      };
+    }),
+    style: {
+      maxHeight: '300px',
+      overflowY: 'auto',
+      width: '300px'
+    }
+  });
+  var userMenu = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    items: [{
+      key: 'profile',
+      label: 'Profile',
+      onClick: handleProfileClick
+    }, {
+      key: 'logout',
+      label: 'Logout',
+      onClick: handleLogoutClick
+    }]
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("header", {
+    className: "header",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "header-container",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "header-logo",
+        onClick: handleLogoClick,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+          src: _public_images_lapnixlogo_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+          alt: "Lapnix Logo"
+        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("nav", {
-        className: "header__nav",
+        className: "header-nav",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
           href: "#",
-          className: "header__link",
           onClick: handleHomeClick,
           children: "Home"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
           href: "#",
-          className: "header__link",
           onClick: handleBrandsClick,
-          children: "Shop"
+          children: "Brands"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
           href: "#",
-          className: "header__link",
-          children: "Support"
+          onClick: handlePeripheralsClick,
+          children: "Peripherals"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
           href: "#",
-          className: "header__link",
           onClick: handleAboutClick,
-          children: "About us"
+          children: "About"
         })]
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      className: "header__right",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        className: "header__icon"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        className: "header__notifications",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        className: "header-actions",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          className: "header-search",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
+            size: 20
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_9__["default"], {
           overlay: notificationMenu,
           trigger: ['click'],
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: "header__notification-toggle",
+            className: "header-notification",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_10__["default"], {
-              className: "header__icon"
+              size: 20
             }), notificationCount > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-              className: "notification-count",
+              className: "header-notification-count",
               children: notificationCount
             })]
           })
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "header__cart",
-        onClick: handleCartClick,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_11__["default"], {
-          className: "header__icon"
-        }), cartCount > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-          className: "cart-count",
-          children: cartCount
-        })]
-      }), isAuthenticated ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        className: "header__profile",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_9__["default"], {
-          overlay: profileMenu,
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: "header-cart",
+          onClick: handleCartClick,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_11__["default"], {
+            size: 20
+          }), cartCount > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            className: "header-cart-count",
+            children: cartCount
+          })]
+        }), isAuthenticated ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(antd__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          overlay: userMenu,
           trigger: ['click'],
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: "header__profile-toggle",
+            className: "header-user",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_12__["default"], {
-              className: "header__icon"
+              size: 20
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-              className: "header__username",
-              children: username || 'User'
+              children: username
             })]
           })
-        })
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
-        className: "header__login-btn",
-        onClick: function onClick() {
-          return navigate('/login');
-        },
-        children: "Login"
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: "header-user",
+          onClick: function onClick() {
+            return navigate('/login');
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_12__["default"], {
+            size: 20
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            children: "Login"
+          })]
+        })]
       })]
-    })]
+    })
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
@@ -230695,9 +230726,7 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
-var Reviews = function Reviews(_ref) {
-  var _ref$productId = _ref.productId,
-    productId = _ref$productId === void 0 ? 1 : _ref$productId;
+var Reviews = function Reviews() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState2 = _slicedToArray(_useState, 2),
     reviews = _useState2[0],
@@ -230719,7 +230748,7 @@ var Reviews = function Reviews(_ref) {
     var isMounted = true;
     var source = axios__WEBPACK_IMPORTED_MODULE_8__["default"].CancelToken.source();
     var fetchReviews = /*#__PURE__*/function () {
-      var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+      var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
         var token, userResponse, response, _error$response;
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
@@ -230760,7 +230789,7 @@ var Reviews = function Reviews(_ref) {
               return _context.abrupt("return");
             case 17:
               _context.next = 19;
-              return axios__WEBPACK_IMPORTED_MODULE_8__["default"].get("http://localhost:8000/api/ratings/product/".concat(productId), {
+              return axios__WEBPACK_IMPORTED_MODULE_8__["default"].get("http://localhost:8000/api/ratings", {
                 headers: {
                   Authorization: "Bearer ".concat(token)
                 },
@@ -230799,7 +230828,7 @@ var Reviews = function Reviews(_ref) {
         }, _callee, null, [[5, 23, 29, 32]]);
       }));
       return function fetchReviews() {
-        return _ref2.apply(this, arguments);
+        return _ref.apply(this, arguments);
       };
     }();
     fetchReviews();
@@ -230807,7 +230836,7 @@ var Reviews = function Reviews(_ref) {
       isMounted = false;
       source.cancel("Component unmounted");
     };
-  }, [navigate, productId]);
+  }, [navigate]);
   var openModal = function openModal(review) {
     setSelectedReview(review);
   };
@@ -230820,7 +230849,7 @@ var Reviews = function Reviews(_ref) {
       className: "reviews-content",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h1", {
         className: "reviews-title",
-        children: "Product Reviews"
+        children: "All Reviews"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: "reviews-list",
         children: loading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
@@ -230828,7 +230857,7 @@ var Reviews = function Reviews(_ref) {
           children: "Loading reviews..."
         }) : reviews.length === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
           className: "reviews-empty",
-          children: "No reviews found for this product."
+          children: "No reviews found."
         }) : reviews.map(function (review) {
           var userProfileImage = review.profile_picture ? review.profile_picture : "https://via.placeholder.com/80";
           var truncatedComment = review.comment && review.comment.length > 100 ? "".concat(review.comment.substring(0, 100), "...") : review.comment || "No comment";
@@ -230896,9 +230925,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ReviewsModal = function ReviewsModal(_ref) {
+  var _review$product, _review$product2;
   var review = _ref.review,
     onClose = _ref.onClose;
   var userProfileImage = review.profile_picture ? review.profile_picture : "https://via.placeholder.com/80";
+  var productImage = (_review$product = review.product) !== null && _review$product !== void 0 && _review$product.image ? review.product.image : "https://via.placeholder.com/80";
+
+  // Safely format price, converting string to number if necessary
+  var formattedPrice = (_review$product2 = review.product) !== null && _review$product2 !== void 0 && _review$product2.price ? "$".concat(Number(review.product.price).toFixed(2)) : "N/A";
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(antd__WEBPACK_IMPORTED_MODULE_4__["default"], {
     visible: true,
     onCancel: onClose,
@@ -230911,6 +230945,27 @@ var ReviewsModal = function ReviewsModal(_ref) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
         className: "reviews-modal-title",
         children: "Review Details"
+      }), review.product && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "reviews-modal-product",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
+          children: "Product Reviewed"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "reviews-modal-product-header",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+            src: productImage,
+            alt: "Product",
+            className: "reviews-modal-product-image"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "reviews-modal-product-info",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+              className: "reviews-modal-product-name",
+              children: review.product.name || "N/A"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+              className: "reviews-modal-product-price",
+              children: ["Price: ", formattedPrice]
+            })]
+          })]
+        })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "reviews-modal-header",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {

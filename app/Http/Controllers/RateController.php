@@ -163,4 +163,76 @@ class RateController extends Controller
             ], 500);
         }
     }
+
+    public function getAllRatings(Request $request)
+    {
+        try {
+            $ratings = Rating::with([
+                'user.profile' => function ($query) {
+                    $query->select('profile_id', 'user_id', 'first_name', 'middle_initial', 'last_name', 'profile_picture');
+                },
+                'product' => function ($query) {
+                    $query->select('id', 'image', 'name', 'price');
+                }
+            ])
+                ->get()
+                ->map(function ($rating) {
+                    $name = $rating->user && $rating->user->profile
+                        ? trim(
+                            ($rating->user->profile->first_name ?? '') . 
+                            ($rating->user->profile->middle_initial ? ' ' . $rating->user->profile->middle_initial . '.' : '') . 
+                            ($rating->user->profile->last_name ? ' ' . $rating->user->profile->last_name : '')
+                        )
+                        : ($rating->user ? $rating->user->username : 'Anonymous');
+
+                    return [
+                        'id' => $rating->id,
+                        'product_id' => $rating->product_id,
+                        'user_id' => $rating->user_id,
+                        'rating' => $rating->rating,
+                        'comment' => $rating->comment,
+                        'photo' => $rating->photo ? asset($rating->photo) : null,
+                        'created_at' => $rating->created_at,
+                        'updated_at' => $rating->updated_at,
+                        'name' => $name,
+                        'profile_picture' => $rating->user && $rating->user->profile && $rating->user->profile->profile_picture
+                            ? asset($rating->user->profile->profile_picture)
+                            : 'http://127.0.0.1:8000/images/pfp/default.png',
+                        'user' => $rating->user ? [
+                            'user_id' => $rating->user->user_id,
+                            'username' => $rating->user->username,
+                            'profile' => $rating->user->profile ? [
+                                'first_name' => $rating->user->profile->first_name,
+                                'middle_initial' => $rating->user->profile->middle_initial,
+                                'last_name' => $rating->user->profile->last_name,
+                                'profile_picture' => $rating->user->profile->profile_picture 
+                                    ? asset($rating->user->profile->profile_picture) 
+                                    : 'http://127.0.0.1:8000/images/pfp/default.png',
+                            ] : null,
+                        ] : null,
+                        'product' => $rating->product ? [
+                            'id' => $rating->product->id,
+                            'image' => $rating->product->image ? asset($rating->product->image) : null,
+                            'name' => $rating->product->name,
+                            'price' => $rating->product->price,
+                        ] : null,
+                    ];
+                });
+
+            Log::info('Fetched all ratings', ['ratings' => $ratings->toArray()]);
+
+            return response()->json([
+                'success' => true,
+                'data' => $ratings,
+            ], 200);
+        } catch (\Exception $e) {
+            Log::error('RateController: Failed to fetch all ratings', [
+                'error' => $e->getMessage(),
+            ]);
+            return response()->json([
+                'success' => false,
+                'error' => ['message' => 'Failed to fetch all ratings']
+            ], 500);
+        }
+    }
 }
